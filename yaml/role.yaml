@@ -1,0 +1,16 @@
+backends:
+  default_backend: &default_backend_anchor
+    temperature: 0.7
+    max_tokens: 1024
+    model: gpt-4-0613
+    backend_type: openai-chat
+
+roles:
+  - name: Boss1
+    type: Boss
+    role_desc: a simple description for the role
+    backend: *default_backend_anchor
+  - name: Customer1
+    type: Customer
+    role_desc: a simple description for the role
+    backend: *default_backend_anchor

@@ -1,0 +1,7 @@
+steps:
+  - name: design_restaurant
+    roles:
+      - Boss
+  - name: dine
+    roles:
+      - Customer
