@@ -16,12 +16,6 @@ except ImportError:
 else:
     # openai.api_key = os.environ.get("OPENAI_API_KEY")
     openai.api_key = "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"  # our gpt key
-    # openai.api_key = "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"
-    # AzureAPIKEY = "oaip_TxCawudLCaBUsOdpzuShFQiNwUHMPkoh"
-    # openai.api_type = "azure"
-    # openai.api_base = "https://gcrgpt4aoai9c.azurewebsites.net"     #can repalce with the above api base
-    # openai.api_version = "2023-03-15-preview"                      #change to "2022-12-01" if using chatgpt
-    # openai.api_key = AzureAPIKEY
 
     if openai.api_key is None:
         # logging.warning("OpenAI API key is not set. Please set the environment variable OPENAI_API_KEY")
@@ -150,5 +144,5 @@ class OpenAIChat(IntelligenceBackend):
         # Remove the tailing end of message token
         response = re.sub(rf"{END_OF_MESSAGE}$", "", response).strip()
 
-        time.sleep(10)
+        # time.sleep(10)
         return response
