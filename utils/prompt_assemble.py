@@ -64,6 +64,8 @@ class PromptAssembler():
         # else:  # The default request message that reminds the agent its role and instruct it to speak
         #     all_messages.append((SYSTEM_NAME, f"Remember your role: {role_desc} Now you speak, {agent_name}.{END_OF_MESSAGE}"))
         
+        return all_messages
+        
         
         
         

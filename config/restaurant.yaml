@@ -5,12 +5,32 @@ backends:
     model: gpt-4-0613
     backend_type: openai-chat
 
-roles:
-  - name: Boss1
+global_prompt: None
+
+players:
+  - name: Alice
     type: Boss
     role_desc: a simple description for the role
     backend: *default_backend_anchor
-  - name: Customer1
+  - name: Bob
     type: Customer
     role_desc: a simple description for the role
     backend: *default_backend_anchor
+
+scenes:
+  - name: restaurant_design
+    scene_type: restaurant_design
+    players:
+      - Alice
+    processes:
+      - basic_ideas
+      - menus
+      - chefs
+  - name: dine
+    scene_type: dine
+    players:
+      - Bob
+    steps:
+      - eat
+      - feedback
+    

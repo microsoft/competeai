@@ -1,4 +1,5 @@
 import json
+import yaml
 import copy
 from abc import abstractmethod
 
@@ -23,14 +24,22 @@ class Config(AttributedDict):
 
     def save(self, path: str):
         # save config to file
-        with open(path, "w") as f:
-            json.dump(self, f, indent=4)
+        if 'json' in path:
+            with open(path, "w") as f:
+                json.dump(self, f, indent=4)
+        elif 'yaml' in path:
+            with open(path, "w") as f:
+                yaml.safe_dump(self, f, indent=4)
 
     @classmethod
     def load(cls, path: str):
         # load config from file
-        with open(path, "r") as f:
-            config = json.load(f)
+        if 'json' in path:
+            with open(path, "r") as f:
+                config = json.load(f)
+        elif 'yaml' in path:
+            with open(path, "r") as f:
+                config = yaml.safe_load(f)
         return cls(config)
 
     def deepcopy(self):
@@ -60,16 +69,16 @@ class Configurable:
         self.to_config().save(path)
 
 
-class EnvironmentConfig(Config):
+class SceneConfig(Config):
     """
-    EnvironmentConfig contains a env_type field to indicate the name of the environment.
+    TODO SceneConfig contains
     """
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # check if the env_type field is specified
-        if "env_type" not in self:
-            raise ValueError("The env_type field is not specified")
+        if "scene_type" not in self:
+            raise ValueError("The scene_type field is not specified")
 
 
 class BackendConfig(Config):
@@ -102,9 +111,9 @@ class AgentConfig(Config):
             raise ValueError("The backend field must be a BackendConfig")
 
 
-class ArenaConfig(Config):
+class SimulConfig(Config):
     """
-    ArenaConfig contains a list of AgentConfig.
+    SimulConfig contains a list of AgentConfig.
     """
 
     def __init__(self, *args, **kwargs):
@@ -118,26 +127,29 @@ class ArenaConfig(Config):
             if not isinstance(player, AgentConfig):
                 raise ValueError("The players field must be a list of AgentConfig")
 
-        # check if environment field is specified and it is EnvironmentConfig
-        if "environment" not in self:
-            raise ValueError("The environment field is not specified")
-        if not isinstance(self["environment"], EnvironmentConfig):
-            raise ValueError("The environment field must be an EnvironmentConfig")
+        # check if scene field is specified and it is SceneConfig
+        if "scenes" not in self:
+            raise ValueError("The scene field is not specified")
+        if not isinstance(self["scene"], list):
+            raise ValueError("The scene field must be a list")
+        for scene in self["scene"]:
+            if not isinstance(scene, SceneConfig):
+                raise ValueError("The scene field must be a list of sceneConfig")
 
 
-# Initialize with different config class depending on whether the config is for environment or backend
+# Initialize with different config class depending on whether the config is for scene or backend
 def init_config(config: dict):
     if not isinstance(config, dict):
         raise ValueError("The config must be a dict")
 
-    # check if the config is for environment or backend
+    # check if the config is for scene or backend
     if "env_type" in config:
-        return EnvironmentConfig(config)
+        return SceneConfig(config)
     elif "backend_type" in config:
         return BackendConfig(config)
     elif "role_desc" in config:
         return AgentConfig(config)
     elif "players" in config:
-        return ArenaConfig(config)
+        return SimulConfig(config)
     else:
         return Config(config)
