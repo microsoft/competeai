@@ -21,7 +21,7 @@ class Scene(Configurable):
         # All scenes share a common message pool, prompt assembler and output parser
         self.message_pool = message_pool
         self.players = players
-        # TODO 这两个解析器应该在哪里实现？以及如何初始化
+        # Just declare the variables here, the actual initialization is done in the subclass
         self.prompt_assembler = None
         self.output_parser = None
 

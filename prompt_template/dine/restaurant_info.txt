@@ -1,0 +1,10 @@
+The Restaurant " <INPUT 0> "information as below:
+1. Customer Score: <INPUT 1>
+2. Advertisement
+   <INPUT 2>
+3. Menu 
+   <INPUT 3>
+4. Comments
+   <INPUT 4>
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.

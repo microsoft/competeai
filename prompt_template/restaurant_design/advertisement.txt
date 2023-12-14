@@ -1,0 +1,25 @@
+Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
