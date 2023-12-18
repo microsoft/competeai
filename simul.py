@@ -2,14 +2,12 @@ from dataclasses import dataclass
 from typing import Union, List
 
 from .config import SimulConfig
-from message import MessagePool
+from .message import MessagePool
 from .agent import Player
 from .scene import load_scene, Scene
 
+from .utils import PORT_MAP
 
-# TODO: design the map from player to database port
-# boss & restaurant will be bound to one port, customer will change port according to choice
-PORT_MAP = {}
 
 # 该类负责全局的模拟过程
 # 并行化运行scene，推进simulation进行.

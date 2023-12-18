@@ -13,7 +13,7 @@ def get_data_from_database(endpoint, base_url="http://localhost:", port="8000"):
         # print(response.text)
         return None
 
-def save_to_database(res, endpoint, base_url="http://localhost:", port="8000"):
+def send_data_to_database(res, endpoint, base_url="http://localhost:", port="8000"):
     # handle the case when different types of res
     if isinstance(res, dict):
             res_list = [res]
@@ -22,7 +22,7 @@ def save_to_database(res, endpoint, base_url="http://localhost:", port="8000"):
     else:
         try:
             res_list = json.loads(res)
-            if type(res_list) != type([]):
+            if not isinstance(res_list, list):
                 res_list = [res_list]
         except:
             logging.warning("invalid json")

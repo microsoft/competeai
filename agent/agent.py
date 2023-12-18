@@ -7,7 +7,7 @@ from abc import abstractmethod
 import asyncio
 
 from .backends import IntelligenceBackend, load_backend
-from .message import Message, SYSTEM_NAME
+from ..message import Message, SYSTEM_NAME
 from ..config import AgentConfig, Configurable, BackendConfig
 
 # A special signal sent by the player to indicate that it is not possible to continue the conversation, and it requests to end the conversation.
