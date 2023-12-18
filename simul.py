@@ -7,8 +7,11 @@ from .agent import Player
 from .scene import load_scene, Scene
 
 
+# TODO: design the map from player to database port
+# boss & restaurant will be bound to one port, customer will change port according to choice
+PORT_MAP = {}
+
 # 该类负责全局的模拟过程
-# 初始化message_pool 为scene和每个scene构建多个实例
 # 并行化运行scene，推进simulation进行.
 class Simulation:
     def __init__(self, scenes: List[Scene], message_pool: MessagePool()):
@@ -52,6 +55,7 @@ class Simulation:
             config = SimulConfig(config)
 
         global_prompt = config.get("global_prompt", None)
+        database_port = config.get("database_port_base", None)
 
         # Create the players
         players = []
@@ -72,7 +76,7 @@ class Simulation:
         for scene_config in config.scenes:
             same_scene = []
             scene_config["message_pool"] = message_pool
-            for player in scene_config.players:
+            for player in scene_config['players']:   
                 # a single player or a group of players
                 if isinstance(player, str):
                     assert player in player_names, f"Player {player} is not defined"
@@ -81,8 +85,16 @@ class Simulation:
                 elif isinstance(player, list):
                     assert all(p in player_names for p in player), f"Player {player} is not defined"
                     scene_config["player"] = [players[player_names.index(p)] for p in player]
-                    scene = Scene.from_config(scene_config)
+                    scene = load_scene(scene_config)
                 same_scene.append(scene)
             scenes.append(same_scene)
+        
+        # fill the port map, not a universal code  
+        for scene_config in config.scenes:
+            if scene_config['scene_type'] == 'restaurant_design':
+                for player in scene_config['players']:
+                    if isinstance(player, str):
+                        PORT_MAP[player] = database_port
+                    database_port += 1
 
         return cls(scenes, message_pool)

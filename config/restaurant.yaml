@@ -7,6 +7,8 @@ backends:
 
 global_prompt: None
 
+database_port_base: 9000
+
 players:
   - name: Alice
     type: Boss

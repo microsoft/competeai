@@ -5,8 +5,12 @@ class PromptTemplate():
         self.path_elements = path_elements
         self.path_elements[-1] = self.path_elements[-1] + '.txt'
         self.path = os.path.join(*self.path_elements)
-        with open(self.path, 'r') as f:
-            self.content = f.read()
+        self.path = f'../prompt_template/{self.path}'
+        if os.path.exists(self.path):
+            with open(self.path, 'r') as f:
+                self.content = f.read()
+        else:
+            self.content = None
             
     def render(self, data=None):
         if data == None:

@@ -1,26 +1,17 @@
 from ..message import Message, MessagePool, SYSTEM_NAME
-from ..prompt_template import PromptTemplate
+from ..simul import PORT_MAP
+from .prompt_template import PromptTemplate
+from .database import get_data_from_db
 
 END_OF_MESSAGE = "<EOS>"
 BASE_PROMPT = f"The messages always end with the token {END_OF_MESSAGE}."
 
 
-# 该组装器运行在整个模拟运行过程中，init初始化时只能传入供全局使用的config, message_pool
 class PromptAssembler():
     def __init__(self, message_pool: MessagePool):
         self.message_pool = message_pool
     
-    def get_data_from_db(self, base_url='http://localhost:', port='8000', endpoint=None):
-        pass
-    
-    def render_prompt_template(self, prompt_template=None, data=None):
-        """
-        prompt_template (str): the name of the prompt template
-        data (dict): the input data for the prompt template
-        """
-        pass
-    
-    def prompt_assemble(self, player, scene_name, step_name):
+    def assemble(self, player, scene_name, step_name):
         """
         prompt_template (str): the name of the prompt template
         input (dict): the input data for the prompt template
@@ -37,17 +28,18 @@ class PromptAssembler():
             
         all_messages = [(SYSTEM_NAME, system_prompt)]
         
-        data = self.get_data_from_db(step_name)
-        prompt_template = PromptTemplate([scene_name, step_name])
-        prompt = prompt_template.render(data=data)
-        
-        # convert str:prompt to Message:prompt
-        turn = self.message_pool.last_turn + 1  # FIXME
-        message = Message(agent_name=self.agent_name, content=prompt, visible_to=self.agent_name, turn=turn)
-        self.message_pool.append(message)
+        # If the prompt template exists, render it and add it to the message pool
+        if PromptTemplate([scene_name, step_name]).content:
+            data = get_data_from_db(step_name, PORT_MAP['player_name'])  # TODO: how to transmit 'port' to here?
+            prompt_template = PromptTemplate([scene_name, step_name])
+            prompt = prompt_template.render(data=data)
+            # convert str:prompt to Message:prompt
+            turn = self.message_pool.last_turn + 1  # FIXME
+            message = Message(agent_name=player_name, content=prompt, visible_to=player_name, turn=turn)
+            self.message_pool.append(message)
         
         # get all visible message
-        history_messages = self.message_pool.get_visible_messages(agent_name=agent_name, turn=turn)
+        history_messages = self.message_pool.get_visible_messages(agent_name=player_name, turn=turn)
         
         for msg in history_messages:
             if msg.agent_name == SYSTEM_NAME:

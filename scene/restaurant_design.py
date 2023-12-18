@@ -20,13 +20,15 @@ class RestaurantDesign(Scene):
     def __init__(self, message_pool, players, **kwargs):
         super().__init__(message_pool=message_pool, players=players, **kwargs)
         self.processes = processes
+        self.prompt_assembler = PromptAssembler(message_pool)
+        self.output_parser = OutputParser()
         
     def step(self):
         curr_process = self.get_curr_process()
         curr_player = self.get_curr_player()
 
         # TODO: invalid step 
-        prompts = self.prompt_assembler.prompt_assemble(curr_player, self.name, curr_process['name'])
+        prompts = self.prompt_assembler.prompt_assemble(curr_player, self.type_name, curr_process['name'])
         output = curr_player(prompts)
         self.output_parser.parse(curr_player, output)
 
