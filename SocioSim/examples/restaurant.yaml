@@ -1,0 +1,38 @@
+backends:
+  default_backend: &default_backend_anchor
+    temperature: 0.7
+    max_tokens: 1024
+    model: gpt-4-0613
+    backend_type: openai-chat
+
+global_prompt: None
+
+database_port_base: 9000
+
+players:
+  - name: Alice
+    type: Boss
+    role_desc: a simple description for the role
+    backend: *default_backend_anchor
+  - name: Bob
+    type: Customer
+    role_desc: a simple description for the role
+    backend: *default_backend_anchor
+
+scenes:
+  - name: restaurant_design
+    scene_type: restaurant_design
+    players:
+      - Alice
+    processes:
+      - basic_ideas
+      - menus
+      - chefs
+  # - name: dine
+  #   scene_type: dine
+  #   players:
+  #     - Bob
+  #   steps:
+  #     - eat
+  #     - feedback
+    
