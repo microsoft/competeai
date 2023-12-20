@@ -33,7 +33,7 @@ router = routers.DefaultRouter()
 
 router.register(r"menu", menu_views.MenuViewSet, basename="menu")
 router.register(r"chef", chef_views.ChefViewSet, basename="chef")
-router.register(r"advertisement", advertisement_views.AdvertisementViewSet, basename="advertisement")
+router.register(r"ads", advertisement_views.AdvertisementViewSet, basename="ads")
 router.register(r"basic_info", basic_info_views.BasicInfoViewSet, basename="basic_info")
 router.register(r"comment", comment_views.CommentViewSet, basename="comment")
 router.register(r"daybook", daybook_views.DayBookViewSet, basename="daybook")

@@ -9,14 +9,14 @@ from .base import IntelligenceBackend
 from ...message import Message, SYSTEM_NAME, MODERATOR_NAME
 
 try:
-    import openai
+    from openai import OpenAI
 except ImportError:
     is_openai_available = False
     # logging.warning("openai package is not installed")
 else:
-    openai.api_key = os.environ.get("OPENAI_KEY")
+    openai_api_key = os.environ.get("OPENAI_KEY")
 
-    if openai.api_key is None:
+    if openai_api_key is None:
         # logging.warning("OpenAI API key is not set. Please set the environment variable OPENAI_API_KEY")
         is_openai_available = False
     else:
@@ -61,7 +61,8 @@ class OpenAIChat(IntelligenceBackend):
 
     @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
     def _get_response(self, messages):
-        completion = openai.ChatCompletion.create(
+        client = OpenAI(api_key=openai_api_key)
+        completion = client.chat.completions.create(
             model=self.model,
             messages=messages,
             temperature=self.temperature,
@@ -69,7 +70,7 @@ class OpenAIChat(IntelligenceBackend):
             stop=STOP
         )
 
-        response = completion.choices[0]['message']['content']
+        response = completion.choices[0].message.content
         response = response.strip()
         return response
 

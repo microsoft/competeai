@@ -5,12 +5,13 @@ from ..utils import PORT_MAP, BASE_PORT, get_data_from_database
 
  
 processes = [
+    
     {"name": "daybook", "from_db": True, "to_db": False},
-    {"name": "rule", "from_db": True, "to_db": False},
+    {"name": "rule", "from_db": False, "to_db": False},
     {"name": "basic_info", "from_db": True, "to_db": True},
     {"name": "menu", "from_db": True, "to_db": True},
     {"name": "chef", "from_db": True, "to_db": True},
-    {"name": "ads", "from_db": True, "to_db": True},
+    {"name": "ads", "from_db": True, "to_db": True},  # bug
 ]
 
 
@@ -18,8 +19,8 @@ class RestaurantDesign(Scene):
     
     type_name = "restaurant_design"
     
-    def __init__(self, players: List[Player], id: int, exp_name: str, **kwargs):
-        super().__init__(players=players, id=id, exp_name=exp_name,  
+    def __init__(self, players: List[Player], id: int, log_path: str, **kwargs):
+        super().__init__(players=players, id=id, log_path=log_path,  
                                 type_name=self.type_name, **kwargs)
         self.processes = processes
         
@@ -33,7 +34,7 @@ class RestaurantDesign(Scene):
         return self._curr_process_idx == len(self.processes)
     
     def terminal_action(self):
-        basic_info = get_data_from_database("basic_info")
+        basic_info = get_data_from_database("basic_info", self.port)
         restaurant_name = basic_info[0]["name"]
         PORT_MAP[restaurant_name] = self.port
         
@@ -48,6 +49,7 @@ class RestaurantDesign(Scene):
     def prepare_for_next_step(self):
         self.move_to_next_player()
         self.move_to_next_process()
+        self._curr_turn += 1
     
     def step(self):
         curr_process = self.get_curr_process()
@@ -55,20 +57,23 @@ class RestaurantDesign(Scene):
         
         if not (curr_process['name'] == 'daybook' and self.day == 0):
             # LLM can not simulate the whole process automatically, it needs prompt to guide
-            self.add_new_prompt(curr_player.name, self.type_name, curr_process['name'])
+            self.add_new_prompt(player_name=curr_player.name, 
+                                scene_name=self.type_name, 
+                                step_name=curr_process['name'], 
+                                from_db=curr_process['from_db'])
 
-        observation = self.message_pool.get_visible_messages(agent_name=curr_player.name)
+        observation = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
         
         for i in range(self.invalid_step_retry):
             try:
                 output = curr_player(observation)
-                self.parse_output(curr_player, output, curr_process['to_db'])
                 break
             except Exception as e:
                 print(f"Attempt {i + 1} failed with error: {e}")
         else:
             raise Exception("Invalid step retry arrived at maximum.")
         
+        self.parse_output(output, curr_player.name, curr_process['name'], curr_process['to_db'])
         self.prepare_for_next_step()
         
         

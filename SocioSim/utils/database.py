@@ -1,5 +1,4 @@
 import json
-import logging
 import requests
 
 
@@ -9,24 +8,21 @@ def get_data_from_database(endpoint, port, base_url="http://localhost:"):
         data = response.json()  # e.g. [{'id': 1, 'name': 'Yangzhou Fried Rice', 'price': 9, 'cost_price': 3, 'description': 'Flavorful Yangzhou fried rice with chicken, shrimp, green peas, and eggs.'}]
         return data
     else:
-        print(f"error: {response.status_code}")
-        # print(response.text)
-        return None
+        raise Exception(f"error: get data from database: {endpoint} {port} {response.status_code}")
 
-def send_data_to_database(res, endpoint, base_url="http://localhost:", port="8000"):
+def send_data_to_database(data, endpoint, port, base_url="http://localhost:"):
     # handle the case when different types of res
-    if isinstance(res, dict):
-            res_list = [res]
-    elif isinstance(res, list):
-        res_list = res
+    if isinstance(data, dict):
+            res_list = [data]
+    elif isinstance(data, list):
+        res_list = data
     else:
         try:
-            res_list = json.loads(res)
+            res_list = json.loads(data)
             if not isinstance(res_list, list):
                 res_list = [res_list]
         except:
-            logging.warning("invalid json")
-            return
+            raise Exception("error: data should be a dict or a list of dict")
     
     url = f"{base_url}{port}/{endpoint}/"
     for res in res_list:
@@ -34,32 +30,20 @@ def send_data_to_database(res, endpoint, base_url="http://localhost:", port="800
         
         if data_type == "add":
             response = requests.post(url, json=res["data"])
-            if response.status_code == 201:
-                logging.info("success")
-            else:
-                logging.warning(f"error: {response.status_code}")
-                logging.warning(response.text)
+            if response.status_code != 201:
+                raise Exception(f"A error occur when adding data to {endpoint}: {response.status_code}")
         elif data_type == "delete":
             response = requests.delete(f"{url}{res['id']}/")
-            if response.status_code == 204:
-                logging.info("success")
-            else:
-                logging.warning(f"error: {response.status_code}")
-                logging.warning(response.text)
+            if response.status_code != 204:
+                raise Exception(f"A error occur when deleting data to {endpoint}: {response.status_code}")
         elif data_type == "update":
             response = requests.put(f"{url}{res['id']}/", json=res["data"])
-            if response.status_code == 200:
-                logging.info("success")
-            else:
-                logging.warning(f"error: {response.status_code}")
-                logging.warning(response.text)
+            if response.status_code != 200:
+                raise Exception(f"A error occur when updating data to {endpoint}: {response.status_code}")
         elif data_type == "partial_update":
             response = requests.patch(f"{url}{res['id']}/", json=res["data"])
-            if response.status_code == 200:
-                logging.info("success")
-            else:
-                logging.warning(f"error: {response.status_code}")
-                logging.warning(response.text)
+            if response.status_code != 200:
+                raise Exception(f"A error occur when updating data to {endpoint}: {response.status_code}")
         else: 
-            logging.warning(f"error: No this type {data_type}")
+            raise Exception(f"error: No this type {data_type}")
  

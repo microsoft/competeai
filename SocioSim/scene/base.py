@@ -11,7 +11,7 @@ import json
 
 
 class Scene(Configurable):
-    def __init__(self, players: List[Player], id: int, type_name: str, exp_name: str, **kwargs):
+    def __init__(self, players: List[Player], id: int, type_name: str, log_path: str, **kwargs):
         """
         Initialize a scene
         
@@ -19,12 +19,12 @@ class Scene(Configurable):
             message_pool (MessagePool): The message pool for the scene
             players (List[Player]): The players in the scene
         """
-        super().__init__(players=players, id=id, type_name=type_name, exp_name=exp_name, **kwargs)
+        super().__init__(players=players, id=id, type_name=type_name, **kwargs)
         # All scenes share a common message pool, prompt assembler and output parser
         self.id = id
         self.players = players
         
-        log_path = f'./log/{self.exp_name}/{self.type_name}/{self.id}.txt'
+        log_path = f'{log_path}/{self.type_name}_{self.id}.txt'
         self.message_pool = MessagePool(log_path=log_path)
         
         self.num_of_players = len(players)
@@ -35,27 +35,25 @@ class Scene(Configurable):
         self._curr_process_idx = 0
     
     # TODO: 根据需求组装更复杂的prompt
-    def add_new_prompt(self, player_name, scene_name, step_name):
+    def add_new_prompt(self, player_name, scene_name, step_name, data=None, from_db=False):
         # If the prompt template exists, render it and add it to the message pool
         if PromptTemplate([scene_name, step_name]).content:
-            data = get_data_from_database(step_name, PORT_MAP['player_name'])
             prompt_template = PromptTemplate([scene_name, step_name])
+            if from_db:
+                data = get_data_from_database(step_name, PORT_MAP[player_name])
             prompt = prompt_template.render(data=data)
             # convert str:prompt to Message:prompt
-            turn = self.message_pool.last_message.turn + 1  # TODO: parallel run will confuse this?
-            message = Message(agent_name=player_name, content=prompt, visible_to=player_name, turn=turn)
-            self.message_pool.append(message)
+            message = Message(agent_name='System', content=prompt, 
+                                visible_to=player_name, turn=self._curr_turn)
+            self.message_pool.append_message(message)
     
-    def parse_output(self, player_name, output, to_db):  
-        if to_db:
-            send_data_to_database(data=output, agent_name=player_name)
+    def parse_output(self, output, player_name, step_name, to_db=False):  
+        if to_db and output != "None":  # TODO: better code
+            send_data_to_database(output, step_name, PORT_MAP[player_name])
         
         # TODO: short output
-        turn = self.message_pool.last_message.turn + 1 if self.message_pool.last_message else 0
-        message = Message(agent_name='System', 
-                          content=output, 
-                          visible_to=player_name, 
-                          turn=turn)
+        message = Message(agent_name=player_name, content=output, 
+                            visible_to=player_name, turn=self._curr_turn)
         self.message_pool.append_message(message)
     
     def log_table(self, data, column_name):

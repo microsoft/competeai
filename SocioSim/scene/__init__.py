@@ -1,5 +1,5 @@
 from .restaurant_design import RestaurantDesign
-
+from .base import Scene
 from ..config import SceneConfig
 
 ALL_SCENES = [

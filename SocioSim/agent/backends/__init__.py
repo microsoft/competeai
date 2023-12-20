@@ -2,6 +2,7 @@ from ...config import BackendConfig
 
 from .base import IntelligenceBackend
 from .openai import OpenAIChat
+from .dall_e import DALLEGen
 from .cohere import CohereAIChat
 from .human import Human
 from .hf_transformers import TransformersConversational
@@ -13,6 +14,7 @@ ALL_BACKENDS = [
     CohereAIChat,
     TransformersConversational,
     Claude,
+    DALLEGen
 ]
 
 BACKEND_REGISTRY = {backend.type_name: backend for backend in ALL_BACKENDS}

@@ -5,14 +5,14 @@ backends:
     model: gpt-4-0613
     backend_type: openai-chat
 
-global_prompt: None
+global_prompt: As the owner of a restaurant in a small American town, you find yourself in direct competition with another restaurant for customers. The competition will persist until one of the restaurants is forced to close down. In order to emerge victorious in this competition, it is imperative that you employ any necessary measures to secure success. Generally speaking, offering higher salaries to chefs and choosing higher quality ingredients can result in more delicious dishes. Therefore, you need to strike a balance between profitability and quality. Please provide a comprehensive and detailed response outlining the strategies and actions you would undertake to ensure your restaurant's triumph over the competitor.
 
 database_port_base: 9000
 
 players:
   - name: Alice
     type: Boss
-    role_desc: a simple description for the role
+    role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You start with a capital of $10,000. Your restaurant style is French. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's name and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration. Remember to keep an eye on your competitor's restaurant and make sure you are always one step ahead.
     backend: *default_backend_anchor
   - name: Bob
     type: Customer

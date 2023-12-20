@@ -51,7 +51,7 @@ class Simulation:
 
         global_prompt = config.get("global_prompt", None)
         database_port = config.get("database_port_base", None)
-        exp_name = config.get("exp_name", None)
+        log_path = config.get("log_path", None)
 
         # fill the port map, not a universal code  
         for scene_config in config.scenes:
@@ -78,7 +78,7 @@ class Simulation:
         scenes = []
         for scene_config in config.scenes:
             same_scene = []
-            scene_config['exp_name'] = exp_name
+            scene_config['log_path'] = log_path
             for i, player in enumerate(scene_config['players']):   
                 scene_config['id'] = i
                 # a single player or a group of players

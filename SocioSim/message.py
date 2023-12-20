@@ -85,7 +85,7 @@ class MessagePool():
             message (Message): The message to be added to the pool.
         """
         self._messages.append(message)
-        # print(f"[{message.agent_name}->{message.visible_to}]: {message.content}")
+        print(f"[{message.agent_name}->{message.visible_to}]: {message.content}")
         self.log_file.write(f"[{message.agent_name}->{message.visible_to}]: {message.content}\n\n")
 
     def print(self):
