@@ -11,10 +11,7 @@ import json
 
 
 class Scene(Configurable):
-    
-    type_name = "scene"
-    
-    def __init__(self, message_pool: MessagePool, players: List[Player], **kwargs):
+    def __init__(self, players: List[Player], id: int, type_name: str, exp_name: str, **kwargs):
         """
         Initialize a scene
         
@@ -22,14 +19,18 @@ class Scene(Configurable):
             message_pool (MessagePool): The message pool for the scene
             players (List[Player]): The players in the scene
         """
-        super().__init__(message_pool=message_pool, players=players, **kwargs)
+        super().__init__(players=players, id=id, type_name=type_name, exp_name=exp_name, **kwargs)
         # All scenes share a common message pool, prompt assembler and output parser
-        self.message_pool = message_pool
+        self.id = id
         self.players = players
+        
+        log_path = f'./log/{self.exp_name}/{self.type_name}/{self.id}.txt'
+        self.message_pool = MessagePool(log_path=log_path)
+        
         self.num_of_players = len(players)
-
         self.invalid_step_retry = 3
         
+        self._curr_turn = 0  # for message turn
         self._curr_player_idx = 0
         self._curr_process_idx = 0
     

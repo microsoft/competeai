@@ -11,11 +11,10 @@ from .utils import PORT_MAP
 
 # 该类负责全局的模拟过程
 # 并行化运行scene，推进simulation进行.
+
 class Simulation:
-    def __init__(self, scenes: List[Scene], message_pool: MessagePool()):
-        self.scenes = scenes
-        self.message_pool = message_pool
-        
+    def __init__(self, scenes: List[Scene]):
+        self.scenes = scenes   
         self.curr_scene_idx = 0
 
     def get_curr_scene(self):
@@ -44,8 +43,6 @@ class Simulation:
         """
         create an simul from a config
         """
-        message_pool = MessagePool()
-        
         # If config is a path, load the config
         if isinstance(config, str):
             config = SimulConfig.load(config)
@@ -54,6 +51,7 @@ class Simulation:
 
         global_prompt = config.get("global_prompt", None)
         database_port = config.get("database_port_base", None)
+        exp_name = config.get("exp_name", None)
 
         # fill the port map, not a universal code  
         for scene_config in config.scenes:
@@ -80,8 +78,9 @@ class Simulation:
         scenes = []
         for scene_config in config.scenes:
             same_scene = []
-            scene_config["message_pool"] = message_pool
-            for player in scene_config['players']:   
+            scene_config['exp_name'] = exp_name
+            for i, player in enumerate(scene_config['players']):   
+                scene_config['id'] = i
                 # a single player or a group of players
                 if isinstance(player, str):
                     assert player in player_names, f"Player {player} is not defined"
@@ -94,4 +93,4 @@ class Simulation:
                 same_scene.append(scene)
             scenes.append(same_scene)
 
-        return cls(scenes, message_pool)
+        return cls(scenes)
