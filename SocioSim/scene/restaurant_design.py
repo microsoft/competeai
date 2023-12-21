@@ -5,7 +5,6 @@ from ..utils import PORT_MAP, BASE_PORT, get_data_from_database
 
  
 processes = [
-    
     {"name": "daybook", "from_db": True, "to_db": False},
     {"name": "rule", "from_db": False, "to_db": False},
     {"name": "basic_info", "from_db": True, "to_db": True},

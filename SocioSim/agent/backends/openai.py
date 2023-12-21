@@ -99,10 +99,10 @@ class OpenAIChat(IntelligenceBackend):
             else:  # non-system messages are suffixed with the end of message token
                 all_messages.append((msg.agent_name, f"{msg.content}{END_OF_MESSAGE}"))
 
-        if request_msg:
-            all_messages.append((SYSTEM_NAME, request_msg.content))
-        else:  # The default request message that reminds the agent its role and instruct it to speak
-            all_messages.append((SYSTEM_NAME, f"Remember your role: {role_desc} Now you speak, {agent_name}.{END_OF_MESSAGE}"))
+        # if request_msg:
+        #     all_messages.append((SYSTEM_NAME, request_msg.content))
+        # else:  # The default request message that reminds the agent its role and instruct it to speak
+        #     all_messages.append((SYSTEM_NAME, f"Remember your role: {role_desc} Now you speak, {agent_name}.{END_OF_MESSAGE}"))
 
         messages = []
         for i, msg in enumerate(all_messages):
@@ -143,6 +143,6 @@ class OpenAIChat(IntelligenceBackend):
 
         # Remove the tailing end of message token
         response = re.sub(rf"{END_OF_MESSAGE}$", "", response).strip()
-
+        
         # time.sleep(10)
         return response

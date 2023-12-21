@@ -1460,3 +1460,475 @@ Your response must be formated as:
 
 Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
 
+[System->Alice]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[System->Alice]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[System->Alice]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[System->Alice]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[System->Alice]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Alice->Alice]: {
+    "type": "add",
+    "data":{
+        "content": "Welcome to Le Petit Paris, your local French cuisine haven! Indulge in our Classic French dishes prepared by our experienced chefs using the freshest ingredients. Bon Appétit!"
+    }
+}
+
+[Alice->Alice]: Your Advertisement has been added successfully. The current Advertisement as below:
+<INPUT 1>
+
+Now your Advertisement as below:
+{
+    "id": "1",
+    "content": "Welcome to Le Petit Paris, your local French cuisine haven! Indulge in our Classic French dishes prepared by our experienced chefs using the freshest ingredients. Bon Appétit!",
+    "status": "active"
+}
+
+You can perform the following actions:
+
+1. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Remove this Advertisement:
+{
+    "type": "remove",
+    "id": "1"
+}
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[System->Alice]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Alice->Alice]: Firstly, I would name my restaurant "Le Petit Bistro". With the initial capital of $10,000, I would allocate my funds in the following way: $4,000 for the interior and ambiance, $3,000 for procuring high-quality ingredients, $2,000 for hiring a skilled chef and staff, and $1,000 for marketing and advertising.
+
+To ensure the success of "Le Petit Bistro", I would:
+
+1. **Staff and Training**: Hire a competent chef and staff who have experience with French cuisine. I would invest in their training to keep them updated with the latest culinary techniques. Regular team-building exercises would be conducted to promote a healthy working environment.
+
+2. **Menu**: The menu would be designed to cater to a wide range of customers. It would include popular French dishes as well as unique, innovative recipes to stand out from the competition. Special attention would be given to presentation and quality.
+
+3. **Quality Ingredients**: Only the highest quality ingredients would be used to ensure the taste and presentation of the dishes. I would establish relationships with local farmers and suppliers to ensure fresh produce.
+
+4. **Customer Service**: Excellent customer service would be a priority. The staff would be trained to handle customer complaints and requests professionally and promptly.
+
+5. **Marketing and Advertising**: I would use social media and local newspapers for advertising. Special offers and discounts would be given to attract customers. An opening night event would be organized to generate buzz around the restaurant.
+
+6. **Feedback and Continuous Improvement**: Regular customer feedback would be collected and analyzed for continuous improvement. I would also be proactive in observing the competitor's strategies and adapt accordingly.
+
+7. **Pricing Strategy**: The pricing would be competitive yet profitable. Special meal deals would be offered during off-peak hours to attract more customers.
+
+By implementing these strategies and maintaining a keen eye on my competitor's moves, I aim to ensure the success of "Le Petit Bistro" and outshine the competition.
+
+[System->Alice]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Alice->Alice]: Based on these guidelines, the following strategies would be implemented:
+
+1. **Chefs**: I would hire a moderately skilled chef, assuming that their level would match the salary I'm willing to pay. This would ensure a balance between the quality of food and the overall costs.
+
+2. **Dishes**: I would focus on the quality of the dishes rather than the quantity. The original price of the dishes would be set slightly higher to ensure better ingredients are used, which in turn would enhance the taste. The selling price would be competitive yet profitable, considering the customer's experience.
+
+3. **Advertisement**: I would invest in the advertising module to effectively communicate with customers. Special offers, discounts, and new dish introductions would be advertised through this channel to attract more customers.
+
+Actions:
+
+1. **Chef Hiring**: Use the hiring module to hire a moderately skilled chef within my budget.
+
+2. **Menu Configuration**: Use the menu configuration module to set the original price of the dishes higher for better quality ingredients. Set a competitive selling price for a good customer experience.
+
+3. **Advertising**: Use the advertising module to communicate with customers and advertise special offers and discounts.
+
+[System->Alice]: Now your restaurant basic information as below:
+<INPUT 0>
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Alice->Alice]: {
+    "type": "add",
+    "data":{
+        "name": "Le Petit Bistro",
+        "money": 10000,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+[System->Alice]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Alice->Alice]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Bouillabaisse",
+            "description": "Traditional Provençal fish stew",
+            "price": 25,
+            "cost_price": 15
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Ratatouille",
+            "description": "Vegetable dish consisting of peppers, eggplant, and zucchini",
+            "price": 20,
+            "cost_price": 12
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Coq au Vin",
+            "description": "Chicken cooked in red wine with mushrooms and onions",
+            "price": 24,
+            "cost_price": 14
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Crème Brûlée",
+            "description": "Classic French custard dessert with a caramelized sugar top",
+            "price": 10,
+            "cost_price": 6
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "French Wine",
+            "description": "Selection of red and white French wines",
+            "price": 15,
+            "cost_price": 8
+        }
+    }
+]
+
+[System->Alice]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Alice->Alice]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Pierre",
+            "salary": 2000
+        }
+    }
+]
+
+[System->Alice]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': 'Welcome to Le Petit Paris, your local French cuisine haven! Indulge in our Classic French dishes prepared by our experienced chefs using the freshest ingredients. Bon Appétit!'}
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Alice->Alice]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Discover the taste of France at Le Petit Bistro! Experience authentic French cuisine, carefully crafted by our experienced chef. Join us for a dining experience par excellence!"
+    }
+}
+
