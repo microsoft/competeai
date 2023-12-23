@@ -6,5 +6,5 @@
 2. Flask is more suitable than Django
 
 TODO
+0. dine 
 1. group discuss
-2. parllel run and message process

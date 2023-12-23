@@ -7,7 +7,7 @@ from .message import MessagePool
 from .agent import Player
 from .scene import load_scene, Scene
 
-from .utils import PORT_MAP
+from .utils import NAME2PORT
 
 
 # 该类负责全局的模拟过程
@@ -22,7 +22,7 @@ class Simulation:
         # TODO: graph search
         return self.scenes[self.curr_scene_idx]
     
-    def step(self):
+    def step(self, data):
         """
         Run one step of the simulation
         """
@@ -31,17 +31,23 @@ class Simulation:
         # Parallel run scenes & check if all scenes are finished
         max_number_parallel = 6
         with ThreadPoolExecutor(max_workers=max_number_parallel) as executor:
-            futures = [executor.submit(scene.run) for scene in current_scene]
-
+            futures = [executor.submit(scene.run(data)) for scene in current_scene]
             # Optionally, wait for all scenes to finish and get their results
             results = [future.result() for future in futures]
+        
+        next_scene_data = current_scene[0].get_data_for_next_scene()
+        self.curr_scene_idx += 1
+        
+        return next_scene_data
     
     def run(self):
         """
-        Main function, automatically assemble input and parse output to run the scene
+        Main function, run the simulation
         """
-        while self.step():
-            pass
+        previous_scene_data = None
+        while True:  # TODO
+            res = self.step(previous_scene_data)
+            previous_scene_data = res
     
     @classmethod
     def from_config(cls, config: Union[str, dict, SimulConfig]):
@@ -62,7 +68,7 @@ class Simulation:
         for scene_config in config.scenes:
             if scene_config['scene_type'] == 'restaurant_design':
                 for player in scene_config['players']:
-                    PORT_MAP[player] = database_port
+                    NAME2PORT[player] = database_port
                     database_port += 1
         
         # Create the players

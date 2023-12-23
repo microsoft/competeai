@@ -8,6 +8,7 @@ processes = [
     {"name": "comment", "from_db": False, "to_db": True},
 ]
 
+
 class Dine(Stage):
     def __init__(self):
         super().__init__()

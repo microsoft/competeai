@@ -1,7 +1,8 @@
 from typing import List
 from .base import Scene
 from ..agent import Player
-from ..utils import PORT_MAP, BASE_PORT, get_data_from_database
+from ..utils import NAME2PORT, PORT2NAME, BASE_PORT, \
+                    PromptTemplate, get_data_from_database
 
  
 processes = [
@@ -27,7 +28,7 @@ class RestaurantDesign(Scene):
         self.day = 0
         
         for player in players:
-            PORT_MAP[player.name] = self.port
+            NAME2PORT[player.name] = self.port
     
     def is_terminal(self):
         return self._curr_process_idx == len(self.processes)
@@ -35,7 +36,20 @@ class RestaurantDesign(Scene):
     def terminal_action(self):
         basic_info = get_data_from_database("basic_info", self.port)
         restaurant_name = basic_info[0]["name"]
-        PORT_MAP[restaurant_name] = self.port
+        NAME2PORT[restaurant_name] = self.port
+        PORT2NAME[self.port] = restaurant_name
+    
+    @classmethod
+    def get_data_for_next_scene(cls):
+        ports = [set(NAME2PORT.values())]
+        today_offerings = []
+        for port in ports:
+            data = get_data_from_database("show", port=port)
+            data = data.values()
+            today_offering = PromptTemplate([cls.type_name, "today_offering"]).render(data=data)
+            today_offerings.append(today_offering)
+            
+        return {"today_offerings": today_offerings}
         
     def move_to_next_player(self):
         self._curr_player_idx = 0  # In restaurant design, only one player
@@ -50,7 +64,7 @@ class RestaurantDesign(Scene):
         self.move_to_next_process()
         self._curr_turn += 1
     
-    def step(self):
+    def step(self, data=None):
         curr_process = self.get_curr_process()
         curr_player = self.get_curr_player()
         
