@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import Union, List
+from concurrent.futures import ThreadPoolExecutor
 
 from .config import SimulConfig
 from .message import MessagePool
@@ -25,11 +26,15 @@ class Simulation:
         """
         Run one step of the simulation
         """
-        currernt_scene = self.get_curr_scene()
+        current_scene = self.get_curr_scene()
         
-        # TODO: parallel run scenes & check if all scenes are finished
-        for scene in currernt_scene:
-            scene.run()
+        # Parallel run scenes & check if all scenes are finished
+        max_number_parallel = 6
+        with ThreadPoolExecutor(max_workers=max_number_parallel) as executor:
+            futures = [executor.submit(scene.run) for scene in current_scene]
+
+            # Optionally, wait for all scenes to finish and get their results
+            results = [future.result() for future in futures]
     
     def run(self):
         """

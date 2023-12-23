@@ -11,12 +11,10 @@ database_port_base: 9000
 
 players:
   - name: Alice
-    type: Boss
     role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You start with a capital of $10,000. Your restaurant style is French. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's name and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration. Remember to keep an eye on your competitor's restaurant and make sure you are always one step ahead.
     backend: *default_backend_anchor
   - name: Bob
-    type: Customer
-    role_desc: a simple description for the role
+    role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You are a bold and innovative thinker, constantly coming up with new ideas and approaches. You start with a capital of $10,000. Your restaurant style is French. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's cuisine style, name and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration.
     backend: *default_backend_anchor
 
 scenes:
@@ -24,10 +22,11 @@ scenes:
     scene_type: restaurant_design
     players:
       - Alice
-    processes:
-      - basic_ideas
-      - menus
-      - chefs
+      - Bob
+    # processes:
+    #   - basic_ideas
+    #   - menus
+    #   - chefs
   # - name: dine
   #   scene_type: dine
   #   players:

@@ -4,3 +4,7 @@
         Generated json data by agent -> summarize to a simple text 
 
 2. Flask is more suitable than Django
+
+TODO
+1. group discuss
+2. parllel run and message process

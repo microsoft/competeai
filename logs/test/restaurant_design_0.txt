@@ -1932,3 +1932,303 @@ Please provide the required JSON data for the specific action you want to take. 
     }
 }
 
+[Alice->Alice]: To begin with, I'll name my restaurant "La Petite Maison," which translates to "The Little House" in English, to emphasize the cozy and homely ambiance of my French-style restaurant.
+
+Next, I'll allocate my capital as follows:
+1. Hiring Skilled Personnel ($3000): I'll hire a skilled chef and a competent staff that can deliver excellent customer service. The chef's experience and skills will play a crucial role in preparing delicious French cuisine.
+2. High-Quality Ingredients ($2000): I'll source my ingredients from local organic farms to ensure the freshness and quality of my dishes.
+3. Decor and Ambiance ($2000): I'll invest in creating a warm, welcoming, and authentic French atmosphere in my restaurant. This will make my customers feel like they're dining in a French home, thus setting me apart from my competitor.
+4. Marketing and Advertising ($2000): A robust marketing strategy will help me reach out to potential customers and put my restaurant on the map. I'll use social media, local radio, and flyers to advertise my restaurant.
+5. Contingency Fund ($3000): This fund will be kept for unforeseen circumstances or for further investments in the future.
+
+To stay ahead of my competitor, I'll continually monitor their activities, pricing, and customer feedback. If they start a new promotion or offer a new dish, I'll respond accordingly by offering unique promotions or introducing innovative dishes in my restaurant.
+
+Furthermore, I'll place a strong emphasis on customer feedback to ensure I'm continually improving. I'll use social media and review sites to gather customers' opinions and will make necessary changes based on their feedback.
+
+I'll also consider hosting special events, like French cooking classes or wine tasting nights, to engage with the community and attract more customers.
+
+Lastly, I'll continually update my menu based on seasonality and the availability of fresh produce, ensuring my dishes are always fresh, delicious, and unique. This will give me a competitive edge and help me sustain my business in this competitive market.
+
+By implementing these strategies, I believe La Petite Maison can thrive and outshine our competitor.
+
+[System->Alice]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Alice->Alice]: Given my initial strategy, I plan to cater to a clientele that appreciates high-quality, authentic French cuisine in a comfortable homely setting. I believe that my customer base will be willing to pay a slightly higher price for a superior dining experience.
+
+Here are the actions I will perform to execute my strategy:
+
+1. Chefs:
+   - I will hire a competent chef who has experience in French cuisine. I understand that a higher-level chef will demand higher salary, but I'm willing to invest in this as it directly impacts the quality of dishes. 
+
+2. Dishes:
+   - I will focus on providing high-quality dishes. Since the taste of a dish is determined by its original price, I will not shy away from slightly increasing the cost of my dishes to procure better ingredients. This is in line with my target market who is willing to pay for quality.
+   - I will keep a reasonable ratio between the cost price and the selling price of the dish. I will ensure that while the customers are paying a higher price, they are also receiving a dish of excellent quality.
+
+3. Advertisement:
+   - I will make use of the advertising module to continuously communicate with my customers. I will advertise our unique dishes, special offers, and events like cooking classes or wine tasting nights.
+   - I will also ensure that our advertising emphasizes the high-quality ingredients we use and the authentic French dining experience we offer.
+
+I will now proceed to the corresponding modules to implement these actions.
+
+[System->Alice]: Now your restaurant basic information as below:
+<INPUT 0>
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Alice->Alice]: {
+    "type": "add",
+    "data":{
+        "name": "La Petite Maison",
+        "money": 10000,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+[System->Alice]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Alice->Alice]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Coq Au Vin",
+            "description": "Traditional French dish of chicken slow cooked in red wine with mushrooms and onions",
+            "price": 25,
+            "cost_price": 12
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Bouillabaisse",
+            "description": "Classic Provençal seafood stew with saffron, fennel, and potatoes",
+            "price": 30,
+            "cost_price": 16
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Duck Confit",
+            "description": "Duck leg slow-cooked until tender in its own fat, served with a side of sautéed potatoes",
+            "price": 28,
+            "cost_price": 14
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Ratatouille",
+            "description": "A hearty stew made with bell peppers, eggplant, zucchini, and tomatoes",
+            "price": 20,
+            "cost_price": 10
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Tarte Tatin",
+            "description": "Upside-down caramelized apple tart served with a scoop of vanilla ice cream",
+            "price": 12,
+            "cost_price": 6
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Crème Brûlée",
+            "description": "Creamy custard base topped with a contrasting layer of hard caramel",
+            "price": 10,
+            "cost_price": 5
+        }
+    }
+]
+
+[System->Alice]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Alice->Alice]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Pierre",
+            "salary": 3000
+        }
+    }
+]
+
+[System->Alice]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Alice->Alice]: {
+    "type": "add",
+    "data":{
+        "content": "Discover the charm of French dining at La Petite Maison. Indulge in our authentic French cuisine made with the freshest local ingredients. Enjoy our signature dishes like Coq Au Vin, Bouillabaisse, and Duck Confit. End your meal with our exquisite dessert choices like Tarte Tatin and Crème Brûlée. Experience French gastronomy in a cozy, homely setting. Join us for an unforgettable dining experience!"
+    }
+}
+
