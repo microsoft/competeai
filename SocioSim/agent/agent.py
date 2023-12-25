@@ -20,7 +20,7 @@ class Agent(Configurable):
         An abstract base class for all the agents in the chatArena environment.
     """
     @abstractmethod
-    def __init__(self, name: str, role_desc: str, global_prompt: str = None, *args, **kwargs):
+    def __init__(self, name: str, agent_type: str, role_desc: str, global_prompt: str = None, *args, **kwargs):
         """
         Initialize the agent.
 
@@ -31,8 +31,10 @@ class Agent(Configurable):
         """
         super().__init__(name=name, role_desc=role_desc, global_prompt=global_prompt, **kwargs)
         self.name = name
+        self.agent_type = agent_type
         self.role_desc = role_desc
-        self.global_prompt = global_prompt
+        if global_prompt and agent_type in global_prompt.keys():
+            self.global_prompt = global_prompt[agent_type]
 
 
 class Player(Agent):

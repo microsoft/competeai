@@ -37,6 +37,7 @@ class Scene(Configurable):
     # TODO: 根据需求组装更复杂的prompt
     def add_new_prompt(self, player_name, scene_name=None, step_name=None, data=None, from_db=False):
         # If the prompt template exists, render it and add it to the message pool
+        prompt = None
         if scene_name and step_name:
             if PromptTemplate([scene_name, step_name]).content:
                 prompt_template = PromptTemplate([scene_name, step_name])
@@ -54,18 +55,19 @@ class Scene(Configurable):
         self.message_pool.append_message(message)
     
     def parse_output(self, output, player_name, step_name, to_db=False):  
-        res = output
-        
         if to_db and output != "None":  # TODO: better code
             send_data_to_database(output, step_name, NAME2PORT[player_name])
-            res = json.loads(output)
         
         # TODO: short output
         message = Message(agent_name=player_name, content=output, 
                             visible_to=player_name, turn=self._curr_turn)
         self.message_pool.append_message(message)
         
-        return res
+        try:
+            parsed_ouput = json.loads(output)
+            return parsed_ouput
+        except:
+            return None
     
     def log_table(self, data, column_name):
         # Try to read the CSV file if it exists, else create an empty DataFrame
@@ -89,7 +91,15 @@ class Scene(Configurable):
         print(df)
         df.to_csv(csv_file, index=False)
     
+    @classmethod
+    def action_for_next_scene(self, data):
+        return
+            
+    
     def is_terminal(self):
+        pass
+    
+    def terminal_action(self):
         pass
     
     def get_curr_player(self):
@@ -112,3 +122,5 @@ class Scene(Configurable):
             data = self.step(data)
         
         self.terminal_action()
+        
+        return data

@@ -1,6 +1,8 @@
 from typing import List
-from .base import Stage
+from .base import Scene
 from ..agent import Player
+from ..utils import NAME2PORT, PORT2NAME, \
+                    get_data_from_database, send_data_to_database
 
  
 processes = [
@@ -8,7 +10,7 @@ processes = [
     {"name": "comment", "from_db": False, "to_db": False},
 ]
 
-class Dine(Stage):
+class Dine(Scene):
     
     type_name = "dine"
     
@@ -18,10 +20,69 @@ class Dine(Stage):
         self.processes = processes
         
         self.day = 1
+        self.dishes = None
     
     def is_terminal(self):
         return self._curr_process_idx == len(self.processes)
     
+    @classmethod
+    def action_for_next_scene(self, data):
+        # 处理数据，发送到数据库
+        restaurant_list = []
+        daybooks = {}
+        comments = {}
+        num_of_customer = {}
+        infos = {}
+        rival_infos = {}
+        
+        for value in PORT2NAME.values():
+            restaurant_list.append(value)
+            comments[value] = []
+            daybooks[value] = {}
+            num_of_customer[value] = 0
+            infos[value] = ''
+            rival_infos[value] = ''
+            
+        for d in data:
+            agent_name = next(iter(d))
+            d = d[agent_name]
+            
+            day = d["day"]
+            name = d["restaurant"]
+            score = d["score"]
+            comment = d["comment"]
+            
+            comment = {"day": day, "name": agent_name, "score": score, "content": comment}
+            comments[name].append({"type": "add", "data": comment})
+            
+            dishes = d["dishes"]
+            num_of_customer[name] += 1
+            for dish in dishes:
+                if not dish in daybooks[name]:
+                    daybooks[name][dish] = 0
+                daybooks[name][dish] += 1
+                    
+        for name in restaurant_list:
+            menu = get_data_from_database("menu", port=NAME2PORT[name])
+            info = f"Restaurant: {name}\n Number of customers: {num_of_customer[name]}\n Menu: {menu}\n "
+            infos[name] = info
+        
+        for key in daybooks:
+            for name in restaurant_list:
+                if name != key:
+                    rival_infos[key] += infos[name]
+            daybook = {"dishes": str(daybooks[key]), "num_of_customer": num_of_customer[key], "rival_info": rival_infos[key]}
+            print(f'daybook: {daybook}')
+            daybooks[key] = {"type": "add", "data": daybook}
+
+        # send comments and daybooks to database
+        for key in comments:
+            send_data_to_database(comments[key], "comment", port=NAME2PORT[key])
+        for key in daybooks:
+            send_data_to_database(daybooks[key], "daybook", port=NAME2PORT[key])
+        
+        return
+        
     def move_to_next_player(self):
         self._curr_player_idx = 0  # In restaurant design, only one player
     
@@ -42,10 +103,9 @@ class Dine(Stage):
         # pre-process
         if curr_process['name'] == 'order':
             for k in input.keys():
+                print(input[k]['today_offering'])
                 # add all today offerings to message pool
                 self.add_new_prompt(player_name=curr_player.name, 
-                                scene_name=self.type_name, 
-                                step_name=curr_process['name'], 
                                 data=input[k]['today_offering'])
             # add order prompt
             self.add_new_prompt(player_name=curr_player.name, 
@@ -73,19 +133,29 @@ class Dine(Stage):
         
         # post-process
         if curr_process['name'] == 'order':
-            restaurant = parsed_ouput['restaurant_name']
-            dishes = parsed_ouput['dishes']
+            restaurant = parsed_ouput['restaurant']
+            self.dishes = parsed_ouput['dishes']
             dish_score = input[restaurant]['dish_score']
             
             prompt = ''
-            for dish in dishes:
+            for dish in self.dishes:
                 # check if the dish is in the restaurant
-                if dish in dish_score[restaurant].keys():
-                    score = dish_score[restaurant][dish]
+                if dish in dish_score.keys():
+                    score = dish_score[dish]
                     prompt += f"\n{dish}: {score}"
                 output = prompt
+        
+        if curr_process['name'] == 'comment':
+            dine_info = parsed_ouput
+            dine_info['dishes'] = self.dishes
+            dine_info['day'] = self.day
+            customer_name = self.players[0].name
+            dine_info = {customer_name: dine_info}
+            output = dine_info
                 
         self.prepare_for_next_step()
+        
+        # TODO day+1
         
         return output
         

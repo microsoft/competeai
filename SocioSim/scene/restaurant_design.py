@@ -40,7 +40,7 @@ class RestaurantDesign(Scene):
         PORT2NAME[self.port] = restaurant_name
     
     @classmethod
-    def get_data_for_next_scene(cls):
+    def action_for_next_scene(cls):
         ports = set(NAME2PORT.values())
         res = {}
         for port in ports:
@@ -90,6 +90,8 @@ class RestaurantDesign(Scene):
             raise Exception("Invalid step retry arrived at maximum.")
         
         self.prepare_for_next_step()
+        
+        return
         
         
 
