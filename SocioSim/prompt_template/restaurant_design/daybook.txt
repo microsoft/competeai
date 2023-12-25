@@ -1,1 +1,5 @@
-TODO
+Today is day <INPUT 0> . 
+The daybook as below: <INPUT 1> . 
+The customer comments as below <INPUT 2> 
+
+The rival restaurant info as below:\n <INPUT 3> 

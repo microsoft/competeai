@@ -9,7 +9,6 @@ If the above inforamtion have not been set, your response must follow the follow
         "money": <The number I have told you>,
         "rent": 100,
         "day": 1,
-        "status": "designing"
     }
 }
 

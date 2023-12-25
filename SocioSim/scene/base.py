@@ -24,8 +24,8 @@ class Scene(Configurable):
         self.id = id
         self.players = players
         
-        log_path = f'{log_path}/{self.type_name}_{self.id}.txt'
-        self.message_pool = MessagePool(log_path=log_path)
+        self.log_path = f'{log_path}/{self.type_name}_{self.id}'
+        self.message_pool = MessagePool(log_path=self.log_path)
         
         self.num_of_players = len(players)
         self.invalid_step_retry = 3
@@ -71,7 +71,7 @@ class Scene(Configurable):
     
     def log_table(self, data, column_name):
         # Try to read the CSV file if it exists, else create an empty DataFrame
-        csv_file = f'{self.log_file}.csv'  # TODO: log_file
+        csv_file = f'{self.log_path}.csv' 
         try:
             df = pd.read_csv(csv_file)
         except FileNotFoundError:

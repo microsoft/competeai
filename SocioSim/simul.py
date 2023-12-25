@@ -38,10 +38,13 @@ class Simulation:
             futures = [executor.submit(lambda: scene.run(data)) for scene in current_scene]
             # Optionally, wait for all scenes to finish and get their results
             results = [future.result() for future in futures]
+            print("debugging-results")
             print(results)
             
         next_scene_data = current_scene[0].action_for_next_scene(results)
-        self.curr_scene_idx += 1
+        
+        # loop the scenes
+        self.curr_scene_idx = (self.curr_scene_idx + 1) % len(self.scenes)
         
         return next_scene_data
     

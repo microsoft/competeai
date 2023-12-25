@@ -13,6 +13,7 @@ class MenuViewSet(viewsets.ModelViewSet):
     serializer_class = MenuSerializer
     filter_backends = [DjangoFilterBackend]
     filter_fields = "__all__"
+    # TODO: 检查菜品名称是否存在重合？
     
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())

@@ -24,9 +24,13 @@ class Dine(Scene):
     
     def is_terminal(self):
         return self._curr_process_idx == len(self.processes)
+
+    def terminal_action(self):
+        self.day += 1
+        self._curr_process_idx = 0
     
     @classmethod
-    def action_for_next_scene(self, data):
+    def action_for_next_scene(cls, data):
         # 处理数据，发送到数据库
         restaurant_list = []
         daybooks = {}
@@ -72,7 +76,10 @@ class Dine(Scene):
                 if name != key:
                     rival_infos[key] += infos[name]
             daybook = {"dishes": str(daybooks[key]), "num_of_customer": num_of_customer[key], "rival_info": rival_infos[key]}
-            print(f'daybook: {daybook}')
+            
+            print(f'debugging-daybook: {daybook}')
+            print(daybook)
+            
             daybooks[key] = {"type": "add", "data": daybook}
 
         # send comments and daybooks to database

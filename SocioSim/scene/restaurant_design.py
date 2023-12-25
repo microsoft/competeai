@@ -6,7 +6,7 @@ from ..utils import NAME2PORT, PORT2NAME, BASE_PORT, \
 
  
 processes = [
-    {"name": "daybook", "from_db": True, "to_db": False},
+    {"name": "daybook", "from_db": False, "to_db": False},
     {"name": "rule", "from_db": False, "to_db": False},
     {"name": "basic_info", "from_db": True, "to_db": True},
     {"name": "menu", "from_db": True, "to_db": True},
@@ -38,9 +38,11 @@ class RestaurantDesign(Scene):
         restaurant_name = basic_info[0]["name"]
         NAME2PORT[restaurant_name] = self.port
         PORT2NAME[self.port] = restaurant_name
+        self.day += 1
+        self._curr_process_idx = 0
     
     @classmethod
-    def action_for_next_scene(cls):
+    def action_for_next_scene(cls, data=None):
         ports = set(NAME2PORT.values())
         res = {}
         for port in ports:
@@ -70,7 +72,21 @@ class RestaurantDesign(Scene):
         curr_process = self.get_curr_process()
         curr_player = self.get_curr_player()
         
-        if not (curr_process['name'] == 'daybook' and self.day == 0):
+        if curr_process['name'] == 'daybook' and self.day == 0:
+            pass
+        elif curr_process['name'] == 'daybook' and self.day != 0:
+            daybook = get_data_from_database("daybook", port=self.port)
+            daybook = daybook[self.day-1]
+            rival_info = daybook["rival_info"]
+            daybook = {k: v for k, v in daybook.items() if k != "rival_info"}
+            comment = get_data_from_database("last_comment", port=self.port)
+            data = [self.day, daybook, comment, rival_info] 
+            self.add_new_prompt(player_name=curr_player.name, 
+                                scene_name=self.type_name, 
+                                step_name=curr_process['name'], 
+                                data=data)
+            self.log_table(daybook, f"day{self.day}") # log
+        else:
             # LLM can not simulate the whole process automatically, it needs prompt to guide
             self.add_new_prompt(player_name=curr_player.name, 
                                 scene_name=self.type_name, 

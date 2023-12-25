@@ -1,0 +1,10 @@
+name,day1,day2,day3,day4,day5,day6,day7,day8
+id,1,2,3,4,5,6,7,8
+profit,0,97,0,34,0,20,0,-10
+expense,183,183,183,183,183,183,183,183
+num_of_customer,0,3,0,3,0,3,0,3
+num_of_chef,2,2,2,2,2,2,2,2
+chef_salary,2500,2500,2500,2500,2500,2500,2500,2500
+dish_score,0.45785714285714285,0.5027619047619047,0.5738565782044043,0.6532479617157037,0.6669586442159038,0.7017606621773288,0.7378758169934642,0.7864223337049423
+customer_score,0.0,5.0,5.0,6.5,6.5,7.0,7.0,7.5
+dishes,{},"{'Coq au Vin': 2, 'Bouillabaisse': 1, 'Ratatouille': 3, 'Tarte Tatin': 1, 'French Wine': 1}",{},"{'Coq au Vin': 2, 'Bouillabaisse': 1, 'Ratatouille': 3, 'Tarte Tatin': 2, 'French Wine': 1}",{},"{'Coq au Vin': 2, 'Bouillabaisse': 1, 'Ratatouille': 3, 'Tarte Tatin': 1, 'French Wine': 1, 'Vegetable Quiche': 3}",{},"{'Coq au Vin': 2, 'Bouillabaisse': 1, 'Ratatouille': 3, 'Tarte Tatin': 1, 'French Wine': 1, 'Vegetable Quiche': 2}"

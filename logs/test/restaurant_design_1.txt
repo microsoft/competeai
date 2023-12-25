@@ -992,3 +992,1298 @@ Please provide the required JSON data for the specific action you want to take. 
     }
 }
 
+[Lin->Lin]: To ensure my restaurant's triumph over the competitor, I would employ a comprehensive strategy that focuses on improving the quality of services, optimizing the operational process, and enhancing customer satisfaction.
+
+Firstly, I would invest in the quality of ingredients used in the preparation of our dishes. For a French restaurant, quality and freshness are key to creating an authentic and memorable dining experience. I would allocate around $3000 from our capital to sourcing the best local and imported ingredients. 
+
+Secondly, investing in highly skilled and experienced chefs is crucial. I would allocate $4000 to wages, ensuring that we can attract and retain top culinary talents. A great chef can make a significant difference in the taste and presentation of our dishes, which will attract more customers.
+
+Thirdly, ambiance plays a vital role in a restaurant. I would ensure that our restaurant design and interior setup resonate with the French style. I would allocate $2000 to enhancing our restaurant's ambiance, investing in comfortable furniture, elegant decor, and appropriate lighting.
+
+Fourthly, customer service is paramount in the restaurant business. Therefore, I would invest in training our staff to provide excellent service. This includes understanding the menu, effectively communicating with customers, and handling complaints professionally. I would allocate $500 for staff training.
+
+Lastly, I would allocate $1000 to marketing and advertising our restaurant. In a small town, word-of-mouth and local advertising can be very effective. Therefore, I would focus on local SEO, social media advertising, and collaborating with local influencers and bloggers. Additionally, we can host special events or offer promotions to attract more customers.
+
+Furthermore, I would keep track of our competitor's activities to understand their strengths and weaknesses. This includes their menu, pricing, marketing strategies, and customer reviews. I would then use this information to make necessary adjustments to our strategy.
+
+In conclusion, I would focus on offering an authentic French dining experience, maintaining high quality in our dishes, providing excellent customer service, and effective marketing to ensure our restaurant's success.
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->Lin]: Based on the provided rules, here's the strategy I would adopt:
+
+1. Chefs: 
+   - With $4000 allocated to wages, I would hire one or two high-level chefs. Even though I cannot communicate or train them, their experience and skill level would ensure the quality of our dishes.
+
+2. Dishes: 
+   - I would adjust the original price of our dishes to procure better ingredients, enhancing the taste and therefore attracting more customers. With $3000 allocated to ingredients, we can afford to increase the price of our dishes without compromising on profitability.
+   
+   - I would focus on offering a variety of dishes at different price points, catering to both high-end clientele and those looking for more affordable options. This strategy would allow us to maximize customer satisfaction while maintaining a good profit margin.
+
+3. Advertisement: 
+   - Using the advertising module, I would regularly communicate with our customers about new dishes, special promotions, and events. With $1000 allocated to advertising, we can effectively reach out to our target customers in the local area.
+
+The actions I would perform are:
+
+1. Hire one or two high-level chefs using the HR module.
+2. Adjust the price of our dishes to improve the quality of ingredients using the Menu module.
+3. Create a variety of dishes at different price points using the Menu module.
+4. Regularly advertise new dishes, promotions, and events using the Advertising module.
+
+[System->Lin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "name": "La Petite France",
+        "money": 10000,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Coq au Vin",
+            "description": "Classic French dish of chicken slow-cooked with wine, mushrooms, and garlic.",
+            "price": 30,
+            "cost_price": 15
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Bouillabaisse",
+            "description": "Traditional Provençal fish stew originating from the port city of Marseille.",
+            "price": 35,
+            "cost_price": 20
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Ratatouille",
+            "description": "A stewed vegetable dish with eggplant, zucchini, bell peppers, tomato and a variety of herbs.",
+            "price": 20,
+            "cost_price": 10
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Tarte Tatin",
+            "description": "Caramelized apple tart, made famous by the Tatin sisters.",
+            "price": 15,
+            "cost_price": 7
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "French Wine",
+            "description": "A selection of the finest French wines.",
+            "price": 25,
+            "cost_price": 12
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Antoine",
+            "salary": 2500
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Isabelle",
+            "salary": 1500
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "content": "Welcome to La Petite France! Experience authentic French cuisine in our cozy restaurant. From classic Coq au Vin to traditional Bouillabaisse, we promise a culinary journey to the heart of France. Enjoy our fine selection of French wines and end your meal with a delightful Tarte Tatin. Visit us today!"
+    }
+}
+
+[Lin->Lin]: As the owner of a French restaurant, I understand the importance of maintaining a balance between profitability and quality. My restaurant, "La Maison Française", aims to deliver an authentic French dining experience that is enjoyable and memorable. Out of the initial capital of $10,000, I would allocate the funds in the following manner:
+
+1. Personnel ($4,000): I would invest in hiring experienced chefs who specialize in French cuisine. Offering competitive salaries would attract quality staff and ensure the preparation of exceptional dishes. 
+
+2. Ingredients ($3,000): Sourcing fresh, high-quality ingredients is vital to creating delicious dishes. I would work with local farmers and suppliers to acquire the freshest produce, meats, and cheeses.
+
+3. Interior Décor ($1,500): The ambiance of a restaurant plays a significant role in attracting customers. I would ensure that the interior captures the essence of a French bistro, with warm, cozy lighting, rustic wooden tables, and vintage French art adorning the walls.
+
+4. Marketing and Advertising ($1,500): To create awareness about my restaurant, I'd invest in local advertising. This could include ads in the local newspaper, social media promotions, and partnerships with local businesses and events.
+
+Now, to ensure the triumph of "La Maison Française" over the competitor, I would employ the following strategies:
+
+1. Unique Menu: Offering a menu that stands out from our competitor's is vital. I would focus on traditional French dishes with a modern twist, ensuring our dishes are not only delicious but also visually appealing.
+
+2. Special Events: Hosting special events such as wine tasting nights, live music, or themed nights could attract a variety of customers. 
+
+3. Loyalty Program: To encourage repeat business, I'd implement a loyalty program where customers can earn points with each visit, which can be redeemed for discounts or free meals.
+
+4. Community Involvement: Participating in local events and sponsoring community activities can help build a positive reputation and attract more customers.
+
+5. Excellent Customer Service: Providing top-notch customer service can set us apart from the competition. I would invest in training our staff to ensure they provide exceptional service.
+
+6. Regular Menu Updates: Regularly updating our menu based on seasonality and customer feedback can keep our offerings exciting and relevant.
+
+7. Strategic Pricing: While maintaining the quality of our dishes, I would also ensure our prices are competitive. Offering daily specials or off-peak discounts can attract more customers.
+
+8. Online Presence: In today's digital age, having a strong online presence is crucial. I would ensure our website is user-friendly, with an online reservation system, and maintain active social media accounts to engage with our customers.
+
+This strategic approach should help "La Maison Française" gain a competitive edge and emerge as the preferred choice for diners in our small town.
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->Lin]: Based on the rules provided, I would revise my strategy as follows:
+
+1. Chefs: As the level of a chef is proportional to their salary, I would ensure our chefs are paid competitively to ensure a high level of expertise. Our focus will be on hiring chefs who specialize in French cuisine to deliver the best dining experience to our customers.
+
+2. Dishes: Given that the taste of a dish is determined by its original price, I would focus on sourcing high-quality ingredients whilst keeping the cost price to a selling price ratio reasonable. This will ensure that our dishes are delicious and provide good value for money. To cater to a broad spectrum of customers, our menu would feature both affordable and high-end dishes. We will also consider introducing a daily special dish that can be priced a bit higher, yet offer a unique gastronomic experience.
+
+3. Advertisement: We would make full use of the advertising module to communicate with customers. Our advertising strategy would involve promoting our unique menu items, special events, and discounts. We would also highlight the expertise of our chefs and the quality of our ingredients to attract discerning food lovers.
+
+Action Plan:
+
+1. On the chef module, I would allocate $4,000 to hire experienced chefs.
+2. On the food module, I would allocate $3,000 for procuring high-quality ingredients. I would ensure a diverse menu that caters to different price points, making sure to maintain a good cost price to selling price ratio while not compromising the taste.
+3. To attract customers, I would allocate $1,500 on the advertising module to promote our unique offerings, special events, and discounts.
+4. I would spend the remaining $1,500 on enhancing the restaurant's ambiance and buying necessary equipment.
+
+This revised strategy should help "La Maison Française" achieve a competitive advantage, ensuring its survival and growth.
+
+[System->Lin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "name": "La Maison Française",
+        "money": 10000,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Coq au Vin",
+            "description": "Traditional French dish of chicken slow cooked in wine with mushrooms and garlic",
+            "price": 25,
+            "cost_price": 15
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Bouillabaisse",
+            "description": "Provençal fish stew originating from the port city of Marseille",
+            "price": 30,
+            "cost_price": 20
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Ratatouille",
+            "description": "Colorful vegetable medley stewed in a tomato sauce",
+            "price": 20,
+            "cost_price": 10
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Tarte Tatin",
+            "description": "Upside-down caramelized apple tart served with a dollop of crème fraîche",
+            "price": 10,
+            "cost_price": 5
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Château Margaux Wine",
+            "description": "Rich and flavorful red wine from the Bordeaux region",
+            "price": 50,
+            "cost_price": 30
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Pierre",
+            "salary": 2000
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Marie",
+            "salary": 2000
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "content": "Come and experience the authentic taste of France at La Maison Française! Our handpicked chefs prepare each dish with the freshest ingredients, offering you a menu that combines tradition with a modern twist. Join us for a memorable dining experience - where each dish tells a story and each sip of wine takes you on a journey. Don't miss out on our daily specials and wine tasting events. Visit us today, and let us take you on a culinary journey across France right here in our cozy town!"
+    }
+}
+
+[Lin->Lin]: Firstly, I would name my restaurant "La Petite Maison", to evoke a sense of intimacy and authenticity in line with the French cuisine style. Then, I would allocate the initial $10,000 capital as follows:
+
+1. $4000 on quality ingredients: Ensuring high-quality ingredients is the foundation of any great restaurant. This will not only ensure delicious food but also attract health-conscious customers.
+
+2. $3000 on skilled chefs and staff: I would hire a head chef with a background in French cuisine, along with a small team of sous chefs and serving staff. Paying them well will ensure they are motivated and will also attract the best talent.
+
+3. $2000 on ambiance and setup: The decor and ambiance of the restaurant are crucial in enhancing the dining experience. I want to create a cozy, elegant yet casual atmosphere that complements the French theme.
+
+4. $1000 on marketing and promotion: This is vital for attracting customers. I would focus on local advertising via newspapers, local radio, and social media. I would also consider hosting an opening event to draw attention.
+
+After the initial setup, I would closely monitor my competitors' menu and prices. I would aim to offer a unique menu that differentiates my restaurant from the competition, while also offering competitive prices. The menu would be a mix of classic French dishes and innovative, modern interpretations of French cuisine, showcasing the skills of our talented chefs.
+
+Customer service is another key aspect. I would train my staff to provide excellent service, ensuring that customers feel valued and well-taken care of. This can often be a deciding factor for customers when choosing between restaurants.
+
+In terms of marketing, I would prioritise building a strong online presence, encouraging customers to leave positive reviews on platforms like Yelp and Google. I would also establish a social media presence, regularly posting enticing photos of our dishes and updates about any special events or menu changes.
+
+Lastly, I would continuously seek feedback from our customers to understand their preferences and any areas of improvement. This could be done through comment cards, online surveys, or simply by talking to customers. By being responsive and adaptive to customer feedback, I can ensure that my restaurant continues to meet and exceed customer expectations, thereby gaining a competitive edge.
+
+[Lin->Lin]: To ensure my restaurant's triumph over the competitor, I'd follow a multi-pronged strategy focusing on quality, marketing, differentiation, innovation, and customer experience. 
+
+1. Quality: I would prioritize maintaining high standards of quality in both food and service. I'd source ingredients from local farmers and organic markets to ensure freshness and support local business. I would also invest in hiring experienced chefs and train them to consistently prepare dishes that meet our high standards.
+
+2. Marketing: I would allocate part of the budget towards marketing. This would include both online and offline marketing strategies. Online marketing would involve creating a strong social media presence and engaging with customers through regular posts, updates, and promotions. Offline marketing could include hosting special events, offering discounts, and forming partnerships with local businesses.
+
+3. Differentiation: It's important to stand out from the competition. I would do this by offering a unique dining experience. This could include hosting themed nights, offering a special seasonal menu, and providing live entertainment. 
+
+4. Innovation: I would regularly update the menu to keep it exciting and new. I would also offer innovative dishes that are not available at the competitor's restaurant. This could involve incorporating local flavors into traditional French dishes or creating fusion dishes.
+
+5. Customer Experience: Above all, I would focus on providing an exceptional customer experience. I would train the staff to be attentive, friendly, and efficient. I would also offer personalized service, such as remembering regular customers' preferences or celebrating special occasions. 
+
+6. Financial Management: I would keep a close eye on finances to ensure the restaurant is profitable. This would include regularly reviewing and adjusting the pricing, managing expenses, and finding ways to increase efficiency.
+
+7. Continuous Improvement: I would regularly gather feedback from customers to identify areas of improvement. This could be done through comment cards, online reviews, or direct conversations.
+
+By implementing these strategies, I believe "La Petite Maison" would not only survive the competition but thrive and become a beloved fixture in the town.
+
+[Lin->Lin]: Given my restaurant's French cuisine style, I would name it "Lin's Maison Gourmet." In terms of allocating the initial capital, I would distribute the funds as follows:
+
+1. Restaurant Setup: $2000 - This would include kitchen equipment, furniture, and interior decor to give a cozy, authentic French ambiance.
+
+2. Ingredients and Supplies: $3000 - High-quality ingredients are key to creating delicious dishes. I would source local produce and high-quality imported ingredients where necessary.
+
+3. Staff Salaries: $3000 - Good chefs and wait staff are essential for a successful restaurant. I'd recruit a skilled French chef and well-trained staff, offering competitive salaries to attract and retain the best.
+
+4. Marketing & Advertising: $2000 - I'd invest in local advertising, social media marketing, and perhaps a grand opening event to attract customers.
+
+Now, to ensure the restaurant's triumph, I would deploy the following strategies:
+
+1. Unique Menu: I would create a unique and creative French menu, mixing traditional dishes with some fusion recipes. This would keep regular customers intrigued and attract new ones.
+
+2. Constant Quality: I would ensure consistency in the quality of food and service, as this is one of the most critical factors for customer retention.
+
+3. Promotions: I would introduce special promotions during off-peak hours or days to increase customer flow.
+
+4. Community Engagement: I would organize food festivals, cooking classes, and participate in local events to increase visibility and build a loyal customer base.
+
+5. Feedback System: I would establish an effective feedback system, encouraging customers to share their experience and suggestions. This would help me understand what's working and what needs improvement.
+
+6. Regular Training: I would arrange regular training sessions for my staff to ensure they are up to date with culinary trends and service standards.
+
+7. Local Partnerships: I would collaborate with local farms and producers to ensure fresh, high-quality ingredients. This would also help in supporting local businesses.
+
+8. Online Presence: I would maintain a strong online presence, regularly updating the restaurant's website and social media with enticing photos of dishes, special offers, and events.
+
+My approach would require continual adjustment according to the market's response, but with a keen eye on the competition, and a commitment to quality and innovation, Lin's Maison Gourmet would be poised for success.
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->Lin]: Given the outlined rules, my strategies would be as follows:
+
+1. Chefs: Considering I cannot train chefs and their level is tied to their salary, I would invest in hiring experienced chefs with a proven track record in French cuisine. Since my initial budget for staff salaries is $3000, I would allocate about 70% of that for the chefs.
+
+2. Dishes: To ensure a balance between quality and cost, I would price dishes competitively but not cheaply. I aim to cater to mid to high-end clientele who appreciate authentic French cuisine. I would adjust the cost price to enhance the taste, ensuring the selling price still provides a reasonable profit margin. A part of my funds allocated to ingredients and supplies ($3000) would be used effectively for this.
+
+3. Advertisement: I would direct my advertising efforts towards building brand awareness and attracting customers. I would use the advertising module to showcase enticing pictures of dishes, special promotions, and events. My advertising budget ($2000) would be judiciously used for this purpose.
+
+Here are the actions I would perform:
+
+1. Chef Hiring: I would allocate $2100 from my budget to hire skilled chefs. 
+
+2. Dish Pricing: I would use the menu module to create a variety of dishes and set their prices. I would ensure a balance between cost price for quality ingredients and selling price for profitability.
+
+3. Advertising: I would use $1500 from my budget for an initial advertising campaign using the advertising module. I would highlight the unique selling points of my restaurant, the menu, and any special promotions.
+
+4. Customer Engagement: Although I cannot directly communicate with customers except through advertisement, I would use part of my advertising budget to promote special events and offers to engage customers and encourage repeat visits.
+
+5. Quality Control: While I cannot directly influence the chefs, I would use customer feedback gathered via the feedback module to gauge the quality of food and service and make necessary adjustments.
+
+6. Partnerships: I would establish partnerships with local farms for fresh ingredients, reflecting this in my menu and advertising to attract customers who value locally sourced food.
+
+I would keep monitoring the success of these strategies and make necessary changes to ensure the profitability and success of Lin's Maison Gourmet.
+
+[System->Lin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "name": "Lin's Maison Gourmet",
+        "money": 10000,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Coq au Vin",
+            "description": "Traditional French dish of chicken slow cooked in red wine with mushrooms and onions.",
+            "price": 25,
+            "cost_price": 15
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Ratatouille",
+            "description": "Classic French vegetable stew made with eggplant, zucchini, bell peppers and tomatoes.",
+            "price": 20,
+            "cost_price": 12
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Bouillabaisse",
+            "description": "Provencal fish stew flavored with saffron, fennel and orange peel.",
+            "price": 28,
+            "cost_price": 18
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Tarte Tatin",
+            "description": "Upside-down caramelized apple tart served with a dollop of creme fraiche.",
+            "price": 15,
+            "cost_price": 7
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "French Onion Soup",
+            "description": "Hearty onion soup topped with melted Gruyere cheese and a slice of toasted bread.",
+            "price": 15,
+            "cost_price": 8
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Escargot",
+            "description": "Snails cooked in a buttery garlic herb sauce.",
+            "price": 18,
+            "cost_price": 10
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Pierre",
+            "salary": 1500
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Marie",
+            "salary": 600
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "content": "Treat your taste buds to authentic French cuisine at Lin's Maison Gourmet! Warm, rustic, and elegant, our restaurant offers a unique dining experience with a menu that includes Coq au Vin, Ratatouille, Bouillabaisse, and more! Our dishes, prepared by skilled chefs, are made with high-quality ingredients to ensure the finest taste. Join us for a culinary journey to France right in your hometown!"
+    }
+}
+
+[Lin->Lin]: As Lin, the owner of a French restaurant in a small American town, I'm ready to face the competition head-on. I have decided to name my restaurant "Le Petit Gourmet". I believe that my restaurant's success lies within a combination of excellent food, outstanding service, and a welcoming atmosphere.
+
+Firstly, I would allocate the initial capital of $10,000 wisely. I would invest $4,000 in securing high-quality ingredients. Fresh and quality ingredients are the soul of French cuisine and this will significantly improve the taste and presentation of our dishes. I'll spend $3,000 on equipment and restaurant decor, ensuring we have the facilities to cook at our best and provide a comfortable and authentic atmosphere for our customers.
+
+Next, I would allocate $2,000 for staff salaries. I'll hire passionate and talented chefs who are experts in French cuisine, and train them to constantly innovate and improve our menu. I'll also hire attentive waitstaff who can provide excellent customer service.
+
+Finally, I'll allocate $1,000 for advertising and marketing. I'll use social media and local newspapers to promote our restaurant. I'll also organise grand opening events and offer discounts to attract initial customers.
+
+To maintain a competitive edge, I would undertake the following strategies:
+
+1. Constant Menu Innovation: I would encourage my chefs to regularly experiment with the menu, keeping the classics but also introducing new and innovative dishes every season. This would inspire repeat visits as customers would be curious to try our new offerings.
+
+2. Excellent Customer Service: My staff would be trained to provide exceptional service, creating a friendly and welcoming atmosphere for our customers. We would also take customer feedback seriously, constantly seeking to improve based on their suggestions.
+
+3. Community Engagement: I would organise regular events like cooking classes, wine tastings, and themed nights to engage with our community and build a loyal customer base. 
+
+4. Partnerships: I would collaborate with local farmers and suppliers to ensure that we have the freshest ingredients. This would not only improve the quality of our food but also promote local businesses.
+
+5. Regular Advertising: To keep our restaurant in the public eye, regular advertising is necessary. This could be in the form of weekly specials, holiday promotions, or ads in local media.
+
+Through a balanced approach of quality food, excellent service, and strategic marketing, I am confident that "Le Petit Gourmet" will triumph over the competition.
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->Lin]: Based on the rules provided, I would adopt the following strategies:
+
+1. Chefs: Considering the correlation between chef's skills and their salaries, I would ensure that we hire experienced chefs even if their salaries are higher. I would allocate a significant portion of our budget towards this as it directly impacts the quality of our dishes.
+
+2. Dishes: Instead of trying to sell more dishes at a lower cost, I would focus on offering high-quality dishes at a fair price. I believe that customers seeking French cuisine would appreciate the quality and are willing to pay a premium for it. Therefore, I would adjust the prices of our dishes to procure better ingredients, thereby enhancing the taste.
+
+3. Advertisement: I would make the most of the advertising module to communicate with our customers. Regular advertisements featuring our special dishes, events, and promotions would keep our restaurant in the public eye. I would allocate a portion of our budget for this purpose and regularly update our advertising content based on customer feedback and current trends.
+
+Actions to be performed:
+
+1. Allocate a significant portion of the budget towards chef's salaries to ensure high-quality dishes.
+
+2. Adjust the prices of our dishes to procure better ingredients and enhance taste.
+
+3. Regularly update our advertising content in the advertising module to communicate with customers and highlight our offerings.
+
+[System->Lin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "name": "Le Petit Gourmet",
+        "money": 10000,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Coq au Vin",
+            "description": "Classic French dish of chicken slow-cooked in a rich red wine sauce",
+            "price": 20,
+            "cost_price": 10
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Ratatouille",
+            "description": "Traditional French Provencal stewed vegetable dish",
+            "price": 18,
+            "cost_price": 9
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Steak Frites",
+            "description": "Perfectly cooked steak served with crispy french fries",
+            "price": 25,
+            "cost_price": 12
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Croissant",
+            "description": "Buttery, flaky, viennoiserie pastry of Austrian origin",
+            "price": 7,
+            "cost_price": 3
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "French Onion Soup",
+            "description": "Hearty onion soup topped with melted cheese and a toasted baguette slice",
+            "price": 15,
+            "cost_price": 7
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Bouillabaisse",
+            "description": "Traditional Provençal fish stew originating from the port city of Marseille",
+            "price": 22,
+            "cost_price": 11
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Crème Brûlée",
+            "description": "Rich custard base topped with a contrasting layer of hard caramel",
+            "price": 10,
+            "cost_price": 5
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Escargot",
+            "description": "Land snails cooked with butter, garlic, and parsley served with baguette slices",
+            "price": 18,
+            "cost_price": 9
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Pierre",
+            "salary": 1500
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Marie",
+            "salary": 1200
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "content": "Experience the taste of authentic French cuisine at 'Le Petit Gourmet'. Enjoy our wide range of classic and innovative dishes, made with high-quality, fresh ingredients. Join us for a memorable dining experience in a warm and welcoming atmosphere. Book your table today!"
+    }
+}
+

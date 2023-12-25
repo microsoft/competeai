@@ -193,3 +193,199 @@ Now please give your comment for this meal. Notice don't just praise! If the exp
     "comment": "The Salade Niçoise and Croque Monsieur were mediocre, not living up to my expectations in terms of flavor. The quality of the ingredients was good, but they were poorly executed. The salad was too bland and the sandwich, although well-grilled, lacked a depth of flavor. In terms of service, it was decent but not exceptional. The ambiance of the restaurant was cozy and welcoming. However, I believe there's room for improvement in their culinary skills and service quality. I hope they take this feedback into account and improve for a better dining experience."
 }
 
+[System->Charlie]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the authentic flavors of France at La Petite Maison! Our chefs, Julien and Marie, use the finest ingredients to create classic French dishes with a modern twist. Savour our Coq au Vin, Bouillabaisse, Ratatouille, Tarte Tatin, and Crème Brûlée. Come and enjoy a delicious meal in our cozy, intimate setting. Bon Appétit!
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 30, 'description': 'Classic French dish of chicken slow cooked in red wine, with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 35, 'description': 'Traditional Provençal fish stew originating from the port city of Marseille'}, {'name': 'Ratatouille', 'price': 25, 'description': 'Rustic vegetable stew with eggplant, zucchini, bell peppers, tomatoes, and fresh herbs'}, {'name': 'Tarte Tatin', 'price': 20, 'description': 'Upside-down caramelized apple tart served with a dollop of crème fraîche'}, {'name': 'Crème Brûlée', 'price': 20, 'description': 'Rich custard base topped with a layer of hardened caramelized sugar'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Charlie]: The Restaurant " La Maison Française "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Come and experience the authentic taste of France at La Maison Française! Our handpicked chefs prepare each dish with the freshest ingredients, offering you a menu that combines tradition with a modern twist. Join us for a memorable dining experience - where each dish tells a story and each sip of wine takes you on a journey. Don't miss out on our daily specials and wine tasting events. Visit us today, and let us take you on a culinary journey across France right here in our cozy town!
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Traditional French dish of chicken slow cooked in wine with mushrooms and garlic'}, {'name': 'Bouillabaisse', 'price': 30, 'description': 'Provençal fish stew originating from the port city of Marseille'}, {'name': 'Ratatouille', 'price': 20, 'description': 'Colorful vegetable medley stewed in a tomato sauce'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with a dollop of crème fraîche'}, {'name': 'Château Margaux Wine', 'price': 50, 'description': 'Rich and flavorful red wine from the Bordeaux region'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Charlie]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Charlie->Charlie]: {
+    "restaurant": "La Maison Française",
+    "dishes" : [
+        "Coq au Vin", "Ratatouille"
+    ],
+    "reason" : "La Maison Française offers the dishes I like at a more affordable price. Both restaurants offer French cuisine but La Maison Française's Coq au Vin and Ratatouille are cheaper compared to La Petite Maison, which fits within my budget. Also, the descriptions of their dishes seem to cater more to my preference for a mix of meat and vegetables."
+}
+
+[System->Charlie]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Coq au Vin: 0.78
+Ratatouille: 0.71
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Charlie->Charlie]: {
+    "restaurant": "La Maison Française",
+    "score": 7,
+    "comment": "The meal was generally good. The Coq au Vin had a rich flavor, and the wine-infused chicken was well-cooked, although I felt it could have used a bit more seasoning. The Ratatouille, on the other hand, was quite tasty and full of vegetables, but it seemed a bit more oily than I would have preferred. In terms of service, the staff was friendly and attentive. However, the dishes took a bit longer to arrive than I expected. Overall, I would say that my experience at La Maison Française was satisfactory, but there's some room for improvement."
+}
+
+[System->Charlie]: The Restaurant " Le Petite Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the taste of France at Le Petite Bistro. Our menu, curated by Chef Pierre, features classic French dishes with a modern twist. Enjoy the cozy ambiance while savoring our Coq au Vin, Bouillabaisse, Ratatouille, Tarte Tatin, and a selection of imported French wines. Join us for a dining experience that takes you to the heart of France.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 30, 'description': 'Classic French dish of chicken slow-cooked with wine, lardons, mushrooms, and garlic.'}, {'name': 'Bouillabaisse', 'price': 35, 'description': 'Traditional Provençal fish stew originating from the port city of Marseille.'}, {'name': 'Ratatouille', 'price': 25, 'description': 'Colorful vegetable dish with eggplant, tomatoes, and bell peppers.'}, {'name': 'Tarte Tatin', 'price': 20, 'description': 'Upside-down caramelized apple tart.'}, {'name': 'French Wine', 'price': 15, 'description': 'Selection of imported French wines.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Charlie]: The Restaurant " Lin's Maison Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Treat your taste buds to authentic French cuisine at Lin's Maison Gourmet! Warm, rustic, and elegant, our restaurant offers a unique dining experience with a menu that includes Coq au Vin, Ratatouille, Bouillabaisse, and more! Our dishes, prepared by skilled chefs, are made with high-quality ingredients to ensure the finest taste. Join us for a culinary journey to France right in your hometown!
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions.'}, {'name': 'Ratatouille', 'price': 20, 'description': 'Classic French vegetable stew made with eggplant, zucchini, bell peppers and tomatoes.'}, {'name': 'Bouillabaisse', 'price': 28, 'description': 'Provencal fish stew flavored with saffron, fennel and orange peel.'}, {'name': 'Tarte Tatin', 'price': 15, 'description': 'Upside-down caramelized apple tart served with a dollop of creme fraiche.'}, {'name': 'French Onion Soup', 'price': 15, 'description': 'Hearty onion soup topped with melted Gruyere cheese and a slice of toasted bread.'}, {'name': 'Escargot', 'price': 18, 'description': 'Snails cooked in a buttery garlic herb sauce.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Charlie]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Charlie->Charlie]: {
+    "restaurant": "Lin's Maison Gourmet",
+    "dishes" : [
+        "Coq au Vin", "Ratatouille", "French Onion Soup"
+    ],
+    "reason" : "I chose Lin's Maison Gourmet because their menu items are slightly cheaper. Furthermore, they offer a French Onion Soup which seems to be a healthier choice compared to the other options, fitting my preference for healthy food."
+}
+
+[System->Charlie]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Coq au Vin: 0.58
+Ratatouille: 0.58
+French Onion Soup: 0.54
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Charlie->Charlie]: {
+    "restaurant": "Lin's Maison Gourmet",
+    "score": 6,
+    "comment": "The food at Lin's Maison Gourmet was decent. The Coq au Vin and Ratatouille were flavorful but not exceptional. The French Onion Soup, however, was a pleasant surprise with its rich taste. Overall, I think there's room for improvement in their dishes. I would recommend them to focus on enhancing the flavors to make the dining experience more memorable."
+}
+
+[System->Charlie]: The Restaurant " La Belle Epoque "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Step into a romantic evening at 'La Belle Epoque'. Experience the authentic taste of France with our diverse menu featuring classics like Coq au Vin, Bouillabaisse, and Ratatouille. Indulge in our decadent desserts like Tarte Tatin and Crème Brûlée. All our dishes are crafted by our renowned chef, Chef Pierre, using the freshest, high-quality ingredients. Enjoy a complimentary glass of Champagne with your first meal! Visit us today and immerse yourself in the French culinary tradition.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 30, 'description': 'Classic French stew in which chicken is braised slowly in red wine and a little brandy to yield a supremely rich sauce.'}, {'name': 'Bouillabaisse', 'price': 35, 'description': 'A traditional Provençal fish stew originating from the port city of Marseille.'}, {'name': 'Ratatouille', 'price': 25, 'description': 'A stewed vegetable dish, originating from Nice, with tomatoes, eggplant, zucchini, bell pepper, onion, and garlic.'}, {'name': 'Tarte Tatin', 'price': 20, 'description': 'An upside-down tart in which the fruit (usually apples) are caramelized in butter and sugar before the tart is baked.'}, {'name': 'Champagne', 'price': 50, 'description': 'High-quality sparkling wine from the Champagne region of France.'}, {'name': 'French Onion Soup', 'price': 20, 'description': 'Onions and beef stock, often served gratinéed with croutons and cheese on top.'}, {'name': 'Crème Brûlée', 'price': 15, 'description': 'A dessert consisting of a rich custard base topped with a layer of hardened caramelized sugar.'}, {'name': 'Escargot', 'price': 25, 'description': 'Snails cooked typically in garlic butter, chicken soup or wine, and then placed back into the shell with the butter and sauce for serving.'}, {'name': 'Steak Frites', 'price': 35, 'description': 'A very common and popular dish served in brasseries throughout Europe consisting of steak served with French fries.'}, {'name': 'Salade Niçoise', 'price': 20, 'description': 'A salad that originated in the French city of Nice. It is traditionally made of tomatoes, hard-boiled eggs, Niçoise olives, and anchovies or tuna, dressed with olive oil.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Charlie]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the taste of authentic French cuisine at 'Le Petit Gourmet'. Enjoy our wide range of classic and innovative dishes, made with high-quality, fresh ingredients. Join us for a memorable dining experience in a warm and welcoming atmosphere. Book your table today!
+3. Menu 
+   [{'name': 'Bouillabaisse', 'price': 30, 'description': 'Traditional Provençal fish stew'}, {'name': 'Coq au Vin', 'price': 25, 'description': 'Chicken braised with wine, mushrooms, and garlic'}, {'name': 'Ratatouille', 'price': 20, 'description': 'Colorful vegetable dish'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Creamy custard with caramelized sugar topping'}, {'name': 'French Wine', 'price': 15, 'description': 'Selection of regional French wines'}, {'name': 'Coq au Vin', 'price': 20, 'description': 'Classic French dish of chicken slow-cooked in a rich red wine sauce'}, {'name': 'Ratatouille', 'price': 18, 'description': 'Traditional French Provencal stewed vegetable dish'}, {'name': 'Steak Frites', 'price': 25, 'description': 'Perfectly cooked steak served with crispy french fries'}, {'name': 'Croissant', 'price': 7, 'description': 'Buttery, flaky, viennoiserie pastry of Austrian origin'}, {'name': 'French Onion Soup', 'price': 15, 'description': 'Hearty onion soup topped with melted cheese and a toasted baguette slice'}, {'name': 'Bouillabaisse', 'price': 22, 'description': 'Traditional Provençal fish stew originating from the port city of Marseille'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard base topped with a contrasting layer of hard caramel'}, {'name': 'Escargot', 'price': 18, 'description': 'Land snails cooked with butter, garlic, and parsley served with baguette slices'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Charlie]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Charlie->Charlie]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille", "Crème Brûlée"
+    ],
+    "reason" : "Le Petit Gourmet offers a varied menu with dishes that fit my personal taste, such as the Ratatouille and Crème Brûlée. Additionally, their prices are more affordable compared to La Belle Epoque, which is important considering my income. Despite the lack of customer reviews, the restaurant's advertisement promises a warm and welcoming atmosphere along with high-quality, fresh ingredients, which is appealing."
+}
+
+[System->Charlie]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Ratatouille: 0.58
+Crème Brûlée: 0.58
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Charlie->Charlie]: {
+    "restaurant": "Le Petit Gourmet",
+    "score": 6,
+    "comment": "The meal at Le Petit Gourmet was decent but there is room for improvement. The Ratatouille was flavorful, but it lacked some freshness I expected from the vegetables. The Crème Brûlée was also satisfactory but the sugar topping was not caramelized enough to create the desired crisp texture. The restaurant's atmosphere was indeed warm and cozy as advertised, but the service could be more prompt. Comparing with my past dining experiences, I'd say the quality of the food and service at Le Petit Gourmet is slightly above average."
+}
+
