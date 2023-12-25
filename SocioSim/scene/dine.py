@@ -67,8 +67,11 @@ class Dine(Scene):
                 daybooks[name][dish] += 1
                     
         for name in restaurant_list:
-            menu = get_data_from_database("menu", port=NAME2PORT[name])
-            info = f"Restaurant: {name}\n Number of customers: {num_of_customer[name]}\n Menu: {menu}\n "
+            show = get_data_from_database("show", port=NAME2PORT[name])
+            menu = show["menu"]
+            score = show["score"]
+            # DISCUSS: what infomation should be shown to the player
+            info = f"Restaurant: {name}\n Number of customers: {num_of_customer[name]}\n Customer Score: {score}\n Menu: {menu}\n "
             infos[name] = info
         
         for key in daybooks:

@@ -35,11 +35,9 @@ class Simulation:
         # Parallel run scenes & check if all scenes are finished
         max_number_parallel = 6
         with ThreadPoolExecutor(max_workers=max_number_parallel) as executor:
-            futures = [executor.submit(lambda: scene.run(data)) for scene in current_scene]
+            futures = [executor.submit(lambda s=scene: s.run(data)) for scene in current_scene]
             # Optionally, wait for all scenes to finish and get their results
             results = [future.result() for future in futures]
-            print("debugging-results")
-            print(results)
             
         next_scene_data = current_scene[0].action_for_next_scene(results)
         

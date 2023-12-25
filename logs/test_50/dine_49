@@ -1,0 +1,895 @@
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "dishes" : [
+        "Ratatouille"
+    ],
+    "reason" : "I chose La Petite Maison because they offer a ratatouille dish which aligns with my vegan diet. Although both restaurants offer this dish, La Petite Maison's description of the dish was more appealing as it included a variety of vegetables, which can provide a more fulfilling meal."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Ratatouille: 0.72
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+La Petite Maison
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+La Petite Maison
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+La Petite Maison
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille",
+        "Tarte Tatin"
+    ],
+    "reason" : "As a vegan, I have limited options at both restaurants. However, Le Petit Gourmet offers the same dishes at a lower price compared to La Petite Maison, which is more suitable for my budget. Moreover, I appreciate their use of locally sourced ingredients as it aligns with my compassionate lifestyle."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "score": 7,
+    "comment": "The Ratatouille at La Petite Maison was decent but it wasn't outstanding. The vegetables were cooked well and the seasoning was adequate. However, I felt that the dish could have been more flavorful. The service was pleasant and the ambience of the restaurant was cosy. However, I wish they had more vegan options on their menu."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+Yara
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "score": 7,
+    "comment": "The ratatouille at La Petite Maison was quite good, but not exceptional. The variety of vegetables was appreciated, but the seasoning could be improved for a more flavorful experience. The ambiance of the restaurant was cozy and the service was satisfactory. However, I believe the dish was overpriced for the quality and quantity provided. Some improvements in the taste and pricing could enhance the dining experience."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "score": 7,
+    "comment": "The Ratatouille at La Petite Maison was good, but not outstanding. The vegetables were cooked well, but the dish lacked a bit of flavor. In comparison to other restaurants where I've had Ratatouille, this one was just average. However, the cozy and charming setting of the restaurant did make up for it to some extent. I would suggest the chef to add more herbs and spices to enhance the taste."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+Yara
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "score": 7,
+    "comment": "The Ratatouille at La Petite Maison was good, but not great. The vegetables were cooked well and the flavors were well balanced, but it lacked a certain wow factor. The service was excellent, and the cozy ambiance of the restaurant made for a comfortable dining experience. However, based on the dish I had, I feel there is room for improvement in terms of their culinary offerings."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "dishes" : [
+        "Ratatouille"
+    ],
+    "reason" : "As a vegan, my choices are limited. Both restaurants offer Ratatouille, a vegetable stew. However, I prefer La Petite Maison because the description of their Ratatouille includes a variety of vegetables, which seems more appealing and nutritious."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Ratatouille: 0.72
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+La Petite Maison
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille", "Tarte Tatin"
+    ],
+    "reason" : "The restaurant 'Le Petit Gourmet' seems to have a more diverse menu with more vegetarian options which aligns with my dietary restrictions. Also, their dishes are more affordable compared to 'La Petite Maison'."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille", "Tarte Tatin"
+    ],
+    "reason" : "Comparing the two restaurants, Le Petit Gourmet has a more affordable menu for the same dishes. Also, as a vegan, the Ratatouille dish at Le Petit Gourmet fits my dietary preference perfectly. Besides, the Tarte Tatin is a vegan-friendly dessert that sounds delightful."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Ratatouille: 0.44
+Tarte Tatin: 0.46
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+La Petite Maison
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "score": 7,
+    "comment": "The Ratatouille at La Petite Maison was quite good, with a nice variety of vegetables. However, I felt that it could have used more seasoning to bring out the flavors. The service was pleasant and the ambiance was cozy, overall a good dining experience. I would suggest they consider adding more vegan options to their menu."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "score": 7,
+    "comment": "Though the Ratatouille was quite flavorful and the variety of vegetables added a nice touch, it wasn't as impressive as I expected. The service was decent, but there's room for improvement. I think with a few tweaks to the recipe and service, the experience could be much better."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+Yara
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille"
+    ],
+    "reason" : "I chose Le Petit Gourmet because their Ratatouille is more affordable than the one at La Petite Maison. Moreover, their menu offers a wider variety of dishes which gives me more options to choose from."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille", "Tarte Tatin"
+    ],
+    "reason" : "The restaurant 'Le Petit Gourmet' seems to have a more diverse menu with more vegetarian options which aligns with my dietary restrictions. Also, their dishes are more affordable compared to 'La Petite Maison'."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Ratatouille: 0.44
+Tarte Tatin: 0.46
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "score": 5,
+    "comment": "The food at Le Petit Gourmet was decent, but there is definitely room for improvement. The Ratatouille was flavorful, but lacked a bit of freshness and the Tarte Tatin was a bit too sweet for my liking. The service was good, but the ambiance could be more inviting. In comparison to other restaurants, I would say it ranks average. I hope to see improvements in the future."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "score": 5,
+    "comment": "The Ratatouille was quite delicious, but in my opinion, it could have been improved by adding more fresh herbs. The Tarte Tatin was also good, but I found it to be a bit too sweet for my liking. In addition, as a vegan, it would have been nice to see more vegan-friendly options on the menu. In comparison to other restaurants I have dined in, Le Petit Gourmet has room for improvement, especially when it comes to satisfying the needs of vegan customers."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+Yara
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille", "Tarte Tatin"
+    ],
+    "reason" : "Looking at the two restaurants, Le Petit Gourmet's dishes are more reasonably priced. Additionally, their Ratatouille and Tarte Tatin are both vegan-friendly dishes that align with my dietary preferences. The restaurant's focus on fresh, locally sourced ingredients also appeals to me."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Ratatouille"
+    ],
+    "reason" : "I chose Le Petit Gourmet because their menu offers a wider variety of dishes. Also, their Ratatouille dish is priced more affordably compared to La Petite Maison."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+Yara
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "dishes" : [
+        "Ratatouille"
+    ],
+    "reason" : "Although both restaurants serve Ratatouille, I prefer La Petite Maison due to their emphasis on using the finest ingredients. I believe that their commitment to quality will result in a more delicious meal."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 25, 'description': 'Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.'}, {'name': 'Ratatouille', 'price': 15, 'description': 'Traditional French vegetable stew topped with fresh herbs.'}, {'name': 'Tarte Tatin', 'price': 10, 'description': 'Upside-down caramelized apple tart served with whipped cream.'}, {'name': 'French Onion Soup', 'price': 12, 'description': 'Hearty onion soup topped with melted cheese and a toasted slice of bread.'}, {'name': 'Croque Monsieur', 'price': 10, 'description': 'A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.'}, {'name': 'Beef Bourguignon', 'price': 28, 'description': 'Slow-cooked beef stew with red wine, mushrooms, and onions.'}, {'name': 'Quiche Lorraine', 'price': 10, 'description': 'Savory pie filled with bacon, cheese, and a creamy custard.'}, {'name': 'Escargots de Bourgogne', 'price': 35, 'description': 'Snails baked in a buttery garlic-parsley sauce.'}, {'name': 'Salade Niçoise', 'price': 14, 'description': 'Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.'}, {'name': 'Crème Brûlée', 'price': 10, 'description': 'Rich custard topped with a layer of hard caramel.'}, {'name': 'Cheese Plate', 'price': 15, 'description': 'A selection of fine French cheeses served with fresh bread and fruits.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Yara]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "Le Petit Gourmet",
+    "score": 9,
+    "comment": "The Ratatouille and Tarte Tatin at Le Petit Gourmet were both excellent, full of flavor and freshness. The vegetarian options were diverse and it catered perfectly to my dietary restrictions. The prices were also very reasonable compared to La Petite Maison. However, the service could be a little more attentive. Overall, it was a very enjoyable dining experience."
+}
+
+[System->Yara]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+Yara
+
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Yara->Yara]: {
+    "restaurant": "La Petite Maison",
+    "dishes" : [
+        "Ratatouille", "Tarte Tatin"
+    ],
+    "reason" : "Despite the higher prices, I chose 'La Petite Maison' because of their advertised commitment to using the finest ingredients, which suggests higher quality food. They also have a loyalty program, which suggests they value their customers and aim to provide excellent service."
+}
+
+[System->Yara]: The Restaurant " La Petite Maison "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the exquisite flavors of France at La Petite Maison! Our culinary masters, Chef Pierre and Chef Marie, create delectable dishes using the finest ingredients. Enjoy our cozy, charming setting while savoring our signature dishes. Don't miss our live music evenings and exclusive weekday discounts. Join our loyalty program for exclusive rewards and benefits. Visit La Petite Maison today for an unforgettable dining journey.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 40, 'description': 'Traditional French dish of chicken slow cooked in red wine with mushrooms and onions'}, {'name': 'Bouillabaisse', 'price': 40, 'description': 'Provencal fish stew served with rouille and crusty bread'}, {'name': 'Ratatouille', 'price': 30, 'description': 'Classic vegetable stew with eggplant, zucchini, bell peppers, and tomato'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart served with a dollop of cream'}, {'name': 'French Cheese Platter', 'price': 30, 'description': 'Assortment of fine French cheeses served with crackers and fruits'}, {'name': 'Escargot', 'price': 20, 'description': 'Classic French appetizer of snails baked in garlic butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+

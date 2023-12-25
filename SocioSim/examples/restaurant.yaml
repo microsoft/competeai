@@ -94,6 +94,185 @@ players:
     role_desc: "Income: $7,500 (Poor), Taste: Grilled dishes, Health: Healthy, Dietary_restriction: None, Personality: Meticulous"
     backend: *default_backend_anchor
 
+  - name: Olivia
+    agent_type: customer
+    role_desc: "Income: $13,000 (Affluent), Taste: Mediterranean cuisine, Health: Allergies, Dietary_restriction: Gluten-free, Personality: Artistic"
+    backend: *default_backend_anchor
+
+  - name: Peter
+    agent_type: customer
+    role_desc: "Income: $6,000 (Poor), Taste: Baked goods, Health: Healthy, Dietary_restriction: None, Personality: Curious"
+    backend: *default_backend_anchor
+
+  - name: Quinn
+    agent_type: customer
+    role_desc: "Income: $8,200 (Middle Class), Taste: Spicy food, Health: Healthy, Dietary_restriction: None, Personality: Bold"
+    backend: *default_backend_anchor
+
+  - name: Rachel
+    agent_type: customer
+    role_desc: "Income: $14,500 (Affluent), Taste: Gourmet dishes, Health: Lactose intolerant, Dietary_restriction: Dairy-free, Personality: Sophisticated"
+    backend: *default_backend_anchor
+
+  - name: Sam
+    agent_type: customer
+    role_desc: "Income: $5,500 (Very Poor), Taste: Home cooking, Health: Healthy, Dietary_restriction: None, Personality: Warm"
+    backend: *default_backend_anchor
+
+  - name: Tara
+    agent_type: customer
+    role_desc: "Income: $10,500 (Middle Class), Taste: Exotic fruits, Health: Healthy, Dietary_restriction: None, Personality: Adventurous"
+    backend: *default_backend_anchor
+
+  - name: Umar
+    agent_type: customer
+    role_desc: "Income: $12,500 (Affluent), Taste: Grilled seafood, Health: High cholesterol, Dietary_restriction: Low cholesterol, Personality: Discerning"
+    backend: *default_backend_anchor
+
+  - name: Vicky
+    agent_type: customer
+    role_desc: "Income: $7,300 (Poor), Taste: Comfort food, Health: Healthy, Dietary_restriction: None, Personality: Easygoing"
+    backend: *default_backend_anchor
+
+  - name: William
+    agent_type: customer
+    role_desc: "Income: $11,500 (Middle Class), Taste: Sushi and Japanese cuisine, Health: Healthy, Dietary_restriction: None, Personality: Reserved"
+    backend: *default_backend_anchor
+
+  - name: Xena
+    agent_type: customer
+    role_desc: "Income: $9,800 (Middle Class), Taste: Italian cuisine, Health: Acid reflux, Dietary_restriction: Low acid, Personality: Lively"
+    backend: *default_backend_anchor
+
+  - name: Yasmine
+    agent_type: customer
+    role_desc: "Income: $7,800 (Poor), Taste: Vegan options, Health: Healthy, Dietary_restriction: Vegan, Personality: Compassionate"
+    backend: *default_backend_anchor
+
+  - name: Zach
+    agent_type: customer
+    role_desc: "Income: $12,200 (Affluent), Taste: French cuisine, Health: Gluten sensitivity, Dietary_restriction: Gluten-free, Personality: Connoisseur"
+    backend: *default_backend_anchor
+
+  - name: Amelia
+    agent_type: customer
+    role_desc: "Income: $8,700 (Middle Class), Taste: Mexican food, Health: Healthy, Dietary_restriction: None, Personality: Spirited"
+    backend: *default_backend_anchor
+
+  - name: Brian
+    agent_type: customer
+    role_desc: "Income: $6,200 (Poor), Taste: Street food, Health: Healthy, Dietary_restriction: None, Personality: Resourceful"
+    backend: *default_backend_anchor
+
+  - name: Chloe
+    agent_type: customer
+    role_desc: "Income: $10,300 (Middle Class), Taste: Indian cuisine, Health: Diabetic, Dietary_restriction: Low sugar, Personality: Thoughtful"
+    backend: *default_backend_anchor
+
+  - name: Dexter
+    agent_type: customer
+    role_desc: "Income: $13,800 (Affluent), Taste: Barbecue, Health: Healthy, Dietary_restriction: None, Personality: Sociable"
+    backend: *default_backend_anchor
+
+  - name: Emma
+    agent_type: customer
+    role_desc: "Income: $5,800 (Very Poor), Taste: Organic food, Health: Healthy, Dietary_restriction: None, Personality: Optimistic"
+    backend: *default_backend_anchor
+
+  - name: Felix
+    agent_type: customer
+    role_desc: "Income: $11,700 (Middle Class), Taste: Chinese cuisine, Health: Healthy, Dietary_restriction: None, Personality: Analytical"
+    backend: *default_backend_anchor
+
+  - name: Giselle
+    agent_type: customer
+    role_desc: "Income: $9,400 (Middle Class), Taste: Vegan desserts, Health: Lactose intolerant, Dietary_restriction: Dairy-free, Personality: Creative"
+    backend: *default_backend_anchor
+
+  - name: Hugo
+    agent_type: customer
+    role_desc: "Income: $14,200 (Affluent), Taste: Gourmet burgers, Health: Healthy, Dietary_restriction: None, Personality: Leader"
+    backend: *default_backend_anchor
+
+  - name: Iris
+    agent_type: customer
+    role_desc: "Income: $7,600 (Poor), Taste: Salads, Health: Healthy, Dietary_restriction: None, Personality: Gentle"
+    backend: *default_backend_anchor
+
+  - name: Jake
+    agent_type: customer
+    role_desc: "Income: $6,800 (Poor), Taste: Fried food, Health: High blood pressure, Dietary_restriction: Low sodium, Personality: Jovial"
+    backend: *default_backend_anchor
+  
+  - name: Lara
+    agent_type: customer
+    role_desc: "Income: $8,900 (Middle Class), Taste: Seafood, Health: Healthy, Dietary_restriction: None, Personality: Ambitious"
+    backend: *default_backend_anchor
+
+  - name: Max
+    agent_type: customer
+    role_desc: "Income: $5,300 (Very Poor), Taste: Plant-based meals, Health: Healthy, Dietary_restriction: None, Personality: Resourceful"
+    backend: *default_backend_anchor
+
+  - name: Nora
+    agent_type: customer
+    role_desc: "Income: $12,800 (Affluent), Taste: Fine dining, Health: Gluten intolerance, Dietary_restriction: Gluten-free, Personality: Elegant"
+    backend: *default_backend_anchor
+
+  - name: Oscar
+    agent_type: customer
+    role_desc: "Income: $9,600 (Middle Class), Taste: Traditional cuisine, Health: Healthy, Dietary_restriction: None, Personality: Reserved"
+    backend: *default_backend_anchor
+
+  - name: Paula
+    agent_type: customer
+    role_desc: "Income: $11,200 (Middle Class), Taste: Greek food, Health: Healthy, Dietary_restriction: None, Personality: Outgoing"
+    backend: *default_backend_anchor
+
+  - name: Quincy
+    agent_type: customer
+    role_desc: "Income: $6,400 (Poor), Taste: Fast food, Health: Overweight, Dietary_restriction: Low calorie, Personality: Easygoing"
+    backend: *default_backend_anchor
+
+  - name: Ruby
+    agent_type: customer
+    role_desc: "Income: $14,800 (Affluent), Taste: Sushi, Health: Healthy, Dietary_restriction: None, Personality: Discerning"
+    backend: *default_backend_anchor
+
+  - name: Steve
+    agent_type: customer
+    role_desc: "Income: $7,900 (Poor), Taste: Comfort food, Health: High cholesterol, Dietary_restriction: Low fat, Personality: Friendly"
+    backend: *default_backend_anchor
+
+  - name: Tina
+    agent_type: customer
+    role_desc: "Income: $10,800 (Middle Class), Taste: Mediterranean cuisine, Health: Healthy, Dietary_restriction: None, Personality: Charismatic"
+    backend: *default_backend_anchor
+
+  - name: Ulysses
+    agent_type: customer
+    role_desc: "Income: $13,300 (Affluent), Taste: International cuisine, Health: Healthy, Dietary_restriction: None, Personality: Explorer"
+    backend: *default_backend_anchor
+
+  - name: Valerie
+    agent_type: customer
+    role_desc: "Income: $8,300 (Middle Class), Taste: Organic foods, Health: Healthy, Dietary_restriction: None, Personality: Intellectual"
+    backend: *default_backend_anchor
+
+  - name: Wade
+    agent_type: customer
+    role_desc: "Income: $5,700 (Very Poor), Taste: Simple meals, Health: Healthy, Dietary_restriction: None, Personality: Hardworking"
+    backend: *default_backend_anchor
+
+  - name: Xavier
+    agent_type: customer
+    role_desc: "Income: $11,900 (Middle Class), Taste: Caribbean cuisine, Health: Healthy, Dietary_restriction: None, Personality: Vibrant"
+    backend: *default_backend_anchor
+
+  - name: Yara
+    agent_type: customer
+    role_desc: "Income: $9,200 (Middle Class), Taste: Vegetarian dishes, Health: Vegan, Dietary_restriction: Vegan, Personality: Compassionate"
+    backend: *default_backend_anchor
   
 
 scenes:
@@ -108,16 +287,53 @@ scenes:
       - Alice
       - Bob
       - Charlie
-      # - David
-      # - Eve
-      # - Frank
-      # - Grace
-      # - Henry
-      # - Ivy
-      # - Jack
-      # - Katie
-      # - Leo
-      # - Maggie
-      # - Nate
+      - David
+      - Eve
+      - Frank
+      - Grace
+      - Henry
+      - Ivy
+      - Jack
+      - Katie
+      - Leo
+      - Maggie
+      - Nate
+      - Olivia
+      - Peter
+      - Quinn
+      - Rachel
+      - Sam
+      - Tara
+      - Umar
+      - Vicky
+      - William
+      - Xena
+      - Yasmine
+      - Zach
+      - Amelia
+      - Brian
+      - Chloe
+      - Dexter
+      - Emma
+      - Felix
+      - Giselle
+      - Hugo
+      - Iris
+      - Jake
+      - Lara
+      - Max
+      - Nora
+      - Oscar
+      - Paula
+      - Quinn
+      - Ruby
+      - Steve
+      - Tina
+      - Ulysses
+      - Valerie
+      - Wade
+      - Xavier
+      - Yara
+
 
     
