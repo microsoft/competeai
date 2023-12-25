@@ -289,3 +289,706 @@ Please provide the required JSON data for the specific action you want to take. 
     }
 }
 
+[Bob->Bob]: As the owner of my French-style restaurant, I'm going to name it "Le Petit Gourmet", a name that signifies the delicious, high-quality, and refined dishes we offer. In order to ensure triumph over the competition, I will implement a multi-faceted strategy that revolves around a balance between profitability and quality.
+
+1. Allocation of Initial Capital: To start, I will strategically allocate my initial capital of $10,000. I will spend $4,000 on kitchen equipment and interior decoration to create a cozy and unique ambience. $3,500 will be used to secure high-quality ingredients for the first month. $1,500 will be allocated to salaries for my chef and other staff. Finally, $1,000 will be kept as a contingency fund and the remaining $500 will be used for initial marketing efforts.
+
+2. Recruitment: I will hire a skilled French chef and a small team of passionate restaurant staff. Offering them a competitive salary will not only attract talented professionals but also motivate them to do their best, which in turn leads to better customer service and food quality.
+
+3. Menu: Our restaurant will offer a variety of French dishes made from high-quality, locally sourced ingredients. We will also have daily specials and seasonal menus to keep things fresh and exciting. 
+
+4. Quality Control: To ensure the quality of our dishes, I will work closely with the chef and regularly seek feedback from customers. If a dish isn't well received, we will work to improve it or replace it with something else.
+
+5. Marketing and Advertising: I will utilize both traditional and digital marketing methods to increase our restaurant's visibility. This will include local newspaper ads, social media promotion, and local partnerships. Special promotions and discounts will also be offered to attract new customers.
+
+6. Customer Service: Excellent customer service will be our key differentiating factor. We will focus on creating an unforgettable dining experience for our customers, encouraging them to return and refer others. 
+
+7. Regular Assessment: I will regularly assess our financial performance and customer satisfaction levels. This will allow us to make timely adjustments to our strategies and operations, ensuring we stay ahead of the competition. 
+
+By implementing these strategies, I am confident that Le Petit Gourmet will not only survive but thrive in this competitive market.
+
+[System->Bob]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Bob->Bob]: Given the rules and regulations provided, I am going to adopt a strategy that combines offering high-quality dishes at a reasonable price, excellent customer service, and effective advertising to outshine the competition.
+
+1. Chef: I will hire a mid-level chef who has good culinary skills but doesn't demand an exorbitantly high salary. This will ensure we have a good balance between food quality and cost.
+
+2. Dishes: We will focus on offering a compact yet diverse menu with dishes priced moderately. The cost price to selling price ratio will be kept at a point where customers perceive our meals as high value for money. This will ensure that the taste of dishes is excellent due to high-quality ingredients, but we also maintain a reasonable profit margin. 
+
+3. Advertisement: We will invest in advertising through the available module. Regular advertisements will be run to communicate with customers, informing them about new dishes, special offers, and events. We will also use the advertising module to solicit feedback from our customers, which will help us improve our services and dishes.
+
+Actions to perform:
+
+1. Chef Module:
+   - Hire a mid-level chef with a fair salary that balances quality and cost.
+
+2. Dishes Module:
+   - Design a menu with a variety of dishes.
+   - Set the price for each dish ensuring a good balance between the cost price and selling price.
+   - Regularly review and update the menu based on customer feedback and seasonal availability of ingredients.
+
+3. Advertisement Module:
+   - Develop an advertising plan that includes regular updates, promotions, and customer engagement activities.
+   - Allocate funds for running these advertisements.
+   - Regularly review the effectiveness of the advertisements and make necessary changes.
+
+By following these strategies and actions, I aim to make "Le Petit Gourmet" a preferred dining destination in our town.
+
+[System->Bob]: Now your restaurant basic information as below:
+<INPUT 0>
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Bob->Bob]: {
+    "type": "add",
+    "data":{
+        "name": "Le Petit Gourmet",
+        "money": 10000,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+[System->Bob]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Bob->Bob]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Coq au Vin",
+            "description": "Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.",
+            "price": 20,
+            "cost_price": 10
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Ratatouille",
+            "description": "Traditional French vegetable stew topped with fresh herbs.",
+            "price": 15,
+            "cost_price": 7
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Tarte Tatin",
+            "description": "Upside-down caramelized apple tart served with whipped cream.",
+            "price": 10,
+            "cost_price": 5
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "French Onion Soup",
+            "description": "Hearty onion soup topped with melted cheese and a toasted slice of bread.",
+            "price": 12,
+            "cost_price": 6
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Croque Monsieur",
+            "description": "A grilled ham and cheese sandwich with a layer of creamy béchamel sauce.",
+            "price": 10,
+            "cost_price": 5
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Beef Bourguignon",
+            "description": "Slow-cooked beef stew with red wine, mushrooms, and onions.",
+            "price": 22,
+            "cost_price": 11
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Quiche Lorraine",
+            "description": "Savory pie filled with bacon, cheese, and a creamy custard.",
+            "price": 10,
+            "cost_price": 5
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Escargots de Bourgogne",
+            "description": "Snails baked in a buttery garlic-parsley sauce.",
+            "price": 25,
+            "cost_price": 12
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Salade Niçoise",
+            "description": "Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives.",
+            "price": 14,
+            "cost_price": 7
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Crème Brûlée",
+            "description": "Rich custard topped with a layer of hard caramel.",
+            "price": 10,
+            "cost_price": 5
+        }
+    }
+]
+
+[System->Bob]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Bob->Bob]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Pierre",
+            "salary": 1500
+        }
+    }
+]
+
+[System->Bob]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Bob->Bob]: {
+    "type": "add",
+    "data":{
+        "content": "Experience the authentic taste of France at Le Petit Gourmet! We serve traditional French dishes made with high-quality, locally sourced ingredients. Join us for a unique dining experience featuring Coq au Vin, Ratatouille, Tarte Tatin, and more. Visit us today and enjoy a touch of France in your town!"
+    }
+}
+
+[Bob->Bob]: To ensure my restaurant's victory over the competition, I would adopt a multi-faceted approach that encompasses enhancing food quality, improving customer service, investing in marketing and promotions, and optimizing operations.
+
+Firstly, I'd select a name that aligns with the French cuisine style of my restaurant. Let's call it "Le Petit Bonheur", which translates to "The Little Happiness" – an embodiment of the joy experienced with each bite of our dishes.
+
+Next, I'd allocate the initial capital of $10,000 wisely. I'd spend $4,000 on high-quality kitchen equipment and ingredients, $2,000 on staffing, $2,000 on a cozy and inviting interior setup, and the remaining $2,000 on marketing and promotions.
+
+1. Food Quality: I'd hire a skilled chef with a profound knowledge of French cuisine. To ensure the quality of the dishes, I'd source the freshest ingredients from local vendors. I'd also introduce a weekly special menu based on seasonal produce to keep the menu interesting and encourage repeat visits.
+
+2. Customer Service: It's crucial to ensure every customer feels valued and satisfied. I'd hire a friendly and efficient team and provide them with regular training to maintain top-notch service standards. We'd focus on creating a pleasant dining experience, from swift order taking and food delivery to addressing any complaints promptly and respectfully.
+
+3. Marketing and Promotions: I would invest in both online and offline marketing strategies. Online, I'd create a visually appealing website and utilize social media platforms for promotions. I'd also encourage customers to leave reviews on platforms like Yelp and TripAdvisor to increase our online presence. Offline, we'd distribute flyers and offer discounts during off-peak hours or on less busy days to attract more customers.
+
+4. Operational Efficiency: I'd continuously review and optimize our operations. This includes ensuring efficient use of ingredients to minimize waste, scheduling staff shifts optimally to handle busy periods, and maintaining a clean and hygienic restaurant.
+
+5. Community Engagement: I'd organize food tasting events, cooking classes, and participate in local food festivals to create a strong, positive reputation within the community.
+
+6. Financial Management: I'd closely monitor our income and expenses, and adjust the strategies as needed. I'd also set aside a portion of the profits for future improvements and unexpected expenses.
+
+By focusing on these strategies, I believe that "Le Petit Bonheur" will not only outshine the competition but also establish itself as a beloved dining spot in the town.
+
+[System->Bob]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Bob->Bob]: Given the constraints, I'll adjust my strategy focusing on three key areas: chefs, dishes, and advertisement.
+
+1. Chefs: 
+    - I'd hire chefs with a good balance of skill and salary. It's essential to attract talent but also maintain a sustainable wage bill. If a chef proves to be popular with customers, I'd consider offering a higher salary to retain them.
+
+2. Dishes:
+    - I'd aim to offer a mix of dishes – some high-end, some mid-range, and a few budget-friendly options. This strategy would cater to a wider range of customers. The high-end dishes would utilize the best ingredients, ensuring an excellent taste that justifies their cost. Mid-range dishes would offer good value for money, while the budget-friendly options would attract those looking for a cost-effective meal.
+    - I'd ensure that every dish on the menu is profitable. The selling price would always be marked up sufficiently from the cost price, while still offering perceived value to the customer.
+
+3. Advertisement:
+    - I'd use the advertising module to regularly communicate with customers. This could include announcing new dishes, special offers, and events at the restaurant.
+    - I'd ensure our advertisements are engaging and visually appealing to attract the attention of potential customers. 
+
+To implement these strategies, I'd perform the following actions:
+
+1. In the "Personnel Management" module, I'd hire the best chefs we can afford. I'd monitor their performance and adjust their salaries accordingly.
+2. In the "Menu Management" module, I'd adjust the prices of our dishes based on their ingredients and popularity. I'd regularly review and update the menu to keep it fresh and appealing.
+3. In the "Advertising" module, I'd create and publish regular advertisements to keep our customers informed and engaged.
+
+[System->Bob]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'Le Petit Gourmet', 'money': 10000, 'rent': 100, 'status': 'designing'}
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Bob->Bob]: None
+
+[Bob->Bob]: None
+
+[Bob->Bob]: None
+
+[Bob->Bob]: Given the scenario, as the owner of a French restaurant, I'd name it "Le Petit Gourmet". I would allocate my initial $10,000 capital as follows:
+
+1. Kitchen Equipment & Operations: $3000. This includes purchasing high-quality appliances, kitchenware, and utensils as well as maintaining cleanliness and safety.
+2. Ingredients: $3000. I'd prioritize sourcing fresh, high-quality ingredients locally to ensure the best flavors while also supporting the local economy.
+3. Staff: $2500. I'd hire a small but talented team of chefs, waitstaff, and a restaurant manager. High salaries would attract experienced personnel and encourage loyalty and dedication.
+4. Interior Design & Ambiance: $1000. I'd create a cozy and authentic French ambiance to attract customers and provide a memorable dining experience.
+5. Marketing & Advertising: $500. I'd start with local advertising via social media, flyers, and local newspapers to attract initial customers and build a reputation.
+6. Contingency Fund: $1000. It's important to have funds set aside for unforeseen circumstances and opportunities.
+
+To compete effectively with the other restaurant, I'd implement the following strategies:
+
+1. Unique Menu: I'd offer a menu that stands out from the competition. This would include traditional French dishes as well as unique fusion dishes that bring a twist to the typical French cuisine. The menu would be updated seasonally to keep it fresh and exciting.
+
+2. Community Engagement: I'd host local events, offer cooking classes, and invite local food bloggers and influencers to review our restaurant. This would foster a positive relationship with the local community and generate free advertising.
+
+3. Loyalty Program: I'd initiate a customer loyalty program, offering discounts and special offers to frequent customers. 
+
+4. Exceptional Service: I'd train my staff to provide top-notch service. Happy and satisfied customers are more likely to return and recommend the restaurant to others.
+
+5. Sustainability: I'd ensure that our operations are as sustainable as possible, from food waste management to energy-efficient appliances. This not only reduces operational costs but also attracts eco-conscious customers.
+
+6. Regular Feedback: I'd regularly collect and act upon customer feedback to improve our services and maintain a high level of customer satisfaction.
+
+7. Monitor Competition: Lastly, I'd keep a close eye on the competitor's actions and adapt our strategy accordingly.
+
+By leveraging these strategies, I'd aim to make "Le Petit Gourmet" the go-to French restaurant in town and outperform the competition.
+
+[System->Bob]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Bob->Bob]: Taking into account these rules and the current situation, here's my proposed approach:
+
+1. Chefs: I'll allocate $2000 to hire a high-level chef. The chef's skill level is of utmost importance to the success of the restaurant as it directly impacts the taste and quality of the dishes.
+
+2. Dishes: The aim is to offer delicious dishes that justify their cost. I'll allocate $2000 to procure high-quality ingredients. I'll start with a small menu offering a variety of dishes at different price points to cater to a wider audience. The dishes will be priced with at least a 50% markup to ensure profitability while maintaining a good customer experience.
+
+3. Advertisement: I'll allocate $500 to the advertising module. I'll use it to announce the opening of "Le Petit Gourmet", highlight our unique French fusion menu and experienced chef, and advertise any special offers. Regular updates will be posted to keep the restaurant in the public eye and attract a steady stream of customers.
+
+4. The remaining $6000 will be preserved for future investments. This could be used to hire more staff as the restaurant grows, add more dishes to the menu, or ramp up advertisement efforts based on the initial response.
+
+The goal is to position "Le Petit Gourmet" as a high-quality French restaurant that offers an exceptional dining experience at a reasonable price. This approach aims to attract both casual diners and high-end clientele, thereby maximizing the potential customer base.
+
+[System->Bob]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'Le Petit Gourmet', 'money': 10000, 'rent': 100, 'status': 'designing'}
+
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+        "status": "designing"
+    }
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    }
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Bob->Bob]: None
+
+[System->Bob]: Welcome to the Menu Management Module. Now your menu info as below:
+{Id: 1, Name: Coq au Vin, Price: 20, Cost price: 10, Description: Classic French dish of chicken slow cooked with wine, mushrooms, and garlic., }
+{Id: 2, Name: Ratatouille, Price: 15, Cost price: 7, Description: Traditional French vegetable stew topped with fresh herbs., }
+{Id: 3, Name: Tarte Tatin, Price: 10, Cost price: 5, Description: Upside-down caramelized apple tart served with whipped cream., }
+{Id: 4, Name: French Onion Soup, Price: 12, Cost price: 6, Description: Hearty onion soup topped with melted cheese and a toasted slice of bread., }
+{Id: 5, Name: Croque Monsieur, Price: 10, Cost price: 5, Description: A grilled ham and cheese sandwich with a layer of creamy bÃ©chamel sauce., }
+{Id: 6, Name: Beef Bourguignon, Price: 22, Cost price: 11, Description: Slow-cooked beef stew with red wine, mushrooms, and onions., }
+{Id: 7, Name: Quiche Lorraine, Price: 10, Cost price: 5, Description: Savory pie filled with bacon, cheese, and a creamy custard., }
+{Id: 8, Name: Escargots de Bourgogne, Price: 25, Cost price: 12, Description: Snails baked in a buttery garlic-parsley sauce., }
+{Id: 9, Name: Salade NiÃ§oise, Price: 14, Cost price: 7, Description: Classic French salad with tuna, hard-boiled eggs, tomatoes, and olives., }
+{Id: 10, Name: CrÃ¨me BrÃ»lÃ©e, Price: 10, Cost price: 5, Description: Rich custard topped with a layer of hard caramel., }
+
+
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    }
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Bob->Bob]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data":{
+            "name": "Coq au Vin",
+            "description": "Classic French dish of chicken slow cooked with wine, mushrooms, and garlic.",
+            "price": 25,
+            "cost_price": 12
+        }
+    },
+    {
+        "type": "partial_update",
+        "id": 6,
+        "data":{
+            "name": "Beef Bourguignon",
+            "description": "Slow-cooked beef stew with red wine, mushrooms, and onions.",
+            "price": 28,
+            "cost_price": 14
+        }
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Cheese Plate",
+            "description": "A selection of fine French cheeses served with fresh bread and fruits.",
+            "price": 15,
+            "cost_price": 7
+        }
+    }
+]
+
+[System->Bob]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef Pierre, Salary: 1500, }
+ 
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Bob->Bob]: None
+
+[System->Bob]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': 'Experience the authentic taste of France at Le Petit Gourmet! We serve traditional French dishes made with high-quality, locally sourced ingredients. Join us for a unique dining experience featuring Coq au Vin, Ratatouille, Tarte Tatin, and more. Visit us today and enjoy a touch of France in your town!'}
+
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Bob->Bob]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Discover the essence of French cuisine at Le Petit Gourmet! Our menu, featuring classics like Coq au Vin and Ratatouille, alongside unique French fusion dishes, promises a culinary journey through France. We use fresh, locally sourced ingredients and offer a cozy, authentic ambiance. Visit us today for an unforgettable dining experience."
+    }
+}
+

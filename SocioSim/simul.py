@@ -33,7 +33,7 @@ class Simulation:
         with ThreadPoolExecutor(max_workers=max_number_parallel) as executor:
             futures = [executor.submit(scene.run(data)) for scene in current_scene]
             # Optionally, wait for all scenes to finish and get their results
-            results = [future.result() for future in futures]
+            # results = [future.result() for future in futures]
         
         next_scene_data = current_scene[0].get_data_for_next_scene()
         self.curr_scene_idx += 1
@@ -46,8 +46,10 @@ class Simulation:
         """
         previous_scene_data = None
         while True:  # TODO
-            res = self.step(previous_scene_data)
-            previous_scene_data = res
+            data = self.step(previous_scene_data)
+            previous_scene_data = data
+            
+            print(f"debug1: {data}")
     
     @classmethod
     def from_config(cls, config: Union[str, dict, SimulConfig]):

@@ -4,7 +4,7 @@ from ..config import Configurable
 from ..message import Message, MessagePool
 from ..agent import Player
 from ..utils import PromptTemplate, get_data_from_database, \
-                    send_data_to_database, PORT_MAP
+                    send_data_to_database, NAME2PORT
 
 import pandas as pd
 import json
@@ -35,26 +35,37 @@ class Scene(Configurable):
         self._curr_process_idx = 0
     
     # TODO: 根据需求组装更复杂的prompt
-    def add_new_prompt(self, player_name, scene_name, step_name, data=None, from_db=False):
+    def add_new_prompt(self, player_name, scene_name=None, step_name=None, data=None, from_db=False):
         # If the prompt template exists, render it and add it to the message pool
-        if PromptTemplate([scene_name, step_name]).content:
-            prompt_template = PromptTemplate([scene_name, step_name])
-            if from_db:
-                data = get_data_from_database(step_name, PORT_MAP[player_name])
-            prompt = prompt_template.render(data=data)
-            # convert str:prompt to Message:prompt
-            message = Message(agent_name='System', content=prompt, 
-                                visible_to=player_name, turn=self._curr_turn)
-            self.message_pool.append_message(message)
+        if scene_name and step_name:
+            if PromptTemplate([scene_name, step_name]).content:
+                prompt_template = PromptTemplate([scene_name, step_name])
+                if from_db:
+                    data = get_data_from_database(step_name, NAME2PORT[player_name])
+                prompt = prompt_template.render(data=data)
+        elif isinstance(data, str) and data != "None":
+            prompt = data
+        else:
+            raise ValueError("Prompt not found")
+            
+        # convert str:prompt to Message:prompt
+        message = Message(agent_name='System', content=prompt, 
+                            visible_to=player_name, turn=self._curr_turn)
+        self.message_pool.append_message(message)
     
     def parse_output(self, output, player_name, step_name, to_db=False):  
+        res = output
+        
         if to_db and output != "None":  # TODO: better code
-            send_data_to_database(output, step_name, PORT_MAP[player_name])
+            send_data_to_database(output, step_name, NAME2PORT[player_name])
+            res = json.loads(output)
         
         # TODO: short output
         message = Message(agent_name=player_name, content=output, 
                             visible_to=player_name, turn=self._curr_turn)
         self.message_pool.append_message(message)
+        
+        return res
     
     def log_table(self, data, column_name):
         # Try to read the CSV file if it exists, else create an empty DataFrame
@@ -87,14 +98,17 @@ class Scene(Configurable):
     def get_curr_process(self):
         return self.processes[self._curr_process_idx]
         
-    def step(self):
+    def step(self, data=None):
         pass
 
-    def run(self):
+    def run(self, previous_scene_data=None):
         """
         Main function, automatically assemble input and parse output to run the scene
         """
+        
+        # data can from previous scene or previous process
+        data = previous_scene_data
         while not self.is_terminal():
-            self.step()
+            data = self.step(data)
         
         self.terminal_action()

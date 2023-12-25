@@ -8,3 +8,4 @@
 TODO
 0. dine 
 1. group discuss
+   single: 10

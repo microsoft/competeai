@@ -41,15 +41,17 @@ class RestaurantDesign(Scene):
     
     @classmethod
     def get_data_for_next_scene(cls):
-        ports = [set(NAME2PORT.values())]
-        today_offerings = []
+        ports = set(NAME2PORT.values())
+        res = {}
         for port in ports:
             data = get_data_from_database("show", port=port)
+            restaurant = data["name"]
             data = data.values()
             today_offering = PromptTemplate([cls.type_name, "today_offering"]).render(data=data)
-            today_offerings.append(today_offering)
-            
-        return {"today_offerings": today_offerings}
+            dish_score = get_data_from_database("score", port=port)
+            res[restaurant] = {"today_offering": today_offering, "dish_score": dish_score}
+        
+        return res
         
     def move_to_next_player(self):
         self._curr_player_idx = 0  # In restaurant design, only one player
@@ -64,7 +66,7 @@ class RestaurantDesign(Scene):
         self.move_to_next_process()
         self._curr_turn += 1
     
-    def step(self, data=None):
+    def step(self, input=None):
         curr_process = self.get_curr_process()
         curr_player = self.get_curr_player()
         
@@ -80,13 +82,13 @@ class RestaurantDesign(Scene):
         for i in range(self.invalid_step_retry):
             try:
                 output = curr_player(observation)
+                self.parse_output(output, curr_player.name, curr_process['name'], curr_process['to_db'])
                 break
             except Exception as e:
                 print(f"Attempt {i + 1} failed with error: {e}")
         else:
             raise Exception("Invalid step retry arrived at maximum.")
         
-        self.parse_output(output, curr_player.name, curr_process['name'], curr_process['to_db'])
         self.prepare_for_next_step()
         
         
