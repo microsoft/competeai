@@ -6,9 +6,7 @@
 2. Flask is more suitable than Django
 
 TODO
-0. dine 
-1. group discuss
-   single: 10
+1. statictis each customer choice
 
 
 ## Group
@@ -68,7 +66,7 @@ Frank
 Giselle
 Yara
 
-Couple
+### Couple
 Affluent Couples:
 Nora
 Alice

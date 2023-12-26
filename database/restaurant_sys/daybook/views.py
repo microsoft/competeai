@@ -71,7 +71,7 @@ class DayBookViewSet(viewsets.ModelViewSet):
 
         if response.status_code == status.HTTP_201_CREATED:
             instance = self.queryset.get(pk=response.data['id'])
-            instance.profit = profit
+            instance.income = profit
             instance.expense = expense
             instance.num_of_chef = Chef.objects.count()
             instance.chef_salary = chef_salary

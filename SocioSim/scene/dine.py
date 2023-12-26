@@ -1,7 +1,7 @@
 from typing import List
 from .base import Scene
 from ..agent import Player
-from ..utils import NAME2PORT, PORT2NAME, \
+from ..utils import NAME2PORT, PORT2NAME, log_table, \
                     get_data_from_database, send_data_to_database
 
  
@@ -31,14 +31,14 @@ class Dine(Scene):
     
     @classmethod
     def action_for_next_scene(cls, data):
-        # 处理数据，发送到数据库
         restaurant_list = []
         daybooks = {}
         comments = {}
         num_of_customer = {}
         infos = {}
         rival_infos = {}
-        
+        customer_choice = {}
+
         for value in PORT2NAME.values():
             restaurant_list.append(value)
             comments[value] = []
@@ -50,34 +50,38 @@ class Dine(Scene):
         for d in data:
             agent_name = next(iter(d))
             d = d[agent_name]
-            
             day = d["day"]
-            name = d["restaurant"]
-            score = d["score"]
-            comment = d["comment"]
+            r_name = d["restaurant"]
             
-            comment = {"day": day, "name": agent_name, "score": score, "content": comment}
-            comments[name].append({"type": "add", "data": comment})
+            # record customer choice
+            customer_choice[agent_name] = r_name
             
+            # construct comment
+            comment = {"day": day, "name": agent_name, "score": d["score"], "content":  d["comment"]}
+            comments[r_name].append({"type": "add", "data": comment})
+            
+            # construct daybook
             dishes = d["dishes"]
-            num_of_customer[name] += 1
+            num_of_customer[r_name] += 1
             for dish in dishes:
-                if not dish in daybooks[name]:
-                    daybooks[name][dish] = 0
-                daybooks[name][dish] += 1
-                    
-        for name in restaurant_list:
-            show = get_data_from_database("show", port=NAME2PORT[name])
-            menu = show["menu"]
-            score = show["score"]
-            # DISCUSS: what infomation should be shown to the player
-            info = f"Restaurant: {name}\n Number of customers: {num_of_customer[name]}\n Customer Score: {score}\n Menu: {menu}\n "
-            infos[name] = info
+                if not dish in daybooks[r_name]:
+                    daybooks[r_name][dish] = 0
+                daybooks[r_name][dish] += 1
+                
+        # log customer choice
+        log_path = f'./logs/{cls.type_name}'  # FIXME
+        log_table(log_path, customer_choice, f"day{day}")
+    
+        # construct whole daybook  
+        for r_name in restaurant_list:
+            show = get_data_from_database("show", port=NAME2PORT[r_name])
+            info = f"Restaurant: {r_name}\n Number of customers: {num_of_customer[r_name]}\n Customer Score: {show['score']}\n Customer Comments: {show['comment']} Menu: {show['menu']}\n "
+            infos[r_name] = info
         
         for key in daybooks:
-            for name in restaurant_list:
-                if name != key:
-                    rival_infos[key] += infos[name]
+            for r_name in restaurant_list:
+                if r_name != key:
+                    rival_infos[key] += infos[r_name]
             daybook = {"dishes": str(daybooks[key]), "num_of_customer": num_of_customer[key], "rival_info": rival_infos[key]}
             
             print(f'debugging-daybook: {daybook}')
@@ -164,8 +168,6 @@ class Dine(Scene):
             output = dine_info
                 
         self.prepare_for_next_step()
-        
-        # TODO day+1
         
         return output
         

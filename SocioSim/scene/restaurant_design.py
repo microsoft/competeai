@@ -1,7 +1,7 @@
 from typing import List
 from .base import Scene
 from ..agent import Player
-from ..utils import NAME2PORT, PORT2NAME, BASE_PORT, \
+from ..utils import NAME2PORT, PORT2NAME, BASE_PORT, log_table, \
                     PromptTemplate, get_data_from_database
 
  
@@ -85,7 +85,7 @@ class RestaurantDesign(Scene):
                                 scene_name=self.type_name, 
                                 step_name=curr_process['name'], 
                                 data=data)
-            self.log_table(daybook, f"day{self.day}") # log
+            log_table(self.log_path, daybook, f"day{self.day}") # log
         else:
             # LLM can not simulate the whole process automatically, it needs prompt to guide
             self.add_new_prompt(player_name=curr_player.name, 

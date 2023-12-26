@@ -1,7 +1,7 @@
 from django.db import models
 
 class DayBook(models.Model):
-    profit = models.IntegerField(default=0)
+    income = models.IntegerField(default=0)
     expense = models.IntegerField(default=0)
     num_of_customer = models.IntegerField()
     num_of_chef = models.IntegerField(default=0)
