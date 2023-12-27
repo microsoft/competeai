@@ -56,7 +56,7 @@ class DayBookViewSet(viewsets.ModelViewSet):
     
     def create(self, request, *args, **kwargs):
         post_data = request
-        profit, expense = compute(post_data.body.decode('utf-8'))
+        income, expense = compute(post_data.body.decode('utf-8'))
         chef_salary = Chef.objects.all().aggregate(Sum('salary'))['salary__sum']
         
         scores = []
@@ -71,7 +71,7 @@ class DayBookViewSet(viewsets.ModelViewSet):
 
         if response.status_code == status.HTTP_201_CREATED:
             instance = self.queryset.get(pk=response.data['id'])
-            instance.income = profit
+            instance.income = income
             instance.expense = expense
             instance.num_of_chef = Chef.objects.count()
             instance.chef_salary = chef_salary
