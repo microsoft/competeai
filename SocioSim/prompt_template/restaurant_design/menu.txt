@@ -1,6 +1,7 @@
 Welcome to the Menu Management Module. Now your menu info as below:
 <INPUT 0>
 
+<<FORMAT>>
 There are some rules:
   - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
   - Your item name must be English.

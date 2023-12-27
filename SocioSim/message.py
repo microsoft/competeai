@@ -129,6 +129,15 @@ class MessagePool():
             return None
         else:
             return self._messages[-1]
+    
+    def get_last_message_system_to_player(self, player_name: str):
+        """
+        Get the last message sent by a given player.
+        """
+        for message in reversed(self._messages):
+            if message.agent_name == "System" and player_name in message.visible_to:
+                return message
+        return None
 
     def get_all_messages(self) -> List[Message]:
         """

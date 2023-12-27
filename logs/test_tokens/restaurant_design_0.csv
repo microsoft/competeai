@@ -1,0 +1,10 @@
+name,day1
+id,1
+income,1110
+expense,166
+num_of_customer,50
+num_of_chef,1
+chef_salary,2000
+dish_score,0.5080952380952382
+customer_score,6.04
+dishes,"{'Coq au Vin': 27, 'Ratatouille': 41, 'Tarte Tatin': 22, 'Bouillabaisse': 9, 'Chateauneuf du Pape': 6}"

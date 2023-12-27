@@ -1,6 +1,7 @@
 Welcome to the Chef Management Module. Now your chef info as below:
 <INPUT 0> 
 
+<<FORMAT>>
 You can perform the following actions:
 
 1. Hire a new chef:

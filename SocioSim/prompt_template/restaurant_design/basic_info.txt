@@ -1,6 +1,7 @@
 Now your restaurant basic information as below:
 <INPUT 0>
 
+<<FORMAT>>
 If the above inforamtion have not been set, your response must follow the following format:
 {
     "type": "add",

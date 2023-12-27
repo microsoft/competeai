@@ -1,6 +1,7 @@
 After you taste the dishes, The score of each dish as below (1 is a excellent score):
 <INPUT 0>
 
+<<FORMAT>>
 Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
 {
     "restaurant": <The restaurant you chose>,

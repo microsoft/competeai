@@ -26,7 +26,7 @@ else:
 DEFAULT_TEMPERATURE = 0.9
 DEFAULT_MAX_TOKENS = 1024
 # DEFAULT_MODEL = "gpt-3.5-turbo"
-DEFAULT_MODEL = "gpt-4"
+DEFAULT_MODEL = "gpt-4-turbo"
 
 END_OF_MESSAGE = "<EOS>"  # End of message token specified by us not OpenAI
 STOP = ("<|endoftext|>", END_OF_MESSAGE)  # End of sentence token
@@ -91,50 +91,51 @@ class OpenAIChat(IntelligenceBackend):
             system_prompt = f"{global_prompt.strip()}\n{BASE_PROMPT}\n\nYour name is {agent_name}.\n\nYour role:{role_desc}"
         else:
             system_prompt = f" Your name is {agent_name}.\n\nYour role:{role_desc}\n\n{BASE_PROMPT}"
-            
-        all_messages = [(SYSTEM_NAME, system_prompt)]
+        
+        system_message = {"role": "system", "content": system_prompt}
+        
+        all_messages = []
+        # context limit
+        if len(history_messages) > 8:
+            history_messages = history_messages[-8:]
         for msg in history_messages:
-            if msg.agent_name == SYSTEM_NAME:
-                all_messages.append((SYSTEM_NAME, msg.content))
-            else:  # non-system messages are suffixed with the end of message token
-                all_messages.append((msg.agent_name, f"{msg.content}{END_OF_MESSAGE}"))
+            all_messages.append((msg.agent_name, f"{msg.content}{END_OF_MESSAGE}"))
 
-        # if request_msg:
-        #     all_messages.append((SYSTEM_NAME, request_msg.content))
-        # else:  # The default request message that reminds the agent its role and instruct it to speak
-        #     all_messages.append((SYSTEM_NAME, f"Remember your role: {role_desc} Now you speak, {agent_name}.{END_OF_MESSAGE}"))
+        # merge all messages as one user message
+        user_prompt = ""
+        for _, msg in enumerate(all_messages):
+            user_prompt += f"[{msg[0]}]: {msg[1]}\n"
+        if len(user_prompt) > 7500:
+            print("Error: user prompt too long!")
+        
+        if user_prompt:
+            user_message = {"role": "user", "content": user_prompt}
+            messages = [system_message, user_message]
+        else:
+            messages = [system_message]
 
-        messages = []
-        for i, msg in enumerate(all_messages):
-            if i == 0:
-                assert msg[0] == SYSTEM_NAME  # The first message should be from the system
-                messages.append({"role": "system", "content": msg[1]})
-            else:
-                if msg[0] == agent_name:
-                    messages.append({"role": "assistant", "content": msg[1]})
-                else:
-                    if messages[-1]["role"] == "user":  # last message is from user
-                        if self.merge_other_agent_as_user:
-                            messages[-1]["content"] = f"{messages[-1]['content']}\n\n[{msg[0]}]: {msg[1]}"
-                        else:
-                            messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
-                    elif messages[-1]["role"] == "assistant":  # consecutive assistant messages
-                        # Merge the assistant messages
-                        # messages[-1]["content"] = f"{messages[-1]['content']}\n{msg[1]}"
-                        messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
-                    elif messages[-1]["role"] == "system":
-                        messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
-                    else:
-                        raise ValueError(f"Invalid role: {messages[-1]['role']}")
-
-        # use the top 5 and last 8 message
-        # print(len(messages))
-        # print(messages)
-        # if len(messages) > 16:
-        #     messages = messages[:4] + messages[-12:]
-
-        if len(messages) > 10:
-            messages = messages[:2] + messages[-8:]
+        # messages = []
+        # for i, msg in enumerate(all_messages):
+        #     if i == 0:
+        #         assert msg[0] == SYSTEM_NAME  # The first message should be from the system
+        #         messages.append({"role": "system", "content": msg[1]})
+        #     else:
+        #         if msg[0] == agent_name:
+        #             messages.append({"role": "assistant", "content": msg[1]})
+        #         else:
+        #             if messages[-1]["role"] == "user":  # last message is from user
+        #                 if self.merge_other_agent_as_user:
+        #                     messages[-1]["content"] = f"{messages[-1]['content']}\n\n[{msg[0]}]: {msg[1]}"
+        #                 else:
+        #                     messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
+        #             elif messages[-1]["role"] == "assistant":  # consecutive assistant messages
+        #                 # Merge the assistant messages
+        #                 # messages[-1]["content"] = f"{messages[-1]['content']}\n{msg[1]}"
+        #                 messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
+        #             elif messages[-1]["role"] == "system":
+        #                 messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
+        #             else:
+        #                 raise ValueError(f"Invalid role: {messages[-1]['role']}")
         
         response = self._get_response(messages, *args, **kwargs)
         # Remove the agent name if the response starts with it

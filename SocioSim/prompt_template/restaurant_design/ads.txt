@@ -1,6 +1,7 @@
 Welcome to the Advertisement Management Module. Now your Advertisement as below:
 <INPUT 0>
 
+<<FORMAT>>
 You can perform the following actions:
 
 1. If these inforamtion have not been set, your response must follow the following format:

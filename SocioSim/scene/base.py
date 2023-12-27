@@ -4,7 +4,7 @@ from ..config import Configurable
 from ..message import Message, MessagePool
 from ..agent import Player
 from ..utils import PromptTemplate, get_data_from_database, \
-                    send_data_to_database, NAME2PORT
+                    send_data_to_database, NAME2PORT, DELIMITER
 
 import json
 
@@ -56,8 +56,18 @@ class Scene(Configurable):
     def parse_output(self, output, player_name, step_name, to_db=False):  
         if to_db and output != "None":  # TODO: better code
             send_data_to_database(output, step_name, NAME2PORT[player_name])
-        
-        # TODO: short output
+            
+        def shorten_text(text):
+            delimiter_idx = text.find(DELIMITER)
+            if delimiter_idx != -1:
+                return text[:delimiter_idx].strip()
+            else:
+                return text
+        # The previous message to the player may have some format details, we need to remove it
+        last_message = self.message_pool.get_last_message_system_to_player(player_name)
+        if last_message:
+            last_message.content = shorten_text(last_message.content)
+            
         message = Message(agent_name=player_name, content=output, 
                             visible_to=player_name, turn=self._curr_turn)
         self.message_pool.append_message(message)
@@ -92,8 +102,6 @@ class Scene(Configurable):
         """
         Main function, automatically assemble input and parse output to run the scene
         """
-        
-        print(f'Debuggging: scene {self.id} starts.')
         # data can from previous scene or previous process
         data = previous_scene_data
         while not self.is_terminal():

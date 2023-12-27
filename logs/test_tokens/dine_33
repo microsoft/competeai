@@ -1,0 +1,71 @@
+[System->Hugo]: The Restaurant " Le Petit Gourmet "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the authentic taste of French cuisine at Le Petit Gourmet. Our top-notch Chef Pierre uses only the finest ingredients to create classic dishes like Coq au Vin, Bouillabaisse, and Ratatouille. Enjoy a glass of Chateauneuf du Pape and finish your meal with our delicious Tarte Tatin. Join us for a unique dining experience.
+3. Menu 
+   [{'name': 'Coq au Vin', 'price': 30, 'description': 'Classic French stew in which chicken is braised slowly in red wine and a little brandy to yield a supremely rich sauce.'}, {'name': 'Bouillabaisse', 'price': 35, 'description': 'A traditional Provençal fish stew originating from the port city of Marseille.'}, {'name': 'Ratatouille', 'price': 25, 'description': 'A stewed vegetable dish, originating from Nice, with tomatoes, eggplant, zucchini, bell pepper, onion, and garlic.'}, {'name': 'Tarte Tatin', 'price': 20, 'description': 'An upside-down pastry in which the fruit (usually apples) are caramelized in butter and sugar before the tart is baked.'}, {'name': 'Chateauneuf du Pape', 'price': 50, 'description': 'A full-bodied red wine from the Rhône wine region in southeastern France.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Hugo]: The Restaurant " Le Petit Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the authentic taste of French cuisine at Le Petit Bistro. Our carefully curated menu, prepared by Chef Antoine, showcases the best of French cooking. Join us for a gastronomic journey filled with flavors and aromas that will transport you straight to France.
+3. Menu 
+   [{'name': 'Escargot de Bourgogne', 'price': 30, 'description': 'Classic French dish of snails in garlic herb butter'}, {'name': 'Coq au Vin', 'price': 45, 'description': 'Traditional French dish of chicken slow-cooked in wine'}, {'name': 'Tarte Tatin', 'price': 30, 'description': 'Upside-down caramelized apple tart'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Hugo]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Hugo->Hugo]: {
+    "restaurant": "Le Petit Gourmet",
+    "dishes" : [
+        "Coq au Vin",
+        "Ratatouille",
+        "Tarte Tatin"
+    ],
+    "reason" : "Le Petit Gourmet offers a wider variety of dishes with a richer menu, which gives me more options to choose from. Moreover, the prices are more reasonable compared to Le Petit Bistro. The description of the dishes at Le Petit Gourmet is also more appealing and seems to offer a more authentic French dining experience."
+}
+
+[System->Hugo]: After you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Coq au Vin: 0.62
+Ratatouille: 0.57
+Tarte Tatin: 0.51
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Hugo->Hugo]: {
+    "restaurant": "Le Petit Gourmet",
+    "score": 6,
+    "comment": "The Coq au Vin at Le Petit Gourmet was decent, but not exceptional. It had a good flavor, but I've had better elsewhere. The Ratatouille was a bit underwhelming, it lacked the depth of flavor I was expecting. The Tarte Tatin was okay, but the apples could have been more caramelized. Overall, the dining experience was satisfactory but could definitely use some improvements. The service was good and the ambiance was pleasant. However, I believe that the restaurant would benefit from adding more gourmet options to the menu, particularly in terms of their main dishes."
+}
+

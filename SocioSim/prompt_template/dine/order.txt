@@ -1,4 +1,6 @@
 Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
 Firstly, your responses must follow the following format:
 {
     "restaurant": <The restaurant you chose>,
