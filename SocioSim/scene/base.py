@@ -3,9 +3,11 @@ from typing import List
 from ..config import Configurable
 from ..message import Message, MessagePool
 from ..agent import Player
-from ..utils import PromptTemplate, get_data_from_database, \
-                    send_data_to_database, NAME2PORT, DELIMITER
+from ..utils import NAME2PORT, DELIMITER, PromptTemplate, generate_picture, \
+                    send_data_to_database, get_data_from_database
 
+import re
+import os
 import json
 
 
@@ -23,8 +25,9 @@ class Scene(Configurable):
         self.id = id
         self.players = players
         
-        self.log_path = f'{log_path}/{self.type_name}_{self.id}'
-        self.message_pool = MessagePool(log_path=self.log_path)
+        self.log_path = log_path
+        self.log_file = f'{log_path}/{self.type_name}_{self.id}'
+        self.message_pool = MessagePool(log_path=self.log_file)
         
         self.num_of_players = len(players)
         self.invalid_step_retry = 3
@@ -54,9 +57,33 @@ class Scene(Configurable):
         self.message_pool.append_message(message)
     
     def parse_output(self, output, player_name, step_name, to_db=False):  
-        if to_db and output != "None":  # TODO: better code
-            send_data_to_database(output, step_name, NAME2PORT[player_name])
+        try:
+            json_output = json.loads(output)
+        except:
+            json_output = None
+        
+        if isinstance(json_output, dict):
+            json_output = [json_output]
             
+        if json_output:
+            print(json_output)
+            for item in json_output:
+                if "pic_desc" in item:
+                    desc = item["pic_desc"]
+                    # get id
+                    if 'id' in item:
+                        id = item['id']
+                    else:  # Get max id in current path 
+                        files = os.listdir(self.log_path)
+                        pattern = re.compile(rf"{step_name}_(\d+)\.png")
+                        numbers = [int(pattern.match(file).group(1)) for file in files if pattern.match(file)]
+                        max_n = max(numbers, default=0)
+                        id = max_n + 1
+                    filename = f"{step_name}_{id}"
+                    url = generate_picture(desc, f'{self.log_path}/{filename}')
+                # add url in database?
+            send_data_to_database(json_output, step_name, NAME2PORT[player_name])
+                    
         def shorten_text(text):
             delimiter_idx = text.find(DELIMITER)
             if delimiter_idx != -1:
@@ -82,7 +109,6 @@ class Scene(Configurable):
     def action_for_next_scene(self, data):
         return
             
-    
     def is_terminal(self):
         pass
     

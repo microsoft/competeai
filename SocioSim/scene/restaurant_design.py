@@ -85,26 +85,25 @@ class RestaurantDesign(Scene):
                                 scene_name=self.type_name, 
                                 step_name=curr_process['name'], 
                                 data=data)
-            log_table(self.log_path, daybook, f"day{self.day}") # log
+            log_table(self.log_file, daybook, f"day{self.day}") # log
         else:
-            # LLM can not simulate the whole process automatically, it needs prompt to guide
             self.add_new_prompt(player_name=curr_player.name, 
                                 scene_name=self.type_name, 
                                 step_name=curr_process['name'], 
                                 from_db=curr_process['from_db'])
-
+        
         observation = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
         
         for i in range(self.invalid_step_retry):
             try:
                 output = curr_player(observation)
-                self.parse_output(output, curr_player.name, curr_process['name'], curr_process['to_db'])
                 break
             except Exception as e:
                 print(f"Attempt {i + 1} failed with error: {e}")
         else:
             raise Exception("Invalid step retry arrived at maximum.")
         
+        self.parse_output(output, curr_player.name, curr_process['name'], curr_process['to_db'])
         self.prepare_for_next_step()
         
         return

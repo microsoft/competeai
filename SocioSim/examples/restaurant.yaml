@@ -7,21 +7,21 @@ backends:
 
 global_prompt:
   boss: &default_global_prompt_boss
-    As the owner of a restaurant in a small American town, you find yourself in direct competition with another restaurant for customers. The competition will persist until one of the restaurants is forced to close down. In order to emerge victorious in this competition, it is imperative that you employ any necessary measures to secure success. Generally speaking, offering higher salaries to chefs and choosing higher quality ingredients can result in more delicious dishes. Therefore, you need to strike a balance between profitability and quality. Please provide a comprehensive and detailed response outlining the strategies and actions you would undertake to ensure your restaurant's triumph over the competitor.
+    As the owner of a restaurant in a small England town, you find yourself in direct competition with another restaurant for customers. The competition will persist until one of the restaurants is forced to close down. In order to emerge victorious in this competition, it is imperative that you employ any necessary measures to secure success. Generally speaking, offering higher salaries to chefs and choosing higher quality ingredients can result in more delicious dishes. Therefore, you need to strike a balance between profitability and quality. Please provide a comprehensive and detailed response outlining the strategies and actions you would undertake to ensure your restaurant's triumph over the competitor.
   customer: &default_global_prompt_customer
-    In the small town of America, there are currently two open restaurants. To assist in your decision-making process, you will be provided with menus and additional information for both establishments. Your task is to carefully compare the two restaurants and select one for your meal. Please refrain from choosing based on the restaurant's location, and avoid repeatedly choosing the same restaurant. Your selection should be based on the criteria of having more delicious food and superior service.
+    In the small town of England, there are currently two open restaurants. To assist in your decision-making process, you will be provided with menus and additional information for both establishments. Your task is to carefully compare the two restaurants and select one for your meal. Please refrain from choosing based on the restaurant's location, and avoid repeatedly choosing the same restaurant. Your selection should be based on the criteria of having more delicious food and superior service.
 
 database_port_base: 9000
 
 players:
   - name:  Qin
     agent_type: boss
-    role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You start with a capital of $10,000. Your restaurant style is French. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's name and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration. Remember to keep an eye on your competitor's restaurant and make sure you are always one step ahead.
+    role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You start with a capital of $10,000. Your restaurant style is American. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's name and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration. Remember to keep an eye on your competitor's restaurant and make sure you are always one step ahead.
     backend: *default_backend_anchor
 
   - name: Lin
     agent_type: boss
-    role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You are a bold and innovative thinker, constantly coming up with new ideas and approaches. You start with a capital of $10,000. Your restaurant style is French. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's cuisine style, name and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration.
+    role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You are a bold and innovative thinker, constantly coming up with new ideas and approaches. You start with a capital of $10,000. Your restaurant style is American. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's cuisine style, name and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration.
     backend: *default_backend_anchor
 
   - name: Alice
@@ -280,7 +280,7 @@ scenes:
     scene_type: restaurant_design
     players:
       - Qin
-      - Lin
+      # - Lin
   - name: dine
     scene_type: dine
     players:

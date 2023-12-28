@@ -113,29 +113,6 @@ class OpenAIChat(IntelligenceBackend):
             messages = [system_message, user_message]
         else:
             messages = [system_message]
-
-        # messages = []
-        # for i, msg in enumerate(all_messages):
-        #     if i == 0:
-        #         assert msg[0] == SYSTEM_NAME  # The first message should be from the system
-        #         messages.append({"role": "system", "content": msg[1]})
-        #     else:
-        #         if msg[0] == agent_name:
-        #             messages.append({"role": "assistant", "content": msg[1]})
-        #         else:
-        #             if messages[-1]["role"] == "user":  # last message is from user
-        #                 if self.merge_other_agent_as_user:
-        #                     messages[-1]["content"] = f"{messages[-1]['content']}\n\n[{msg[0]}]: {msg[1]}"
-        #                 else:
-        #                     messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
-        #             elif messages[-1]["role"] == "assistant":  # consecutive assistant messages
-        #                 # Merge the assistant messages
-        #                 # messages[-1]["content"] = f"{messages[-1]['content']}\n{msg[1]}"
-        #                 messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
-        #             elif messages[-1]["role"] == "system":
-        #                 messages.append({"role": "user", "content": f"[{msg[0]}]: {msg[1]}"})
-        #             else:
-        #                 raise ValueError(f"Invalid role: {messages[-1]['role']}")
         
         response = self._get_response(messages, *args, **kwargs)
         # Remove the agent name if the response starts with it
