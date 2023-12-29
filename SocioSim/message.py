@@ -40,7 +40,6 @@ class Message:
     agent_name: str
     content: str
     turn: int
-    summary: str = None
     timestamp: int = time.time_ns()
     visible_to: Union[str, List[str]] = 'all'
     msg_type: str = "text"

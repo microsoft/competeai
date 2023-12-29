@@ -7,6 +7,7 @@ from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 from .base import IntelligenceBackend
 from ...message import Message, SYSTEM_NAME, MODERATOR_NAME
+from ...image import Image
 
 try:
     from openai import OpenAI
@@ -75,7 +76,7 @@ class OpenAIChat(IntelligenceBackend):
         return response
 
     def query(self, agent_name: str, role_desc: str, history_messages: List[Message], global_prompt: str = None,
-              request_msg: Message = None, *args, **kwargs) -> str:
+              images: List[Image] = [], request_msg: Message = None, *args, **kwargs) -> str:
         """
         format the input and call the ChatGPT/GPT-4 API
         args:
@@ -85,7 +86,9 @@ class OpenAIChat(IntelligenceBackend):
             history_messages: the history of the conversation, or the observation for the agent
             request_msg: the request from the system to guide the agent's next response
         """
-
+        messages = []
+        
+        # System env
         # Merge the role description and the global prompt as the system prompt for the agent
         if global_prompt:  # Prepend the global prompt if it exists
             system_prompt = f"{global_prompt.strip()}\n{BASE_PROMPT}\n\nYour name is {agent_name}.\n\nYour role:{role_desc}"
@@ -93,26 +96,31 @@ class OpenAIChat(IntelligenceBackend):
             system_prompt = f" Your name is {agent_name}.\n\nYour role:{role_desc}\n\n{BASE_PROMPT}"
         
         system_message = {"role": "system", "content": system_prompt}
+        messages.append(system_message)
         
-        all_messages = []
-        # context limit
-        if len(history_messages) > 8:
-            history_messages = history_messages[-8:]
-        for msg in history_messages:
-            all_messages.append((msg.agent_name, f"{msg.content}{END_OF_MESSAGE}"))
+        # Text
+        if len(history_messages) > 0:
+            user_messages = []
+            if len(history_messages) > 8:  # context limit
+                history_messages = history_messages[-8:]
+            for msg in history_messages:
+                user_messages.append((msg.agent_name, f"{msg.content}{END_OF_MESSAGE}"))
 
-        # merge all messages as one user message
-        user_prompt = ""
-        for _, msg in enumerate(all_messages):
-            user_prompt += f"[{msg[0]}]: {msg[1]}\n"
-        if len(user_prompt) > 7500:
-            print("Error: user prompt too long!")
-        
-        if user_prompt:
+            user_prompt = ""
+            for _, msg in enumerate(user_messages):
+                user_prompt += f"[{msg[0]}]: {msg[1]}\n"
+            
             user_message = {"role": "user", "content": user_prompt}
-            messages = [system_message, user_message]
-        else:
-            messages = [system_message]
+            messages.append(user_message)
+        
+        # Image
+        for image in images:
+            image_prompt = [{"type": "text", "text": image.description}]
+            image_content = f"data:image/jpeg;base64,{image.content}"
+            image_content = {"type": "image_url", "image_url": {"url": image_content}}
+            image_prompt.append(image_content)
+            image_message = {"role": "user", "content": image_prompt}
+            messages.append(image_message)
         
         response = self._get_response(messages, *args, **kwargs)
         # Remove the agent name if the response starts with it

@@ -1,10 +1,11 @@
 from typing import List
 from .base import Scene
 from ..agent import Player
-from ..utils import NAME2PORT, PORT2NAME, log_table, \
-                    get_data_from_database, send_data_to_database
+from ..globals import NAME2PORT, PORT2NAME
+from ..utils import log_table, get_data_from_database, send_data_to_database
+                    
 
- 
+
 processes = [
     {"name": "order", "from_db": False, "to_db": False},
     {"name": "comment", "from_db": False, "to_db": False},

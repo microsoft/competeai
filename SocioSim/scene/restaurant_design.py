@@ -1,9 +1,9 @@
 from typing import List
 from .base import Scene
 from ..agent import Player
-from ..utils import NAME2PORT, PORT2NAME, BASE_PORT, log_table, \
-                    PromptTemplate, get_data_from_database
-
+from ..globals import NAME2PORT, PORT2NAME, BASE_PORT
+from ..utils import PromptTemplate, get_data_from_database, log_table
+                     
  
 processes = [
     {"name": "daybook", "from_db": False, "to_db": False},
@@ -11,7 +11,7 @@ processes = [
     {"name": "basic_info", "from_db": True, "to_db": True},
     {"name": "menu", "from_db": True, "to_db": True},
     {"name": "chef", "from_db": True, "to_db": True},
-    {"name": "ads", "from_db": True, "to_db": True},  # bug
+    {"name": "ads", "from_db": True, "to_db": True},
 ]
 
 
@@ -61,8 +61,6 @@ class RestaurantDesign(Scene):
     def move_to_next_process(self):
         self._curr_process_idx += 1
     
-    # function: prepare the config: player, process for next step
-    # more complex process and player sequence
     def prepare_for_next_step(self):
         self.move_to_next_player()
         self.move_to_next_process()
@@ -91,12 +89,14 @@ class RestaurantDesign(Scene):
                                 scene_name=self.type_name, 
                                 step_name=curr_process['name'], 
                                 from_db=curr_process['from_db'])
-        
-        observation = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
+        # text observation
+        observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
+        # vision observation
+        observation_vision = None # TODO
         
         for i in range(self.invalid_step_retry):
             try:
-                output = curr_player(observation)
+                output = curr_player(observation_text, observation_vision)
                 break
             except Exception as e:
                 print(f"Attempt {i + 1} failed with error: {e}")

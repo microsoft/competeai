@@ -7,6 +7,7 @@ from abc import abstractmethod
 import asyncio
 
 from .backends import IntelligenceBackend, load_backend
+from ..image import Image
 from ..message import Message, SYSTEM_NAME
 from ..config import AgentConfig, Configurable, BackendConfig
 
@@ -79,7 +80,7 @@ class Player(Agent):
             global_prompt=self.global_prompt,
         )
 
-    def act(self, observation: List[Message]) -> str:
+    def act(self, observation_text: List[Message], observation_vision: List[Image]=[]) -> str:
         """
         Take an action based on the observation (Generate a response), which can later be parsed to actual actions that affect the game dyanmics.
 
@@ -91,8 +92,8 @@ class Player(Agent):
         """ 
         try:
             response = self.backend.query(agent_name=self.name, role_desc=self.role_desc,
-                                          history_messages=observation, global_prompt=self.global_prompt,
-                                          request_msg=None)
+                                          history_messages=observation_text, global_prompt=self.global_prompt,
+                                          images=observation_vision, request_msg=None)
         except RetryError as e:
             err_msg = f"Agent {self.name} failed to generate a response. Error: {e.last_attempt.exception()}. Sending signal to end the conversation."
             logging.warning(err_msg)

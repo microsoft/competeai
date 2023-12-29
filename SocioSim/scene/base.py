@@ -3,7 +3,7 @@ from typing import List
 from ..config import Configurable
 from ..message import Message, MessagePool
 from ..agent import Player
-from ..utils import NAME2PORT, DELIMITER, PromptTemplate, generate_picture, \
+from ..utils import NAME2PORT, DELIMITER, PromptTemplate, generate_image, \
                     send_data_to_database, get_data_from_database
 
 import re
@@ -36,7 +36,6 @@ class Scene(Configurable):
         self._curr_player_idx = 0
         self._curr_process_idx = 0
     
-    # TODO: 根据需求组装更复杂的prompt
     def add_new_prompt(self, player_name, scene_name=None, step_name=None, data=None, from_db=False):
         # If the prompt template exists, render it and add it to the message pool
         prompt = None
@@ -66,7 +65,6 @@ class Scene(Configurable):
             json_output = [json_output]
             
         if json_output:
-            print(json_output)
             for item in json_output:
                 if "pic_desc" in item:
                     desc = item["pic_desc"]
@@ -80,9 +78,10 @@ class Scene(Configurable):
                         max_n = max(numbers, default=0)
                         id = max_n + 1
                     filename = f"{step_name}_{id}"
-                    url = generate_picture(desc, f'{self.log_path}/{filename}')
+                    url = generate_image(desc, f'{self.log_path}/{filename}')
                 # add url in database?
-            send_data_to_database(json_output, step_name, NAME2PORT[player_name])
+            if to_db:
+                send_data_to_database(json_output, step_name, NAME2PORT[player_name])
                     
         def shorten_text(text):
             delimiter_idx = text.find(DELIMITER)
@@ -90,6 +89,7 @@ class Scene(Configurable):
                 return text[:delimiter_idx].strip()
             else:
                 return text
+            
         # The previous message to the player may have some format details, we need to remove it
         last_message = self.message_pool.get_last_message_system_to_player(player_name)
         if last_message:
@@ -99,11 +99,7 @@ class Scene(Configurable):
                             visible_to=player_name, turn=self._curr_turn)
         self.message_pool.append_message(message)
         
-        try:
-            parsed_ouput = json.loads(output)
-            return parsed_ouput
-        except:
-            return None
+        return json_output
     
     @classmethod
     def action_for_next_scene(self, data):
