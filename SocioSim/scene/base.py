@@ -3,8 +3,8 @@ from typing import List
 from ..config import Configurable
 from ..message import Message, MessagePool
 from ..agent import Player
-from ..utils import NAME2PORT, DELIMITER, PromptTemplate, generate_image, \
-                    send_data_to_database, get_data_from_database
+from ..globals import NAME2PORT, DELIMITER, PromptTemplate
+from ..utils import generate_image, send_data_to_database, get_data_from_database
 
 import re
 import os
@@ -12,7 +12,7 @@ import json
 
 
 class Scene(Configurable):
-    def __init__(self, players: List[Player], id: int, type_name: str, log_path: str, **kwargs):
+    def __init__(self, players: List[Player], type_name: str, **kwargs):
         """
         Initialize a scene
         
@@ -20,14 +20,9 @@ class Scene(Configurable):
             message_pool (MessagePool): The message pool for the scene
             players (List[Player]): The players in the scene
         """
-        super().__init__(players=players, id=id, type_name=type_name, **kwargs)
-        # All scenes share a common message pool, prompt assembler and output parser
-        self.id = id
+        super().__init__(players=players, type_name=type_name, **kwargs)
         self.players = players
-        
-        self.log_path = log_path
-        self.log_file = f'{log_path}/{self.type_name}_{self.id}'
-        self.message_pool = MessagePool(log_path=self.log_file)
+        self.log_path = None
         
         self.num_of_players = len(players)
         self.invalid_step_retry = 3
@@ -70,14 +65,14 @@ class Scene(Configurable):
                     desc = item["pic_desc"]
                     # get id
                     if 'id' in item:
-                        id = item['id']
+                        nid = item['id']
                     else:  # Get max id in current path 
                         files = os.listdir(self.log_path)
                         pattern = re.compile(rf"{step_name}_(\d+)\.png")
                         numbers = [int(pattern.match(file).group(1)) for file in files if pattern.match(file)]
                         max_n = max(numbers, default=0)
-                        id = max_n + 1
-                    filename = f"{step_name}_{id}"
+                        nid = max_n + 1
+                    filename = f"{step_name}_{nid}"
                     url = generate_image(desc, f'{self.log_path}/{filename}')
                 # add url in database?
             if to_db:

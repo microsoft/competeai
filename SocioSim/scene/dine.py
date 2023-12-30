@@ -1,6 +1,7 @@
 from typing import List
 from .base import Scene
 from ..agent import Player
+from ..message import MessagePool
 from ..globals import NAME2PORT, PORT2NAME
 from ..utils import log_table, get_data_from_database, send_data_to_database
                     
@@ -19,6 +20,8 @@ class Dine(Scene):
         super().__init__(players=players, id=id, log_path=log_path,  
                                 type_name=self.type_name, **kwargs)
         self.processes = processes
+        self.log_path = f"{log_path}/{self.type_name}_{id}"
+        self.message_pool = MessagePool(log_path=self.log_path)
         
         self.day = 1
         self.dishes = None
