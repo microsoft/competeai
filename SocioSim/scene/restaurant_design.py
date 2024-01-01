@@ -2,10 +2,14 @@ from typing import List
 from .base import Scene
 from ..agent import Player
 from ..message import MessagePool
+from ..image import Image
 from ..globals import NAME2PORT, PORT2NAME, BASE_PORT, image_pool
-from ..utils import PromptTemplate, get_data_from_database, log_table
+from ..utils import PromptTemplate, get_data_from_database, \
+                    log_table, combine_images, convert_img_to_base64
    
 import os                  
+ 
+EXP_NAME = None
  
 processes = [
     {"name": "daybook", "from_db": False, "to_db": False},
@@ -21,20 +25,21 @@ class RestaurantDesign(Scene):
     
     type_name = "restaurant_design"
     
-    def __init__(self, players: List[Player], id: int, log_path: str, **kwargs):
-        super().__init__(players=players, id=id, log_path=log_path,  
-                                type_name=self.type_name, **kwargs)
+    def __init__(self, players: List[Player], id: int, exp_name: str, **kwargs):
+        super().__init__(players=players, id=id, type_name=self.type_name, **kwargs)
+        global EXP_NAME
+        EXP_NAME = exp_name
         
         self.processes = processes
         self.port = BASE_PORT + id
         
-        self.log_path = f"{log_path}/{self.type_name}_{id}"
+        self.log_path = f"./logs/{exp_name}/{self.type_name}_{self.port}"
+        if not os.path.exists(self.log_path):
+            os.makedirs(self.log_path)
+            
         self.message_pool = MessagePool(log_path=f'{self.log_path}/message')
         
         self.day = 0
-        
-        if not os.path.exists(self.log_path):
-            os.makedirs(self.log_path)
         
         for player in players:
             NAME2PORT[player.name] = self.port
@@ -56,14 +61,25 @@ class RestaurantDesign(Scene):
         res = {}
         for port in ports:
             data = get_data_from_database("show", port=port)
+            menu = data["menu"]
             restaurant = data["name"]
-            data = data.values()
-            today_offering = PromptTemplate([cls.type_name, "today_offering"]).render(data=data)
+            today_offering = PromptTemplate([cls.type_name, "today_offering"]).render(data=data.values())
             dish_score = get_data_from_database("score", port=port)
             res[restaurant] = {"today_offering": today_offering, "dish_score": dish_score}
             
-            #TODO: add restaurant and dish image to image pool
-            # 首先从每个饭店对应的文件夹中读取饭店图片，菜的图片，然后获取base64编码，最后存入image_pool
+            # Menu image
+            dish_ids = [d["id"] for d in menu]
+            folder_path = f"./logs/{EXP_NAME}/{cls.type_name}_{port}"
+            img_paths = [f"{folder_path}/menu_{id}.png" for id in dish_ids]
+            img_base64_menu = combine_images(input_paths=img_paths, output_path=f"{folder_path}/menu.png")
+            img_menu = Image(owner=restaurant, content=img_base64_menu, description="menu")
+            image_pool.append_image(img_menu)
+            # Restaurant image
+            img_base64_r = convert_img_to_base64(f"{folder_path}/basic_info_1.png")
+            img_r = Image(owner=restaurant, content=img_base64_r, description="basic_info")
+            image_pool.append_image(img_r)
+            
+            image_pool.print()
         return res
         
     def move_to_next_player(self):
@@ -103,18 +119,19 @@ class RestaurantDesign(Scene):
         # text observation
         observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
         # vision observation
-        observation_vision = image_pool.get_visible_images(player_name=curr_player.name, step_name=curr_process['name'])
+        r_name = PORT2NAME[self.port] if self.port in PORT2NAME else None
+        observation_vision = image_pool.get_visible_images(restaurant_name=r_name, step_name=curr_process['name'])
         
         for i in range(self.invalid_step_retry):
             try:
                 output = curr_player(observation_text, observation_vision)
+                self.parse_output(output, curr_player.name, curr_process['name'], curr_process['to_db'])
                 break
             except Exception as e:
                 print(f"Attempt {i + 1} failed with error: {e}")
         else:
             raise Exception("Invalid step retry arrived at maximum.")
         
-        self.parse_output(output, curr_player.name, curr_process['name'], curr_process['to_db'])
         self.prepare_for_next_step()
         
         return

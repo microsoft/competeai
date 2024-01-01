@@ -5,10 +5,6 @@
 
 2. Flask is more suitable than Django
 
-TODO
-1. statictis each customer choice
-
-
 ## Group
 
 ### Single

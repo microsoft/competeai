@@ -2,7 +2,7 @@ backends:
   default_backend: &default_backend_anchor
     temperature: 0.7
     max_tokens: 1024
-    model: gpt-4-0613
+    model: gpt-4-vision-preview
     backend_type: openai-chat
 
 global_prompt:
@@ -279,61 +279,58 @@ scenes:
   - name: restaurant_design
     scene_type: restaurant_design
     players:
-      - Qin
-      # - Lin
+      # - Qin
+      - Lin
   - name: dine
     scene_type: dine
     players:
       - Alice
-      - Bob
-      - Charlie
-      - David
-      - Eve
-      - Frank
-      - Grace
-      - Henry
-      - Ivy
-      - Jack
-      - Katie
-      - Leo
-      - Maggie
-      - Nate
-      - Olivia
-      - Peter
-      - Quinn
-      - Rachel
-      - Sam
-      - Tara
-      - Umar
-      - Vicky
-      - William
-      - Xena
-      - Yasmine
-      - Zach
-      - Amelia
-      - Brian
-      - Chloe
-      - Dexter
-      - Emma
-      - Felix
-      - Giselle
-      - Hugo
-      - Iris
-      - Jake
-      - Lara
-      - Max
-      - Nora
-      - Oscar
-      - Paula
-      - Quincy
-      - Ruby
-      - Steve
-      - Tina
-      - Ulysses
-      - Valerie
-      - Wade
-      - Xavier
-      - Yara
-
-
-    
+      # - Bob
+      # - Charlie
+      # - David
+      # - Eve
+      # - Frank
+      # - Grace
+      # - Henry
+      # - Ivy
+      # - Jack
+      # - Katie
+      # - Leo
+      # - Maggie
+      # - Nate
+      # - Olivia
+      # - Peter
+      # - Quinn
+      # - Rachel
+      # - Sam
+      # - Tara
+      # - Umar
+      # - Vicky
+      # - William
+      # - Xena
+      # - Yasmine
+      # - Zach
+      # - Amelia
+      # - Brian
+      # - Chloe
+      # - Dexter
+      # - Emma
+      # - Felix
+      # - Giselle
+      # - Hugo
+      # - Iris
+      # - Jake
+      # - Lara
+      # - Max
+      # - Nora
+      # - Oscar
+      # - Paula
+      # - Quincy
+      # - Ruby
+      # - Steve
+      # - Tina
+      # - Ulysses
+      # - Valerie
+      # - Wade
+      # - Xavier
+      # - Yara

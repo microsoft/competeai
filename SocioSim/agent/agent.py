@@ -101,8 +101,8 @@ class Player(Agent):
 
         return response
 
-    def __call__(self, observation: List[Message]) -> str:
-        return self.act(observation)
+    def __call__(self, observation_text: List[Message], observation_vision: List[Image]) -> str:
+        return self.act(observation_text, observation_vision)
 
     async def async_act(self, observation: List[Message]) -> str:
         """

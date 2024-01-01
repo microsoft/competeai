@@ -25,6 +25,8 @@ DEFAULT_SIZE = '1024x1024'
 DEFAULT_QUALITY = "standard"
 DEFAULT_RES_FORMAT = "url"
 
+convert_img_to_base64 = lambda img_path: base64.b64encode(open(img_path, 'rb').read()).decode('utf-8')
+
 def generate_image(prompt: str, filepath: str,  size: str = DEFAULT_SIZE, 
                        quality: str = DEFAULT_QUALITY, model: str = DEFAULT_MODEL, response_format: str = DEFAULT_RES_FORMAT, 
                        **kwargs):
@@ -96,25 +98,24 @@ def generate_image(prompt: str, filepath: str,  size: str = DEFAULT_SIZE,
 
         return response.data[0].url
 
-def combine_images(image_paths, output_path, target_size=(1024, 1024)):
+def combine_images(input_paths, output_path, target_size=(1024, 1024)):
     # 打开第一张图片获取原始长宽
-    first_image = Image.open(image_paths[0])
-    original_width, original_height = first_image.size
+    first_image = Image.open(input_paths[0])
 
     # 缩小图片为512x512
-    resized_images = [Image.open(image_path).resize((512, 512)) for image_path in image_paths]
+    resized_images = [Image.open(image_path).resize((512, 512)) for image_path in input_paths]
 
     # 计算目标图像的长宽
-    max_horizontal_images = min(len(image_paths), 4)  # 水平方向最多显示4张图片
+    max_horizontal_images = min(len(input_paths), 4)  # 水平方向最多显示4张图片
     target_width = 512 * max_horizontal_images
-    target_height = 512 * ((len(image_paths) - 1) // max_horizontal_images + 1)
+    target_height = 512 * ((len(input_paths) - 1) // max_horizontal_images + 1)
 
     # 创建一个空白的目标图像
     result_image = Image.new("RGB", (target_width, target_height), (255, 255, 255))
 
     # 计算每张图片在目标图像中的位置
     image_width = target_width // max_horizontal_images
-    image_height = target_height // max((len(image_paths) - 1) // max_horizontal_images + 1, 1)
+    image_height = target_height // max((len(input_paths) - 1) // max_horizontal_images + 1, 1)
 
     for i, resized_image in enumerate(resized_images):
         # 将当前图片粘贴到目标图像中的正确位置
@@ -124,6 +125,10 @@ def combine_images(image_paths, output_path, target_size=(1024, 1024)):
 
     # 将目标图像保存到文件
     result_image.save(output_path)
+    
+    # convert to base64
+    img_str = convert_img_to_base64(output_path)
+    return img_str
 
 
 # Test function: generate_picture
@@ -135,5 +140,5 @@ def combine_images(image_paths, output_path, target_size=(1024, 1024)):
 # Test function: combine_pictures
 # path = "SocioSim/logs/test_pic"
 # menus = [1, 2, 3, 4]
-# image_paths = [f"{path}/menu_{menu}.png" for menu in menus]
-# combine_pictures(image_paths, f"{path}/menu.png")
+# input_paths = [f"{path}/menu_{menu}.png" for menu in menus]
+# combine_pictures(input_paths, f"{path}/menu.png")

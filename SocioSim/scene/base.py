@@ -3,8 +3,9 @@ from typing import List
 from ..config import Configurable
 from ..message import Message, MessagePool
 from ..agent import Player
-from ..globals import NAME2PORT, DELIMITER, PromptTemplate
-from ..utils import generate_image, send_data_to_database, get_data_from_database
+from ..globals import NAME2PORT, DELIMITER
+from ..utils import PromptTemplate, generate_image, \
+                        send_data_to_database, get_data_from_database
 
 import re
 import os
@@ -70,11 +71,13 @@ class Scene(Configurable):
                         files = os.listdir(self.log_path)
                         pattern = re.compile(rf"{step_name}_(\d+)\.png")
                         numbers = [int(pattern.match(file).group(1)) for file in files if pattern.match(file)]
-                        max_n = max(numbers, default=0)
-                        nid = max_n + 1
+                        # if no numbers, set nid to 1
+                        nid = max(numbers) + 1 if numbers else 1
+                    
+                        
+  
                     filename = f"{step_name}_{nid}"
-                    url = generate_image(desc, f'{self.log_path}/{filename}')
-                # add url in database?
+                    url = generate_image(desc, f'{self.log_path}/{filename}')  # FIXME
             if to_db:
                 send_data_to_database(json_output, step_name, NAME2PORT[player_name])
                     

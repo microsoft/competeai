@@ -115,7 +115,7 @@ class OpenAIChat(IntelligenceBackend):
         
         # Image
         for image in images:
-            image_prompt = [{"type": "text", "text": image.description}]
+            image_prompt = [{"type": "text", "text": f"{image.owner}-{image.description}"}]
             image_content = f"data:image/jpeg;base64,{image.content}"
             image_content = {"type": "image_url", "image_url": {"url": image_content}}
             image_prompt.append(image_content)

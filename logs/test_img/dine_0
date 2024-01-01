@@ -1,0 +1,32 @@
+[System->Alice]: The Restaurant " The American Fusion "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the bold flavors of American cuisine like never before at The American Fusion. Indulge in our innovative menu that marries classic American dishes with modern culinary techniques. Our locally-sourced ingredients and skilled chefs will take you on a gastronomic journey. Visit us for a premium dining experience that excites the palate and soothes the soul. Reserve your table today and taste the fusion of tradition and innovation.
+3. Menu 
+   [{'id': 1, 'name': 'Smoked BBQ Brisket', 'price': 25, 'description': 'Tender brisket slow-smoked to perfection, served with our signature BBQ sauce and a side of coleslaw.'}, {'id': 2, 'name': 'Fusion Burger', 'price': 18, 'description': 'A juicy beef patty topped with gourmet cheese, avocado, and a spicy aioli, embodying the fusion of flavors.'}, {'id': 3, 'name': 'Classic Cobb Salad', 'price': 16, 'description': 'Crisp lettuce, grilled chicken, bacon, eggs, avocado, and blue cheese, dressed with a classic vinaigrette.'}, {'id': 4, 'name': 'Maple Glazed Salmon', 'price': 22, 'description': 'Fresh salmon fillet glazed with maple syrup and served with a side of roasted vegetables.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a berry compote.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Alice]: Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Firstly, your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
+}
+
+After you get the score of dishes, give me your comment. Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Your score of this experience>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
+}
+
+[Alice->Alice]: I'm sorry, but I can't provide assistance without the information for the second restaurant to compare with The American Fusion. Please provide the details of the other restaurant so that I can help you make an informed decision based on the criteria of having more delicious food and superior service.
+

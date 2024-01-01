@@ -30,7 +30,7 @@ def Show(request):
         advertisement = advertisement.content if advertisement else None
 
         # Get the menu items and exclude the 'price_cost' field
-        menu = Menu.objects.values("name", "price", "description")
+        menu = Menu.objects.values("id", "name", "price", "description")
         # Get the comments from Comment
         customer_score = Comment.objects.aggregate(avg_score=Avg('score'))['avg_score']
         customer_score = customer_score if customer_score else 'NULL'

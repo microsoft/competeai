@@ -1,0 +1,275 @@
+[Lin->Lin]: In order to ensure the success of my restaurant, I will be employing a multi-faceted strategy that includes refining the restaurant's brand, improving our marketing efforts, focusing on quality and cost control, and enhancing the overall dining experience for our customers.
+
+1. Define our brand: My restaurant, named "Lin's American Diner," serves classic American dishes made from locally sourced, high-quality ingredients. The restaurant has a cozy atmosphere, designed to make customers feel like they are dining in a comfortable, home-like setting.
+
+2. Allocate initial capital: With the initial capital of $10,000, I will allocate $3,000 for kitchen equipment and supplies, $3,500 for initial stock of quality ingredients, $2,000 for staff salaries, and $1,500 for marketing and branding efforts.
+
+3. Improve our menu: I will ensure that our menu stands out from that of our competitor's by offering unique, signature dishes that cannot be found elsewhere. I will also offer seasonal menus to take advantage of fresh, local produce and keep customers coming back to try new items.
+
+4. Focus on quality and cost control: To ensure quality, I will hire experienced chefs and provide them with a competitive salary, while also keeping a close eye on food cost. I will also implement waste reduction strategies to minimize unnecessary costs.
+
+5. Enhance the dining experience: I will train staff to provide excellent customer service to make our customers feel valued and appreciated. Additionally, I will regularly gather customer feedback to understand their needs and preferences and make necessary adjustments to our service.
+
+6. Improve marketing efforts: I will invest in a well-designed website and active social media presence to attract new customers. I will also run promotions and loyalty programs to encourage repeat visits.
+
+7. Community involvement: I will engage with the local community by participating in local events and sponsoring local teams or charities. This will help increase our visibility and reputation in the community.
+
+Overall, my strategy is to create a unique, high-quality dining experience that will attract and retain customers, thereby ensuring the success of Lin's American Diner.
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->Lin]: Thank you for the guidelines. Here's my strategy:
+
+1. Chefs: I will hire a skilled chef at a competitive salary, ensuring the quality of our dishes. I will allocate $2,500 of my initial capital for the chef's salary.
+
+2. Dishes: I will focus on offering a selection of high-quality, signature dishes. I will allocate $3,500 of my initial capital for procuring premium ingredients. This means I will be targeting a slightly high-end clientele who appreciate quality over quantity. I will price our dishes at a slightly higher mark-up to cover the costs, but ensure that the taste and presentation justify the price.
+
+3. Advertisement: I will invest $1,500 of my capital into the advertising module to reach out to potential customers and create awareness about our restaurant. The advertising will focus on our unique selling points - high-quality, locally sourced ingredients, and unique signature dishes.
+
+I will now proceed with these actions on the corresponding modules.
+
+[System->Lin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+<<FORMAT>>
+If the above inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1,
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>,
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "name": "Lin's American Diner",
+        "money": 10000,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": "A cozy American Diner, named Lin's American Diner, with a warm, home-like atmosphere"
+}
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data":{
+            "name": "Classic Cheeseburger",
+            "description": "A juicy, perfectly grilled beef patty topped with melted cheese, lettuce, and tomatoes, served on a freshly baked bun",
+            "price": 15,
+            "cost_price": 10
+        },
+        "pic_desc": "A hearty, mouth-watering cheeseburger with fresh toppings"
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Southern Fried Chicken",
+            "description": "Crispy, golden-brown fried chicken served with a side of creamy mashed potatoes and gravy",
+            "price": 18,
+            "cost_price": 12
+        },
+        "pic_desc": "Golden, crispy fried chicken with a side of creamy mashed potatoes"
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "New York Cheesecake",
+            "description": "Rich and creamy New York style cheesecake served with a tangy berry compote",
+            "price": 8,
+            "cost_price": 5
+        },
+        "pic_desc": "A slice of creamy New York cheesecake with a tangy berry compote"
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Anthony",
+            "salary": 2500
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these inforamtion have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "content": "Experience the deliciousness of Lin's American Diner! Indulge in our Classic Cheeseburger, Southern Fried Chicken, and end on a sweet note with our New York Cheesecake. All dishes are made with locally sourced, premium ingredients. Visit us today and taste the difference!"
+    }
+}
+

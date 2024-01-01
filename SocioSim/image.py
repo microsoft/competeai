@@ -29,7 +29,7 @@ class ImagePool():
             image (Image): The image to be added to the pool.
         """
         self._images.append(image)
-        print(f"[ImagePool]: {image.description}")
+        # print(f"[ImagePool]: {image.description}")
 
     def print(self):
         """
@@ -38,7 +38,7 @@ class ImagePool():
         for image in self._images:
             print(f"[ImagePool]: {image.description}")
     
-    def get_visible_images(self, player_name: str, step_name: str):
+    def get_visible_images(self, restaurant_name: str, step_name: str = None):
         """
         Get all the images that are visible to a given role.
 
@@ -48,7 +48,9 @@ class ImagePool():
         Returns:
             List[Image]: A list of images that are visible to the given role.
         """
-        if player_name == "Customer":
+        if not restaurant_name:
+            return []
+        if restaurant_name == "All":
             return self._images
         else:
-            return [image for image in self._images if (image.owner == player_name and image.description == step_name)]
+            return [image for image in self._images if (image.owner == restaurant_name and image.description == step_name)]
