@@ -4,7 +4,7 @@ Welcome to the Advertisement Management Module. Now your Advertisement as below:
 <<FORMAT>>
 You can perform the following actions:
 
-1. If these inforamtion have not been set, your response must follow the following format:
+1. If these information have not been set, your response must follow the following format:
 {
     "type": "add",
     "data":{

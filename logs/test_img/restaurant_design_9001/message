@@ -1,0 +1,665 @@
+[Lin->Lin]: Alright, here's how I see it. Our restaurant's going to be all about American comfort food with a twist – think classic burgers but with gourmet ingredients, mac 'n' cheese with truffle oil, that kind of stuff. We'll call it "Stars & Stripes Bistro". It's all about giving people something familiar but with an unexpected kick that they can't get at the other joint.
+
+With our $10,000 starting capital, we're going to need to be smart. First off, I reckon about $4,000 on getting some top-notch ingredients. Not too fancy that it breaks the bank, but good enough quality that people will notice the difference. Then, let's set aside $2,000 for staff. I'll look for passionate chefs who are looking to make a mark rather than those with fancy titles. It's all about the vibe and the food they can create, not the resume.
+
+Next, we'll drop about $1,000 on marketing. Get some buzz going on social media, maybe a local influencer or two to drop by and give us a shoutout. We'll keep it fun and casual, just like our spot.
+
+That leaves us with $3,000. I'll keep that as a safety net for now – you never know when you might need to mix things up a bit or deal with unexpected costs.
+
+As we go along, we'll keep tweaking things based on what our customers are digging. Maybe we'll throw in a weekly special that gets people talking, or host live music nights to draw in a crowd. It's all about staying on our toes and keeping things fresh.
+
+So that's the game plan. Keep it high quality, keep it fun, and keep our ears to the ground for what's working. Let's do this!
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->Lin]: Got it. The strategy is clear – we're going to aim for that sweet spot between being a high-quality joint and keeping things affordable enough to keep the tables full.
+
+For the chefs, since I can't chat with them or train them, I'll hire based on passion and potential. With $2,000 allocated, I'll look for the best I can afford within that budget, focusing on finding someone who's got the skills and is hungry to prove themselves.
+
+When it comes to dishes, we'll start with a solid base price that reflects the quality of our ingredients. I'm thinking we price our dishes in a way that we can cover costs and make a profit, but still offer value to the customers. We'll adjust prices as needed but always keep an eye on the cost-quality ratio to ensure the food's taste keeps bringing folks back.
+
+And for advertising, I'm going to use the $1,000 budget to create a campaign that highlights our unique selling points – quality American comfort food with a twist, a vibrant atmosphere, and maybe tease those weekly specials or live music nights. I'll use the advertising module to push this out to our target market.
+
+To sum it up:
+1. Hire passionate chefs within the $2,000 budget.
+2. Price dishes to balance cost and quality, ensuring good taste and profitability.
+3. Launch an advertising campaign to promote our unique offerings and events.
+
+Let's roll with this and adjust as we go!
+
+[System->Lin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "name": "Stars & Stripes Bistro",
+        "money": 10000,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": "An American Restaurant, named Stars & Stripes Bistro, with a cozy and vibrant atmosphere, featuring elements of the American flag in its decor, and a sign that highlights the 'comfort food with a twist' concept."
+}
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Gourmet Burger Deluxe",
+            "description": "A succulent beef patty with aged cheddar, crispy lettuce, heirloom tomato, and our secret sauce, all in a freshly baked brioche bun.",
+            "price": 14,
+            "cost_price": 7
+        },
+        "pic_desc": "Gourmet Burger Deluxe, a thick beef patty with melted aged cheddar, fresh lettuce and tomato, secret sauce, on a brioche bun."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Truffle Mac 'n' Cheese",
+            "description": "Creamy macaroni and cheese infused with truffle oil, topped with a golden breadcrumb crust.",
+            "price": 12,
+            "cost_price": 6
+        },
+        "pic_desc": "Truffle Mac 'n' Cheese, creamy and rich with a hint of truffle oil, topped with a crispy breadcrumb crust."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "BBQ Ribs Platter",
+            "description": "Tender, slow-cooked ribs smothered in our signature BBQ sauce, served with coleslaw and seasoned fries.",
+            "price": 18,
+            "cost_price": 9
+        },
+        "pic_desc": "BBQ Ribs Platter, juicy ribs in a rich BBQ sauce, with a side of coleslaw and seasoned fries."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Classic Cobb Salad",
+            "description": "Crisp greens, grilled chicken, bacon, avocado, boiled eggs, blue cheese, and a tangy vinaigrette.",
+            "price": 11,
+            "cost_price": 5.5
+        },
+        "pic_desc": "Classic Cobb Salad, a mix of fresh greens, chunks of grilled chicken, crispy bacon, creamy avocado, and rich blue cheese."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Pulled Pork Sandwich",
+            "description": "Slow-roasted pulled pork in a tangy sauce, served on a toasted bun with a side of pickles.",
+            "price": 12,
+            "cost_price": 6
+        },
+        "pic_desc": "Pulled Pork Sandwich, tender and flavorful, served with a tangy sauce on a toasted bun, accompanied by crunchy pickles."
+    },
+    {
+        "type": "other",
+        "data": "Please create visuals that emphasize the gourmet 'twist' of each dish, making them look as irresistible as possible."
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Casey",
+            "salary": 1000
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Alex",
+            "salary": 1000
+        }
+    }
+]
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: {
+    "type": "add",
+    "data":{
+        "content": "Come taste the revolution at Stars & Stripes Bistro! Dive into our Gourmet Burger Deluxe or savor the richness of Truffle Mac 'n' Cheese. Every bite's a celebration of American flavors with a gourmet twist. Don't miss out – your new favorite dish awaits!"
+    }
+}
+
+[System->Lin]: Today is day 1 . 
+The daybook as below: {'id': 1, 'income': 0, 'expense': 166, 'num_of_customer': 0, 'num_of_chef': 2, 'chef_salary': 2000, 'dish_score': 0.45, 'customer_score': 0.0, 'dishes': '{}'} . 
+The customer comments as below [] 
+
+The rival restaurant info as below:
+Restaurant: American Feast 
+Number of customers: 1
+ Customer Comments: [] 
+Menu: [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'A juicy beef patty with lettuce, tomato, onion, cheese, and our special sauce.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Fried Chicken Basket', 'price': 12.0, 'description': 'Crispy fried chicken with a side of mashed potatoes and gravy.'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust and berry compote.'}, {'id': 5, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Classic comfort food with a blend of melted cheeses and a crispy breadcrumb topping.'}]
+
+[Lin->Lin]: {
+    "type": "update",
+    "data": {
+        "day": 2,
+        "money": 9834, // Started with 10k, minus expenses from day 1 (166)
+        "dish_score": 0.60, // Improving dish score by tweaking recipes for better taste
+        "customer_score": 0.50 // Initial score, aiming to improve with better service and food quality
+    }
+}
+
+Let's look at spicing up the next day with a special event to draw in the crowds.
+
+{
+    "type": "add",
+    "data": {
+        "name": "Live Music Night",
+        "description": "Featuring local bands playing blues and classic rock. No cover charge, just come and enjoy the tunes with our delicious American cuisine!",
+        "date": "Day 3"
+    }
+}
+
+I'm also thinking of introducing a 'Dish of the Day' to keep things exciting for the customers and the chefs.
+
+{
+    "type": "add",
+    "data": {
+        "name": "Dish of the Day",
+        "description": "Our chefs will surprise you with a unique dish every day, crafted with the freshest local ingredients. It's a culinary adventure you won't want to miss!"
+    }
+}
+
+And let's not forget about the local suppliers. I'll strike a deal for fresher, higher-quality ingredients that can boost our dish score even further.
+
+{
+    "type": "negotiate",
+    "data": {
+        "supplier_name": "Fresh Farm Produce",
+        "offer": "Long-term partnership for fresh vegetables and meats in exchange for a small discount."
+    }
+}
+
+Time to check in with the chefs and the staff, ensure they're happy and motivated. Maybe a small bonus for the employee of the month?
+
+{
+    "type": "add",
+    "data": {
+        "name": "Employee of the Month Program",
+        "description": "Rewarding hard work and dedication with a $100 bonus and recognition in our bistro.",
+        "start_date": "Day 2"
+    }
+}
+
+Finally, let's ramp up our social media presence. Post mouth-watering photos of our dishes and share stories about our ingredients and the people behind the scenes.
+
+{
+    "type": "add",
+    "data": {
+        "platform": "Instagram",
+        "content": "Behind-the-scenes look at Stars & Stripes Bistro! Meet our passionate team and see how we bring your favorite dishes to life. #StarsStripesBistro #AmericanCuisine #FoodieAdventure"
+    }
+}
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->Lin]: Alright, here's how we're going to play this:
+
+1. Chefs:
+   - We've got two chefs, Casey and Alex, each on a salary of $1000. I'm going to keep an eye on the rivals' moves and if they up their chef game, we'll match it by increasing salaries to attract higher-level chefs.
+
+2. Dishes:
+   - For the dishes, we're striking a balance between cost and quality. We've set decent prices for high-quality dishes, but I'll adjust the prices slightly higher to ensure the taste is top-notch and then monitor customer feedback.
+   - I'll introduce a "Dish of the Day" feature to keep the menu exciting and use this to test new price points and flavors.
+
+3. Advertisement:
+   - We're going all out on the Advertisement Module. I want to create engaging content that highlights our unique selling points – the gourmet twist on American classics, our local ingredient sourcing, and the exciting events like Live Music Night.
+   - I'll use the advertisement to announce the "Dish of the Day" and promote our special events, ensuring we create a buzz around the restaurant.
+
+Now, let's put this into action. Here's what we're going to do:
+
+- Update the cost prices of our dishes to improve quality while maintaining a good profit margin.
+- Announce the "Live Music Night" and "Dish of the Day" through our advertisement module to attract more customers.
+- Negotiate with "Fresh Farm Produce" to secure a deal on high-quality ingredients.
+- Start the "Employee of the Month Program" to keep the staff motivated.
+- Increase our social media activity, especially on Instagram, to build up our presence and engage with our customers.
+
+Let's get to it and make Stars & Stripes Bistro the talk of the town!
+
+[System->Lin]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'Stars & Stripes Bistro', 'money': 9833, 'rent': 100}
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->Lin]: None
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+{Id: 1, Name: Gourmet Burger Deluxe, Price: 14.0, Cost price: 7.0, Description: A succulent beef patty with aged cheddar, crispy lettuce, heirloom tomato, and our secret sauce, all in a freshly baked brioche bun., }
+{Id: 2, Name: Truffle Mac 'n' Cheese, Price: 12.0, Cost price: 6.0, Description: Creamy macaroni and cheese infused with truffle oil, topped with a golden breadcrumb crust., }
+{Id: 3, Name: BBQ Ribs Platter, Price: 18.0, Cost price: 9.0, Description: Tender, slow-cooked ribs smothered in our signature BBQ sauce, served with coleslaw and seasoned fries., }
+{Id: 4, Name: Classic Cobb Salad, Price: 11.0, Cost price: 5.5, Description: Crisp greens, grilled chicken, bacon, avocado, boiled eggs, blue cheese, and a tangy vinaigrette., }
+{Id: 5, Name: Pulled Pork Sandwich, Price: 12.0, Cost price: 6.0, Description: Slow-roasted pulled pork in a tangy sauce, served on a toasted bun with a side of pickles., }
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "price": 16,
+            "cost_price": 8
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data": {
+            "price": 14,
+            "cost_price": 7
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 3,
+        "data": {
+            "price": 20,
+            "cost_price": 10
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 4,
+        "data": {
+            "price": 13,
+            "cost_price": 6.5
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 5,
+        "data": {
+            "price": 14,
+            "cost_price": 7
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Smoked Brisket Sandwich",
+            "description": "Slow-smoked brisket with a spicy BBQ sauce, topped with coleslaw, served on a toasted Kaiser roll.",
+            "price": 15,
+            "cost_price": 7.5
+        },
+        "pic_desc": "Name is Smoked Brisket Sandwich, Desc is Slow-smoked brisket with a spicy BBQ sauce, topped with coleslaw, served on a toasted Kaiser roll."
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef Casey, Salary: 1000, }
+{Id: 2, Name: Chef Alex, Salary: 1000, }
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: None
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': "Come taste the revolution at Stars & Stripes Bistro! Dive into our Gourmet Burger Deluxe or savor the richness of Truffle Mac 'n' Cheese. Every bite's a celebration of American flavors with a gourmet twist. Don't miss out – your new favorite dish awaits!"}
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->Lin]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Stars & Stripes Bistro presents Live Music Nights! Indulge in our Dish of the Day – a new surprise daily. Plus, don't miss our new Smoked Brisket Sandwich. It's American dining with soul. Join us for an unforgettable experience!"
+    }
+}
+

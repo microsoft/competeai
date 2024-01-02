@@ -1,0 +1,10 @@
+name,day1
+id,1
+income,22
+expense,183
+num_of_customer,1
+num_of_chef,1
+chef_salary,2500
+dish_score,0.4966666666666667
+customer_score,0.0
+dishes,"{""Classic American Burger"": 1, ""BBQ Ribs"": 1, ""New York Cheesecake"": 1}"

@@ -57,7 +57,7 @@ class Scene(Configurable):
             try:
                 send_data_to_database(output, step_name, NAME2PORT[player_name])
             except Exception as e:
-                print(e)
+                raise Exception(f"Send data to database: {step_name} {NAME2PORT[player_name]} {e}")
         # parse output to json
         try:
             json_output = json.loads(output)
@@ -68,7 +68,7 @@ class Scene(Configurable):
             json_list = [json_output] if isinstance(json_output, dict) else json_output
             # generate image
             for item in json_list:
-                if "pic_desc" in item:
+                if "pic_desc" in item and item["pic_desc"] != "None":
                     desc = item["pic_desc"]
                     # get id
                     if 'id' in item:

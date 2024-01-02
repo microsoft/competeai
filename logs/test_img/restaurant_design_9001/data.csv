@@ -1,0 +1,10 @@
+name,day1
+id,1
+income,0
+expense,166
+num_of_customer,0
+num_of_chef,2
+chef_salary,2000
+dish_score,0.45
+customer_score,0.0
+dishes,{}

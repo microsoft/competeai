@@ -75,7 +75,7 @@ class OpenAIChat(IntelligenceBackend):
         response = response.strip()
         return response
 
-    def query(self, agent_name: str, role_desc: str, history_messages: List[Message], global_prompt: str = None,
+    def query(self, agent_name: str, agent_type: str, role_desc: str, history_messages: List[Message], global_prompt: str = None,
               images: List[Image] = [], request_msg: Message = None, *args, **kwargs) -> str:
         """
         format the input and call the ChatGPT/GPT-4 API
@@ -109,14 +109,14 @@ class OpenAIChat(IntelligenceBackend):
             user_prompt = ""
             for _, msg in enumerate(user_messages):
                 user_prompt += f"[{msg[0]}]: {msg[1]}\n"
-            user_prompt += f"[{agent_name}]: "
+            user_prompt += f"You are a {agent_type} in a virtual world. Now it's your turn!"
             
             user_message = {"role": "user", "content": user_prompt}
             messages.append(user_message)
         
         # Image
         for image in images:
-            image_prompt = [{"type": "text", "text": f"{image.owner}-{image.description}"}]
+            image_prompt = [{"type": "text", "text": f"Attached image: {image.owner}-{image.description}"}]
             image_content = f"data:image/jpeg;base64,{image.content}"
             image_content = {"type": "image_url", "image_url": {"url": image_content}}
             image_prompt.append(image_content)

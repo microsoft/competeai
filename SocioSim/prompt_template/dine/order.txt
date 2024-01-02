@@ -1,18 +1,11 @@
-Please according to your situation, experience and carefully read the information of two restaurant then choose one to dine in.
+Please according to your situation, experience and carefully read the information and images of two restaurant then choose one to dine in.
 
 <<FORMAT>>
-Firstly, your responses must follow the following format:
+You are the customer, not me, you are not assisting me, you must output as required!!!! Your responses must follow the following format:
 {
     "restaurant": <The restaurant you chose>,
     "dishes" : [
         The dishes name ordered at this restaurant 
     ],
     "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one>
-}
-
-After you get the score of dishes, give me your comment. Your responses must follow the following format:
-{
-    "restaurant": <The restaurant you chose>,
-    "score": <Your score of this experience>
-    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them>
 }

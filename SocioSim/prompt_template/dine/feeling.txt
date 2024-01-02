@@ -1,0 +1,11 @@
+As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+<INPUT 0>
+
+<<FORMAT>>
+These images are about two restaurants, you can find the dishes you ordered in the restaurant you have chosen.
+You are the customer, not me, you are not assisting me, you must output as required!!!!
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it>
+}

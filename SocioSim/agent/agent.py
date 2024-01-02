@@ -91,7 +91,7 @@ class Player(Agent):
             str: The action (response) of the player.
         """ 
         try:
-            response = self.backend.query(agent_name=self.name, role_desc=self.role_desc,
+            response = self.backend.query(agent_name=self.name, agent_type=self.agent_type, role_desc=self.role_desc,
                                           history_messages=observation_text, global_prompt=self.global_prompt,
                                           images=observation_vision, request_msg=None)
         except RetryError as e:

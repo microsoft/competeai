@@ -5,6 +5,11 @@
 
 2. Flask is more suitable than Django
 
+group流程：
+1. group 中的关系先被确定，通过prompt输入到对话中
+2. 建立一个新的scene，几人进行讨论，规定终止tag
+3. 根据讨论记录推出一个人进行统一点餐
+
 ## Group
 
 ### Single

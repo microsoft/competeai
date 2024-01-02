@@ -59,6 +59,7 @@ class RestaurantDesign(Scene):
     def action_for_next_scene(cls, data=None):
         ports = set(NAME2PORT.values())
         res = {}
+        image_pool.reset()
         for port in ports:
             data = get_data_from_database("show", port=port)
             menu = data["menu"]
@@ -79,7 +80,8 @@ class RestaurantDesign(Scene):
             img_r = Image(owner=restaurant, content=img_base64_r, description="basic_info")
             image_pool.append_image(img_r)
             
-            image_pool.print()
+        image_pool.print()
+            
         return res
         
     def move_to_next_player(self):

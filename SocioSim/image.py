@@ -35,8 +35,9 @@ class ImagePool():
         """
         Print all the images in the pool.
         """
+        print(f"len: {len(self._images)}")
         for image in self._images:
-            print(f"[ImagePool]: {image.description}")
+            print(f"[ImagePool]: {image.owner}-{image.description}")
     
     def get_visible_images(self, restaurant_name: str, step_name: str = None):
         """
