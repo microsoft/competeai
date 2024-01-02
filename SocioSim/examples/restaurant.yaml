@@ -279,7 +279,7 @@ scenes:
   - name: restaurant_design
     scene_type: restaurant_design
     players:
-      # - Qin
+      - Qin
       - Lin
   - name: dine
     scene_type: dine

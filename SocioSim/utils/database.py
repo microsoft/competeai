@@ -38,8 +38,10 @@ def send_data_to_database(data, endpoint, port, base_url="http://localhost:"):
                 response = requests.put(f"{url}{res['id']}/", json=res["data"])
             elif data_type == "partial_update":
                 response = requests.patch(f"{url}{res['id']}/", json=res["data"])
+            elif data_type == "other":
+                return
             else: 
-                raise Exception(f"error: No this type {data_type}")
+                raise Exception(f"error: No this type - {data_type}")
 
             response.raise_for_status()  # Raises stored HTTPError, if one occurred.
         

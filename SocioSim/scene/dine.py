@@ -18,6 +18,10 @@ class Dine(Scene):
     
     def __init__(self, players: List[Player], id: int, exp_name: str, **kwargs):
         super().__init__(players=players, id=id, type_name=self.type_name, **kwargs)
+        
+        global EXP_NAME
+        EXP_NAME = exp_name
+        
         self.processes = processes
         self.log_path = f"./logs/{exp_name}/{self.type_name}_{id}"
         self.message_pool = MessagePool(log_path=self.log_path)

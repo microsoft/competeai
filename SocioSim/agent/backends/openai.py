@@ -109,6 +109,7 @@ class OpenAIChat(IntelligenceBackend):
             user_prompt = ""
             for _, msg in enumerate(user_messages):
                 user_prompt += f"[{msg[0]}]: {msg[1]}\n"
+            user_prompt += f"[{agent_name}]: "
             
             user_message = {"role": "user", "content": user_prompt}
             messages.append(user_message)

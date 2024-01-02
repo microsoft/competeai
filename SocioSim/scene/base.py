@@ -52,16 +52,22 @@ class Scene(Configurable):
         self.message_pool.append_message(message)
     
     def parse_output(self, output, player_name, step_name, to_db=False):  
+        # Send data to database
+        if to_db and output != 'None':
+            try:
+                send_data_to_database(output, step_name, NAME2PORT[player_name])
+            except Exception as e:
+                print(e)
+        # parse output to json
         try:
             json_output = json.loads(output)
         except:
             json_output = None
-        
-        if isinstance(json_output, dict):
-            json_output = [json_output]
             
         if json_output:
-            for item in json_output:
+            json_list = [json_output] if isinstance(json_output, dict) else json_output
+            # generate image
+            for item in json_list:
                 if "pic_desc" in item:
                     desc = item["pic_desc"]
                     # get id
@@ -73,13 +79,10 @@ class Scene(Configurable):
                         numbers = [int(pattern.match(file).group(1)) for file in files if pattern.match(file)]
                         # if no numbers, set nid to 1
                         nid = max(numbers) + 1 if numbers else 1
-                    
-                        
   
                     filename = f"{step_name}_{nid}"
                     url = generate_image(desc, f'{self.log_path}/{filename}')  # FIXME
-            if to_db:
-                send_data_to_database(json_output, step_name, NAME2PORT[player_name])
+                    
                     
         def shorten_text(text):
             delimiter_idx = text.find(DELIMITER)
