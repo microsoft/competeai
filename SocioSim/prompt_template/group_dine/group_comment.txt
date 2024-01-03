@@ -1,0 +1,16 @@
+As a group of customers, after tasting the dishes, engage in more than one round of discussion about your meal. 
+The score of each dish as below (1 is a excellent score):
+<INPUT 0>
+
+ In the first round, each member should express their individual comments and scores. No format restrictions
+ In the second round, one person(chosen by the group) will summarize the discussion and write the final review in JSON format (Only output this json data, without any other content). 
+{
+    "restaurant": <The restaurant your group chose>,
+    "score": <Summarized score based on the individual scores and comments. Full score is 10, only integer.>,
+    "individual scores": {
+        "Member 1": <Score out of 10>,
+        "Member 2": <Score out of 10>,
+        ... <and so on for each group member>
+    },
+    "comment": <A summarized comment reflecting the group's collective experience, opinions, and suggestions. If your group had dined in another restaurant, comparisons can be included>
+}

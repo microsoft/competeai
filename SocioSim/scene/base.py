@@ -97,7 +97,7 @@ class Scene(Configurable):
             last_message.content = shorten_text(last_message.content)
             
         message = Message(agent_name=player_name, content=output, 
-                            visible_to=player_name, turn=self._curr_turn)
+                            visible_to="all", turn=self._curr_turn)
         self.message_pool.append_message(message)
         
         return json_output

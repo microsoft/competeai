@@ -1,11 +1,13 @@
 from .base import Scene
 from .restaurant_design import RestaurantDesign
 from .dine import Dine
+from .group_dine import GroupDine
 from ..config import SceneConfig
 
 ALL_SCENES = [
     RestaurantDesign,
     Dine,
+    GroupDine,
 ]
 
 SCENE_REGISTRY = {scene.type_name: scene for scene in ALL_SCENES}

@@ -5,9 +5,8 @@
 
 2. Flask is more suitable than Django
 
-group流程：
+TODO:
 1. group 中的关系先被确定，通过prompt输入到对话中
-2. 基于已有的dine, 新增一个子环节，若是多人触发讨论环节。规定终止形式。讨论出餐馆和菜后返回分数，众人进行评论，（TODO）
 
 ## Group
 
