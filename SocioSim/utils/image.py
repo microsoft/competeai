@@ -103,12 +103,12 @@ def combine_images(input_paths, output_path, target_size=(1024, 1024)):
     first_image = Image.open(input_paths[0])
 
     # 缩小图片为512x512
-    resized_images = [Image.open(image_path).resize((512, 512)) for image_path in input_paths]
+    resized_images = [Image.open(image_path).resize((256, 256)) for image_path in input_paths]
 
     # 计算目标图像的长宽
     max_horizontal_images = min(len(input_paths), 4)  # 水平方向最多显示4张图片
-    target_width = 512 * max_horizontal_images
-    target_height = 512 * ((len(input_paths) - 1) // max_horizontal_images + 1)
+    target_width = 256 * max_horizontal_images
+    target_height = 256 * ((len(input_paths) - 1) // max_horizontal_images + 1)
 
     # 创建一个空白的目标图像
     result_image = Image.new("RGB", (target_width, target_height), (255, 255, 255))

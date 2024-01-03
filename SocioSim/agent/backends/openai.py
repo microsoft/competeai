@@ -63,6 +63,7 @@ class OpenAIChat(IntelligenceBackend):
     @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
     def _get_response(self, messages):
         client = OpenAI(api_key=openai_api_key)
+        
         completion = client.chat.completions.create(
             model=self.model,
             messages=messages,
