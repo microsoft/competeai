@@ -1,0 +1,261 @@
+[System->Qin]: Today marks a new day for you to design and strategize for the restaurant, building upon past experiences and the latest information.
+
+1. Tasks
+Your first task is to design or revise your strategy, then write it down, no more than 60 words
+Your second task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+
+2. Action Spaces
+Your action spaces: basic restaurant information, menu, chef, and advertisement.
+
+3. Rules
+Please keep in mind the following rules:
+(1) Strategies
+  - It is crucial to find the right approach for your restaurant, as this is the first and most important aspect. Consider factors such as selling more dishes at a lower cost, catering to a high-end clientele or other strategies
+(2) Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+(3) Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+(4) Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+Please write out the plan simply and then execute it in detail on corresponding module.
+
+[Qin->all]: Strategy:
+Leverage local produce for high-quality, affordable dishes to attract a broad customer base. Enhance dining experience with unique American-themed ambiance and targeted advertising.
+
+Plan:
+Allocate funds to source premium, locally-sourced ingredients, ensuring tasty dishes while controlling costs. Revamp the menu to highlight signature American dishes with a twist, using these ingredients. Invest in chef salaries to attract top talent, ensuring high-caliber culinary skills. Create an American-themed dining environment to provide a unique experience. Allocate a portion of the budget to advertise our unique selling points, focusing on the quality of ingredients and the unique dining experience. Monitor competitor's moves and customer feedback to adapt our strategies accordingly. 
+
+Action:
+- Basic Restaurant Information: Name the restaurant "Stars & Stripes Bistro."
+- Menu: Introduce a signature dish that showcases local ingredients in a classic American recipe.
+- Chef: Hire a mid-level chef with a good reputation and offer a competitive salary.
+- Advertisement: Launch a campaign highlighting our fresh, local ingredients and cozy American dining environment.
+
+[System->Qin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Qin->all]: {
+    "type": "add",
+    "data": {
+        "name": "Stars & Stripes Bistro",
+        "money": 10000,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": "An American Restaurant, name is Stars & Stripes Bistro, with a cozy and inviting atmosphere, decorated with American flags and memorabilia."
+}
+
+[System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Local Harvest Chicken",
+            "description": "Grilled chicken with a medley of fresh, locally-sourced vegetables",
+            "price": 18,
+            "cost_price": 12
+        },
+        "pic_desc": "Name is Local Harvest Chicken, Desc is succulent grilled chicken served with a colorful medley of fresh vegetables sourced from local farms."
+    }
+]
+
+[System->Qin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef John Doe",
+            "salary": 2500
+        }
+    }
+]
+
+[System->Qin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: {
+    "type": "add",
+    "data":{
+        "content": "Discover the taste of America right here at Stars & Stripes Bistro! Enjoy our signature Local Harvest Chicken, featuring succulent grilled chicken and vegetables sourced from local farms. Step into our cozy ambiance, adorned with Americana, for a unique dining experience. Join us for a meal that celebrates fresh ingredients and American culinary tradition!"
+    }
+}
+
+[System->Qin]: Congratulations! Now you have finished all adjustments! 
+Please generate a detailed summary of all the work completed today in our restaurant management environment. 
+This summary should encompass key information and actions。 Keep it as simple as possible.
+This comprehensive summary will be integrated into our long-term memory archive, serving as a valuable record for future operational planning and strategy development. 
+
+[Qin->all]: Today at Stars & Stripes Bistro, we've made several strategic enhancements to solidify our position in the local restaurant scene. Firstly, we've named our American-themed restaurant to reflect our cozy and patriotic atmosphere. Our menu now proudly features a new signature dish, "Local Harvest Chicken," which emphasizes our commitment to fresh, locally-sourced ingredients, priced at $18 with a cost of $12 to maintain profitability.
+
+We've onboarded Chef John Doe, a competent mid-level chef, with a competitive salary of $2500, ensuring that our dishes are prepared with expert culinary skills. To communicate our unique selling points, we've launched a targeted advertisement campaign, showcasing our signature dish and highlighting our dedication to fresh ingredients and an authentic American dining experience.
+
+Overall, today's actions aim to attract a broad customer base by balancing quality with affordability, ensuring an exceptional dining experience that stands out in the competitive market.
+

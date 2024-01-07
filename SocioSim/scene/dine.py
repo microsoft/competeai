@@ -109,6 +109,9 @@ class Dine(Scene):
         self.day += 1
         self._curr_process_idx = 0
         self.terminal_flag = False
+        
+        # delete all messages of system.
+        self.message_pool.remove_role_messages(role="System")
     
     def move_to_next_player(self):
         self._curr_player_idx = 0  # In restaurant design, only one player
@@ -153,7 +156,10 @@ class Dine(Scene):
         # text observation
         observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
         # vision observation, get two restaurant images for showing
-        observation_vision = image_pool.get_visible_images(restaurant_name="All")
+        if curr_process['name'] == 'order':
+            observation_vision = image_pool.get_visible_images(restaurant_name="All")
+        else:
+            observation_vision = []
         
         for i in range(self.invalid_step_retry):
             try:

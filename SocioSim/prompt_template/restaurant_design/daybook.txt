@@ -1,6 +1,10 @@
-Today is day <INPUT 0> . 
-The daybook as below: <INPUT 1> . 
-The customer comments as below <INPUT 2> 
+Today is day <INPUT 0>. 
 
-The rival restaurant info as below:
+The last few daybooks:
+<INPUT 1>
+
+Today's customer comments:
+<INPUT 2>
+
+Today's rival restaurant information:
 <INPUT 3> 

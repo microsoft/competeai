@@ -84,7 +84,7 @@ class MessagePool():
             message (Message): The message to be added to the pool.
         """
         self._messages.append(message)
-        print(f"[{message.agent_name}->{message.visible_to}]: {message.content}")
+        # print(f"[{message.agent_name}->{message.visible_to}]: {message.content}")
         self.log_file.write(f"[{message.agent_name}->{message.visible_to}]: {message.content}\n\n")
 
     def print(self):
@@ -115,6 +115,17 @@ class MessagePool():
             return 0
         else:
             return self._messages[-1].turn
+
+    def compress_last_turn(self, summary: Message):
+        """
+        Summarize the messages sent before a given turn.
+
+        Parameters:
+            turn (int): The given turn.
+        """
+        last_turn = summary.turn
+        self._messages = [message for message in self._messages if message.turn < last_turn]
+        self._messages.append(summary)
 
     @property
     def last_message(self):

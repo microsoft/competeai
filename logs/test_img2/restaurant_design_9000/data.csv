@@ -1,0 +1,10 @@
+name,day1,day2,day3,day4
+id,1,2,3,4
+income,12,14,0,0
+expense,300,330,330,336
+num_of_customer,1,1,0,0
+num_of_chef,3,3,3,3
+chef_salary,6000,6900,6900,7100
+dish_score,0.8295833333333333,0.9235317460317459,0.9399999999999998,0.96
+customer_score,0.0,0.0,0.0,0.0
+dishes,"{""Classic Cheeseburger"": 1, ""Apple Pie a la Mode"": 1}","{""Classic Cheeseburger"": 1, ""Apple Pie a la Mode"": 1}",{},{}

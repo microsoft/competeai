@@ -1,10 +1,10 @@
-name,day1
-id,1
-income,22
-expense,183
-num_of_customer,1
-num_of_chef,1
-chef_salary,2500
-dish_score,0.4966666666666667
-customer_score,0.0
-dishes,"{""Classic American Burger"": 1, ""BBQ Ribs"": 1, ""New York Cheesecake"": 1}"
+name,day1,day2,day3,day4,day5
+id,1,2,3,4,5
+income,0,13,24,0,30
+expense,183,190,200,200,206
+num_of_customer,0,1,1,0,1
+num_of_chef,1,1,1,1,1
+chef_salary,2500,2700,3000,3000,3200
+dish_score,0.5033333333333333,0.53,0.5608235294117648,0.5669172932330827,0.5898412698412699
+customer_score,0.0,0.0,0.0,0.0,0.0
+dishes,{},"{""Classic American Burger"": 1, ""Buffalo Wings"": 1}","{""Classic American Burger"": 1, ""BBQ Ribs Platter"": 1, ""New York Cheesecake"": 1}",{},"{""Classic American Burger"": 1, ""BBQ Ribs Platter"": 1, ""Apple Pie \u00e0 la Mode"": 1, ""Stars and Stripes Mega Milkshake"": 1}"

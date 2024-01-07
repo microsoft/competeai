@@ -102,8 +102,8 @@ class OpenAIChat(IntelligenceBackend):
         # Text
         if len(history_messages) > 0:
             user_messages = []
-            if len(history_messages) > 8:  # context limit
-                history_messages = history_messages[-8:]
+            if len(history_messages) > 12:  # context limit
+                history_messages = history_messages[-12:]
             for msg in history_messages:
                 user_messages.append((msg.agent_name, f"{msg.content}{END_OF_MESSAGE}"))
 
@@ -111,6 +111,9 @@ class OpenAIChat(IntelligenceBackend):
             for _, msg in enumerate(user_messages):
                 user_prompt += f"[{msg[0]}]: {msg[1]}\n"
             user_prompt += f"You are a {agent_type} in a virtual world. Now it's your turn!"
+            
+            print(f"User prompt length: {len(user_prompt)}")
+            # print(f"User prompt: {user_prompt}")
             
             user_message = {"role": "user", "content": user_prompt}
             messages.append(user_message)

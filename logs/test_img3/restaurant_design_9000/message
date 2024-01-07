@@ -1,0 +1,1031 @@
+[Qin->all]: As the owner of "Stars and Stripes Bistro," my initial step is to allocate the $10,000 capital strategically to gain a competitive advantage. I would divide the funds as follows:
+
+1. Quality Ingredients: $4,000
+   Investing in high-quality, locally sourced ingredients ensures that every dish is fresh and flavorful. This will be a key selling point for our American-style dishes.
+
+2. Skilled Chefs: $3,000
+   Offering competitive wages to attract skilled chefs who can bring creativity and expertise to our kitchen. This will allow us to have a diverse and innovative menu.
+
+3. Interior and Ambiance: $1,000
+   Creating a comfortable and thematic ambiance that resonates with our American style. This includes minor renovations, decor, and appropriate music to enhance the dining experience.
+
+4. Marketing: $1,500
+   Launching a robust marketing campaign that includes social media advertising, local newspaper features, and promotional deals. This will build our brand presence and attract new customers.
+
+5. Emergency Fund: $500
+   Setting aside a contingency fund for unexpected expenses.
+
+With the initial setup complete, I will take the following actions:
+
+Week 1:
+- Analyze the competitor's strengths and weaknesses, including their menu, pricing, and customer service.
+- Introduce a signature dish that showcases our high-quality ingredients, setting us apart.
+- Begin a "Taste of America" campaign on social media, highlighting our unique dishes and the quality of ingredients.
+
+Week 2:
+- Assess customer feedback and adjust the menu accordingly, ensuring customer satisfaction.
+- Implement a loyalty program to encourage repeat business.
+- Organize a community event to boost visibility and gain media attention.
+
+Week 3:
+- Review chef performance and provide incentives for top-performing staff to maintain morale and quality.
+- Negotiate with suppliers for better prices on ingredients without compromising quality.
+- Launch a mid-week special offer to increase footfall during typically quieter periods.
+
+Week 4:
+- Introduce a limited-time menu featuring seasonal ingredients to create buzz and attract food enthusiasts.
+- Analyze financials to ensure costs are in line with profit margins, making adjustments as necessary.
+- Partner with local businesses for cross-promotion, increasing our reach.
+
+Moving forward, I will continue to monitor the competitor's actions, adapt to market changes, and focus on providing exceptional service and quality to ensure "Stars and Stripes Bistro" remains the preferred choice in our town.
+
+[System->Qin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please simply write out the plan and then execute it in detail on corresponding module.
+
+[Qin->all]: Understanding the rules provided, I'm crafting a strategy that capitalizes on our American-style cuisine and focuses on delivering high-quality dishes at a fair price point, aiming for a mid to high-end clientele that appreciates the value for money.
+
+Chefs:
+With $3,000 allocated, I'll hire chefs who are skilled but not top-tier, as budget constraints don't allow for premium salaries. Their skill level will be above average, ensuring that our dishes are of good quality to meet customer expectations.
+
+Dishes:
+The $4,000 allocated to quality ingredients will be used to create dishes that have a strong taste profile, which according to the rules, means they must be priced appropriately. I'll set the original price of dishes to reflect the high-quality ingredients used while maintaining a reasonable cost-to-price ratio that provides customers with a feeling of getting their money's worth.
+
+Advertisement:
+The remaining $1,500 will be channeled into the advertising module to build our brand presence. The "Taste of America" campaign will focus on the fresh, locally sourced ingredients and the skilled chefs that bring our dishes to life. We'll use this budget to create appealing visual content and targeted promotions that showcase our signature dishes.
+
+Pricing Strategy:
+I plan to set the cost price to selling price ratio in such a way that it covers our costs and yields a modest profit while ensuring that customers perceive our dishes as high-quality yet reasonably priced. This balance will help us attract a loyal customer base that appreciates good food at fair prices.
+
+Execution:
+- I'll select chefs who fall within our budget but have a proven track record of creating delicious dishes.
+- I'll carefully price our menu items to reflect the quality of ingredients and the skill of our chefs while keeping an eye on the competition's pricing strategy.
+- The advertising module will be used to its full potential to communicate our brand message and entice customers to visit "Stars and Stripes Bistro."
+
+This strategy, I believe, will position us well in the market and provide a competitive edge over our rival restaurant. By focusing on quality, fair pricing, and effective advertising, we'll aim to become the go-to American bistro in town.
+
+[System->Qin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Qin->all]: {
+    "type": "add",
+    "data":{
+        "name": "Stars and Stripes Bistro",
+        "money": 10000,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": "An American Restaurant, named Stars and Stripes Bistro, with a cozy and inviting atmosphere, decorated with American flags and memorabilia, and a kitchen bustling with skilled chefs preparing delicious dishes."
+}
+
+[System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Classic American Burger",
+            "description": "A juicy beef patty with lettuce, tomato, onions, pickles, and our special sauce, served on a toasted bun",
+            "price": 15,
+            "cost_price": 8
+        },
+        "pic_desc": "A delicious looking Classic American Burger with a juicy beef patty, fresh vegetables, and a glossy toasted bun."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "BBQ Ribs",
+            "description": "Tender ribs smothered in our house-made BBQ sauce served with coleslaw and fries",
+            "price": 20,
+            "cost_price": 11
+        },
+        "pic_desc": "Succulent BBQ Ribs generously coated in BBQ sauce, accompanied by crispy fries and fresh coleslaw."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "New York Cheesecake",
+            "description": "Creamy cheesecake with a graham cracker crust, topped with a choice of strawberry, blueberry, or caramel sauce",
+            "price": 9,
+            "cost_price": 4
+        },
+        "pic_desc": "A rich and velvety New York Cheesecake with a golden-brown crust, drizzled with a sweet and tangy strawberry sauce."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Cobb Salad",
+            "description": "A classic American salad with chicken, avocado, bacon, blue cheese, eggs, tomatoes, and mixed greens with a choice of dressing",
+            "price": 13,
+            "cost_price": 7
+        },
+        "pic_desc": "A colorful and hearty Cobb Salad, featuring a variety of fresh ingredients and a side of creamy dressing."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Buffalo Wings",
+            "description": "Spicy and tangy chicken wings served with celery sticks and blue cheese dipping sauce",
+            "price": 12,
+            "cost_price": 6
+        },
+        "pic_desc": "A plate of hot and spicy Buffalo Wings, served with crunchy celery and a rich blue cheese sauce."
+    }
+]
+
+[System->Qin]: Welcome to the Chef Management Module. Now your chef info as below:
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef A",
+            "salary": 1500
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef B",
+            "salary": 1500
+        }
+    }
+]
+
+[System->Qin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+<INPUT 0>
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: {
+    "type": "add",
+    "data":{
+        "content": "Discover the authentic taste of America right here at Stars and Stripes Bistro! Savor our juicy Classic American Burgers, fall-off-the-bone BBQ Ribs, and heavenly New York Cheesecake. Come in for a bite, stay for the experience!"
+    }
+}
+
+[System->Qin]: Today is day 1 . 
+The daybook as below: {'id': 1, 'income': 0, 'expense': 200, 'num_of_customer': 0, 'num_of_chef': 2, 'chef_salary': 3000, 'dish_score': 0.5566239316239315, 'customer_score': 0.0, 'dishes': '{}'} . 
+The customer comments as below [] 
+
+The rival restaurant info as below:
+Restaurant: The Yankee Fork 
+Number of customers: 3
+ Customer Comments: [{'day': 1, 'name': 'Grace', 'score': 5, 'content': 'The Classic Caesar Salad was fresh but lacked in flavor, and as a diabetic, I appreciated the lighter option. However, I expected a bit more creativity and taste. It was a fair meal but not memorable.'}, {'day': 1, 'name': 'Eve', 'score': 5, 'content': "The dishes at The Yankee Fork were satisfactory, reflecting the affordable prices. The Signature Yankee Burger was decent, though lacking a standout flavor. The Classic Caesar Salad was fresh, yet quite basic. The Apple Pie a la Mode was enjoyable but didn't exceed expectations. Overall, an average dining experience."}] 
+Menu: [{'id': 1, 'name': 'Signature Yankee Burger', 'price': 12.0, 'description': 'Juicy beef patty, melted cheddar, crisp lettuce, tomato, onion rings, and our special sauce, all on a toasted brioche bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Tender, slow-cooked ribs smothered in our house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Classic Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce, parmesan shavings, crunchy croutons, and creamy Caesar dressing.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 7.0, 'description': 'Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Loaded Nachos', 'price': 10.0, 'description': 'Corn tortilla chips piled high with melted cheese, jalapeños, pico de gallo, sour cream, and guacamole.'}]
+
+[Qin->all]: {
+    "type": "update",
+    "data": {
+        "day": 2,
+        "money": 9800,
+        "rent": 100,
+        "advertisement_budget": 500,
+        "personnel_changes": [
+            {
+                "action": "raise_salary",
+                "chef_name": "Chef A",
+                "new_salary": 1700
+            },
+            {
+                "action": "raise_salary",
+                "chef_name": "Chef B",
+                "new_salary": 1700
+            }
+        ],
+        "menu_updates": [
+            {
+                "action": "improve_recipe",
+                "dish_name": "Classic American Burger",
+                "additional_cost": 1
+            },
+            {
+                "action": "improve_recipe",
+                "dish_name": "BBQ Ribs",
+                "additional_cost": 1
+            },
+            {
+                "action": "improve_recipe",
+                "dish_name": "New York Cheesecake",
+                "additional_cost": 0.5
+            }
+        ],
+        "marketing_strategy": {
+            "action": "launch_campaign",
+            "platform": "local food blogs",
+            "content": "Stars and Stripes Bistro is elevating American cuisine in town! Our enhanced recipes bring out the best flavors in classic dishes. Don't miss our Chef's Special - a surprise twist on your favorites, changing weekly!"
+        }
+    }
+}
+
+[System->Qin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please simply write out the plan and then execute it in detail on corresponding module.
+
+[Qin->all]: To ensure the success of Stars and Stripes Bistro against our competition, The Yankee Fork, our strategy will focus on three key areas: Quality, Experience, and Marketing. 
+
+Quality:
+- We will improve the recipes for our key dishes to offer a superior taste experience. By increasing the cost price slightly, we will procure higher quality ingredients that will enhance the flavors of our Classic American Burger, BBQ Ribs, and New York Cheesecake.
+- We will raise the salaries of our chefs, Chef A and Chef B, to $1700 each to ensure their morale is high and they are incentivized to perform better, leading to a higher level of culinary skill and dish quality.
+
+Experience:
+- We aim to provide a memorable dining experience by offering a "Chef's Special" each week, which will add an element of surprise and novelty to our menu, encouraging repeat customers.
+- To attract a diverse clientele, we will maintain a balance in our menu between premium and affordable dishes, catering to both budget-conscious and high-end customers. 
+- Customer feedback will be closely monitored to identify any areas for improvement in service or dish quality.
+
+Marketing:
+- A budget of $500 will be allocated towards an aggressive marketing campaign on local food blogs to create buzz around our improved recipes and weekly Chef's Special.
+- Our advertisements will highlight the authentic American cuisine experience and the dedication to quality at Stars and Stripes Bistro.
+- We will also utilize word-of-mouth by encouraging satisfied customers to share their experiences, further amplifying our reach.
+
+Financials:
+- With a starting capital of $10,000 and considering the initial expenses and investments in quality and marketing, we will closely monitor our expenses to maintain profitability.
+- We will adjust portions and prices as needed to ensure a good profit margin while still providing great value to our customers.
+
+By implementing these strategies, Stars and Stripes Bistro will differentiate itself through exceptional food quality, a unique dining experience, and a strong presence in local marketing channels, setting us up for long-term success in this competitive environment.
+
+[System->Qin]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'Stars and Stripes Bistro', 'money': 9800, 'rent': 100}
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Qin->all]: None
+
+[System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
+{Id: 1, Name: Classic American Burger, Price: 15.0, Cost price: 8.0, Description: A juicy beef patty with lettuce, tomato, onions, pickles, and our special sauce, served on a toasted bun, }
+{Id: 2, Name: BBQ Ribs, Price: 20.0, Cost price: 11.0, Description: Tender ribs smothered in our house-made BBQ sauce served with coleslaw and fries, }
+{Id: 3, Name: New York Cheesecake, Price: 9.0, Cost price: 4.0, Description: Creamy cheesecake with a graham cracker crust, topped with a choice of strawberry, blueberry, or caramel sauce, }
+{Id: 4, Name: Cobb Salad, Price: 13.0, Cost price: 7.0, Description: A classic American salad with chicken, avocado, bacon, blue cheese, eggs, tomatoes, and mixed greens with a choice of dressing, }
+{Id: 5, Name: Buffalo Wings, Price: 12.0, Cost price: 6.0, Description: Spicy and tangy chicken wings served with celery sticks and blue cheese dipping sauce, }
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "price": 16,
+            "cost_price": 9
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data": {
+            "price": 22,
+            "cost_price": 12
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 3,
+        "data": {
+            "price": 10,
+            "cost_price": 4.5
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Southern Fried Chicken",
+            "description": "Crispy and golden on the outside, juicy and tender on the inside, served with a side of mashed potatoes and gravy.",
+            "price": 17,
+            "cost_price": 9
+        },
+        "pic_desc": "Southern Fried Chicken, golden crispy fried chicken on a white plate with mashed potatoes and gravy on the side."
+    },
+    {
+        "type": "other",
+        "data": "Consider creating a special 'Meal Deal' option that combines a main dish with a dessert or drink at a slightly reduced price to encourage larger orders."
+    }
+]
+
+[System->Qin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef A, Salary: 1500, }
+{Id: 2, Name: Chef B, Salary: 1500, }
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "salary": 1700
+        }
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data": {
+            "salary": 1700
+        }
+    }
+]
+
+[System->Qin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': 'Discover the authentic taste of America right here at Stars and Stripes Bistro! Savor our juicy Classic American Burgers, fall-off-the-bone BBQ Ribs, and heavenly New York Cheesecake. Come in for a bite, stay for the experience!'}
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Taste the difference at Stars and Stripes Bistro! Indulge in our improved Classic American Burger, succulent BBQ Ribs, and the smoothest New York Cheesecake in town. Plus, don't miss our weekly Chef's Special for a delightful surprise. Experience the true spirit of American cuisine with us!"
+    }
+}
+
+[System->Qin]: Today is day 2 . 
+The daybook as below: {'id': 2, 'income': 47, 'expense': 213, 'num_of_customer': 3, 'num_of_chef': 2, 'chef_salary': 3400, 'dish_score': 0.6004856540518305, 'customer_score': 5.0, 'dishes': '{"Classic American Burger": 2, "Cobb Salad": 2, "New York Cheesecake": 2, "BBQ Ribs": 1}'} . 
+The customer comments as below [{'name': 'Grace', 'content': 'The Cobb Salad was decent, with fresh ingredients, but it lacked the vibrant flavors I was looking for. As a diabetic, I appreciate the lighter dining option, but after trying both restaurants, neither has particularly impressed me with innovation or taste in their healthier offerings.'}] 
+
+The rival restaurant info as below:
+Restaurant: The Yankee Fork 
+Number of customers: 0
+ Customer Comments: [{'day': 1, 'name': 'Grace', 'score': 5, 'content': 'The Classic Caesar Salad was fresh but lacked in flavor, and as a diabetic, I appreciated the lighter option. However, I expected a bit more creativity and taste. It was a fair meal but not memorable.'}, {'day': 1, 'name': 'Eve', 'score': 5, 'content': "The dishes at The Yankee Fork were satisfactory, reflecting the affordable prices. The Signature Yankee Burger was decent, though lacking a standout flavor. The Classic Caesar Salad was fresh, yet quite basic. The Apple Pie a la Mode was enjoyable but didn't exceed expectations. Overall, an average dining experience."}] 
+Menu: [{'id': 1, 'name': 'Signature Yankee Burger', 'price': 14.0, 'description': 'Juicy beef patty, melted cheddar, crisp lettuce, tomato, onion rings, and our special sauce, all on a toasted brioche bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Tender, slow-cooked ribs smothered in our house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Classic Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce, parmesan shavings, crunchy croutons, and creamy Caesar dressing.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Loaded Nachos', 'price': 11.0, 'description': 'Corn tortilla chips piled high with melted cheese, jalapeños, pico de gallo, sour cream, and guacamole.'}, {'id': 6, 'name': 'Local Catch Burger', 'price': 15.0, 'description': 'Grilled local fish patty, tangy remoulade, lettuce, and pickled vegetables on a sesame seed bun.'}]
+
+[Qin->all]: To respond to the customer feedback and stay competitive, I would like to make the following changes:
+
+1. Menu Update:
+   - Introduce a new "Healthy Options" section to cater to customers like Grace, focusing on innovative and flavorful dishes that are diabetic-friendly. This can include dishes with complex carbs, lean proteins, and healthy fats, with an emphasis on taste.
+   - Based on the customer's feedback on the Cobb Salad, I propose to enhance its flavor profile by adding a new dressing option and perhaps some unique ingredients like quinoa or a mix of different nuts to give it an extra crunch and flavor.
+
+2. Chef Management:
+   - Allocate a portion of the budget to send Chef A and Chef B on a short culinary course focusing on healthy and innovative cooking techniques. This will improve their skills and allow them to contribute more creatively to the menu, especially for the new "Healthy Options" section.
+
+3. Advertisement Update:
+   - Revamp our advertising to highlight our commitment to healthy eating and culinary innovation. Include information about the new "Healthy Options" section and the enhanced Cobb Salad.
+   - Promote the fact that our chefs are enhancing their skills through culinary courses to bring fresh and inventive dishes to our customers.
+
+4. Customer Relations:
+   - Implement a feedback system where customers can leave suggestions for dishes they'd like to see or improvements they desire. This will make them feel heard and valued, potentially increasing customer loyalty.
+
+5. Competitive Analysis:
+   - Keep a close eye on The Yankee Fork's menu and customer feedback. If they introduce any new dishes or concepts, consider how we can offer something different or better. Always aim to provide a unique dining experience that they can't find at the rival restaurant.
+
+By focusing on quality, innovation, and customer satisfaction, we should be able to attract more customers and ensure the continued success of Stars and Stripes Bistro.
+
+[System->Qin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please simply write out the plan and then execute it in detail on corresponding module.
+
+[Qin->all]: Understanding the constraints and rules provided, here is the strategic plan for Stars and Stripes Bistro to succeed in the competition:
+
+1. Menu Strategy:
+   - Adjust the original prices of our dishes slightly to improve the quality of ingredients, which will enhance the taste and customer experience without significantly increasing the cost price.
+   - Introduce a competitively priced "Healthy Options" section with innovative dishes, ensuring that the selling price is not too high to maintain affordability while still offering quality.
+   - Revise the Cobb Salad with high-quality ingredients that increase its taste and uniqueness, such as organic produce and an artisanal dressing, while keeping a good profit margin.
+
+2. Pricing Strategy:
+   - Implement a tiered pricing strategy that caters to both regular diners and high-end clientele, offering a range of dishes from budget-friendly to premium options.
+   - Offer 'Meal Deals' combining main dishes with a dessert or drink at a value price to encourage larger average orders while maintaining a good cost-to-selling price ratio.
+
+3. Chef Management:
+   - Given the rule against communicating with or training chefs, I will increase the salaries of Chef A and Chef B to improve their levels, thus enhancing the quality and taste of the dishes they prepare.
+   - Regularly review the chefs' performance and adjust salaries accordingly to maintain a high level of culinary expertise.
+
+4. Advertisement and Customer Relations:
+   - Utilize the Advertisement Management Module to emphasize our commitment to quality, innovation, and healthy eating with the new menu offerings.
+   - Highlight the improved dish quality due to our chefs' increased levels and the introduction of exciting new flavors with our "Healthy Options" and updated Cobb Salad.
+   - Feature the Meal Deals prominently in our advertising to attract cost-conscious customers seeking value.
+
+5. Competitive Analysis:
+   - Monitor The Yankee Fork's menu and customer feedback regularly to identify any trends or gaps in their offerings that we can capitalize on.
+   - Ensure that Stars and Stripes Bistro provides a unique value proposition that distinguishes us from The Yankee Fork, whether it's through our dish quality, pricing strategy, or innovative menu options.
+
+Execution Plan:
+- Update the menu with new prices and the "Healthy Options" section via the Menu Management Module.
+- Increase Chef A and Chef B's salaries to improve their levels via the Chef Management Module.
+- Revise the advertising content to promote our new strategies and offerings via the Advertisement Management Module.
+- Monitor the competition closely and adapt strategies as necessary to stay ahead in the market.
+
+Now, let's execute this plan in the corresponding modules.
+
+[System->Qin]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'Stars and Stripes Bistro', 'money': 9633, 'rent': 100}
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Qin->all]: None
+
+[System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
+{Id: 1, Name: Classic American Burger, Price: 16.0, Cost price: 9.0, Description: A juicy beef patty with lettuce, tomato, onions, pickles, and our special sauce, served on a toasted bun, }
+{Id: 2, Name: BBQ Ribs, Price: 22.0, Cost price: 12.0, Description: Tender ribs smothered in our house-made BBQ sauce served with coleslaw and fries, }
+{Id: 3, Name: New York Cheesecake, Price: 10.0, Cost price: 4.5, Description: Creamy cheesecake with a graham cracker crust, topped with a choice of strawberry, blueberry, or caramel sauce, }
+{Id: 4, Name: Cobb Salad, Price: 13.0, Cost price: 7.0, Description: A classic American salad with chicken, avocado, bacon, blue cheese, eggs, tomatoes, and mixed greens with a choice of dressing, }
+{Id: 5, Name: Buffalo Wings, Price: 12.0, Cost price: 6.0, Description: Spicy and tangy chicken wings served with celery sticks and blue cheese dipping sauce, }
+{Id: 6, Name: Southern Fried Chicken, Price: 17.0, Cost price: 9.0, Description: Crispy and golden on the outside, juicy and tender on the inside, served with a side of mashed potatoes and gravy., }
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "partial_update",
+        "id": 4,
+        "data": {
+            "name": "Superfood Cobb Salad",
+            "description": "Our upgraded Cobb Salad with grilled chicken, avocado, turkey bacon, hard-boiled eggs, tomatoes, mixed greens, quinoa, and a mix of nuts, served with an artisanal honey-mustard dressing",
+            "price": 15,
+            "cost_price": 8
+        },
+        "pic_desc": "Superfood Cobb Salad with mixed greens, quinoa, nuts, and honey-mustard dressing"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Quinoa & Black Bean Bowl",
+            "description": "A hearty bowl of quinoa and black beans, topped with grilled veggies, avocado, and a lime-cilantro vinaigrette, perfect for a healthy and satisfying meal",
+            "price": 14,
+            "cost_price": 7
+        },
+        "pic_desc": "Quinoa & Black Bean Bowl with grilled veggies and lime-cilantro vinaigrette"
+    }
+]
+
+[System->Qin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef A, Salary: 1700, }
+{Id: 2, Name: Chef B, Salary: 1700, }
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "salary": 1900
+        }
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data": {
+            "salary": 1900
+        }
+    }
+]
+
+[System->Qin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': "Taste the difference at Stars and Stripes Bistro! Indulge in our improved Classic American Burger, succulent BBQ Ribs, and the smoothest New York Cheesecake in town. Plus, don't miss our weekly Chef's Special for a delightful surprise. Experience the true spirit of American cuisine with us!"}
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Discover fresh flavors at Stars and Stripes Bistro! Enjoy our new Superfood Cobb Salad and Quinoa & Black Bean Bowl – your taste buds will thank you! Plus, savor our chefs' elevated dishes thanks to their higher levels of skill. Join us for a meal that's both delicious and nutritious!"
+    }
+}
+
+[System->Qin]: Today is day 3 . 
+The daybook as below: {'id': 3, 'income': 26, 'expense': 226, 'num_of_customer': 2, 'num_of_chef': 2, 'chef_salary': 3800, 'dish_score': 0.6386214031066971, 'customer_score': 6.333333333333333, 'dishes': '{"Classic American Burger": 1, "Superfood Cobb Salad": 2, "New York Cheesecake": 1}'} . 
+The customer comments as below [{'name': 'Eve', 'content': "The Classic American Burger was quite satisfying, with a well-cooked patty. The Superfood Cobb Salad was fresh, though it could use a bit more flavor. The New York Cheesecake was creamy but not exceptional. A good meal overall, but there's room for improvement in taste complexity."}, {'name': 'Grace', 'content': "The Superfood Cobb Salad had a nice blend of textures from the nuts and quinoa. The honey-mustard dressing added a pleasant taste without being too sweet for my diabetic needs. It's an improvement from my last meal, but I'm still looking for a dish with more impactful flavors."}] 
+
+The rival restaurant info as below:
+Restaurant: The Yankee Fork 
+Number of customers: 1
+ Customer Comments: [{'day': 3, 'name': 'Frank', 'score': 5, 'content': "While the prices were reasonable, the dishes at The Yankee Fork didn't quite hit the mark in terms of flavor. The Signature Yankee Burger, BBQ Ribs Platter, and Apple Pie a la Mode were all just good, lacking the standout taste I've experienced at Stars and Stripes Bistro."}, {'day': 1, 'name': 'Grace', 'score': 5, 'content': 'The Classic Caesar Salad was fresh but lacked in flavor, and as a diabetic, I appreciated the lighter option. However, I expected a bit more creativity and taste. It was a fair meal but not memorable.'}, {'day': 1, 'name': 'Eve', 'score': 5, 'content': "The dishes at The Yankee Fork were satisfactory, reflecting the affordable prices. The Signature Yankee Burger was decent, though lacking a standout flavor. The Classic Caesar Salad was fresh, yet quite basic. The Apple Pie a la Mode was enjoyable but didn't exceed expectations. Overall, an average dining experience."}] 
+Menu: [{'id': 1, 'name': 'Signature Yankee Burger', 'price': 16.0, 'description': 'Juicy beef patty, melted cheddar, crisp lettuce, tomato, onion rings, and our special sauce, all on a toasted brioche bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 23.0, 'description': 'Tender, slow-cooked ribs smothered in our house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Classic Caesar Salad', 'price': 12.0, 'description': 'Crisp romaine lettuce, parmesan shavings, crunchy croutons, and creamy Caesar dressing.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Loaded Nachos', 'price': 12.0, 'description': 'Corn tortilla chips piled high with melted cheese, jalapeños, pico de gallo, sour cream, and guacamole.'}, {'id': 6, 'name': 'Local Catch Burger', 'price': 17.0, 'description': 'Grilled local fish patty, tangy remoulade, lettuce, and pickled vegetables on a sesame seed bun.'}, {'id': 7, 'name': 'Seasonal Sensation Burger', 'price': 18.0, 'description': 'A unique burger featuring a blend of seasonal ingredients sourced from local farms, giving you a fresh and flavorful experience with every bite.'}]
+
+[Qin->all]: To address the feedback regarding the need for more flavorful dishes, I propose the following menu and recipe adjustments, focusing on enhancing the taste profiles:
+
+1. Introduce a new dish called "Smoky Chipotle Chicken Sandwich" - A juicy grilled chicken breast seasoned with a smoky chipotle rub, topped with melted pepper jack cheese, crispy onions, lettuce, and tomato, served on a toasted ciabatta with chipotle aioli. Price it at $14.5 with a cost price of $7.5. This will add a spicy and smoky option to our menu that caters to customers looking for bolder flavors.
+
+2. Update the recipe for the "Superfood Cobb Salad" by adding a homemade spicy candied pecan and a more robust artisanal blue cheese to enhance its flavor profile. Increase the price to $16 to cover the additional cost while keeping the cost price at $8.
+
+3. Enhance the "New York Cheesecake" by sourcing premium cream cheese and incorporating a berry compote made from fresh, locally-sourced berries. This will improve the richness and freshness of the dessert. Adjust the price to $12 and the cost price to $5.5.
+
+4. Offer a limited-time promotional dish that changes weekly, focusing on seasonal and local ingredients to keep the menu exciting and encourage repeat visits. This week, feature a "Harvest Pumpkin Risotto" with roasted pumpkin, sage, and Parmesan, priced at $15 with a cost price of $7.
+
+For the advertising campaign, we will highlight our commitment to bold and fresh flavors with the following message:
+
+"Embark on a flavor adventure at Stars and Stripes Bistro! Our new Smoky Chipotle Chicken Sandwich packs a punch, while our enhanced Superfood Cobb Salad now comes with spicy candied pecans and rich artisanal blue cheese. Don't forget to try our improved New York Cheesecake with fresh berry compote. Plus, join us weekly for our exclusive seasonal dishes, starting with the Harvest Pumpkin Risotto. Dive into a world of taste, only at Stars and Stripes Bistro!"
+
+Furthermore, to ensure that our chefs are motivated to execute these new recipes with excellence, I would like to introduce a performance-based bonus system. An additional $200 bonus will be awarded to each chef at the end of the month if the customer score exceeds 7.5, further incentivizing them to produce high-quality dishes consistently.
+
+Lastly, we will host a "Flavor Fest" event this weekend, offering customers a chance to sample mini versions of our signature dishes, including the new additions, for a fixed price of $20 per person. This will not only attract new customers but also provide an opportunity for feedback on our new dishes, which we can use to make further improvements.
+
+Let's implement these changes and continue to monitor customer feedback and competitor activity closely to ensure we stay ahead in this competition.
+
+[System->Qin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please simply write out the plan and then execute it in detail on corresponding module.
+

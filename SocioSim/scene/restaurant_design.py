@@ -12,12 +12,12 @@ import os
 EXP_NAME = None
  
 processes = [
-    {"name": "daybook", "from_db": False, "to_db": False},
-    {"name": "rule", "from_db": False, "to_db": False},
+    {"name": "plan", "from_db": False, "to_db": False},
     {"name": "basic_info", "from_db": True, "to_db": True},
     {"name": "menu", "from_db": True, "to_db": True},
     {"name": "chef", "from_db": True, "to_db": True},
     {"name": "ads", "from_db": True, "to_db": True},
+    {"name": "summary", "from_db": False, "to_db": False},
 ]
 
 
@@ -52,7 +52,14 @@ class RestaurantDesign(Scene):
         restaurant_name = basic_info[0]["name"]
         NAME2PORT[restaurant_name] = self.port
         PORT2NAME[self.port] = restaurant_name
+        
+        # remove action details of this day from message_pool
+        summary = self.message_pool.last_message
+        self.message_pool.compress_last_turn(summary)
+        print(f"Summary: {summary.content}")
+        self.message_pool.print()
         self.day += 1
+        self._curr_turn += 1
         self._curr_process_idx = 0
     
     @classmethod
@@ -93,31 +100,42 @@ class RestaurantDesign(Scene):
     def prepare_for_next_step(self):
         self.move_to_next_player()
         self.move_to_next_process()
-        self._curr_turn += 1
     
     def step(self, input=None):
         curr_process = self.get_curr_process()
         curr_player = self.get_curr_player()
         
-        if curr_process['name'] == 'daybook' and self.day == 0:
-            pass
-        elif curr_process['name'] == 'daybook' and self.day != 0:
-            daybook = get_data_from_database("daybook", port=self.port)
-            daybook = daybook[self.day-1]
-            rival_info = daybook["rival_info"]
-            daybook = {k: v for k, v in daybook.items() if k != "rival_info"}
+        # special case for daybook
+        if curr_process['name'] == 'daybook' and self.day != 0:
+            daybooks = get_data_from_database("daybook", port=self.port)
+            rival_info = daybooks[self.day-1]["rival_info"]
+            
+            # show last five days of daybook
+            if len(daybooks) > 5:
+                daybooks = daybooks[-5:]
+            daybook_list = []
+            for i, daybook in enumerate(daybooks):
+                day = self.day - len(daybooks) + i + 1
+                daybook = {k: v for k, v in daybook.items() if k != "rival_info"}
+                daybook["day"] = day
+                daybook_list.append(daybook)
+                
             comment = get_data_from_database("last_comment", port=self.port)
-            data = [self.day, daybook, comment, rival_info] 
+            
+            data = [self.day, daybook_list, comment, rival_info] 
+            
             self.add_new_prompt(player_name=curr_player.name, 
                                 scene_name=self.type_name, 
-                                step_name=curr_process['name'], 
+                                step_name='daybook', 
                                 data=data)
             log_table(f'{self.log_path}/data', daybook, f"day{self.day}") # log
-        else:
-            self.add_new_prompt(player_name=curr_player.name, 
-                                scene_name=self.type_name, 
-                                step_name=curr_process['name'], 
-                                from_db=curr_process['from_db'])
+
+        # prompt for every step
+        self.add_new_prompt(player_name=curr_player.name, 
+                            scene_name=self.type_name, 
+                            step_name=curr_process['name'], 
+                            from_db=curr_process['from_db'])
+        
         # text observation
         observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
         # vision observation

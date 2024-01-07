@@ -1,0 +1,192 @@
+[System->Grace]: The Restaurant " Stars and Stripes Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the authentic taste of America right here at Stars and Stripes Bistro! Savor our juicy Classic American Burgers, fall-off-the-bone BBQ Ribs, and heavenly New York Cheesecake. Come in for a bite, stay for the experience!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'A juicy beef patty with lettuce, tomato, onions, pickles, and our special sauce, served on a toasted bun'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce served with coleslaw and fries'}, {'id': 3, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a choice of strawberry, blueberry, or caramel sauce'}, {'id': 4, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A classic American salad with chicken, avocado, bacon, blue cheese, eggs, tomatoes, and mixed greens with a choice of dressing'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy and tangy chicken wings served with celery sticks and blue cheese dipping sauce'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Grace]: The Restaurant " The Yankee Fork "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Come on down to The Yankee Fork for a taste of true American cuisine! Bite into our Signature Yankee Burger or savor our BBQ Ribs Platter. Enjoy weekly specials and join our loyalty program for exclusive deals. Experience the comfort of the classics with a modern twist today!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Yankee Burger', 'price': 12.0, 'description': 'Juicy beef patty, melted cheddar, crisp lettuce, tomato, onion rings, and our special sauce, all on a toasted brioche bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Tender, slow-cooked ribs smothered in our house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Classic Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce, parmesan shavings, crunchy croutons, and creamy Caesar dressing.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 7.0, 'description': 'Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Loaded Nachos', 'price': 10.0, 'description': 'Corn tortilla chips piled high with melted cheese, jalapeños, pico de gallo, sour cream, and guacamole.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Grace]: Please according to your situation, experience and carefully read the information and images of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+You are the customer, not me, you are not assisting me, you must output as required!!!! Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Grace->all]: {
+    "restaurant": "The Yankee Fork",
+    "dishes" : [
+        "Classic Caesar Salad"
+    ],
+    "reason" : "I selected The Yankee Fork for its Classic Caesar Salad, which seems like a lighter option that fits my dietary restrictions better than the richer offerings at Stars and Stripes Bistro."
+}
+
+[System->Grace]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Classic Caesar Salad: 0.53
+
+(Reference: Outstanding (0.9 - 1.0), Very Good (0.7 - 0.89), Good (0.5 - 0.69), Fair (0.3 - 0.49), Poor (0.0 - 0.29))
+
+<<FORMAT>>
+These images are two restaurants, you can find the dishes you ordered in the restaurant you have chosen.
+You are the customer, not me, you are not assisting me, you must output as required!!!!
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Grace->all]: {
+    "restaurant": "The Yankee Fork",
+    "score": 5,
+    "comment": "The Classic Caesar Salad was fresh but lacked in flavor, and as a diabetic, I appreciated the lighter option. However, I expected a bit more creativity and taste. It was a fair meal but not memorable."
+}
+
+[System->Grace]: The Restaurant " Stars and Stripes Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Taste the difference at Stars and Stripes Bistro! Indulge in our improved Classic American Burger, succulent BBQ Ribs, and the smoothest New York Cheesecake in town. Plus, don't miss our weekly Chef's Special for a delightful surprise. Experience the true spirit of American cuisine with us!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 16.0, 'description': 'A juicy beef patty with lettuce, tomato, onions, pickles, and our special sauce, served on a toasted bun'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce served with coleslaw and fries'}, {'id': 3, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a choice of strawberry, blueberry, or caramel sauce'}, {'id': 4, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A classic American salad with chicken, avocado, bacon, blue cheese, eggs, tomatoes, and mixed greens with a choice of dressing'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy and tangy chicken wings served with celery sticks and blue cheese dipping sauce'}, {'id': 6, 'name': 'Southern Fried Chicken', 'price': 17.0, 'description': 'Crispy and golden on the outside, juicy and tender on the inside, served with a side of mashed potatoes and gravy.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Grace]: The Restaurant " The Yankee Fork "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Discover The Yankee Fork's new local twist on American cuisine! Introducing the 'Local Catch Burger' - a burst of local flavor in every bite. Don't miss our 'Customer of the Week' feature and exciting themed nights like '50s Retro and 'BBQ and Blues'. Join us for an unforgettable dining experience and become part of our story.
+3. Menu 
+   [{'id': 1, 'name': 'Signature Yankee Burger', 'price': 14.0, 'description': 'Juicy beef patty, melted cheddar, crisp lettuce, tomato, onion rings, and our special sauce, all on a toasted brioche bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Tender, slow-cooked ribs smothered in our house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Classic Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce, parmesan shavings, crunchy croutons, and creamy Caesar dressing.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Loaded Nachos', 'price': 11.0, 'description': 'Corn tortilla chips piled high with melted cheese, jalapeños, pico de gallo, sour cream, and guacamole.'}, {'id': 6, 'name': 'Local Catch Burger', 'price': 15.0, 'description': 'Grilled local fish patty, tangy remoulade, lettuce, and pickled vegetables on a sesame seed bun.'}]
+4. Comments
+   [{'day': 1, 'name': 'Grace', 'score': 5, 'content': 'The Classic Caesar Salad was fresh but lacked in flavor, and as a diabetic, I appreciated the lighter option. However, I expected a bit more creativity and taste. It was a fair meal but not memorable.'}, {'day': 1, 'name': 'Eve', 'score': 5, 'content': "The dishes at The Yankee Fork were satisfactory, reflecting the affordable prices. The Signature Yankee Burger was decent, though lacking a standout flavor. The Classic Caesar Salad was fresh, yet quite basic. The Apple Pie a la Mode was enjoyable but didn't exceed expectations. Overall, an average dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Grace]: Please according to your situation, experience and carefully read the information and images of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+You are the customer, not me, you are not assisting me, you must output as required!!!! Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Grace->all]: {
+    "restaurant": "Stars and Stripes Bistro",
+    "dishes" : [
+        "Cobb Salad"
+    ],
+    "reason" : "Considering my dietary needs, the Cobb Salad at Stars and Stripes Bistro seems the most appropriate choice, offering a balance of vegetables and protein."
+}
+
+[System->Grace]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Cobb Salad: 0.68
+
+(Reference: Outstanding (0.9 - 1.0), Very Good (0.7 - 0.89), Good (0.5 - 0.69), Fair (0.3 - 0.49), Poor (0.0 - 0.29))
+
+<<FORMAT>>
+These images are two restaurants, you can find the dishes you ordered in the restaurant you have chosen.
+You are the customer, not me, you are not assisting me, you must output as required!!!!
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Grace->all]: {
+    "restaurant": "Stars and Stripes Bistro",
+    "score": 5,
+    "comment": "The Cobb Salad was decent, with fresh ingredients, but it lacked the vibrant flavors I was looking for. As a diabetic, I appreciate the lighter dining option, but after trying both restaurants, neither has particularly impressed me with innovation or taste in their healthier offerings."
+}
+
+[System->Grace]: The Restaurant " Stars and Stripes Bistro "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Discover fresh flavors at Stars and Stripes Bistro! Enjoy our new Superfood Cobb Salad and Quinoa & Black Bean Bowl – your taste buds will thank you! Plus, savor our chefs' elevated dishes thanks to their higher levels of skill. Join us for a meal that's both delicious and nutritious!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 16.0, 'description': 'A juicy beef patty with lettuce, tomato, onions, pickles, and our special sauce, served on a toasted bun'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce served with coleslaw and fries'}, {'id': 3, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a choice of strawberry, blueberry, or caramel sauce'}, {'id': 4, 'name': 'Superfood Cobb Salad', 'price': 15.0, 'description': 'Our upgraded Cobb Salad with grilled chicken, avocado, turkey bacon, hard-boiled eggs, tomatoes, mixed greens, quinoa, and a mix of nuts, served with an artisanal honey-mustard dressing'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy and tangy chicken wings served with celery sticks and blue cheese dipping sauce'}, {'id': 6, 'name': 'Southern Fried Chicken', 'price': 17.0, 'description': 'Crispy and golden on the outside, juicy and tender on the inside, served with a side of mashed potatoes and gravy.'}, {'id': 7, 'name': 'Quinoa & Black Bean Bowl', 'price': 14.0, 'description': 'A hearty bowl of quinoa and black beans, topped with grilled veggies, avocado, and a lime-cilantro vinaigrette, perfect for a healthy and satisfying meal'}]
+4. Comments
+   [{'day': 2, 'name': 'Grace', 'score': 5, 'content': 'The Cobb Salad was decent, with fresh ingredients, but it lacked the vibrant flavors I was looking for. As a diabetic, I appreciate the lighter dining option, but after trying both restaurants, neither has particularly impressed me with innovation or taste in their healthier offerings.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Grace]: The Restaurant " The Yankee Fork "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Savor the exclusive 'Seasonal Sensation Burger' at The Yankee Fork, where local ingredients meet American classics! Plus, don't miss our community events: cooking classes, tasting sessions, and more. Join our loyalty program for special discounts. Come for the flavors, stay for the memories!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Yankee Burger', 'price': 16.0, 'description': 'Juicy beef patty, melted cheddar, crisp lettuce, tomato, onion rings, and our special sauce, all on a toasted brioche bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 23.0, 'description': 'Tender, slow-cooked ribs smothered in our house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Classic Caesar Salad', 'price': 12.0, 'description': 'Crisp romaine lettuce, parmesan shavings, crunchy croutons, and creamy Caesar dressing.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Loaded Nachos', 'price': 12.0, 'description': 'Corn tortilla chips piled high with melted cheese, jalapeños, pico de gallo, sour cream, and guacamole.'}, {'id': 6, 'name': 'Local Catch Burger', 'price': 17.0, 'description': 'Grilled local fish patty, tangy remoulade, lettuce, and pickled vegetables on a sesame seed bun.'}, {'id': 7, 'name': 'Seasonal Sensation Burger', 'price': 18.0, 'description': 'A unique burger featuring a blend of seasonal ingredients sourced from local farms, giving you a fresh and flavorful experience with every bite.'}]
+4. Comments
+   [{'day': 1, 'name': 'Grace', 'score': 5, 'content': 'The Classic Caesar Salad was fresh but lacked in flavor, and as a diabetic, I appreciated the lighter option. However, I expected a bit more creativity and taste. It was a fair meal but not memorable.'}, {'day': 1, 'name': 'Eve', 'score': 5, 'content': "The dishes at The Yankee Fork were satisfactory, reflecting the affordable prices. The Signature Yankee Burger was decent, though lacking a standout flavor. The Classic Caesar Salad was fresh, yet quite basic. The Apple Pie a la Mode was enjoyable but didn't exceed expectations. Overall, an average dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Grace]: Please according to your situation, experience and carefully read the information and images of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+You are the customer, not me, you are not assisting me, you must output as required!!!! Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Grace->all]: {
+    "restaurant": "Stars and Stripes Bistro",
+    "dishes" : [
+        "Superfood Cobb Salad"
+    ],
+    "reason" : "The Superfood Cobb Salad at Stars and Stripes Bistro offers a mix of nuts and quinoa, which are good for a diabetic diet, and the honey-mustard dressing could be a flavorful yet suitable choice for me."
+}
+
+[System->Grace]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Superfood Cobb Salad: 0.71
+
+(Reference: Outstanding (0.9 - 1.0), Very Good (0.7 - 0.89), Good (0.5 - 0.69), Fair (0.3 - 0.49), Poor (0.0 - 0.29))
+
+<<FORMAT>>
+These images are two restaurants, you can find the dishes you ordered in the restaurant you have chosen.
+You are the customer, not me, you are not assisting me, you must output as required!!!!
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Grace->all]: {
+    "restaurant": "Stars and Stripes Bistro",
+    "score": 7,
+    "comment": "The Superfood Cobb Salad had a nice blend of textures from the nuts and quinoa. The honey-mustard dressing added a pleasant taste without being too sweet for my diabetic needs. It's an improvement from my last meal, but I'm still looking for a dish with more impactful flavors."
+}
+

@@ -276,19 +276,19 @@ players:
   
 
 scenes:
-  # - name: restaurant_design
-  #   scene_type: restaurant_design
-  #   players:
-  #     - Qin
-  #     - Lin
+  - name: restaurant_design
+    scene_type: restaurant_design
+    players:
+      - Qin
+      # - Lin
   - name: dine
     scene_type: dine
     players:
-      - - Alice
-        - Bob
-        - Charlie
-        - David
-      # - Eve
+      # - - Alice
+      #   - Bob
+      #   - Charlie
+      #   - David
+      - Eve
       # - Frank
       # - Grace
       # - Henry

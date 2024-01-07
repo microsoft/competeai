@@ -46,7 +46,7 @@ class Simulation:
         """
         Main function, run the simulation
         """
-        previous_scene_data = test_data
+        previous_scene_data = None
         while True:  # TODO
             data = self.step(previous_scene_data)
             previous_scene_data = data

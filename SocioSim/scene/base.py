@@ -1,7 +1,7 @@
 from typing import List
 
 from ..config import Configurable
-from ..message import Message, MessagePool
+from ..message import Message
 from ..agent import Player
 from ..globals import NAME2PORT, DELIMITER
 from ..utils import PromptTemplate, generate_image, \

@@ -5,11 +5,9 @@ start_servers() {
   echo "Starting first database server"
   # Change directory to the location of your database/restaurant_sys
   cd ./database/restaurant_sys
-  # Start the first server with settings v1
   python manage.py runserver 9000 --noreload --settings=restaurant_sys.settings.v1 &
 
   echo "Starting second database server"
-  # Start the second server on port 8083 with settings v2
   python manage.py runserver 9001 --noreload --settings=restaurant_sys.settings.v2 &
 }
 
@@ -47,6 +45,13 @@ migrate_database() {
   python manage.py migrate --settings=restaurant_sys.settings.v2
 }
 
+restart_database(){
+  echo "Restarting database"
+  stop_servers
+  flush_database
+  start_servers
+}
+
 # Check the argument provided to the script
 if [ "$1" == "start" ]; then
   start_servers
@@ -58,6 +63,8 @@ elif [ "$1" == "makemigrations" ]; then
   makemigrations_database
 elif [ "$1" == "migrate" ]; then
   migrate_database
+elif [ "$1" == "restart" ]; then
+  restart_database
 else
   echo "Usage: $0 [start|stop]"
   exit 1

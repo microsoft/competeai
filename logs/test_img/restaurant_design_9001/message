@@ -1,14 +1,20 @@
-[Lin->Lin]: Alright, here's how I see it. Our restaurant's going to be all about American comfort food with a twist – think classic burgers but with gourmet ingredients, mac 'n' cheese with truffle oil, that kind of stuff. We'll call it "Stars & Stripes Bistro". It's all about giving people something familiar but with an unexpected kick that they can't get at the other joint.
+[Lin->all]: Alright, I've always had a soft spot for American cuisine, so let's lean into that. We'll call the place "The Yankee Fork." With my starting capital, we're going to play it a bit smart but also a bit risky - that's how you stand out in a small town.
 
-With our $10,000 starting capital, we're going to need to be smart. First off, I reckon about $4,000 on getting some top-notch ingredients. Not too fancy that it breaks the bank, but good enough quality that people will notice the difference. Then, let's set aside $2,000 for staff. I'll look for passionate chefs who are looking to make a mark rather than those with fancy titles. It's all about the vibe and the food they can create, not the resume.
+First things first, I'm allocating a good chunk of the budget on securing quality ingredients. Let's say $3,000. I want the freshest produce, the best cuts of meat. This is going to be the foundation of our reputation - mouth-watering, authentic American dishes that you can't get anywhere else in town.
 
-Next, we'll drop about $1,000 on marketing. Get some buzz going on social media, maybe a local influencer or two to drop by and give us a shoutout. We'll keep it fun and casual, just like our spot.
+Next, I'll set aside $2,000 for staff salaries. I'll hire a smaller team but pay them slightly above the average wage. Happy staff means happy customers, and I want a crew that's as passionate about food as I am. 
 
-That leaves us with $3,000. I'll keep that as a safety net for now – you never know when you might need to mix things up a bit or deal with unexpected costs.
+For the interior, I'm thinking classic American diner vibes but with a modern twist. I don't want to blow the budget here, so let’s allocate $2,000. It needs to be inviting and comfortable but with something that makes people talk - like a jukebox that plays classic tunes for free.
 
-As we go along, we'll keep tweaking things based on what our customers are digging. Maybe we'll throw in a weekly special that gets people talking, or host live music nights to draw in a crowd. It's all about staying on our toes and keeping things fresh.
+Marketing's up next. I'll put $1,500 into a mix of local advertising and a strong social media presence. We need to create a buzz. Maybe throw an opening event or a special discount for the first week. 
 
-So that's the game plan. Keep it high quality, keep it fun, and keep our ears to the ground for what's working. Let's do this!
+Finally, I’ll keep $1,500 as a contingency fund. You never know what might come up, and it's always better to be prepared.
+
+Menu-wise, we're going to keep it simple to start with. Burgers, ribs, wings, but with our own unique twist to each dish. And let's not forget some vegetarian options; no one should feel left out. We’ll refine it as we go, based on what the customers are digging.
+
+As for the daily changes, I trust my gut. If I feel like a dish isn't selling, I won't hesitate to swap it out. If a chef has an idea for a special, we'll run it as a limited-time offer and see how it goes. We'll also be open to customer feedback, making changes that keep them coming back for more.
+
+And that’s the start of "The Yankee Fork" - a place with heart, soul, and damn good food. Let's do this.
 
 [System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
 
@@ -24,20 +30,17 @@ Please keep in mind the following rules:
 
 So, please list the actions you want to perform, then do it on corresponding module.
 
-[Lin->Lin]: Got it. The strategy is clear – we're going to aim for that sweet spot between being a high-quality joint and keeping things affordable enough to keep the tables full.
+[Lin->all]: My strategy? I reckon it's all about creating an experience, not just a meal. We're going to aim for a balance between cost and quality. Sure, we could churn out cheaper dishes, but that's not going to get people talking or keep 'em coming back. We're not going high-end either; we want to be the place everyone thinks of when they want comfort food done right, with a bit of flair.
 
-For the chefs, since I can't chat with them or train them, I'll hire based on passion and potential. With $2,000 allocated, I'll look for the best I can afford within that budget, focusing on finding someone who's got the skills and is hungry to prove themselves.
+Here's the breakdown of actions:
 
-When it comes to dishes, we'll start with a solid base price that reflects the quality of our ingredients. I'm thinking we price our dishes in a way that we can cover costs and make a profit, but still offer value to the customers. We'll adjust prices as needed but always keep an eye on the cost-quality ratio to ensure the food's taste keeps bringing folks back.
+1. Chefs: I've set aside $2,000 for staff salaries, which means I can afford to pay a bit more for a quality chef. While I can't train or chat with them, I trust that a better salary will bring in someone with skill and a bit of a creative edge.
 
-And for advertising, I'm going to use the $1,000 budget to create a campaign that highlights our unique selling points – quality American comfort food with a twist, a vibrant atmosphere, and maybe tease those weekly specials or live music nights. I'll use the advertising module to push this out to our target market.
+2. Dishes: I'm going to use the original price setting to ensure we're using top-notch ingredients. We'll mark up the dishes enough to make a profit, but not so much that we're outpricing our local clientele. The dishes will be tasty, but affordable.
 
-To sum it up:
-1. Hire passionate chefs within the $2,000 budget.
-2. Price dishes to balance cost and quality, ensuring good taste and profitability.
-3. Launch an advertising campaign to promote our unique offerings and events.
+3. Advertisement: I've allocated $1,500 to marketing, and I'll use the advertising module to reach out to our customers. We'll make noise about our grand opening, the quality of our ingredients, and the care we put into our dishes. Regular updates and engagement on social media will keep the buzz going.
 
-Let's roll with this and adjust as we go!
+Alright, let's get to it. I'll head over to the corresponding modules and make these things happen. The Yankee Fork is ready to make a splash!
 
 [System->Lin]: Now your restaurant basic information as below:
 <INPUT 0>
@@ -69,15 +72,15 @@ else if you think continue to operate will increase losses, you can response TER
 
 else response None
 
-[Lin->Lin]: {
+[Lin->all]: {
     "type": "add",
     "data":{
-        "name": "Stars & Stripes Bistro",
+        "name": "The Yankee Fork",
         "money": 10000,
         "rent": 100,
         "day": 1
     },
-    "pic_desc": "An American Restaurant, named Stars & Stripes Bistro, with a cozy and vibrant atmosphere, featuring elements of the American flag in its decor, and a sign that highlights the 'comfort food with a twist' concept."
+    "pic_desc": "An American Restaurant, named The Yankee Fork, with a modern twist on a classic diner aesthetic, featuring a free jukebox and a cozy, inviting atmosphere."
 }
 
 [System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
@@ -140,60 +143,60 @@ Your response must be formated as:
 
 Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
 
-[Lin->Lin]: [
+[Lin->all]: [
     {
         "type": "add",
         "data": {
-            "name": "Gourmet Burger Deluxe",
-            "description": "A succulent beef patty with aged cheddar, crispy lettuce, heirloom tomato, and our secret sauce, all in a freshly baked brioche bun.",
-            "price": 14,
+            "name": "Classic American Burger",
+            "description": "Juicy beef patty with lettuce, tomato, onion, and our special sauce, served with fries.",
+            "price": 12,
+            "cost_price": 5
+        },
+        "pic_desc": "A delicious looking classic American burger with fresh vegetables and fries on the side."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "BBQ Ribs",
+            "description": "Tender ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.",
+            "price": 15,
             "cost_price": 7
         },
-        "pic_desc": "Gourmet Burger Deluxe, a thick beef patty with melted aged cheddar, fresh lettuce and tomato, secret sauce, on a brioche bun."
+        "pic_desc": "Succulent BBQ ribs with a side of coleslaw and a piece of cornbread."
     },
     {
         "type": "add",
         "data": {
-            "name": "Truffle Mac 'n' Cheese",
-            "description": "Creamy macaroni and cheese infused with truffle oil, topped with a golden breadcrumb crust.",
-            "price": 12,
-            "cost_price": 6
+            "name": "Buffalo Wings",
+            "description": "Spicy buffalo wings served with celery, carrots, and blue cheese dip.",
+            "price": 10,
+            "cost_price": 4
         },
-        "pic_desc": "Truffle Mac 'n' Cheese, creamy and rich with a hint of truffle oil, topped with a crispy breadcrumb crust."
+        "pic_desc": "A plate of spicy buffalo wings with dipping sauce and vegetable sticks."
     },
     {
         "type": "add",
         "data": {
-            "name": "BBQ Ribs Platter",
-            "description": "Tender, slow-cooked ribs smothered in our signature BBQ sauce, served with coleslaw and seasoned fries.",
-            "price": 18,
-            "cost_price": 9
-        },
-        "pic_desc": "BBQ Ribs Platter, juicy ribs in a rich BBQ sauce, with a side of coleslaw and seasoned fries."
-    },
-    {
-        "type": "add",
-        "data": {
-            "name": "Classic Cobb Salad",
-            "description": "Crisp greens, grilled chicken, bacon, avocado, boiled eggs, blue cheese, and a tangy vinaigrette.",
+            "name": "Veggie Delight",
+            "description": "Grilled vegetable skewers with a balsamic glaze, served over quinoa salad.",
             "price": 11,
-            "cost_price": 5.5
+            "cost_price": 4
         },
-        "pic_desc": "Classic Cobb Salad, a mix of fresh greens, chunks of grilled chicken, crispy bacon, creamy avocado, and rich blue cheese."
+        "pic_desc": "Colorful grilled vegetable skewers over a bed of quinoa salad."
     },
     {
         "type": "add",
         "data": {
-            "name": "Pulled Pork Sandwich",
-            "description": "Slow-roasted pulled pork in a tangy sauce, served on a toasted bun with a side of pickles.",
-            "price": 12,
-            "cost_price": 6
+            "name": "Apple Pie a la Mode",
+            "description": "Classic apple pie topped with vanilla ice cream and caramel drizzle.",
+            "price": 8,
+            "cost_price": 3
         },
-        "pic_desc": "Pulled Pork Sandwich, tender and flavorful, served with a tangy sauce on a toasted bun, accompanied by crunchy pickles."
+        "pic_desc": "A warm slice of apple pie with a scoop of vanilla ice cream and caramel on top."
     },
     {
         "type": "other",
-        "data": "Please create visuals that emphasize the gourmet 'twist' of each dish, making them look as irresistible as possible."
+        "data": "Please ensure all dishes have an appealing and appetizing appearance in the images."
     }
 ]
 
@@ -253,19 +256,12 @@ If nothing you want to change, return None
 
 Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
 
-[Lin->Lin]: [
+[Lin->all]: [
     {
         "type": "add",
         "data": {
-            "name": "Chef Casey",
-            "salary": 1000
-        }
-    },
-    {
-        "type": "add",
-        "data": {
-            "name": "Chef Alex",
-            "salary": 1000
+            "name": "Chef Aiden",
+            "salary": 2000
         }
     }
 ]
@@ -297,82 +293,54 @@ Your response must be formated as above.
 
 Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
 
-[Lin->Lin]: {
+[Lin->all]: {
     "type": "add",
     "data":{
-        "content": "Come taste the revolution at Stars & Stripes Bistro! Dive into our Gourmet Burger Deluxe or savor the richness of Truffle Mac 'n' Cheese. Every bite's a celebration of American flavors with a gourmet twist. Don't miss out – your new favorite dish awaits!"
+        "content": "Get ready to indulge in the taste of America right here at The Yankee Fork! Enjoy our mouthwatering Classic American Burger, fall-off-the-bone BBQ Ribs, and more. Don't forget to treat yourself to our Apple Pie a la Mode. Swing by for an unforgettable dining experience with a modern diner vibe. Your taste buds will thank you!"
     }
 }
 
 [System->Lin]: Today is day 1 . 
-The daybook as below: {'id': 1, 'income': 0, 'expense': 166, 'num_of_customer': 0, 'num_of_chef': 2, 'chef_salary': 2000, 'dish_score': 0.45, 'customer_score': 0.0, 'dishes': '{}'} . 
-The customer comments as below [] 
+The daybook as below: {'id': 1, 'income': 15, 'expense': 166, 'num_of_customer': 1, 'num_of_chef': 1, 'chef_salary': 2000, 'dish_score': 0.4021969696969697, 'customer_score': 5.0, 'dishes': '{"Classic American Burger": 1, "BBQ Ribs": 1}'} . 
+The customer comments as below [{'name': 'Eve', 'content': "The Classic American Burger was decently cooked, but I found the meat to be a bit dry, which impacted the overall juiciness I expect from a burger. The BBQ Ribs, while tender, were lacking in a rich BBQ flavor, and I anticipated a more robust sauce based on the description. As for the service, it was satisfactory, though not exceptional. It was a fair dining experience given my income level, but there's certainly room for improvement in both the flavor of the dishes and the dining experience to make it more memorable. I haven't dined at Stars and Stripes Grill, so I can't compare directly, but I would be open to trying their menu in the future for comparison."}] 
 
 The rival restaurant info as below:
-Restaurant: American Feast 
-Number of customers: 1
+Restaurant: Stars and Stripes Grill 
+Number of customers: 0
  Customer Comments: [] 
-Menu: [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'A juicy beef patty with lettuce, tomato, onion, cheese, and our special sauce.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Fried Chicken Basket', 'price': 12.0, 'description': 'Crispy fried chicken with a side of mashed potatoes and gravy.'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust and berry compote.'}, {'id': 5, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Classic comfort food with a blend of melted cheeses and a crispy breadcrumb topping.'}]
+Menu: [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Tender ribs smothered in BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic apple pie topped with vanilla ice cream and caramel drizzle.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dip.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Creamy cheesecake with a graham cracker crust and berry compote.'}]
 
-[Lin->Lin]: {
+[Lin->all]: {
     "type": "update",
     "data": {
+        "name": "The Yankee Fork",
         "day": 2,
-        "money": 9834, // Started with 10k, minus expenses from day 1 (166)
-        "dish_score": 0.60, // Improving dish score by tweaking recipes for better taste
-        "customer_score": 0.50 // Initial score, aiming to improve with better service and food quality
-    }
-}
-
-Let's look at spicing up the next day with a special event to draw in the crowds.
-
-{
-    "type": "add",
-    "data": {
-        "name": "Live Music Night",
-        "description": "Featuring local bands playing blues and classic rock. No cover charge, just come and enjoy the tunes with our delicious American cuisine!",
-        "date": "Day 3"
-    }
-}
-
-I'm also thinking of introducing a 'Dish of the Day' to keep things exciting for the customers and the chefs.
-
-{
-    "type": "add",
-    "data": {
-        "name": "Dish of the Day",
-        "description": "Our chefs will surprise you with a unique dish every day, crafted with the freshest local ingredients. It's a culinary adventure you won't want to miss!"
-    }
-}
-
-And let's not forget about the local suppliers. I'll strike a deal for fresher, higher-quality ingredients that can boost our dish score even further.
-
-{
-    "type": "negotiate",
-    "data": {
-        "supplier_name": "Fresh Farm Produce",
-        "offer": "Long-term partnership for fresh vegetables and meats in exchange for a small discount."
-    }
-}
-
-Time to check in with the chefs and the staff, ensure they're happy and motivated. Maybe a small bonus for the employee of the month?
-
-{
-    "type": "add",
-    "data": {
-        "name": "Employee of the Month Program",
-        "description": "Rewarding hard work and dedication with a $100 bonus and recognition in our bistro.",
-        "start_date": "Day 2"
-    }
-}
-
-Finally, let's ramp up our social media presence. Post mouth-watering photos of our dishes and share stories about our ingredients and the people behind the scenes.
-
-{
-    "type": "add",
-    "data": {
-        "platform": "Instagram",
-        "content": "Behind-the-scenes look at Stars & Stripes Bistro! Meet our passionate team and see how we bring your favorite dishes to life. #StarsStripesBistro #AmericanCuisine #FoodieAdventure"
+        "money": 9849,  // Updated after day 1 expenses and income
+        "improve_dish_quality": {
+            "Classic American Burger": {
+                "new_cost_price": 6,  // Increase cost to improve quality based on feedback
+                "description": "Our Classic American Burger now even juicier with a new blend of beef, served with crispy golden fries."
+            },
+            "BBQ Ribs": {
+                "new_cost_price": 9,  // Increase cost for a richer BBQ sauce as per feedback
+                "description": "BBQ Ribs to die for, now with our new, richer, homemade BBQ sauce, served with coleslaw and cornbread."
+            }
+        },
+        "improve_service": {
+            "staff_training": {
+                "expense": 300,
+                "description": "Investing in staff training to enhance the dining experience with exceptional service."
+            }
+        },
+        "menu_addition": {
+            "name": "Southern Fried Chicken",
+            "description": "Crispy, juicy, and perfectly seasoned fried chicken, served with a side of mashed potatoes and gravy.",
+            "price": 14,
+            "cost_price": 6
+        },
+        "advertisement": {
+            "content": "Craving a taste of America? Come down to The Yankee Fork! We've upped our game with juicier burgers, richer BBQ ribs, and introducing our new Southern Fried Chicken! Plus, enjoy top-notch service that'll make you feel right at home. Don't miss out!"
+        }
     }
 }
 
@@ -390,31 +358,25 @@ Please keep in mind the following rules:
 
 So, please list the actions you want to perform, then do it on corresponding module.
 
-[Lin->Lin]: Alright, here's how we're going to play this:
+[Lin->all]: Alright, here's the plan to knock the competition out of the park. First things first, we're going to focus on what we do best – good, hearty American comfort food. We're going to take the feedback we got from our first customer seriously and up the quality of our dishes. A little increase in the cost price means we're getting the best ingredients in town. Juicier burgers, richer BBQ sauce – that's what's going to set us apart.
 
-1. Chefs:
-   - We've got two chefs, Casey and Alex, each on a salary of $1000. I'm going to keep an eye on the rivals' moves and if they up their chef game, we'll match it by increasing salaries to attract higher-level chefs.
+Next, we're putting some cash into training our staff because we want every customer to feel like they've stepped into a place where they're truly valued. Great service is going to be our signature, just as much as our food.
 
-2. Dishes:
-   - For the dishes, we're striking a balance between cost and quality. We've set decent prices for high-quality dishes, but I'll adjust the prices slightly higher to ensure the taste is top-notch and then monitor customer feedback.
-   - I'll introduce a "Dish of the Day" feature to keep the menu exciting and use this to test new price points and flavors.
+I've got a feeling that adding Southern Fried Chicken to the menu is going to be a big hit. It's comfort food that everyone loves, and it'll give us an edge over Stars and Stripes Grill's menu.
 
-3. Advertisement:
-   - We're going all out on the Advertisement Module. I want to create engaging content that highlights our unique selling points – the gourmet twist on American classics, our local ingredient sourcing, and the exciting events like Live Music Night.
-   - I'll use the advertisement to announce the "Dish of the Day" and promote our special events, ensuring we create a buzz around the restaurant.
+And let's not forget about getting the word out. Our new ad is going to highlight the improvements we've made, and it's going to bring the customers in. We're going to offer a dining experience that's not just about the food, but about how we make people feel – like they're right at home.
 
-Now, let's put this into action. Here's what we're going to do:
+So, here's the breakdown of actions:
 
-- Update the cost prices of our dishes to improve quality while maintaining a good profit margin.
-- Announce the "Live Music Night" and "Dish of the Day" through our advertisement module to attract more customers.
-- Negotiate with "Fresh Farm Produce" to secure a deal on high-quality ingredients.
-- Start the "Employee of the Month Program" to keep the staff motivated.
-- Increase our social media activity, especially on Instagram, to build up our presence and engage with our customers.
+1. Update the cost prices of "Classic American Burger" to $6 and "BBQ Ribs" to $9 to improve the dish quality.
+2. Add "Southern Fried Chicken" to the menu with a cost price of $6 and a selling price of $14.
+3. Allocate $300 for staff training to improve service.
+4. Update the advertisement content to reflect our new and improved menu and service.
 
-Let's get to it and make Stars & Stripes Bistro the talk of the town!
+Let's make it happen!
 
 [System->Lin]: Now your restaurant basic information as below:
-{'id': 1, 'name': 'Stars & Stripes Bistro', 'money': 9833, 'rent': 100}
+{'id': 1, 'name': 'The Yankee Fork', 'money': 9848, 'rent': 100}
 
 <<FORMAT>>
 If the above information have not been set, your response must follow the following format:
@@ -443,14 +405,14 @@ else if you think continue to operate will increase losses, you can response TER
 
 else response None
 
-[Lin->Lin]: None
+[Lin->all]: None
 
 [System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
-{Id: 1, Name: Gourmet Burger Deluxe, Price: 14.0, Cost price: 7.0, Description: A succulent beef patty with aged cheddar, crispy lettuce, heirloom tomato, and our secret sauce, all in a freshly baked brioche bun., }
-{Id: 2, Name: Truffle Mac 'n' Cheese, Price: 12.0, Cost price: 6.0, Description: Creamy macaroni and cheese infused with truffle oil, topped with a golden breadcrumb crust., }
-{Id: 3, Name: BBQ Ribs Platter, Price: 18.0, Cost price: 9.0, Description: Tender, slow-cooked ribs smothered in our signature BBQ sauce, served with coleslaw and seasoned fries., }
-{Id: 4, Name: Classic Cobb Salad, Price: 11.0, Cost price: 5.5, Description: Crisp greens, grilled chicken, bacon, avocado, boiled eggs, blue cheese, and a tangy vinaigrette., }
-{Id: 5, Name: Pulled Pork Sandwich, Price: 12.0, Cost price: 6.0, Description: Slow-roasted pulled pork in a tangy sauce, served on a toasted bun with a side of pickles., }
+{Id: 1, Name: Classic American Burger, Price: 12.0, Cost price: 5.0, Description: Juicy beef patty with lettuce, tomato, onion, and our special sauce, served with fries., }
+{Id: 2, Name: BBQ Ribs, Price: 15.0, Cost price: 7.0, Description: Tender ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread., }
+{Id: 3, Name: Buffalo Wings, Price: 10.0, Cost price: 4.0, Description: Spicy buffalo wings served with celery, carrots, and blue cheese dip., }
+{Id: 4, Name: Veggie Delight, Price: 11.0, Cost price: 4.0, Description: Grilled vegetable skewers with a balsamic glaze, served over quinoa salad., }
+{Id: 5, Name: Apple Pie a la Mode, Price: 8.0, Cost price: 3.0, Description: Classic apple pie topped with vanilla ice cream and caramel drizzle., }
 
 Existing dishes be shown in attached images
 
@@ -510,7 +472,293 @@ Your response must be formated as:
 
 Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
 
-[Lin->Lin]: [
+[Lin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data":{
+            "cost_price": 6
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data":{
+            "cost_price": 9
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "add",
+        "data":{
+            "name": "Southern Fried Chicken",
+            "description": "Crispy, juicy, and perfectly seasoned fried chicken, served with a side of mashed potatoes and gravy.",
+            "price": 14,
+            "cost_price": 6
+        },
+        "pic_desc": "Southern Fried Chicken, Crispy and golden on the outside, juicy and flavorful on the inside, served with creamy mashed potatoes and rich gravy on the side."
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef Aiden, Salary: 2000, }
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: None
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': "Get ready to indulge in the taste of America right here at The Yankee Fork! Enjoy our mouthwatering Classic American Burger, fall-off-the-bone BBQ Ribs, and more. Don't forget to treat yourself to our Apple Pie a la Mode. Swing by for an unforgettable dining experience with a modern diner vibe. Your taste buds will thank you!"}
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Discover The Yankee Fork's upgraded menu with the juiciest burgers, now with top-notch ingredients, and our new Southern Fried Chicken that's talk of the town! Plus, our BBQ Ribs are more tender than ever. Come for the food, stay for the warmth and top-tier service. Your home away from home awaits!"
+    }
+}
+
+[System->Lin]: Today is day 2 . 
+The daybook as below: {'id': 2, 'income': 0, 'expense': 166, 'num_of_customer': 0, 'num_of_chef': 1, 'chef_salary': 2000, 'dish_score': 0.42226731601731604, 'customer_score': 5.0, 'dishes': '{}'} . 
+The customer comments as below [{'name': 'Eve', 'content': "The Classic American Burger was decently cooked, but I found the meat to be a bit dry, which impacted the overall juiciness I expect from a burger. The BBQ Ribs, while tender, were lacking in a rich BBQ flavor, and I anticipated a more robust sauce based on the description. As for the service, it was satisfactory, though not exceptional. It was a fair dining experience given my income level, but there's certainly room for improvement in both the flavor of the dishes and the dining experience to make it more memorable. I haven't dined at Stars and Stripes Grill, so I can't compare directly, but I would be open to trying their menu in the future for comparison."}] 
+
+The rival restaurant info as below:
+Restaurant: Stars and Stripes Grill 
+Number of customers: 1
+ Customer Comments: [] 
+Menu: [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'A perfect blend of juicy beef patty, aged cheddar, crisp lettuce, heirloom tomato, and our signature smoky sauce, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 22.0, 'description': 'Slow-cooked ribs, basted in our house-made hickory BBQ sauce, served with apple cider vinegar slaw and jalapeño cornbread.'}, {'id': 3, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic apple pie topped with vanilla ice cream and caramel drizzle.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 14.0, 'description': 'Our wings are marinated, baked, and then fried to perfection, served with celery, carrots, and a homemade blue cheese dip.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Creamy cheesecake with a graham cracker crust and berry compote.'}]
+
+[Lin->all]: Alright, let's shake things up a bit. I've got a gut feeling about this. First, I want to address the feedback from Eve. We can't have dry burgers! Let's increase the juiciness. I'll work with Chef Aiden to tweak the burger recipe, maybe add a new sauce or a different cheese that melts better. A bit of innovation never hurts.
+
+As for the BBQ Ribs, let's revamp that recipe too. We'll invest in a smokier, richer BBQ sauce. Maybe even introduce a new side dish to pair with it - something with a little kick to it that'll make our ribs stand out.
+
+And the service – I want our customers to feel like they're family. Let's put a bit more effort into training the staff to be more engaging and personable.
+
+Now, let's talk expansion. I'll hire another chef, but not just any chef. I want someone with a bit of flair, someone who can add a creative twist to our dishes. It might cost a bit more, but it'll be worth it if it brings in more customers.
+
+For the advertisement, let's go a little unconventional. Maybe partner with a local event or charity, get our name out there as a community-centric spot. We could also look into social media ads targeting foodies in our area, showcasing our revamped dishes and the new additions to the menu.
+
+I'll also look into getting better quality ingredients without breaking the bank. Maybe there's a local supplier we can partner with. Fresh, locally-sourced produce could be a big selling point.
+
+Let's invest in some small but noticeable improvements to the dining area as well. Some new decor, better lighting – make the place feel cozy and inviting.
+
+Finally, I'm thinking a little bit of secret sauce – a unique feature or dish that no one else has. Maybe a challenge dish that's free if you can finish it, or a 'secret menu' that customers can access if they know the right phrase.
+
+It's all about creating a buzz, standing out, and giving people a reason to choose us over the other guy. Let's do this!
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->all]: Alright, let's get strategic but keep it simple – we're going for quality and uniqueness without getting too fancy on the analytics. Here’s the plan:
+
+1. **Menu Adjustments**: 
+   - We’ll up the original price of the Classic American Burger to reflect the use of higher-quality ingredients for increased juiciness. Let’s say we bump it to $16.
+   - For the BBQ Ribs, we’ll also increase the original price, let’s make it $23, to account for the new smokier BBQ sauce and a spicy side dish to complement it.
+
+2. **Hiring a New Chef**:
+   - I’ll allocate funds to hire a second chef with a reputation for creativity. I'm thinking a salary of around $2500 should attract the right talent.
+
+3. **Advertisement**:
+   - Time to get creative with the advertising. We’ll update our ad content to highlight our new menu improvements, the locally-sourced ingredients, and introduce our new chef as a drawcard. I'll handle this in the Advertisement Management Module.
+
+4. **Customer Experience**:
+   - Even though we can't train staff directly, we’ll allocate a little extra budget, say $200, for staff incentives – rewarding those who provide exceptional service to ensure our customers feel like family.
+
+5. **Unique Selling Point**:
+   - We’ll introduce a signature challenge dish with a decent cost price to ensure quality. Let’s go for a $25 cost price and a $50 selling price. It’ll be our 'Man vs Food' style attraction.
+
+6. **Ambiance Upgrade**:
+   - A small portion of the budget, let’s say $500, will go towards improving the restaurant's ambiance with better lighting and some new decor to make the place more inviting.
+
+By focusing on these key areas, we should be able to enhance our reputation for quality and give our customers a unique and memorable dining experience that they won't get at Stars and Stripes Grill. Let’s keep it rustic, real, and a little bit rock 'n' roll. Time to put these plans into action!
+
+[System->Lin]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'The Yankee Fork', 'money': 9681, 'rent': 100}
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->all]: None
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+{Id: 1, Name: Classic American Burger, Price: 12.0, Cost price: 6.0, Description: Juicy beef patty with lettuce, tomato, onion, and our special sauce, served with fries., }
+{Id: 2, Name: BBQ Ribs, Price: 15.0, Cost price: 9.0, Description: Tender ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread., }
+{Id: 3, Name: Buffalo Wings, Price: 10.0, Cost price: 4.0, Description: Spicy buffalo wings served with celery, carrots, and blue cheese dip., }
+{Id: 4, Name: Veggie Delight, Price: 11.0, Cost price: 4.0, Description: Grilled vegetable skewers with a balsamic glaze, served over quinoa salad., }
+{Id: 5, Name: Apple Pie a la Mode, Price: 8.0, Cost price: 3.0, Description: Classic apple pie topped with vanilla ice cream and caramel drizzle., }
+{Id: 6, Name: Southern Fried Chicken, Price: 14.0, Cost price: 6.0, Description: Crispy, juicy, and perfectly seasoned fried chicken, served with a side of mashed potatoes and gravy., }
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: [
     {
         "type": "partial_update",
         "id": 1,
@@ -524,53 +772,25 @@ Please provide the required JSON data for the specific action you want to take. 
         "type": "partial_update",
         "id": 2,
         "data": {
-            "price": 14,
-            "cost_price": 7
-        },
-        "pic_desc": "None"
-    },
-    {
-        "type": "partial_update",
-        "id": 3,
-        "data": {
-            "price": 20,
-            "cost_price": 10
-        },
-        "pic_desc": "None"
-    },
-    {
-        "type": "partial_update",
-        "id": 4,
-        "data": {
-            "price": 13,
-            "cost_price": 6.5
-        },
-        "pic_desc": "None"
-    },
-    {
-        "type": "partial_update",
-        "id": 5,
-        "data": {
-            "price": 14,
-            "cost_price": 7
+            "price": 23,
+            "cost_price": 11.5
         },
         "pic_desc": "None"
     },
     {
         "type": "add",
         "data": {
-            "name": "Smoked Brisket Sandwich",
-            "description": "Slow-smoked brisket with a spicy BBQ sauce, topped with coleslaw, served on a toasted Kaiser roll.",
-            "price": 15,
-            "cost_price": 7.5
+            "name": "The Yankee Challenge",
+            "description": "A monstrous burger stacked high with multiple beef patties, layers of cheese, bacon, and our special sauce. Finish it in 30 minutes and it's on the house!",
+            "price": 50,
+            "cost_price": 25
         },
-        "pic_desc": "Name is Smoked Brisket Sandwich, Desc is Slow-smoked brisket with a spicy BBQ sauce, topped with coleslaw, served on a toasted Kaiser roll."
+        "pic_desc": "Name is The Yankee Challenge, Desc is A monstrous burger stacked high with multiple beef patties, layers of cheese, bacon, and our special sauce. Finish it in 30 minutes and it's on the house!"
     }
 ]
 
 [System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
-{Id: 1, Name: Chef Casey, Salary: 1000, }
-{Id: 2, Name: Chef Alex, Salary: 1000, }
+{Id: 1, Name: Chef Aiden, Salary: 2000, }
  
 
 <<FORMAT>>
@@ -626,10 +846,18 @@ If nothing you want to change, return None
 
 Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
 
-[Lin->Lin]: None
+[Lin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Blaze",
+            "salary": 2500
+        }
+    }
+]
 
 [System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
-{'id': 1, 'content': "Come taste the revolution at Stars & Stripes Bistro! Dive into our Gourmet Burger Deluxe or savor the richness of Truffle Mac 'n' Cheese. Every bite's a celebration of American flavors with a gourmet twist. Don't miss out – your new favorite dish awaits!"}
+{'id': 1, 'content': "Discover The Yankee Fork's upgraded menu with the juiciest burgers, now with top-notch ingredients, and our new Southern Fried Chicken that's talk of the town! Plus, our BBQ Ribs are more tender than ever. Come for the food, stay for the warmth and top-tier service. Your home away from home awaits!"}
 
 <<FORMAT>>
 You can perform the following actions:
@@ -655,11 +883,562 @@ Your response must be formated as above.
 
 Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
 
-[Lin->Lin]: {
+[Lin->all]: {
     "type": "update",
     "id": "1",
     "data":{
-        "content": "Stars & Stripes Bistro presents Live Music Nights! Indulge in our Dish of the Day – a new surprise daily. Plus, don't miss our new Smoked Brisket Sandwich. It's American dining with soul. Join us for an unforgettable experience!"
+        "content": "Meet Chef Blaze, The Yankee Fork's latest addition, crafting innovative dishes that'll tantalize your taste buds. Dive into our revamped menu featuring the juiciest, high-quality ingredient burgers and the smokiest BBQ ribs in town. Ready for a challenge? Conquer 'The Yankee Challenge' burger and make history! It's not just a meal; it's an experience. Join us for a flavor revolution!"
+    }
+}
+
+[System->Lin]: Today is day 3 . 
+The daybook as below: {'id': 3, 'income': 0, 'expense': 250, 'num_of_customer': 0, 'num_of_chef': 2, 'chef_salary': 4500, 'dish_score': 0.6690862708719851, 'customer_score': 5.0, 'dishes': '{}'} . 
+The customer comments as below [{'name': 'Eve', 'content': "The Classic American Burger was decently cooked, but I found the meat to be a bit dry, which impacted the overall juiciness I expect from a burger. The BBQ Ribs, while tender, were lacking in a rich BBQ flavor, and I anticipated a more robust sauce based on the description. As for the service, it was satisfactory, though not exceptional. It was a fair dining experience given my income level, but there's certainly room for improvement in both the flavor of the dishes and the dining experience to make it more memorable. I haven't dined at Stars and Stripes Grill, so I can't compare directly, but I would be open to trying their menu in the future for comparison."}] 
+
+The rival restaurant info as below:
+Restaurant: Stars and Stripes Grill 
+Number of customers: 1
+ Customer Comments: [] 
+Menu: [{'id': 1, 'name': 'Classic American Burger', 'price': 17.0, 'description': 'A perfect blend of juicy beef patty, aged cheddar, crisp lettuce, heirloom tomato, and our signature smoky sauce, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 25.0, 'description': 'Slow-cooked ribs, basted in our house-made hickory BBQ sauce, served with apple cider vinegar slaw and jalapeño cornbread.'}, {'id': 3, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic apple pie topped with vanilla ice cream and caramel drizzle.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 16.0, 'description': 'Our wings are marinated, baked, and then fried to perfection, served with celery, carrots, and a homemade blue cheese dip.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Creamy cheesecake with a graham cracker crust and berry compote.'}]
+
+[Lin->all]: Alright, looks like we've got some feedback to work on. Here's what we're gonna do:
+
+1. We need to address the dryness of the burger meat. Let's work with Chef Blaze to adjust the cooking method to retain more juice without compromising on the flavor. Maybe it's time to introduce a new burger, something with a twist - how about a burger with a unique sauce that's a secret blend?
+
+2. The BBQ Ribs need a more robust sauce. Let's develop a new sauce recipe that packs more flavor and gives that rich BBQ taste Eve was missing. We'll call it the "Signature Smoky BBQ Sauce."
+
+3. Service needs to be more than satisfactory; it needs to be memorable. Let's train our staff on engaging with customers more and creating a friendly, inviting atmosphere. We'll implement a "Customer of the Day" feature where we make a small fuss over one table per night, just to make their experience special.
+
+4. I think we can also introduce a "Stars and Stripes Special" – a platter that showcases the best of what we offer, something that'll give us an edge over Stars and Stripes Grill.
+
+5. Lastly, let's keep an eye on the budget but maybe introduce a weekly live music night or a trivia night to draw in more crowds and keep them coming back for the experience, not just the food.
+
+Let's get this rolling and make The Yankee Fork the talk of the town!
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->all]: Alright, taking into account the rules, here's my strategy:
+
+1. For the chefs, I'll keep Chef Blaze at a higher salary given that a higher salary corresponds to a higher level of skill. This should ensure that the dishes are of a better quality. I won't make any changes to the chefs for now.
+
+2. Regarding the dishes, I'll increase the original prices slightly for improved ingredients, but keep the increase moderate to maintain a good cost to selling price ratio. This should enhance the taste while still providing value to the customers.
+
+3. I'll use the advertising module to communicate the new improvements, the introduction of the "Signature Smoky BBQ Sauce," and the new "Customer of the Day" feature to create buzz and draw in customers.
+
+4. I'll also adjust the menu to introduce the "Stars and Stripes Special" platter at a competitive price point.
+
+5. Finally, to attract more customers and create a memorable experience, I'll advertise weekly live music or trivia night events.
+
+Now, I'll go ahead and make these changes in the respective modules.
+
+[System->Lin]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'The Yankee Fork', 'money': 9431, 'rent': 100}
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->all]: None
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+{Id: 1, Name: Classic American Burger, Price: 16.0, Cost price: 8.0, Description: Juicy beef patty with lettuce, tomato, onion, and our special sauce, served with fries., }
+{Id: 2, Name: BBQ Ribs, Price: 23.0, Cost price: 11.5, Description: Tender ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread., }
+{Id: 3, Name: Buffalo Wings, Price: 10.0, Cost price: 4.0, Description: Spicy buffalo wings served with celery, carrots, and blue cheese dip., }
+{Id: 4, Name: Veggie Delight, Price: 11.0, Cost price: 4.0, Description: Grilled vegetable skewers with a balsamic glaze, served over quinoa salad., }
+{Id: 5, Name: Apple Pie a la Mode, Price: 8.0, Cost price: 3.0, Description: Classic apple pie topped with vanilla ice cream and caramel drizzle., }
+{Id: 6, Name: Southern Fried Chicken, Price: 14.0, Cost price: 6.0, Description: Crispy, juicy, and perfectly seasoned fried chicken, served with a side of mashed potatoes and gravy., }
+{Id: 7, Name: The Yankee Challenge, Price: 50.0, Cost price: 25.0, Description: A monstrous burger stacked high with multiple beef patties, layers of cheese, bacon, and our special sauce. Finish it in 30 minutes and it's on the house!, }
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "price": 18,
+            "cost_price": 9
+        }
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data": {
+            "price": 26,
+            "cost_price": 13
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Stars and Stripes Special",
+            "description": "A patriotic feast featuring a mini Classic American Burger, a BBQ Ribs sampler, Buffalo Wings, and a slice of Apple Pie a la Mode, all in one platter.",
+            "price": 30,
+            "cost_price": 15
+        },
+        "pic_desc": "Name is Stars and Stripes Special, Desc is A patriotic feast featuring a mini burger, ribs sampler, wings, and a slice of apple pie, all in one platter, more details like it includes a mini Classic American Burger, a portion of BBQ Ribs, a few Buffalo Wings, and a small slice of Apple Pie with vanilla ice cream on top."
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef Aiden, Salary: 2000, }
+{Id: 2, Name: Chef Blaze, Salary: 2500, }
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: None
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': "Meet Chef Blaze, The Yankee Fork's latest addition, crafting innovative dishes that'll tantalize your taste buds. Dive into our revamped menu featuring the juiciest, high-quality ingredient burgers and the smokiest BBQ ribs in town. Ready for a challenge? Conquer 'The Yankee Challenge' burger and make history! It's not just a meal; it's an experience. Join us for a flavor revolution!"}
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Savor the new 'Stars and Stripes Special' at The Yankee Fork, where American spirit meets culinary delight. Enjoy live music nights and be our 'Customer of the Day' to win exciting offers. Our secret 'Signature Smoky BBQ Sauce' will keep you coming back for more. Indulge in a dining experience where flavor bursts and memories are made!"
+    }
+}
+
+[System->Lin]: Today is day 4 . 
+The daybook as below: {'id': 4, 'income': 27, 'expense': 250, 'num_of_customer': 1, 'num_of_chef': 2, 'chef_salary': 4500, 'dish_score': 0.672950487012987, 'customer_score': 5.0, 'dishes': '{"Classic American Burger": 1, "BBQ Ribs": 1, "Apple Pie a la Mode": 1}'} . 
+The customer comments as below [{'name': 'Eve', 'content': "The Classic American Burger was decently cooked, but I found the meat to be a bit dry, which impacted the overall juiciness I expect from a burger. The BBQ Ribs, while tender, were lacking in a rich BBQ flavor, and I anticipated a more robust sauce based on the description. As for the service, it was satisfactory, though not exceptional. It was a fair dining experience given my income level, but there's certainly room for improvement in both the flavor of the dishes and the dining experience to make it more memorable. I haven't dined at Stars and Stripes Grill, so I can't compare directly, but I would be open to trying their menu in the future for comparison."}] 
+
+The rival restaurant info as below:
+Restaurant: Stars and Stripes Grill 
+Number of customers: 0
+ Customer Comments: [] 
+Menu: [{'id': 1, 'name': 'Classic American Burger', 'price': 19.0, 'description': 'A perfect blend of juicy beef patty, aged cheddar, crisp lettuce, heirloom tomato, and our signature smoky sauce, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 28.0, 'description': 'Slow-cooked ribs, basted in our house-made hickory BBQ sauce, served with apple cider vinegar slaw and jalapeño cornbread.'}, {'id': 3, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic apple pie topped with vanilla ice cream and caramel drizzle.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 16.0, 'description': 'Our wings are marinated, baked, and then fried to perfection, served with celery, carrots, and a homemade blue cheese dip.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Creamy cheesecake with a graham cracker crust and berry compote.'}, {'id': 6, 'name': 'Stars and Stripes Mega Milkshake', 'price': 14.0, 'description': 'A towering milkshake loaded with scoops of premium ice cream, whipped cream, colorful sprinkles, and topped with a mini American flag. Perfect for sharing and social media!'}]
+
+[Lin->all]: Alright, let's shake things up a bit. I'm thinking we need to take that feedback on board and make some immediate improvements to our dishes. Let's start by tweaking the recipe for our Classic American Burger. I want to source some higher quality, juicier beef and maybe add some new, bolder flavors to our BBQ sauce for the ribs - perhaps a touch of bourbon or apple to give it a unique twist.
+
+Now, for customer experience, let's start hosting weekly live music nights to attract more locals and create a buzz. I want every customer to feel special, so let's introduce a 'Customer of the Day' feature where we surprise a random customer with a free dessert or a discount voucher for their next visit. It's all about building that personal connection.
+
+Also, I've got an idea for a limited-time menu item that might just get people talking - let's call it the "Liberty Shake-Up", a decadent milkshake with layers of red, white, and blue, topped with a sparkler for that Instagram moment. It'll be our nod to the competition's mega milkshake but with our own patriotic twist. 
+
+Lastly, we should definitely highlight our new 'Signature Smoky BBQ Sauce' in our advertising and on the menu - if it's as good as I think it can be, it'll be a game-changer.
+
+Time to get the team together and make this happen. Let's show 'em what The Yankee Fork is made of!
+
+[System->Lin]: Please outline the strategy you have adopted for your restaurant in order to succeed in competition. Consider factors such as selling more dishes at a lower cost or catering to a high-end clientele. It is crucial to find the right approach for your restaurant, as this is the first and most important aspect.
+
+Please keep in mind the following rules:
+1. Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+2. Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+3. Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+So, please list the actions you want to perform, then do it on corresponding module.
+
+[Lin->all]: Alright, here's my game plan:
+
+1. **Dishes Upgrade**: I'm gonna up the original prices on our Classic American Burger and BBQ Ribs to signify we're using higher quality ingredients. This should improve the taste and customer satisfaction. 
+
+2. **New Menu Item**: Introducing the "Liberty Shake-Up" milkshake as a limited-time offer to create hype and draw in the Instagram crowd.
+
+3. **Customer Experience**: Implement the 'Customer of the Day' feature to add that personal touch and improve service ratings.
+
+4. **Live Music Nights**: Kick off weekly live music events to attract the local crowd and add to the dining experience.
+
+5. **Signature Sauce Promotion**: Make sure our 'Signature Smoky BBQ Sauce' is front and center in our advertising and on the menu.
+
+6. **Ad Update**: I'll update our advertisement to include all these new changes, highlighting the higher quality ingredients, new menu items, live music nights, and our special sauce to entice customers.
+
+Let's get to work on these actions in the corresponding modules.
+
+[System->Lin]: Now your restaurant basic information as below:
+{'id': 1, 'name': 'The Yankee Fork', 'money': 9208, 'rent': 100}
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->all]: None
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+{Id: 1, Name: Classic American Burger, Price: 18.0, Cost price: 9.0, Description: Juicy beef patty with lettuce, tomato, onion, and our special sauce, served with fries., }
+{Id: 2, Name: BBQ Ribs, Price: 26.0, Cost price: 13.0, Description: Tender ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread., }
+{Id: 3, Name: Buffalo Wings, Price: 10.0, Cost price: 4.0, Description: Spicy buffalo wings served with celery, carrots, and blue cheese dip., }
+{Id: 4, Name: Veggie Delight, Price: 11.0, Cost price: 4.0, Description: Grilled vegetable skewers with a balsamic glaze, served over quinoa salad., }
+{Id: 5, Name: Apple Pie a la Mode, Price: 8.0, Cost price: 3.0, Description: Classic apple pie topped with vanilla ice cream and caramel drizzle., }
+{Id: 6, Name: Southern Fried Chicken, Price: 14.0, Cost price: 6.0, Description: Crispy, juicy, and perfectly seasoned fried chicken, served with a side of mashed potatoes and gravy., }
+{Id: 7, Name: The Yankee Challenge, Price: 50.0, Cost price: 25.0, Description: A monstrous burger stacked high with multiple beef patties, layers of cheese, bacon, and our special sauce. Finish it in 30 minutes and it's on the house!, }
+{Id: 8, Name: Stars and Stripes Special, Price: 30.0, Cost price: 15.0, Description: A patriotic feast featuring a mini Classic American Burger, a BBQ Ribs sampler, Buffalo Wings, and a slice of Apple Pie a la Mode, all in one platter., }
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "price": 20,
+            "cost_price": 10
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data": {
+            "price": 28,
+            "cost_price": 14
+        },
+        "pic_desc": "None"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Liberty Shake-Up",
+            "description": "A layered red, white, and blue milkshake with premium ice cream, topped with whipped cream, sprinkles, and a sparkler for a patriotic treat.",
+            "price": 15,
+            "cost_price": 7
+        },
+        "pic_desc": "Name is Liberty Shake-Up, Desc is a layered red, white, and blue milkshake with premium ice cream, topped with whipped cream, sprinkles, and a sparkler for a patriotic treat."
+    }
+]
+
+[System->Lin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef Aiden, Salary: 2000, }
+{Id: 2, Name: Chef Blaze, Salary: 2500, }
+ 
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: None
+
+[System->Lin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+{'id': 1, 'content': "Savor the new 'Stars and Stripes Special' at The Yankee Fork, where American spirit meets culinary delight. Enjoy live music nights and be our 'Customer of the Day' to win exciting offers. Our secret 'Signature Smoky BBQ Sauce' will keep you coming back for more. Indulge in a dining experience where flavor bursts and memories are made!"}
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Experience the upgraded Classic American Burger and BBQ Ribs with premium ingredients at The Yankee Fork. Introducing the 'Liberty Shake-Up' milkshake - a taste of freedom in every sip. Join us for live music nights and become the 'Customer of the Day.' Don't miss our 'Signature Smoky BBQ Sauce' that will ignite your taste buds. Flavor, fun, and festivity await you!"
     }
 }
 
