@@ -1,8 +1,6 @@
 from typing import List
 import os
 import re
-import time
-import logging
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 from .base import IntelligenceBackend
@@ -10,12 +8,14 @@ from ...message import Message, SYSTEM_NAME, MODERATOR_NAME
 from ...image import Image
 
 try:
-    from openai import OpenAI
+    import openai
+    # from openai import OpenAI
 except ImportError:
     is_openai_available = False
     # logging.warning("openai package is not installed")
 else:
     openai_api_key = os.environ.get("OPENAI_KEY")
+    openai_api_key2 = os.environ.get("OPENAI_KEY2")
 
     if openai_api_key is None:
         # logging.warning("OpenAI API key is not set. Please set the environment variable OPENAI_API_KEY")
@@ -61,20 +61,54 @@ class OpenAIChat(IntelligenceBackend):
         self.merge_other_agent_as_user = merge_other_agents_as_one_user
 
     @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
-    def _get_response(self, messages):
-        client = OpenAI(api_key=openai_api_key)
-        
-        completion = client.chat.completions.create(
-            model=self.model,
-            messages=messages,
-            temperature=self.temperature,
-            max_tokens=self.max_tokens,
-            stop=STOP
-        )
-
-        response = completion.choices[0].message.content
+    def _get_response(self, messages, have_image=False):
+        # FIXME: support instance config????
+        if have_image:
+            """ OpenAI 0.7 API """
+            openai.api_key = os.getenv("OPENAI_API_KEY")
+            completion = openai.ChatCompletion.create(
+                    model=self.model,
+                    messages=messages,
+                    temperature=self.temperature,
+                    max_tokens=self.max_tokens,
+                    stop=STOP
+                )
+        else:
+            """ OpenAI Azure API """
+            openai.api_type = "azure"
+            openai.api_version = "2023-07-01-preview"
+            openai.api_key = os.getenv("AZURE_OPENAI_KEY")
+            openai.api_base = os.getenv("AZURE_OPENAI_ENDPOINT")
+            
+            completion = openai.ChatCompletion.create(
+                    engine="gpt-4-1106",
+                    messages = messages,
+                    temperature=self.temperature,
+                    max_tokens=self.max_tokens,
+                    stop=STOP
+                )
+         
+        response = completion.choices[0]['message']['content']
         response = response.strip()
         return response
+        
+        
+        """ OpenAI 1.00 API """
+        
+        # client = OpenAI(api_key=openai_api_key)
+        
+        # completion = client.chat.completions.create(
+        #     model=self.model,
+        #     messages=messages,
+        #     temperature=self.temperature,
+        #     max_tokens=self.max_tokens,
+        #     stop=STOP
+        # )
+
+        # response = completion.choices[0].message.content
+        # response = response.strip()
+        # return response
+
 
     def query(self, agent_name: str, agent_type: str, role_desc: str, history_messages: List[Message], relationship: str = None, 
               global_prompt: str = None, images: List[Image] = [], request_msg: Message = None, *args, **kwargs) -> str:
@@ -117,7 +151,7 @@ class OpenAIChat(IntelligenceBackend):
             user_prompt += f"You are a {agent_type} in a virtual world. Now it's your turn!"
             
             print(f"User prompt length: {len(user_prompt)}")
-            print(f"User prompt: {user_prompt}")
+            # print(f"User prompt: {user_prompt}")
             
             user_message = {"role": "user", "content": user_prompt}
             messages.append(user_message)
@@ -131,7 +165,10 @@ class OpenAIChat(IntelligenceBackend):
             image_message = {"role": "user", "content": image_prompt}
             messages.append(image_message)
         
-        response = self._get_response(messages, *args, **kwargs)
+        
+        have_image = True if len(images) > 0 else False
+        
+        response = self._get_response(messages, have_image, *args, **kwargs)
         # Remove the agent name if the response starts with it
         response = re.sub(rf"^\s*\[.*]:", "", response).strip()
         response = re.sub(rf"^\s*{re.escape(agent_name)}\s*:", "", response).strip()

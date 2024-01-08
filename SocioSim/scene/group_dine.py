@@ -2,7 +2,7 @@ from typing import List
 from .base import Scene
 from ..agent import Player
 from ..message import MessagePool
-from ..globals import NAME2PORT, PORT2NAME
+from ..globals import NAME2PORT, PORT2NAME, image_pool
 from ..utils import log_table, get_data_from_database, send_data_to_database
 
 import numpy as np
@@ -158,7 +158,10 @@ class GroupDine(Scene):
         observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
         # vision observation, get two restaurant images for showing
         # observation_vision = image_pool.get_visible_images(restaurant_name="All")
-        observation_vision = []
+        if curr_process['name'] == 'group_order':
+            observation_vision = image_pool.get_visible_images(restaurant_name="All")
+        else:
+            observation_vision = []
         
         for i in range(self.invalid_step_retry):
             try:

@@ -20,7 +20,6 @@ class Simulation:
         self.curr_scene_idx = 0
 
     def get_curr_scene(self):
-        # TODO: graph search
         return self.scenes[self.curr_scene_idx]
     
     def step(self, data):
@@ -46,7 +45,7 @@ class Simulation:
         """
         Main function, run the simulation
         """
-        previous_scene_data = test_data
+        previous_scene_data = None
         while True:  # TODO
             data = self.step(previous_scene_data)
             previous_scene_data = data

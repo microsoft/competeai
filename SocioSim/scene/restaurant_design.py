@@ -120,6 +120,7 @@ class RestaurantDesign(Scene):
                 daybook_list.append(daybook)
                 
             comment = get_data_from_database("last_comment", port=self.port)
+            menu = get_data_from_database("menu", port=self.port)
             
             data = [self.day, daybook_list, comment, rival_info] 
             
@@ -128,6 +129,7 @@ class RestaurantDesign(Scene):
                                 step_name='daybook', 
                                 data=data)
             log_table(f'{self.log_path}/data', daybook, f"day{self.day}") # log
+            log_table(f'{self.log_path}/menu', str(menu), f"day{self.day}") # log
 
         # prompt for every step
         self.add_new_prompt(player_name=curr_player.name, 
