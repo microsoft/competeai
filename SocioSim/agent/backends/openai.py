@@ -76,8 +76,8 @@ class OpenAIChat(IntelligenceBackend):
         response = response.strip()
         return response
 
-    def query(self, agent_name: str, agent_type: str, role_desc: str, history_messages: List[Message], global_prompt: str = None,
-              images: List[Image] = [], request_msg: Message = None, *args, **kwargs) -> str:
+    def query(self, agent_name: str, agent_type: str, role_desc: str, history_messages: List[Message], relationship: str = None, 
+              global_prompt: str = None, images: List[Image] = [], request_msg: Message = None, *args, **kwargs) -> str:
         """
         format the input and call the ChatGPT/GPT-4 API
         args:
@@ -91,13 +91,17 @@ class OpenAIChat(IntelligenceBackend):
         
         # System env
         # Merge the role description and the global prompt as the system prompt for the agent
+        system_prompt = f" Your name is {agent_name}.\n\nYour role:{role_desc}"
         if global_prompt:  # Prepend the global prompt if it exists
-            system_prompt = f"{global_prompt.strip()}\n{BASE_PROMPT}\n\nYour name is {agent_name}.\n\nYour role:{role_desc}"
-        else:
-            system_prompt = f" Your name is {agent_name}.\n\nYour role:{role_desc}\n\n{BASE_PROMPT}"
+            system_prompt = f"{global_prompt.strip()}\n\n" + system_prompt
+        if relationship:
+            system_prompt += f"\n\nYour relationship: {relationship.strip()}"
+        system_prompt += f"\n\n{BASE_PROMPT}"
         
         system_message = {"role": "system", "content": system_prompt}
         messages.append(system_message)
+        
+        # print("system prompt", system_prompt)
         
         # Text
         if len(history_messages) > 0:
@@ -113,7 +117,7 @@ class OpenAIChat(IntelligenceBackend):
             user_prompt += f"You are a {agent_type} in a virtual world. Now it's your turn!"
             
             print(f"User prompt length: {len(user_prompt)}")
-            # print(f"User prompt: {user_prompt}")
+            print(f"User prompt: {user_prompt}")
             
             user_message = {"role": "user", "content": user_prompt}
             messages.append(user_message)

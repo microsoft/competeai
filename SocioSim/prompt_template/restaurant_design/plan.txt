@@ -1,13 +1,9 @@
 Today marks a new day for you to design and strategize for the restaurant, building upon past experiences and the latest information.
 
-1. Tasks
-Your first task is to design or revise your strategy, then write it down, no more than 60 words
-Your second task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+1. Action Space
+Basic restaurant information, menu, chef, and advertisement.
 
-2. Action Spaces
-Your action spaces: basic restaurant information, menu, chef, and advertisement.
-
-3. Rules
+2. Rules
 Please keep in mind the following rules:
 (1) Strategies
   - It is crucial to find the right approach for your restaurant, as this is the first and most important aspect. Consider factors such as selling more dishes at a lower cost, catering to a high-end clientele or other strategies
@@ -20,4 +16,6 @@ Please keep in mind the following rules:
 (4) Advertisement:
   - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
 
-Please write out the plan simply and then execute it in detail on corresponding module.
+Your first task is to analyze the your history summaries and rival information and give your finds, no more than 100 words
+Your second task is to design or revise your strategy, then write it down, no more than 60 words
+Your third task is to create a general plan based on this strategy, then write it down, no more than 150 words. 

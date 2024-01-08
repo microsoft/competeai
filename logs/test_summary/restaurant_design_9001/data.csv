@@ -1,0 +1,10 @@
+name,day1
+id,1
+income,11
+expense,266
+num_of_customer,1
+num_of_chef,2
+chef_salary,5000
+dish_score,0.7013888888888888
+customer_score,0.0
+dishes,"{""BBQ Bacon Burger"": 1, ""Apple Pie a la Mode"": 1}"

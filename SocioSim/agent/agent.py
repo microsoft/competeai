@@ -21,7 +21,7 @@ class Agent(Configurable):
         An abstract base class for all the agents in the chatArena environment.
     """
     @abstractmethod
-    def __init__(self, name: str, agent_type: str, role_desc: str, global_prompt: str = None, *args, **kwargs):
+    def __init__(self, name: str, agent_type: str, role_desc: str, global_prompt: str = None, relationship: str = None, *args, **kwargs):
         """
         Initialize the agent.
 
@@ -30,10 +30,11 @@ class Agent(Configurable):
             role_desc (str): Description of the agent's role.
             global_prompt (str): A universal prompt that applies to all agents. Defaults to None.
         """
-        super().__init__(name=name, role_desc=role_desc, global_prompt=global_prompt, **kwargs)
+        super().__init__(name=name, role_desc=role_desc, global_prompt=global_prompt, relationship=relationship, **kwargs)
         self.name = name
         self.agent_type = agent_type
         self.role_desc = role_desc
+        self.relationship = relationship
         if global_prompt and agent_type in global_prompt.keys():
             self.global_prompt = global_prompt[agent_type]
 
@@ -45,7 +46,7 @@ class Player(Agent):
     """
 
     def __init__(self, name: str, role_desc: str, backend: Union[BackendConfig, IntelligenceBackend],
-                 global_prompt: str = None, **kwargs):
+                 global_prompt: str = None, relationship: str = None, **kwargs):
         """
         Initialize the player with a name, role description, backend, and a global prompt.
 
@@ -68,7 +69,7 @@ class Player(Agent):
 
         # Register the fields in the _config
         super().__init__(name=name, role_desc=role_desc, backend=backend_config,
-                         global_prompt=global_prompt, **kwargs)
+                         global_prompt=global_prompt, relationship=relationship, **kwargs)
 
         self.backend = backend
 
@@ -92,8 +93,8 @@ class Player(Agent):
         """ 
         try:
             response = self.backend.query(agent_name=self.name, agent_type=self.agent_type, role_desc=self.role_desc,
-                                          history_messages=observation_text, global_prompt=self.global_prompt,
-                                          images=observation_vision, request_msg=None)
+                                          relationship=self.relationship, history_messages=observation_text, 
+                                          global_prompt=self.global_prompt, images=observation_vision, request_msg=None)
         except RetryError as e:
             err_msg = f"Agent {self.name} failed to generate a response. Error: {e.last_attempt.exception()}. Sending signal to end the conversation."
             logging.warning(err_msg)

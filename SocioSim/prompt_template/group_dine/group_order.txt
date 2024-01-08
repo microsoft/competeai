@@ -1,4 +1,4 @@
-There is four people group. As a member of the group, start by discussing with the others to decide on a restaurant. During the discussion, each person can suggest based on their preferences and the information provided by the restaurants. Once the discussion is concluded, you or another member should summarize the decision and list the chosen restaurant and the dishes to be ordered. 
+As a member of the group, start by discussing with the others to decide on a restaurant. During the discussion, each person can suggest based on their preferences and the information provided by the restaurants. Once the discussion is concluded, you or another member should summarize the decision and list the chosen restaurant and the dishes to be ordered. 
 
 Two rules:
 1. the discussion must be maintained for more than one round. In first round, each member should express his or her views and needs.

@@ -1,8 +1,9 @@
 [System->Qin]: Today marks a new day for you to design and strategize for the restaurant, building upon past experiences and the latest information.
 
 1. Tasks
-Your first task is to design or revise your strategy, then write it down, no more than 60 words
-Your second task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+Your first task is analyze the your and rival information and give your finds. no more than 100 words
+Your second task is to design or revise your strategy, then write it down, no more than 60 words
+Your third task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
 
 2. Action Spaces
 Your action spaces: basic restaurant information, menu, chef, and advertisement.
@@ -22,17 +23,38 @@ Please keep in mind the following rules:
 
 Please write out the plan simply and then execute it in detail on corresponding module.
 
-[Qin->all]: Strategy:
-Leverage local produce for high-quality, affordable dishes to attract a broad customer base. Enhance dining experience with unique American-themed ambiance and targeted advertising.
+[Qin->all]: 1. Tasks
 
-Plan:
-Allocate funds to source premium, locally-sourced ingredients, ensuring tasty dishes while controlling costs. Revamp the menu to highlight signature American dishes with a twist, using these ingredients. Invest in chef salaries to attract top talent, ensuring high-caliber culinary skills. Create an American-themed dining environment to provide a unique experience. Allocate a portion of the budget to advertise our unique selling points, focusing on the quality of ingredients and the unique dining experience. Monitor competitor's moves and customer feedback to adapt our strategies accordingly. 
+- Analyze Information:
+The rival restaurant offers a diverse menu at competitive prices. However, their chef quality and ingredient quality are average. Our advantage lies in a specialized American cuisine that can provide a unique dining experience with the right improvements and promotions.
 
-Action:
-- Basic Restaurant Information: Name the restaurant "Stars & Stripes Bistro."
-- Menu: Introduce a signature dish that showcases local ingredients in a classic American recipe.
-- Chef: Hire a mid-level chef with a good reputation and offer a competitive salary.
-- Advertisement: Launch a campaign highlighting our fresh, local ingredients and cozy American dining environment.
+- Design Strategy:
+Focus on signature American dishes with premium ingredients, combined with targeted advertising to attract food enthusiasts.
+
+- General Plan:
+Allocate funds to hire a top-tier chef, ensuring high-quality dishes. Invest in premium ingredients for signature dishes to enhance flavor and create a unique menu that stands out. Use targeted advertising to highlight our exceptional culinary experience, focusing on American cuisine connoisseurs and leveraging local food bloggers and social media platforms for word-of-mouth. Monitor costs to maintain profitability while providing a superior dining experience.
+
+2. Action Spaces
+
+- Basic Restaurant Information: "Stars and Stripes Diner"
+- Menu: Revise to include premium American classics like gourmet burgers and BBQ ribs.
+- Chef: Hire a top-tier chef with expertise in American cuisine.
+- Advertisement: Launch a targeted ad campaign focusing on food enthusiasts and collaborate with local food bloggers.
+
+3. Rules
+
+- Strategies: Enhancing the dining experience through quality and specialization.
+- Chefs: Invest in a higher salary for a top-level chef.
+- Dishes: Increase original price moderately for better ingredients, ensuring customer satisfaction.
+- Advertisement: Utilize the advertising module effectively to reach the target audience.
+
+Execution:
+
+- Update restaurant name to "Stars and Stripes Diner."
+- Hire a top-tier chef, adjusting the salary budget accordingly.
+- Revise the menu to focus on high-quality American dishes with premium ingredients.
+- Invest in a targeted advertising campaign, reaching out to local food bloggers and using social media to attract food enthusiasts.
+- Monitor the balance between cost and selling price to ensure profitability while providing a superior dining experience.
 
 [System->Qin]: Now your restaurant basic information as below:
 <INPUT 0>
@@ -66,13 +88,13 @@ else response None
 
 [Qin->all]: {
     "type": "add",
-    "data": {
-        "name": "Stars & Stripes Bistro",
+    "data":{
+        "name": "Stars and Stripes Diner",
         "money": 10000,
         "rent": 100,
         "day": 1
     },
-    "pic_desc": "An American Restaurant, name is Stars & Stripes Bistro, with a cozy and inviting atmosphere, decorated with American flags and memorabilia."
+    "pic_desc": "An American Restaurant, named Stars and Stripes Diner, with a vintage 1950s diner theme, red booths, and a classic jukebox."
 }
 
 [System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
@@ -139,12 +161,52 @@ Please provide the required JSON data for the specific action you want to take. 
     {
         "type": "add",
         "data": {
-            "name": "Local Harvest Chicken",
-            "description": "Grilled chicken with a medley of fresh, locally-sourced vegetables",
+            "name": "Gourmet Bourbon Burger",
+            "description": "A juicy burger topped with aged cheddar, crispy onions, and a rich bourbon glaze",
             "price": 18,
+            "cost_price": 9
+        },
+        "pic_desc": "A succulent beef patty with melted cheddar, golden crispy onions, and a glossy bourbon glaze on a toasted brioche bun"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Smoked BBQ Ribs",
+            "description": "Tender ribs slow-cooked and glazed with our signature smoky BBQ sauce",
+            "price": 25,
             "cost_price": 12
         },
-        "pic_desc": "Name is Local Harvest Chicken, Desc is succulent grilled chicken served with a colorful medley of fresh vegetables sourced from local farms."
+        "pic_desc": "Succulent ribs coated in a rich, smoky BBQ sauce, served with a side of seasoned fries and coleslaw"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Classic Apple Pie",
+            "description": "Traditional apple pie with a flaky crust and cinnamon-spiced filling",
+            "price": 8,
+            "cost_price": 4
+        },
+        "pic_desc": "Golden-brown pie crust with a warm, spiced apple filling, dusted with powdered sugar"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Southern Fried Chicken",
+            "description": "Crispy fried chicken seasoned with a blend of Southern spices",
+            "price": 16,
+            "cost_price": 8
+        },
+        "pic_desc": "Crispy, golden-brown fried chicken pieces seasoned with a secret blend of Southern spices"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "New York Cheesecake",
+            "description": "Creamy cheesecake with a graham cracker crust and berry compote",
+            "price": 9,
+            "cost_price": 4.5
+        },
+        "pic_desc": "Rich and creamy cheesecake with a buttery graham cracker crust, topped with a sweet berry compote"
     }
 ]
 
@@ -208,8 +270,8 @@ Please provide the required JSON data for the specific action you want to take. 
     {
         "type": "add",
         "data": {
-            "name": "Chef John Doe",
-            "salary": 2500
+            "name": "Chef Michael James",
+            "salary": 3000
         }
     }
 ]
@@ -244,7 +306,7 @@ Please provide the required JSON data for the specific action you want to take. 
 [Qin->all]: {
     "type": "add",
     "data":{
-        "content": "Discover the taste of America right here at Stars & Stripes Bistro! Enjoy our signature Local Harvest Chicken, featuring succulent grilled chicken and vegetables sourced from local farms. Step into our cozy ambiance, adorned with Americana, for a unique dining experience. Join us for a meal that celebrates fresh ingredients and American culinary tradition!"
+        "content": "Discover the taste of America right here at Stars and Stripes Diner! Indulge in our new gourmet menu featuring the Gourmet Bourbon Burger, Smoked BBQ Ribs, and more. Perfect for foodies looking for authentic American cuisine. Come taste the difference quality makes!"
     }
 }
 
@@ -253,9 +315,25 @@ Please generate a detailed summary of all the work completed today in our restau
 This summary should encompass key information and actions。 Keep it as simple as possible.
 This comprehensive summary will be integrated into our long-term memory archive, serving as a valuable record for future operational planning and strategy development. 
 
-[Qin->all]: Today at Stars & Stripes Bistro, we've made several strategic enhancements to solidify our position in the local restaurant scene. Firstly, we've named our American-themed restaurant to reflect our cozy and patriotic atmosphere. Our menu now proudly features a new signature dish, "Local Harvest Chicken," which emphasizes our commitment to fresh, locally-sourced ingredients, priced at $18 with a cost of $12 to maintain profitability.
+[Qin->all]: Today, we've made significant strides in setting up Stars and Stripes Diner for success against our local competitor. 
 
-We've onboarded Chef John Doe, a competent mid-level chef, with a competitive salary of $2500, ensuring that our dishes are prepared with expert culinary skills. To communicate our unique selling points, we've launched a targeted advertisement campaign, showcasing our signature dish and highlighting our dedication to fresh ingredients and an authentic American dining experience.
+Starting with $10,000 in capital, we've established the diner's identity with a vintage 1950s American theme, complete with red booths and a classic jukebox. We've refreshed our menu with premium American classics at competitive prices, enhancing our offerings with dishes like the Gourmet Bourbon Burger and Smoked BBQ Ribs, ensuring we use high-quality ingredients for the best taste.
 
-Overall, today's actions aim to attract a broad customer base by balancing quality with affordability, ensuring an exceptional dining experience that stands out in the competitive market.
+We've invested in talent by hiring Chef Michael James for $3,000, a top-tier chef with expertise in American cuisine, to guarantee culinary excellence. To spread the word, we've launched a targeted ad campaign, highlighting our new gourmet menu and inviting food enthusiasts to discover authentic American tastes at our diner.
+
+All actions were meticulously executed within their respective modules: basic restaurant information, menu, chef, and advertisement management. With these steps, Stars and Stripes Diner is poised to provide a superior dining experience that's sure to attract and retain customers, keeping us ahead in the competition.
+
+[System->Qin]: Today is day 1. 
+
+The last few daybooks(Id indicates which day):
+[{'id': 1, 'income': 0, 'expense': 200, 'num_of_customer': 0, 'num_of_chef': 1, 'chef_salary': 3000, 'dish_score': 0.548, 'customer_score': 0.0, 'dishes': '{}'}]
+
+Today's customer comments:
+[]
+
+Today's rival restaurant information:
+Restaurant: Stars & Stripes Diner 
+Number of customers: 1
+ Customer Comments: [] 
+Menu: [{'id': 1, 'name': 'BBQ Bacon Burger', 'price': 14.0, 'description': 'Juicy beef patty with crispy bacon, smothered in BBQ sauce, topped with cheddar cheese, lettuce, and tomato, served with fries'}, {'id': 2, 'name': 'Classic American Hotdog', 'price': 8.0, 'description': 'Grilled frankfurter in a soft bun, with ketchup, mustard, onions, and relish'}, {'id': 3, 'name': 'Apple Pie a la Mode', 'price': 6.0, 'description': 'Traditional apple pie with a flaky crust, served warm with a scoop of vanilla ice cream'}]
 

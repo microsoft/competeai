@@ -1,0 +1,177 @@
+[System->Lin]: Today marks a new day for you to design and strategize for the restaurant, building upon past experiences and the latest information.
+
+1. Tasks
+Your first task is analyze the your and rival information and give your finds. no more than 100 words
+Your second task is to design or revise your strategy, then write it down, no more than 60 words
+Your third task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+
+2. Action Spaces
+Your action spaces: basic restaurant information, menu, chef, and advertisement.
+
+3. Rules
+Please keep in mind the following rules:
+(1) Strategies
+  - It is crucial to find the right approach for your restaurant, as this is the first and most important aspect. Consider factors such as selling more dishes at a lower cost, catering to a high-end clientele or other strategies
+(2) Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+(3) Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+(4) Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+Please write out the plan simply and then execute it in detail on corresponding module.
+
+[Lin->all]: 1. Analyze Information:
+Our American-style dishes are unique in town. Rival offers traditional English fare. We have a loyal customer base attracted to our distinctive flavors and casual dining experience.
+
+2. Design Strategy:
+Capitalize on uniqueness, enhance dish quality, and intensify targeted advertising.
+
+3. General Plan:
+Allocate funds to source premium ingredients, ensuring our dishes stand out in quality. Invest in moderate-level chefs to maintain a balance between skill and cost. Launch a targeted advertising campaign highlighting our unique American cuisine and casual, friendly atmosphere. Monitor the cost-to-price ratio to ensure profitability while maintaining exceptional taste. Evaluate customer feedback to adjust the menu and offerings continuously. 
+
+Action Spaces Execution:
+
+- Basic Restaurant Information: Maintain the American cuisine theme, ensuring it's strongly represented in the décor and ambiance.
+- Menu: Introduce signature American dishes made with high-quality ingredients. Adjust prices to reflect the improved quality while ensuring good value.
+- Chef: Hire skilled, mid-level chefs who can bring creativity to our dishes without overextending our budget.
+- Advertisement: Create engaging ads that tell a story about our unique American dining experience, targeting local social media and community boards.
+
+[EOS]
+
+[System->Lin]: Now your restaurant basic information as below:
+<INPUT 0>
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Lin->all]: {
+    "type": "add",
+    "data":{
+        "name": "Stars & Stripes Diner",
+        "money": 10000,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": "An American Restaurant, named Stars & Stripes Diner, with a classic 1950s American diner style, featuring red leather booths, a jukebox, and a neon sign."
+}
+
+[System->Lin]: Welcome to the Menu Management Module. Now your menu info as below:
+
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Lin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "BBQ Bacon Burger",
+            "description": "Juicy beef patty with crispy bacon, smothered in BBQ sauce, topped with cheddar cheese, lettuce, and tomato, served with fries",
+            "price": 14,
+            "cost_price": 7
+        },
+        "pic_desc": "A succulent beef patty with strips of bacon and melting cheddar cheese, a smudge of BBQ sauce visible, all nestled within a toasted sesame seed bun, accompanied by a side of golden fries."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Classic American Hotdog",
+            "description": "Grilled frankfurter in a soft bun, with ketchup, mustard, onions, and relish",
+            "price": 8,
+            "cost_price": 3
+        },
+        "pic_desc": "A grilled frankfurter with a light char, nestled in a fluffy bun, topped with a squiggle of ketchup and mustard, diced onions, and a generous helping of relish."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Apple Pie a la Mode",
+            "description": "Traditional apple pie with a flaky crust, served warm with a scoop of vanilla ice cream",
+            "price": 6,
+            "cost_price": 2
+        },
+        "pic_desc": "A slice of classic apple pie with steam escaping its flaky crust, next to a melting scoop of rich vanilla ice cream."
+    }
+]
+

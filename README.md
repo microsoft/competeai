@@ -5,8 +5,8 @@
 
 2. Flask is more suitable than Django
 
-TODO:
-1. group 中的关系先被确定，通过prompt输入到对话中
+Last Task!!!!
+group 中的关系先被确定，通过prompt输入到对话中
 
 ## Group
 

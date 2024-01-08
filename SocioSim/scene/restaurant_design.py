@@ -55,8 +55,9 @@ class RestaurantDesign(Scene):
         
         # remove action details of this day from message_pool
         summary = self.message_pool.last_message
+        summary.content = f"Day{self.day} summary: {summary.content}"
         self.message_pool.compress_last_turn(summary)
-        print(f"Summary: {summary.content}")
+        print("Debugging summary:")
         self.message_pool.print()
         self.day += 1
         self._curr_turn += 1
@@ -106,7 +107,7 @@ class RestaurantDesign(Scene):
         curr_player = self.get_curr_player()
         
         # special case for daybook
-        if curr_process['name'] == 'daybook' and self.day != 0:
+        if curr_process['name'] == 'plan' and self.day != 0:
             daybooks = get_data_from_database("daybook", port=self.port)
             rival_info = daybooks[self.day-1]["rival_info"]
             
@@ -115,9 +116,7 @@ class RestaurantDesign(Scene):
                 daybooks = daybooks[-5:]
             daybook_list = []
             for i, daybook in enumerate(daybooks):
-                day = self.day - len(daybooks) + i + 1
                 daybook = {k: v for k, v in daybook.items() if k != "rival_info"}
-                daybook["day"] = day
                 daybook_list.append(daybook)
                 
             comment = get_data_from_database("last_comment", port=self.port)
@@ -137,7 +136,8 @@ class RestaurantDesign(Scene):
                             from_db=curr_process['from_db'])
         
         # text observation
-        observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
+        history = True if curr_process['name'] == 'plan' else False
+        observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn, history=history)
         # vision observation
         r_name = PORT2NAME[self.port] if self.port in PORT2NAME else None
         observation_vision = image_pool.get_visible_images(restaurant_name=r_name, step_name=curr_process['name'])

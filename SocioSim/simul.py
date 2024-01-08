@@ -46,7 +46,7 @@ class Simulation:
         """
         Main function, run the simulation
         """
-        previous_scene_data = None
+        previous_scene_data = test_data
         while True:  # TODO
             data = self.step(previous_scene_data)
             previous_scene_data = data
@@ -65,6 +65,7 @@ class Simulation:
         global_prompt = config.get("global_prompt", None)
         database_port = config.get("database_port_base", None)
         exp_name = config.get("exp_name", None)
+        relationship = config.get("relationship", None)
 
         # fill the port map, not a universal code  
         for scene_config in config.scenes:
@@ -74,12 +75,14 @@ class Simulation:
                     database_port += 1
         
         # Create the players
+        # Add relationship!
         players = []
         for player_config in config.players:
             # Add public_prompt to the player config
             if global_prompt is not None:
                 player_config["global_prompt"] = global_prompt
-
+            if player_config['name'] in relationship:
+                player_config['relationship'] = relationship[player_config['name']]
             player = Player.from_config(player_config)
             players.append(player)
 

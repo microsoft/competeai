@@ -2,13 +2,14 @@ from typing import List
 from .base import Scene
 from ..agent import Player
 from ..message import MessagePool
-from ..globals import NAME2PORT, PORT2NAME, image_pool
+from ..globals import NAME2PORT, PORT2NAME
 from ..utils import log_table, get_data_from_database, send_data_to_database
 
 import numpy as np
      
 EXP_NAME = None
 
+# 增加一轮让每个人内心先做一个选择？
 processes = [
     {"name": "group_order", "from_db": False, "to_db": False},
     {"name": "group_comment", "from_db": False, "to_db": False},
@@ -107,6 +108,7 @@ class GroupDine(Scene):
 
     def terminal_action(self):
         self.day += 1
+        self._curr_turn += 1
         self._curr_process_idx = 0
         self.group_chosen = False
     
@@ -124,7 +126,6 @@ class GroupDine(Scene):
     def prepare_for_next_step(self):
         self.move_to_next_player()
         self.move_to_next_process()
-        self._curr_turn += 1
     
     # interactive step design
     def step(self, input=None):        
