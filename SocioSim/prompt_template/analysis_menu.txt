@@ -1,0 +1,14 @@
+Next are two restaurants' menus.
+restaurant1:<INPUT 0>
+
+restaurant2:<INPUT 1>
+
+Please compare them then find the similar dishes. the output format must be followed as below:
+{
+    "process of reasoning"： <your entire process of reasoning>,
+    "similar dishes": <compare two menus then find the simialr dishes>,
+    "restaurant1": [the list of similar dishes id in restaurant1 menu, for example: 1, 3, ...],
+    "restaurant2": [the list of similar dishes id in restaurant2 menu, for example: 1, 3, ...]
+}
+
+Only output this json data, don't include any other sentences!!!

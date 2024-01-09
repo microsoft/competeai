@@ -7,13 +7,15 @@ from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 
 try:
-    from openai import OpenAI
+    # from openai import OpenAI
+    import openai
 except ImportError:
     is_openai_available = False
     # logging.warning("openai package is not installed")
 else:
     openai_api_key = os.environ.get("OPENAI_KEY")
-
+    openai.api_key = openai_api_key
+    
     if openai_api_key is None:
         is_openai_available = False
     else:
@@ -46,8 +48,10 @@ def generate_image(prompt: str, filepath: str,  size: str = DEFAULT_SIZE,
     
         @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
         def _get_response(prompt):
-            client = OpenAI(api_key=openai_api_key)
-            response = client.images.generate(
+            # client = OpenAI(api_key=openai_api_key)
+            # response = client.images.generate(
+
+            response = openai.Image.create(
                 model=model,
                 prompt=prompt,
                 size=size,
@@ -103,12 +107,12 @@ def combine_images(input_paths, output_path, target_size=(1024, 1024)):
     first_image = Image.open(input_paths[0])
 
     # 缩小图片为512x512
-    resized_images = [Image.open(image_path).resize((256, 256)) for image_path in input_paths]
+    resized_images = [Image.open(image_path).resize((128, 128)) for image_path in input_paths]
 
     # 计算目标图像的长宽
     max_horizontal_images = min(len(input_paths), 4)  # 水平方向最多显示4张图片
-    target_width = 256 * max_horizontal_images
-    target_height = 256 * ((len(input_paths) - 1) // max_horizontal_images + 1)
+    target_width = 128 * max_horizontal_images
+    target_height = 128 * ((len(input_paths) - 1) // max_horizontal_images + 1)
 
     # 创建一个空白的目标图像
     result_image = Image.new("RGB", (target_width, target_height), (255, 255, 255))

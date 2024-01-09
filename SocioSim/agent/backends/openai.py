@@ -15,13 +15,16 @@ except ImportError:
     # logging.warning("openai package is not installed")
 else:
     openai_api_key = os.environ.get("OPENAI_KEY")
-    openai_api_key2 = os.environ.get("OPENAI_KEY2")
+    azure_api_key = os.environ.get("AZURE_OPENAI_KEY")
+    azure_openai_endpoint= os.environ.get("AZURE_OPENAI_ENDPOINT")
 
     if openai_api_key is None:
         # logging.warning("OpenAI API key is not set. Please set the environment variable OPENAI_API_KEY")
         is_openai_available = False
     else:
         is_openai_available = True
+
+openai.api_key = openai_api_key
 
 # Default config follows the OpenAI playground
 DEFAULT_TEMPERATURE = 0.9
@@ -62,32 +65,33 @@ class OpenAIChat(IntelligenceBackend):
 
     @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
     def _get_response(self, messages, have_image=False):
-        # FIXME: support instance config????
-        if have_image:
-            """ OpenAI 0.7 API """
-            openai.api_key = os.getenv("OPENAI_API_KEY")
-            completion = openai.ChatCompletion.create(
-                    model=self.model,
-                    messages=messages,
-                    temperature=self.temperature,
-                    max_tokens=self.max_tokens,
-                    stop=STOP
-                )
-        else:
-            """ OpenAI Azure API """
-            openai.api_type = "azure"
-            openai.api_version = "2023-07-01-preview"
-            openai.api_key = os.getenv("AZURE_OPENAI_KEY")
-            openai.api_base = os.getenv("AZURE_OPENAI_ENDPOINT")
+        # FIXME: support instance config
+        # if have_image:
+
+        # else:
+        #     """ OpenAI Azure API """
+        #     print("OpenAI Azure API")
+        #     openai.api_type = "azure"
+        #     openai.api_version = "2023-07-01-preview"
+        #     openai.api_key = azure_api_key
+        #     openai.api_base = azure_openai_endpoint
             
-            completion = openai.ChatCompletion.create(
-                    engine="gpt-4-1106",
-                    messages = messages,
-                    temperature=self.temperature,
-                    max_tokens=self.max_tokens,
-                    stop=STOP
-                )
-         
+        #     completion = openai.ChatCompletion.create(
+        #             engine="gpt-4-1106",
+        #             messages = messages,
+        #             temperature=self.temperature,
+        #             max_tokens=self.max_tokens,
+        #             stop=STOP
+        #         )
+        
+        completion = openai.ChatCompletion.create(
+                model=self.model,
+                messages=messages,
+                temperature=self.temperature,
+                max_tokens=self.max_tokens,
+                stop=STOP
+            )
+        
         response = completion.choices[0]['message']['content']
         response = response.strip()
         return response

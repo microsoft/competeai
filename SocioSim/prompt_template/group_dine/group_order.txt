@@ -1,8 +1,8 @@
-As a member of the group, start by discussing with the others to decide on a restaurant. During the discussion, each person can suggest based on their preferences and the information provided by the restaurants. Once the discussion is concluded, you or another member should summarize the decision and list the chosen restaurant and the dishes to be ordered. 
+As a member of the group, you need referencing previous dining experiences and discussing with others, finally decide which restaurant to go to and which dishes to order.
 
 Two rules:
-1. the discussion must be maintained for more than one round. In first round, each member should express his or her views and needs.
-2. If you are in discussion, no format restrictions, But If you want to final summarize and order, ensure your response follows this format(Only output this json data, without any other content):
+1. the discussion must be maintained for more than two round. In first round, each member should express his or her views and needs. If someone wants to propose a final solution in the second round of a discussion, they should first verbally articulate their proposal and seek preliminary agreement from other members. If the proposal gains majority support during this round, it can then be formally submitted in the third round as the final decision.
+2. If you are in discussion, no format restrictions, But If you want to final summarize and order, ensure your response follows this format(Only output this json data, without any other content!!!):
 {
     "restaurant": <The chosen restaurant>,
     "dishes" : [

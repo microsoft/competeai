@@ -7,7 +7,8 @@ from ..globals import NAME2PORT, PORT2NAME, BASE_PORT, image_pool
 from ..utils import PromptTemplate, get_data_from_database, \
                     log_table, combine_images, convert_img_to_base64
    
-import os                  
+import os 
+import json                 
  
 EXP_NAME = None
  
@@ -57,8 +58,9 @@ class RestaurantDesign(Scene):
         summary = self.message_pool.last_message
         summary.content = f"Day{self.day} summary: {summary.content}"
         self.message_pool.compress_last_turn(summary)
-        print("Debugging summary:")
-        self.message_pool.print()
+        # print("Debugging summary:")
+        # self.message_pool.print()
+        
         self.day += 1
         self._curr_turn += 1
         self._curr_process_idx = 0
@@ -129,8 +131,7 @@ class RestaurantDesign(Scene):
                                 step_name='daybook', 
                                 data=data)
             log_table(f'{self.log_path}/data', daybook, f"day{self.day}") # log
-            log_table(f'{self.log_path}/menu', str(menu), f"day{self.day}") # log
-
+            log_table(f'{self.log_path}/menu', json.dumps(menu), f"day{self.day}")
         # prompt for every step
         self.add_new_prompt(player_name=curr_player.name, 
                             scene_name=self.type_name, 

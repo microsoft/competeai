@@ -107,6 +107,11 @@ class GroupDine(Scene):
         return self._curr_process_idx == len(self.processes)
 
     def terminal_action(self):
+        # message pool 只留最后一个
+        summary = self.message_pool.last_message
+        summary.content = f"Day{self.day} experience: {summary.content}"
+        self.message_pool.compress_last_turn(summary)
+        
         self.day += 1
         self._curr_turn += 1
         self._curr_process_idx = 0

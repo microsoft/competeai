@@ -1,4 +1,8 @@
+"""
+    Pipeline for running the simulation.
+"""
 from SocioSim.simul import Simulation
+from SocioSim.utils import analysis
 
 import os
 import yaml
@@ -16,6 +20,7 @@ if os.path.exists(log_path):
     os.system(f"rm -rf {log_path}")
 if not os.path.exists(log_path):
     os.makedirs(log_path)
+    os.makedirs(f"{log_path}/fig")
 
 config_path = os.path.join('SocioSim', 'examples', 'group.yaml')
 relationship_path = os.path.join('SocioSim', 'relationship.yaml')
@@ -29,3 +34,6 @@ with open(config_path, 'r') as f:
     config['relationship'] = relationship
     Simul = Simulation.from_config(config)
     Simul.run()
+    
+# analysis the data
+analysis(log_path)

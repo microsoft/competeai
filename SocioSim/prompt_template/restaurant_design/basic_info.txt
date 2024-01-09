@@ -21,7 +21,7 @@ else if you want to modify the restaurant name, your response must follow the fo
     "data": {
         "name": <New name>
     },
-    "pic_desc": <If you are satisfied with current picture, return None. Else give a new text to describe>
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
 }
 
 else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.

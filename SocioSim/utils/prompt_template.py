@@ -6,7 +6,12 @@ class PromptTemplate():
         self.path_elements = path_elements
         self.path_elements[-1] = self.path_elements[-1] + '.txt'
         self.path = os.path.join(*self.path_elements)
-        self.path = os.path.join('.', 'SocioSim', 'prompt_template', self.path)
+        
+        current_script_path = os.path.abspath(__file__)
+        current_directory = os.path.dirname(current_script_path)
+        parent_directory = os.path.dirname(current_directory)
+        self.path = os.path.join(parent_directory, 'prompt_template', *self.path_elements)
+        
         if os.path.exists(self.path):
             with open(self.path, 'r') as f:
                 self.content = f.read()
