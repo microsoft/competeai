@@ -28,7 +28,7 @@ class Draw:
         plt.xlabel('Day')
         plt.ylabel('Customer flow')
 
-        print(os.getcwd())
+        # print(os.getcwd())
         path = os.path.join(self.path, 'fig', 'fig-customer-flow.pdf')
         plt.savefig(path)
 
@@ -112,8 +112,8 @@ class Draw:
     def similar_proportion(self, data):
         days = list(range(1, len(data) + 1))
         
-        similar = data * 100
-        different = 100 - similar  # 'Different' is just 100 minus 'similar'
+        similar = [x * 100 for x in data]
+        different = [100 - x for x in similar] # 'Different' is just 100 minus 'similar'
 
         # Plotting the stacked bar chart
         plt.figure()

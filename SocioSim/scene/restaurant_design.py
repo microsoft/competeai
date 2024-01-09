@@ -111,6 +111,7 @@ class RestaurantDesign(Scene):
         # special case for daybook
         if curr_process['name'] == 'plan' and self.day != 0:
             daybooks = get_data_from_database("daybook", port=self.port)
+            
             rival_info = daybooks[self.day-1]["rival_info"]
             
             # show last five days of daybook
@@ -123,6 +124,7 @@ class RestaurantDesign(Scene):
                 
             comment = get_data_from_database("last_comment", port=self.port)
             menu = get_data_from_database("menu", port=self.port)
+            menu = {'menu': json.dumps(menu)}
             
             data = [self.day, daybook_list, comment, rival_info] 
             
@@ -130,8 +132,9 @@ class RestaurantDesign(Scene):
                                 scene_name=self.type_name, 
                                 step_name='daybook', 
                                 data=data)
-            log_table(f'{self.log_path}/data', daybook, f"day{self.day}") # log
-            log_table(f'{self.log_path}/menu', json.dumps(menu), f"day{self.day}")
+            log_table(f'{self.log_path}/data', daybook_list[-1], f"day{self.day}") # log
+            log_table(f'{self.log_path}/menu', menu, f"day{self.day}")
+            
         # prompt for every step
         self.add_new_prompt(player_name=curr_player.name, 
                             scene_name=self.type_name, 

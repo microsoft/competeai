@@ -54,16 +54,20 @@ class Dine(Scene):
         for d in data:
             agent_name = next(iter(d))
             d = d[agent_name]
-            day = d["day"]
-            r_name = d["restaurant"]
             
-            # record customer choice
+            r_name = d["restaurant"]
             customer_choice[agent_name] = r_name
             
+            # if customer don't choose any restaurant, skip
+            if r_name == 'None':
+                continue
+            
+            day = d["day"]
             # construct comment
             if "comment" in d:
                 comment = {"day": day, "name": agent_name, "score": d["score"], "content":  d["comment"]}
                 comments[r_name].append({"type": "add", "data": comment})
+              
                 
             # construct daybook
             dishes = d["dishes"]

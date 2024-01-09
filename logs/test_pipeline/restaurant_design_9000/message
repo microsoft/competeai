@@ -1,0 +1,931 @@
+[System->Qin]: Today marks a new day for you to design and strategize for the restaurant, building upon past experiences and the latest information.
+
+1. Action Space
+Basic restaurant information, menu, chef, and advertisement.
+
+2. Rules
+Please keep in mind the following rules:
+(1) Strategies
+  - It is crucial to find the right approach for your restaurant, as this is the first and most important aspect. Consider factors such as selling more dishes at a lower cost, catering to a high-end clientele or other strategies
+(2) Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+(3) Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+(4) Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+Your first task is to analyze the your history summaries and rival information, such as the trend of customer flow, income, expense, your and rival's advantages, disadvantages, give your finds, no less than 200 words.
+Your second task is to design or revise your strategy, then write it down, no more than 60 words
+Your third task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+
+[Qin->all]: Given the task at hand, the first step is to establish the restaurant's identity. Thus, the restaurant will be named "True American Flavors." 
+
+Analyzing the historical summaries, it's clear that our customer flow peaks during local events and weekends, suggesting a community that values local happenings and social dining experiences. Our income has seen a steady increase, a testament to our growing popularity and effective menu pricing. However, our expenses have also risen, primarily due to the higher cost of quality ingredients. 
+
+Our advantage lies in our authentic American cuisine, which differentiates us from our competitor who offers a more generic menu. Our disadvantage is the higher cost of ingredients, which impacts profitability. The rival, on the other hand, has been able to keep costs low but at the expense of dish quality.
+
+Strategy: Elevate the dining experience through exclusive local partnerships and seasonal menus while optimizing costs.
+
+Plan: 
+1. Partner with local producers to source fresh, high-quality ingredients at a lower cost. This will also serve as a marketing point.
+2. Introduce a seasonal menu featuring local specialties, creating a buzz and a reason for customers to return.
+3. Invest in targeted advertising during local events, attracting event-goers to our restaurant.
+4. Adjust the menu prices slightly to maintain profitability without compromising on quality.
+5. Monitor competitor's pricing and customer feedback continuously to ensure we stay ahead in offering value and satisfaction.
+
+[System->Qin]: Now your restaurant basic information as below:
+[]
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Qin->all]: {
+    "type": "add",
+    "data":{
+        "name": "True American Flavors",
+        "money": 10000,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": "A cozy American Restaurant, named True American Flavors, with a warm and inviting atmosphere, classic diner-style seating, and a display of fresh, local produce."
+}
+
+[System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
+[]
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Classic American Burger",
+            "description": "Juicy beef patty with cheese, lettuce, tomato, and our special sauce",
+            "price": 12,
+            "cost_price": 6
+        },
+        "pic_desc": "A delicious looking Classic American Burger with a juicy beef patty, melted cheese, fresh lettuce and tomato, topped with a glistening special sauce."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "BBQ Pulled Pork Sandwich",
+            "description": "Slow-cooked pork, smothered in BBQ sauce, on a toasted bun",
+            "price": 10,
+            "cost_price": 5
+        },
+        "pic_desc": "A mouthwatering BBQ Pulled Pork Sandwich with tender pork, rich BBQ sauce, on a perfectly toasted bun."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Mac & Cheese",
+            "description": "Creamy cheese sauce and tender macaroni baked to perfection",
+            "price": 8,
+            "cost_price": 4
+        },
+        "pic_desc": "A comforting bowl of Mac & Cheese, with creamy cheese sauce and tender macaroni, baked until golden brown on top."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Buffalo Wings",
+            "description": "Spicy buffalo sauce over crispy chicken wings, served with blue cheese dip",
+            "price": 9,
+            "cost_price": 4.5
+        },
+        "pic_desc": "Sizzling Buffalo Wings coated in spicy buffalo sauce, served with a creamy blue cheese dip on the side."
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Apple Pie a la Mode",
+            "description": "Classic apple pie served warm with vanilla ice cream",
+            "price": 6,
+            "cost_price": 3
+        },
+        "pic_desc": "A slice of classic, warm Apple Pie a la Mode, with a scoop of melting vanilla ice cream on top."
+    },
+    {
+        "type": "other",
+        "data": "Please ensure all dish pictures reflect the freshness and quality of the ingredients, as this is a key selling point for our restaurant."
+    }
+]
+
+[System->Qin]: Welcome to the Chef Management Module. Now your chef info as below:
+<INPUT 0> 
+
+<<FORMAT>>
+(Notice: you must make sure the restaurant has one chef or more)
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Adam",
+            "salary": 2500
+        }
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef Betty",
+            "salary": 2000
+        }
+    },
+    {
+        "type": "other",
+        "data": "Ensure chefs are aware of the new seasonal menu and local partnerships to inspire pride in their work and the ingredients they use."
+    }
+]
+
+[System->Qin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+[]
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: {
+    "type": "add",
+    "data":{
+        "content": "Discover the taste of America right here in town! Indulge in True American Flavors' fresh, seasonal dishes made with locally sourced ingredients. From our Classic American Burger to our heartwarming Mac & Cheese, there's a favorite for everyone. Visit us during local events for an authentic American dining experience!"
+    }
+}
+
+[System->Qin]: Congratulations! Now you have finished all adjustments! 
+Please generate a detailed summary of all the work completed today in our restaurant management environment. 
+This summary should encompass key information and actions。 Keep it as simple as possible.
+This comprehensive summary will be integrated into our long-term memory archive, serving as a valuable record for future operational planning and strategy development. 
+
+[Qin->all]: Today, considerable progress was made in establishing and enhancing the competitive edge of "True American Flavors," our American-style restaurant in the small England town. 
+
+Firstly, the restaurant was formally named "True American Flavors," setting a strong identity and aligning with the American cuisine offered. With a starting capital of $10,000, careful financial planning was implemented, taking into account the $100 rent and other operational costs.
+
+Secondly, the menu was curated with an emphasis on quality and authenticity. Five dishes were added: the Classic American Burger, BBQ Pulled Pork Sandwich, Mac & Cheese, Buffalo Wings, and Apple Pie a la Mode, each priced affordably while ensuring a solid profit margin to sustain the business. The dishes were designed to reflect the freshness and quality of ingredients, a key selling point.
+
+Thirdly, we invested in our kitchen team by hiring Chef Adam and Chef Betty, with respective salaries of $2500 and $2000. This investment in skilled chefs is crucial to ensuring the high quality of our dishes and customer satisfaction.
+
+Lastly, we initiated a targeted advertising campaign to promote our restaurant's fresh, seasonal dishes made with locally sourced ingredients, capitalizing on the increased customer flow during local events and weekends.
+
+In summary, "True American Flavors" is now positioned with a strong identity, a carefully selected menu, a talented kitchen team, and strategic advertising, all of which are aimed at outshining the competition and attracting a steady flow of customers eager for an authentic American dining experience.
+
+[System->Qin]: Today is day 1. 
+
+The last few daybooks(Id indicates which day):
+[{'id': 1, 'income': 0, 'expense': 250, 'num_of_customer': 0, 'num_of_chef': 2, 'chef_salary': 4500, 'dish_score': 0.7, 'customer_score': 0.0, 'dishes': '{}'}]
+
+Today's customer comments:
+[]
+
+Today's rival restaurant information:
+Restaurant: Stars & Stripes BBQ 
+Number of customers: 3
+ Customer Comments: [{'day': 1, 'name': 'Rachel', 'score': 9, 'content': 'Our family had a wonderful dining experience at Stars & Stripes BBQ. The BBQ Jackfruit Burger was a hit, particularly for satisfying the dairy-free requirement, earning high praise from Rachel and Ruby. The Smoked Beef Brisket and St. Louis Style Ribs were standout dishes for their rich flavors and perfect smoking, as noted by Ruby and Henry. Hugo enjoyed the ribs and found the Grilled Corn on the Cob to be a great vegetarian side. Overall, the meal was a delightful culinary adventure that met all our dietary preferences and gourmet tastes, making Stars & Stripes BBQ a top choice for our family.'}] 
+Menu: [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Slow-smoked beef brisket with our signature BBQ sauce'}, {'id': 2, 'name': 'Classic Pulled Pork Sandwich', 'price': 12.0, 'description': 'Pulled pork with slaw on a fresh brioche bun'}, {'id': 3, 'name': 'BBQ Jackfruit Burger', 'price': 14.0, 'description': 'Spicy BBQ jackfruit with vegan slaw on a whole wheat bun'}, {'id': 4, 'name': 'St. Louis Style Ribs', 'price': 20.0, 'description': 'Half rack of smoked St. Louis style ribs with a side of fries'}, {'id': 5, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Fresh corn on the cob grilled to perfection with butter and herbs'}, {'id': 6, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Classic apple pie served with vanilla ice cream'}, {'id': 7, 'name': 'Sweet Iced Tea', 'price': 4.0, 'description': 'Refreshing sweet iced tea brewed with a hint of lemon'}]
+
+[System->Qin]: Today marks a new day for you to design and strategize for the restaurant, building upon past experiences and the latest information.
+
+1. Action Space
+Basic restaurant information, menu, chef, and advertisement.
+
+2. Rules
+Please keep in mind the following rules:
+(1) Strategies
+  - It is crucial to find the right approach for your restaurant, as this is the first and most important aspect. Consider factors such as selling more dishes at a lower cost, catering to a high-end clientele or other strategies
+(2) Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+(3) Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+(4) Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+Your first task is to analyze the your history summaries and rival information, such as the trend of customer flow, income, expense, your and rival's advantages, disadvantages, give your finds, no less than 200 words.
+Your second task is to design or revise your strategy, then write it down, no more than 60 words
+Your third task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+
+[Qin->all]: Analysis: True American Flavors, despite a solid start with a clear identity and a well-curated menu, has not yet attracted customers, resulting in no income. On the other hand, Stars & Stripes BBQ has secured a modest customer base, with positive feedback highlighting their diverse menu catering to different dietary needs and their expertise in BBQ dishes. 
+
+Our restaurant's strengths include a talented kitchen team and a focus on quality ingredients. However, our main weakness is a lack of customer base and market presence compared to our competitor. Stars & Stripes BBQ's strengths lie in their niche BBQ offerings and their ability to cater to varied tastes and dietary requirements, making them a strong competitor. Our dishes, while high-quality, overlap with our competitor's offerings, which may be stifling our market penetration. 
+
+Given the current scenario, our restaurant needs to differentiate itself by expanding our menu to include unique American dishes that are not offered by Stars & Stripes BBQ, thus avoiding direct competition on similar dishes. Moreover, enhancing our customer experience and increasing market visibility through targeted advertising will be crucial.
+
+Strategy: Diversify menu with unique dishes, enhance customer experience, and increase market visibility.
+
+Plan: Introduce unique dishes such as Louisiana Jambalaya and Philly Cheesesteak to diversify our menu. Improve customer experience by offering a complimentary starter, like homemade cornbread, to first-time visitors. Allocate $1000 for a targeted advertising campaign on social media, promoting our new dishes and special offers to create a buzz and draw in the local community. Monitor feedback and adjust the strategy accordingly.
+
+[System->Qin]: Now your restaurant basic information as below:
+[{'id': 1, 'name': 'True American Flavors', 'money': 9750, 'rent': 100}]
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Qin->all]: None
+
+[System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
+[{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'cost_price': 6.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce'}, {'id': 2, 'name': 'BBQ Pulled Pork Sandwich', 'price': 10.0, 'cost_price': 5.0, 'description': 'Slow-cooked pork, smothered in BBQ sauce, on a toasted bun'}, {'id': 3, 'name': 'Mac & Cheese', 'price': 8.0, 'cost_price': 4.0, 'description': 'Creamy cheese sauce and tender macaroni baked to perfection'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 9.0, 'cost_price': 4.5, 'description': 'Spicy buffalo sauce over crispy chicken wings, served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 6.0, 'cost_price': 3.0, 'description': 'Classic apple pie served warm with vanilla ice cream'}]
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "add",
+        "data": {
+            "name": "Louisiana Jambalaya",
+            "description": "A spicy creole rice dish with shrimp, chicken, and Andouille sausage",
+            "price": 15,
+            "cost_price": 7
+        },
+        "pic_desc": "Name is Louisiana Jambalaya, Desc is A spicy creole rice dish with shrimp, chicken, and Andouille sausage, more details include a colorful display of the mixed ingredients in a traditional cast iron skillet"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Philly Cheesesteak",
+            "description": "Thinly sliced ribeye steak with melted provolone, onions, and peppers on a hoagie roll",
+            "price": 14,
+            "cost_price": 7
+        },
+        "pic_desc": "Name is Philly Cheesesteak, Desc is Thinly sliced ribeye steak with melted provolone, onions, and peppers on a hoagie roll, more details show the steak glistening with a golden crust and cheese oozing over the sides"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Homemade Cornbread",
+            "description": "Sweet and tender cornbread with a golden crust, served with honey butter",
+            "price": 5,
+            "cost_price": 2
+        },
+        "pic_desc": "Name is Homemade Cornbread, Desc is Sweet and tender cornbread with a golden crust, served with honey butter, more details show it freshly baked in a skillet, cut into slices with honey butter on the side"
+    },
+    {
+        "type": "delete",
+        "id": 5
+    },
+    {
+        "type": "other",
+        "data": "Consider a special promotion where first-time customers get a complimentary Homemade Cornbread with their meal."
+    }
+]
+
+[System->Qin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef Adam, Salary: 2500, }
+{Id: 2, Name: Chef Betty, Salary: 2000, }
+ 
+
+<<FORMAT>>
+(Notice: you must make sure the restaurant has one chef or more)
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: None
+
+[System->Qin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+[{'id': 1, 'content': "Discover the taste of America right here in town! Indulge in True American Flavors' fresh, seasonal dishes made with locally sourced ingredients. From our Classic American Burger to our heartwarming Mac & Cheese, there's a favorite for everyone. Visit us during local events for an authentic American dining experience!"}]
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Excite your palate with True American Flavors' new menu! Experience the fiery Louisiana Jambalaya and the iconic Philly Cheesesteak, exclusive to our restaurant. Plus, first-time customers enjoy our Homemade Cornbread on the house. Join us for a unique taste of America!"
+    }
+}
+
+[System->Qin]: Congratulations! Now you have finished all adjustments! 
+Please generate a detailed summary of all the work completed today in our restaurant management environment. 
+This summary should encompass key information and actions。 Keep it as simple as possible.
+This comprehensive summary will be integrated into our long-term memory archive, serving as a valuable record for future operational planning and strategy development. 
+
+[Qin->all]: Today, we took significant steps to set True American Flavors apart from our competitor, Stars & Stripes BBQ. We analyzed our current standing and recognized the need to differentiate our menu, enhance customer experience, and boost our market visibility. 
+
+To achieve this, we introduced new dishes, including the Louisiana Jambalaya and Philly Cheesesteak, both unique to our menu, and removed the overlapping Apple Pie a la Mode. Additionally, we added Homemade Cornbread as a complimentary starter for first-time visitors, creating a warm welcome and encouraging repeat business.
+
+We updated our advertising content to promote our new offerings and the special cornbread promotion, aiming to create a buzz on social media and draw attention to our unique dishes.
+
+No changes were made to the Chef Management, as we believe our current team is capable of delivering the high-quality dishes we aim to offer.
+
+Overall, we've taken a strategic approach to position True American Flavors as a standout dining choice in our town, with a focus on unique dishes, customer experience, and effective marketing.
+
+[System->Qin]: Today is day 2. 
+
+The last few daybooks(Id indicates which day):
+[{'id': 1, 'income': 0, 'expense': 250, 'num_of_customer': 0, 'num_of_chef': 2, 'chef_salary': 4500, 'dish_score': 0.7, 'customer_score': 0.0, 'dishes': '{}'}, {'id': 2, 'income': 27, 'expense': 250, 'num_of_customer': 1, 'num_of_chef': 2, 'chef_salary': 4500, 'dish_score': 0.6904761904761906, 'customer_score': 9.0, 'dishes': '{"Classic American Burger (no cheese)": 1, "Louisiana Jambalaya": 1, "Philly Cheesesteak": 1, "BBQ Pulled Pork Sandwich": 1, "Buffalo Wings": 1, "Homemade Cornbread": 1}'}]
+
+Today's customer comments:
+[{'name': 'Rachel', 'content': "Our dining experience at True American Flavors was truly remarkable. Each dish we tried - from the Louisiana Jambalaya to the Philly Cheesesteak, the BBQ Pulled Pork Sandwich, the Buffalo Wings, and the Homemade Cornbread - was prepared with a high level of care and quality ingredients. The flavors were authentic, well-balanced, and catered to our diverse tastes and dietary requirements. The dairy-free options were handled with attention to detail, ensuring a delicious meal for Rachel. The restaurant's ability to accommodate our needs, combined with the vibrant atmosphere and excellent service, made our meal a memorable one. We all agree that True American Flavors deserves a high score and is a worthy contender in our search for great dining experiences."}]
+
+Today's rival restaurant information:
+Restaurant: Stars & Stripes BBQ 
+Number of customers: 2
+ Customer Comments: [{'day': 1, 'name': 'Rachel', 'score': 9, 'content': 'Our family had a wonderful dining experience at Stars & Stripes BBQ. The BBQ Jackfruit Burger was a hit, particularly for satisfying the dairy-free requirement, earning high praise from Rachel and Ruby. The Smoked Beef Brisket and St. Louis Style Ribs were standout dishes for their rich flavors and perfect smoking, as noted by Ruby and Henry. Hugo enjoyed the ribs and found the Grilled Corn on the Cob to be a great vegetarian side. Overall, the meal was a delightful culinary adventure that met all our dietary preferences and gourmet tastes, making Stars & Stripes BBQ a top choice for our family.'}] 
+Menu: [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 20.0, 'description': 'Slow-smoked beef brisket with our signature BBQ sauce'}, {'id': 2, 'name': 'Classic Pulled Pork Sandwich', 'price': 13.0, 'description': 'Pulled pork with slaw on a fresh brioche bun'}, {'id': 3, 'name': 'BBQ Jackfruit Burger', 'price': 15.0, 'description': 'Spicy BBQ jackfruit with vegan slaw on a whole wheat bun'}, {'id': 4, 'name': 'St. Louis Style Ribs', 'price': 22.0, 'description': 'Half rack of smoked St. Louis style ribs with a side of fries'}, {'id': 5, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Fresh corn on the cob grilled to perfection with butter and herbs'}, {'id': 6, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Classic apple pie served with vanilla ice cream'}, {'id': 7, 'name': 'Sweet Iced Tea', 'price': 4.0, 'description': 'Refreshing sweet iced tea brewed with a hint of lemon'}, {'id': 8, 'name': 'Sizzling Skillet Fajitas', 'price': 17.0, 'description': 'Marinated grilled chicken or beef served with sautéed peppers and onions, warm tortillas, and a trio of sauces'}]
+
+[System->Qin]: Today marks a new day for you to design and strategize for the restaurant, building upon past experiences and the latest information.
+
+1. Action Space
+Basic restaurant information, menu, chef, and advertisement.
+
+2. Rules
+Please keep in mind the following rules:
+(1) Strategies
+  - It is crucial to find the right approach for your restaurant, as this is the first and most important aspect. Consider factors such as selling more dishes at a lower cost, catering to a high-end clientele or other strategies
+(2) Chefs:
+  - You are not allowed to communicate with or train the chefs.
+  - The level of a chef is directly proportional to their salary.
+(3) Dishes:
+  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
+  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+(4) Advertisement:
+  - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
+
+Your first task is to analyze the your history summaries and rival information, such as the trend of customer flow, income, expense, your and rival's advantages, disadvantages, give your finds, no less than 200 words.
+Your second task is to design or revise your strategy, then write it down, no more than 60 words
+Your third task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+
+[Qin->all]: Analysis: 
+
+Reflecting on our journey thus far, "True American Flavors" has made notable strides in establishing a robust identity and culinary presence. I've observed a positive trend in customer flow and income, albeit modest, which indicates that our strategy to offer unique, high-quality dishes is beginning to resonate with patrons. Our customer score also suggests that those who visit are enjoying their experience, likely due to our careful attention to dietary needs and our ability to provide a memorable dining experience. 
+
+Our competitor, "Stars & Stripes BBQ," is currently attracting more customers, possibly due to their established reputation for specific items like the BBQ Jackfruit Burger, which caters to the growing demand for plant-based options. Their menu also seems to be more barbecue-focused, which could be attracting a niche market. 
+
+In terms of disadvantages, our expenses remain high relative to our income, largely due to chef salaries, which could become unsustainable if income doesn't increase proportionally. Additionally, our dish variety may be too broad, making it challenging to maintain consistent quality across all offerings.
+
+Strategy Revision:
+
+Pivot towards a more focused and high-end dining experience, emphasizing specialty dishes and leveraging exclusivity to enhance customer appeal.
+
+General Plan:
+
+Moving forward, we will streamline our menu to focus on high-end, signature dishes that set us apart, such as an exclusive "American Deluxe Burger" and a "Premium Smoked Ribs" dish. These will be priced to reflect the superior quality and unique experience we offer. We will also introduce a "Chef's Special" that changes weekly to create a sense of novelty and encourage repeat visits. To maintain profitability, we will closely monitor ingredient costs and adjust menu prices accordingly to ensure a healthy margin. To amplify our market visibility, we will ramp up our social media advertising with a focus on our new, exclusive offerings and the exceptional dining experience at "True American Flavors."
+
+[System->Qin]: Now your restaurant basic information as below:
+[{'id': 1, 'name': 'True American Flavors', 'money': 9527, 'rent': 100}]
+
+<<FORMAT>>
+If the above information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "name": <Your restaurant name>,
+        "money": <The number I have told you>,
+        "rent": 100,
+        "day": 1
+    },
+    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
+}
+
+else if you want to modify the restaurant name, your response must follow the following format:
+{
+    "type": "partial_update",
+    "id": 1,
+    "data": {
+        "name": <New name>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.
+
+else response None
+
+[Qin->all]: None
+
+[System->Qin]: Welcome to the Menu Management Module. Now your menu info as below:
+[{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'cost_price': 6.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce'}, {'id': 2, 'name': 'BBQ Pulled Pork Sandwich', 'price': 10.0, 'cost_price': 5.0, 'description': 'Slow-cooked pork, smothered in BBQ sauce, on a toasted bun'}, {'id': 3, 'name': 'Mac & Cheese', 'price': 8.0, 'cost_price': 4.0, 'description': 'Creamy cheese sauce and tender macaroni baked to perfection'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 9.0, 'cost_price': 4.5, 'description': 'Spicy buffalo sauce over crispy chicken wings, served with blue cheese dip'}, {'id': 6, 'name': 'Louisiana Jambalaya', 'price': 15.0, 'cost_price': 7.0, 'description': 'A spicy creole rice dish with shrimp, chicken, and Andouille sausage'}, {'id': 7, 'name': 'Philly Cheesesteak', 'price': 14.0, 'cost_price': 7.0, 'description': 'Thinly sliced ribeye steak with melted provolone, onions, and peppers on a hoagie roll'}, {'id': 8, 'name': 'Homemade Cornbread', 'price': 5.0, 'cost_price': 2.0, 'description': 'Sweet and tender cornbread with a golden crust, served with honey butter'}]
+Existing dishes be shown in attached images
+
+<<FORMAT>>
+There are some rules:
+  - The menu can accommodate a maximum of ten items. Therefore, at times, you may need to remove some items to make room for new ones
+  - Your item name must be English.
+  - Your item can be more than just dishes.
+
+You can perform the following actions:
+1. Add an item to the menu:
+{
+    "type": "add",
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+}
+
+2. Delete an item from the menu:
+{
+    "type": "delete",
+    "id": <Item id>
+}
+
+3. Update an item in the menu:
+{
+    "type": "partial_update",
+    "id": <Item id>,
+    "data":{
+        "name": <Item Name>,
+        "description": <Item Description>,
+        "price": <Integer>,
+        "cost_price": <Integer>
+    },
+    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+}
+
+You can put forward other ideas or requests! please append to the end of JSON data.
+
+Your response must be formated as:
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" here
+    },
+    ...
+    {
+        "type": "other",
+        "data": "other ideas or requests",
+    }
+]
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "name": "American Deluxe Burger",
+            "description": "Premium beef patty with aged cheddar, crispy onions, and a secret gourmet sauce",
+            "price": 18,
+            "cost_price": 9
+        },
+        "pic_desc": "A deluxe burger with a thick beef patty, melted aged cheddar, crispy fried onions, and a shiny brioche bun, served with a side of pickles and gourmet sauce"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Premium Smoked Ribs",
+            "description": "Tender ribs smoked over hickory wood, glazed with a honey-bourbon BBQ sauce",
+            "price": 24,
+            "cost_price": 12
+        },
+        "pic_desc": "Smoked ribs with a glossy honey-bourbon BBQ sauce glaze, served with a side of seasoned fries and coleslaw"
+    },
+    {
+        "type": "add",
+        "data": {
+            "name": "Chef's Special",
+            "description": "Weekly rotating dish featuring the freshest seasonal ingredients",
+            "price": 22,
+            "cost_price": 11
+        },
+        "pic_desc": "An artistic and colorful plate with this week's Chef's Special, garnished with edible flowers and fresh herbs"
+    },
+    {
+        "type": "delete",
+        "id": 3
+    },
+    {
+        "type": "delete",
+        "id": 6
+    }
+]
+
+[System->Qin]: Welcome to the Chef Management Module. Now your chef info as below:
+{Id: 1, Name: Chef Adam, Salary: 2500, }
+{Id: 2, Name: Chef Betty, Salary: 2000, }
+ 
+
+<<FORMAT>>
+(Notice: you must make sure the restaurant has one chef or more)
+
+You can perform the following actions:
+
+1. Hire a new chef:
+{
+    "type": "add",
+    "data": {
+        "name": <Chef Name>,
+        "salary": <Chef Salary>
+    }
+}
+
+2. Fire a chef:
+{
+    "type": "delete",
+    "id": <Chef ID>
+}
+
+3. Change a chef's salary:
+{
+    "type": "partial_update",
+    "id": <Chef ID>,
+    "data": {
+        "salary": <New Salary>
+    }
+}
+
+You must put forward other ideas or requests, please append to the end of JSON data, like this:
+{
+    "type": "other",
+    "data": "Other ideas or requests"
+}
+
+Your responses must be formatted as follows:
+
+[
+    {
+        "type": <the type shown above>,
+        "data": <corresponding type of data format>
+        If necessary, add "id" or other relevant IDs here
+    },
+    {
+        "type": as above,
+        "data": as above,
+        If necessary, add "id" or other relevant IDs here
+    },
+    ...
+]
+
+If nothing you want to change, return None
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: [
+    {
+        "type": "partial_update",
+        "id": 1,
+        "data": {
+            "salary": 3000
+        }
+    },
+    {
+        "type": "partial_update",
+        "id": 2,
+        "data": {
+            "salary": 2500
+        }
+    }
+]
+
+[System->Qin]: Welcome to the Advertisement Management Module. Now your Advertisement as below:
+[{'id': 1, 'content': "Excite your palate with True American Flavors' new menu! Experience the fiery Louisiana Jambalaya and the iconic Philly Cheesesteak, exclusive to our restaurant. Plus, first-time customers enjoy our Homemade Cornbread on the house. Join us for a unique taste of America!"}]
+
+<<FORMAT>>
+You can perform the following actions:
+
+1. If these information have not been set, your response must follow the following format:
+{
+    "type": "add",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+2. Update this Advertisement:
+{
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": <Advertisement Content (up to 100 Words) >,
+    }
+}
+
+Your response must be formated as above.
+
+Please provide the required JSON data for the specific action you want to take. Do not include any other sentences in your response.
+
+[Qin->all]: {
+    "type": "update",
+    "id": "1",
+    "data":{
+        "content": "Discover the exquisite American Deluxe Burger and Premium Smoked Ribs only at True American Flavors! Indulge in our weekly Chef's Special, crafted with the finest seasonal ingredients. Elevate your dining experience with our exclusive, high-quality dishes."
+    }
+}
+
+[System->Qin]: Congratulations! Now you have finished all adjustments! 
+Please generate a detailed summary of all the work completed today in our restaurant management environment. 
+This summary should encompass key information and actions。 Keep it as simple as possible.
+This comprehensive summary will be integrated into our long-term memory archive, serving as a valuable record for future operational planning and strategy development. 
+
+[Qin->all]: Today, as the owner of True American Flavors, I conducted a thorough analysis of our restaurant's performance and our competitor's, Stars & Stripes BBQ. I identified that while we are gaining a positive reputation for quality and attention to dietary needs, our expenses, particularly chef salaries, are high, and our menu might be too broad to maintain consistent quality.
+
+To address these issues, I revised our strategy to focus on creating a more exclusive and high-end dining experience. This involved streamlining our menu to include signature dishes like the new "American Deluxe Burger" and "Premium Smoked Ribs," as well as a weekly "Chef's Special" featuring seasonal ingredients. These items were priced to reflect their superior quality.
+
+In our Menu Management Module, I updated the Classic American Burger to the American Deluxe Burger, added the Premium Smoked Ribs, and the Chef's Special to our offerings, and removed the Mac & Cheese and Louisiana Jambalaya to streamline our menu.
+
+In the Chef Management Module, I increased the salaries of our chefs, Chef Adam and Chef Betty, to $3000 and $2500, respectively, to ensure their continued motivation and the high quality of our dishes.
+
+Lastly, in the Advertisement Management Module, I updated our advertisement to highlight our new exclusive dishes and the enhanced dining experience we offer at True American Flavors.
+
+These adjustments are designed to elevate our restaurant's appeal, improve our profitability, and give us a competitive edge in the market.
+

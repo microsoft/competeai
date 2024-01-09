@@ -48,9 +48,11 @@ def generate_image(prompt: str, filepath: str,  size: str = DEFAULT_SIZE,
     
         @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
         def _get_response(prompt):
+            # FIXME: v 1.0.0
             # client = OpenAI(api_key=openai_api_key)
             # response = client.images.generate(
-
+            
+            # v 0.28.1
             response = openai.Image.create(
                 model=model,
                 prompt=prompt,
@@ -59,17 +61,25 @@ def generate_image(prompt: str, filepath: str,  size: str = DEFAULT_SIZE,
                 response_format=response_format,
                 n=1,
             ) 
-            return response
+            return response['data']
 
-        @retry(stop=stop_after_attempt(3), wait=wait_random_exponential(min=1, max=60))
-        def save_picture(response, filename):
+        # @retry(stop=stop_after_attempt(3), wait=wait_random_exponential(min=1, max=60))
+        def save_picture(data, filename):
             # get out all the images in API return, whether url or base64
             # note the use of pydantic "model.data" style reference and its model_dump() method
             image_url_list = []
             image_data_list = []
-            for image in response.data:
-                image_url_list.append(image.model_dump()["url"])
-                image_data_list.append(image.model_dump()["b64_json"])
+            # FIXME: v 1.0.0
+            # for image in data:
+            #     image_url_list.append(image.model_dump()["url"])
+            #     image_data_list.append(image.model_dump()["b64_json"])
+            
+            # v 0.28.1
+            for image in data:
+                if "url" in image:
+                    image_url_list.append(image["url"])
+                if "b64_json" in image:
+                    image_data_list.append(image["b64_json"])
 
             # Initialize an empty list to store the Image objects
             image_objects = []
@@ -96,11 +106,10 @@ def generate_image(prompt: str, filepath: str,  size: str = DEFAULT_SIZE,
             else:
                 print("No image data was obtained. Maybe bad code?")
         
-        
         response = _get_response(prompt)
         save_picture(response, filepath)
 
-        return response.data[0].url
+        # return response.data[0].url
 
 def combine_images(input_paths, output_path, target_size=(1024, 1024)):
     # 打开第一张图片获取原始长宽
@@ -136,9 +145,9 @@ def combine_images(input_paths, output_path, target_size=(1024, 1024)):
 
 
 # Test function: generate_picture
-# prompt = """Dish name': 'Coq au Vin', 'price': 30, 'description': 'Classic French stew in which chicken is braised slowly in red wine and a little brandy to yield a supremely rich sauce."""
-# if __name__ == "__main__":
-#     generate_picture(prompt, filename="test")
+prompt = """Dish name': 'Coq au Vin', 'price': 30, 'description': 'Classic French stew in which chicken is braised slowly in red wine and a little brandy to yield a supremely rich sauce."""
+if __name__ == "__main__":
+    generate_image(prompt, filepath="test")
 
 
 # Test function: combine_pictures

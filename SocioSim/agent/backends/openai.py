@@ -65,7 +65,7 @@ class OpenAIChat(IntelligenceBackend):
 
     @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
     def _get_response(self, messages, have_image=False):
-        # FIXME: support instance config
+        # FIXME: v 1.0.0
         # if have_image:
 
         # else:
@@ -84,6 +84,7 @@ class OpenAIChat(IntelligenceBackend):
         #             stop=STOP
         #         )
         
+        # FIXME v 0.28.1
         completion = openai.ChatCompletion.create(
                 model=self.model,
                 messages=messages,

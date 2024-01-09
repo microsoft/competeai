@@ -40,6 +40,7 @@ class Scene(Configurable):
                 prompt_template = PromptTemplate([scene_name, step_name])
                 if from_db:
                     data = get_data_from_database(step_name, NAME2PORT[player_name])
+                    data = str(data)
                 prompt = prompt_template.render(data=data)
         elif isinstance(data, str) and data != "None":
             prompt = data
@@ -58,7 +59,12 @@ class Scene(Configurable):
                 send_data_to_database(output, step_name, NAME2PORT[player_name])
             except Exception as e:
                 raise Exception(f"Send data to database: {step_name} {NAME2PORT[player_name]} {e}")
-        # parse output to json
+
+        # Check if neither "[" nor "{" is found
+        index = min(output.find("["), output.find("{"))
+        if index != -1:
+            output = output[index:]
+            
         try:
             json_output = json.loads(output)
         except:
@@ -81,7 +87,7 @@ class Scene(Configurable):
                         nid = max(numbers) + 1 if numbers else 1
   
                     filename = f"{step_name}_{nid}"
-                    url = generate_image(desc, f'{self.log_path}/{filename}')  # FIXME
+                    generate_image(desc, f'{self.log_path}/{filename}')
                     
                     
         def shorten_text(text):

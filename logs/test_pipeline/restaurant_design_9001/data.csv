@@ -1,0 +1,10 @@
+name,day1,day2
+id,1,2
+income,53,24
+expense,233,366
+num_of_customer,3,2
+num_of_chef,1,2
+chef_salary,4000,8000
+dish_score,0.6325396825396826,1.0176329185520363
+customer_score,9.0,9.0
+dishes,"{""Grilled Corn on the Cob"": 3, ""BBQ Jackfruit Burger"": 3, ""Smoked Beef Brisket"": 1, ""St. Louis Style Ribs"": 1, ""Classic Pulled Pork Sandwich"": 1}","{""Grilled Corn on the Cob"": 2, ""BBQ Jackfruit Burger"": 2}"

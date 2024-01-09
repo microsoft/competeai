@@ -27,6 +27,7 @@ class PromptTemplate():
         prompt = copy.deepcopy(self.content)
         data = [str(i) for i in data]
         for count, i in enumerate(data):
-            prompt = prompt.replace(f'<INPUT {count}>', i)
+            if i.strip():
+                prompt = prompt.replace(f'<INPUT {count}>', i)
             
         return prompt.strip()

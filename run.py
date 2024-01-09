@@ -16,8 +16,8 @@ args = parser.parse_args()
 # create a log folder
 log_path = f"./logs/{args.name}"
 # if exist, delete it
-if os.path.exists(log_path):
-    os.system(f"rm -rf {log_path}")
+# if os.path.exists(log_path):
+#     os.system(f"rm -rf {log_path}")
 if not os.path.exists(log_path):
     os.makedirs(log_path)
     os.makedirs(f"{log_path}/fig")

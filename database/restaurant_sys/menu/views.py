@@ -15,11 +15,11 @@ class MenuViewSet(viewsets.ModelViewSet):
     filter_fields = "__all__"
     # TODO: 检查菜品名称是否存在重合？
     
-    def list(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset, many=True)
-        _string = convert_to_string_format(serializer.data)
-        return response.Response(_string, content_type='text/plain')
+    # def list(self, request, *args, **kwargs):
+    #     queryset = self.filter_queryset(self.get_queryset())
+    #     serializer = self.get_serializer(queryset, many=True)
+    #     _string = convert_to_string_format(serializer.data)
+    #     return response.Response(_string, content_type='text/plain')
     
 def get_score_per_dish(request):
     scores = {}

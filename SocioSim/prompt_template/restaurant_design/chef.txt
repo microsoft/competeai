@@ -2,6 +2,8 @@ Welcome to the Chef Management Module. Now your chef info as below:
 <INPUT 0> 
 
 <<FORMAT>>
+(Notice: you must make sure the restaurant has one chef or more)
+
 You can perform the following actions:
 
 1. Hire a new chef:

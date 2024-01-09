@@ -45,11 +45,11 @@ class Simulation:
         """
         Main function, run the simulation
         """
-        max_day = 15
+        max_day = 2
         previous_scene_data = None
         
         i = 1
-        while i < max_day:
+        while i <= len(self.scenes) * max_day + 1:
             i += 1
             data = self.step(previous_scene_data)
             previous_scene_data = data

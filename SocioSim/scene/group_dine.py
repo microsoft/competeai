@@ -31,8 +31,11 @@ class GroupDine(Scene):
         
         self.day = 1
         self.dishes = None
+        self.message_cnt = 0
+        self.max_messages_per_step = 12
         self.process_start = True # a flag to indicate adding new prompt
         self.process_end = False  # a flag to indicate move to next process
+        self.terminal_flag = False
     
     @classmethod
     def action_for_next_scene(cls, data):
@@ -55,12 +58,15 @@ class GroupDine(Scene):
         for d in data:
             agent_name = next(iter(d))
             d = d[agent_name]
-            day = d["day"]
-            r_name = d["restaurant"]
             
-            # record customer choice
+            r_name = d["restaurant"]
             customer_choice[agent_name] = r_name
             
+            # if customer don't choose any restaurant, skip
+            if r_name == 'None':
+                continue
+            
+            day = d["day"]
             # construct comment
             if "comment" in d:
                 comment = {"day": day, "name": agent_name, "score": d["score"], "content":  d["comment"]}
@@ -104,7 +110,7 @@ class GroupDine(Scene):
         return
         
     def is_terminal(self):
-        return self._curr_process_idx == len(self.processes)
+        return self._curr_process_idx == len(self.processes) or self.terminal_flag
 
     def terminal_action(self):
         # message pool 只留最后一个
@@ -115,7 +121,11 @@ class GroupDine(Scene):
         self.day += 1
         self._curr_turn += 1
         self._curr_process_idx = 0
-        self.group_chosen = False
+        self._curr_player_idx = 0
+        self.message_cnt = 0
+        self.process_start = True
+        self.process_end = False
+        self.terminal_flag = False
     
     def move_to_next_player(self):
         self._curr_player_idx = (self._curr_player_idx + 1) % self.num_of_players
@@ -124,11 +134,14 @@ class GroupDine(Scene):
         # In group order, check if choose restaurant
         if self.process_end:
             self._curr_process_idx += 1
+            # reset count
+            self.message_cnt = 0
             
             self.process_end = False
             self.process_start = True
             
     def prepare_for_next_step(self):
+        self.message_cnt += 1
         self.move_to_next_player()
         self.move_to_next_process()
     
@@ -194,9 +207,13 @@ class GroupDine(Scene):
                     result = prompt
                 
                 self._curr_player_idx = -1
-                
                 self.process_end = True
-
+                
+            elif self.message_cnt >= self.max_messages_per_step:
+                result = {self.players[0].name: {'restaurant': 'None'}}
+                self.terminal_flag = True
+                return result
+                
         if curr_process['name'] == "group_comment":
             if parsed_ouput and 'comment' in parsed_ouput:
                 dine_info = parsed_ouput
@@ -205,9 +222,13 @@ class GroupDine(Scene):
                 customer_name = self.players[0].name
                 dine_info = {customer_name: dine_info}
                 result = dine_info
-                
                 self.process_end = True
                 
+            elif self.message_cnt >= self.max_messages_per_step:
+                result = {self.players[0].name: {'restaurant': 'None'}}  # FIXME
+                self.terminal_flag = True
+                return result
+            
         self.prepare_for_next_step()
         
         return result
