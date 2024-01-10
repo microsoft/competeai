@@ -12,6 +12,6 @@ The score of each dish as below (1 is a excellent score):
         "Member 2": <Score out of 10>,
         ... <and so on for each group member>
     },
-    "comment": <A summarized comment reflecting the group's collective experience, opinions, and suggestions. If your group had dined in another restaurant, comparisons can be included>
+    "comment": <A summarized comment reflecting the group's collective experience, opinions, and suggestions. If your group had dined in another restaurant, comparisons can be included. No more than 60 words>
 }
 (If you want to summarize, only output this json data, without any other content!!!)

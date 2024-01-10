@@ -12,3 +12,5 @@ Please compare them then find the similar dishes. the output format must be foll
 }
 
 Only output this json data, don't include any other sentences!!!
+Only output this json data, don't include any other sentences!!!
+Only output this json data, don't include any other sentences!!!

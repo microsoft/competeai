@@ -34,7 +34,7 @@ def Show(request):
         # Get the comments from Comment
         customer_score = Comment.objects.aggregate(avg_score=Avg('score'))['avg_score']
         customer_score = customer_score if customer_score else 'NULL'
-        comment = Comment.objects.order_by('-id').values("day", "name", "score", "content")[:8]
+        comment = Comment.objects.order_by('-id').values("day", "name", "score", "content")[:5]
 
         data = {
             'name': name,

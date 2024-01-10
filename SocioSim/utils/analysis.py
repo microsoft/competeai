@@ -1,4 +1,5 @@
 import os
+import re
 import csv
 import json
 import openai
@@ -63,6 +64,12 @@ def analysis_menu(menu1, menu2):
     prompt = prompt_template.render(data=[menu1, menu2])
     print(prompt)
     response = get_gpt_response(prompt)
+    print(response)
+    
+    # find first { and last }
+    pattern = r"\{[\s\S]*\}"
+
+    response = re.findall(pattern, response)[0]
     print(response)
     response = json.loads(response)
 

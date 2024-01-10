@@ -287,14 +287,14 @@ scenes:
       # Single:
       - Umar
       - Katie
-      # - Oscar
-      # - Zach
-      # - Leo
-      # - David
-      # - Quincy
-      # - Jack
-      # - Xena
-      # - Bob
+      - Oscar
+      - Zach
+      - Leo
+      - David
+      - Quincy
+      - Jack
+      - Xena
+      - Bob
 
       # Family:
       # Affluent Family (4 people):
@@ -303,58 +303,58 @@ scenes:
         - Hugo
         - Henry
       # Middle Class Family (4 people):
-      # - - William
-      #   - Felix
-      #   - Xavier
-      #   - Paula
-      # # Poor Family (3 people):
-      # - - Nate
-      #   - Vicky
-      #   - Steve
-      # # Very Poor Family (3 people):
-      # - - Wade
-      #   - Ivy
-      #   - Emma
+      - - William
+        - Felix
+        - Xavier
+        - Paula
+      # Poor Family (3 people):
+      - - Nate
+        - Vicky
+        - Steve
+      # Very Poor Family (3 people):
+      - - Wade
+        - Ivy
+        - Emma
 
-      # # Colleague:
-      # # Affluent Colleagues (2 people):
-      # - - Dexter
-      #   - Ulysses
-      # # Poor Colleagues (2 people):
-      # - - Yasmine
-      #   - Eve
-      # # Middle-Class Colleagues (3 people):
-      # - - Tara
-      #   - Tina
-      #   - Chloe
-      # # Middle-Class Colleagues (3 people):
-      # - - Frank
-      #   - Giselle
-      #   - Yara
+      # Colleague:
+      # Affluent Colleagues (2 people):
+      - - Dexter
+        - Ulysses
+      # Poor Colleagues (2 people):
+      - - Yasmine
+        - Eve
+      # Middle-Class Colleagues (3 people):
+      - - Tara
+        - Tina
+        - Chloe
+      # Middle-Class Colleagues (3 people):
+      - - Frank
+        - Giselle
+        - Yara
 
-      # # Couple: 
-      # # Affluent Couples:
-      # - - Nora
-      #   - Alice
-      # # Middle-Class Couples:
-      # - - Maggie
-      #   - Valerie
-      # # Very Poor Couples:
-      # - - Max
-      #   - Sam
+      # Couple: 
+      # Affluent Couples:
+      - - Nora
+        - Alice
+      # Middle-Class Couples:
+      - - Maggie
+        - Valerie
+      # Very Poor Couples:
+      - - Max
+        - Sam
 
-      # # Friend:
-      # # Affluent Friends:
-      # - - Olivia
-      #   - Charlie
-      # # One Poor, One Middle-Class:
-      # - - Grace
-      #   - Peter
-      # # Two Middle-Class, One Poor:
-      # - - Amelia
-      #   - Lara
-      #   - Iris
-      # # Two Poor, One Middle-Class:
-      # - - Jake
-      #   - Brian
-      #   - Quinn
+      # Friend:
+      # Affluent Friends:
+      - - Olivia
+        - Charlie
+      # One Poor, One Middle-Class:
+      - - Grace
+        - Peter
+      # Two Middle-Class, One Poor:
+      - - Amelia
+        - Lara
+        - Iris
+      # Two Poor, One Middle-Class:
+      - - Jake
+        - Brian
+        - Quinn
