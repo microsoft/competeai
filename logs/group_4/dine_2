@@ -1,0 +1,942 @@
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the authentic taste of America right here at American Flavors! Enjoy our signature dishes like the Classic American Burger and BBQ Ribs. Join our loyalty program for exclusive discounts and be part of our unique themed events. Your next culinary adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with blue cheese dip'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy macaroni and cheese topped with a golden breadcrumb crust'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie', 'price': 8.0, 'description': 'Classic American apple pie with a flaky crust, served with vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 8, 'name': 'Milkshake', 'price': 6.0, 'description': 'Thick and creamy milkshake in various flavors'}, {'id': 9, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken with avocado, bacon, lettuce, tomato, and mayo'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Crispy sweet potato fries with a side of signature dipping sauce'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Come taste the spirit of America at USA Diner! Indulge in our new Liberty Burger, savor the heat of Eagle's Wings, and finish with our delightful Patriot Pie. Special discounts for followers. Share your dining experience and become part of our loyalty program for exclusive offers!
+3. Menu 
+   [{'id': 1, 'name': 'Liberty Burger', 'price': 15.0, 'description': 'A juicy beef patty topped with cheese, crispy bacon, and our special BBQ sauce, served with a side of fries.'}, {'id': 2, 'name': "Eagle's Wings", 'price': 12.0, 'description': 'Crispy chicken wings tossed in a spicy buffalo sauce, served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Freedom Fries', 'price': 6.0, 'description': 'Seasoned potato fries served with a side of our signature Cajun dipping sauce.'}, {'id': 4, 'name': 'Patriot Pie', 'price': 8.0, 'description': 'Homemade apple pie with a flaky crust, served warm with vanilla ice cream.'}, {'id': 5, 'name': 'Star-Spangled Soda', 'price': 4.0, 'description': 'A refreshing blend of cola, cherry, and vanilla flavors, topped with a splash of soda.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Cobb Salad",
+        "Apple Pie"
+    ],
+    "reason" : "American Flavors offers a wider variety of traditional dishes that suit my taste. The menu items like the Classic Burger and Apple Pie are appealing, and the option of a Cobb Salad aligns with my health-conscious approach."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.73
+Cobb Salad: 0.71
+Apple Pie: 0.71
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was satisfying with the burger being juicy and flavorful. The Cobb Salad was fresh and the Apple Pie ended the meal on a sweet note. Overall, a pleasant dining experience."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.142857142857143
+2. Advertisement
+   Indulge in our new 'American Flavors Apple Pie,' with a flakier crust and richer filling! Explore healthier options like our Kale & Quinoa Salad. Perfect for health-conscious diners! Join us for a taste of America that caters to all.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with blue cheese dip'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy macaroni and cheese topped with a golden breadcrumb crust'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 9, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken with avocado, bacon, lettuce, tomato, and mayo'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Crispy sweet potato fries with a side of signature dipping sauce'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 12.0, 'description': 'A hearty blend of kale, quinoa, fresh veggies, and a light lemon vinaigrette, catering to health-conscious patrons'}]
+4. Comments
+   [{'day': 1, 'name': 'Jake', 'score': 7, 'content': 'American Flavors provided a good meal that catered to diverse tastes and dietary needs, offering consistent quality and enjoyable dishes.'}, {'day': 1, 'name': 'Amelia', 'score': 7, 'content': "The meal at 'American Flavors' was good but not exceptional. The dishes were well-prepared with a focus on comfort and classic flavors, satisfying our varied tastes without standing out as extraordinary."}, {'day': 1, 'name': 'Grace', 'score': 7, 'content': 'The meal was enjoyable with fresh, quality ingredients. The desserts satisfied our love for baked goods, while the salad met health needs. Overall, a good experience.'}, {'day': 1, 'name': 'Olivia', 'score': 7, 'content': 'The dishes at American Flavors were consistently good across the board, meeting our health-conscious and gluten-free needs while offering a satisfying taste experience.'}, {'day': 1, 'name': 'Max', 'score': 7, 'content': 'American Flavors offered a pleasing variety of dishes. The Sweet Potato Fries and Apple Pie were highlights, and the Classic American Burger satisfied a taste for the familiar. Overall, a good dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Discover bold flavors and new dietary delights at USA Diner! Try our enhanced Liberty Burger and Eagle's Wings, or explore our Vegetarian Victory Bowl and Gluten-Free Gastronomy Pizza. Join us for an unforgettable taste journey with dishes that cater to everyone!
+3. Menu 
+   [{'id': 1, 'name': 'Liberty Burger', 'price': 17.0, 'description': 'A juicy beef patty topped with cheese, crispy bacon, and our special BBQ sauce, served with a side of fries.'}, {'id': 2, 'name': "Eagle's Wings", 'price': 14.0, 'description': 'Crispy chicken wings tossed in a spicy buffalo sauce, served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Freedom Fries', 'price': 7.0, 'description': 'Seasoned potato fries served with a side of our signature Cajun dipping sauce.'}, {'id': 4, 'name': 'Patriot Pie', 'price': 10.0, 'description': 'Homemade apple pie with a flaky crust, served warm with vanilla ice cream.'}, {'id': 5, 'name': 'Star-Spangled Soda', 'price': 5.0, 'description': 'A refreshing blend of cola, cherry, and vanilla flavors, topped with a splash of soda.'}, {'id': 6, 'name': 'Vegetarian Victory Bowl', 'price': 14.0, 'description': 'A hearty bowl of quinoa, roasted seasonal vegetables, and a drizzle of our green goddess dressing.'}, {'id': 7, 'name': 'Gluten-Free Gastronomy Pizza', 'price': 16.0, 'description': 'A delicious gluten-free pizza with a blend of mozzarella, fresh tomatoes, and basil.'}]
+4. Comments
+   [{'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}, {'day': 1, 'name': 'Quincy', 'score': 5, 'content': "The flavors at USA Diner were average; the Liberty Burger and Eagle's Wings lacked a distinct taste. Freedom Fries were decent but not remarkable. For someone with dietary restrictions, more variety would be appreciated. Overall, an average dining experience, could benefit from more flavorful dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Cobb Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "Comparing both menus and customer scores, American Flavors has a higher score and offers traditional dishes with fresh ingredients that align with my preference for classic tastes and a balanced diet."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.75
+Cobb Salad: 0.73
+American Flavors Apple Pie: 0.73
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The Classic American Burger was truly succulent, and the flavors were well-balanced. The Cobb Salad was fresh, complementing the meal with its healthful ingredients. The Apple Pie was a delightful finish with its flaky crust and rich filling."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.161290322580645
+2. Advertisement
+   Savor the new Vegan Power Bowl and BBQ Jackfruit Sandwich at American Flavors! Delight in our improved Classic American Burger and BBQ Ribs with superior taste. Fresh, innovative, and perfect for every palate. Visit us for an unforgettable dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 17.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with blue cheese dip'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy macaroni and cheese topped with a golden breadcrumb crust'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 9, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken with avocado, bacon, lettuce, tomato, and mayo'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Crispy sweet potato fries with a side of signature dipping sauce'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 12.0, 'description': 'A hearty blend of kale, quinoa, fresh veggies, and a light lemon vinaigrette, catering to health-conscious patrons'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 15.0, 'description': 'A nutritious bowl with a mix of black beans, avocado, sweet corn, and quinoa, topped with a spicy tahini dressing'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Pulled jackfruit smothered in BBQ sauce, served on a vegan bun with coleslaw'}]
+4. Comments
+   [{'day': 2, 'name': 'Jake', 'score': 7, 'content': 'American Flavors delivered a consistently good dining experience with flavorsome dishes catering to various tastes and health preferences, at reasonable prices.'}, {'day': 2, 'name': 'Grace', 'score': 8, 'content': 'American Flavors provided a meal that was both delicious and suitable for our dietary needs, with a particularly good balance between healthy salads and indulgent desserts. Consistent quality across all dishes.'}, {'day': 2, 'name': 'Olivia', 'score': 7, 'content': 'American Flavors delivered on taste and quality, with dishes meeting our health preferences and dietary needs. Consistency and freshness were the highlights.'}, {'day': 2, 'name': 'Max', 'score': 7, 'content': 'The meal at American Flavors was satisfying with a focus on comfort and health. Dishes like the Kale & Quinoa Salad and Sweet Potato Fries catered to plant-based preferences, while the burger and pie hit the spot for home-style tastes.'}, {'day': 2, 'name': 'Maggie', 'score': 7, 'content': 'Our meal at American Flavors was thoroughly enjoyable with every dish meeting our expectations for taste and quality. The balance of healthy options and indulgent sweets provided a well-rounded dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Experience the comfort of home at USA Diner with our new Lean Liberty Burger and Skinny Eagle's Wings! Enjoy wholesome favorites like our Wholesome American Salad and Homestyle Turkey Wrap. Perfect for health-conscious foodies!
+3. Menu 
+   [{'id': 1, 'name': 'Lean Liberty Burger', 'price': 15.0, 'description': 'A lower-calorie version of our classic burger with a lean beef patty, light cheese, lettuce, tomato, and a dollop of our tangy sauce, served with a side of baked sweet potato fries.'}, {'id': 2, 'name': "Skinny Eagle's Wings", 'price': 12.0, 'description': 'Baked chicken wings coated in a zesty low-calorie buffalo sauce, served with a side of celery and carrot sticks, and a light blue cheese dressing.'}, {'id': 3, 'name': 'Freedom Fries', 'price': 7.0, 'description': 'Seasoned potato fries served with a side of our signature Cajun dipping sauce.'}, {'id': 4, 'name': 'Patriot Pie', 'price': 10.0, 'description': 'Homemade apple pie with a flaky crust, served warm with vanilla ice cream.'}, {'id': 5, 'name': 'Star-Spangled Soda', 'price': 5.0, 'description': 'A refreshing blend of cola, cherry, and vanilla flavors, topped with a splash of soda.'}, {'id': 8, 'name': 'Wholesome American Salad', 'price': 12.0, 'description': 'A nutritious blend of mixed greens, cherry tomatoes, cucumbers, roasted turkey chunks, and a sprinkle of cheese, dressed in a light vinaigrette.'}, {'id': 9, 'name': 'Homestyle Turkey Wrap', 'price': 13.0, 'description': 'Sliced turkey breast, avocado, lettuce, tomato, and a hint of mayo wrapped in a whole wheat tortilla, served with a side of fruit salad.'}, {'id': 10, 'name': 'Balanced Breakfast Plate', 'price': 11.0, 'description': 'Start your day right with scrambled egg whites, whole grain toast, a medley of sautéed vegetables, and lean turkey bacon.'}]
+4. Comments
+   [{'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}, {'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}, {'day': 1, 'name': 'Quincy', 'score': 5, 'content': "The flavors at USA Diner were average; the Liberty Burger and Eagle's Wings lacked a distinct taste. Freedom Fries were decent but not remarkable. For someone with dietary restrictions, more variety would be appreciated. Overall, an average dining experience, could benefit from more flavorful dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Cobb Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "American Flavors has a higher customer score, indicating better overall satisfaction. The menu includes a range of traditional dishes that cater to a balance of taste and health."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.74
+Cobb Salad: 0.76
+American Flavors Apple Pie: 0.76
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The Classic American Burger was juicy and well-seasoned, while the Cobb Salad provided a fresh and nutritious balance. The Apple Pie was a delightful end to the meal with its perfect sweetness and texture."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.36734693877551
+2. Advertisement
+   Introducing the 'Sizzling Flavor Steak' - our new weekly special! Plus, enjoy enhanced flavors across our menu, including the Classic American Burger with gourmet fries and our superfood-packed Kale & Quinoa Salad. Visit American Flavors for a taste sensation!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 18.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy macaroni and cheese topped with a golden breadcrumb crust'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 9, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken with avocado, bacon, lettuce, tomato, and mayo'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Crispy sweet potato fries with a side of signature dipping sauce'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 13.0, 'description': 'A superfood powerhouse with kale, quinoa, roasted nuts, dried cranberries, and a zesty orange ginger dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 16.0, 'description': 'Our Vegan Power Bowl now comes with a flavorful avocado-lime dressing, adding a refreshing twist to your healthy meal.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Pulled jackfruit smothered in BBQ sauce, served on a vegan bun with coleslaw'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 24.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices and seared to perfection, served with garlic mashed potatoes and seasonal vegetables.'}]
+4. Comments
+   [{'day': 3, 'name': 'Jake', 'score': 8, 'content': 'American Flavors consistently delivers with a variety of dishes that cater to our health-conscious and flavor-seeking palates, striking a good balance between taste, health, and budget.'}, {'day': 3, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors delivered a satisfying blend of classic and health-conscious dishes, with standout salads and vegan options. Desserts were a delightful finale. The overall experience was commendable.'}, {'day': 3, 'name': 'Grace', 'score': 8, 'content': 'American Flavors provided a satisfying meal that met our dietary needs without sacrificing flavor. The balance of healthy options and indulgent desserts was appreciated by all.'}, {'day': 3, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors impressed with consistently good dishes. The Grilled Chicken Sandwich and salads were fresh, flavorful, and met our health-conscious and gluten-free needs. A delightful dining experience.'}, {'day': 3, 'name': 'Max', 'score': 8, 'content': 'American Flavors delivered a satisfying meal with a good mix of plant-based and home-style options. The Vegan Power Bowl and Sweet Potato Fries were particularly impressive.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.25
+2. Advertisement
+   Taste the Bold Spirit of America at USA Diner! Come in for our new Smokey Mountain Burger and Spicy Route 66 Chili. Get 10% off your first meal and join our Frequent Diner program for exclusive deals!
+3. Menu 
+   [{'id': 3, 'name': 'Freedom Fries', 'price': 7.0, 'description': 'Seasoned potato fries served with a side of our signature Cajun dipping sauce.'}, {'id': 4, 'name': 'Patriot Pie', 'price': 10.0, 'description': 'Homemade apple pie with a flaky crust, served warm with vanilla ice cream.'}, {'id': 5, 'name': 'Star-Spangled Soda', 'price': 5.0, 'description': 'A refreshing blend of cola, cherry, and vanilla flavors, topped with a splash of soda.'}, {'id': 8, 'name': 'Wholesome American Salad', 'price': 12.0, 'description': 'A nutritious blend of mixed greens, cherry tomatoes, cucumbers, roasted turkey chunks, and a sprinkle of cheese, dressed in a light vinaigrette.'}, {'id': 9, 'name': 'Homestyle Turkey Wrap', 'price': 13.0, 'description': 'Sliced turkey breast, avocado, lettuce, tomato, and a hint of mayo wrapped in a whole wheat tortilla, served with a side of fruit salad.'}, {'id': 10, 'name': 'Balanced Breakfast Plate', 'price': 11.0, 'description': 'Start your day right with scrambled egg whites, whole grain toast, a medley of sautéed vegetables, and lean turkey bacon.'}, {'id': 11, 'name': 'Smokey Mountain Burger', 'price': 18.0, 'description': 'Hearty beef patty topped with smoked cheddar, crispy onions, and our rich bourbon BBQ sauce, served with garlic fries.'}, {'id': 12, 'name': 'Spicy Route 66 Chili', 'price': 15.0, 'description': 'A fiery blend of beef, kidney beans, and jalapenos, simmered in a chipotle-infused sauce, topped with sour cream and cheddar cheese.'}]
+4. Comments
+   [{'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}, {'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}, {'day': 1, 'name': 'Quincy', 'score': 5, 'content': "The flavors at USA Diner were average; the Liberty Burger and Eagle's Wings lacked a distinct taste. Freedom Fries were decent but not remarkable. For someone with dietary restrictions, more variety would be appreciated. Overall, an average dining experience, could benefit from more flavorful dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Cobb Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "Based on customer scores and comments, American Flavors provides a satisfying balance between health-conscious options and traditional flavors, with consistently positive reviews highlighting fresh and flavorful dishes."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.8
+Cobb Salad: 0.8
+American Flavors Apple Pie: 0.8
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was exceptional. The Classic American Burger was cooked to perfection, the Cobb Salad was crisp and refreshing, and the Apple Pie was a delightful end to a wonderful dining experience."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.507462686567164
+2. Advertisement
+   Explore our new 'Signature Dish Series' featuring the 'American Spice Delight' burger and 'Heartland Harvest Bowl'. Plus, experience our improved 'Sizzling Flavor Steak' with a memorable taste. Come to American Flavors for unique flavors and healthy options!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 18.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 9, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken with avocado, bacon, lettuce, tomato, and mayo'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 13.0, 'description': 'A superfood powerhouse with kale, quinoa, roasted nuts, dried cranberries, and a zesty orange ginger dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 16.0, 'description': 'Our Vegan Power Bowl now comes with a flavorful avocado-lime dressing, adding a refreshing twist to your healthy meal.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Pulled jackfruit smothered in BBQ sauce, served on a vegan bun with coleslaw'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 24.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 15, 'name': 'American Spice Delight', 'price': 19.0, 'description': 'A bold, spicy twist on the classic burger with jalapeno slaw, pepper jack cheese, and a fiery sauce.'}, {'id': 16, 'name': 'Heartland Harvest Bowl', 'price': 17.0, 'description': 'A comforting bowl of roasted seasonal vegetables, wild rice, and grilled chicken, drizzled with a herb dressing.'}]
+4. Comments
+   [{'day': 4, 'name': 'Jake', 'score': 8, 'content': 'American Flavors delivered again, providing delicious dishes that catered to our diverse preferences and health considerations. Each meal was enjoyed and met our expectations, justifying our collective score of 8 out of 10.'}, {'day': 4, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors delivered a uniformly excellent dining experience, with each dish scoring an 8. The steak, salads, and desserts were all particularly noteworthy for their perfect balance of flavor and health.'}, {'day': 4, 'name': 'Grace', 'score': 8, 'content': 'American Flavors delivered a satisfying meal fitting our health and taste preferences. Fresh salads, perfectly cooked steak, and balanced desserts all scored highly.'}, {'day': 4, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors provided a meal that impressed with its well-executed dishes. The Grilled Chicken Sandwich, Kale & Quinoa Salad, and Sizzling Flavor Steak were particular highlights for their flavor and freshness. The Apple Pie and Sweet Potato Fries rounded off a delightful dining experience.'}, {'day': 4, 'name': 'Max', 'score': 8, 'content': 'American Flavors delivered a satisfying meal with the Vegan Power Bowl, Sweet Potato Fries, Kale & Quinoa Salad, and Apple Pie, all rated highly for taste and quality. Consistently impressive plant-based options.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.2
+2. Advertisement
+   Discover USA Diner's New Flavors! Introducing our Signature Smokey Mountain Burger, Lean Turkey & Hummus Wrap, and Freedom Fire Wings. Enjoy a free Classic American Apple Crisp with any signature dish. Limited offer - where taste meets tradition!
+3. Menu 
+   [{'id': 4, 'name': 'Patriot Pie', 'price': 10.0, 'description': 'Homemade apple pie with a flaky crust, served warm with vanilla ice cream.'}, {'id': 8, 'name': 'Health-Boost American Salad', 'price': 14.0, 'description': 'Fresh kale, spinach, grilled chicken, avocado, nuts, with a tangy lemon-herb dressing.'}, {'id': 9, 'name': 'Lean Turkey & Hummus Wrap', 'price': 14.0, 'description': 'Whole wheat wrap with lean turkey, hummus, fresh veggies, served with beetroot chips.'}, {'id': 10, 'name': 'Balanced Breakfast Plate', 'price': 11.0, 'description': 'Start your day right with scrambled egg whites, whole grain toast, a medley of sautéed vegetables, and lean turkey bacon.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 20.0, 'description': 'Premium beef patty, smoked gouda, crispy turkey bacon, onion rings, special BBQ sauce, with sweet potato fries.'}, {'id': 12, 'name': 'Spicy Route 66 Chili', 'price': 15.0, 'description': 'A fiery blend of beef, kidney beans, and jalapenos, simmered in a chipotle-infused sauce, topped with sour cream and cheddar cheese.'}, {'id': 13, 'name': 'Freedom Fire Wings', 'price': 13.0, 'description': 'Jumbo wings tossed in a spicy, sweet glaze served with celery and a blue cheese dip.'}, {'id': 14, 'name': 'Classic American Apple Crisp', 'price': 9.0, 'description': 'Warm spiced apples topped with a crunchy oat crumble, served with a scoop of cinnamon ice cream.'}]
+4. Comments
+   [{'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}, {'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}, {'day': 1, 'name': 'Quincy', 'score': 5, 'content': "The flavors at USA Diner were average; the Liberty Burger and Eagle's Wings lacked a distinct taste. Freedom Fries were decent but not remarkable. For someone with dietary restrictions, more variety would be appreciated. Overall, an average dining experience, could benefit from more flavorful dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Cobb Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "American Flavors has a higher customer score, indicating greater satisfaction. The menu offers a good balance of health-conscious options and traditional dishes that cater to my taste."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.81
+Cobb Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was excellent. The Classic American Burger was juicy and satisfying, the Cobb Salad was fresh and flavorful, and the Apple Pie was a perfect sweet finish."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.626506024096385
+2. Advertisement
+   Don't miss our 'Dish of the Week' - a new surprise with every visit! Enjoy the unique taste of our 'American Spice Delight' and the wholesome goodness of 'Heartland Harvest Bowl'. Taste the difference at American Flavors - where every bite is a delight!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 19.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 13.0, 'description': 'A superfood powerhouse with kale, quinoa, roasted nuts, dried cranberries, and a zesty orange ginger dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 17.0, 'description': 'Our Vegan Power Bowl now comes with a flavorful avocado-lime dressing, adding a refreshing twist to your healthy meal.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Pulled jackfruit smothered in BBQ sauce, served on a vegan bun with coleslaw'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 25.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 15, 'name': 'American Spice Delight', 'price': 20.0, 'description': 'A bold, spicy twist on the classic burger with jalapeno slaw, pepper jack cheese, and a fiery sauce.'}, {'id': 16, 'name': 'Heartland Harvest Bowl', 'price': 17.0, 'description': 'A comforting bowl of roasted seasonal vegetables, wild rice, and grilled chicken, drizzled with a herb dressing.'}, {'id': 17, 'name': 'American Hearty Brunch', 'price': 15.0, 'description': 'A filling brunch option featuring scrambled eggs, whole grain toast, crispy bacon, hash browns, and a side of fruit salad.'}]
+4. Comments
+   [{'day': 5, 'name': 'Jake', 'score': 8, 'content': 'American Flavors delivered an unanimously satisfying experience with well-balanced, flavorful dishes that catered to our diverse tastes and dietary needs.'}, {'day': 5, 'name': 'Amelia', 'score': 8, 'content': "The dishes at 'American Flavors' impressed us all, with each scoring an 8.1. The 'American Spice Delight' and 'Vegan Power Bowl' were flavorful and healthy, the 'Sizzling Flavor Steak' was succulent, and the 'Kale & Quinoa Salad' was fresh and satisfying."}, {'day': 5, 'name': 'Grace', 'score': 8, 'content': "All dishes from American Flavors were thoroughly enjoyed, providing a balance of spice, flavor, and health-conscious options. The 'American Spice Delight' burger and desserts were particularly commendable."}, {'day': 5, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors delivered yet again with high-quality, delicious, and health-conscious dishes, meeting our gluten-free needs and taste for freshness.'}, {'day': 5, 'name': 'Max', 'score': 9, 'content': 'American Flavors excels with both plant-based and comfort dishes, maintaining high standards with flavorful, healthy options and attentive service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.2
+2. Advertisement
+   Come taste the bold flavors of America at USA Diner! Featuring our revamped Ultimate Patriot Pie and Signature Smokey Mountain Burger, plus new Liberty Burger and Freedom Fries. First-time customers get 10% off!
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 12.0, 'description': 'Our classic apple pie taken to new heights, with a richer buttery crust and a blend of sweet and tart apples, served with homemade cinnamon whipped cream.'}, {'id': 8, 'name': 'Superfood American Salad', 'price': 16.0, 'description': 'A nutritious blend of kale, spinach, quinoa, roasted chickpeas, and fresh avocado, tossed in a citrus-tahini dressing.'}, {'id': 9, 'name': 'Lean Turkey & Avocado Wrap', 'price': 16.0, 'description': 'Whole wheat wrap filled with lean turkey, ripe avocado, a hint of garlic aioli, and crisp greens, served with house-made quinoa chips.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 22.0, 'description': 'Our famous burger with a smoky twist: premium beef patty, melted cheddar, crispy onions, and house-smoked BBQ sauce, served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 18.0, 'description': 'A classic American burger with a juicy beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce.'}, {'id': 16, 'name': 'Freedom Fries', 'price': 7.0, 'description': 'Golden, crispy fries seasoned with our special blend of spices and served with a side of our classic American dipping sauce.'}]
+4. Comments
+   [{'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}, {'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}, {'day': 1, 'name': 'Quincy', 'score': 5, 'content': "The flavors at USA Diner were average; the Liberty Burger and Eagle's Wings lacked a distinct taste. Freedom Fries were decent but not remarkable. For someone with dietary restrictions, more variety would be appreciated. Overall, an average dining experience, could benefit from more flavorful dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Cobb Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "American Flavors' higher customer score suggests better satisfaction. The menu provides traditional dishes with fresh ingredients, aligning with my preference for classic cuisine without dietary restrictions."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.81
+Cobb Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was deeply satisfying. The Classic American Burger was juicy and hearty, the Cobb Salad fresh and crisp, and the Apple Pie hit the sweet spot perfectly."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.702970297029703
+2. Advertisement
+   Explore bold flavors with our new 'Grilled Seafood Symphony' and 'Global Fusion Tacos'! Plus, our Vegan Power Bowl and BBQ Jackfruit Sandwich now feature exciting new twists. Savor the innovation at American Flavors - where each dish is a masterpiece!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 19.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 13.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 17.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 25.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 15, 'name': 'American Spice Delight', 'price': 20.0, 'description': 'A bold, spicy twist on the classic burger with jalapeno slaw, pepper jack cheese, and a fiery sauce.'}, {'id': 16, 'name': 'Heartland Harvest Bowl', 'price': 17.0, 'description': 'A comforting bowl of roasted seasonal vegetables, wild rice, and grilled chicken, drizzled with a herb dressing.'}, {'id': 18, 'name': 'Grilled Seafood Symphony', 'price': 26.0, 'description': 'An assortment of grilled seafood including shrimp, scallops, and fish, seasoned with bold spices and served with a citrus herb sauce.'}, {'id': 19, 'name': 'Global Fusion Tacos', 'price': 18.0, 'description': 'Tacos filled with international flavors, featuring fillings like Korean bulgogi, Indian paneer tikka, and Mexican al pastor.'}]
+4. Comments
+   [{'day': 6, 'name': 'Jake', 'score': 8, 'content': 'Consistently excellent, American Flavors impressed with perfectly spiced and well-balanced dishes. Each item was a hit, combining health and taste masterfully.'}, {'day': 6, 'name': 'Amelia', 'score': 8, 'content': 'Another excellent meal at American Flavors, with every dish scoring an 8.1. The steak, salads, and bowls offered a perfect blend of health and flavor, while the spice delight and apple pie rounded out our dining experience superbly.'}, {'day': 6, 'name': 'Grace', 'score': 8, 'content': 'American Flavors delivered another round of deliciously perfect dishes, catering to health-conscious and indulgent preferences alike, with standout flavors and quality preparation.'}, {'day': 6, 'name': 'Olivia', 'score': 9, 'content': 'American Flavors delivered an exceptional dining experience, with each dish showcasing fresh ingredients and bold flavors that satisfied our artistic tastes and dietary needs.'}, {'day': 6, 'name': 'Max', 'score': 8, 'content': 'The dishes at American Flavors were consistently high-quality, with perfect scores from all. The plant-based options and home-style dishes were flavorful and well-received. Excellent service enhanced the dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.2
+2. Advertisement
+   Rediscover classic American dining at USA Diner with our focused menu of bold flavors! Enjoy our Signature Smokey Mountain Burger, new Classic American Hotdog, and sumptuous All-Star BBQ Chicken. Plus, indulge in our Blue Ribbon Apple Crisp for dessert. Authentic tastes, quality ingredients, and friendly prices await you!
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 10.0, 'description': 'Our classic apple pie taken to new heights, with a richer buttery crust and a blend of sweet and tart apples, served with homemade cinnamon whipped cream.'}, {'id': 8, 'name': 'Superfood American Salad', 'price': 14.0, 'description': 'A nutritious blend of kale, spinach, quinoa, roasted chickpeas, and fresh avocado, tossed in a citrus-tahini dressing.'}, {'id': 9, 'name': 'Lean Turkey & Avocado Wrap', 'price': 14.0, 'description': 'Whole wheat wrap filled with lean turkey, ripe avocado, a hint of garlic aioli, and crisp greens, served with house-made quinoa chips.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 20.0, 'description': 'Our famous burger with a smoky twist: premium beef patty, melted cheddar, crispy onions, and house-smoked BBQ sauce, served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 16.0, 'description': 'A classic American burger with a juicy beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce.'}, {'id': 16, 'name': 'Freedom Fries', 'price': 6.0, 'description': 'Golden, crispy fries seasoned with our special blend of spices and served with a side of our classic American dipping sauce.'}, {'id': 17, 'name': 'Classic American Hotdog', 'price': 8.0, 'description': 'Grilled all-beef hotdog on a toasted bun with ketchup, mustard, onions, and relish.'}, {'id': 18, 'name': 'All-Star BBQ Chicken', 'price': 18.0, 'description': 'Grilled chicken breast smothered in our signature BBQ sauce, served with coleslaw and baked beans.'}, {'id': 19, 'name': 'Blue Ribbon Apple Crisp', 'price': 8.0, 'description': 'Warm apple crisp made with fresh apples and a crumbly topping, served with a scoop of vanilla ice cream.'}]
+4. Comments
+   [{'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}, {'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}, {'day': 1, 'name': 'Quincy', 'score': 5, 'content': "The flavors at USA Diner were average; the Liberty Burger and Eagle's Wings lacked a distinct taste. Freedom Fries were decent but not remarkable. For someone with dietary restrictions, more variety would be appreciated. Overall, an average dining experience, could benefit from more flavorful dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Kale & Quinoa Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "American Flavors has higher customer scores and positive comments about the quality and flavor balance of their dishes, which suits my preference for traditional cuisine."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was delightful. The Classic American Burger was succulent, the Kale & Quinoa Salad was refreshing, and the Apple Pie had just the right amount of sweetness."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.7899159663865545
+2. Advertisement
+   Introducing the American Gourmet Slider Trio! Indulge in a taste of variety with our trio of mini gourmet burgers - each offering a unique burst of flavor. Come experience the latest culinary innovation at American Flavors, where exceptional taste meets creative presentation.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 19.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 14.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 18.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 27.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 18, 'name': 'Grilled Seafood Symphony', 'price': 28.0, 'description': 'An assortment of grilled seafood including shrimp, scallops, and fish, seasoned with bold spices and served with a citrus herb sauce.'}, {'id': 19, 'name': 'Global Fusion Tacos', 'price': 18.0, 'description': 'Tacos filled with international flavors, featuring fillings like Korean bulgogi, Indian paneer tikka, and Mexican al pastor.'}, {'id': 20, 'name': 'American Gourmet Slider Trio', 'price': 21.0, 'description': 'A sampler of mini burgers featuring classic, BBQ, and spicy flavors, each created with gourmet ingredients and unique presentations.'}]
+4. Comments
+   [{'day': 7, 'name': 'Jake', 'score': 8, 'content': 'American Flavors delivered yet again with dishes that impressed all palates. Well-executed classics and innovative options provided a balanced, enjoyable meal. Consistently good service added to the experience.'}, {'day': 7, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors provided a consistently delicious and satisfying meal across all dishes. The balance of health-conscious options and indulgent flavors catered to our diverse tastes, ensuring a delightful dining experience.'}, {'day': 7, 'name': 'Grace', 'score': 8, 'content': 'A unanimous 8 out of 10 for American Flavors, where the consistent quality, diverse menu, and excellent service catered perfectly to our tastes, health, and curiosity.'}, {'day': 7, 'name': 'Olivia', 'score': 9, 'content': 'American Flavors delivered a delightful dining experience with fresh, flavorful dishes. The gluten-free options were perfect for our dietary needs, and the quality was consistent with their high reputation.'}, {'day': 7, 'name': 'Max', 'score': 9, 'content': "American Flavors provided an excellent dining experience with standout vegan options and comforting classics. Every dish was flavorful, well-executed, and met our group's diverse preferences."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Experience the bold and unique tastes at USA Diner with our new Legendary BBQ Feast and Coastal Catch Seafood Platter! Each dish is crafted for a memorable dining adventure. Join us for a culinary journey that's as adventurous as America itself!
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 12.0, 'description': 'Our classic apple pie taken to new heights, with a richer buttery crust and a blend of sweet and tart apples, served with homemade cinnamon whipped cream.'}, {'id': 8, 'name': 'Superfood American Salad', 'price': 14.0, 'description': 'A nutritious blend of kale, spinach, quinoa, roasted chickpeas, and fresh avocado, tossed in a citrus-tahini dressing.'}, {'id': 9, 'name': 'Lean Turkey & Avocado Wrap', 'price': 16.0, 'description': 'Whole wheat wrap filled with lean turkey, ripe avocado, a hint of garlic aioli, and crisp greens, served with house-made quinoa chips.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 20.0, 'description': 'Our famous burger with a smoky twist: premium beef patty, melted cheddar, crispy onions, and house-smoked BBQ sauce, served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 16.0, 'description': 'A classic American burger with a juicy beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce.'}, {'id': 16, 'name': 'Freedom Fries', 'price': 6.0, 'description': 'Golden, crispy fries seasoned with our special blend of spices and served with a side of our classic American dipping sauce.'}, {'id': 19, 'name': 'Blue Ribbon Apple Crisp', 'price': 8.0, 'description': 'Warm apple crisp made with fresh apples and a crumbly topping, served with a scoop of vanilla ice cream.'}, {'id': 20, 'name': 'Legendary BBQ Feast', 'price': 28.0, 'description': 'A platter featuring our finest slow-cooked BBQ ribs, brisket, and pulled pork, served with cornbread, pickles, and a trio of our house-made BBQ sauces.'}, {'id': 21, 'name': 'Coastal Catch Seafood Platter', 'price': 30.0, 'description': 'An exquisite selection of fresh, grilled seafood including succulent shrimp, scallops, and a seasonal fish, accompanied by a zesty lemon-herb dressing and steamed vegetables.'}]
+4. Comments
+   [{'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}, {'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Kale & Quinoa Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "American Flavors has a higher customer score, indicating more satisfaction. The dishes ordered cater to my traditional taste while offering freshness and a balance of nutrition."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Classic American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "score": 8,
+    "comment": "The Classic American Burger and Kale & Quinoa Salad were satisfying and aligned with my traditional tastes. The Apple Pie concluded the meal on a high note. However, a bit more innovation could enhance the dining experience."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.838028169014085
+2. Advertisement
+   Discover our new American Innovation Salad and refreshed Sizzling Flavor Steak! Our salad combines roasted beets and goat cheese for a bold taste, while the steak is now more succulent than ever. Come to American Flavors, where tradition meets innovation on a plate.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 21.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 14.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 18.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 30.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 18, 'name': 'Grilled Seafood Symphony', 'price': 28.0, 'description': 'An assortment of grilled seafood including shrimp, scallops, and fish, seasoned with bold spices and served with a citrus herb sauce.'}, {'id': 19, 'name': 'Global Fusion Tacos', 'price': 18.0, 'description': 'Tacos filled with international flavors, featuring fillings like Korean bulgogi, Indian paneer tikka, and Mexican al pastor.'}, {'id': 20, 'name': 'American Gourmet Slider Trio', 'price': 21.0, 'description': 'A sampler of mini burgers featuring classic, BBQ, and spicy flavors, each created with gourmet ingredients and unique presentations.'}, {'id': 21, 'name': 'American Innovation Salad', 'price': 17.0, 'description': 'A creative twist on salad with roasted beets, goat cheese, walnuts, and arugula, dressed in a honey-balsamic vinaigrette.'}]
+4. Comments
+   [{'day': 8, 'name': 'Jake', 'score': 8, 'content': 'American Flavors delivered consistent quality across the board, catering to our diverse tastes and health needs with well-seasoned, balanced dishes.'}, {'day': 8, 'name': 'Amelia', 'score': 8, 'content': "American Flavors consistently delivers with high-quality, flavorful dishes and excellent service. The Global Fusion Tacos, Grilled Seafood Symphony, and Kale & Quinoa Salad all impressed, reflecting the restaurant's dedication to both taste and health."}, {'day': 8, 'name': 'Grace', 'score': 9, 'content': 'American Flavors provided an exceptional dining experience with a perfect balance of health-conscious and indulgent dishes. The meal catered to our dietary needs and tastes, with each dish scoring high on flavor.'}, {'day': 8, 'name': 'Olivia', 'score': 9, 'content': 'American Flavors excelled with their Kale & Quinoa Salad and American Gourmet Slider Trio, meeting gluten-free needs, delivering on taste, and providing variety. Consistently high-quality food and service.'}, {'day': 8, 'name': 'Max', 'score': 9, 'content': 'American Flavors delivered an exceptional dining experience with robust flavors in the Vegan Power Bowl and Kale & Quinoa Salad, and the Apple Pie and Classic Burger continued to impress.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Join USA Diner for unforgettable nights with live music and our sensational Stars & Stripes S’mores! Indulge in a taste of American spirit with every bite of our revamped menu, featuring heartwarming classics and adventurous new flavors. Your next memorable meal awaits!
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 14.0, 'description': 'Our classic apple pie taken to new heights, with a richer buttery crust and a blend of sweet and tart apples, served with homemade cinnamon whipped cream.'}, {'id': 8, 'name': 'Superfood American Salad', 'price': 16.0, 'description': 'A nutritious blend of kale, spinach, quinoa, roasted chickpeas, and fresh avocado, tossed in a citrus-tahini dressing.'}, {'id': 9, 'name': 'Lean Turkey & Avocado Wrap', 'price': 18.0, 'description': 'Whole wheat wrap filled with lean turkey, ripe avocado, a hint of garlic aioli, and crisp greens, served with house-made quinoa chips.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 22.0, 'description': 'Our famous burger with a smoky twist: premium beef patty, melted cheddar, crispy onions, and house-smoked BBQ sauce, served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 18.0, 'description': 'A classic American burger with a juicy beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce.'}, {'id': 16, 'name': 'Freedom Fries', 'price': 7.0, 'description': 'Golden, crispy fries seasoned with our special blend of spices and served with a side of our classic American dipping sauce.'}, {'id': 19, 'name': 'Blue Ribbon Apple Crisp', 'price': 10.0, 'description': 'Warm apple crisp made with fresh apples and a crumbly topping, served with a scoop of vanilla ice cream.'}, {'id': 20, 'name': 'Legendary BBQ Feast', 'price': 32.0, 'description': 'A platter featuring our finest slow-cooked BBQ ribs, brisket, and pulled pork, served with cornbread, pickles, and a trio of our house-made BBQ sauces.'}, {'id': 21, 'name': 'Coastal Catch Seafood Platter', 'price': 34.0, 'description': 'An exquisite selection of fresh, grilled seafood including succulent shrimp, scallops, and a seasonal fish, accompanied by a zesty lemon-herb dressing and steamed vegetables.'}, {'id': 22, 'name': 'Stars & Stripes S’mores', 'price': 10.0, 'description': "A patriotic twist on the classic s'mores with homemade graham crackers, chocolate, and star-shaped marshmallows, served with a side of berry compote."}]
+4. Comments
+   [{'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}, {'day': 1, 'name': 'Nora', 'score': 5, 'content': "USA Diner's attempt at comfort food was average. Gluten-free options were available but lacked flavor. Improvements in seasoning and texture needed."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Kale & Quinoa Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "Considering the consistently higher customer scores and positive comments for American Flavors, I believe it will provide a more satisfying dining experience with a balance of traditional and health-conscious dishes."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was thoroughly enjoyable. The Classic American Burger was cooked to perfection, the Kale & Quinoa Salad was a tasty blend of health and flavor, and the Apple Pie provided a delightful end to a great meal."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.886075949367089
+2. Advertisement
+   Indulge in bold flavors and fresh innovation at American Flavors! Try our new American Superfood Burst, packed with energizing superfoods, and savor our upgraded Sizzling Flavor Steak. Experience culinary excellence in every bite. Your taste adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 23.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 10.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 14.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 18.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 32.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 18, 'name': 'Grilled Seafood Symphony', 'price': 30.0, 'description': 'An assortment of grilled seafood including shrimp, scallops, and fish, seasoned with bold spices and served with a citrus herb sauce.'}, {'id': 20, 'name': 'American Gourmet Slider Trio', 'price': 21.0, 'description': 'A sampler of mini burgers featuring classic, BBQ, and spicy flavors, each created with gourmet ingredients and unique presentations.'}, {'id': 21, 'name': 'American Innovation Salad', 'price': 17.0, 'description': 'A creative twist on salad with roasted beets, goat cheese, walnuts, and arugula, dressed in a honey-balsamic vinaigrette.'}, {'id': 22, 'name': 'American Superfood Burst', 'price': 19.0, 'description': 'A vibrant dish packed with a variety of superfoods, including acai berries, chia seeds, and kale, served with a light citrus dressing for an energizing meal option.'}]
+4. Comments
+   [{'day': 9, 'name': 'Jake', 'score': 8, 'content': 'American Flavors consistently delivers with delicious, diverse options that cater to our health and taste preferences, all at a great value.'}, {'day': 9, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors excelled with its Global Fusion Tacos, Grilled Seafood Symphony, innovative salads, and Sizzling Flavor Steak, each earning a well-deserved 8 out of 10 for combining health-conscious dining with robust flavors.'}, {'day': 9, 'name': 'Grace', 'score': 9, 'content': 'American Flavors impressed with high-quality dishes that catered to our health and taste preferences. The balance of indulgence and nutrition was spot on, reaffirming our choice. Consistent excellence in both service and culinary experience.'}, {'day': 9, 'name': 'Olivia', 'score': 9, 'content': 'American Flavors excelled with fresh, flavorful dishes, aligning perfectly with health-conscious, gluten-free preferences and Mediterranean tastes. Consistent quality and creativity shone through each dish.'}, {'day': 9, 'name': 'Maggie', 'score': 8, 'content': 'American Flavors delivered an exceptional dining experience with a perfect blend of healthy and indulgent options. Each dish was flavorful, and the desserts were a sweet triumph. Overall, the meal scored an 8.1, reflecting quality and satisfaction.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.428571428571429
+2. Advertisement
+   Experience the bold and health-conscious American cuisine at USA Diner! Our new Heartland Harvest Bowl and enhanced favorites like the Signature Smokey Mountain Burger are sure to delight your senses. Savor the rich, comforting flavors that make us uniquely American. Your journey to a premium dining experience begins here!
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 16.0, 'description': 'Our classic apple pie taken to new heights, with a richer buttery crust and a blend of sweet and tart apples, served with homemade cinnamon whipped cream.'}, {'id': 8, 'name': 'Superfood American Salad', 'price': 18.0, 'description': 'A nutritious blend of kale, spinach, quinoa, roasted chickpeas, and fresh avocado, tossed in a citrus-tahini dressing.'}, {'id': 9, 'name': 'Lean Turkey & Avocado Wrap', 'price': 18.0, 'description': 'Whole wheat wrap filled with lean turkey, ripe avocado, a hint of garlic aioli, and crisp greens, served with house-made quinoa chips.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 24.0, 'description': 'Our famous burger with a smoky twist: premium beef patty, melted cheddar, crispy onions, and house-smoked BBQ sauce, served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 20.0, 'description': 'A classic American burger with a juicy beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce.'}, {'id': 19, 'name': 'Blue Ribbon Apple Crisp', 'price': 12.0, 'description': 'Warm apple crisp made with fresh apples and a crumbly topping, served with a scoop of vanilla ice cream.'}, {'id': 20, 'name': 'Legendary BBQ Feast', 'price': 36.0, 'description': 'A platter featuring our finest slow-cooked BBQ ribs, brisket, and pulled pork, served with cornbread, pickles, and a trio of our house-made BBQ sauces.'}, {'id': 21, 'name': 'Coastal Catch Seafood Platter', 'price': 38.0, 'description': 'An exquisite selection of fresh, grilled seafood including succulent shrimp, scallops, and a seasonal fish, accompanied by a zesty lemon-herb dressing and steamed vegetables.'}, {'id': 22, 'name': 'Stars & Stripes S’mores', 'price': 12.0, 'description': "A patriotic twist on the classic s'mores with homemade graham crackers, chocolate, and star-shaped marshmallows, served with a side of berry compote."}, {'id': 23, 'name': 'Heartland Harvest Bowl', 'price': 20.0, 'description': 'A hearty bowl of roasted seasonal vegetables, ancient grains, and lean protein, drizzled with a homemade herby green goddess dressing.'}]
+4. Comments
+   [{'day': 9, 'name': 'Max', 'score': 6, 'content': "USA Diner's fare was fair, lacking the distinct flavors we've relished at American Flavors. The meal was satisfactory but not exceptional, leaving us nostalgic for the richer, more inventive offerings we previously enjoyed."}, {'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Kale & Quinoa Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "American Flavors has a higher customer score, indicating greater overall satisfaction. The dishes align with my traditional taste preferences while also offering a balance of nutrition."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was outstanding. The Classic American Burger was flavorful and satisfying, the Kale & Quinoa Salad was fresh and well-seasoned, and the Apple Pie was the perfect end to the meal with its rich, comforting taste."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.932203389830509
+2. Advertisement
+   Discover the fresh taste of America at American Flavors! Enjoy our new Patriotic Pancake Stack for a berry-filled breakfast, or feast on our improved Classic American Burger and succulent Sizzling Flavor Steak. Join our loyalty program for exclusive benefits. Your table is waiting!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 25.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our house-made BBQ sauce'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 12.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 16.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 20.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 35.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 18, 'name': 'Grilled Seafood Symphony', 'price': 33.0, 'description': 'An assortment of grilled seafood including shrimp, scallops, and fish, seasoned with bold spices and served with a citrus herb sauce.'}, {'id': 20, 'name': 'American Gourmet Slider Trio', 'price': 21.0, 'description': 'A sampler of mini burgers featuring classic, BBQ, and spicy flavors, each created with gourmet ingredients and unique presentations.'}, {'id': 22, 'name': 'American Superfood Burst', 'price': 19.0, 'description': 'A vibrant dish packed with a variety of superfoods, including acai berries, chia seeds, and kale, served with a light citrus dressing for an energizing meal option.'}, {'id': 23, 'name': 'Patriotic Pancake Stack', 'price': 15.0, 'description': 'Fluffy buttermilk pancakes with a hint of vanilla, served with blueberries, strawberries, and whipped cream, creating a red, white, and blue tribute.'}]
+4. Comments
+   [{'day': 10, 'name': 'Jake', 'score': 8, 'content': 'American Flavors excels with a menu that caters to diverse tastes and dietary preferences, offering delicious, health-conscious options without sacrificing flavor or quality.'}, {'day': 10, 'name': 'Amelia', 'score': 8, 'content': "American Flavors impressed with a health-conscious yet flavorful spread, from the hearty Vegan Power Bowl to the indulgent Sizzling Flavor Steak. Each dish scored an 8.1, reflecting the restaurant's commitment to quality and taste."}, {'day': 10, 'name': 'Grace', 'score': 9, 'content': 'The dishes at American Flavors were exceptional, offering a perfect balance of indulgence and health-conscious options, catering to our diverse tastes and dietary needs.'}, {'day': 10, 'name': 'Olivia', 'score': 9, 'content': 'American Flavors delivered an exceptional experience with the Kale & Quinoa Salad and the American Gourmet Slider Trio being particularly outstanding. Fresh ingredients and robust flavors were consistent across all dishes, confirming our preference for this restaurant.'}, {'day': 10, 'name': 'Max', 'score': 9, 'content': 'Every dish at American Flavors was exceptional, from the plant-based options like the Vegan Power Bowl to the indulgent American Flavors Apple Pie. The consistent quality and taste across the menu provided a satisfying experience for all.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.428571428571429
+2. Advertisement
+   Discover the taste of tradition at USA Diner! Indulge in our Signature Smokey Mountain Burger, the Ultimate Patriot Pie, and our new Coastal Catch Seafood Platter. Premium ingredients, bold American flavors, and a dining experience that celebrates our culinary heritage. Join us for an unforgettable meal.
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 20.0, 'description': 'Our classic apple pie taken to new heights, with a richer buttery crust and a blend of sweet and tart apples, served with homemade cinnamon whipped cream.'}, {'id': 8, 'name': 'Superfood American Salad', 'price': 22.0, 'description': 'A nutritious blend of kale, spinach, quinoa, roasted chickpeas, and fresh avocado, tossed in a citrus-tahini dressing.'}, {'id': 9, 'name': 'Lean Turkey & Avocado Wrap', 'price': 22.0, 'description': 'Whole wheat wrap filled with lean turkey, ripe avocado, a hint of garlic aioli, and crisp greens, served with house-made quinoa chips.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 28.0, 'description': 'Our famous burger with a smoky twist: premium beef patty, melted cheddar, crispy onions, and house-smoked BBQ sauce, served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 24.0, 'description': 'A classic American burger with a juicy beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce.'}, {'id': 19, 'name': 'Blue Ribbon Apple Crisp', 'price': 14.0, 'description': 'Warm apple crisp made with fresh apples and a crumbly topping, served with a scoop of vanilla ice cream.'}, {'id': 20, 'name': 'Legendary BBQ Feast', 'price': 42.0, 'description': 'A platter featuring our finest slow-cooked BBQ ribs, brisket, and pulled pork, served with cornbread, pickles, and a trio of our house-made BBQ sauces.'}, {'id': 21, 'name': 'Coastal Catch Seafood Platter', 'price': 44.0, 'description': 'An exquisite selection of fresh, grilled seafood including succulent shrimp, scallops, and a seasonal fish, accompanied by a zesty lemon-herb dressing and steamed vegetables.'}, {'id': 22, 'name': 'Stars & Stripes S’mores', 'price': 14.0, 'description': "A patriotic twist on the classic s'mores with homemade graham crackers, chocolate, and star-shaped marshmallows, served with a side of berry compote."}, {'id': 23, 'name': 'Heartland Harvest Bowl', 'price': 24.0, 'description': 'A hearty bowl of roasted seasonal vegetables, ancient grains, and lean protein, drizzled with a homemade herby green goddess dressing.'}]
+4. Comments
+   [{'day': 9, 'name': 'Max', 'score': 6, 'content': "USA Diner's fare was fair, lacking the distinct flavors we've relished at American Flavors. The meal was satisfactory but not exceptional, leaving us nostalgic for the richer, more inventive offerings we previously enjoyed."}, {'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': "The group found both the Vegetarian Victory Bowl and the Liberty Burger to be fair, lacking in flavor. The healthy attempt was noted, but overall, the dishes didn't impress. We hope for tastier and more creative options in the future."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "Classic American Burger",
+        "Kale & Quinoa Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason": "American Flavors has a higher customer score, indicating greater satisfaction, and the menu items ordered previously met my preference for traditional yet balanced meals."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was exceptionally pleasing with the Classic American Burger being juicy and flavorful, the Kale & Quinoa Salad fresh and satisfying, and the American Flavors Apple Pie ending the meal on a sweet, comforting note."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.9689119170984455
+2. Advertisement
+   Rise and shine with American Flavors! Introducing the American Sunrise Breakfast Bowl to kickstart your morning, alongside our beloved classic dishes with a fresh twist. Indulge in healthier, bolder flavors with every visit. Your journey to delicious wellness begins here!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 26.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with upgraded gourmet fries.'}, {'id': 6, 'name': 'American Flavors Apple Pie', 'price': 13.0, 'description': 'Our improved classic American apple pie with a flakier crust and richer filling, served with premium vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 17.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 21.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 17.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Sizzling Flavor Steak', 'price': 37.0, 'description': 'A succulent rib-eye steak marinated in our signature blend of spices, creating a unique, memorable flavor, served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 18, 'name': 'Grilled Seafood Symphony', 'price': 35.0, 'description': 'An assortment of grilled seafood including shrimp, scallops, and fish, seasoned with bold spices and served with a citrus herb sauce.'}, {'id': 20, 'name': 'American Gourmet Slider Trio', 'price': 22.0, 'description': 'A sampler of mini burgers featuring classic, BBQ, and spicy flavors, each created with gourmet ingredients and unique presentations.'}, {'id': 22, 'name': 'American Superfood Burst', 'price': 20.0, 'description': 'A vibrant dish packed with a variety of superfoods, including acai berries, chia seeds, and kale, served with a light citrus dressing for an energizing meal option.'}, {'id': 24, 'name': 'American Sunrise Breakfast Bowl', 'price': 18.0, 'description': 'Start your day with a nutritious bowl filled with scrambled eggs, roasted sweet potatoes, avocado slices, and sprinkled with cheddar and fresh herbs.'}]
+4. Comments
+   [{'day': 11, 'name': 'Jake', 'score': 8, 'content': "All members enjoyed their meals, with each dish delivering on flavor and dietary preferences. The consistent score of 8 reflects our collective satisfaction with American Flavors' ability to cater to health and taste."}, {'day': 11, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors delivered an exceptional dining experience, satisfying our diverse preferences with dishes that perfectly balanced health and indulgence. Consistent quality across the board.'}, {'day': 11, 'name': 'Grace', 'score': 9, 'content': 'American Flavors provided a satisfying blend of indulgence and health. Each dish was thoughtfully prepared, catering to both taste preferences and dietary needs, warranting a high score.'}, {'day': 11, 'name': 'Olivia', 'score': 9, 'content': 'American Flavors once again impressed us with a variety of dishes that were both healthy and flavorful. The Kale & Quinoa Salad, Slider Trio, Vegan Power Bowl, Sizzling Steak, and Superfood Burst all received high praise for their fresh ingredients and robust flavors, reaffirming our preference for this restaurant.'}, {'day': 11, 'name': 'Max', 'score': 9, 'content': 'American Flavors delivered an exceptional dining experience, with the Vegan Power Bowl, Kale & Quinoa Salad, Apple Pie, and Burger all earning high praise for their freshness, flavor, and quality.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.625
+2. Advertisement
+   Join USA Diner for a revamped classic American experience! Relish our enhanced Signature Smokey Mountain Burger with a fried egg twist and savor the Legendary BBQ Feast at a new attractive price. Excite your taste buds with our interactive build-your-own-burger nights and live cooking demonstrations! Great food, great fun – only at USA Diner.
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 20.0, 'description': 'Our classic apple pie taken to new heights, with a richer buttery crust and a blend of sweet and tart apples, served with homemade cinnamon whipped cream.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 30.0, 'description': 'Premium beef patty, melted cheddar, crispy onions, and house-smoked BBQ sauce, topped with a fried egg and served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 24.0, 'description': 'A classic American burger with a juicy beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce.'}, {'id': 19, 'name': 'Blue Ribbon Apple Crisp', 'price': 14.0, 'description': 'Warm apple crisp made with fresh apples and a crumbly topping, served with a scoop of vanilla ice cream.'}, {'id': 20, 'name': 'Legendary BBQ Feast', 'price': 38.0, 'description': 'Our finest slow-cooked BBQ ribs, brisket, and pulled pork, served with cornbread and a side of our house-made BBQ sauces.'}, {'id': 22, 'name': 'Stars & Stripes S’mores', 'price': 14.0, 'description': "A patriotic twist on the classic s'mores with homemade graham crackers, chocolate, and star-shaped marshmallows, served with a side of berry compote."}, {'id': 24, 'name': 'Classic American Hot Dog', 'price': 18.0, 'description': 'A juicy, grilled hot dog on a toasted bun, topped with caramelized onions, relish, and a drizzle of mustard and ketchup.'}, {'id': 25, 'name': 'Spicy Buffalo Wings', 'price': 16.0, 'description': 'Crispy chicken wings tossed in our signature spicy buffalo sauce, served with blue cheese dressing and celery sticks.'}, {'id': 26, 'name': 'All-American Apple Pie', 'price': 12.0, 'description': 'Our traditional apple pie with a flaky crust and a luscious apple filling, served with a dollop of whipped cream.'}, {'id': 27, 'name': 'Tex-Mex Fajita Platter', 'price': 26.0, 'description': 'Sizzling chicken and beef fajitas served with grilled peppers, onions, warm tortillas, guacamole, sour cream, and pico de gallo.'}]
+4. Comments
+   [{'day': 11, 'name': 'Wade', 'score': 7, 'content': 'USA Diner offered fresh, healthy options but lacked distinct flavors. Dishes like the Coastal Catch Seafood Platter were fair, but we missed the bold taste of American Flavors.'}, {'day': 9, 'name': 'Max', 'score': 6, 'content': "USA Diner's fare was fair, lacking the distinct flavors we've relished at American Flavors. The meal was satisfactory but not exceptional, leaving us nostalgic for the richer, more inventive offerings we previously enjoyed."}, {'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic American Burger",
+        "Kale & Quinoa Salad",
+        "American Flavors Apple Pie"
+    ],
+    "reason" : "American Flavors' higher customer score and my previous positive experiences with their dishes, which suit my traditional taste, lead me to choose it again for a balanced meal."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Classic American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+American Flavors Apple Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "score": 8,
+    "comment": "The consistency in taste and quality at American Flavors remains commendable. The Classic American Burger, Kale & Quinoa Salad, and Apple Pie were all good, satisfying my craving for traditional cuisine with a healthful touch. An 8 reflects my continued satisfaction, though there's room for a bit more creativity in flavors."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.990654205607477
+2. Advertisement
+   Discover bold flavors at American Flavors! Savor our new Fiery Sizzling Steak, indulge in the Ultimate American Burger, and finish with our Caramelized Apple Pie Delight. Experience our upgraded classics and let your taste buds celebrate with every bite. Join us for a culinary adventure!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 28.0, 'description': 'Our Ultimate American Burger now features a blend of angus beef and spices, topped with smoked gouda, crispy shallots, and our homemade zesty burger sauce, served with truffle fries.'}, {'id': 6, 'name': 'Caramelized Apple Pie Delight', 'price': 15.0, 'description': 'Our classic apple pie is now upgraded with caramelized apples and a hint of cinnamon, served with a scoop of bourbon vanilla ice cream.'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 17.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 21.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 17.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Fiery Sizzling Steak', 'price': 39.0, 'description': 'Our Fiery Sizzling Steak is marinated in a smoky chipotle rub and served with a spicy roasted red pepper sauce, garlic mashed potatoes, and grilled asparagus.'}, {'id': 18, 'name': 'Exotic Grilled Seafood Platter', 'price': 37.0, 'description': 'A lavish platter of exotic seafood, including tiger prawns, calamari, and sea bass, grilled to perfection with a spicy mango-papaya salsa.'}, {'id': 20, 'name': 'Deluxe American Slider Selection', 'price': 24.0, 'description': 'A trio of deluxe sliders: angus beef with blue cheese, pulled pork with tangy coleslaw, and spicy buffalo chicken, each paired with its signature sauce and garnish.'}]
+4. Comments
+   [{'day': 12, 'name': 'Jake', 'score': 8, 'content': "The dishes at American Flavors delivered on taste and quality, satisfying our varied preferences and dietary needs. Consistent and accommodating, it's a top choice for healthful and indulgent meals alike."}, {'day': 12, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors provided a diverse selection that met our health and taste preferences, with each dish showcasing exceptional flavors and freshness. The consistent quality solidifies its reputation as our top dining choice.'}, {'day': 12, 'name': 'Grace', 'score': 9, 'content': 'American Flavors excelled once again with dishes that were flavorful, health-conscious, and perfectly suited our tastes. The consistency in quality and service remains unmatched.'}, {'day': 12, 'name': 'Olivia', 'score': 9, 'content': "American Flavors delivered an exceptional dining experience, offering dishes that catered to our health needs and taste preferences. Each dish earned a well-deserved 9 out of 10, reaffirming the restaurant's consistency and quality."}, {'day': 12, 'name': 'Max', 'score': 8, 'content': 'American Flavors consistently delivers with flavorful, high-quality dishes. Their plant-based options like the Vegan Power Bowl and Kale & Quinoa Salad are creative and satisfying. The Classic American Burger and Apple Pie were comforting and delicious. Overall, an excellent dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.625
+2. Advertisement
+   Discover bold flavors at USA Diner with our enhanced menu! Enjoy the new Ultimate Patriot Pie, indulge in the smokier Signature Smokey Mountain Burger, and don't miss our Legendary BBQ Feast. Experience the classic American taste with a unique twist. Come for the food, stay for the memories!
+3. Menu 
+   [{'id': 4, 'name': 'Ultimate Patriot Pie', 'price': 22.0, 'description': 'A decadent apple pie with a richer buttery crust, a perfect blend of sweet and tart apples, and a touch of cinnamon, served with homemade cinnamon whipped cream.'}, {'id': 11, 'name': 'Signature Smokey Mountain Burger', 'price': 32.0, 'description': 'Our top-tier beef patty with melted cheddar, crispy onions, and house-smoked BBQ sauce, now with an extra smoky flavor, topped with a fried egg and served with garlic herb fries.'}, {'id': 15, 'name': 'Liberty Burger', 'price': 26.0, 'description': 'An iconic American burger with a premium beef patty, crisp lettuce, ripe tomatoes, onions, pickles, and our signature Liberty sauce, with a side of seasoned potato wedges.'}, {'id': 19, 'name': 'Blue Ribbon Apple Crisp', 'price': 16.0, 'description': 'A comforting apple crisp with fresh apples, a golden crumbly topping, and a hint of cinnamon, served warm with a scoop of vanilla bean ice cream.'}, {'id': 20, 'name': 'Legendary BBQ Feast', 'price': 40.0, 'description': 'A feast of our slow-cooked BBQ ribs, brisket, and pulled pork, paired with cornbread and a trio of our house-made BBQ sauces for the ultimate taste sensation.'}, {'id': 22, 'name': 'Stars & Stripes S’mores', 'price': 16.0, 'description': "Our classic s'mores reimagined with homemade graham crackers, rich chocolate, and star-shaped marshmallows, complemented by a side of mixed berry compote."}, {'id': 24, 'name': 'Classic American Hot Dog', 'price': 20.0, 'description': 'The all-American grilled hot dog on a toasted bun, now with gourmet toppings of caramelized onions, relish, and our special mustard-ketchup blend.'}, {'id': 25, 'name': 'Spicy Buffalo Wings', 'price': 18.0, 'description': 'Our signature crispy chicken wings tossed in a bold spicy buffalo sauce, served with an improved blue cheese dressing and crisp celery sticks.'}, {'id': 26, 'name': 'All-American Apple Pie', 'price': 14.0, 'description': 'Our timeless apple pie with a flaky, buttery crust and a perfectly spiced apple filling, served with freshly whipped cream and a sprinkle of cinnamon sugar.'}, {'id': 27, 'name': 'Tex-Mex Fajita Platter', 'price': 28.0, 'description': 'Our Tex-Mex fajitas with tender chicken and beef, grilled with peppers and onions, served with an array of fixings including warm tortillas, guacamole, sour cream, and fresh pico de gallo.'}]
+4. Comments
+   [{'day': 11, 'name': 'Wade', 'score': 7, 'content': 'USA Diner offered fresh, healthy options but lacked distinct flavors. Dishes like the Coastal Catch Seafood Platter were fair, but we missed the bold taste of American Flavors.'}, {'day': 9, 'name': 'Max', 'score': 6, 'content': "USA Diner's fare was fair, lacking the distinct flavors we've relished at American Flavors. The meal was satisfactory but not exceptional, leaving us nostalgic for the richer, more inventive offerings we previously enjoyed."}, {'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Ultimate American Burger",
+        "Kale & Quinoa Salad",
+        "Caramelized Apple Pie Delight"
+    ],
+    "reason" : "American Flavors has a higher customer score and positive comments, indicating satisfaction and quality. The menu offers a good balance of traditional and health-conscious options."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Ultimate American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+Caramelized Apple Pie Delight: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was delightful. The Ultimate American Burger was juicy with a great blend of flavors, the Kale & Quinoa Salad was a fresh and nutritious complement, and the Caramelized Apple Pie Delight was a sweet, satisfying finish."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 8.02155172413793
+2. Advertisement
+   Introducing a taste of Italy at American Flavors! Come in and try our new American-Italian Fusion Pasta, blending rich tomato basil sauce and savory beef meatballs with a sprinkle of aged parmesan. Enjoy our innovative dishes and timeless classics, all bursting with bold flavors and fresh ingredients. Visit us for an unforgettable dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 30.0, 'description': 'Our Ultimate American Burger now features a blend of angus beef and spices, topped with smoked gouda, crispy shallots, and our homemade zesty burger sauce, served with truffle fries.'}, {'id': 6, 'name': 'Caramelized Apple Pie Delight', 'price': 16.0, 'description': 'Our classic apple pie is now upgraded with caramelized apples and a hint of cinnamon, served with a scoop of bourbon vanilla ice cream.'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 17.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 21.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 17.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Fiery Sizzling Steak', 'price': 41.0, 'description': 'Our Fiery Sizzling Steak is marinated in a smoky chipotle rub and served with a spicy roasted red pepper sauce, garlic mashed potatoes, and grilled asparagus.'}, {'id': 18, 'name': 'Exotic Grilled Seafood Platter', 'price': 39.0, 'description': 'A lavish platter of exotic seafood, including tiger prawns, calamari, and sea bass, grilled to perfection with a spicy mango-papaya salsa.'}, {'id': 20, 'name': 'Deluxe American Slider Selection', 'price': 26.0, 'description': 'A trio of deluxe sliders: angus beef with blue cheese, pulled pork with tangy coleslaw, and spicy buffalo chicken, each paired with its signature sauce and garnish.'}, {'id': 25, 'name': 'American-Italian Fusion Pasta', 'price': 26.0, 'description': 'A delightful fusion of classic American flavors with authentic Italian pasta, featuring a rich tomato basil sauce, savory beef meatballs, and a sprinkle of aged parmesan.'}]
+4. Comments
+   [{'day': 13, 'name': 'Jake', 'score': 8, 'content': 'American Flavors delighted us with consistently good dishes. The balance of health and taste was spot on, and the service matched the quality of the food. A unanimous 8 out of 10 from all.'}, {'day': 13, 'name': 'Amelia', 'score': 9, 'content': 'American Flavors delivered an outstanding dining experience with expertly prepared dishes like the Global Fusion Tacos and the Exotic Grilled Seafood Platter. The service was exceptional, enhancing our enjoyment of the meal.'}, {'day': 13, 'name': 'Grace', 'score': 9, 'content': 'Outstanding meal with a variety of well-executed dishes. The commitment to dietary needs and consistent quality makes American Flavors a top choice.'}, {'day': 13, 'name': 'Olivia', 'score': 9, 'content': 'The dining at American Flavors was exemplary. Fresh, flavorful dishes like the Kale & Quinoa Salad and the Fiery Sizzling Steak impressed us all. Desserts ended the meal on a high note. Service was attentive, enhancing the outstanding culinary experience.'}, {'day': 13, 'name': 'Max', 'score': 8, 'content': 'American Flavors impressed us again with tasty and well-executed dishes. Both the Ultimate American Burger and Caramelized Apple Pie Delight were homestyle and satisfying, while the plant-based options were fresh and flavorful, matching our diverse preferences.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.625
+2. Advertisement
+   Embark on a culinary adventure at USA Diner! Savor our new Global Fusion Burger, BBQ Pulled Pork Tacos, and more. Experience the perfect blend of American classics and international flair. Join us for a taste revolution!
+3. Menu 
+   [{'id': 11, 'name': 'Signature Smokey Fusion Burger', 'price': 34.0, 'description': 'Our top-tier beef patty with melted cheddar, crispy onions, and house-smoked BBQ sauce, now with an extra smoky flavor, topped with kimchi and served with garlic herb fries.'}, {'id': 20, 'name': 'Legendary Fusion BBQ Feast', 'price': 42.0, 'description': 'A feast of our slow-cooked BBQ ribs, brisket, and pulled pork, paired with cornbread and a trio of our house-made fusion BBQ sauces for the ultimate taste sensation.'}, {'id': 25, 'name': 'Spicy Buffalo Cauliflower Bites', 'price': 18.0, 'description': 'Our twist on the classic, with crispy cauliflower florets tossed in a bold spicy buffalo sauce, served with an improved blue cheese dressing and crisp celery sticks.'}, {'id': 26, 'name': 'All-American Fusion Apple Pie', 'price': 16.0, 'description': 'Our timeless apple pie with a flaky, buttery crust and a perfectly spiced apple filling, given a twist with a ginger-infused whipped cream and a sprinkle of candied pecans.'}, {'id': 27, 'name': 'Tex-Mex Korean BBQ Fajita Platter', 'price': 30.0, 'description': 'Our Tex-Mex fajitas with tender bulgogi beef, grilled with peppers and onions, served with an array of fixings including warm tortillas, kimchi, sour cream, and fresh pico de gallo.'}, {'id': 28, 'name': 'Global Fusion Burger', 'price': 32.0, 'description': 'A juicy beef patty with Asian slaw, wasabi mayo, and a teriyaki glaze, served with sweet potato fries.'}, {'id': 29, 'name': 'BBQ Pulled Pork Tacos', 'price': 28.0, 'description': 'Slow-cooked pulled pork with a tangy BBQ sauce, served in soft corn tortillas with cilantro-lime slaw.'}, {'id': 30, 'name': 'Cajun Shrimp and Grits', 'price': 30.0, 'description': 'Spicy Cajun shrimp served over creamy cheese grits with a sprinkle of green onions.'}]
+4. Comments
+   [{'day': 11, 'name': 'Wade', 'score': 7, 'content': 'USA Diner offered fresh, healthy options but lacked distinct flavors. Dishes like the Coastal Catch Seafood Platter were fair, but we missed the bold taste of American Flavors.'}, {'day': 9, 'name': 'Max', 'score': 6, 'content': "USA Diner's fare was fair, lacking the distinct flavors we've relished at American Flavors. The meal was satisfactory but not exceptional, leaving us nostalgic for the richer, more inventive offerings we previously enjoyed."}, {'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}, {'day': 3, 'name': 'Dexter', 'score': 5, 'content': "Dishes at USA Diner were fair but unremarkable. The Skinny Eagle's Wings lacked intense BBQ flavors, and other items were just average. A new experience, but not a standout."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "Ultimate American Burger",
+        "Kale & Quinoa Salad",
+        "Caramelized Apple Pie Delight"
+    ],
+    "reason": "Given American Flavors' higher customer score and positive comments about their balance of health and traditional taste, it remains my preferred choice for dining."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Ultimate American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+Caramelized Apple Pie Delight: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "score": 8,
+    "comment": "The Ultimate American Burger, Kale & Quinoa Salad, and Caramelized Apple Pie Delight from American Flavors each provided a good blend of traditional taste with a health-conscious approach, aligning with my preferences. However, while the dishes were satisfying, I would welcome some more innovative flavors to elevate the experience."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 8.044354838709678
+2. Advertisement
+   Discover the fresh, innovative tastes at American Flavors! Featuring our new American Zen Garden Salad and updated favorites like the Ultimate American Burger and Fiery Sizzling Steak. Indulge in our Caramelized Apple Pie Delight for a sweet finish. Visit us for a health-conscious feast that doesn't compromise on flavor!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 32.0, 'description': 'Our Ultimate American Burger now features a blend of angus beef and spices, topped with smoked gouda, crispy shallots, and our homemade zesty burger sauce, served with truffle fries.'}, {'id': 6, 'name': 'Caramelized Apple Pie Delight', 'price': 18.0, 'description': 'Our classic apple pie is now upgraded with caramelized apples and a hint of cinnamon, served with a scoop of bourbon vanilla ice cream.'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 11, 'name': 'Kale & Quinoa Salad', 'price': 17.0, 'description': 'Our superfood-packed Kale & Quinoa Salad is now enhanced with roasted Mediterranean vegetables and a lemon-herb dressing.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 21.0, 'description': 'Our Vegan Power Bowl is now even more refreshing with a new avocado-lime dressing, making your healthy meal not just tasty but also creative.'}, {'id': 13, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 17.0, 'description': 'Our Vegan BBQ Jackfruit Sandwich is now topped with a tangy pineapple salsa, adding a sweet and bold flavor to this crowd favorite.'}, {'id': 14, 'name': 'Fiery Sizzling Steak', 'price': 43.0, 'description': 'Our Fiery Sizzling Steak is marinated in a smoky chipotle rub and served with a spicy roasted red pepper sauce, garlic mashed potatoes, and grilled asparagus.'}, {'id': 18, 'name': 'Exotic Grilled Seafood Platter', 'price': 39.0, 'description': 'A lavish platter of exotic seafood, including tiger prawns, calamari, and sea bass, grilled to perfection with a spicy mango-papaya salsa.'}, {'id': 25, 'name': 'American-Italian Fusion Pasta', 'price': 26.0, 'description': 'A delightful fusion of classic American flavors with authentic Italian pasta, featuring a rich tomato basil sauce, savory beef meatballs, and a sprinkle of aged parmesan.'}, {'id': 26, 'name': 'American Zen Garden Salad', 'price': 18.0, 'description': 'A tranquil blend of baby spinach, heirloom tomatoes, cucumbers, and radishes, topped with a Zen sesame ginger dressing and crunchy quinoa croutons.'}]
+4. Comments
+   [{'day': 14, 'name': 'Jake', 'score': 8, 'content': "American Flavors consistently impresses with its balance of health-conscious and flavorful dishes. Each dish met our varied tastes and dietary needs without compromising on the zest and quality we've come to expect."}, {'day': 14, 'name': 'Grace', 'score': 9, 'content': 'American Flavors provided an exceptional dining experience with a perfect balance of indulgent desserts and healthy options, catering to our dietary needs and tastes.'}, {'day': 14, 'name': 'Olivia', 'score': 9, 'content': 'American Flavors consistently delivers with fresh, flavorful dishes. The salad, power bowl, steak, pasta, and sandwich all impressed, embodying health and taste.'}, {'day': 14, 'name': 'Max', 'score': 8, 'content': 'American Flavors impressed with well-executed dishes across the board. The Ultimate American Burger and Caramelized Apple Pie were comforting, while the plant-based options were flavorful and satisfying. The service was excellent, solidifying our high rating.'}, {'day': 14, 'name': 'Maggie', 'score': 8, 'content': 'American Flavors provided a consistently high-quality dining experience. Creative dishes like the American-Italian Fusion Pasta impressed, while the freshness of the Vegan Power Bowl and Kale & Quinoa Salad delighted the health-conscious. Succulent meats and divine desserts rounded off a memorable meal.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 5.777777777777778
+2. Advertisement
+   Discover the taste of tradition at USA Diner! Enjoy our classic American Cheeseburger, Southern Fried Chicken, and Deep Dish Apple Pie. Perfectly crafted comfort food with a touch of home. Visit us for an authentic American experience!
+3. Menu 
+   [{'id': 31, 'name': 'Classic American Cheeseburger', 'price': 18.0, 'description': 'Juicy angus beef patty with aged cheddar, lettuce, tomato, onions, and our secret sauce, served with a side of golden fries.'}, {'id': 32, 'name': 'Southern Fried Chicken', 'price': 20.0, 'description': 'Crispy, golden-fried chicken with a blend of Southern spices, served with mashed potatoes and gravy.'}, {'id': 33, 'name': 'BBQ Baby Back Ribs', 'price': 25.0, 'description': 'Tender baby back ribs smothered in our signature BBQ sauce, served with coleslaw and baked beans.'}, {'id': 34, 'name': 'Deep Dish Apple Pie', 'price': 15.0, 'description': 'A deep dish pie filled with sweet, spiced apples, topped with a lattice crust and served with vanilla bean ice cream.'}, {'id': 35, 'name': 'Grilled New York Strip Steak', 'price': 28.0, 'description': 'A 12 oz New York strip steak, grilled to perfection and served with roasted vegetables and garlic herb butter.'}, {'id': 36, 'name': 'Mac & Cheese Deluxe', 'price': 16.0, 'description': 'Our creamy, three-cheese macaroni with a crunchy breadcrumb topping and a hint of truffle oil.'}, {'id': 37, 'name': 'Cobb Salad', 'price': 17.0, 'description': 'A classic Cobb salad with rows of grilled chicken, hard-boiled eggs, avocado, bacon, blue cheese, and mixed greens, served with a tangy vinaigrette.'}, {'id': 38, 'name': 'Loaded Potato Skins', 'price': 12.0, 'description': 'Crispy potato skins loaded with cheddar cheese, bacon, sour cream, and green onions.'}]
+4. Comments
+   [{'day': 14, 'name': 'Amelia', 'score': 7, 'content': 'The group found the dishes at USA Diner to be fair, with each dish receiving a 7 out of 10. Flavors were consistent but lacked the boldness and spice expected. A satisfactory experience, yet room for improvement to make the dishes stand out.'}, {'day': 11, 'name': 'Wade', 'score': 7, 'content': 'USA Diner offered fresh, healthy options but lacked distinct flavors. Dishes like the Coastal Catch Seafood Platter were fair, but we missed the bold taste of American Flavors.'}, {'day': 9, 'name': 'Max', 'score': 6, 'content': "USA Diner's fare was fair, lacking the distinct flavors we've relished at American Flavors. The meal was satisfactory but not exceptional, leaving us nostalgic for the richer, more inventive offerings we previously enjoyed."}, {'day': 7, 'name': 'Maggie', 'score': 6, 'content': 'The dishes at USA Diner were fair, with a need for more flavorful depth and memorable elements. The experience was satisfactory but did not surpass past dining at American Flavors.'}, {'day': 4, 'name': 'William', 'score': 5, 'content': 'The group found the dishes at USA Diner to be fair but lacking in the bold flavors we were seeking. Overall, a step back from the satisfying meals at American Flavors.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Ultimate American Burger",
+        "Kale & Quinoa Salad",
+        "Caramelized Apple Pie Delight"
+    ],
+    "reason" : "American Flavors has a higher customer score and reviews that suggest a balance of health and traditional flavors which align with my preferences."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Ultimate American Burger: 0.81
+Kale & Quinoa Salad: 0.81
+Caramelized Apple Pie Delight: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "This meal was thoroughly enjoyable. The Ultimate American Burger was superbly seasoned and satisfying, the Kale & Quinoa Salad was refreshingly hearty, and the Caramelized Apple Pie Delight was a perfectly sweet conclusion to the dining experience."
+}
+

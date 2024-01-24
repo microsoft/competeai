@@ -1,0 +1,10 @@
+name,day1,day2,day3,day4,day5,day6,day7,day8,day9,day10,day11,day12,day13,day14,day15
+id,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+income,46,23,29,38,0,0,18,0,35,0,45,0,0,55,0
+expense,183,190,183,190,196,196,200,203,206,216,220,226,233,226,226
+num_of_customer,2,2,1,1,0,0,1,0,1,0,1,0,0,1,0
+num_of_chef,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+chef_salary,2500,2700,2500,2700,2900,2900,3000,3100,3200,3500,3600,3800,4000,3800,3800
+dish_score,0.4341666666666667,0.5098559423769509,0.4658591408591409,0.4910674741924742,0.5145892995892996,0.54,0.5499999999999999,0.56,0.5700000000000002,0.5999999999999999,0.6100000000000001,0.63,0.6500000000000001,0.63,0.63
+customer_score,5.0,5.333333333333333,5.25,5.2,5.2,5.2,5.333333333333333,5.333333333333333,5.428571428571429,5.428571428571429,5.625,5.625,5.625,5.777777777777778,5.777777777777778
+dishes,"{""Liberty Burger"": 2, ""Freedom Fries"": 2, ""Eagle's Wings"": 2, ""Patriot Pie"": 1, ""Star-Spangled Soda"": 1}","{""Gluten-Free Gastronomy Pizza"": 1, ""Vegetarian Victory Bowl"": 1, ""Liberty Burger"": 1}","{""Lean Liberty Burger"": 1, ""Homestyle Turkey Wrap"": 1, ""Skinny Eagle's Wings"": 1, ""Wholesome American Salad"": 1}","{""Smokey Mountain Burger"": 1, ""Spicy Route 66 Chili"": 1, ""Wholesome American Salad"": 1, ""Homestyle Turkey Wrap"": 1, ""Balanced Breakfast Plate"": 1}",{},{},"{""Superfood American Salad"": 1, ""Lean Turkey & Avocado Wrap"": 1, ""Blue Ribbon Apple Crisp"": 1}",{},"{""Superfood American Salad"": 1, ""Lean Turkey & Avocado Wrap"": 1, ""Ultimate Patriot Pie"": 1, ""Signature Smokey Mountain Burger"": 1}",{},"{""Coastal Catch Seafood Platter"": 1, ""Superfood American Salad"": 1, ""Heartland Harvest Bowl"": 1}",{},{},"{""Tex-Mex Korean BBQ Fajita Platter"": 1, ""BBQ Pulled Pork Tacos"": 1, ""Signature Smokey Fusion Burger"": 1, ""Spicy Buffalo Cauliflower Bites"": 1}",{}

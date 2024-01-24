@@ -1,0 +1,905 @@
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right here in town! Try our mouthwatering Classic Burgers, succulent BBQ Ribs, and heavenly Apple Pie at American Flavors. Cozy ambiance and flavors that feel like home. Visit us today!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'A juicy beef patty topped with lettuce, tomato, onion, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with celery and blue cheese dressing.'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy cheddar and mozzarella macaroni topped with a crispy breadcrumb crust.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and Caesar dressing.'}, {'id': 6, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Classic American apple pie with a flaky crust, served with vanilla ice cream.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Join us at Stars & Stripes Diner for a taste of America! Enjoy our mouthwatering Freedom Burger, Liberty Chicken Sandwich, and more. Be part of our family with our new loyalty program for exclusive deals. #EatLocal #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 12.0, 'description': 'A juicy all-beef patty topped with cheddar, lettuce, tomato, and our signature freedom sauce, served with fries'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 10.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 6.0, 'description': 'Homemade apple pie with a flaky crust, served with a scoop of vanilla ice cream'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 8.0, 'description': 'Fresh mixed greens, cranberries, walnuts, blue cheese, and a light vinaigrette'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 15.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our BBQ sauce, served with coleslaw and cornbread'}, {'id': 6, 'name': 'Independence IPA', 'price': 5.0, 'description': 'A bold, hoppy local craft IPA to pair perfectly with our savory dishes'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Classic Burger", "BBQ Ribs", "Apple Pie"
+    ],
+    "reason" : "American Flavors offers a cozy ambiance with traditional dishes that appeal to my taste, such as the Classic Burger and BBQ Ribs, finished with a classic Apple Pie. The descriptions suggest hearty, home-style cooking."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Classic Burger: 0.56
+BBQ Ribs: 0.59
+Apple Pie: 0.51
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "score": 6,
+    "comment": "The dishes at American Flavors were satisfactory, offering a decent taste of traditional cuisine. The Classic Burger and BBQ Ribs were fair but not exceptional. The Apple Pie lacked the wow factor I anticipated. There's room for improvement in flavor depth."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.666666666666667
+2. Advertisement
+   Experience the new American Flavors with our Gourmet Truffle Burger and Spicy Maple-Glazed Ribs! Elevate your taste buds with our upgraded menu featuring premium ingredients and innovative twists on classics. Indulge in a dining adventure today at American Flavors!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'An upgraded juicy beef patty with our new savory house sauce, crisp lettuce, vine-ripened tomato, and freshly sliced onion on a toasted artisan bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with celery and blue cheese dressing.'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy cheddar and mozzarella macaroni topped with a crispy breadcrumb crust.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and Caesar dressing.'}, {'id': 6, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Our traditional apple pie enhanced with a dash of cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 7, 'name': 'Gourmet Truffle Burger', 'price': 18.0, 'description': 'A luxurious beef patty topped with black truffles, aged cheddar, and a hint of garlic aioli on a brioche bun.'}, {'id': 8, 'name': 'Spicy Maple-Glazed Ribs', 'price': 18.0, 'description': 'Slow-cooked ribs with a spicy maple glaze, served with sweet potato fries and coleslaw.'}]
+4. Comments
+   [{'day': 1, 'name': 'Jack', 'score': 6, 'content': 'The BBQ Ribs were tender but could use more flavorful sauce. The burger was satisfactory, but not standout. Apple Pie was decent, needed more spice. Overall, a fair experience, but I expected more punch in flavor.'}, {'day': 1, 'name': 'Leo', 'score': 5, 'content': 'The Mac & Cheese was decent, but lacked a unique flavor profile. The Apple Pie was satisfactory, although not exceptional. I expected a bit more from an establishment with such a cozy ambiance. Considering the scores, my next visit might be to Stars & Stripes Diner for comparison.'}, {'day': 1, 'name': 'Oscar', 'score': 6, 'content': "The dishes at American Flavors were satisfactory, offering a decent taste of traditional cuisine. The Classic Burger and BBQ Ribs were fair but not exceptional. The Apple Pie lacked the wow factor I anticipated. There's room for improvement in flavor depth."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.3125
+2. Advertisement
+   Introducing our new signature dishes: the Bald Eagle BBQ Burger and Mount Rushmore Meatloaf! Come taste the innovation at Stars & Stripes Diner. #NewFlavors #SignatureDishes #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 12.0, 'description': 'A juicy all-beef patty topped with aged cheddar, crisp lettuce, heirloom tomato, and our enhanced signature freedom sauce, served with garlic-parmesan fries.'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 10.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 6.0, 'description': 'Our homemade apple pie with a flakier crust and a richer filling, spiced with cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 8.0, 'description': 'Fresh mixed greens, cranberries, walnuts, blue cheese, and a light vinaigrette'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 15.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our BBQ sauce, served with coleslaw and cornbread'}, {'id': 6, 'name': 'Independence IPA', 'price': 5.0, 'description': 'A bold, hoppy local craft IPA to pair perfectly with our savory dishes'}, {'id': 7, 'name': 'Bald Eagle BBQ Burger', 'price': 14.0, 'description': 'Our special beef patty topped with smoked bacon, onion rings, cheddar cheese, and homemade BBQ sauce, served with seasoned fries.'}, {'id': 8, 'name': 'Mount Rushmore Meatloaf', 'price': 13.0, 'description': 'A classic meatloaf with a blend of beef and pork, glazed with a sweet and tangy sauce, served with garlic mashed potatoes and green beans.'}]
+4. Comments
+   [{'day': 1, 'name': 'Jake', 'score': 5, 'content': 'The meal was fair with all dishes scoring average. Flavors were less vibrant than expected, and while the experience was adequate, it left us hoping for more.'}, {'day': 1, 'name': 'Amelia', 'score': 5, 'content': "An average dining experience with fair dishes that lack distinction. The diner's atmosphere is promising, but the food requires improvement to meet expectations."}, {'day': 1, 'name': 'Grace', 'score': 5, 'content': "The meal was satisfactory with fair scores for the Eagle's Nest Salad, Patriot Pie, and Freedom Burger. Both members found the dishes met expectations but lacked a wow factor. The diner's ambiance was cozy, and the service was good."}, {'day': 1, 'name': 'Olivia', 'score': 5, 'content': "The dishes at 'Stars & Stripes Diner' were fair but didn't exceed expectations. Flavors were average, lacking depth and freshness. An overall satisfactory experience with room for improvement."}, {'day': 1, 'name': 'Max', 'score': 5, 'content': 'Overall, a fair dining experience with room for improvement. Dishes were satisfactory but lacked a memorable factor. The menu could use more creativity to elevate the flavors.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "Gourmet Truffle Burger", "Spicy Maple-Glazed Ribs", "Apple Pie"
+    ],
+    "reason" : "Considering previous satisfactory experiences at American Flavors, I'm intrigued by their new gourmet offerings, promising an elevated traditional dining experience with premium ingredients."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Gourmet Truffle Burger: 0.66
+Spicy Maple-Glazed Ribs: 0.66
+Apple Pie: 0.66
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The new gourmet menu at American Flavors didn't disappoint. The truffle in the burger was a delightful luxury, and the ribs had a nice balance of sweet and spicy. The apple pie was a comforting end to the meal."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.833333333333333
+2. Advertisement
+   Discover the bold flavors of America at American Flavors! Our revamped Gourmet Truffle Burger and Spicy Maple-Glazed Ribs promise a taste sensation like no other. Plus, don't miss our 'Taste of America Sampler' - a journey through classic American delights. Your table is waiting!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'An upgraded juicy beef patty with our new savory house sauce, crisp lettuce, vine-ripened tomato, and freshly sliced onion on a toasted artisan bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with celery and blue cheese dressing.'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy cheddar and mozzarella macaroni topped with a crispy breadcrumb crust.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and Caesar dressing.'}, {'id': 6, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Our traditional apple pie enhanced with a dash of cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 7, 'name': 'Gourmet Truffle Burger', 'price': 18.0, 'description': 'A luxurious beef patty topped with black truffles, brie cheese, a hint of garlic aioli, and arugula on a brioche bun. Enhanced with a rich truffle sauce for a deeper flavor.'}, {'id': 8, 'name': 'Spicy Maple-Glazed Ribs', 'price': 18.0, 'description': 'Our slow-cooked ribs are given a bolder taste with a spicy and sweet maple glaze, served with sweet potato fries and tangy coleslaw.'}, {'id': 9, 'name': 'Taste of America Sampler', 'price': 22.0, 'description': 'A platter featuring mini versions of our Classic Burger, BBQ Ribs, Spicy Maple-Glazed Ribs, and a slice of Apple Pie, perfect for experiencing the best of American flavors.'}]
+4. Comments
+   [{'day': 2, 'name': 'Jake', 'score': 6, 'content': 'The dishes at American Flavors were generally fair, with the Apple Pie being the highlight. Accommodations for dietary needs were made, but overall, flavors could have been more impactful.'}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': 'The dishes at American Flavors were satisfactory, scoring consistently with fair ratings. The Spicy Maple-Glazed Ribs needed more spice, and the Gourmet Truffle Burger lacked the expected gourmet touch. The Caesar Salad was standard. A decent meal but not as flavorful as anticipated.'}, {'day': 2, 'name': 'Grace', 'score': 6, 'content': 'The dishes at American Flavors were fair but lacked the expected depth of flavor. Suitable for dietary needs but room for improvement in taste. Fair experience overall.'}, {'day': 2, 'name': 'Max', 'score': 5, 'content': 'An average dining experience with fair quality dishes that lacked the wow factor. The Gourmet Truffle Burger and Caesar Salad fell short of expectations, while the BBQ Ribs, Classic Burger, and Apple Pie were comforting but not memorable.'}, {'day': 2, 'name': 'Maggie', 'score': 6, 'content': "Dishes at American Flavors were good but lacked the expected depth and intensity of flavor. While enjoyable, the experience didn't fully align with the menu's promise."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.611111111111111
+2. Advertisement
+   Savor the extraordinary with our new Spiced Apple Caramel Pie - a delightful twist on tradition! Plus, enjoy our freshly enhanced menu with richer flavors and quality ingredients. Your taste adventure awaits at Stars & Stripes Diner! #FlavorOfTheMonth #QualityDining #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 13.0, 'description': 'A juicy all-beef patty topped with aged cheddar, crisp lettuce, heirloom tomato, and our enhanced signature freedom sauce, served with garlic-parmesan fries.'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 11.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 6.0, 'description': 'Our homemade apple pie with a flakier crust and a richer filling, spiced with cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 9.0, 'description': 'Fresh mixed greens, cranberries, walnuts, blue cheese, and a light vinaigrette'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 16.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our BBQ sauce, served with coleslaw and cornbread'}, {'id': 6, 'name': 'Independence IPA', 'price': 5.0, 'description': 'A bold, hoppy local craft IPA to pair perfectly with our savory dishes'}, {'id': 7, 'name': 'Bald Eagle BBQ Burger', 'price': 14.0, 'description': 'Our special beef patty topped with smoked bacon, onion rings, cheddar cheese, and homemade BBQ sauce, served with seasoned fries.'}, {'id': 8, 'name': 'Mount Rushmore Meatloaf', 'price': 13.0, 'description': 'A classic meatloaf with a blend of beef and pork, glazed with a sweet and tangy sauce, served with garlic mashed potatoes and green beans.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 7.0, 'description': 'Warm apple pie with a twist of exotic spices and a drizzle of homemade caramel, served with a scoop of cinnamon ice cream.'}]
+4. Comments
+   [{'day': 2, 'name': 'Olivia', 'score': 8, 'content': "The meal at Stars & Stripes Diner was satisfying, with fresh ingredients and gluten-free options. The Eagle's Nest Salad and Liberty Chicken Sandwich were both well-received, and the restaurant catered well to our dietary needs and preference for freshness."}, {'day': 2, 'name': 'Wade', 'score': 8, 'content': 'The dishes at Stars & Stripes Diner were satisfying, with the Freedom Burger standing out. Salad was fresh, pie was good but could use more spice.'}, {'day': 1, 'name': 'Jake', 'score': 5, 'content': 'The meal was fair with all dishes scoring average. Flavors were less vibrant than expected, and while the experience was adequate, it left us hoping for more.'}, {'day': 1, 'name': 'Amelia', 'score': 5, 'content': "An average dining experience with fair dishes that lack distinction. The diner's atmosphere is promising, but the food requires improvement to meet expectations."}, {'day': 1, 'name': 'Grace', 'score': 5, 'content': "The meal was satisfactory with fair scores for the Eagle's Nest Salad, Patriot Pie, and Freedom Burger. Both members found the dishes met expectations but lacked a wow factor. The diner's ambiance was cozy, and the service was good."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "dishes" : [
+        "Freedom Burger", "Eagle's Nest Salad", "Spiced Apple Caramel Pie"
+    ],
+    "reason" : "Stars & Stripes Diner has more recent positive feedback highlighting fresh ingredients, and their Spiced Apple Caramel Pie offers a unique twist that intrigues my traditional palate."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Freedom Burger: 0.56
+Eagle's Nest Salad: 0.53
+Spiced Apple Caramel Pie: 0.59
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "feeling": "The Freedom Burger had a satisfying flavor, the Eagle's Nest Salad was fresh, and the Spiced Apple Caramel Pie ended the meal on a high note with its unique taste."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.842105263157895
+2. Advertisement
+   American Flavors presents an unrivaled gourmet experience! Our Gourmet Truffle Burger is a symphony of luxurious taste, and the Spicy Maple-Glazed Ribs will ignite your palate. Join us for a culinary adventure with our new American Harvest Salad and the heartwarming New England Clam Chowder. Indulge in excellence!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'An upgraded juicy beef patty with our new savory house sauce, crisp lettuce, vine-ripened tomato, and freshly sliced onion on a toasted artisan bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with celery and blue cheese dressing.'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy cheddar and mozzarella macaroni topped with a crispy breadcrumb crust.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and Caesar dressing.'}, {'id': 6, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Our traditional apple pie enhanced with a dash of cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 7, 'name': 'Gourmet Truffle Burger', 'price': 18.0, 'description': 'A luxurious beef patty topped with black truffles, brie cheese, a hint of garlic aioli, arugula, and a drizzle of rich truffle sauce, on a brioche bun, for an unmatched gourmet experience.'}, {'id': 8, 'name': 'Spicy Maple-Glazed Ribs', 'price': 18.0, 'description': 'Our slow-cooked ribs are given a bolder taste with a spicy and sweet maple glaze, served with sweet potato fries and tangy coleslaw for a unique twist on a classic.'}, {'id': 9, 'name': 'Taste of America Sampler', 'price': 22.0, 'description': 'A platter featuring mini versions of our Classic Burger, BBQ Ribs, Spicy Maple-Glazed Ribs, and a slice of Apple Pie, perfect for experiencing the best of American flavors.'}, {'id': 10, 'name': 'American Harvest Salad', 'price': 12.0, 'description': 'A vibrant salad with mixed greens, roasted butternut squash, quinoa, dried cranberries, toasted pumpkin seeds, and feta, tossed in a light honey-apple cider vinaigrette.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}]
+4. Comments
+   [{'day': 3, 'name': 'Zach', 'score': 6, 'content': 'The Gourmet Truffle Burger at American Flavors had a rich flavor, but did not entirely meet my connoisseur standards for a truly gourmet experience. It was good, but not exceptional as previous dining experiences suggested.'}, {'day': 2, 'name': 'Jake', 'score': 6, 'content': 'The dishes at American Flavors were generally fair, with the Apple Pie being the highlight. Accommodations for dietary needs were made, but overall, flavors could have been more impactful.'}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': 'The dishes at American Flavors were satisfactory, scoring consistently with fair ratings. The Spicy Maple-Glazed Ribs needed more spice, and the Gourmet Truffle Burger lacked the expected gourmet touch. The Caesar Salad was standard. A decent meal but not as flavorful as anticipated.'}, {'day': 2, 'name': 'Grace', 'score': 6, 'content': 'The dishes at American Flavors were fair but lacked the expected depth of flavor. Suitable for dietary needs but room for improvement in taste. Fair experience overall.'}, {'day': 2, 'name': 'Max', 'score': 5, 'content': 'An average dining experience with fair quality dishes that lacked the wow factor. The Gourmet Truffle Burger and Caesar Salad fell short of expectations, while the BBQ Ribs, Classic Burger, and Apple Pie were comforting but not memorable.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.764705882352941
+2. Advertisement
+   Come taste the revolution at Stars & Stripes Diner! Our Freedom Burger and Revolution Ribs have been reborn with bolder, richer flavors! Don't miss our Spiced Apple Caramel Pie - it's a slice of heaven. #TasteTheFreedom #SpicedAppleCaramel #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 14.0, 'description': 'A juicy all-beef patty topped with aged cheddar, crisp lettuce, heirloom tomato, and our enhanced signature freedom sauce, served with garlic-parmesan fries.'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 11.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 6.0, 'description': 'Our homemade apple pie with a flakier crust and a richer filling, spiced with cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 9.0, 'description': 'Fresh mixed greens, cranberries, walnuts, blue cheese, and a light vinaigrette'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 17.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our BBQ sauce, served with coleslaw and cornbread'}, {'id': 6, 'name': 'Independence IPA', 'price': 5.0, 'description': 'A bold, hoppy local craft IPA to pair perfectly with our savory dishes'}, {'id': 7, 'name': 'Bald Eagle BBQ Burger', 'price': 14.0, 'description': 'Our special beef patty topped with smoked bacon, onion rings, cheddar cheese, and homemade BBQ sauce, served with seasoned fries.'}, {'id': 8, 'name': 'Mount Rushmore Meatloaf', 'price': 13.0, 'description': 'A classic meatloaf with a blend of beef and pork, glazed with a sweet and tangy sauce, served with garlic mashed potatoes and green beans.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 8.0, 'description': 'Warm apple pie with a twist of exotic spices and a drizzle of homemade caramel, served with a scoop of cinnamon ice cream.'}]
+4. Comments
+   [{'day': 3, 'name': 'Jake', 'score': 6, 'content': "The meal was fair, with all dishes scoring around average. The diner accommodated our low sodium needs, but the flavors didn't meet our expectations for boldness and street food zest."}, {'day': 3, 'name': 'Amelia', 'score': 6, 'content': 'The meal was fair, with the Spiced Apple Caramel Pie being the standout. Overall, the flavors lacked the richness and zest desired, meriting a 6 out of 10.'}, {'day': 3, 'name': 'Grace', 'score': 6, 'content': 'Overall, Stars & Stripes Diner offered an average dining experience. The dishes met dietary needs but lacked excitement and creativity in flavor. More zest in the salad and burger and a generous apple filling in the pie would improve the offerings.'}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': 'Dishes were fresh but lacked the zest and wow factor we anticipated. Spiced Pie promised, yet needed more spice. Fair experience.'}, {'day': 3, 'name': 'Max', 'score': 6, 'content': "Diner's efforts to accommodate diet preferences were appreciated, but dishes lacked distinction. Meatloaf and Burger were fair; Pie was slightly better. An average experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "dishes" : [
+        "Freedom Burger", "Eagle's Nest Salad", "Spiced Apple Caramel Pie"
+    ],
+    "reason" : "Despite similar customer scores, Stars & Stripes Diner's unique Spiced Apple Caramel Pie offers a novel twist, and their use of fresh ingredients like heirloom tomatoes in the Freedom Burger aligns with a preference for wholesome meals."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Freedom Burger: 0.57
+Eagle's Nest Salad: 0.53
+Spiced Apple Caramel Pie: 0.59
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "score": 6,
+    "comment": "The Stars & Stripes Diner provided a fair experience, with the Spiced Apple Caramel Pie being the highlight. However, the Freedom Burger and Eagle's Nest Salad lacked the flavor depth I've found in other establishments. A notch above average, but there's room for refinement."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.176470588235294
+2. Advertisement
+   Discover the authentic taste of America at American Flavors! We've revamped our menu to focus on fresh, high-quality ingredients and rich, classic flavors. Try our new Sizzling Steak Fajitas and Sweet & Smoky Pulled Pork Sandwich, or savor the variety with our American Flavors Sampler. Come taste the difference today!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'Our signature beef patty, lettuce, tomato, onion, and house sauce, on a toasted artisan bun, with a side of garlic-parmesan fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy buffalo wings, served with a cooling blue cheese dressing and crisp celery sticks.'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy cheddar and mozzarella macaroni topped with a crispy breadcrumb crust.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and Caesar dressing.'}, {'id': 6, 'name': 'Homestyle Apple Pie', 'price': 6.0, 'description': 'A classic apple pie with a flaky crust and a rich, spiced apple filling, served with a scoop of vanilla bean ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Harvest Salad', 'price': 12.0, 'description': 'A vibrant salad with mixed greens, roasted butternut squash, quinoa, dried cranberries, toasted pumpkin seeds, and feta, tossed in a light honey-apple cider vinaigrette.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Sizzling Steak Fajitas', 'price': 16.0, 'description': 'Juicy grilled steak strips served with sautéed peppers and onions, warm flour tortillas, and a trio of salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a sweet and smoky sauce, piled high on a toasted brioche bun with coleslaw and pickles.'}]
+4. Comments
+   [{'day': 4, 'name': 'Jake', 'score': 7, 'content': 'The meal was satisfactory with consistent quality across all dishes, each earning a fair score of 6.5. While flavorful, the Spicy Maple-Glazed Ribs lacked the anticipated spice level. The Gourmet Truffle Burger was good, though not exceptional. The Taste of America Sampler provided enjoyable variety.'}, {'day': 4, 'name': 'Amelia', 'score': 7, 'content': 'The meal at American Flavors showed slight improvement, with some dishes meeting expectations. The Apple Pie was a highlight, while other items like the chowder and salad could use more flavorful dressings and seasonings for enhancement.'}, {'day': 4, 'name': 'Grace', 'score': 7, 'content': 'Cozy and satisfying overall, with the Apple Pie being a standout. Seasoning could be improved across several dishes for enhanced flavor.'}, {'day': 4, 'name': 'Olivia', 'score': 6, 'content': 'American Flavors offered a fair dining experience, with the Gourmet Truffle Burger standing out as the best dish. Both the salad and clam chowder lacked the desired Mediterranean zest.'}, {'day': 4, 'name': 'Max', 'score': 7, 'content': 'Fair meal with room for improvement in flavor. Comforting yet lacking memorable qualities. A pleasant experience but not exceptional.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.756756756756757
+2. Advertisement
+   Discover bold flavors at Stars & Stripes Diner! Introducing our revamped Freedom Burger and Eagle's Nest Salad - now with even more zest! Plus, don't miss our new Liberty Loaded Nachos. Join us this weekend for a special promo event! #FlavorBurst #StarsAndStripesDiner #WeekendSpecial
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 15.0, 'description': 'An all-beef patty with a new secret blend of spices, aged cheddar, heirloom tomato, artisan lettuce, and our bold freedom sauce, served with garlic-parmesan fries.'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 11.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 6.0, 'description': 'Our homemade apple pie with a flakier crust and a richer filling, spiced with cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 10.0, 'description': 'A fresh mix of greens, sweet dried cranberries, crunchy walnuts, rich blue cheese crumbles, and our enhanced honey-mustard vinaigrette.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 17.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our BBQ sauce, served with coleslaw and cornbread'}, {'id': 6, 'name': 'Independence IPA', 'price': 5.0, 'description': 'A bold, hoppy local craft IPA to pair perfectly with our savory dishes'}, {'id': 7, 'name': 'Bald Eagle BBQ Burger', 'price': 14.0, 'description': 'Our special beef patty topped with smoked bacon, onion rings, cheddar cheese, and homemade BBQ sauce, served with seasoned fries.'}, {'id': 8, 'name': 'Mount Rushmore Meatloaf', 'price': 13.0, 'description': 'A classic meatloaf with a blend of beef and pork, glazed with a sweet and tangy sauce, served with garlic mashed potatoes and green beans.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 8.0, 'description': 'Warm apple pie with a twist of exotic spices and a drizzle of homemade caramel, served with a scoop of cinnamon ice cream.'}, {'id': 10, 'name': 'Liberty Loaded Nachos', 'price': 12.0, 'description': 'Crispy tortilla chips topped with spicy beef, melted cheese, jalapeños, black beans, and fresh salsa, drizzled with avocado lime crema.'}]
+4. Comments
+   [{'day': 4, 'name': 'Bob', 'score': 5, 'content': "The dishes at Stars & Stripes Diner were average; the Freedom Burger lacked the robust flavor I crave, and both the Eagle's Nest Salad and Spiced Apple Caramel Pie were decent but not exceptional. Compared to American Flavors, the consistency was better, but neither restaurant has impressed me lately."}, {'day': 4, 'name': 'Quincy', 'score': 6, 'content': "The Eagle's Nest Salad was aligned with my low-calorie diet, but the overall taste fell short of expectations. It was a fair attempt at healthy dining, yet lacked the zest and flavor I hoped for. Consistent with previous visits, but room for improvement."}, {'day': 4, 'name': 'Oscar', 'score': 6, 'content': "The Stars & Stripes Diner provided a fair experience, with the Spiced Apple Caramel Pie being the highlight. However, the Freedom Burger and Eagle's Nest Salad lacked the flavor depth I've found in other establishments. A notch above average, but there's room for refinement."}, {'day': 3, 'name': 'Jake', 'score': 6, 'content': "The meal was fair, with all dishes scoring around average. The diner accommodated our low sodium needs, but the flavors didn't meet our expectations for boldness and street food zest."}, {'day': 3, 'name': 'Amelia', 'score': 6, 'content': 'The meal was fair, with the Spiced Apple Caramel Pie being the standout. Overall, the flavors lacked the richness and zest desired, meriting a 6 out of 10.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason" : "American Flavors has a slightly higher customer score and offers a sampler for a variety of traditional American cuisine, which suits my taste. The clam chowder adds a comforting choice."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.71
+New England Clam Chowder: 0.68
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler let me enjoy a variety of classic tastes, and the New England Clam Chowder was hearty and comforting."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.36734693877551
+2. Advertisement
+   Experience the bold flavors of America at American Flavors! Our updated dishes, like the rich Sizzling Steak Fajitas and the robust Sweet & Smoky Pulled Pork Sandwich, promise a gourmet adventure for your taste buds. Indulge in our new Bold BBQ Chicken or Spicy Cajun Pasta for a truly satisfying meal. Visit us for a taste of American culinary excellence!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'Our signature beef patty, lettuce, tomato, onion, and house sauce, on a toasted artisan bun, with a side of garlic-parmesan fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy buffalo wings, served with a cooling blue cheese dressing and crisp celery sticks.'}, {'id': 6, 'name': 'Homestyle Apple Pie', 'price': 6.0, 'description': 'A classic apple pie with a flaky crust and a rich, spiced apple filling, served with a scoop of vanilla bean ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Harvest Salad', 'price': 12.0, 'description': 'A vibrant salad with mixed greens, roasted butternut squash, quinoa, dried cranberries, toasted pumpkin seeds, and feta, tossed in a light honey-apple cider vinaigrette.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Sizzling Steak Fajitas', 'price': 16.0, 'description': 'Juicy grilled steak strips with a new, bold spice blend, served with sautéed peppers and onions, warm flour tortillas, and a trio of salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of sweetness, topped with crispy onions on a toasted brioche bun with coleslaw and pickles.'}, {'id': 14, 'name': 'Bold BBQ Chicken', 'price': 15.0, 'description': 'Tender chicken breast glazed with our signature bold BBQ sauce, served with a corn on the cob and garlic-parmesan fries.'}, {'id': 15, 'name': 'Spicy Cajun Pasta', 'price': 14.0, 'description': 'Penne pasta tossed in a spicy Cajun cream sauce with sautéed shrimp, Andouille sausage, bell peppers, and topped with parmesan cheese.'}]
+4. Comments
+   [{'day': 5, 'name': 'Jake', 'score': 7, 'content': 'The dishes at American Flavors were satisfactory with the Sizzling Steak Fajitas and Sampler being the highlights. While the Buffalo Wings and BBQ Ribs were decent, they lacked the expected boldness in flavor.'}, {'day': 5, 'name': 'Amelia', 'score': 7, 'content': "The meal at 'American Flavors' was satisfying with well-seasoned Sizzling Steak Fajitas (7.1) and a fair New England Clam Chowder (6.8). Salad and pie were fresh but needed more flavor (6.6). Good, but with room for improvement."}, {'day': 5, 'name': 'Grace', 'score': 7, 'content': 'The meal was satisfactory with the Sampler as a highlight. While dishes were suitable for dietary needs, the flavor depth could be improved. Good service, fair pricing, but expected more from the chowder and apple pie.'}, {'day': 5, 'name': 'Olivia', 'score': 7, 'content': "American Flavors provided a decent meal. The Pulled Pork Sandwich was a highlight, while the salads were fair but lacked the expected Mediterranean zest and creativity. An improvement from previous visits, yet there's room for more culinary distinction."}, {'day': 5, 'name': 'Max', 'score': 7, 'content': "The American Flavors provided a fair dining experience with room for flavor enhancement. The Sampler and Pulled Pork Sandwich stood out as highlights, reflecting the restaurant's steady improvements."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.7631578947368425
+2. Advertisement
+   Stars & Stripes Diner is rolling out a culinary revolution! Our concentrated menu now features intensely flavored favorites and new delights, like the Victory Veggie Burger and Colonial Cornbread. Visit us for an unforgettable taste of America. #IntenseFlavors #CulinaryRevolution #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 16.0, 'description': 'An all-beef patty with a new secret blend of spices, aged cheddar, heirloom tomato, artisan lettuce, and our bold freedom sauce, served with garlic-parmesan fries.'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 11.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 7.0, 'description': 'Our homemade apple pie with a flakier crust and a richer filling, spiced with cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 11.0, 'description': 'A fresh mix of greens, sweet dried cranberries, crunchy walnuts, rich blue cheese crumbles, and our enhanced honey-mustard vinaigrette.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 17.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our BBQ sauce, served with coleslaw and cornbread'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 9.0, 'description': 'Warm apple pie with a twist of exotic spices and a drizzle of homemade caramel, served with a scoop of cinnamon ice cream.'}, {'id': 11, 'name': 'Victory Veggie Burger', 'price': 14.0, 'description': 'A hearty plant-based patty with fresh avocado, tomato, lettuce, and our special herb aioli, served with sweet potato fries.'}, {'id': 12, 'name': 'Colonial Cornbread', 'price': 5.0, 'description': 'Homemade cornbread with a touch of honey, served with whipped butter and sprinkled with sea salt.'}]
+4. Comments
+   [{'day': 5, 'name': 'Tara', 'score': 6, 'content': "The diner's dishes were fair, with the Spiced Apple Caramel Pie offering a hint of the exotic spices we craved. Despite this, the flavors overall fell short of bold. The Eagle's Nest Salad was suitable for dietary needs but lacked zest, and the other dishes needed more flavor intensity."}, {'day': 4, 'name': 'Bob', 'score': 5, 'content': "The dishes at Stars & Stripes Diner were average; the Freedom Burger lacked the robust flavor I crave, and both the Eagle's Nest Salad and Spiced Apple Caramel Pie were decent but not exceptional. Compared to American Flavors, the consistency was better, but neither restaurant has impressed me lately."}, {'day': 4, 'name': 'Quincy', 'score': 6, 'content': "The Eagle's Nest Salad was aligned with my low-calorie diet, but the overall taste fell short of expectations. It was a fair attempt at healthy dining, yet lacked the zest and flavor I hoped for. Consistent with previous visits, but room for improvement."}, {'day': 4, 'name': 'Oscar', 'score': 6, 'content': "The Stars & Stripes Diner provided a fair experience, with the Spiced Apple Caramel Pie being the highlight. However, the Freedom Burger and Eagle's Nest Salad lacked the flavor depth I've found in other establishments. A notch above average, but there's room for refinement."}, {'day': 3, 'name': 'Jake', 'score': 6, 'content': "The meal was fair, with all dishes scoring around average. The diner accommodated our low sodium needs, but the flavors didn't meet our expectations for boldness and street food zest."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason" : "American Flavors has a higher customer score and offers a sampler platter which allows me to enjoy a variety of traditional American dishes in one meal, plus the clam chowder for a comforting choice."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.71
+New England Clam Chowder: 0.68
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler was a delightful way to taste various dishes, and the New England Clam Chowder provided a warm, comforting experience."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.476190476190476
+2. Advertisement
+   Discover the new taste sensations at American Flavors! Our Sizzling Steak Fajitas and Sweet & Smoky Pulled Pork Sandwich now boast even bolder spices and richer flavors. Plus, enjoy the enhanced classic Homestyle Apple Pie and Spicy Cajun Pasta. Each bite promises an unforgettable dining experience. Come taste the difference today!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'Our signature beef patty, lettuce, tomato, onion, and house sauce, on a toasted artisan bun, with a side of garlic-parmesan fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy buffalo wings, served with a cooling blue cheese dressing and crisp celery sticks.'}, {'id': 6, 'name': 'Homestyle Apple Pie', 'price': 6.0, 'description': 'A classic apple pie with a flaky crust and a rich, spiced apple filling, enhanced with caramel drizzle, served with a scoop of vanilla bean ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Harvest Salad', 'price': 12.0, 'description': 'A vibrant salad with mixed greens, roasted butternut squash, quinoa, dried cranberries, toasted pumpkin seeds, and feta, tossed in a light honey-apple cider vinaigrette.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Sizzling Steak Fajitas', 'price': 16.0, 'description': 'Juicy grilled steak strips with an even bolder spice blend, including smoked paprika and chipotle, served with sautéed peppers and onions, warm flour tortillas, and a trio of house-made salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 14, 'name': 'Bold BBQ Chicken', 'price': 15.0, 'description': 'Tender chicken breast glazed with our signature bold BBQ sauce, served with a corn on the cob and garlic-parmesan fries.'}, {'id': 15, 'name': 'Spicy Cajun Pasta', 'price': 14.0, 'description': 'Penne pasta tossed in a bolder spicy Cajun cream sauce with sautéed shrimp, Andouille sausage, bell peppers, and a dusting of spicy smoked paprika parmesan cheese.'}]
+4. Comments
+   [{'day': 6, 'name': 'Jake', 'score': 7, 'content': 'Good meal with standout Sizzling Steak Fajitas. Sampler offered variety, but Bold BBQ Chicken and Spicy Cajun Pasta lacked the promised boldness. Room for improvement in spice levels.'}, {'day': 6, 'name': 'Amelia', 'score': 7, 'content': 'The dishes at American Flavors were satisfactory with each offering distinct flavors that catered to our tastes. However, we all agreed that while the dishes were good, they didn’t quite hit the mark of excellence we were anticipating. The ingredients were fresh, and the seasoning was bold, yet something was missing to make the meal truly memorable.'}, {'day': 6, 'name': 'Grace', 'score': 7, 'content': 'American Flavors provided a satisfying variety with the Sampler and a noteworthy Clam Chowder. Room for improvement in flavor depth and diabetic-friendly options. Good value and service.'}, {'day': 6, 'name': 'Olivia', 'score': 7, 'content': 'Overall, a satisfactory experience with the Sweet & Smoky Pulled Pork Sandwich and American Flavors Sampler as highlights. The American Harvest Salad, while fresh, could benefit from bolder Mediterranean flavors. Good quality, but room for improvement.'}, {'day': 6, 'name': 'Maggie', 'score': 7, 'content': 'Consensus highlights the Sizzling Steak Fajitas and Sweet & Smoky Pulled Pork Sandwich. The American Harvest Salad and Spicy Cajun Pasta needed more flavor depth, and the Homestyle Apple Pie could be sweeter. Good meal, but room for flavor enhancement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.775
+2. Advertisement
+   Get ready for a flavor explosion at Stars & Stripes Diner! Introducing 'Melting Pot Meatloaf' & spicier dishes for a bold taste. Don't miss our 'BBQ & Blues Night' this week for great food, local music, and community vibes. #AmericanFusion #BBQBlues #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 16.0, 'description': 'An all-beef patty with a bold new secret blend of spices, aged cheddar, heirloom tomato, artisan lettuce, and our smoky freedom sauce, served with garlic-parmesan fries.'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 11.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 7.0, 'description': 'Our homemade apple pie with a flakier crust and a richer filling, spiced with cinnamon and nutmeg, served with premium vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 11.0, 'description': 'A fresh mix of greens, sweet dried cranberries, crunchy walnuts, tangy blue cheese crumbles, and our enhanced honey-mustard vinaigrette with an extra kick.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 17.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our new spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 9.0, 'description': 'Our warm apple pie takes a spicy turn with even more exotic spices and a rich homemade caramel drizzle, served with a scoop of cinnamon ice cream.'}, {'id': 11, 'name': 'Victory Veggie Burger', 'price': 14.0, 'description': 'Our plant-based patty loaded with fresh avocado, tomato, lettuce, and a kick of our special spicy herb aioli, served with sweet potato fries.'}, {'id': 12, 'name': 'Colonial Cornbread', 'price': 5.0, 'description': 'Homemade cornbread with a touch of honey, served with whipped butter and sprinkled with sea salt.'}, {'id': 13, 'name': 'Melting Pot Meatloaf', 'price': 15.0, 'description': 'A classic meatloaf infused with international spices, topped with a tangy tomato glaze, served with garlic mashed potatoes and sautéed seasonal vegetables.'}]
+4. Comments
+   [{'day': 6, 'name': 'Max', 'score': 6, 'content': "Our meal at Stars & Stripes Diner was satisfactory, with the Spiced Apple Caramel Pie standing out. Both the Victory Veggie Burger and Colonial Cornbread were decent but could benefit from more intense flavors, as promised in the diner's advertisement."}, {'day': 6, 'name': 'Yasmine', 'score': 6, 'content': "The Victory Veggie Burger and Eagle's Nest Salad were satisfactory with room for improvement in flavor and creativity. Fair for those seeking simple, vegan options."}, {'day': 5, 'name': 'Tara', 'score': 6, 'content': "The diner's dishes were fair, with the Spiced Apple Caramel Pie offering a hint of the exotic spices we craved. Despite this, the flavors overall fell short of bold. The Eagle's Nest Salad was suitable for dietary needs but lacked zest, and the other dishes needed more flavor intensity."}, {'day': 4, 'name': 'Bob', 'score': 5, 'content': "The dishes at Stars & Stripes Diner were average; the Freedom Burger lacked the robust flavor I crave, and both the Eagle's Nest Salad and Spiced Apple Caramel Pie were decent but not exceptional. Compared to American Flavors, the consistency was better, but neither restaurant has impressed me lately."}, {'day': 4, 'name': 'Quincy', 'score': 6, 'content': "The Eagle's Nest Salad was aligned with my low-calorie diet, but the overall taste fell short of expectations. It was a fair attempt at healthy dining, yet lacked the zest and flavor I hoped for. Consistent with previous visits, but room for improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "American Flavors has a higher customer score and offers a sampler platter, allowing for a variety of traditional dishes, which suits my taste for traditional cuisine."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.71
+New England Clam Chowder: 0.68
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler provided a delightful variety of traditional tastes, and the New England Clam Chowder was rich and satisfying."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.486486486486487
+2. Advertisement
+   Indulge in culinary excellence at American Flavors! We're elevating your favorites with gourmet touches like our new Gourmet Truffle Burger Deluxe and Firecracker Steak Fajitas. Experience the zest with our American Zest Harvest Salad and the sweet finish of our Caramel Apple Pie Deluxe. Join us for a memorable feast that tantalizes your taste buds with boldness and sophistication!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 6, 'name': 'Caramel Apple Pie Deluxe', 'price': 8.0, 'description': 'Our homestyle apple pie gets a gourmet makeover with a flakier crust, richer spiced apple filling, and an extra drizzle of homemade spiced caramel, served with premium cinnamon ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 14.0, 'description': 'An elevated version of our salad with mixed greens, roasted butternut squash, quinoa, dried cranberries, toasted pumpkin seeds, and feta, all tossed in a zesty jalapeño-honey-apple cider vinaigrette.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 18.0, 'description': 'Our sizzling steak fajitas now come with a fiery twist, featuring a spicier blend with cayenne and ancho chiles, served with sautéed peppers, onions, warm flour tortillas, and a trio of house-made salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 15, 'name': 'Cajun Heat Pasta', 'price': 16.0, 'description': 'A hot update to our pasta, tossed in a spicier Cajun cream sauce with sautéed shrimp, Andouille sausage, bell peppers, and topped with a fiery smoked paprika parmesan cheese.'}, {'id': 16, 'name': 'Gourmet Truffle Burger Deluxe', 'price': 20.0, 'description': 'Our Gourmet Truffle Burger enhanced with a luxurious blend of wild mushrooms, truffle aioli, and melted Gruyère on a gluten-free artisan bun, served with truffle-parmesan fries.'}]
+4. Comments
+   [{'day': 7, 'name': 'Amelia', 'score': 7, 'content': 'Good dining experience with fresh ingredients, yet lacking in boldness and depth of flavor. Room for improvement to make dishes more memorable and exciting.'}, {'day': 7, 'name': 'Grace', 'score': 7, 'content': 'The American Flavors Sampler was a standout, offering variety. Desserts and salads were fair but lacked bold flavors. A good meal, yet room for improvement, especially for diabetic-friendly options.'}, {'day': 7, 'name': 'Maggie', 'score': 7, 'content': 'The Sizzling Steak Fajitas and Pulled Pork Sandwich were highlights with improved flavors. The Sampler was appreciated for variety. Apple Pie, Spicy Cajun Pasta, Buffalo Wings, and American Harvest Salad were fair but lacked the wow factor. Overall, a good experience with room for sweetness and spice enhancements.'}, {'day': 7, 'name': 'Nora', 'score': 7, 'content': 'American Flavors offered a good experience with room for improvement. Fajitas were the highlight, while the salad and pie lacked flavor depth. A solid choice for a meal with potential for more memorable dishes.'}, {'day': 7, 'name': 'Tara', 'score': 7, 'content': 'Good meal with room for improvement in flavor complexity. Appreciated the accommodation for dietary needs and health consciousness.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.804347826086956
+2. Advertisement
+   Taste the revolution at Stars & Stripes Diner with our new Spicy Bourbon BBQ Burger and Firecracker Shrimp Salad! Join us for a 'Flavor Explosion' event and be the first to try our bold new dishes. #TasteTheRevolution #FlavorExplosion #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 16.0, 'description': 'Our classic all-beef patty now with a bolder secret blend of spices, smoky bacon, aged cheddar, and crisp pickles, topped with our smoky freedom sauce, served with garlic-parmesan fries.'}, {'id': 2, 'name': 'Liberty Chicken Sandwich', 'price': 11.0, 'description': 'Grilled chicken breast with bacon, avocado, and ranch dressing, served on a toasted brioche bun'}, {'id': 3, 'name': 'Patriot Pie', 'price': 8.0, 'description': 'Our homemade apple pie with a twist of bold spices like star anise and cloves, served with a scoop of bourbon vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 12.0, 'description': 'Our signature salad now comes with a bold honey-mustard vinaigrette with an extra kick, featuring spicy candied walnuts, blue cheese, and succulent grilled chicken.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 17.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our new spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 10.0, 'description': 'Our warm apple pie with a bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served with a scoop of cinnamon ice cream.'}, {'id': 12, 'name': 'Colonial Cornbread', 'price': 5.0, 'description': 'Homemade cornbread with a touch of honey, served with whipped butter and sprinkled with sea salt.'}, {'id': 13, 'name': 'Melting Pot Meatloaf', 'price': 15.0, 'description': 'A classic meatloaf infused with international spices, topped with a tangy tomato glaze, served with garlic mashed potatoes and sautéed seasonal vegetables.'}, {'id': 14, 'name': 'Spicy Bourbon BBQ Burger', 'price': 18.0, 'description': 'A juicy beef patty topped with melted pepper jack cheese, crispy onion rings, and drenched in our homemade bourbon BBQ sauce with a spicy kick, served with Cajun-spiced fries.'}, {'id': 15, 'name': 'Firecracker Shrimp Salad', 'price': 14.0, 'description': 'A bed of mixed greens tossed with spicy grilled shrimp, avocado, mango salsa, and a zesty lime-cilantro vinaigrette, topped with crunchy tortilla strips.'}]
+4. Comments
+   [{'day': 7, 'name': 'Jake', 'score': 6, 'content': 'Fair dining experience with decent spice levels, but dishes lacked the boldness promised. Room for flavor enhancement, particularly for those seeking robust heat.'}, {'day': 7, 'name': 'Olivia', 'score': 6, 'content': "An average experience with fair dishes. The Eagle's Nest Salad and Spiced Apple Caramel Pie were highlights, yet overall flavor boldness and gluten-free options were lacking."}, {'day': 7, 'name': 'Max', 'score': 6, 'content': "The meal was fair but didn't live up to the bold flavors promised. The Victory Veggie Burger and Eagle's Nest Salad were satisfactory, but the Spiced Apple Caramel Pie stood out slightly more, despite not being as adventurous as expected."}, {'day': 7, 'name': 'Frank', 'score': 6, 'content': 'Dishes at Stars & Stripes Diner were decent with potential, but lacked the bold flavors expected. Fair experience but improvements in spice and depth of flavor could enhance the dining experience.'}, {'day': 7, 'name': 'Yasmine', 'score': 6, 'content': "The Victory Veggie Burger and Eagle's Nest Salad were satisfactory with room for flavor enhancement. Fresh ingredients were used but could benefit from more seasoning and a zestier dressing."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes" : [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason" : "American Flavors offers a higher customer score and a variety of traditional dishes with the sampler platter, which appeals to my traditional taste and provides a hearty and comforting meal through the clam chowder."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.76
+New England Clam Chowder: 0.73
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler provided a diverse taste of traditional dishes that I thoroughly enjoyed, while the New England Clam Chowder was exceptionally creamy and comforting."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.584269662921348
+2. Advertisement
+   Discover the bolder side of American Flavors with our enhanced dishes! Savor the intensified American Zest Harvest Salad, indulge in the richer Gourmet Truffle Burger Deluxe, experience our spicier Firecracker Steak Fajitas, and delight in our deeper Caramel Apple Pie Deluxe. Every bite promises a gourmet journey filled with zest and indulgence. Taste the transformation today!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 6, 'name': 'Caramel Apple Pie Deluxe', 'price': 10.0, 'description': 'A decadent update with a deeper caramel and a more pronounced blend of autumn spices, served with a scoop of artisanal cinnamon ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 15.0, 'description': 'A vibrant mix of greens, quinoa, roasted squash, and cranberries in an amplified jalapeño-lime vinaigrette, topped with spiced pumpkin seeds and feta.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 19.0, 'description': 'Steak strips marinated in a bolder firecracker spice blend, served with charred peppers, onions, and a selection of spicy salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 15, 'name': 'Cajun Heat Pasta', 'price': 16.0, 'description': 'A hot update to our pasta, tossed in a spicier Cajun cream sauce with sautéed shrimp, Andouille sausage, bell peppers, and topped with a fiery smoked paprika parmesan cheese.'}, {'id': 16, 'name': 'Gourmet Truffle Burger Deluxe', 'price': 22.0, 'description': 'An enhanced burger with a richer truffle flavor, layered with exotic mushrooms, truffle aioli, and aged Gruyère, on a gluten-free bun, accompanied by truffle-parmesan fries.'}]
+4. Comments
+   [{'day': 8, 'name': 'Jake', 'score': 8, 'content': 'The group enjoyed the variety and spice offered, particularly the Firecracker Steak Fajitas and Sampler, with the Pie being a sweet finish. American Flavors provided a satisfying meal accommodating diverse tastes and health needs.'}, {'day': 8, 'name': 'Amelia', 'score': 7, 'content': 'American Flavors offered a good dining experience with hearty meals, though the flavors could use more depth. The service was excellent, and the restaurant ambiance was enjoyable. A solid choice for a satisfying meal with a few areas for improvement.'}, {'day': 8, 'name': 'Olivia', 'score': 7, 'content': 'Overall, a satisfying experience with quality gluten-free options. Dishes were good but lacked bold flavors. The Sweet & Smoky Pulled Pork Sandwich was particularly enjoyable.'}, {'day': 8, 'name': 'Max', 'score': 8, 'content': 'American Flavors offered a satisfying meal with the American Zest Harvest Salad and Sweet & Smoky Pulled Pork Sandwich as standouts. The Sampler provided variety, and the Caramel Apple Pie Deluxe ended the meal on a sweet note.'}, {'day': 8, 'name': 'Nora', 'score': 7, 'content': 'American Flavors delivered a satisfying dining experience with a harmonious blend of comfort and gourmet in dishes like the Gourmet Truffle Burger Deluxe and Sweet & Smoky Pulled Pork Sandwich.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.857142857142857
+2. Advertisement
+   Discover #AmericanFusionFeast at Stars & Stripes Diner! Exciting new Tandoori Chicken Burger and Kimchi Mac 'n' Cheese await. Don't miss our #GlobalTastesUSA event for a unique blend of flavors. #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 14.0, 'description': 'Our classic all-beef patty now with a bolder secret blend of spices, smoky bacon, aged cheddar, and crisp pickles, topped with our smoky freedom sauce, served with garlic-parmesan fries.'}, {'id': 3, 'name': 'Patriot Pie', 'price': 9.0, 'description': 'Our homemade apple pie with a twist of bold spices like star anise and cloves, served with a scoop of bourbon vanilla bean ice cream.'}, {'id': 4, 'name': "Eagle's Nest Salad", 'price': 11.0, 'description': 'Our signature salad now comes with a bold honey-mustard vinaigrette with an extra kick, featuring spicy candied walnuts, blue cheese, and succulent grilled chicken.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 18.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our new spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 11.0, 'description': 'Our warm apple pie with a bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served with a scoop of cinnamon ice cream.'}, {'id': 13, 'name': 'Melting Pot Meatloaf', 'price': 15.0, 'description': 'A classic meatloaf infused with international spices, topped with a tangy tomato glaze, served with garlic mashed potatoes and sautéed seasonal vegetables.'}, {'id': 14, 'name': 'Spicy Bourbon BBQ Burger', 'price': 17.0, 'description': 'A juicy beef patty topped with melted pepper jack cheese, crispy onion rings, and drenched in our homemade bourbon BBQ sauce with a spicy kick, served with Cajun-spiced fries.'}, {'id': 15, 'name': 'Firecracker Shrimp Salad', 'price': 13.0, 'description': 'A bed of mixed greens tossed with spicy grilled shrimp, avocado, mango salsa, and a zesty lime-cilantro vinaigrette, topped with crunchy tortilla strips.'}, {'id': 16, 'name': 'Tandoori Chicken Burger', 'price': 16.0, 'description': 'Juicy grilled chicken with a Tandoori spice rub, topped with cucumber raita and mango chutney, on a toasted naan bun.'}, {'id': 17, 'name': "Kimchi Mac 'n' Cheese", 'price': 14.0, 'description': 'A creamy blend of cheeses with a Korean twist, baked with kimchi and a crispy panko topping.'}]
+4. Comments
+   [{'day': 8, 'name': 'Grace', 'score': 7, 'content': "Decent flavors that didn't fully deliver on boldness. Spiced Apple Caramel Pie was a standout, while other dishes were good but lacked depth. Fair experience overall."}, {'day': 8, 'name': 'Maggie', 'score': 7, 'content': "Enjoyable experience with room for improvement in flavor boldness. Desserts were a highlight, main courses lacked expected 'explosive' taste."}, {'day': 8, 'name': 'William', 'score': 6, 'content': 'Each dish at Stars & Stripes Diner showed promise but lacked the vibrant, bold flavors we craved. The experience was fair, highlighting the need for more zest.'}, {'day': 7, 'name': 'Jake', 'score': 6, 'content': 'Fair dining experience with decent spice levels, but dishes lacked the boldness promised. Room for flavor enhancement, particularly for those seeking robust heat.'}, {'day': 7, 'name': 'Olivia', 'score': 6, 'content': "An average experience with fair dishes. The Eagle's Nest Salad and Spiced Apple Caramel Pie were highlights, yet overall flavor boldness and gluten-free options were lacking."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "American Flavors has a higher customer score, and the menu includes a sampler platter that provides a taste of various traditional dishes, alongside a comforting clam chowder."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.76
+New England Clam Chowder: 0.73
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler offered a solid variety of well-prepared traditional dishes, and the New England Clam Chowder was particularly comforting and had just the right thickness."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.650485436893204
+2. Advertisement
+   Indulge in excellence with American Flavors' revamped Gourmet Truffle Burger Deluxe, now with a more robust truffle aioli and premium ingredients. Don't miss our new Ultimate American Spice Feast, an adventure for your taste buds. We uphold our commitment to diversity with options for all dietary preferences. Come experience the pinnacle of American dining today!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 6, 'name': 'Caramel Apple Pie Deluxe', 'price': 10.0, 'description': 'A decadent update with a deeper caramel and a more pronounced blend of autumn spices, served with a scoop of artisanal cinnamon ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 15.0, 'description': 'A vibrant mix of greens, quinoa, roasted squash, and cranberries in an amplified jalapeño-lime vinaigrette, topped with spiced pumpkin seeds and feta.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 19.0, 'description': 'Steak strips marinated in a bolder firecracker spice blend, served with charred peppers, onions, and a selection of spicy salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 15, 'name': 'Cajun Heat Pasta', 'price': 16.0, 'description': 'A hot update to our pasta, tossed in a spicier Cajun cream sauce with sautéed shrimp, Andouille sausage, bell peppers, and topped with a fiery smoked paprika parmesan cheese.'}, {'id': 16, 'name': 'Gourmet Truffle Burger Deluxe', 'price': 22.0, 'description': 'An exquisite burger with a more intense truffle flavor, featuring a luxurious black truffle aioli, sautéed exotic mushrooms, and rich aged Gruyère, on a premium brioche bun, served with truffle-parmesan fries.'}, {'id': 17, 'name': 'Ultimate American Spice Feast', 'price': 25.0, 'description': "A daring platter that takes you on a tour of America's favorite spices, including Cajun-seasoned shrimp, Nashville hot chicken, and a spicy Tex-Mex bean salad."}]
+4. Comments
+   [{'day': 9, 'name': 'Jake', 'score': 7, 'content': 'The meal at American Flavors was satisfying, with the Firecracker Steak Fajitas and American Flavors Sampler being the standouts. While the Cajun Heat Pasta was less impressive, overall the dishes were well-received for their flavor and spice.'}, {'day': 9, 'name': 'Amelia', 'score': 7, 'content': 'Overall good experience with standout dishes like the Firecracker Steak Fajitas and Sampler. Cajun Heat Pasta lacked spice. Salad and dessert were refreshing and enjoyable.'}, {'day': 9, 'name': 'Grace', 'score': 8, 'content': 'American Flavors provided a well-rounded dining experience, with a diverse menu catering to various dietary needs and a selection of well-prepared dishes.'}, {'day': 9, 'name': 'Olivia', 'score': 7, 'content': 'American Flavors provided a satisfying meal with standout dishes like the Gourmet Truffle Burger Deluxe. Allergen-friendly options were appreciated, though dessert could be improved.'}, {'day': 9, 'name': 'Max', 'score': 7, 'content': 'American Flavors provided a satisfying dining experience with its diverse menu and attentive service. The plant-based options were fresh, and the meat dishes were well-received.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.846153846153846
+2. Advertisement
+   Come savor the classics at Stars & Stripes American Diner! Indulge in our Classic American Burger, Bold American Salad, and Americana Apple Pie. Experience timeless tastes with a modern twist. #StarsAndStripesClassics
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Our perfected all-beef patty with a classic blend of spices, crowned with aged cheddar, artisanal pickles, and our signature smoky sauce, served with garlic-parmesan fries.'}, {'id': 3, 'name': 'Americana Apple Pie', 'price': 9.0, 'description': 'Our traditional apple pie enhanced with classic spices like cinnamon and allspice, served with a scoop of premium vanilla bean ice cream.'}, {'id': 4, 'name': 'Bold American Salad', 'price': 12.0, 'description': 'Our signature salad with a zesty honey-mustard vinaigrette, featuring spiced nuts, blue cheese, and chargrilled chicken.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 18.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our new spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 11.0, 'description': 'Our warm apple pie with a bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served with a scoop of cinnamon ice cream.'}, {'id': 13, 'name': 'Melting Pot Meatloaf', 'price': 15.0, 'description': 'A classic meatloaf infused with international spices, topped with a tangy tomato glaze, served with garlic mashed potatoes and sautéed seasonal vegetables.'}, {'id': 14, 'name': 'Spicy Bourbon BBQ Burger', 'price': 17.0, 'description': 'A juicy beef patty topped with melted pepper jack cheese, crispy onion rings, and drenched in our homemade bourbon BBQ sauce with a spicy kick, served with Cajun-spiced fries.'}, {'id': 15, 'name': 'Firecracker Shrimp Salad', 'price': 13.0, 'description': 'A bed of mixed greens tossed with spicy grilled shrimp, avocado, mango salsa, and a zesty lime-cilantro vinaigrette, topped with crunchy tortilla strips.'}, {'id': 18, 'name': 'Smokey BBQ Beef Brisket', 'price': 19.0, 'description': 'Tender beef brisket slow-roasted with our signature BBQ sauce, served with roasted root vegetables and a homemade corn muffin.'}, {'id': 19, 'name': 'American Classic Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake on a graham cracker crust, topped with a seasonal berry compote.'}]
+4. Comments
+   [{'day': 9, 'name': 'Dexter', 'score': 6, 'content': "Intriguing fusion concept with fair execution. Flavors didn't fully meet expectations for boldness. Highlight was the Freedom Burger. Overall, an adequate dining experience that could benefit from more pronounced flavors."}, {'day': 9, 'name': 'William', 'score': 6, 'content': 'The fusion concept intrigued us, but the dishes lacked the vibrancy and depth of flavor we craved. Fair overall, with the Spiced Apple Caramel Pie as a relative highlight.'}, {'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The revamped Eagle's Nest Salad was a letdown, barely passing as a fair option for a low-calorie meal. I expected more from the bold flavors promised, and it fell short of the satisfying zest found in American Flavors' dishes."}, {'day': 8, 'name': 'Grace', 'score': 7, 'content': "Decent flavors that didn't fully deliver on boldness. Spiced Apple Caramel Pie was a standout, while other dishes were good but lacked depth. Fair experience overall."}, {'day': 8, 'name': 'Maggie', 'score': 7, 'content': "Enjoyable experience with room for improvement in flavor boldness. Desserts were a highlight, main courses lacked expected 'explosive' taste."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "American Flavors has a higher customer score, offering a diverse sampler platter and a traditional clam chowder, aligning with my preference for traditional dishes and a satisfying meal."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.81
+New England Clam Chowder: 0.78
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler offered a pleasing variety of traditional American dishes, while the New England Clam Chowder was hearty and flavorful."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.803418803418803
+2. Advertisement
+   Discover the pinnacle of indulgence with our Luxurious Truffle Burger Supreme, and ignite your senses with the Ultimate American Spice Feast. Enjoy our new Smokey Mountain Chicken for a taste of comfort. Perfect for every palate, with options for all dietary needs. Elevate your dining experience at American Flavors!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 6, 'name': 'Caramel Apple Pie Deluxe', 'price': 10.0, 'description': 'A decadent update with a deeper caramel and a more pronounced blend of autumn spices, served with a scoop of artisanal cinnamon ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 15.0, 'description': 'A vibrant mix of greens, quinoa, roasted squash, and cranberries in an amplified jalapeño-lime vinaigrette, topped with spiced pumpkin seeds and feta.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 19.0, 'description': 'Steak strips marinated in a bolder firecracker spice blend, served with charred peppers, onions, and a selection of spicy salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 16, 'name': 'Luxurious Truffle Burger Supreme', 'price': 24.0, 'description': 'Our most decadent burger yet, with a generous helping of fine black truffles, a sumptuous truffle aioli, sautéed exotic mushrooms, and rich aged Gruyère, on a premium brioche bun, accompanied by truffle-parmesan fries.'}, {'id': 17, 'name': 'Ultimate American Spice Feast', 'price': 25.0, 'description': "A daring platter that takes you on a tour of America's favorite spices, including Cajun-seasoned shrimp, Nashville hot chicken, and a spicy Tex-Mex bean salad."}, {'id': 18, 'name': 'Smokey Mountain Chicken', 'price': 18.0, 'description': 'Grilled chicken breast smothered in a smokey molasses BBQ sauce, served with seasonal grilled vegetables and a side of garlic mashed potatoes.'}]
+4. Comments
+   [{'day': 10, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors delivered a satisfying dining experience with a variety of dishes that catered to our tastes. The Firecracker Steak Fajitas, New England Clam Chowder, and American Zest Harvest Salad were all flavorful and well-prepared.'}, {'day': 10, 'name': 'Grace', 'score': 8, 'content': 'American Flavors offered a satisfying variety of well-executed dishes. The menu catered to diverse tastes and dietary needs, ensuring an enjoyable experience for all.'}, {'day': 10, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors impressed with their American Zest Harvest Salad, Gourmet Truffle Burger Deluxe, and Ultimate American Spice Feast. Bold flavors and diverse options catered well to our tastes and dietary needs.'}, {'day': 10, 'name': 'Max', 'score': 8, 'content': 'American Flavors delivered a satisfying experience with a mix of comfort and bold flavors. The Sweet & Smoky Pulled Pork Sandwich and Sampler were highlights.'}, {'day': 10, 'name': 'Maggie', 'score': 8, 'content': 'American Flavors impressed us with its consistent quality and flavorful dishes. The American Zest Harvest Salad and Firecracker Steak Fajitas were group favorites, and the Caramel Apple Pie Deluxe ended our meal on a high note.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.833333333333333
+2. Advertisement
+   Unveiling the Ultimate BBQ Platter only at Stars & Stripes Diner! Get ready for a feast of our signature BBQ ribs, spicy bourbon BBQ burger, and smokey beef brisket. Enjoy this indulgent spread at a special price during our Happy Hour. #UltimateBBQPlatter #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'Our perfected all-beef patty with a classic blend of spices, crowned with aged cheddar, artisanal pickles, and our signature smoky sauce, served with garlic-parmesan fries.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 17.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our new spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 11.0, 'description': 'Our warm apple pie with a bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served with a scoop of cinnamon ice cream.'}, {'id': 14, 'name': 'Spicy Bourbon BBQ Burger', 'price': 16.0, 'description': 'A juicy beef patty topped with melted pepper jack cheese, crispy onion rings, and drenched in our homemade bourbon BBQ sauce with a spicy kick, served with Cajun-spiced fries.'}, {'id': 18, 'name': 'Smokey BBQ Beef Brisket', 'price': 19.0, 'description': 'Tender beef brisket slow-roasted with our signature BBQ sauce, served with roasted root vegetables and a homemade corn muffin.'}, {'id': 19, 'name': 'American Classic Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake on a graham cracker crust, topped with a seasonal berry compote.'}, {'id': 20, 'name': 'Ultimate BBQ Platter', 'price': 24.0, 'description': 'A grand platter featuring our best-selling BBQ ribs, spicy bourbon BBQ burger, and smokey BBQ beef brisket, served with a side of coleslaw, jalapeño cornbread, and Cajun-spiced fries.'}]
+4. Comments
+   [{'day': 10, 'name': 'Frank', 'score': 6, 'content': 'The dishes at Stars & Stripes Diner were fair, but lacked the adventurous and bold flavors we anticipated. The desserts were satisfactory, but not standout. Efforts to accommodate dietary restrictions were appreciated but could be enhanced.'}, {'day': 10, 'name': 'Katie', 'score': 5, 'content': "The Victory Veggie Burger was suitable for my vegan diet but lacked the wow factor. It was a satisfactory meal, yet it didn't stand out when compared to other vegan burgers I've tried. The service was good, but overall the dining experience could be enhanced with more flavorful vegan options."}, {'day': 9, 'name': 'Dexter', 'score': 6, 'content': "Intriguing fusion concept with fair execution. Flavors didn't fully meet expectations for boldness. Highlight was the Freedom Burger. Overall, an adequate dining experience that could benefit from more pronounced flavors."}, {'day': 9, 'name': 'William', 'score': 6, 'content': 'The fusion concept intrigued us, but the dishes lacked the vibrancy and depth of flavor we craved. Fair overall, with the Spiced Apple Caramel Pie as a relative highlight.'}, {'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The revamped Eagle's Nest Salad was a letdown, barely passing as a fair option for a low-calorie meal. I expected more from the bold flavors promised, and it fell short of the satisfying zest found in American Flavors' dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "Based on the higher customer score and positive feedback, I select American Flavors for its well-received variety and hearty traditional fare, such as the Sampler and Clam Chowder."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.81
+New England Clam Chowder: 0.78
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler featured a delightful array of traditional dishes, while the New England Clam Chowder was rich and provided a comforting end to the meal."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 6.93984962406015
+2. Advertisement
+   Indulge in the new, bolder Luxurious Truffle Burger Supreme at American Flavors. Savor our Firecracker Steak Fajitas and pair your meal with our signature American Spirit Crafted Cocktail. Gourmet American cuisine with vegan options awaits you!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 6, 'name': 'Caramel Apple Pie Deluxe', 'price': 10.0, 'description': 'A decadent update with a deeper caramel and a more pronounced blend of autumn spices, served with a scoop of artisanal cinnamon ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 15.0, 'description': 'A vibrant mix of greens, quinoa, roasted squash, and cranberries in an amplified jalapeño-lime vinaigrette, topped with spiced pumpkin seeds and feta.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 19.0, 'description': 'Steak strips marinated in a bolder firecracker spice blend, served with charred peppers, onions, and a selection of spicy salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 16, 'name': 'Luxurious Truffle Burger Supreme', 'price': 26.0, 'description': 'Elevate your senses with our most indulgent burger, featuring a lavish amount of black truffles, a bolder truffle aioli, sautéed exotic mushrooms, and rich aged Gruyère, on a premium brioche bun, served with truffle-parmesan fries.'}, {'id': 17, 'name': 'Ultimate American Spice Feast', 'price': 25.0, 'description': "A daring platter that takes you on a tour of America's favorite spices, including Cajun-seasoned shrimp, Nashville hot chicken, and a spicy Tex-Mex bean salad."}, {'id': 19, 'name': 'American Spirit Crafted Cocktail', 'price': 12.0, 'description': 'Experience the essence of America in a glass with our signature cocktail, a blend of bourbon, apple cider, and a touch of maple, garnished with a cinnamon stick and a crisp apple slice.'}]
+4. Comments
+   [{'day': 11, 'name': 'Jake', 'score': 8, 'content': 'The American Flavors provided a consistent and enjoyable dining experience with a variety of tasty options. The Sampler and the Pulled Pork Sandwich were particularly impressive. A meal that well satisfied our taste for bold and spicy flavors.'}, {'day': 11, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors provided a consistently good dining experience with well-executed dishes like the Firecracker Steak Fajitas and the New England Clam Chowder. The meal was satisfying, with the Caramel Apple Pie being a sweet highlight.'}, {'day': 11, 'name': 'Grace', 'score': 8, 'content': 'American Flavors delivered a satisfying meal, with a good variety of dishes that catered to our dietary needs and taste preferences. The BBQ Ribs and New England Clam Chowder were particular highlights, offering rich flavors and a hearty experience.'}, {'day': 11, 'name': 'Olivia', 'score': 8, 'content': 'Consistently delicious, American Flavors impressed with its Sweet & Smoky Pulled Pork Sandwich and well-executed spicy dishes. The Luxurious Truffle Burger Supreme could use more truffle to match its name. Overall, a very satisfying experience.'}, {'day': 11, 'name': 'Max', 'score': 8, 'content': 'American Flavors provided a delightful dining experience, with a standout Sweet & Smoky Pulled Pork Sandwich and a varied Sampler. Plant-based options like the American Zest Harvest Salad were appreciated, and the Caramel Apple Pie Deluxe ended the meal sweetly.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.833333333333333
+2. Advertisement
+   Discover Stars & Stripes Diner's new menu! Featuring the return of fan-favorite Spiced Apple Caramel Pie, and introducing the Patriot's Plant-Based Burger. Join us for a taste of America with our Stars & Stripes BBQ Sampler. #NewMenu #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Our perfected all-beef patty with a classic blend of spices, crowned with aged cheddar, artisanal pickles, and our signature smoky sauce, served with garlic-parmesan fries.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 16.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our signature spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 10.0, 'description': 'Our warm apple pie with a bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served a la mode with cinnamon ice cream.'}, {'id': 19, 'name': 'American Classic Cheesecake', 'price': 7.0, 'description': 'Rich and creamy cheesecake on a graham cracker crust, topped with our seasonal berry compote and a light dusting of powdered sugar.'}, {'id': 20, 'name': 'Stars & Stripes BBQ Sampler', 'price': 22.0, 'description': 'A tasting platter featuring a selection of our signature Revolution Ribs, Classic American Burger, and Smokey BBQ Beef Brisket, accompanied by coleslaw, jalapeño cornbread, and seasoned fries.'}, {'id': 21, 'name': 'Freedom Fries', 'price': 5.0, 'description': 'Crispy golden fries dusted with our special blend of spices, served with a side of our signature smoky sauce.'}, {'id': 22, 'name': 'Liberty Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken breast seasoned with herbs, topped with avocado, bacon, and a zesty ranch sauce, served on a toasted brioche bun with a side of Freedom Fries.'}, {'id': 23, 'name': "Patriot's Plant-Based Burger", 'price': 13.0, 'description': "A delicious meat-free patty with all the classic burger fixings, making for an impressive vegan feast that's full of flavor."}]
+4. Comments
+   [{'day': 10, 'name': 'Frank', 'score': 6, 'content': 'The dishes at Stars & Stripes Diner were fair, but lacked the adventurous and bold flavors we anticipated. The desserts were satisfactory, but not standout. Efforts to accommodate dietary restrictions were appreciated but could be enhanced.'}, {'day': 10, 'name': 'Katie', 'score': 5, 'content': "The Victory Veggie Burger was suitable for my vegan diet but lacked the wow factor. It was a satisfactory meal, yet it didn't stand out when compared to other vegan burgers I've tried. The service was good, but overall the dining experience could be enhanced with more flavorful vegan options."}, {'day': 9, 'name': 'Dexter', 'score': 6, 'content': "Intriguing fusion concept with fair execution. Flavors didn't fully meet expectations for boldness. Highlight was the Freedom Burger. Overall, an adequate dining experience that could benefit from more pronounced flavors."}, {'day': 9, 'name': 'William', 'score': 6, 'content': 'The fusion concept intrigued us, but the dishes lacked the vibrancy and depth of flavor we craved. Fair overall, with the Spiced Apple Caramel Pie as a relative highlight.'}, {'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The revamped Eagle's Nest Salad was a letdown, barely passing as a fair option for a low-calorie meal. I expected more from the bold flavors promised, and it fell short of the satisfying zest found in American Flavors' dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "American Flavors has a higher customer score and a menu that suits my preference for traditional American cuisine, particularly with the hearty and diverse Sampler and the creamy Clam Chowder."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+American Flavors Sampler: 0.81
+New England Clam Chowder: 0.78
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "score": 8,
+    "comment": "The American Flavors Sampler was a hearty introduction to traditional dishes, and the New England Clam Chowder provided a creamy comfort, though it could use a touch more seasoning. Overall, a satisfying meal that stands out compared to other options."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.059602649006623
+2. Advertisement
+   Experience the new Enhanced Luxurious Truffle Burger Supreme, now with an even richer truffle essence. Enjoy our fan-favorite Firecracker Steak Fajitas or try the new Patriotic Prime Ribeye Steak. Perfectly paired with our signature American Spirit Crafted Cocktail. Gourmet indulgence with options for all at American Flavors!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 6, 'name': 'Caramel Apple Pie Deluxe', 'price': 10.0, 'description': 'A decadent update with a deeper caramel and a more pronounced blend of autumn spices, served with a scoop of artisanal cinnamon ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 15.0, 'description': 'A vibrant mix of greens, quinoa, roasted squash, and cranberries in an amplified jalapeño-lime vinaigrette, topped with spiced pumpkin seeds and feta.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 19.0, 'description': 'Steak strips marinated in a bolder firecracker spice blend, served with charred peppers, onions, and a selection of spicy salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 16, 'name': 'Enhanced Luxurious Truffle Burger Supreme', 'price': 28.0, 'description': 'Our most indulgent burger yet, now with an even richer truffle flavor. Savour the luxury of fine black truffles, a bolder truffle aioli, sautéed exotic mushrooms, and rich aged Gruyère, on a premium brioche bun, served with truffle-parmesan fries.'}, {'id': 19, 'name': 'American Spirit Crafted Cocktail', 'price': 12.0, 'description': 'Experience the essence of America in a glass with our signature cocktail, a blend of bourbon, apple cider, and a touch of maple, garnished with a cinnamon stick and a crisp apple slice.'}, {'id': 20, 'name': 'Patriotic Prime Ribeye Steak', 'price': 30.0, 'description': 'A magnificent cut of prime ribeye, seasoned with our secret blend of spices and grilled to perfection, served with garlic mashed potatoes and grilled asparagus.'}]
+4. Comments
+   [{'day': 12, 'name': 'Jake', 'score': 8, 'content': 'Firecracker Steak Fajitas and Sampler were highlights; Spice Feast and BBQ Ribs lacked a bit of expected heat but were still enjoyable.'}, {'day': 12, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors provided a well-rounded dining experience, with a variety of tasty dishes that pleased our diverse palates and preferences.'}, {'day': 12, 'name': 'Grace', 'score': 8, 'content': 'American Flavors satisfied with its variety, balancing dietary needs and indulgent tastes. Clam Chowder and Sampler were highlights.'}, {'day': 12, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors provided a satisfying meal, with the Sweet & Smoky Pulled Pork Sandwich being a consistent favorite. More truffle in the Luxurious Truffle Burger Supreme could enhance the experience. Overall, a delightful and well-rounded dining experience.'}, {'day': 12, 'name': 'Max', 'score': 8, 'content': 'American Flavors delivered a satisfying experience with a mix of comfort and bold flavors. The Sweet & Smoky Pulled Pork Sandwich and Sampler were highlights.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.833333333333333
+2. Advertisement
+   Tantalize your taste buds with the bold new flavors at Stars & Stripes Diner! Featuring the revamped Patriot's Plant-Powered Burger and our new Liberty Loaded Nachos. Refresh with an American Dream Smoothie or indulge in our United Flavors Salad. #BoldFlavors #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Our perfected all-beef patty with a bold twist of spices, crowned with aged cheddar, artisanal pickles, and a smoky sauce with a kick, served with garlic-parmesan fries.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 16.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our signature spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 10.0, 'description': 'Our warm apple pie with a bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served a la mode with cinnamon ice cream.'}, {'id': 21, 'name': 'Freedom Fries', 'price': 5.0, 'description': 'Crispy golden fries dusted with our special blend of spices, served with a side of our signature smoky sauce.'}, {'id': 22, 'name': 'Liberty Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken breast seasoned with herbs, topped with avocado, bacon, and a zesty ranch sauce, served on a toasted brioche bun with a side of Freedom Fries.'}, {'id': 23, 'name': "Patriot's Plant-Powered Burger", 'price': 14.0, 'description': 'A savory meat-free patty, spiced up with our house-made tangy vegan chipotle mayo, topped with fresh avocado and crisp lettuce, served with sweet potato fries.'}, {'id': 24, 'name': 'Liberty Loaded Nachos', 'price': 11.0, 'description': 'A mountain of crispy tortilla chips layered with spiced black beans, jalapeños, and a rich cheese sauce, topped with pico de gallo, avocado crema, and a squeeze of lime.'}, {'id': 25, 'name': 'American Dream Smoothie', 'price': 7.0, 'description': 'A refreshing blend of blueberries, strawberries, and bananas with a hint of almond milk and honey, topped with a sprinkle of granola and fresh berries.'}, {'id': 26, 'name': 'United Flavors Salad', 'price': 13.0, 'description': 'A fusion of fresh greens, roasted peppers, sweet corn, black beans, and quinoa, tossed in a zesty cilantro-lime dressing and topped with grilled chicken or tofu.'}]
+4. Comments
+   [{'day': 10, 'name': 'Frank', 'score': 6, 'content': 'The dishes at Stars & Stripes Diner were fair, but lacked the adventurous and bold flavors we anticipated. The desserts were satisfactory, but not standout. Efforts to accommodate dietary restrictions were appreciated but could be enhanced.'}, {'day': 10, 'name': 'Katie', 'score': 5, 'content': "The Victory Veggie Burger was suitable for my vegan diet but lacked the wow factor. It was a satisfactory meal, yet it didn't stand out when compared to other vegan burgers I've tried. The service was good, but overall the dining experience could be enhanced with more flavorful vegan options."}, {'day': 9, 'name': 'Dexter', 'score': 6, 'content': "Intriguing fusion concept with fair execution. Flavors didn't fully meet expectations for boldness. Highlight was the Freedom Burger. Overall, an adequate dining experience that could benefit from more pronounced flavors."}, {'day': 9, 'name': 'William', 'score': 6, 'content': 'The fusion concept intrigued us, but the dishes lacked the vibrancy and depth of flavor we craved. Fair overall, with the Spiced Apple Caramel Pie as a relative highlight.'}, {'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The revamped Eagle's Nest Salad was a letdown, barely passing as a fair option for a low-calorie meal. I expected more from the bold flavors promised, and it fell short of the satisfying zest found in American Flavors' dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "American Flavors has a higher customer score and offers a variety of traditional American dishes, which suits my preference. The Sampler and Clam Chowder are particularly appealing for a hearty meal."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.81
+New England Clam Chowder: 0.78
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler provided a delightful taste of traditional American cuisine, and the New England Clam Chowder was rich and satisfying."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.131736526946108
+2. Advertisement
+   Savor the Bold! Introducing the Vibrant Vegan Powerhouse Burger - a flavor revolution for plant-based perfection. Plus, our enhanced American Zest Harvest Salad now offers a bolder, fresher experience. Don't miss our signature Enhanced Luxurious Truffle Burger Supreme – indulgence redefined. Come to American Flavors, where gourmet meets variety!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 6, 'name': 'Caramel Apple Pie Deluxe', 'price': 10.0, 'description': 'A decadent update with a deeper caramel and a more pronounced blend of autumn spices, served with a scoop of artisanal cinnamon ice cream.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 15.0, 'description': 'An enhanced mix of greens, quinoa, roasted beets, and oranges in a bold pomegranate-ginger dressing, topped with spiced walnuts and vegan feta.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 19.0, 'description': 'Steak strips marinated in a bolder firecracker spice blend, served with charred peppers, onions, and a selection of spicy salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 16, 'name': 'Enhanced Luxurious Truffle Burger Supreme', 'price': 30.0, 'description': 'Our most extravagant burger, with a richer black truffle blend, truffle aioli, sautéed wild mushrooms, and aged Gruyère, on a premium brioche bun, served with truffle-parmesan fries.'}, {'id': 19, 'name': 'American Spirit Crafted Cocktail', 'price': 12.0, 'description': 'Experience the essence of America in a glass with our signature cocktail, a blend of bourbon, apple cider, and a touch of maple, garnished with a cinnamon stick and a crisp apple slice.'}, {'id': 20, 'name': 'Patriotic Prime Ribeye Steak', 'price': 30.0, 'description': 'A magnificent cut of prime ribeye, seasoned with our secret blend of spices and grilled to perfection, served with garlic mashed potatoes and grilled asparagus.'}, {'id': 21, 'name': 'Vibrant Vegan Powerhouse Burger', 'price': 18.0, 'description': 'A sensational plant-based patty with a spicy chipotle black bean spread, topped with avocado, heirloom tomato, and a tangy cashew-lime aioli, served on a whole grain bun with sweet potato fries.'}]
+4. Comments
+   [{'day': 13, 'name': 'Jake', 'score': 8, 'content': 'Firecracker Steak Fajitas and Sampler were highlights; Pulled Pork Sandwich and Harvest Salad complemented our meal well, providing a satisfying mix of bold flavors.'}, {'day': 13, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors provided a consistently delightful experience with well-executed dishes, matching our varied tastes and leaving us satisfied.'}, {'day': 13, 'name': 'Grace', 'score': 8, 'content': "American Flavors provided a diverse and delicious meal, from the sampler's variety to the comforting clam chowder. The caramel pie was a sweet treat, and the salad was fresh, catering to our health needs."}, {'day': 13, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors delivered again with enhanced offerings, particularly the Truffle Burger Supreme. The Sweet & Smoky Pulled Pork Sandwich remained a highlight, and the Firecracker Fajitas added the perfect kick. Sampler and Crafted Cocktail rounded out a meal that was both indulgent and accommodating.'}, {'day': 13, 'name': 'Max', 'score': 8, 'content': 'The meal scored high on flavor and satisfaction, with the Truffle Burger and Sampler as standouts. The Harvest Salad and Caramel Pie rounded out a balanced, delightful experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.818181818181818
+2. Advertisement
+   Experience the all-new Star-Spangled Steak, exclusively at Stars & Stripes Diner! Savor the taste of tradition with our Classic American Burger and Revolution Ribs. Top off your meal with our Spiced Apple Caramel Pie and a refreshing Liberty Lemonade. #BoldClassicUSA #StarSpangledFlavors
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'Our perfected all-beef patty with a bold twist of spices, crowned with aged cheddar, artisanal pickles, and a smoky sauce with a kick, served with garlic-parmesan fries.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 18.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our signature spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 11.0, 'description': 'Our warm apple pie with a bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served a la mode with cinnamon ice cream.'}, {'id': 21, 'name': 'Freedom Fries', 'price': 5.0, 'description': 'Crispy golden fries dusted with our special blend of spices, served with a side of our signature smoky sauce.'}, {'id': 22, 'name': 'Liberty Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken breast seasoned with herbs, topped with avocado, bacon, and a zesty ranch sauce, served on a toasted brioche bun with a side of Freedom Fries.'}, {'id': 23, 'name': "Patriot's Plant-Powered Burger", 'price': 14.0, 'description': 'A savory meat-free patty, spiced up with our house-made tangy vegan chipotle mayo, topped with fresh avocado and crisp lettuce, served with sweet potato fries.'}, {'id': 26, 'name': 'United Flavors Salad', 'price': 13.0, 'description': 'A fusion of fresh greens, roasted peppers, sweet corn, black beans, and quinoa, tossed in a zesty cilantro-lime dressing and topped with grilled chicken or tofu.'}, {'id': 27, 'name': 'Star-Spangled Steak', 'price': 22.0, 'description': 'A tender cut of steak, seasoned with our secret spice blend and grilled to perfection, served with a side of roasted root vegetables and a rich mushroom sauce.'}, {'id': 28, 'name': 'Liberty Lemonade', 'price': 5.0, 'description': 'A refreshing house-made lemonade infused with fresh berries and a hint of mint, the perfect complement to any meal.'}]
+4. Comments
+   [{'day': 13, 'name': 'Maggie', 'score': 5, 'content': 'The new menu items at Stars & Stripes Diner were fair but fell short of expectations. The Liberty Loaded Nachos and American Dream Smoothie lacked bold flavors, and the Spiced Apple Caramel Pie, while the best of the lot, did not impress as hoped.'}, {'day': 10, 'name': 'Frank', 'score': 6, 'content': 'The dishes at Stars & Stripes Diner were fair, but lacked the adventurous and bold flavors we anticipated. The desserts were satisfactory, but not standout. Efforts to accommodate dietary restrictions were appreciated but could be enhanced.'}, {'day': 10, 'name': 'Katie', 'score': 5, 'content': "The Victory Veggie Burger was suitable for my vegan diet but lacked the wow factor. It was a satisfactory meal, yet it didn't stand out when compared to other vegan burgers I've tried. The service was good, but overall the dining experience could be enhanced with more flavorful vegan options."}, {'day': 9, 'name': 'Dexter', 'score': 6, 'content': "Intriguing fusion concept with fair execution. Flavors didn't fully meet expectations for boldness. Highlight was the Freedom Burger. Overall, an adequate dining experience that could benefit from more pronounced flavors."}, {'day': 9, 'name': 'William', 'score': 6, 'content': 'The fusion concept intrigued us, but the dishes lacked the vibrancy and depth of flavor we craved. Fair overall, with the Spiced Apple Caramel Pie as a relative highlight.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "American Flavors' higher customer score and positive reviews about its traditional offerings like the Sampler and Clam Chowder align with my preference for traditional dishes, suggesting a more satisfying meal."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+American Flavors Sampler: 0.81
+New England Clam Chowder: 0.78
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "score": 8,
+    "comment": "The American Flavors Sampler provided a solid introduction to classic American dishes, and the New England Clam Chowder was comforting. Both dishes scored well in flavor, though a touch more seasoning in the chowder would make it exceptional. Overall, a very good dining experience."
+}
+
+[System->Oscar]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 7.210810810810811
+2. Advertisement
+   Discover a world of flavor! American Flavors proudly presents our new Lean & Mean Vegan Chili and Guilt-Free Blueberry Cobbler, perfect for those seeking delicious, health-conscious options. Indulge in our Enhanced Luxurious Truffle Burger Supreme for a taste of luxury. Join us for culinary diversity that caters to all palates!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Our house specialty ribs coated in a rich BBQ sauce, served with a tangy coleslaw and seasoned fries.'}, {'id': 9, 'name': 'American Flavors Sampler', 'price': 20.0, 'description': 'A sampler platter featuring our Classic Burger, BBQ Ribs, Buffalo Wings, and a slice of Apple Pie, showcasing the variety of American cuisine.'}, {'id': 10, 'name': 'American Zest Harvest Salad', 'price': 16.0, 'description': 'A vibrant mix of greens, quinoa, roasted beets, and oranges, now with avocado and seasoned chickpeas, in a bold pomegranate-ginger dressing, topped with spiced walnuts and vegan feta.'}, {'id': 11, 'name': 'New England Clam Chowder', 'price': 9.0, 'description': 'A hearty and creamy clam chowder with chunks of potato, celery, and bacon, seasoned with thyme and served with oyster crackers.'}, {'id': 12, 'name': 'Firecracker Steak Fajitas', 'price': 19.0, 'description': 'Steak strips marinated in a bolder firecracker spice blend, served with charred peppers, onions, and a selection of spicy salsas.'}, {'id': 13, 'name': 'Sweet & Smoky Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pulled pork in a rich, smoky sauce with a hint of applewood sweetness, topped with crispy onions and tangy apple slaw on a toasted brioche bun.'}, {'id': 16, 'name': 'Enhanced Luxurious Truffle Burger Supreme', 'price': 30.0, 'description': 'Our most extravagant burger, with a richer black truffle blend, truffle aioli, sautéed wild mushrooms, and aged Gruyère, on a premium brioche bun, served with truffle-parmesan fries.'}, {'id': 20, 'name': 'Patriotic Prime Ribeye Steak', 'price': 30.0, 'description': 'A magnificent cut of prime ribeye, seasoned with our secret blend of spices and grilled to perfection, served with garlic mashed potatoes and grilled asparagus.'}, {'id': 21, 'name': 'Vibrant Vegan Powerhouse Burger', 'price': 18.0, 'description': 'A sensational plant-based patty with a spicy chipotle black bean spread, topped with avocado, heirloom tomato, and a tangy cashew-lime aioli, served on a whole grain bun with sweet potato fries.'}, {'id': 22, 'name': 'Lean & Mean Vegan Chili', 'price': 14.0, 'description': 'A hearty low-calorie chili made with a variety of beans, tender chunks of soy protein, and a rich tomato base, spiced to perfection and topped with avocado and vegan sour cream.'}, {'id': 23, 'name': 'Guilt-Free Blueberry Cobbler', 'price': 9.0, 'description': 'A delicious blueberry cobbler, featuring fresh blueberries and a light oat crumble, baked to perfection and served with a dollop of vegan coconut whipped cream.'}]
+4. Comments
+   [{'day': 14, 'name': 'Jake', 'score': 8, 'content': 'American Flavors delivered on variety and taste with dishes like the Firecracker Steak Fajitas and Truffle Burger. The Sampler provided a great overview, and each dish was well-received, with considerations for health and flavor preferences met. Service added positively to our experience.'}, {'day': 14, 'name': 'Amelia', 'score': 8, 'content': 'A delightful array of dishes met our varied preferences at American Flavors, with the vegan burger and steak fajitas as highlights. A well-rounded meal with each dish contributing to an overall satisfying dining experience.'}, {'day': 14, 'name': 'Grace', 'score': 8, 'content': 'American Flavors delivered a satisfying meal that met our dietary needs and taste preferences, with each dish scoring consistently well.'}, {'day': 14, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors excelled in delivering a satisfying meal with creative and flavorful dishes that met our dietary needs and taste preferences.'}, {'day': 14, 'name': 'Max', 'score': 8, 'content': 'The meal scored high on flavor and satisfaction, with the Truffle Burger and Sampler as standouts. The Harvest Salad and Caramel Pie rounded out a balanced, delightful experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 5.818181818181818
+2. Advertisement
+   Dive into bold American classics at Stars & Stripes Diner! Enjoy our revamped Classic American Burger, indulge in the deep flavors of our Spiced Apple Caramel Pie, and refresh with our signature Liberty Lemonade. Every bite is a taste of America's best. #BoldFlavors #ClassicTwist #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'Our perfected all-beef patty with a bold twist of spices, crowned with aged cheddar, artisanal pickles, and a smoky sauce with a kick, served with garlic-parmesan fries.'}, {'id': 5, 'name': 'Revolution Ribs', 'price': 18.0, 'description': 'Half rack of slow-cooked pork ribs glazed with our signature spicy BBQ sauce, served with coleslaw and jalapeño cornbread.'}, {'id': 9, 'name': 'Spiced Apple Caramel Pie', 'price': 12.0, 'description': 'Our warm apple pie with an even bolder touch of cinnamon and nutmeg, and a rich homemade caramel drizzle, served a la mode with premium vanilla bean ice cream.'}, {'id': 21, 'name': 'Freedom Fries', 'price': 6.0, 'description': 'Crispy golden fries dusted with our special blend of spices, served with a side of our signature smoky sauce.'}, {'id': 22, 'name': 'Liberty Chicken Sandwich', 'price': 15.0, 'description': 'Grilled chicken breast seasoned with our exclusive herb blend, topped with avocado, bacon, and a zesty ranch sauce, served on a toasted brioche bun with a side of Freedom Fries.'}, {'id': 23, 'name': "Patriot's Plant-Powered Burger", 'price': 15.0, 'description': 'A savory meat-free patty, spiced up with our house-made tangy vegan chipotle mayo, topped with fresh avocado and crisp lettuce, served with sweet potato fries.'}, {'id': 26, 'name': 'United Flavors Salad', 'price': 14.0, 'description': 'A fusion of fresh greens, roasted peppers, sweet corn, black beans, and quinoa, tossed in a zesty cilantro-lime dressing and topped with grilled chicken or tofu.'}, {'id': 27, 'name': 'Star-Spangled Steak', 'price': 24.0, 'description': 'A tender cut of steak, seasoned with our secret spice blend and grilled to perfection, served with a side of roasted root vegetables and a rich mushroom sauce.'}, {'id': 28, 'name': 'Liberty Lemonade', 'price': 6.0, 'description': 'A refreshing house-made lemonade infused with fresh berries and a hint of mint, the perfect complement to any meal.'}]
+4. Comments
+   [{'day': 13, 'name': 'Maggie', 'score': 5, 'content': 'The new menu items at Stars & Stripes Diner were fair but fell short of expectations. The Liberty Loaded Nachos and American Dream Smoothie lacked bold flavors, and the Spiced Apple Caramel Pie, while the best of the lot, did not impress as hoped.'}, {'day': 10, 'name': 'Frank', 'score': 6, 'content': 'The dishes at Stars & Stripes Diner were fair, but lacked the adventurous and bold flavors we anticipated. The desserts were satisfactory, but not standout. Efforts to accommodate dietary restrictions were appreciated but could be enhanced.'}, {'day': 10, 'name': 'Katie', 'score': 5, 'content': "The Victory Veggie Burger was suitable for my vegan diet but lacked the wow factor. It was a satisfactory meal, yet it didn't stand out when compared to other vegan burgers I've tried. The service was good, but overall the dining experience could be enhanced with more flavorful vegan options."}, {'day': 9, 'name': 'Dexter', 'score': 6, 'content': "Intriguing fusion concept with fair execution. Flavors didn't fully meet expectations for boldness. Highlight was the Freedom Burger. Overall, an adequate dining experience that could benefit from more pronounced flavors."}, {'day': 9, 'name': 'William', 'score': 6, 'content': 'The fusion concept intrigued us, but the dishes lacked the vibrancy and depth of flavor we craved. Fair overall, with the Spiced Apple Caramel Pie as a relative highlight.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "American Flavors Sampler", "New England Clam Chowder"
+    ],
+    "reason": "Considering American Flavors' higher customer score and positive comments on various dishes, it seems to offer a more satisfying traditional meal with better service compared to Stars & Stripes Diner."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Flavors Sampler: 0.81
+New England Clam Chowder: 0.78
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The American Flavors Sampler offered a cozy dive into Americana, with each bite harking back to classic traditions. The New England Clam Chowder provided a creamy and heartwarming experience."
+}
+

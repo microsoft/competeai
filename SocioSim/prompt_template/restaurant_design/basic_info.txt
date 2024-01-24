@@ -10,18 +10,7 @@ If the above information have not been set, your response must follow the follow
         "money": <The number I have told you>,
         "rent": 100,
         "day": 1
-    },
-    "pic_desc": <A text to generate your restaurant picture. For example: "A American Restaurant, name is xxx, more details..."
-}
-
-else if you want to modify the restaurant name, your response must follow the following format:
-{
-    "type": "partial_update",
-    "id": 1,
-    "data": {
-        "name": <New name>
-    },
-    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+    }
 }
 
 else if you think continue to operate will increase losses, you can response TERMINAL to exit this competition.

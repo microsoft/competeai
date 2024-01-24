@@ -1,0 +1,906 @@
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience authentic American flavors at American Flavor Haven! From our classic burgers to our succulent BBQ ribs, every bite is a celebration of tradition and taste. Join us midweek for exclusive specials. Indulge in quality—where every dish tells a story.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A juicy beef patty with fresh lettuce, tomato, onion, pickles, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender pork ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy chicken wings coated in our signature buffalo sauce, served with blue cheese dressing.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan cheese, croutons, and Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 7.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a berry compote.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 11.0, 'description': 'A comforting classic with creamy cheese sauce and a golden breadcrumb topping.'}, {'id': 7, 'name': 'Pulled Pork Sandwich', 'price': 13.0, 'description': 'Slow-cooked pork shoulder with tangy slaw on a soft bun, served with pickle spears.'}, {'id': 8, 'name': 'Fried Chicken', 'price': 15.0, 'description': 'Crispy on the outside, juicy on the inside, our classic fried chicken is a crowd-pleaser.'}, {'id': 9, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a scoop of vanilla ice cream and caramel drizzle.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dip.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of tradition with a twist at Stars & Stripes USA Diner! Try our new 'Signature Series' dishes, crafted with locally-sourced ingredients. Join our loyalty program today and enjoy rewards that celebrate your love for American classics. #TasteTheTradition #LocalLove #SignatureSeries
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 14.0, 'description': 'A juicy, all-beef patty topped with cheese, lettuce, tomato, and our special Stars & Stripes sauce, served with a side of fries.'}, {'id': 2, 'name': 'Liberty BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Patriot Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 4, 'name': 'Independence Chicken Wrap', 'price': 12.0, 'description': 'Grilled chicken wrapped in a flour tortilla with caesar salad and Parmesan cheese.'}, {'id': 5, 'name': "Founding Fathers' Feast", 'price': 22.0, 'description': 'A platter of our best offerings including Freedom Burger slider, mini Liberty BBQ Ribs, chicken wings, and onion rings.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "Classic American Burger", "Mac & Cheese", "New York Cheesecake"
+    ],
+    "reason" : "I appreciate the variety at American Flavor Haven, specifically the inclusion of Mac & Cheese which aligns well with my preference for pasta. The dessert option of New York Cheesecake also appeals to my taste."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.76
+Mac & Cheese: 0.76
+New York Cheesecake: 0.76
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The Mac & Cheese was delightfully creamy, and the American Burger was perfectly cooked. The New York Cheesecake ended the meal on a sweet note. Overall, a satisfying dining experience."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.666666666666667
+2. Advertisement
+   Discover fresh, locally-sourced cuisine at American Flavor Haven! New vegan and health-conscious options available now. Enjoy our updated Classic American Burger and innovative dishes that cater to all tastes. Savor the quality and variety that set us apart!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'A juicy beef patty with fresh lettuce, tomato, onion, pickles, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender pork ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy chicken wings coated in our signature buffalo sauce, served with blue cheese dressing.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan cheese, croutons, and Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 7.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a berry compote.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'A comforting classic with creamy cheese sauce and a golden breadcrumb topping.'}, {'id': 9, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a scoop of vanilla ice cream and caramel drizzle.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dip.'}, {'id': 11, 'name': 'Avocado Quinoa Salad', 'price': 12.0, 'description': 'A refreshing mix of organic quinoa, ripe avocado, cherry tomatoes, cucumber, and a lemon vinaigrette.'}, {'id': 12, 'name': 'Vegan Black Bean Burger', 'price': 13.0, 'description': 'A hearty black bean patty with avocado, lettuce, tomato, and vegan mayo on a whole wheat bun.'}, {'id': 13, 'name': 'Zesty Chicken Caesar', 'price': 14.0, 'description': 'Grilled chicken breast, crisp romaine, parmesan, croutons, and our zesty Caesar dressing.'}]
+4. Comments
+   [{'day': 1, 'name': 'Steve', 'score': 8, 'content': 'The Caesar Salad was a great low-fat option with fresh ingredients, and the Mac & Cheese offered that comforting taste I was looking for. Both dishes were satisfying, though I wish the flavors were a bit more robust. Overall, a good dining experience for the price.'}, {'day': 1, 'name': 'Quincy', 'score': 7, 'content': "The Caesar Salad and Sweet Potato Fries were enjoyable and fit within my low-calorie diet. Service was decent. However, the flavors could be enhanced to match the exciting descriptions. I'd appreciate more low-calorie options and perhaps a twist to the classics for a better experience."}, {'day': 1, 'name': 'Max', 'score': 7, 'content': "The vegetarian options at American Flavor Haven were satisfying. The Caesar Salad and Mac & Cheese were flavorful, and the Sweet Potato Fries were a nice touch. However, the dishes could use a bit more creativity. A good dining experience, but there's room for improvement."}, {'day': 1, 'name': 'Yasmine', 'score': 7, 'content': 'The Caesar Salad and Sweet Potato Fries were enjoyable and fit my vegan diet, but I would appreciate a broader variety of vegan options. The service was satisfactory, yet there is room for improvement in terms of offering more creative and flavorful vegan dishes.'}, {'day': 1, 'name': 'Maggie', 'score': 8, 'content': "The desserts at American Flavor Haven were quite satisfying. The New York Cheesecake had a creamy texture, and the Apple Pie a la Mode had a lovely balance of warmth and cold. While both were delicious, there's room for improvement to reach perfection. I'd recommend a richer berry compote for the cheesecake."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.833333333333333
+2. Advertisement
+   Savor the upgrade at Stars & Stripes USA Diner! Introducing 'Health-Conscious Harvest Salad' and 'Veggie Victory Burger' for our health-minded patrons. Plus, taste the enhanced flavors of our improved 'Signature Series.' Join us for a meal that's both delicious and nutritious. #HealthyEats #SignatureFlavors #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 16.0, 'description': 'A juicy, all-beef patty topped with cheese, lettuce, tomato, and our special Stars & Stripes sauce, served with a side of fries.'}, {'id': 2, 'name': 'Liberty BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Patriot Pie', 'price': 8.0, 'description': 'Homemade apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 4, 'name': 'Independence Chicken Wrap', 'price': 14.0, 'description': 'Grilled chicken wrapped in a flour tortilla with caesar salad and Parmesan cheese.'}, {'id': 5, 'name': "Founding Fathers' Feast", 'price': 24.0, 'description': 'A platter of our best offerings including Freedom Burger slider, mini Liberty BBQ Ribs, chicken wings, and onion rings.'}, {'id': 6, 'name': 'Health-Conscious Harvest Salad', 'price': 13.0, 'description': 'A vibrant mix of fresh, seasonal vegetables with quinoa, avocado, and a lemon herb dressing, catering to our health-conscious guests.'}, {'id': 7, 'name': 'Veggie Victory Burger', 'price': 15.0, 'description': 'A hearty, plant-based patty with lettuce, tomato, and our special vegan sauce, served with sweet potato fries.'}]
+4. Comments
+   [{'day': 1, 'name': 'Valerie', 'score': 6, 'content': "The locally-sourced ingredients were appreciated, but the flavors didn't quite meet my expectations for freshness and depth. The burger and ribs were satisfactory, yet lacked a wow factor. The Patriot Pie had a lovely crust, but the filling was a tad too sweet for my taste."}, {'day': 1, 'name': 'Nora', 'score': 6, 'content': "The Liberty BBQ Ribs had a fair taste, but I expected a more refined flavor profile. While the locally-sourced ingredients were a plus, the dish lacked in complexity and didn't fully satisfy my preference for fine dining. I suggest enhancing the seasoning to elevate the overall experience."}, {'day': 1, 'name': 'Lara', 'score': 6, 'content': "The Liberty BBQ Ribs were decent but lacked a wow factor, and the Patriot Pie could have used a more buttery crust. Overall, a fair experience, but I've had better meals at other establishments. A loyalty program is appreciated, but the flavors need to be more memorable."}, {'day': 1, 'name': 'William', 'score': 6, 'content': "The Founding Fathers' Feast was a fair introduction to the diner's offerings, but nothing stood out as particularly memorable. The variety was appreciated, yet the flavors didn't meet my expectations for a signature dish. A touch more seasoning could elevate the experience."}, {'day': 1, 'name': 'Rachel', 'score': 5, 'content': "The locally-sourced ingredients were a nice touch, but the dishes lacked the refined flavors I prefer. Both the Liberty BBQ Ribs and the Independence Chicken Wrap were just fair, falling short of my gourmet expectations. I've had better dining experiences in terms of taste and sophistication."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "Mac & Cheese", "Classic American Burger", "New York Cheesecake"
+    ],
+    "reason" : "The American Flavor Haven has a higher customer score, and the menu includes my preferred pasta dish. The positive comments about the cheesecake also influenced my decision."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Mac & Cheese: 0.8
+Classic American Burger: 0.8
+New York Cheesecake: 0.8
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "score": 8,
+    "comment": "The Mac & Cheese was comforting, and the burger was satisfyingly juicy. The New York Cheesecake provided a sweet finish. While all dishes were good, a touch more innovation could enhance the dining experience. Compared to past visits, it remains a solid choice, but I'd welcome more culinary creativity."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.576923076923077
+2. Advertisement
+   Indulge in American Flavor Haven's newly enhanced dishes! Our top sellers now boast bolder flavors with premium ingredients. Get rewarded with our Flavor Rewards Card - earn points with every visit. Experience our commitment to taste and innovation. Your journey to extraordinary flavors begins here!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'A juicy beef patty with fresh lettuce, tomato, onion, pickles, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender pork ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy chicken wings coated in our signature buffalo sauce, served with blue cheese dressing.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan cheese, croutons, and Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a berry compote.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 13.0, 'description': 'A comforting classic with creamy cheese sauce and a golden breadcrumb topping.'}, {'id': 9, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Warm apple pie with a scoop of vanilla ice cream and caramel drizzle.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dip.'}, {'id': 11, 'name': 'Avocado Quinoa Salad', 'price': 12.0, 'description': 'A refreshing mix of organic quinoa, ripe avocado, cherry tomatoes, cucumber, and a lemon vinaigrette.'}, {'id': 12, 'name': 'Vegan Black Bean Burger', 'price': 13.0, 'description': 'A hearty black bean patty with avocado, lettuce, tomato, and vegan mayo on a whole wheat bun.'}, {'id': 13, 'name': 'Zesty Chicken Caesar', 'price': 14.0, 'description': 'Grilled chicken breast, crisp romaine, parmesan, croutons, and our zesty Caesar dressing.'}]
+4. Comments
+   [{'day': 2, 'name': 'Yara', 'score': 6, 'content': "The Vegan Black Bean Burger and Avocado Quinoa Salad were satisfactory and aligned with my vegan diet. However, the flavors lacked depth and excitement. I'd appreciate more creativity in seasoning to enhance the overall dining experience."}, {'day': 2, 'name': 'Xavier', 'score': 8, 'content': 'The BBQ Ribs and Mac & Cheese were hearty, and the New York Cheesecake ended the meal nicely. However, the flavors could be more vibrant to truly match my taste for Caribbean cuisine.'}, {'day': 2, 'name': 'Wade', 'score': 8, 'content': 'The comfort foods like the burger and mac & cheese met my simple taste preferences, and the apple pie was a delightful finish. Consistent with past experiences, the flavors were good. Still, a bit more seasoning could enhance the dishes further.'}, {'day': 2, 'name': 'Ulysses', 'score': 8, 'content': 'The dishes were good, offering a satisfying taste of American classics. The Avocado Quinoa Salad and Vegan Black Bean Burger catered well to a wider range of preferences, including health-conscious options. Consistency across the board was impressive, though a bit more creativity could enhance the experience.'}, {'day': 2, 'name': 'Oscar', 'score': 8, 'content': 'The meal was satisfying, with the American Burger and BBQ Ribs being hearty and flavorful. The Apple Pie a la Mode was a sweet finish. However, the flavors could use more depth to truly stand out. A comparison with past experiences suggests room for improvement in creativity.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.875
+2. Advertisement
+   Discover the new flavors of Stars & Stripes USA Diner with our Eagle's Spice Delight and Revolutionary Beet Burger! Each bite promises a burst of creativity and taste. Visit us for a truly memorable dining experience where innovation meets tradition. #NewFlavors #DineWithUs #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 17.0, 'description': 'A juicy, all-beef patty topped with cheese, lettuce, tomato, and our special Stars & Stripes sauce, served with a side of fries.'}, {'id': 2, 'name': 'Liberty BBQ Ribs', 'price': 21.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Patriot Pie', 'price': 8.0, 'description': 'Homemade apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 4, 'name': 'Independence Chicken Wrap', 'price': 14.0, 'description': 'Grilled chicken wrapped in a flour tortilla with caesar salad and Parmesan cheese.'}, {'id': 5, 'name': "Founding Fathers' Feast", 'price': 24.0, 'description': 'A platter of our best offerings including Freedom Burger slider, mini Liberty BBQ Ribs, chicken wings, and onion rings.'}, {'id': 6, 'name': 'Health-Conscious Harvest Salad', 'price': 14.0, 'description': 'A vibrant mix of fresh, seasonal vegetables with quinoa, avocado, and a lemon herb dressing, catering to our health-conscious guests.'}, {'id': 7, 'name': 'Veggie Victory Burger', 'price': 16.0, 'description': 'A hearty, plant-based patty with lettuce, tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 8, 'name': "Eagle's Spice Delight", 'price': 18.0, 'description': "A bold, spicy chicken dish with a unique blend of herbs and peppers that's sure to leave a lasting impression."}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 17.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}]
+4. Comments
+   [{'day': 2, 'name': 'Yasmine', 'score': 6, 'content': 'The Veggie Victory Burger and Health-Conscious Harvest Salad were satisfactory with decent flavors that cater to my vegan diet. However, the overall culinary experience lacked innovation and could benefit from more vibrant, robust flavors to truly satisfy. Previously, American Flavor Haven offered a similar experience but with slightly better service.'}, {'day': 2, 'name': 'Katie', 'score': 6, 'content': "While the 'Veggie Victory Burger' and 'Health-Conscious Harvest Salad' aligned with my vegan lifestyle, the flavors were not as vibrant as I'd hoped. The dishes were satisfactory, yet lacked the depth to make them memorable. A comparison to American Flavor Haven shows a similar need for more robust vegan offerings."}, {'day': 1, 'name': 'Valerie', 'score': 6, 'content': "The locally-sourced ingredients were appreciated, but the flavors didn't quite meet my expectations for freshness and depth. The burger and ribs were satisfactory, yet lacked a wow factor. The Patriot Pie had a lovely crust, but the filling was a tad too sweet for my taste."}, {'day': 1, 'name': 'Nora', 'score': 6, 'content': "The Liberty BBQ Ribs had a fair taste, but I expected a more refined flavor profile. While the locally-sourced ingredients were a plus, the dish lacked in complexity and didn't fully satisfy my preference for fine dining. I suggest enhancing the seasoning to elevate the overall experience."}, {'day': 1, 'name': 'Lara', 'score': 6, 'content': "The Liberty BBQ Ribs were decent but lacked a wow factor, and the Patriot Pie could have used a more buttery crust. Overall, a fair experience, but I've had better meals at other establishments. A loyalty program is appreciated, but the flavors need to be more memorable."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "Mac & Cheese", "Classic American Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score and offers my preferred dish, Mac & Cheese, with consistent quality as per comments. The cheesecake also suits my taste."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mac & Cheese: 0.81
+Classic American Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The Mac & Cheese was delightfully creamy and satisfying. The Classic American Burger was cooked to perfection, and the New York Cheesecake provided a sweet and indulgent end to the meal."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.439024390243903
+2. Advertisement
+   Discover bold tastes at American Flavor Haven with our new American Fusion Burger and Wild Alaskan Salmon! Celebrate health with our Avocado Quinoa Super Salad. Join our Flavor Rewards program for exclusive perks. Taste the innovation, relish the quality.
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 16.0, 'description': 'Our classic burger updated with organic beef, heritage tomato, artisanal cheese, and house-made pickles on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender pork ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce with parmesan cheese, croutons, and Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a berry compote.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 13.0, 'description': 'A comforting classic with creamy cheese sauce and a golden breadcrumb topping.'}, {'id': 9, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Warm apple pie with a scoop of vanilla ice cream and caramel drizzle.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 14.0, 'description': 'A nutritious blend of organic quinoa, ripe avocado, mixed seasonal berries, and almond slivers, tossed in a zesty lime dressing.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 15.0, 'description': 'A delicious, plant-based burger loaded with a vegan patty, roasted red peppers, vegan cheese, and a tangy balsamic reduction, on a gluten-free bun.'}, {'id': 13, 'name': 'Zesty Chicken Caesar', 'price': 14.0, 'description': 'Grilled chicken breast, crisp romaine, parmesan, croutons, and our zesty Caesar dressing.'}, {'id': 14, 'name': 'American Fusion Burger', 'price': 18.0, 'description': 'A gourmet beef patty with aged cheddar, smoky bacon, avocado, and a spicy chipotle aioli, served on an artisan brioche bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 22.0, 'description': 'Grilled wild-caught Alaskan salmon with a honey-glaze, served with a quinoa and supergreens salad.'}]
+4. Comments
+   [{'day': 3, 'name': 'Ruby', 'score': 7, 'content': "The Avocado Quinoa Salad and Vegan Black Bean Burger were good, offering a healthful and satisfying meal. However, the flavors could have been more vibrant. Having dined at Stars & Stripes USA Diner before, I find American Flavor Haven's dishes healthier but similarly in need of a flavor boost."}, {'day': 3, 'name': 'Quincy', 'score': 7, 'content': "The Caesar Salad and Sweet Potato Fries were good, fitting my low-calorie diet. However, I've had more vibrant flavors at other establishments. A loyalty program is a plus for my budget, but more inventive low-calorie options would enhance the dining experience."}, {'day': 3, 'name': 'Nora', 'score': 7, 'content': "The Avocado Quinoa Salad and Vegan Black Bean Burger were fresh and aligned well with my dietary needs, but lacked the level of culinary sophistication I enjoy. While the service was commendable, there's room for improvement in flavor complexity compared to my previous dining experiences."}, {'day': 3, 'name': 'Lara', 'score': 8, 'content': 'The Classic American Burger and BBQ Ribs were well-prepared, with the Cheesecake being a delightful conclusion. While the flavors were good, they lacked a certain uniqueness to make them stand out. A bit more creativity could elevate the dishes from good to outstanding.'}, {'day': 3, 'name': 'Chloe', 'score': 7, 'content': 'The Avocado Quinoa Salad was healthful and fresh, catering well to my diabetic dietary needs. While the flavors were good, they lacked the vibrancy and innovation I anticipated. Compared to my previous experience at Stars & Stripes USA Diner, I found both to be satisfactory but with room for flavor enhancement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.777777777777778
+2. Advertisement
+   Ignite your taste buds with our 'Flavor Explosion' series at Stars & Stripes USA Diner! Introducing the Blazing Buffalo Burger and Sizzling Steakhouse Salad - each dish crafted for those who crave bold tastes. Join our loyalty program for exclusive deals. #FlavorExplosion #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 15.0, 'description': 'A juicy, all-beef patty topped with cheese, lettuce, tomato, and our special Stars & Stripes sauce, served with a side of fries.'}, {'id': 2, 'name': 'Liberty BBQ Ribs', 'price': 19.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Patriot Pie', 'price': 8.0, 'description': 'Homemade apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 4, 'name': 'Independence Chicken Wrap', 'price': 14.0, 'description': 'Grilled chicken wrapped in a flour tortilla with caesar salad and Parmesan cheese.'}, {'id': 6, 'name': 'Health-Conscious Harvest Salad', 'price': 12.0, 'description': 'A vibrant mix of fresh, seasonal vegetables with quinoa, avocado, and a lemon herb dressing, catering to our health-conscious guests.'}, {'id': 7, 'name': 'Veggie Victory Burger', 'price': 16.0, 'description': 'A hearty, plant-based patty with lettuce, tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 8, 'name': "Eagle's Spice Delight", 'price': 18.0, 'description': "A bold, spicy chicken dish with a unique blend of herbs and peppers that's sure to leave a lasting impression."}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 17.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}, {'id': 10, 'name': 'Blazing Buffalo Burger', 'price': 16.0, 'description': 'A fiery burger experience with our spiciest buffalo sauce, crispy onion rings, and cooling blue cheese dressing.'}, {'id': 11, 'name': 'Sizzling Steakhouse Salad', 'price': 17.0, 'description': 'Grilled steak slices on a bed of mixed greens, with cherry tomatoes, red onions, and a bold steakhouse dressing.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}, {'day': 2, 'name': 'Yasmine', 'score': 6, 'content': 'The Veggie Victory Burger and Health-Conscious Harvest Salad were satisfactory with decent flavors that cater to my vegan diet. However, the overall culinary experience lacked innovation and could benefit from more vibrant, robust flavors to truly satisfy. Previously, American Flavor Haven offered a similar experience but with slightly better service.'}, {'day': 2, 'name': 'Katie', 'score': 6, 'content': "While the 'Veggie Victory Burger' and 'Health-Conscious Harvest Salad' aligned with my vegan lifestyle, the flavors were not as vibrant as I'd hoped. The dishes were satisfactory, yet lacked the depth to make them memorable. A comparison to American Flavor Haven shows a similar need for more robust vegan offerings."}, {'day': 1, 'name': 'Valerie', 'score': 6, 'content': "The locally-sourced ingredients were appreciated, but the flavors didn't quite meet my expectations for freshness and depth. The burger and ribs were satisfactory, yet lacked a wow factor. The Patriot Pie had a lovely crust, but the filling was a tad too sweet for my taste."}, {'day': 1, 'name': 'Nora', 'score': 6, 'content': "The Liberty BBQ Ribs had a fair taste, but I expected a more refined flavor profile. While the locally-sourced ingredients were a plus, the dish lacked in complexity and didn't fully satisfy my preference for fine dining. I suggest enhancing the seasoning to elevate the overall experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "Mac & Cheese", "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score, offers dishes aligning with my preferences, and the comments suggest a satisfying dining experience with room for creativity."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mac & Cheese: 0.81
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The Mac & Cheese was deliciously creamy, the burger was juicy and satisfying, and the New York Cheesecake was a perfect balance of sweetness and texture."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.407407407407407
+2. Advertisement
+   Indulge in a burst of flavor at American Flavor Haven! Try our revamped menu with bold new sauces adding zest to favorites like the New American Classic Burger and Spicy Southwest Chicken. Enjoy richer, deeper tastes with our enhanced New York Cheesecake and Apple Pie a la Mode. Join our Flavor Rewards for delicious deals!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 17.0, 'description': 'Our classic burger updated with organic beef, heritage tomato, artisanal cheese, house-made pickles, and our new bold signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender pork ribs smothered in our new improved house BBQ sauce with a secret blend of spices, served with coleslaw and fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a richer berry compote infused with a hint of citrus.'}, {'id': 9, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Warm apple pie with a scoop of vanilla ice cream, enhanced with a more vibrant spice blend and caramel drizzle.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 15.0, 'description': 'A nutritious blend of organic quinoa, ripe avocado, mixed seasonal berries, almond slivers, tossed in a bold new lime and herb dressing.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 16.0, 'description': 'A delicious, plant-based burger with a vegan patty, roasted red peppers, vegan cheese, and a new tangy and spicy balsamic reduction, on a gluten-free bun.'}, {'id': 14, 'name': 'American Fusion Burger', 'price': 19.0, 'description': 'A gourmet beef patty with aged cheddar, smoky bacon, avocado, and our new spicy chipotle aioli, served on an artisan brioche bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 23.0, 'description': 'Grilled wild-caught Alaskan salmon with a new honey-spice glaze, served with a quinoa and supergreens salad.'}, {'id': 16, 'name': 'Spicy Southwest Chicken', 'price': 18.0, 'description': 'Juicy grilled chicken with a fiery Southwest rub, served with a cooling avocado cream and a side of roasted corn salsa.'}, {'id': 17, 'name': 'Bold Buffalo Cauliflower', 'price': 12.0, 'description': 'Crispy roasted cauliflower bites tossed in our signature buffalo sauce, served with a house-made blue cheese dip.'}]
+4. Comments
+   [{'day': 4, 'name': 'Xavier', 'score': 7, 'content': 'The BBQ Ribs, Mac & Cheese, and New York Cheesecake at American Flavor Haven were good, with the cheesecake being particularly enjoyable. While the flavors were hearty, they lacked the Caribbean vibrancy I love. A bit more spice and boldness could enhance the overall taste experience.'}, {'day': 4, 'name': 'Ulysses', 'score': 8, 'content': 'The dishes at American Flavor Haven were consistently good across the board, with the Avocado Quinoa Super Salad and Ultimate Vegan Power Burger providing delightful health-conscious options. Though the flavors were pleasing, a touch more creativity could push the experience from good to excellent.'}, {'day': 4, 'name': 'Quincy', 'score': 7, 'content': "The Caesar Salad was satisfactory, though it lacked a creative twist. The Avocado Quinoa Super Salad was fresh but could use more flavor. While the rewards program is a plus, I'd appreciate more innovation in low-calorie options compared to previous visits."}, {'day': 4, 'name': 'Paula', 'score': 7, 'content': 'The Avocado Quinoa Super Salad was fresh, aligning with my healthy diet, but could use a punch of flavor. The Apple Pie a la Mode was delightful, though not extraordinary. A comparison to Stars & Stripes USA Diner shows similar quality, but American Flavor Haven has a slight edge in healthy options.'}, {'day': 4, 'name': 'Oscar', 'score': 8, 'content': 'The New American Classic Burger and BBQ Ribs were both enjoyable, offering a satisfying traditional taste. The Apple Pie a la Mode was a comforting finish to the meal. While the dishes were good, they could benefit from a bit more creativity to truly stand out. Overall, a positive dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.818181818181818
+2. Advertisement
+   Savor the spirit of America at Stars & Stripes USA Diner! Try our new 'All-American Super Stack' and our fan-favorite 'Freedom Burger' at unbeatable prices! Experience flavors that celebrate our nation's heritage. #TasteTheFreedom #StarsAndStripesDiner
+3. Menu 
+   [{'id': 1, 'name': 'Freedom Burger', 'price': 14.0, 'description': 'A juicy, all-beef patty topped with cheese, lettuce, tomato, and our special Stars & Stripes sauce, served with a side of fries.'}, {'id': 2, 'name': 'Liberty BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Patriot Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 6, 'name': 'Health-Conscious Harvest Salad', 'price': 11.0, 'description': 'A vibrant mix of fresh, seasonal vegetables with quinoa, avocado, and a lemon herb dressing, catering to our health-conscious guests.'}, {'id': 7, 'name': 'Veggie Victory Burger', 'price': 15.0, 'description': 'A hearty, plant-based patty with lettuce, tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 8, 'name': "Eagle's Spice Delight", 'price': 17.0, 'description': "A bold, spicy chicken dish with a unique blend of herbs and peppers that's sure to leave a lasting impression."}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 16.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}, {'id': 10, 'name': 'Blazing Buffalo Burger', 'price': 15.0, 'description': 'A fiery burger experience with our spiciest buffalo sauce, crispy onion rings, and cooling blue cheese dressing.'}, {'id': 11, 'name': 'Sizzling Steakhouse Salad', 'price': 16.0, 'description': 'Grilled steak slices on a bed of mixed greens, with cherry tomatoes, red onions, and a bold steakhouse dressing.'}, {'id': 12, 'name': 'All-American Super Stack', 'price': 19.0, 'description': 'A towering burger with double patties, classic fixings, and a special smoky sauce, served with onion rings and a pickle spear.'}]
+4. Comments
+   [{'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}, {'day': 2, 'name': 'Yasmine', 'score': 6, 'content': 'The Veggie Victory Burger and Health-Conscious Harvest Salad were satisfactory with decent flavors that cater to my vegan diet. However, the overall culinary experience lacked innovation and could benefit from more vibrant, robust flavors to truly satisfy. Previously, American Flavor Haven offered a similar experience but with slightly better service.'}, {'day': 2, 'name': 'Katie', 'score': 6, 'content': "While the 'Veggie Victory Burger' and 'Health-Conscious Harvest Salad' aligned with my vegan lifestyle, the flavors were not as vibrant as I'd hoped. The dishes were satisfactory, yet lacked the depth to make them memorable. A comparison to American Flavor Haven shows a similar need for more robust vegan offerings."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score and offers a preferred dish, the New American Classic Burger, with positive feedback on their New York Cheesecake."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was juicy and flavorful, and the New York Cheesecake was rich and satisfying. Both dishes met my expectations for a delicious meal."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.434782608695652
+2. Advertisement
+   Discover the 'Bold Flavors' at American Flavor Haven! Our new Avocado Quinoa Super Salad and Ultimate Vegan Power Burger feature unique, robust seasonings. Don't miss 'The Artisan's Delight', a new addition for those seeking creativity on their plate. Join our Flavor Rewards for exclusive benefits!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 17.0, 'description': 'Our classic burger updated with organic beef, heritage tomato, artisanal cheese, house-made pickles, and our new bold signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender pork ribs smothered in our new improved house BBQ sauce with a secret blend of spices, served with coleslaw and fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a richer berry compote infused with a hint of citrus.'}, {'id': 9, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Warm apple pie with a scoop of vanilla ice cream, enhanced with a more vibrant spice blend and caramel drizzle.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 16.0, 'description': 'A refreshing and nutritious mix of organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, and roasted seeds, dressed in our innovative citrus-herb vinaigrette for a burst of bold flavor.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 17.0, 'description': 'Our plant-based burger is now more delectable with a blend of umami-rich mushrooms, roasted red peppers, vegan cheese, and a distinctive smoky beetroot sauce, on a toasted gluten-free bun.'}, {'id': 14, 'name': 'American Fusion Burger', 'price': 19.0, 'description': 'A gourmet beef patty with aged cheddar, smoky bacon, avocado, and our new spicy chipotle aioli, served on an artisan brioche bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 23.0, 'description': 'Grilled wild-caught Alaskan salmon with a new honey-spice glaze, served with a quinoa and supergreens salad.'}, {'id': 17, 'name': 'Bold Buffalo Cauliflower', 'price': 12.0, 'description': 'Crispy roasted cauliflower bites tossed in our signature buffalo sauce, served with a house-made blue cheese dip.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 18.0, 'description': 'A culinary masterpiece featuring grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and a vibrant basil pesto, served on a bed of wild arugula.'}]
+4. Comments
+   [{'day': 5, 'name': 'Ulysses', 'score': 8, 'content': 'The dishes at American Flavor Haven offered a good balance of classic and health-conscious choices. Each dish was well-prepared, with the Ultimate Vegan Power Burger being a standout. While the flavors were good, they could benefit from more boldness and creativity to truly excel.'}, {'day': 5, 'name': 'Hugo', 'score': 8, 'content': 'The New American Classic Burger and BBQ Ribs were excellent, and the New York Cheesecake was a delightful end to the meal. While the flavors were robust, they lacked a certain uniqueness that would make the meal truly outstanding. Compared to past experiences, a little more creativity could take American Flavor Haven to the next level.'}, {'day': 5, 'name': 'Giselle', 'score': 8, 'content': 'The enhanced New York Cheesecake was creamy with a satisfying berry compote. Apple Pie a la Mode had a delightful temperature contrast, but could use more spice. Both desserts were good, yet lacked the extra depth that would make them outstanding. Service was commendable.'}, {'day': 5, 'name': 'Felix', 'score': 8, 'content': 'The New American Classic Burger, BBQ Ribs, and New York Cheesecake were all good, with a satisfying taste and quality. The rewards program added value. However, the flavors could be more distinctive to elevate the dining experience. A touch more creativity could push these dishes from good to excellent.'}, {'day': 5, 'name': 'Chloe', 'score': 7, 'content': 'The Avocado Quinoa Super Salad was health-conscious and met my dietary needs, yet it could benefit from a touch more flavor. Consistently good, but not outstanding. Compared to Stars & Stripes, American Flavor Haven offers better options for my health restrictions.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.818181818181818
+2. Advertisement
+   Discover bold flavors at Stars & Stripes USA Diner with our new Melting Pot Mac & Cheese and Stars & Stripes Signature Shake! Enjoy unique dishes that promise a memorable taste adventure. #UniqueFlavors #StarsAndStripesDining
+3. Menu 
+   [{'id': 2, 'name': 'Liberty BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread.'}, {'id': 7, 'name': 'Veggie Victory Burger', 'price': 17.0, 'description': 'A hearty, plant-based patty with lettuce, tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 8, 'name': "Eagle's Spice Delight", 'price': 18.0, 'description': "A bold, spicy chicken dish with a unique blend of herbs and peppers that's sure to leave a lasting impression."}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 18.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}, {'id': 10, 'name': 'Blazing Buffalo Burger', 'price': 17.0, 'description': 'A fiery burger experience with our spiciest buffalo sauce, crispy onion rings, and cooling blue cheese dressing.'}, {'id': 11, 'name': 'Sizzling Steakhouse Salad', 'price': 18.0, 'description': 'Grilled steak slices on a bed of mixed greens, with cherry tomatoes, red onions, and a bold steakhouse dressing.'}, {'id': 12, 'name': 'All-American Super Stack', 'price': 21.0, 'description': 'A towering burger with double patties, classic fixings, and a special smoky sauce, served with onion rings and a pickle spear.'}, {'id': 13, 'name': 'Melting Pot Mac & Cheese', 'price': 16.0, 'description': 'A creamy blend of four cheeses with a crispy breadcrumb topping, infused with truffle oil and a hint of jalapeno.'}, {'id': 14, 'name': 'Stars & Stripes Signature Shake', 'price': 9.0, 'description': 'A decadent milkshake with red velvet cake, blueberry coulis, and whipped cream, topped with a mini American flag.'}]
+4. Comments
+   [{'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}, {'day': 2, 'name': 'Yasmine', 'score': 6, 'content': 'The Veggie Victory Burger and Health-Conscious Harvest Salad were satisfactory with decent flavors that cater to my vegan diet. However, the overall culinary experience lacked innovation and could benefit from more vibrant, robust flavors to truly satisfy. Previously, American Flavor Haven offered a similar experience but with slightly better service.'}, {'day': 2, 'name': 'Katie', 'score': 6, 'content': "While the 'Veggie Victory Burger' and 'Health-Conscious Harvest Salad' aligned with my vegan lifestyle, the flavors were not as vibrant as I'd hoped. The dishes were satisfactory, yet lacked the depth to make them memorable. A comparison to American Flavor Haven shows a similar need for more robust vegan offerings."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "Based on higher customer scores and positive comments, American Flavor Haven seems to offer more satisfying dishes, including a preferred burger and cheesecake."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was juicy and flavorsome, while the New York Cheesecake was rich and perfectly sweet. A truly satisfying meal."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.4625
+2. Advertisement
+   Introducing 'Patriot's Peak Pot Roast' and 'Freedom Trail Mix' – American Flavor Haven's latest creations with locally-sourced ingredients and exceptional spices. Taste the innovation and enjoy the freshness. Visit us for an unparalleled dining adventure!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 17.0, 'description': 'Our classic burger updated with organic beef, heritage tomato, artisanal cheese, house-made pickles, and our new bold signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender pork ribs smothered in our new improved house BBQ sauce with a secret blend of spices, served with coleslaw and fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with a richer berry compote infused with a hint of citrus.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 16.0, 'description': 'A refreshing and nutritious mix of organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, and roasted seeds, dressed in our innovative citrus-herb vinaigrette for a burst of bold flavor.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 17.0, 'description': 'Our plant-based burger is now more delectable with a blend of umami-rich mushrooms, roasted red peppers, vegan cheese, and a distinctive smoky beetroot sauce, on a toasted gluten-free bun.'}, {'id': 14, 'name': 'American Fusion Burger', 'price': 19.0, 'description': 'A gourmet beef patty with aged cheddar, smoky bacon, avocado, and our new spicy chipotle aioli, served on an artisan brioche bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 23.0, 'description': 'Grilled wild-caught Alaskan salmon with a new honey-spice glaze, served with a quinoa and supergreens salad.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 18.0, 'description': 'A culinary masterpiece featuring grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and a vibrant basil pesto, served on a bed of wild arugula.'}, {'id': 19, 'name': "Patriot's Peak Pot Roast", 'price': 22.0, 'description': 'Slow-cooked pot roast with root vegetables and a rich gravy, featuring locally-sourced beef and a unique blend of spices.'}, {'id': 20, 'name': 'Freedom Trail Mix', 'price': 8.0, 'description': 'A diverse mix of spiced nuts, seeds, and dried berries, celebrating the spirit of America with a healthy, flavorful snack option.'}]
+4. Comments
+   [{'day': 6, 'name': 'Yara', 'score': 8, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were both flavorful and adhered to my vegan diet. While the dishes were good, they could benefit from more innovative seasoning. Compared to my last visit, the quality was consistent, but I still crave more culinary creativity.'}, {'day': 6, 'name': 'Xavier', 'score': 8, 'content': 'The improved boldness in the BBQ Ribs and Bold Buffalo Cauliflower suited my vibrant taste, though they could still push the envelope towards the Caribbean zest I crave. The New York Cheesecake was a perfect sweet finish. Overall, a better edge in flavors would make it exceptional.'}, {'day': 6, 'name': 'Wade', 'score': 8, 'content': 'The New American Classic Burger and Apple Pie a la Mode at American Flavor Haven were satisfying with familiar flavors that cater to my simple tastes. The dishes were good, though they could use a bit more seasoning for a perfect score.'}, {'day': 6, 'name': 'Quincy', 'score': 6, 'content': "While the Avocado Quinoa Super Salad fit my dietary needs, it was lackluster in taste. I appreciate the rewards program for my budget, yet the dish's flavor needs a boost. Compared to previous fast food choices, this healthier option fell short in satisfaction."}, {'day': 6, 'name': 'Lara', 'score': 8, 'content': "American Flavor Haven's Wild Alaskan Salmon and Avocado Quinoa Super Salad were fresh, aligning with my healthy seafood preference. However, the flavors could be enhanced for a more memorable experience. The New York Cheesecake was indulgent, though not exceptional. Overall, a good meal that could benefit from a touch of creativity."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.818181818181818
+2. Advertisement
+   Join us at Stars & Stripes USA Diner for an unforgettable dining experience! Savor our newly enhanced Liberty BBQ Ribs and Revolutionary Beet Burger, each dish bursting with local flavors. #TasteTheTradition #LocalFlavors #StarsAndStripesDining
+3. Menu 
+   [{'id': 2, 'name': 'Liberty BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, a secret blend of spices served with coleslaw and cornbread.'}, {'id': 7, 'name': 'Veggie Victory Burger', 'price': 18.0, 'description': 'A hearty, plant-based patty with local greens, heirloom tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 8, 'name': "Eagle's Spice Delight", 'price': 19.0, 'description': "A bold, spicy chicken dish with a unique blend of local herbs and peppers that's sure to leave a lasting impression."}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 19.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with artisan goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}, {'id': 11, 'name': 'Sizzling Steakhouse Salad', 'price': 19.0, 'description': 'Grilled steak slices on a bed of local mixed greens, with cherry tomatoes, red onions, and a bold steakhouse dressing.'}, {'id': 12, 'name': 'All-American Super Stack', 'price': 22.0, 'description': 'A towering burger with double patties, classic fixings, and a special smoky sauce, served with onion rings and a pickle spear.'}, {'id': 13, 'name': 'Melting Pot Mac & Cheese', 'price': 17.0, 'description': 'A creamy blend of four cheeses with a crispy breadcrumb topping, infused with truffle oil and a hint of jalapeno for that perfect kick.'}, {'id': 14, 'name': 'Stars & Stripes Signature Shake', 'price': 10.0, 'description': 'A decadent milkshake with red velvet cake, blueberry coulis, and whipped cream, topped with a mini American flag for that patriotic touch.'}, {'id': 15, 'name': 'Patriotic Pulled Pork', 'price': 18.0, 'description': 'Slow-cooked pulled pork with a tangy apple-cider vinegar sauce, served on a fresh brioche bun with a side of crispy apple slaw.'}]
+4. Comments
+   [{'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}, {'day': 2, 'name': 'Yasmine', 'score': 6, 'content': 'The Veggie Victory Burger and Health-Conscious Harvest Salad were satisfactory with decent flavors that cater to my vegan diet. However, the overall culinary experience lacked innovation and could benefit from more vibrant, robust flavors to truly satisfy. Previously, American Flavor Haven offered a similar experience but with slightly better service.'}, {'day': 2, 'name': 'Katie', 'score': 6, 'content': "While the 'Veggie Victory Burger' and 'Health-Conscious Harvest Salad' aligned with my vegan lifestyle, the flavors were not as vibrant as I'd hoped. The dishes were satisfactory, yet lacked the depth to make them memorable. A comparison to American Flavor Haven shows a similar need for more robust vegan offerings."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven's higher customer score and positive reviews on the burger and cheesecake sway my choice. The menu offerings are more aligned with my tastes."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was a delicious blend of quality ingredients, and the New York Cheesecake was a sweet, creamy delight."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.5
+2. Advertisement
+   Discover bold flavors at American Flavor Haven with our new Liberty Lamb Shank and enhanced Avocado Quinoa Super Salad. Each dish is crafted using high-quality, locally-sourced ingredients for a truly unique taste experience. Indulge in culinary creativity!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 17.0, 'description': 'Our classic burger updated with organic beef, heritage tomato, artisanal cheese, house-made pickles, and our new bold signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender pork ribs smothered in our new improved house BBQ sauce with a secret blend of spices, served with coleslaw and fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Our classic cheesecake elevated with a graham cracker crust, topped with a rich berry compote infused with a hint of citrus and a drizzle of salted caramel for that perfect sweet-savory finish.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 18.0, 'description': 'A revitalized mix of organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, roasted seeds, tossed in our new bold citrus-herb vinaigrette with a sprinkling of exotic spices for an unforgettable taste.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 19.0, 'description': 'A reimagined plant-based burger with a blend of umami-rich mushrooms, roasted red peppers, vegan cheese, and our new vibrant smoky beetroot sauce, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 14, 'name': 'American Fusion Burger', 'price': 19.0, 'description': 'A gourmet beef patty with aged cheddar, smoky bacon, avocado, and our new spicy chipotle aioli, served on an artisan brioche bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 23.0, 'description': 'Grilled wild-caught Alaskan salmon with a new honey-spice glaze, served with a quinoa and supergreens salad.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 18.0, 'description': 'A culinary masterpiece featuring grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and a vibrant basil pesto, served on a bed of wild arugula.'}, {'id': 19, 'name': "Patriot's Peak Pot Roast", 'price': 22.0, 'description': 'Slow-cooked pot roast with root vegetables and a rich gravy, featuring locally-sourced beef and a unique blend of spices.'}, {'id': 21, 'name': 'Liberty Lamb Shank', 'price': 25.0, 'description': 'Succulent lamb shank slowly braised in a rich, herby sauce with a hint of mint, served with a side of roasted root vegetables and a garnish of fresh pomegranate seeds.'}]
+4. Comments
+   [{'day': 7, 'name': 'Yara', 'score': 8, 'content': "The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were good, adhering to my vegan diet. While flavorful, there's room for more culinary creativity. They were satisfying, yet I believe the flavors can still be pushed further for a truly outstanding experience."}, {'day': 7, 'name': 'Xavier', 'score': 8, 'content': 'The BBQ Ribs had a delightful zest, and the New York Cheesecake was a sweet triumph. The Avocado Quinoa Super Salad brought a refreshing balance. While the dishes were good, a touch more Caribbean flair would elevate the meal further. Compared to past experiences, consistency is appreciated.'}, {'day': 7, 'name': 'Valerie', 'score': 8, 'content': "The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were satisfying and aligned well with my organic preferences. However, I believe there's room for more creative seasoning to enhance the flavors. Having dined at Stars & Stripes USA Diner previously, I find American Flavor Haven's offerings healthier and more in line with my taste, though both could innovate more."}, {'day': 7, 'name': 'Ulysses', 'score': 8, 'content': "American Flavor Haven provided a consistent and satisfying dining experience. The Patriot's Peak Pot Roast was hearty, the Ultimate Vegan Power Burger was innovative, and the Freedom Trail Mix was a delightful snack. While all dishes were good, a bit more seasoning and creativity could elevate them further."}, {'day': 7, 'name': 'Tina', 'score': 8, 'content': 'The New American Classic Burger was a delightful treat, while the Avocado Quinoa Super Salad was fresh, aligning with my health preferences. The New York Cheesecake ended the meal on a high note. However, compared to previous visits, the flavors could use a little more innovation to truly stand out.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.818181818181818
+2. Advertisement
+   Discover the taste of tradition with a twist at Stars & Stripes USA Diner! Featuring our new Local Harvest Chicken and Heirloom Tomato & Burrata Salad, made with the freshest local, organic ingredients. #EatLocal #OrganicDelights #StarsAndStripesUSA
+3. Menu 
+   [{'id': 7, 'name': 'Veggie Victory Burger', 'price': 20.0, 'description': 'A hearty, plant-based patty with local greens, heirloom tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 20.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with artisan goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}, {'id': 14, 'name': 'Stars & Stripes Signature Shake', 'price': 12.0, 'description': 'A decadent milkshake with red velvet cake, blueberry coulis, and whipped cream, topped with a mini American flag for that patriotic touch.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 21.0, 'description': 'Roasted free-range chicken with a herb crust, served alongside seasonal vegetables from local farms.'}, {'id': 17, 'name': 'Craft Ale-Battered Fish & Chips', 'price': 19.0, 'description': 'Locally caught fish in a crispy craft ale batter, served with hand-cut fries and our house tartar sauce.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 16.0, 'description': 'A simple, refreshing salad featuring heirloom tomatoes, creamy burrata, basil, and a drizzle of aged balsamic.'}, {'id': 19, 'name': 'Grass-Fed Beef Slider Trio', 'price': 20.0, 'description': 'Three mini burgers made with grass-fed beef, each with a unique topping: blue cheese & caramelized onion, classic American with pickle, and spicy jalapeño with pepper jack cheese.'}]
+4. Comments
+   [{'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}, {'day': 2, 'name': 'Yasmine', 'score': 6, 'content': 'The Veggie Victory Burger and Health-Conscious Harvest Salad were satisfactory with decent flavors that cater to my vegan diet. However, the overall culinary experience lacked innovation and could benefit from more vibrant, robust flavors to truly satisfy. Previously, American Flavor Haven offered a similar experience but with slightly better service.'}, {'day': 2, 'name': 'Katie', 'score': 6, 'content': "While the 'Veggie Victory Burger' and 'Health-Conscious Harvest Salad' aligned with my vegan lifestyle, the flavors were not as vibrant as I'd hoped. The dishes were satisfactory, yet lacked the depth to make them memorable. A comparison to American Flavor Haven shows a similar need for more robust vegan offerings."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score, seemingly better service, and offers a preferred burger and cheesecake which align with my taste preferences."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was juicy and flavorsome, and the New York Cheesecake was rich and perfectly sweet. A truly satisfying meal."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.544642857142857
+2. Advertisement
+   Experience the new taste of tradition at American Flavor Haven! Our Star-Spangled Brisket and revamped New York Cheesecake with unique twists are a must-try. Savor the fresh, local produce in every bite. Join us for a bold flavor journey that celebrates American culinary innovation.
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 18.0, 'description': 'Our classic burger updated with organic beef, heritage tomato, artisanal cheese, house-made pickles, and our new bold signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Tender pork ribs smothered in our new improved house BBQ sauce with a secret blend of spices, served with coleslaw and fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 11.0, 'description': 'Our classic cheesecake elevated with a graham cracker crust, topped with a rich berry compote infused with a hint of citrus and a drizzle of salted caramel for that perfect sweet-savory finish.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 19.0, 'description': 'A revitalized mix of organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, roasted seeds, tossed in our new bold citrus-herb vinaigrette with a sprinkling of exotic spices for an unforgettable taste.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 20.0, 'description': 'A reimagined plant-based burger with a blend of umami-rich mushrooms, roasted red peppers, vegan cheese, and our new vibrant smoky beetroot sauce, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 24.0, 'description': 'Grilled wild-caught Alaskan salmon with a new honey-spice glaze, served with a quinoa and supergreens salad.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 19.0, 'description': 'A culinary masterpiece featuring grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and a vibrant basil pesto, served on a bed of wild arugula.'}, {'id': 19, 'name': "Patriot's Peak Pot Roast", 'price': 23.0, 'description': 'Slow-cooked pot roast with root vegetables and a rich gravy, featuring locally-sourced beef and a unique blend of spices.'}, {'id': 21, 'name': 'Liberty Lamb Shank', 'price': 26.0, 'description': 'Succulent lamb shank slowly braised in a rich, herby sauce with a hint of mint, served with a side of roasted root vegetables and a garnish of fresh pomegranate seeds.'}, {'id': 22, 'name': 'Star-Spangled Brisket', 'price': 24.0, 'description': 'Slow-smoked brisket with a bold coffee-chipotle rub, topped with our zesty apple cider slaw, served with a side of sweet corn pudding.'}]
+4. Comments
+   [{'day': 8, 'name': 'Ulysses', 'score': 8, 'content': 'The Liberty Lamb Shank and the Ultimate Vegan Power Burger were satisfying, offering a nice variety for my international palate. The Avocado Quinoa Super Salad was refreshing, and the New York Cheesecake was a delightful finish. While the dishes were good, they could use a boost in boldness to match the advertised creativity.'}, {'day': 8, 'name': 'Ruby', 'score': 8, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were good, offering health-conscious yet flavorful options. The Wild Alaskan Salmon was well-prepared. However, compared to previous experiences, the dishes could benefit from a touch of innovation to elevate them from good to outstanding.'}, {'day': 8, 'name': 'Nora', 'score': 8, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were satisfying, with fresh, high-quality ingredients suitable for my gluten-free diet. However, I expected a bit more creativity in flavor. While the service was commendable, a touch of culinary innovation could enhance the overall dining experience.'}, {'day': 8, 'name': 'Max', 'score': 8, 'content': "The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were flavorful and aligned with my plant-based diet. However, there's room for more innovation in taste. Comparatively, this meal surpassed my previous experiences at other establishments in terms of freshness and adherence to my dietary preferences."}, {'day': 8, 'name': 'Iris', 'score': 7, 'content': "The Avocado Quinoa Super Salad was fresh and healthy, in line with my salad preference. Though the dish was good, it could benefit from more innovative flavors. Compared to previous experiences, the service was commendable, but there's room for culinary creativity."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.818181818181818
+2. Advertisement
+   Indulge in bold flavors at Stars & Stripes USA Diner! Our revamped menu includes the all-new Revolutionary Beet Burger and Veggie Victory Burger, crafted for culinary delight. Taste the innovation. #FlavorRevolution #StarsAndStripesUSA #GourmetBurgers
+3. Menu 
+   [{'id': 7, 'name': 'Veggie Victory Burger', 'price': 22.0, 'description': 'A hearty, plant-based patty with local greens, heirloom tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 22.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with artisan goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}, {'id': 14, 'name': 'Stars & Stripes Signature Shake', 'price': 14.0, 'description': 'A decadent milkshake with red velvet cake, blueberry coulis, and whipped cream, topped with a mini American flag for that patriotic touch.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 24.0, 'description': 'Roasted free-range chicken with a herb crust, served alongside seasonal vegetables from local farms.'}, {'id': 17, 'name': 'Craft Ale-Battered Fish & Chips', 'price': 22.0, 'description': 'Locally caught fish in a crispy craft ale batter, served with hand-cut fries and our house tartar sauce.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 18.0, 'description': 'A simple, refreshing salad featuring heirloom tomatoes, creamy burrata, basil, and a drizzle of aged balsamic.'}, {'id': 19, 'name': 'Grass-Fed Beef Slider Trio', 'price': 23.0, 'description': 'Three mini burgers made with grass-fed beef, each with a unique topping: blue cheese & caramelized onion, classic American with pickle, and spicy jalapeño with pepper jack cheese.'}]
+4. Comments
+   [{'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}, {'day': 2, 'name': 'Yasmine', 'score': 6, 'content': 'The Veggie Victory Burger and Health-Conscious Harvest Salad were satisfactory with decent flavors that cater to my vegan diet. However, the overall culinary experience lacked innovation and could benefit from more vibrant, robust flavors to truly satisfy. Previously, American Flavor Haven offered a similar experience but with slightly better service.'}, {'day': 2, 'name': 'Katie', 'score': 6, 'content': "While the 'Veggie Victory Burger' and 'Health-Conscious Harvest Salad' aligned with my vegan lifestyle, the flavors were not as vibrant as I'd hoped. The dishes were satisfactory, yet lacked the depth to make them memorable. A comparison to American Flavor Haven shows a similar need for more robust vegan offerings."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score, and the dishes, especially the New American Classic Burger and New York Cheesecake, have received positive feedback which aligns with my tastes."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was juicy and delicious, and the New York Cheesecake was exceptionally creamy and just the right amount of sweetness."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.536
+2. Advertisement
+   Unleash your taste buds with our 'Flavor Burst' dishes at American Flavor Haven! Indulge in the bold new tastes of our Star-Spangled Brisket, New York Cheesecake, and more. Fresh, innovative, and bursting with flavor – come see what makes us the talk of the town!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 20.0, 'description': 'Our classic burger with a twist: organic beef, heritage tomato, artisanal cheese, house-made pickles, and a bold, spicy signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Tender pork ribs smothered in our new improved house BBQ sauce with a secret blend of spices, served with coleslaw and fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 13.0, 'description': 'Our classic cheesecake with a twist: graham cracker crust, topped with a rich berry compote infused with zesty lemon and a drizzle of salted caramel with a sprinkle of toasted pecans for texture.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 21.0, 'description': 'A supercharged mix of organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, roasted seeds, tossed in our bold new citrus-herb vinaigrette with a sprinkle of fiery spices.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 20.0, 'description': 'A reimagined plant-based burger with a blend of umami-rich mushrooms, roasted red peppers, vegan cheese, and our new vibrant smoky beetroot sauce, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 26.0, 'description': 'Wild-caught Alaskan salmon with a bold honey-spice glaze, served with quinoa and supergreens salad drizzled with a zesty lemon-dill vinaigrette.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 19.0, 'description': 'A culinary masterpiece featuring grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and a vibrant basil pesto, served on a bed of wild arugula.'}, {'id': 19, 'name': "Patriot's Peak Pot Roast", 'price': 23.0, 'description': 'Slow-cooked pot roast with root vegetables and a rich gravy, featuring locally-sourced beef and a unique blend of spices.'}, {'id': 21, 'name': 'Liberty Lamb Shank', 'price': 26.0, 'description': 'Succulent lamb shank slowly braised in a rich, herby sauce with a hint of mint, served with a side of roasted root vegetables and a garnish of fresh pomegranate seeds.'}, {'id': 22, 'name': 'Star-Spangled Brisket', 'price': 26.0, 'description': 'Our slow-smoked brisket with a bolder coffee-chipotle rub, topped with a zesty apple cider slaw, served with jalapeño cheddar cornbread.'}]
+4. Comments
+   [{'day': 9, 'name': 'Valerie', 'score': 8, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger had fresh, organic ingredients that cater to my healthy lifestyle. While both were good, they lacked a bit of the bold flavor I expected. Compared to Stars & Stripes USA Diner, American Flavor Haven offers a better fit for my tastes but could still push the envelope on creativity.'}, {'day': 9, 'name': 'Ulysses', 'score': 8, 'content': 'The Ultimate Vegan Power Burger was creatively satisfying, and the Liberty Lamb Shank was cooked to perfection. The New York Cheesecake provided a classic yet delightful end to the meal. While the dishes were of good quality, a touch more boldness could enhance the flavors to match their innovation.'}, {'day': 9, 'name': 'Paula', 'score': 7, 'content': 'The Avocado Quinoa Super Salad was fresh but could use more zest. The New York Cheesecake was creamy but lacked depth. Both dishes were healthy, as I prefer, but I expected bolder flavors. Compared to my past experiences, the dishes were good but not outstanding.'}, {'day': 9, 'name': 'Jake', 'score': 7, 'content': "The Avocado Quinoa Super Salad was fresh but needed an extra kick. The Wild Alaskan Salmon was enjoyable yet could have been more innovative in flavor. Compared to other experiences, the dishes were good but didn't fully meet my cravings for bold tastes in fried foods."}, {'day': 9, 'name': 'Vicky', 'score': 8, 'content': 'The New American Classic Burger was hearty and quite satisfying, aligning well with my preference for comfort food. Although it was good, it could have had a more distinctive flavor profile to elevate it from good to great.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.6923076923076925
+2. Advertisement
+   Discover the new taste of America at Stars & Stripes USA Diner. Savory Smoky Mountain Chili, sweet American Dream Apple Pie, and our signature dishes await. Join us for an unforgettable dining experience! #NewAmericanTaste #StarsAndStripesUSADiner #CulinaryAdventure
+3. Menu 
+   [{'id': 7, 'name': 'Veggie Victory Burger', 'price': 25.0, 'description': 'A hearty, plant-based patty with local greens, heirloom tomato, and our special vegan sauce, served with sweet potato fries.'}, {'id': 9, 'name': 'Revolutionary Beet Burger', 'price': 25.0, 'description': 'Our innovative beet-based burger is a revolution in flavor, topped with artisan goat cheese, arugula, and a balsamic glaze, served with truffle fries.'}, {'id': 14, 'name': 'Stars & Stripes Signature Shake', 'price': 16.0, 'description': 'A decadent milkshake with red velvet cake, blueberry coulis, and whipped cream, topped with a mini American flag for that patriotic touch.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 27.0, 'description': 'Roasted free-range chicken with a herb crust, served alongside seasonal vegetables from local farms.'}, {'id': 17, 'name': 'Craft Ale-Battered Fish & Chips', 'price': 25.0, 'description': 'Locally caught fish in a crispy craft ale batter, served with hand-cut fries and our house tartar sauce.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 20.0, 'description': 'A simple, refreshing salad featuring heirloom tomatoes, creamy burrata, basil, and a drizzle of aged balsamic.'}, {'id': 19, 'name': 'Grass-Fed Beef Slider Trio', 'price': 26.0, 'description': 'Three mini burgers made with grass-fed beef, each with a unique topping: blue cheese & caramelized onion, classic American with pickle, and spicy jalapeño with pepper jack cheese.'}, {'id': 20, 'name': 'Smoky Mountain Chili', 'price': 21.0, 'description': 'Hearty beef and bean chili with a smoky twist, topped with shredded cheddar and green onions, served with a side of cornbread.'}, {'id': 21, 'name': 'American Dream Apple Pie', 'price': 15.0, 'description': 'Classic apple pie with a flaky crust, filled with caramelized apples and a touch of cinnamon, served à la mode.'}]
+4. Comments
+   [{'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The Veggie Victory Burger met my low-calorie needs but was just fair in taste, lacking depth. It didn't live up to the fast food craving I hoped to satisfy. Compared to American Flavor Haven, the experience here could be improved with more flavorful options."}, {'day': 9, 'name': 'Bob', 'score': 5, 'content': 'The Craft Ale-Battered Fish & Chips and Heirloom Tomato & Burrata Salad were merely fair, lacking the innovative taste I was expecting. Having experienced American Flavor Haven, the difference in culinary creativity is notable. Stars & Stripes needs to enhance the flavor depth to meet my strict standards.'}, {'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score and my previous experience with their burger and cheesecake was positive. The dishes are more aligned with my tastes compared to Stars & Stripes USA Diner."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was succulent and expertly seasoned, and the New York Cheesecake was a harmonious balance of sweet and tangy. A delightful meal overall."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.564285714285714
+2. Advertisement
+   Discover the bold flavors that set us apart at American Flavor Haven! Dive into our Avocado Quinoa Super Salad and Ultimate Vegan Power Burger, each dish crafted to surprise your palate. Visit us for an extraordinary dining experience that excites with every bite!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 20.0, 'description': 'Our classic burger with a twist: organic beef, heritage tomato, artisanal cheese, house-made pickles, and a bold, spicy signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Tender pork ribs smothered in our new improved house BBQ sauce with a secret blend of spices, served with coleslaw and fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 13.0, 'description': 'Our classic cheesecake with a twist: graham cracker crust, topped with a rich berry compote infused with zesty lemon and a drizzle of salted caramel with a sprinkle of toasted pecans for texture.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 21.0, 'description': 'Our supercharged mix of organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, roasted seeds, and a punch of chili flakes, tossed in our new bold citrus-herb vinaigrette.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 20.0, 'description': 'A reimagined plant-based burger with a blend of umami-rich mushrooms, roasted red peppers, vegan cheese, and our dynamic smoky beetroot sauce with a hint of chipotle, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 26.0, 'description': 'Wild-caught Alaskan salmon with a bold honey-spice glaze and a sprinkle of crunchy sesame seeds, served with quinoa and supergreens salad drizzled with a zesty lemon-dill vinaigrette.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 19.0, 'description': 'A culinary masterpiece featuring grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and a dynamic basil pesto with a hint of truffle, served on a bed of wild arugula.'}, {'id': 19, 'name': "Patriot's Peak Pot Roast", 'price': 23.0, 'description': 'Slow-cooked pot roast with root vegetables and a rich gravy, featuring locally-sourced beef and a bold new blend of spices to enhance the flavors.'}, {'id': 21, 'name': 'Liberty Lamb Shank', 'price': 26.0, 'description': 'Succulent lamb shank slowly braised in a rich, herby sauce with a strong hint of mint and rosemary, served with a side of roasted root vegetables and a garnish of fresh pomegranate seeds.'}, {'id': 22, 'name': 'Star-Spangled Brisket', 'price': 26.0, 'description': 'Our slow-smoked brisket with a bolder coffee-chipotle rub, complemented by a zesty apple cider slaw, served with jalapeño cheddar cornbread.'}]
+4. Comments
+   [{'day': 10, 'name': 'Yara', 'score': 8, 'content': "The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were quite enjoyable and compatible with my vegan lifestyle. The freshness was evident, but I'd suggest incorporating more bold flavors to elevate the dishes further. Comparatively, the experience surpassed my previous dining at Stars & Stripes USA Diner."}, {'day': 10, 'name': 'Valerie', 'score': 8, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were fresh and aligned with my preference for organic foods. The score reflects the quality and service, although the dishes could benefit from more adventurous seasoning for an intellectual palate like mine.'}, {'day': 10, 'name': 'Ruby', 'score': 8, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were satisfying and healthful, aligning with my dietary preferences. The Wild Alaskan Salmon was enjoyable, though all dishes could benefit from more innovative flavors to achieve an outstanding rating. Compared to Stars & Stripes USA Diner, American Flavor Haven has a preferable menu for my tastes.'}, {'day': 10, 'name': 'Felix', 'score': 8, 'content': "The New American Classic Burger, BBQ Ribs, and The Artisan's Delight at American Flavor Haven were all quite good, scoring high in taste. Despite this, I believe there's room for flavor development to achieve excellence. The service was great, but compared to my previous experiences, a more complex flavor profile could enhance the dining experience."}, {'day': 10, 'name': 'Emma', 'score': 8, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were nutritious, aligning with my organic preference. However, the flavors could be more pronounced. Having not tried Stars & Stripes USA Diner, I cannot compare, but overall, a satisfying meal with room for taste enhancement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.6923076923076925
+2. Advertisement
+   Taste the local difference at Stars & Stripes USA Diner, where every bite supports our community. Featuring our new Patriotic Prime Ribeye and fresh Heirloom Tomato & Burrata Salad. Limited seats available for a unique dining experience! #LocalFlavors #StarsAndStripesDining #CommunityCuisine
+3. Menu 
+   [{'id': 16, 'name': 'Local Harvest Chicken', 'price': 30.0, 'description': 'Roasted free-range chicken with a herb crust, served alongside seasonal vegetables from local farms.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 22.0, 'description': 'A simple, refreshing salad featuring heirloom tomatoes, creamy burrata, basil, and a drizzle of aged balsamic.'}, {'id': 22, 'name': 'Patriotic Prime Ribeye', 'price': 35.0, 'description': 'A succulent, locally-sourced prime ribeye steak with a bold rub, grilled to perfection, served with a side of garlic mashed potatoes and sautéed seasonal vegetables.'}, {'id': 23, 'name': 'Freedom Trail Mix', 'price': 8.0, 'description': 'A healthful and patriotic blend of dried fruits, nuts, and seeds, all sourced from local producers, perfect for a light snack or a healthy start to your meal.'}]
+4. Comments
+   [{'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The Veggie Victory Burger met my low-calorie needs but was just fair in taste, lacking depth. It didn't live up to the fast food craving I hoped to satisfy. Compared to American Flavor Haven, the experience here could be improved with more flavorful options."}, {'day': 9, 'name': 'Bob', 'score': 5, 'content': 'The Craft Ale-Battered Fish & Chips and Heirloom Tomato & Burrata Salad were merely fair, lacking the innovative taste I was expecting. Having experienced American Flavor Haven, the difference in culinary creativity is notable. Stars & Stripes needs to enhance the flavor depth to meet my strict standards.'}, {'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a significantly higher customer score, and the positive reviews on the burger and cheesecake match my preference for well-crafted dishes."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was savored with each bite, the flavors melding perfectly, while the New York Cheesecake was a delightful finish, balancing richness and sweetness exquisitely."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.56687898089172
+2. Advertisement
+   Embark on a culinary adventure at American Flavor Haven! Our Global Fusion Fajitas and reimagined classics infuse bold international spices for an unforgettable taste experience. Savor the innovation – your taste buds deserve it!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 22.0, 'description': 'Our classic burger reimagined with a global twist: organic beef, heritage tomato, artisanal cheese, house-made pickles, and a fiery, exotic spice blend in our signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Tender pork ribs basted with our new improved house BBQ sauce, now with a daring mix of international spices, served with coleslaw and sweet potato fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 13.0, 'description': 'Our classic cheesecake with a twist: graham cracker crust, topped with a rich berry compote infused with zesty lemon and a drizzle of salted caramel with a sprinkle of toasted pecans for texture.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 23.0, 'description': 'A bold fusion of flavors in our super salad: organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, roasted seeds, and a fiery chili-lime vinaigrette.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 22.0, 'description': 'Our plant-based burger goes global with a rich blend of mushrooms, roasted red peppers, vegan cheese, and a smoky beetroot sauce with a sizzling chipotle kick, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 28.0, 'description': 'Wild-caught Alaskan salmon with a bold miso-honey glaze and a sprinkle of toasted sesame seeds, served with a quinoa and supergreens salad drizzled with a tangy yuzu vinaigrette.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 21.0, 'description': 'Grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and our dynamic basil pesto with truffle essence, served on a bed of wild arugula with a balsamic reduction drizzle.'}, {'id': 21, 'name': 'Liberty Lamb Shank', 'price': 26.0, 'description': 'Succulent lamb shank slowly braised in a rich, herby sauce with a strong hint of mint and rosemary, served with a side of roasted root vegetables and a garnish of fresh pomegranate seeds.'}, {'id': 22, 'name': 'Star-Spangled Brisket', 'price': 26.0, 'description': 'Our slow-smoked brisket with a bolder coffee-chipotle rub, complemented by a zesty apple cider slaw, served with jalapeño cheddar cornbread.'}, {'id': 23, 'name': 'Global Fusion Fajitas', 'price': 24.0, 'description': 'Grilled chicken and flash-fried vegetables with a vibrant array of global spices, served with warm tortillas and a selection of zesty salsas to create your own flavor adventure.'}]
+4. Comments
+   [{'day': 11, 'name': 'Yara', 'score': 7, 'content': 'The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were good, aligning with my vegan diet. The freshness and quality were apparent, though the flavors lacked the boldness I anticipated. An enjoyable meal, but I would appreciate more creativity compared to my previous experiences.'}, {'day': 11, 'name': 'Paula', 'score': 8, 'content': "The Avocado Quinoa Super Salad was nutritious and aligned with my health-conscious diet, but could benefit from more zest. The New York Cheesecake was enjoyable but lacked the depth I expected. Overall, a good dining experience, though there's room for flavor enhancement."}, {'day': 11, 'name': 'Max', 'score': 8, 'content': "The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were both satisfying, offering a robust plant-based dining experience. While the flavors were good, there's potential for more complexity. Compared to Stars & Stripes USA Diner, American Flavor Haven better aligns with my dietary preferences."}, {'day': 11, 'name': 'Lara', 'score': 8, 'content': 'The Wild Alaskan Salmon and Avocado Quinoa Super Salad at American Flavor Haven were healthy and tasty, aligning with my seafood preference. The New York Cheesecake offered a sweet finish. While delicious, more innovative flavors could enhance the dining experience.'}, {'day': 11, 'name': 'Jake', 'score': 7, 'content': 'The Avocado Quinoa Super Salad was fresh and aligned with my health needs, but lacked a flavorful punch. The Wild Alaskan Salmon satisfied my fried food craving, yet could have used a more innovative seasoning. Compared to previous experiences, the dishes were good but could be improved taste-wise.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.6923076923076925
+2. Advertisement
+   Discover bold flavors at Stars & Stripes USA Diner! Savor our new Liberty BBQ Brisket, indulge in the Stars & Stripes Signature Shake, and finish with the classic American Dream Apple Pie. Come taste innovation. #BoldFlavors #InnovativeDining #StarsAndStripesUSA
+3. Menu 
+   [{'id': 16, 'name': 'Local Harvest Chicken', 'price': 28.0, 'description': 'Roasted free-range chicken with a herb crust, served alongside seasonal vegetables from local farms.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 20.0, 'description': 'A simple, refreshing salad featuring heirloom tomatoes, creamy burrata, basil, and a drizzle of aged balsamic.'}, {'id': 22, 'name': 'Patriotic Prime Ribeye', 'price': 32.0, 'description': 'A succulent, locally-sourced prime ribeye steak with a bold rub, grilled to perfection, served with a side of garlic mashed potatoes and sautéed seasonal vegetables.'}, {'id': 24, 'name': 'Liberty BBQ Brisket', 'price': 28.0, 'description': 'Slow-cooked brisket with a rich, smoky BBQ sauce, served with sweet potato fries and coleslaw.'}, {'id': 25, 'name': 'Stars & Stripes Signature Shake', 'price': 10.0, 'description': 'A decadent milkshake with red, white, and blue layers, topped with whipped cream and a sprinkle of star-shaped sprinkles.'}, {'id': 26, 'name': 'American Dream Apple Pie', 'price': 12.0, 'description': 'Classic apple pie with a flaky crust, served warm with vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The Veggie Victory Burger met my low-calorie needs but was just fair in taste, lacking depth. It didn't live up to the fast food craving I hoped to satisfy. Compared to American Flavor Haven, the experience here could be improved with more flavorful options."}, {'day': 9, 'name': 'Bob', 'score': 5, 'content': 'The Craft Ale-Battered Fish & Chips and Heirloom Tomato & Burrata Salad were merely fair, lacking the innovative taste I was expecting. Having experienced American Flavor Haven, the difference in culinary creativity is notable. Stars & Stripes needs to enhance the flavor depth to meet my strict standards.'}, {'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score and offers a New American Classic Burger and New York Cheesecake, which have received positive feedback and align with my taste preferences."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "score": 8,
+    "comment": "The New American Classic Burger was succulent, and the New York Cheesecake was creamy and satisfying. However, the flavors could be further enhanced to reach perfection. While the experience was good, it didn't quite hit the outstanding mark set by past visits."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.578947368421052
+2. Advertisement
+   Discover bold flavors with our new Spice Trail Adventure Platter! Experience global taste sensations from Morocco, Thailand, and India, expertly crafted by our chefs. Plus, don't miss our enhanced Global Fusion Fajitas, now with an even bolder spice blend. Visit American Flavor Haven – where every bite is a journey!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 22.0, 'description': 'Our classic burger reimagined with a global twist: organic beef, heritage tomato, artisanal cheese, house-made pickles, and a fiery, exotic spice blend in our signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Tender pork ribs basted with our new improved house BBQ sauce, now with a daring mix of international spices, served with coleslaw and sweet potato fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 13.0, 'description': 'Our classic cheesecake with a twist: graham cracker crust, topped with a rich berry compote infused with zesty lemon and a drizzle of salted caramel with a sprinkle of toasted pecans for texture.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 23.0, 'description': 'A bold fusion of flavors in our super salad: organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, roasted seeds, and a fiery chili-lime vinaigrette.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 22.0, 'description': 'Our plant-based burger goes global with a rich blend of mushrooms, roasted red peppers, vegan cheese, and a smoky beetroot sauce with a sizzling chipotle kick, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 28.0, 'description': 'Wild-caught Alaskan salmon with a bold miso-honey glaze and a sprinkle of toasted sesame seeds, served with a quinoa and supergreens salad drizzled with a tangy yuzu vinaigrette.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 21.0, 'description': 'Grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and our dynamic basil pesto with truffle essence, served on a bed of wild arugula with a balsamic reduction drizzle.'}, {'id': 21, 'name': 'Liberty Lamb Shank', 'price': 26.0, 'description': 'Succulent lamb shank slowly braised in a rich, herby sauce with a strong hint of mint and rosemary, served with a side of roasted root vegetables and a garnish of fresh pomegranate seeds.'}, {'id': 22, 'name': 'Star-Spangled Brisket', 'price': 26.0, 'description': 'Our slow-smoked brisket with a bolder coffee-chipotle rub, complemented by a zesty apple cider slaw, served with jalapeño cheddar cornbread.'}, {'id': 23, 'name': 'Global Fusion Fajitas', 'price': 27.0, 'description': 'An adventurous mix of grilled chicken, bell peppers, and onions, now with an even more daring global spice blend. Served sizzling with warm tortillas and an array of exotic salsas.'}, {'id': 24, 'name': 'Spice Trail Adventure Platter', 'price': 29.0, 'description': 'Embark on a culinary journey with this platter featuring spicy Moroccan chicken skewers, Thai-style shrimp, Indian paneer tikka, and an assortment of dipping sauces.'}]
+4. Comments
+   [{'day': 12, 'name': 'Xavier', 'score': 8, 'content': 'The BBQ Ribs were delightfully tender with a kick that catered to my love for spice. The New York Cheesecake struck a fine balance between creamy and tangy. However, the Avocado Quinoa Super Salad, while fresh, could use an extra flavor boost to match the zest in the other dishes.'}, {'day': 12, 'name': 'Valerie', 'score': 8, 'content': "The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were quite satisfying, with the organic ingredients meeting my health-conscious needs. The flavors, while good, could benefit from more boldness to match the restaurant's creative potential. Still, a better choice compared to my previous experiences at other establishments."}, {'day': 12, 'name': 'Ruby', 'score': 8, 'content': "The Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were well-prepared, aligning with my health-conscious lifestyle. The Wild Alaskan Salmon was a flavorful treat. While all dishes were enjoyable, I'm looking for that extra spark of creativity to elevate the experience to outstanding."}, {'day': 12, 'name': 'Paula', 'score': 8, 'content': 'The Avocado Quinoa Super Salad was quite satisfying and catered well to my health-conscious diet. The New York Cheesecake was a delightful treat, though both could have had a bit more flavor complexity. Overall, a good dining experience that outshines Stars & Stripes USA Diner, with room for taste enhancement.'}, {'day': 12, 'name': 'Giselle', 'score': 8, 'content': 'The New York Cheesecake had a sumptuous creamy texture that I enjoyed, but the berry compote could be improved with more depth of flavor. While the dessert was good, a more complex compote would make it outstanding. Compared to past experiences, it remains a solid choice for dessert lovers.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.6923076923076925
+2. Advertisement
+   Experience the new taste of America at Stars & Stripes USA Diner! Featuring our revamped Local Harvest Chicken and the delicious Freedom Fries. Top it off with our American Dream Apple Pie and Signature Shake. Fresh, bold, and waiting for you! #TasteOfAmerica #FreshAndBold #StarsAndStripesDiner
+3. Menu 
+   [{'id': 16, 'name': 'Local Harvest Chicken', 'price': 30.0, 'description': 'Herb-crusted roasted free-range chicken, served with a medley of local seasonal vegetables and a flavorful jus.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 22.0, 'description': 'Fresh heirloom tomatoes and creamy burrata, accented with basil, aged balsamic, and an innovative spice blend.'}, {'id': 22, 'name': 'Patriotic Prime Ribeye', 'price': 35.0, 'description': 'Prime ribeye with a unique spice rub, grilled to order, with garlic mashed potatoes and sautéed heirloom vegetables.'}, {'id': 24, 'name': 'Liberty BBQ Brisket', 'price': 30.0, 'description': 'Tender brisket with a signature smoky sauce, complemented by gourmet sweet potato fries and a tangy coleslaw.'}, {'id': 25, 'name': 'Stars & Stripes Signature Shake', 'price': 12.0, 'description': 'Our patriotic shake with layers of strawberry, vanilla, and blueberry, crowned with whipped cream and festive sprinkles.'}, {'id': 26, 'name': 'American Dream Apple Pie', 'price': 14.0, 'description': 'Our take on the classic, with cinnamon-spiced apples in a buttery crust, served with artisanal vanilla ice cream.'}, {'id': 27, 'name': 'Freedom Fries', 'price': 8.0, 'description': 'Hand-cut fries seasoned with a bold spice mix, served with our signature Stars & Stripes sauce.'}, {'id': 28, 'name': 'Liberty Lobster Roll', 'price': 34.0, 'description': 'Fresh lobster meat in a buttery roll, topped with a light lemon aioli and crisp greens, served with a side of sea salt kettle chips.'}]
+4. Comments
+   [{'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The Veggie Victory Burger met my low-calorie needs but was just fair in taste, lacking depth. It didn't live up to the fast food craving I hoped to satisfy. Compared to American Flavor Haven, the experience here could be improved with more flavorful options."}, {'day': 9, 'name': 'Bob', 'score': 5, 'content': 'The Craft Ale-Battered Fish & Chips and Heirloom Tomato & Burrata Salad were merely fair, lacking the innovative taste I was expecting. Having experienced American Flavor Haven, the difference in culinary creativity is notable. Stars & Stripes needs to enhance the flavor depth to meet my strict standards.'}, {'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason" : "American Flavor Haven has a higher customer score and offers dishes that have been well-received. The menu items, particularly the New American Classic Burger and New York Cheesecake, have garnered positive comments for their flavor and quality."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "score": 8,
+    "comment": "The New American Classic Burger and New York Cheesecake were good, reflecting the high customer score. The flavors were satisfying, but there's room to elevate the experience. While better than my past experiences at Stars & Stripes USA Diner, American Flavor Haven could still improve in complexity and creativity."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.594594594594595
+2. Advertisement
+   Indulge in our newly enhanced Avocado Quinoa Super Salad, now bursting with bold smoked paprika and cumin flavors. Discover the Continental Flavor Explosion Bowl, a dazzling array of global tastes in one hearty dish. At American Flavor Haven, we're elevating your dining experience with every savory spoonful!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 22.0, 'description': 'Our classic burger reimagined with a global twist: organic beef, heritage tomato, artisanal cheese, house-made pickles, and a fiery, exotic spice blend in our signature sauce on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Tender pork ribs basted with our new improved house BBQ sauce, now with a daring mix of international spices, served with coleslaw and sweet potato fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 13.0, 'description': 'Our classic cheesecake with a twist: graham cracker crust, topped with a rich berry compote infused with zesty lemon and a drizzle of salted caramel with a sprinkle of toasted pecans for texture.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 24.0, 'description': 'Our super salad is now even more vibrant with an updated dressing featuring a bold combination of smoked paprika, cumin, and fresh lime juice, tossed with organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, and roasted seeds.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 22.0, 'description': 'Our plant-based burger goes global with a rich blend of mushrooms, roasted red peppers, vegan cheese, and a smoky beetroot sauce with a sizzling chipotle kick, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 28.0, 'description': 'Wild-caught Alaskan salmon with a bold miso-honey glaze and a sprinkle of toasted sesame seeds, served with a quinoa and supergreens salad drizzled with a tangy yuzu vinaigrette.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 21.0, 'description': 'Grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and our dynamic basil pesto with truffle essence, served on a bed of wild arugula with a balsamic reduction drizzle.'}, {'id': 22, 'name': 'Star-Spangled Brisket', 'price': 26.0, 'description': 'Our slow-smoked brisket with a bolder coffee-chipotle rub, complemented by a zesty apple cider slaw, served with jalapeño cheddar cornbread.'}, {'id': 23, 'name': 'Global Fusion Fajitas', 'price': 27.0, 'description': 'An adventurous mix of grilled chicken, bell peppers, and onions, now with an even more daring global spice blend. Served sizzling with warm tortillas and an array of exotic salsas.'}, {'id': 24, 'name': 'Spice Trail Adventure Platter', 'price': 29.0, 'description': 'Embark on a culinary journey with this platter featuring spicy Moroccan chicken skewers, Thai-style shrimp, Indian paneer tikka, and an assortment of dipping sauces.'}, {'id': 25, 'name': 'Continental Flavor Explosion Bowl', 'price': 24.0, 'description': 'Tantalize your taste buds with this bold bowl featuring a selection of globally-inspired flavors. Enjoy a base of aromatic jasmine rice topped with spiced chickpeas, vibrant turmeric cauliflower, zesty chimichurri, and a piquant harissa drizzle, garnished with fresh herbs and edible flowers.'}]
+4. Comments
+   [{'day': 13, 'name': 'Wade', 'score': 8, 'content': 'The New American Classic Burger was hearty and met my taste for simple food. The New York Cheesecake ended the meal nicely, though both dishes could have a bit more flavor depth. Overall, satisfying and reasonably priced, better than my past experiences at other establishments.'}, {'day': 13, 'name': 'Valerie', 'score': 8, 'content': 'The organic ingredients in the Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were fresh and appreciated. The Spice Trail Adventure Platter offered a delightful variety of flavors. While all dishes were good, they could benefit from a touch more seasoning to truly excel.'}, {'day': 13, 'name': 'Ulysses', 'score': 8, 'content': "The Spice Trail Adventure Platter was an intriguing journey through global flavors, though each could be a bit more distinct. The Star-Spangled Brisket was tender, with the coffee-chipotle rub offering a welcomed kick. The New York Cheesecake ended the meal sweetly, but I'd prefer a stronger lemon presence in the compote."}, {'day': 13, 'name': 'Oscar', 'score': 8, 'content': 'The New American Classic Burger and BBQ Ribs were both very satisfying, staying true to my traditional taste preference. The New York Cheesecake was enjoyable, although I expected a bit more flavor complexity based on past experiences. Overall, a fulfilling meal with room for slight improvement.'}, {'day': 13, 'name': 'Nora', 'score': 8, 'content': 'While the Avocado Quinoa Super Salad and Ultimate Vegan Power Burger were creatively crafted to suit my gluten-free diet, the flavors could be enhanced for a richer experience. Compared to previous meals, these dishes were satisfying, yet I anticipate more boldness in taste.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.6923076923076925
+2. Advertisement
+   Indulge in the epitome of local flavors at Stars & Stripes USA Diner. Savor our standout Local Harvest Chicken, Heirloom Tomato & Burrata Salad, Patriot's Prime Pork Chop, and more. Each dish crafted with fresh, locally-sourced ingredients for a truly American dining experience. #LocalFlavors #CulinaryInnovation #StarsAndStripesUSA
+3. Menu 
+   [{'id': 16, 'name': 'Local Harvest Chicken', 'price': 32.0, 'description': 'Herb-crusted roasted free-range chicken, served with a medley of local seasonal vegetables and a flavorful jus.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 24.0, 'description': 'Fresh heirloom tomatoes and creamy burrata, accented with basil, aged balsamic, and an innovative spice blend.'}, {'id': 22, 'name': 'Patriotic Prime Ribeye', 'price': 38.0, 'description': 'Prime ribeye with a unique spice rub, grilled to order, with garlic mashed potatoes and sautéed heirloom vegetables.'}, {'id': 24, 'name': 'Liberty BBQ Brisket', 'price': 32.0, 'description': 'Tender brisket with a signature smoky sauce, complemented by gourmet sweet potato fries and a tangy coleslaw.'}, {'id': 26, 'name': 'American Dream Apple Pie', 'price': 16.0, 'description': 'Our take on the classic, with cinnamon-spiced apples in a buttery crust, served with artisanal vanilla ice cream.'}, {'id': 28, 'name': 'Liberty Lobster Roll', 'price': 34.0, 'description': 'Fresh lobster meat in a buttery roll, topped with a light lemon aioli and crisp greens, served with a side of sea salt kettle chips.'}, {'id': 29, 'name': "Patriot's Prime Pork Chop", 'price': 33.0, 'description': 'A succulent, bone-in pork chop with a maple-bourbon glaze, accompanied by roasted sweet potatoes and seasonal greens.'}]
+4. Comments
+   [{'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The Veggie Victory Burger met my low-calorie needs but was just fair in taste, lacking depth. It didn't live up to the fast food craving I hoped to satisfy. Compared to American Flavor Haven, the experience here could be improved with more flavorful options."}, {'day': 9, 'name': 'Bob', 'score': 5, 'content': 'The Craft Ale-Battered Fish & Chips and Heirloom Tomato & Burrata Salad were merely fair, lacking the innovative taste I was expecting. Having experienced American Flavor Haven, the difference in culinary creativity is notable. Stars & Stripes needs to enhance the flavor depth to meet my strict standards.'}, {'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes": [
+        "New American Classic Burger", "New York Cheesecake"
+    ],
+    "reason": "American Flavor Haven has a higher customer score, and the specific dishes I'm interested in have received favorable reviews for their taste and quality."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "score": 8,
+    "comment": "The New American Classic Burger and New York Cheesecake both offered a gratifying experience, aligning with the high customer score. While they were delectable, the depth of flavor could be further refined. Compared to Stars & Stripes USA Diner, American Flavor Haven provides a more satisfying culinary adventure."
+}
+
+[System->Leo]: The Restaurant " American Flavor Haven "information as below:
+1. Customer Score: 7.607142857142857
+2. Advertisement
+   Introducing our new Patriotic Pecan Pie, a luscious dessert with a flaky crust and caramelized pecans, topped with a bourbon chocolate drizzle. Plus, taste the enhanced complexity of our New American Classic Burger and New York Cheesecake. Join us at American Flavor Haven for an unforgettable flavor journey!
+3. Menu 
+   [{'id': 1, 'name': 'New American Classic Burger', 'price': 23.0, 'description': 'Savor our reinvented classic burger with a more complex spice blend and a tangy special sauce to elevate the flavor profile, featuring organic beef, heritage tomato, artisanal cheese, and house-made pickles on a multigrain bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Tender pork ribs basted with our new improved house BBQ sauce, now with a daring mix of international spices, served with coleslaw and sweet potato fries.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 14.0, 'description': 'Indulge in our creamy cheesecake enhanced with a bolder berry compote, zesty lemon zest, and a unique salted caramel with toasted pecans, all resting on a classic graham cracker crust.'}, {'id': 11, 'name': 'Avocado Quinoa Super Salad', 'price': 24.0, 'description': 'Our super salad is now even more vibrant with an updated dressing featuring a bold combination of smoked paprika, cumin, and fresh lime juice, tossed with organic quinoa, ripe avocado, mixed greens, sun-dried tomatoes, and roasted seeds.'}, {'id': 12, 'name': 'Ultimate Vegan Power Burger', 'price': 22.0, 'description': 'Our plant-based burger goes global with a rich blend of mushrooms, roasted red peppers, vegan cheese, and a smoky beetroot sauce with a sizzling chipotle kick, topped with spicy arugula, on a toasted gluten-free bun.'}, {'id': 15, 'name': 'Wild Alaskan Salmon', 'price': 28.0, 'description': 'Wild-caught Alaskan salmon with a bold miso-honey glaze and a sprinkle of toasted sesame seeds, served with a quinoa and supergreens salad drizzled with a tangy yuzu vinaigrette.'}, {'id': 18, 'name': "The Artisan's Delight", 'price': 21.0, 'description': 'Grilled Portobello mushrooms, heirloom tomatoes, artisanal goat cheese, and our dynamic basil pesto with truffle essence, served on a bed of wild arugula with a balsamic reduction drizzle.'}, {'id': 22, 'name': 'Star-Spangled Brisket', 'price': 26.0, 'description': 'Our slow-smoked brisket with a bolder coffee-chipotle rub, complemented by a zesty apple cider slaw, served with jalapeño cheddar cornbread.'}, {'id': 23, 'name': 'Global Fusion Fajitas', 'price': 27.0, 'description': 'An adventurous mix of grilled chicken, bell peppers, and onions, now with an even more daring global spice blend. Served sizzling with warm tortillas and an array of exotic salsas.'}, {'id': 25, 'name': 'Continental Flavor Explosion Bowl', 'price': 24.0, 'description': 'Tantalize your taste buds with this bold bowl featuring a selection of globally-inspired flavors. Enjoy a base of aromatic jasmine rice topped with spiced chickpeas, vibrant turmeric cauliflower, zesty chimichurri, and a piquant harissa drizzle, garnished with fresh herbs and edible flowers.'}, {'id': 26, 'name': 'Patriotic Pecan Pie', 'price': 15.0, 'description': 'A modern twist on the American classic, our pecan pie features a flaky crust filled with caramelized pecans, a hint of bourbon, and a chocolate drizzle, served with house-made cinnamon ice cream.'}]
+4. Comments
+   [{'day': 14, 'name': 'Paula', 'score': 8, 'content': 'The Avocado Quinoa Super Salad was hearty and the updated bold spices were appreciated, aligning with my health-focused diet. The New York Cheesecake with its berry compote was a delightful end to the meal. However, both dishes could benefit from an extra punch of flavor to truly be outstanding.'}, {'day': 14, 'name': 'Giselle', 'score': 8, 'content': "The New York Cheesecake was delicious with its creamy texture, however, the berry compote lacked a certain depth that would have made it exceptional. In comparison to Stars & Stripes USA Diner, American Flavor Haven's focus on diverse flavors is appreciated, though there's room for improvement in complexity."}, {'day': 14, 'name': 'Felix', 'score': 7, 'content': "The dishes at American Flavor Haven, like The Artisan's Delight and BBQ Ribs, offered a unique taste but didn't fully meet my expectations for flavor complexity. The New York Cheesecake was enjoyable, though it could benefit from a bolder berry compote. Service was good, but for a more memorable experience, a further enhancement of flavors is needed."}, {'day': 14, 'name': 'Brian', 'score': 8, 'content': 'The New American Classic Burger had a satisfying street food essence, though I craved a bit more spice. The New York Cheesecake was creamy but lacked complexity. Overall, an enjoyable meal but with potential for bolder flavors.'}, {'day': 14, 'name': 'Amelia', 'score': 8, 'content': 'The dishes at American Flavor Haven were satisfying, with the New American Classic Burger and BBQ Ribs offering robust flavors that catered to my spirited personality. The Spice Trail Adventure Platter was an enjoyable mix of global tastes. However, the New York Cheesecake could have had a stronger zest to elevate it further.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes USA Diner "information as below:
+1. Customer Score: 5.6923076923076925
+2. Advertisement
+   Experience the fresh, innovative tastes at Stars & Stripes USA Diner. Discover our revamped menu with bold, local flavors - including the new Founding Farmers Veggie Burger. Join us for a culinary journey that celebrates American gastronomy with a twist. #FreshAndLocal #StarsAndStripesUSA #InnovativeDining
+3. Menu 
+   [{'id': 16, 'name': 'Local Harvest Chicken', 'price': 34.0, 'description': 'Herb-crusted roasted free-range chicken, served with a medley of local seasonal vegetables and a flavorful jus.'}, {'id': 18, 'name': 'Heirloom Tomato & Burrata Salad', 'price': 26.0, 'description': 'Fresh heirloom tomatoes and creamy burrata, accented with basil, aged balsamic, and an innovative spice blend.'}, {'id': 22, 'name': 'Patriotic Prime Ribeye', 'price': 40.0, 'description': 'Prime ribeye with a unique spice rub, grilled to order, with garlic mashed potatoes and sautéed heirloom vegetables.'}, {'id': 24, 'name': 'Liberty BBQ Brisket', 'price': 34.0, 'description': 'Tender brisket with a signature smoky sauce, complemented by gourmet sweet potato fries and a tangy coleslaw.'}, {'id': 26, 'name': 'American Dream Apple Pie', 'price': 18.0, 'description': 'Our take on the classic, with cinnamon-spiced apples in a buttery crust, served with artisanal vanilla ice cream.'}, {'id': 28, 'name': 'Liberty Lobster Roll', 'price': 36.0, 'description': 'Fresh lobster meat in a buttery roll, topped with a light lemon aioli and crisp greens, served with a side of sea salt kettle chips.'}, {'id': 29, 'name': "Patriot's Prime Pork Chop", 'price': 35.0, 'description': 'A succulent, bone-in pork chop with a maple-bourbon glaze, accompanied by roasted sweet potatoes and seasonal greens.'}, {'id': 30, 'name': 'Founding Farmers Veggie Burger', 'price': 22.0, 'description': 'Our hearty veggie burger features a house-made patty of black beans, sweet corn, and roasted peppers, topped with avocado and a tangy chipotle aioli.'}]
+4. Comments
+   [{'day': 9, 'name': 'Quincy', 'score': 5, 'content': "The Veggie Victory Burger met my low-calorie needs but was just fair in taste, lacking depth. It didn't live up to the fast food craving I hoped to satisfy. Compared to American Flavor Haven, the experience here could be improved with more flavorful options."}, {'day': 9, 'name': 'Bob', 'score': 5, 'content': 'The Craft Ale-Battered Fish & Chips and Heirloom Tomato & Burrata Salad were merely fair, lacking the innovative taste I was expecting. Having experienced American Flavor Haven, the difference in culinary creativity is notable. Stars & Stripes needs to enhance the flavor depth to meet my strict standards.'}, {'day': 4, 'name': 'Amelia', 'score': 6, 'content': "The dishes at Stars & Stripes USA Diner were fair, but lacked the depth of flavor I anticipated. Despite the freshness of the ingredients, the meal wasn't as memorable as expected. Compared to American Flavor Haven, the unique homemade quality I once enjoyed seems to have diminished."}, {'day': 4, 'name': 'Eve', 'score': 6, 'content': 'The Freedom Burger and Patriot Pie were affordable but lacked flavor complexity. Having dined at American Flavor Haven previously, I found their dishes to be more satisfying. Stars & Stripes USA Diner could improve by enhancing the taste of their simple dishes.'}, {'day': 3, 'name': 'Yara', 'score': 5, 'content': 'The Health-Conscious Harvest Salad and Veggie Victory Burger were fair, aligning with my vegan diet, but lacked the flavor innovation promised. Previous meals at American Flavor Haven were similarly unremarkable, yet offered better service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "dishes" : [
+        "New American Classic Burger", "New York Cheesecake", "Patriotic Pecan Pie"
+    ],
+    "reason" : "American Flavor Haven's complex spice blends and special sauces offer a more enhanced taste experience, and its higher customer score suggests consistent quality compared to Stars & Stripes USA Diner."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New American Classic Burger: 0.81
+New York Cheesecake: 0.81
+Patriotic Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavor Haven",
+    "feeling": "The New American Classic Burger was juicy and well-seasoned, the New York Cheesecake creamy with a nice tang from the berry compote, and the Patriotic Pecan Pie was an indulgent treat with its flaky crust and rich filling."
+}
+

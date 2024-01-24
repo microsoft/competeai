@@ -1,0 +1,912 @@
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the authentic taste of American classics at American Gourmet Bistro! Indulge in our mouthwatering burgers, succulent BBQ ribs, and spicy wings. Don't miss our delectable New York Cheesecake!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy wings served with blue cheese dressing'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 7.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with fresh berries'}, {'id': 5, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Crisp lettuce, tomato, bacon, boiled egg, avocado, blue cheese, and chicken, served with your choice of dressing'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover authentic American BBQ at Stars & Stripes BBQ! Indulge in our mouth-watering Smoked Beef Brisket and fall-off-the-bone BBQ Ribs. Experience the taste of tradition with every bite. Visit us today and taste the difference quality makes!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Fresh corn grilled to perfection with a dusting of spices.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 4.0, 'description': 'Crisp cabbage and carrot slaw in a creamy dressing.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy, cheesy macaroni baked until golden.'}, {'id': 7, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy, seasoned sweet potato fries with a side of dipping sauce.'}, {'id': 8, 'name': 'Pecan Pie', 'price': 7.0, 'description': 'Traditional Southern pecan pie with a flaky crust.'}, {'id': 9, 'name': 'Lemonade', 'price': 3.0, 'description': 'Refreshing homemade lemonade, sweetened just right.'}, {'id': 10, 'name': 'Iced Tea', 'price': 3.0, 'description': 'Classic iced tea, served cold with a slice of lemon.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese", "Pecan Pie"
+    ],
+    "reason" : "Selected Stars & Stripes BBQ for the variety in their menu, including a classic dessert option and a comfort side dish that complements the main course."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese: 0.77
+Pecan Pie: 0.77
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was superbly tender with a perfect smoky flavor. The Mac & Cheese was deliciously creamy, and the Pecan Pie ended the meal on a sweet note."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.875
+2. Advertisement
+   Savor the new heights of American cuisine at American Gourmet Bistro! Enjoy our enhanced Classic American Burger, now juicier, and our BBQ Ribs with a richer flavor. Introducing the exquisite Gourmet Apple Pie - your new dessert favorite!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dressing'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Creamy cheesecake with a graham cracker crust, topped with fresh berries'}, {'id': 5, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'Crisp lettuce, tomato, bacon, boiled egg, avocado, blue cheese, and chicken, served with your choice of dressing'}, {'id': 6, 'name': 'Gourmet Apple Pie', 'price': 9.0, 'description': 'A twist on the classic with flaky pastry and a rich, spiced apple filling, served with vanilla ice cream'}]
+4. Comments
+   [{'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}, {'day': 1, 'name': 'Oscar', 'score': 5, 'content': "The traditional flavors at American Gourmet Bistro were fair, but not exceptional. The burger's special sauce lacked the distinctiveness I anticipated, and the ribs could have been more tender. The New York Cheesecake was satisfactory. Overall, an average dining experience."}, {'day': 1, 'name': 'Jake', 'score': 6, 'content': "The Cobb Salad was fresh, but the overall flavor was underwhelming, likely due to the low sodium content necessary for my diet. Service was decent. I've had more flavorful dishes at Stars & Stripes BBQ previously, but health-wise, this was a better choice."}, {'day': 1, 'name': 'Iris', 'score': 6, 'content': 'The Cobb Salad was fresh but lacked flavor depth. It was a fair meal but not impressive. I hoped for a more vibrant taste experience based on the menu description.'}, {'day': 1, 'name': 'Giselle', 'score': 6, 'content': "The New York Cheesecake had fresh flavors, but I expected a creamier texture. While it was decent, it didn't quite meet my high expectations for a standout dessert experience. I'm tempted to try Stars & Stripes BBQ next time for their pecan pie."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.777777777777778
+2. Advertisement
+   Savor the richer flavors at Stars & Stripes BBQ! Now featuring creamier Mac & Cheese and a new Vegan Smoky Black Bean Chili to delight your taste buds. Join us for a meal that's both hearty and bursting with authentic American BBQ taste. Your table is waiting!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Fresh corn grilled to perfection with a dusting of spices.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 5.0, 'description': 'Crisp cabbage and carrot slaw in a richer, creamier dressing.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'A richer, cheesier macaroni baked until golden brown.'}, {'id': 7, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy, seasoned sweet potato fries with a side of dipping sauce.'}, {'id': 8, 'name': 'Pecan Pie', 'price': 7.0, 'description': 'Traditional Southern pecan pie with a flaky crust.'}, {'id': 9, 'name': 'Lemonade', 'price': 3.0, 'description': 'Refreshing homemade lemonade, sweetened just right.'}, {'id': 10, 'name': 'Iced Tea', 'price': 3.0, 'description': 'Classic iced tea, served cold with a slice of lemon.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 9.0, 'description': 'Hearty black beans simmered in a smoky tomato base with vegetables.'}]
+4. Comments
+   [{'day': 1, 'name': 'Valerie', 'score': 8, 'content': 'The Smoked Beef Brisket was tender with a deep, smoky flavor that I enjoyed thoroughly. The Grilled Corn on the Cob and Classic Coleslaw provided a nice balance to the meal, but the coleslaw could use a touch more seasoning. The Pecan Pie was a sweet ending to the meal. Overall, a satisfying dining experience.'}, {'day': 1, 'name': 'Ruby', 'score': 8, 'content': 'The Smoked Beef Brisket and BBQ Ribs were tender and well-seasoned, showcasing expert smoking techniques. The Sweet Potato Fries added a delightful crunch, while the Pecan Pie ended the meal on a sweet note. A point deducted for the fries being slightly less impressive than the mains.'}, {'day': 1, 'name': 'Quincy', 'score': 7, 'content': "The coleslaw and sweet potato fries were quite satisfying, and the grilled corn was a highlight. However, I've had better BBQ elsewhere. A bit more flavor in the sides would be appreciated."}, {'day': 1, 'name': 'Amelia', 'score': 8, 'content': 'The Smoked Beef Brisket was tender and flavorful. Mac & Cheese was comforting, though it could have been cheesier. The Pecan Pie ended the meal on a sweet note. Overall, a satisfying experience.'}, {'day': 1, 'name': 'William', 'score': 8, 'content': 'The Smoked Beef Brisket was tender and flavorful, a highlight of the meal. The Mac & Cheese and Pecan Pie were both good, but not exceptional. Overall, a satisfying BBQ experience with room for improvement in variety and depth of flavors.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese", "Pecan Pie"
+    ],
+    "reason" : "Chose Stars & Stripes BBQ for its higher customer score and positive reviews about the brisket and pecan pie, which align with my preference for hearty meals and sweet endings."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese: 0.81
+Pecan Pie: 0.77
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was incredibly tender and had a deep smoky flavor that I loved. The Mac & Cheese was creamy and satisfying. The Pecan Pie was a delightful finish with its flaky crust and rich filling."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.875
+2. Advertisement
+   Discover the extraordinary at American Gourmet Bistro! Indulge in our Ultimate American Burger and Signature BBQ Ribs. Treat yourself to our New York Luxe Cheesecake. Each week, be surprised with our exclusive Chef's Special. Elevate your taste - only with us.
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 18.0, 'description': 'Premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, and our signature sauce, on a toasted brioche bun'}, {'id': 2, 'name': 'Signature BBQ Ribs', 'price': 22.0, 'description': 'Slow-cooked ribs with a unique spice blend, glazed in our homemade bourbon BBQ sauce, served with seasoned fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dressing'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 10.0, 'description': 'Velvety rich cheesecake with a buttery almond crust, topped with seasonal berry compote'}, {'id': 5, 'name': 'Elevated Cobb Salad', 'price': 15.0, 'description': 'Organic mixed greens, heritage tomatoes, crispy prosciutto, soft-boiled free-range egg, creamy avocado, crumbled blue cheese, and grilled lemon-herb chicken, with house vinaigrette'}, {'id': 6, 'name': 'Gourmet Apple Pie', 'price': 9.0, 'description': 'A twist on the classic with flaky pastry and a rich, spiced apple filling, served with vanilla ice cream'}, {'id': 7, 'name': "Chef's Special", 'price': 25.0, 'description': 'A weekly rotating dish crafted by our chef, showcasing the finest seasonal ingredients and innovative culinary techniques'}]
+4. Comments
+   [{'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}, {'day': 1, 'name': 'Oscar', 'score': 5, 'content': "The traditional flavors at American Gourmet Bistro were fair, but not exceptional. The burger's special sauce lacked the distinctiveness I anticipated, and the ribs could have been more tender. The New York Cheesecake was satisfactory. Overall, an average dining experience."}, {'day': 1, 'name': 'Jake', 'score': 6, 'content': "The Cobb Salad was fresh, but the overall flavor was underwhelming, likely due to the low sodium content necessary for my diet. Service was decent. I've had more flavorful dishes at Stars & Stripes BBQ previously, but health-wise, this was a better choice."}, {'day': 1, 'name': 'Iris', 'score': 6, 'content': 'The Cobb Salad was fresh but lacked flavor depth. It was a fair meal but not impressive. I hoped for a more vibrant taste experience based on the menu description.'}, {'day': 1, 'name': 'Giselle', 'score': 6, 'content': "The New York Cheesecake had fresh flavors, but I expected a creamier texture. While it was decent, it didn't quite meet my high expectations for a standout dessert experience. I'm tempted to try Stars & Stripes BBQ next time for their pecan pie."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.56
+2. Advertisement
+   Discover new tastes at Stars & Stripes BBQ! Indulge in our revamped side dishes like the zestier Classic Coleslaw and gourmet Mac & Cheese. Don't miss our heartier, richer Vegan Smoky Black Bean Chili and the Spicy Buffalo Cauliflower. Elevate your meal with our signature smoked meats and a slice of our caramelized Pecan Pie. Taste the difference quality makes!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Fresh corn grilled to perfection with a buttery herb seasoning.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 6.0, 'description': 'Crisp cabbage and carrot slaw in a homemade dressing with a tangy kick.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'A decadent, cheesier macaroni with a blend of gourmet cheeses, baked until golden brown.'}, {'id': 7, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy, seasoned sweet potato fries with a side of dipping sauce.'}, {'id': 8, 'name': 'Pecan Pie', 'price': 8.0, 'description': 'Traditional Southern pecan pie with a richer, caramelized filling and flaky crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 10.0, 'description': 'Hearty black beans simmered in a smoky tomato base with spices and vegetables, suitable for vegans.'}, {'id': 12, 'name': 'Spicy Buffalo Cauliflower', 'price': 7.0, 'description': 'Bite-sized cauliflower florets tossed in a tangy buffalo sauce, served with vegan ranch.'}]
+4. Comments
+   [{'day': 2, 'name': 'Valerie', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese were both robust in flavor, living up to the BBQ experience. The Grilled Corn on the Cob was a pleasant side, although it could benefit from a bit more seasoning. The Pecan Pie ended the meal on a high note but was slightly less impressive than the mains. A well-rounded meal overall.'}, {'day': 2, 'name': 'Tina', 'score': 8, 'content': "The Smoked Beef Brisket was tender with a robust flavor, and the Grilled Corn on the Cob complemented it well. Sweet Potato Fries could have been crisper. The Pecan Pie was delightful but not extraordinary. Better than my last visit to American Gourmet Bistro, particularly in the meat's smokiness and seasoning."}, {'day': 2, 'name': 'Oscar', 'score': 8, 'content': 'The Smoked Beef Brisket was impressively tender and had a deep smoky taste. The Classic Coleslaw was a bit underseasoned, but still enjoyable. The Pecan Pie had a lovely texture but could use a bit more flavor. Overall, a better experience than American Gourmet Bistro.'}, {'day': 2, 'name': 'Lara', 'score': 8, 'content': "The Smoked Beef Brisket was tender, though not as flavorful as I'd hoped, and the Grilled Corn on the Cob was a pleasant side. The Pecan Pie was sweet, but could benefit from a bit more pecan presence. Overall, a good meal that could be elevated with some adjustments."}, {'day': 2, 'name': 'Dexter', 'score': 8, 'content': "The Smoked Beef Brisket and Mac & Cheese were both hearty and satisfying, with a good balance of flavors. Pecan Pie was enjoyable though not remarkable. Great for a BBQ lover, but I've had slightly better brisket elsewhere. Service was commendable."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese", "Pecan Pie"
+    ],
+    "reason" : "Opted for Stars & Stripes BBQ for their higher customer score and my positive past experiences. The menu aligns with my preference for hearty, flavorful meals and a sweet dessert."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese: 0.81
+Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was extraordinarily succulent with a deep smoky essence. The Mac & Cheese was indulgently creamy, and the Pecan Pie was the perfect blend of sweet and nutty. Very satisfied."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.875
+2. Advertisement
+   Experience the essence of gourmet American dining at American Gourmet Bistro. Savor the new Smoked Maple Glazed Salmon and Wild Mushroom Risotto, crafted for the discerning palate. Our Chef's Special rotates weekly, featuring the freshest seasonal ingredients. Join us for an unforgettable culinary journey.
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 20.0, 'description': 'Premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, and our signature sauce, on a toasted brioche bun'}, {'id': 2, 'name': 'Signature BBQ Ribs', 'price': 24.0, 'description': 'Slow-cooked ribs with a unique spice blend, glazed in our homemade bourbon BBQ sauce, served with seasoned fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dressing'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 12.0, 'description': 'Velvety rich cheesecake with a buttery almond crust, topped with seasonal berry compote'}, {'id': 5, 'name': 'Elevated Cobb Salad', 'price': 17.0, 'description': 'Organic mixed greens, heritage tomatoes, crispy prosciutto, soft-boiled free-range egg, creamy avocado, crumbled blue cheese, and grilled lemon-herb chicken, with house vinaigrette'}, {'id': 6, 'name': 'Gourmet Apple Pie', 'price': 11.0, 'description': 'A twist on the classic with flaky pastry and a rich, spiced apple filling, served with vanilla ice cream'}, {'id': 7, 'name': "Chef's Special", 'price': 28.0, 'description': 'A weekly rotating dish crafted by our chef, showcasing the finest seasonal ingredients and innovative culinary techniques'}, {'id': 8, 'name': 'Smoked Maple Glazed Salmon', 'price': 22.0, 'description': 'Sustainably sourced salmon, smoked and glazed with a rich maple reduction, accompanied by quinoa salad and seasonal vegetables'}, {'id': 9, 'name': 'Wild Mushroom Risotto', 'price': 19.0, 'description': 'Creamy Arborio rice risotto with a medley of wild mushrooms, truffle oil, and grated Parmigiano-Reggiano'}]
+4. Comments
+   [{'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}, {'day': 1, 'name': 'Oscar', 'score': 5, 'content': "The traditional flavors at American Gourmet Bistro were fair, but not exceptional. The burger's special sauce lacked the distinctiveness I anticipated, and the ribs could have been more tender. The New York Cheesecake was satisfactory. Overall, an average dining experience."}, {'day': 1, 'name': 'Jake', 'score': 6, 'content': "The Cobb Salad was fresh, but the overall flavor was underwhelming, likely due to the low sodium content necessary for my diet. Service was decent. I've had more flavorful dishes at Stars & Stripes BBQ previously, but health-wise, this was a better choice."}, {'day': 1, 'name': 'Iris', 'score': 6, 'content': 'The Cobb Salad was fresh but lacked flavor depth. It was a fair meal but not impressive. I hoped for a more vibrant taste experience based on the menu description.'}, {'day': 1, 'name': 'Giselle', 'score': 6, 'content': "The New York Cheesecake had fresh flavors, but I expected a creamier texture. While it was decent, it didn't quite meet my high expectations for a standout dessert experience. I'm tempted to try Stars & Stripes BBQ next time for their pecan pie."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.578947368421052
+2. Advertisement
+   Taste the revolution at Stars & Stripes BBQ! Savor our newly refined Mac & Cheese Deluxe and the sumptuous Deep South Pecan Pie. We're introducing the irresistible Bourbon Chocolate Brownie - a must-try dessert! Come for the best BBQ and stay for the improved flavors and dessert delights. Experience the culinary excellence that sets us apart!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Fresh corn grilled to perfection with a buttery herb seasoning.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 6.0, 'description': 'Crisp cabbage and carrot slaw in a homemade dressing with a tangy kick.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 11.0, 'description': 'A creamy blend of sharp cheddar, smoked gouda, and gruyere cheeses, enveloping tender macaroni, topped with a crispy breadcrumb crust.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 10.0, 'description': 'Our classic pecan pie enhanced with a deeper, more robust pecan flavor and a hint of bourbon, encased in a buttery, homemade crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 10.0, 'description': 'Hearty black beans simmered in a smoky tomato base with spices and vegetables, suitable for vegans.'}, {'id': 12, 'name': 'Spicy Buffalo Cauliflower', 'price': 7.0, 'description': 'Bite-sized cauliflower florets tossed in a tangy buffalo sauce, served with vegan ranch.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 9.0, 'description': 'Decadent chocolate brownie with a smooth bourbon infusion, topped with a scoop of vanilla ice cream and a drizzle of caramel sauce.'}]
+4. Comments
+   [{'day': 3, 'name': 'Oscar', 'score': 8, 'content': 'The Smoked Beef Brisket maintained its tender quality with a satisfying smoky flavor, and the Grilled Corn on the Cob was a delightful side. The Pecan Pie had a good texture, though it could benefit from a more pronounced pecan flavor. A solid meal overall, but room for dessert improvement.'}, {'day': 3, 'name': 'Giselle', 'score': 8, 'content': 'The Pecan Pie at Stars & Stripes BBQ had a wonderful texture and sweetness, outshining the previous dessert experience at American Gourmet Bistro. While the pie could benefit from a more pronounced pecan flavor, it was still a delectable choice that satisfied my sweet tooth.'}, {'day': 3, 'name': 'Dexter', 'score': 8, 'content': "The Smoked Beef Brisket and Mac & Cheese were both satisfying with a good smoky flavor, though they lacked a bit of the depth I've enjoyed at other BBQ spots. The Pecan Pie was tasty but not extraordinary. Overall, a solid BBQ meal that could use a touch more refinement to be outstanding."}, {'day': 3, 'name': 'Zach', 'score': 6, 'content': 'The Vegan Smoky Black Bean Chili and Spicy Buffalo Cauliflower were suitable for my gluten sensitivity, but they lacked the nuanced flavors I savor as a connoisseur. The dishes were good, yet not exceptional. Compared to American Gourmet Bistro, the experience was better, but still not up to my high standards.'}, {'day': 3, 'name': 'Yasmine', 'score': 8, 'content': 'The Vegan Smoky Black Bean Chili and Spicy Buffalo Cauliflower were both flavorful and satisfying. The Grilled Corn on the Cob was well-prepared, though could use a touch more seasoning. A great dining option for vegans seeking variety and taste.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Gourmet Bistro",
+    "dishes" : [
+        "Smoked Maple Glazed Salmon", "Wild Mushroom Risotto", "New York Luxe Cheesecake"
+    ],
+    "reason" : "Chose American Gourmet Bistro for its unique offerings like the Smoked Maple Glazed Salmon and Wild Mushroom Risotto, and the New York Luxe Cheesecake for a classic dessert."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Maple Glazed Salmon: 0.61
+Wild Mushroom Risotto: 0.61
+New York Luxe Cheesecake: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Gourmet Bistro",
+    "feeling": "The Smoked Maple Glazed Salmon was flavorful with a perfect balance of sweetness. The Wild Mushroom Risotto had a rich, earthy taste, and the New York Luxe Cheesecake was creamy with a delicious berry compote."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.888888888888889
+2. Advertisement
+   Discover bold flavors at American Gourmet Bistro! Try our American Fusion Tacos for a unique twist, and enjoy our curated selection of dishes like the Ultimate American Burger at new attractive prices. Quality and creativity on a plate. Visit us for a taste of American excellence.
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 18.0, 'description': 'Premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, and our signature sauce, on a toasted brioche bun'}, {'id': 2, 'name': 'Signature BBQ Ribs', 'price': 22.0, 'description': 'Slow-cooked ribs with a unique spice blend, glazed in our homemade bourbon BBQ sauce, served with seasoned fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 11.0, 'description': 'Spicy wings served with blue cheese dressing'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 11.0, 'description': 'Velvety rich cheesecake with a buttery almond crust, topped with seasonal berry compote'}, {'id': 5, 'name': 'Elevated Cobb Salad', 'price': 16.0, 'description': 'Organic mixed greens, heritage tomatoes, crispy prosciutto, soft-boiled free-range egg, creamy avocado, crumbled blue cheese, and grilled lemon-herb chicken, with house vinaigrette'}, {'id': 6, 'name': 'Gourmet Apple Pie', 'price': 10.0, 'description': 'A twist on the classic with flaky pastry and a rich, spiced apple filling, served with vanilla ice cream'}, {'id': 8, 'name': 'Smoked Maple Glazed Salmon', 'price': 20.0, 'description': 'Sustainably sourced salmon, smoked and glazed with a rich maple reduction, accompanied by quinoa salad and seasonal vegetables'}, {'id': 9, 'name': 'Wild Mushroom Risotto', 'price': 17.0, 'description': 'Creamy Arborio rice risotto with a medley of wild mushrooms, truffle oil, and grated Parmigiano-Reggiano'}, {'id': 10, 'name': 'American Fusion Tacos', 'price': 15.0, 'description': 'Soft tortillas filled with fusion-flavored pulled pork, tangy slaw, and an avocado crema.'}]
+4. Comments
+   [{'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}, {'day': 1, 'name': 'Oscar', 'score': 5, 'content': "The traditional flavors at American Gourmet Bistro were fair, but not exceptional. The burger's special sauce lacked the distinctiveness I anticipated, and the ribs could have been more tender. The New York Cheesecake was satisfactory. Overall, an average dining experience."}, {'day': 1, 'name': 'Jake', 'score': 6, 'content': "The Cobb Salad was fresh, but the overall flavor was underwhelming, likely due to the low sodium content necessary for my diet. Service was decent. I've had more flavorful dishes at Stars & Stripes BBQ previously, but health-wise, this was a better choice."}, {'day': 1, 'name': 'Iris', 'score': 6, 'content': 'The Cobb Salad was fresh but lacked flavor depth. It was a fair meal but not impressive. I hoped for a more vibrant taste experience based on the menu description.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.615384615384615
+2. Advertisement
+   Discover new heights of flavor at Stars & Stripes BBQ! Relish our enhanced Grilled Corn and Zesty Coleslaw, dive into the deeper tastes of our Vegan Smoky Black Bean Chili, and indulge in our richer Deep South Pecan Pie. Elevate your dining experience with our bold flavors and homey comfort. Your culinary adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 7.0, 'description': 'Grilled corn seasoned with our special blend of herbs and spices for an added kick.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 7.0, 'description': 'Our classic coleslaw with a zesty twist, featuring a hint of citrus to brighten the flavors.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 11.0, 'description': 'A creamy blend of sharp cheddar, smoked gouda, and gruyere cheeses, enveloping tender macaroni, topped with a crispy breadcrumb crust.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 12.0, 'description': 'A southern favorite, our pecan pie is now richer with more pecans and a hint of dark chocolate.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 12.0, 'description': 'Rich and flavorful vegan chili with smoky undertones, enhanced with a blend of spices for greater depth.'}, {'id': 12, 'name': 'Spicy Buffalo Cauliflower', 'price': 7.0, 'description': 'Bite-sized cauliflower florets tossed in a tangy buffalo sauce, served with vegan ranch.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 9.0, 'description': 'Decadent chocolate brownie with a smooth bourbon infusion, topped with a scoop of vanilla ice cream and a drizzle of caramel sauce.'}]
+4. Comments
+   [{'day': 4, 'name': 'Wade', 'score': 7, 'content': "The Pulled Pork Sandwich and Coleslaw were both good, aligning with my preference for simple meals. However, there's room for improvement in flavor depth. It's a better experience compared to my last meal at American Gourmet Bistro, but the dishes could be more memorable."}, {'day': 4, 'name': 'Tina', 'score': 8, 'content': 'The Smoked Beef Brisket was juicy and had a gratifying smoky essence. The Grilled Corn on the Cob was a tasty complement, though I craved a bit more seasoning. The Deep South Pecan Pie was good but lacked the robust pecan flavor I anticipated. Overall, a hearty and enjoyable meal with room for subtle improvements.'}, {'day': 4, 'name': 'Steve', 'score': 8, 'content': 'The Grilled Corn on the Cob, Classic Coleslaw, and Vegan Smoky Black Bean Chili were all satisfying and fit well with my dietary restrictions. However, the flavors could be enhanced to bring a bit more excitement to the palate. Overall, a good dining experience with room for flavor improvement.'}, {'day': 4, 'name': 'Ruby', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe were both rich in flavor, with a satisfying balance of smokiness and creaminess. The Deep South Pecan Pie and Bourbon Chocolate Brownie were indulgent, though a stronger pecan presence would enhance the pie. An excellent meal, but still room for slight improvement.'}, {'day': 4, 'name': 'Max', 'score': 8, 'content': 'The Vegan Smoky Black Bean Chili offered a robust flavor, and both the Grilled Corn on the Cob and Spicy Buffalo Cauliflower were tasty but could use more seasoning for depth. The experience was good, still leaving some room for improvement compared to previous visits.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Selected Stars & Stripes BBQ due to higher customer scores, positive comments on brisket and mac & cheese, and my preference for rich, smoky flavors and indulgent desserts."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese Deluxe: 0.81
+Deep South Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was impeccably tender with a smoky zest that I relished. The Mac & Cheese Deluxe was a creamy delight, and the Deep South Pecan Pie provided a sweet, nutty finale to a gratifying meal."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.9
+2. Advertisement
+   American Gourmet Bistro presents a refreshed menu with a unique American touch. Experience our new Classic American Meatloaf, alongside favorites like the Ultimate American Burger, now at more enticing prices! Quality ingredients, American tradition, and great value - all at American Gourmet Bistro.
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 16.0, 'description': 'Premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, and our signature sauce, on a toasted brioche bun'}, {'id': 2, 'name': 'Signature BBQ Ribs', 'price': 20.0, 'description': 'Slow-cooked ribs with a unique spice blend, glazed in our homemade bourbon BBQ sauce, served with seasoned fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 11.0, 'description': 'Spicy wings served with blue cheese dressing'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 11.0, 'description': 'Velvety rich cheesecake with a buttery almond crust, topped with seasonal berry compote'}, {'id': 5, 'name': 'Elevated Cobb Salad', 'price': 14.0, 'description': 'Organic mixed greens, heritage tomatoes, crispy prosciutto, soft-boiled free-range egg, creamy avocado, crumbled blue cheese, and grilled lemon-herb chicken, with house vinaigrette'}, {'id': 6, 'name': 'Gourmet Apple Pie', 'price': 10.0, 'description': 'A twist on the classic with flaky pastry and a rich, spiced apple filling, served with vanilla ice cream'}, {'id': 8, 'name': 'Smoked Maple Glazed Salmon', 'price': 18.0, 'description': 'Sustainably sourced salmon, smoked and glazed with a rich maple reduction, accompanied by quinoa salad and seasonal vegetables'}, {'id': 9, 'name': 'Wild Mushroom Risotto', 'price': 15.0, 'description': 'Creamy Arborio rice risotto with a medley of wild mushrooms, truffle oil, and grated Parmigiano-Reggiano'}, {'id': 11, 'name': 'Classic American Meatloaf', 'price': 16.0, 'description': 'Homestyle meatloaf with a tangy tomato glaze, served with buttery mashed potatoes and green beans.'}]
+4. Comments
+   [{'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}, {'day': 1, 'name': 'Oscar', 'score': 5, 'content': "The traditional flavors at American Gourmet Bistro were fair, but not exceptional. The burger's special sauce lacked the distinctiveness I anticipated, and the ribs could have been more tender. The New York Cheesecake was satisfactory. Overall, an average dining experience."}, {'day': 1, 'name': 'Jake', 'score': 6, 'content': "The Cobb Salad was fresh, but the overall flavor was underwhelming, likely due to the low sodium content necessary for my diet. Service was decent. I've had more flavorful dishes at Stars & Stripes BBQ previously, but health-wise, this was a better choice."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.6875
+2. Advertisement
+   Savor the boldness at Stars & Stripes BBQ! Now featuring an enriched Deep South Pecan Pie packed with nutty goodness and our Mac & Cheese Deluxe with an extra kick. Plus, don't miss our new Sizzling Spicy Shrimp - a fiery delight! Come for the flavors that set us apart; stay for the unforgettable experience.
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 7.0, 'description': 'Grilled corn seasoned with our special blend of herbs and spices for an added kick.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 7.0, 'description': 'Our classic coleslaw with a zesty twist, featuring a hint of citrus to brighten the flavors.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 12.0, 'description': 'A luxurious blend of sharp cheddar, smoked gouda, and gruyere cheeses, enveloping tender macaroni, with a pinch more seasoning for a bolder flavor, topped with a crispy breadcrumb crust.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 13.0, 'description': 'Our Deep South Pecan Pie is filled to the brim with rich, roasted pecans, a thicker dark chocolate layer, and an even more indulgent filling.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 12.0, 'description': 'Rich and flavorful vegan chili with smoky undertones, enhanced with a blend of spices for greater depth.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 9.0, 'description': 'Decadent chocolate brownie with a smooth bourbon infusion, topped with a scoop of vanilla ice cream and a drizzle of caramel sauce.'}, {'id': 14, 'name': 'Sizzling Spicy Shrimp', 'price': 12.0, 'description': 'Juicy shrimp sautéed with a fiery blend of Cajun spices, served sizzling hot.'}]
+4. Comments
+   [{'day': 5, 'name': 'Xavier', 'score': 8, 'content': "The smoky flavors of the Smoked Beef Brisket and BBQ Ribs met my craving for Caribbean tastes. Grilled Corn on the Cob was decent but could use more spices. Deep South Pecan Pie was rich but needed more pecan flavor. Better than my last meal at American Gourmet Bistro, yet there's room for improvement."}, {'day': 5, 'name': 'Valerie', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe both delivered on their promise of rich, organic flavors, while the Deep South Pecan Pie was a sweet finish, albeit less impressive. Though the dishes were good overall, I believe a touch more seasoning could elevate the culinary experience.'}, {'day': 5, 'name': 'Steve', 'score': 8, 'content': "The Grilled Corn on the Cob, Classic Coleslaw, and Vegan Smoky Black Bean Chili were all well-suited to my dietary restrictions and tasted good, but I expected a bit more flavor complexity. An enjoyable meal overall yet there's room for improvement in seasoning."}, {'day': 5, 'name': 'Hugo', 'score': 8, 'content': "The Smoked Beef Brisket was a gourmet delight, and the Grilled Corn on the Cob was perfectly seasoned. The Deep South Pecan Pie was rich; however, compared to my last visit, the depth of flavor could be enhanced. A very good meal overall, but there's room for improvement."}, {'day': 5, 'name': 'Felix', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe satisfied my craving for hearty flavors, with a good balance of smokiness and creaminess. The Deep South Pecan Pie was rich, but I expected more pecan flavor. A tasty meal overall, though not as memorable as it could be.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Selected Stars & Stripes BBQ for their higher customer score and comments praising the brisket and mac & cheese, which suggest a satisfying experience with rich flavors."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese Deluxe: 0.81
+Deep South Pecan Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "score": 8,
+    "comment": "The Smoked Beef Brisket and Mac & Cheese Deluxe were both rich in flavor, though I've had slightly better at previous visits. The Deep South Pecan Pie was enjoyable but could use a bit more pecan presence. Overall, a very satisfying meal with room for a touch more finesse."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Discover the taste of America at American Gourmet Bistro with our focused and perfected menu! Enjoy the Ultimate American Burger, New York Luxe Cheesecake, and more at unbeatable prices. Every bite promises quality and consistency. Join us for an authentic American dining experience that's kind to your wallet!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 15.0, 'description': 'Premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, and our signature sauce, on a toasted brioche bun'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 9.0, 'description': 'Velvety rich cheesecake with a buttery almond crust, topped with seasonal berry compote'}, {'id': 5, 'name': 'Elevated Cobb Salad', 'price': 12.0, 'description': 'Organic mixed greens, heritage tomatoes, crispy prosciutto, soft-boiled free-range egg, creamy avocado, crumbled blue cheese, and grilled lemon-herb chicken, with house vinaigrette'}, {'id': 6, 'name': 'Gourmet Apple Pie', 'price': 8.0, 'description': 'A twist on the classic with flaky pastry and a rich, spiced apple filling, served with vanilla ice cream'}, {'id': 12, 'name': 'Classic American Hotdog', 'price': 8.0, 'description': 'All-beef hotdog on a toasted bun with relish, onions, and mustard'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.716216216216216
+2. Advertisement
+   Indulge in the richer, bolder flavors at Stars & Stripes BBQ! Featuring our revamped Deep South Pecan Pie with a more indulgent caramel filling and our Mac & Cheese Deluxe, now with a secret seasoning for that extra punch. Experience the authentic American BBQ taste that everyone's talking about!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 7.0, 'description': 'Grilled corn seasoned with our special blend of herbs and spices for an added kick.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 7.0, 'description': 'Our classic coleslaw with a zesty twist, featuring a hint of citrus to brighten the flavors.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 12.0, 'description': 'A luxurious blend of sharp cheddar, smoked gouda, and gruyere cheeses, enveloping tender macaroni. Now with an extra pinch of our secret seasoning blend for a bolder flavor, topped with a crispy breadcrumb crust.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 14.0, 'description': 'Our Deep South Pecan Pie, now with a richer, homemade caramel filling and a generous amount of toasted pecans for a true Southern taste.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 12.0, 'description': 'Rich and flavorful vegan chili with smoky undertones, now enhanced with a bolder blend of spices for greater depth and a touch of heat.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 9.0, 'description': 'Decadent chocolate brownie with a smooth bourbon infusion, topped with a scoop of vanilla ice cream and a drizzle of caramel sauce.'}]
+4. Comments
+   [{'day': 6, 'name': 'Yara', 'score': 8, 'content': 'The Vegan Smoky Black Bean Chili and Grilled Corn on the Cob at Stars & Stripes BBQ were both satisfying with good flavors. However, they could benefit from a bit more spice to truly excel. The service was commendable, making it an overall pleasant dining experience.'}, {'day': 6, 'name': 'Ulysses', 'score': 8, 'content': "The Smoked Beef Brisket, Mac & Cheese Deluxe, and Bourbon Chocolate Brownie at Stars & Stripes BBQ were all satisfying with rich flavors. However, there's room for improvement in terms of flavor depth to make the dishes truly outstanding. A solid meal, but not quite exceptional."}, {'day': 6, 'name': 'Jake', 'score': 7, 'content': "The Vegan Smoky Black Bean Chili was a good choice for my dietary needs, with a decent smoky flavor. It could benefit from more depth to truly satisfy. Compared to past meals, it's healthier but lacks some excitement in taste."}, {'day': 6, 'name': 'Felix', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe had a solid flavor, though they could benefit from a bit more seasoning to enhance their depth. The Deep South Pecan Pie was enjoyable but lacked the strong pecan flavor I anticipated. Overall, a good meal but with room for improvement.'}, {'day': 6, 'name': 'Brian', 'score': 8, 'content': 'The Pulled Pork Sandwich and Mac & Cheese were highlights, delivering hearty flavors. The Classic Coleslaw was good, but could use a bit more zest. Lemonade was refreshing, though a tad sweeter would be perfect. Overall, a great match for my street food tastes at a reasonable cost.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "I prefer Stars & Stripes BBQ for its higher customer score and my previous positive experiences. The dishes selected fit my preference for rich, flavorful meals."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese Deluxe: 0.81
+Deep South Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was delightfully flavorful, and the Mac & Cheese Deluxe was just the right level of creamy. The Deep South Pecan Pie ended the meal on a sweet and satisfying note."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Indulge in American classics perfected at American Gourmet Bistro! Savor our Ultimate American Burger, rich New York Luxe Cheesecake, and new Smokey BBQ Chicken Wings, all at prices that delight. Quality, value, and taste in every meal. Visit us for an unforgettable dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 14.0, 'description': 'Premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, and our signature sauce, on a toasted brioche bun'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 8.0, 'description': 'Velvety rich cheesecake with a buttery almond crust, topped with seasonal berry compote'}, {'id': 6, 'name': 'Gourmet Apple Pie', 'price': 7.0, 'description': 'A twist on the classic with flaky pastry and a rich, spiced apple filling, served with vanilla ice cream'}, {'id': 13, 'name': 'Smokey BBQ Chicken Wings', 'price': 12.0, 'description': 'Juicy wings basted in our special homemade smokey BBQ sauce, served with a side of creamy ranch dressing.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.744186046511628
+2. Advertisement
+   Come taste the season at Stars & Stripes BBQ with our new Seasonal Grilled Veggie Platter, featuring a medley of local vegetables! Plus, savor our enhanced classics, like the Grilled Corn on the Cob with a new secret spice blend, and the Mac & Cheese Deluxe, now even creamier with a rich herb-infused cheese sauce. Your favorite American flavors just got better!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Tender beef brisket smoked for hours with our signature BBQ rub.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder, hand-pulled and served on a toasted bun.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Half rack of succulent pork ribs slathered in our house BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 7.0, 'description': 'Perfectly grilled corn on the cob dusted with our new secret blend of spices, adding more depth and a burst of flavor to every bite.'}, {'id': 5, 'name': 'Classic Coleslaw', 'price': 7.0, 'description': 'Our classic coleslaw with a zesty twist, featuring a hint of citrus to brighten the flavors.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 13.0, 'description': 'Our decadent Mac & Cheese Deluxe now features a richer, creamier cheese sauce with a new blend of herbs for an even more luxurious taste, topped with a golden, crispy breadcrumb crust.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 15.0, 'description': "Indulge in our Deep South Pecan Pie with a deeper caramel flavor and toasted pecans packed into a flaky, buttery crust. It's Southern comfort in every slice."}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 12.0, 'description': 'Our Vegan Smoky Black Bean Chili is now even more robust with an enhanced spice mix that brings out the smoky flavor and adds a subtle kick, perfect for those who enjoy a bit of heat.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 9.0, 'description': 'Decadent chocolate brownie with a smooth bourbon infusion, topped with a scoop of vanilla ice cream and a drizzle of caramel sauce.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 14.0, 'description': 'Our new seasonal platter features a colorful array of locally-sourced, grilled vegetables, served with a tangy herb-infused dipping sauce. A fresh and healthy choice!'}]
+4. Comments
+   [{'day': 7, 'name': 'Tina', 'score': 8, 'content': 'The Smoked Beef Brisket had a robust smoky flavor, though a hint more seasoning could enhance it. The Grilled Corn on the Cob was well-prepared, but I expected a stronger herb presence. Lastly, the Deep South Pecan Pie was delightful, but more pecan flavor would perfect it. Overall, a solid meal with minor tweaks needed.'}, {'day': 7, 'name': 'Quincy', 'score': 7, 'content': 'The Grilled Corn on the Cob and Classic Coleslaw were fresh and flavorful, while the Vegan Smoky Black Bean Chili was hearty without being too heavy. However, the chili could have used a bit more spice to elevate its taste. Service was efficient. Overall, a good meal that met my dietary needs.'}, {'day': 7, 'name': 'Paula', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe both had a robust flavor, satisfying my craving for hearty American cuisine. The Deep South Pecan Pie was indulgent, though I expected a stronger pecan presence. While the meal was delightful, a slight boost in seasoning could elevate the dishes further.'}, {'day': 7, 'name': 'Hugo', 'score': 8, 'content': 'The Smoked Beef Brisket and Grilled Corn on the Cob delivered on their promise of gourmet flavors, though a touch more seasoning would elevate the dishes. The Deep South Pecan Pie, while rich, could benefit from a stronger pecan presence. A satisfying meal overall, but with room for a more nuanced taste experience.'}, {'day': 7, 'name': 'Giselle', 'score': 8, 'content': 'The Deep South Pecan Pie at Stars & Stripes BBQ delivered on sweetness and texture. However, for perfection, a more pronounced pecan presence would enhance the dish. The service was good, making the overall dining experience quite enjoyable.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Opting for Stars & Stripes BBQ due to its higher customer score and my personal positive experiences. The dishes align with my preference for hearty, flavorful American cuisine."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese Deluxe: 0.81
+Deep South Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was exquisitely tender, with a deep smoky flavor. The Mac & Cheese Deluxe was the epitome of comfort food, creamy and rich. The Deep South Pecan Pie's sweetness and texture were spot-on, rounding off a thoroughly enjoyable meal."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Discover the fresh, bold flavors of American Flavor Haven! Delight in our revamped Ultimate American Burger, luxurious New York Luxe Cheesecake, and the new Signature Smoked Pork Platter. Fresh ingredients, unforgettable tastes. Join us for a dining experience that celebrates the essence of American cuisine!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 16.0, 'description': 'A luxurious take on the classic American burger, featuring a premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, and our secret savory sauce, all nestled within a freshly toasted brioche bun.'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 10.0, 'description': 'Reintroducing our famed cheesecake, now more indulgent than ever with a creamier texture and a fresh, vibrant berry compote atop a buttery almond crust.'}, {'id': 13, 'name': 'Smokey BBQ Chicken Wings', 'price': 12.0, 'description': 'Juicy wings basted in our special homemade smokey BBQ sauce, served with a side of creamy ranch dressing.'}, {'id': 14, 'name': 'Signature Smoked Pork Platter', 'price': 20.0, 'description': 'An impressive platter featuring tender, slow-smoked pork, served with a trio of our homemade sauces and a side of tangy apple coleslaw.'}, {'id': 15, 'name': 'Grilled Veggie & Quinoa Salad', 'price': 14.0, 'description': 'A healthful and flavorful salad with a mix of grilled seasonal vegetables and protein-rich quinoa, dressed in a light lemon-herb vinaigrette.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.787037037037037
+2. Advertisement
+   Discover bold flavors at Stars & Stripes BBQ! Dive into our Smoked Beef Brisket with a new enhanced seasoning blend, and experience the kick in our Spicy Southern Slaw. Don't miss our spicier Vegan Smoky Black Bean Chili and the perfected balance of our Bourbon Chocolate Brownie. Your taste buds deserve a feast of intensified flavors!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 18.0, 'description': 'Our Smoked Beef Brisket now comes with a revamped seasoning blend that enhances its natural smokiness, making every bite more flavorful.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Savor the richer flavors in our Pulled Pork Sandwich, featuring a new spice mix that adds a delightful kick to this classic favorite.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 20.0, 'description': "Enjoy our BBQ Ribs with an updated house BBQ sauce that's been fine-tuned for an even more mouthwatering experience."}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 7.0, 'description': 'Our Grilled Corn on the Cob is now seasoned with a special spice blend, adding a punch of flavor to this grilled delight.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 13.0, 'description': 'Our decadent Mac & Cheese Deluxe now features a richer, creamier cheese sauce with a new blend of herbs for an even more luxurious taste, topped with a golden, crispy breadcrumb crust.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 15.0, 'description': "Indulge in our Deep South Pecan Pie with a deeper caramel flavor and toasted pecans packed into a flaky, buttery crust. It's Southern comfort in every slice."}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 12.0, 'description': 'Our Vegan Smoky Black Bean Chili now packs a spicier punch, perfect for those who crave a bit of heat in their comfort food.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 9.0, 'description': 'Our Bourbon Chocolate Brownie is perfected with a balanced caramel sauce that complements without overshadowing the bourbon-chocolate harmony.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 14.0, 'description': 'Our new seasonal platter features a colorful array of locally-sourced, grilled vegetables, served with a tangy herb-infused dipping sauce. A fresh and healthy choice!'}, {'id': 16, 'name': 'Spicy Southern Slaw', 'price': 7.0, 'description': 'Crisp cabbage and carrots tossed in a tangy, spicy dressing for a refreshing twist on the traditional coleslaw.'}]
+4. Comments
+   [{'day': 8, 'name': 'Yara', 'score': 8, 'content': 'The Vegan Smoky Black Bean Chili, Grilled Corn on the Cob, and Seasonal Grilled Veggie Platter all offered pleasing flavors, aligning well with my vegan lifestyle. Each dish was seasoned well, though a bit more spice could enhance the chili. Service was friendly and attentive, making for an overall satisfying experience.'}, {'day': 8, 'name': 'Xavier', 'score': 8, 'content': 'The smoky flavors of the brisket and ribs were deeply satisfying, resonating with my love for Caribbean cuisine. The corn could have been spicier, and while the pecan pie was decadent, it lacked a robust pecan flavor. Overall, a hearty meal that could be enhanced with minor adjustments.'}, {'day': 8, 'name': 'Wade', 'score': 7, 'content': "The Pulled Pork Sandwich and Classic Coleslaw at Stars & Stripes BBQ were both good, aligning with my preference for simple meals. However, there's room for improvement in flavor depth. It's a better experience compared to my last meal at American Gourmet Bistro, but the dishes could be more memorable."}, {'day': 8, 'name': 'Valerie', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe were satisfying, with a good balance of smoke and creaminess, respectively. The Seasonal Grilled Veggie Platter was fresh, but could use more seasoning to enhance the organic flavors. Overall, a delightful experience that aligns with my preference for hearty, natural meals.'}, {'day': 8, 'name': 'Tina', 'score': 8, 'content': "The Smoked Beef Brisket was tender and smoky, though a touch more seasoning could make it outstanding. The Grilled Corn on the Cob was enjoyable but would benefit from a stronger spice blend. The Deep South Pecan Pie's flavor was good but could use more pecan richness. Overall, a solid meal."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Stars & Stripes BBQ has a higher customer score, and the comments suggest the dishes offer the rich, smoky flavors I enjoy, with room for slight improvement."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese Deluxe: 0.81
+Deep South Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was delectably tender with a satisfying smokiness. The Mac & Cheese Deluxe was sumptuously creamy, and the Deep South Pecan Pie finished the meal with a delightful sweetness."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Come savor the new American Flavor Haven experience! Our menu is perfected with the Ultimate American Burger and the richest New York Luxe Cheesecake in town. Try our new Rich Southern Pecan Tart – a direct challenge to our rival's pie, with deeper flavors and a homemade touch. Quality, comfort, sophistication – it's all here!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate American Burger', 'price': 14.0, 'description': 'Our classic American burger with a gourmet twist: premium beef patty, aged cheddar, crispy bacon, artisan lettuce, heirloom tomato, enveloped in a brioche bun with our exclusive savory sauce.'}, {'id': 4, 'name': 'New York Luxe Cheesecake', 'price': 12.0, 'description': 'Our renowned cheesecake: now even richer and creamier, topped with the freshest seasonal berry compote on a buttery almond crust.'}, {'id': 13, 'name': 'Smokey BBQ Chicken Wings', 'price': 11.0, 'description': 'Succulent wings smothered in our signature homemade smokey BBQ sauce, paired with cooling creamy ranch dressing.'}, {'id': 14, 'name': 'Signature Smoked Pork Platter', 'price': 22.0, 'description': 'Our impressive platter of tender, slow-smoked pork accompanied by a selection of our homemade sauces and tangy apple coleslaw.'}, {'id': 15, 'name': 'Grilled Veggie & Quinoa Salad', 'price': 13.0, 'description': 'A nutritious mix of grilled seasonal veggies and quinoa, drizzled with our light lemon-herb vinaigrette.'}, {'id': 16, 'name': 'Rich Southern Pecan Tart', 'price': 12.0, 'description': 'Indulge in our Southern Pecan Tart, bursting with rich, toasty pecan flavors in a caramelized filling, all encased in a flaky, homemade crust.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.798319327731092
+2. Advertisement
+   Savor the new, richer flavors at Stars & Stripes BBQ! Revel in our upgraded Smoked Beef Brisket and BBQ Ribs with bold seasoning, indulge in our enhanced Deep South Pecan Pie and Bourbon Chocolate Brownie with intense flavors, and welcome the Seasonal Berry Cobbler, our newest addition. Come for the taste, stay for the experience!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 20.0, 'description': 'Our signature Smoked Beef Brisket is seasoned with a unique blend of spices that enhance its natural flavors, making it even more irresistible.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Savor the richer flavors in our Pulled Pork Sandwich, featuring a new spice mix that adds a delightful kick to this classic favorite.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Our BBQ Ribs are now seasoned with a special homemade rub that provides a deeper and more complex flavor profile, complemented by our signature BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 7.0, 'description': 'Our Grilled Corn on the Cob is now seasoned with a special spice blend, adding a punch of flavor to this grilled delight.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 13.0, 'description': 'Our decadent Mac & Cheese Deluxe now features a richer, creamier cheese sauce with a new blend of herbs for an even more luxurious taste, topped with a golden, crispy breadcrumb crust.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 16.0, 'description': 'Our Deep South Pecan Pie now features a more intense pecan flavor, with rich and gooey filling in a homemade flaky crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 12.0, 'description': 'Our Vegan Smoky Black Bean Chili now packs a spicier punch, perfect for those who crave a bit of heat in their comfort food.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 10.0, 'description': 'Our Bourbon Chocolate Brownie now has a more pronounced bourbon flavor, paired with the richness of dark chocolate for a truly decadent dessert.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 14.0, 'description': 'Our new seasonal platter features a colorful array of locally-sourced, grilled vegetables, served with a tangy herb-infused dipping sauce. A fresh and healthy choice!'}, {'id': 16, 'name': 'Spicy Southern Slaw', 'price': 7.0, 'description': 'Crisp cabbage and carrots tossed in a tangy, spicy dressing for a refreshing twist on the traditional coleslaw.'}, {'id': 17, 'name': 'Seasonal Berry Cobbler', 'price': 14.0, 'description': 'A delightful mix of fresh, locally-sourced berries topped with a crispy, golden cobbler crust, served warm with a scoop of vanilla ice cream.'}]
+4. Comments
+   [{'day': 9, 'name': 'Tina', 'score': 8, 'content': 'The Smoked Beef Brisket, Grilled Corn on the Cob, and Deep South Pecan Pie were all quite good, with a solid smoky flavor that I enjoy. However, the brisket and corn could use a bit more seasoning, and the pecan pie would benefit from a richer nuttiness. Overall, a satisfying meal that could be elevated with some minor tweaks.'}, {'day': 9, 'name': 'Lara', 'score': 8, 'content': 'The Smoked Beef Brisket was tender, the Grilled Corn on the Cob had a satisfying crunch, and the Deep South Pecan Pie was rich in flavor. While the dishes were good, they could benefit from a bit more seasoning to truly elevate the taste. An overall enjoyable meal but with room for improvement.'}, {'day': 9, 'name': 'Iris', 'score': 8, 'content': 'The Vegan Smoky Black Bean Chili was hearty and flavorful, reflecting my salad preference and healthy focus. The spices were balanced, though a bit more heat could elevate it further. Overall, a delicious and satisfying meal with friendly service. Still a step ahead of American Gourmet Bistro in my book.'}, {'day': 9, 'name': 'Dexter', 'score': 8, 'content': 'The Smoked Beef Brisket, Mac & Cheese Deluxe, and Deep South Pecan Pie all delivered satisfying flavors. Each dish was well-prepared, though I expected a more robust smokiness and nuttiness. Service was commendable. A notch up in seasoning could elevate the experience even further.'}, {'day': 9, 'name': 'Amelia', 'score': 8, 'content': "The Smoked Beef Brisket had a satisfying smoky essence, and the Mac & Cheese Deluxe was the epitome of comfort food. The Deep South Pecan Pie rounded off the meal nicely, although I'd prefer a bit more pecan flavor. An overall hearty and enjoyable meal, but with room for a touch more seasoning."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "I'm selecting Stars & Stripes BBQ for their higher customer score and my preference for hearty dishes. The Smoked Beef Brisket and Mac & Cheese Deluxe have been consistently praised for their rich flavors."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese Deluxe: 0.81
+Deep South Pecan Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "score": 8,
+    "comment": "The Smoked Beef Brisket and Mac & Cheese Deluxe were both rich in flavor, though I've had slightly better at previous visits. The Deep South Pecan Pie was enjoyable but could use a bit more pecan presence. Overall, a very satisfying meal with room for a touch more finesse."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Discover the fresh side of American cuisine at American Fresh Feast! Our revamped menu focuses on health and flavor with dishes like California Avocado Toast and Alaskan Wild Salmon Grill, crafted from the freshest local ingredients. Indulge in wholesome goodness and vibrant tastes today!
+3. Menu 
+   [{'id': 15, 'name': 'Grilled Veggie & Quinoa Salad', 'price': 13.0, 'description': 'A nutritious mix of grilled seasonal veggies and quinoa, drizzled with our light lemon-herb vinaigrette.'}, {'id': 17, 'name': 'California Avocado Toast', 'price': 12.0, 'description': 'Our California Avocado Toast features locally sourced avocados, perfectly ripe and spread over freshly baked whole grain bread, topped with cherry tomatoes, radish slices, and a sprinkle of feta cheese.'}, {'id': 18, 'name': 'Oregon Berry & Kale Salad', 'price': 14.0, 'description': 'A vibrant blend of Oregon-sourced kale and mixed berries, tossed with toasted almonds, quinoa, and a light acai-berry vinaigrette.'}, {'id': 19, 'name': 'Alaskan Wild Salmon Grill', 'price': 20.0, 'description': 'Grilled to perfection, our Alaskan Wild Salmon is served with a side of steamed asparagus and a dill-lemon yogurt sauce.'}, {'id': 20, 'name': 'Rocky Mountain Nut & Fruit Mix', 'price': 8.0, 'description': 'A healthful snack option featuring an assortment of nuts and dried fruits sourced from the Rocky Mountains, perfect for a quick energy boost.'}, {'id': 21, 'name': 'Colorado Honey-Glazed Chicken', 'price': 18.0, 'description': 'Succulent chicken breast glazed with Colorado wildflower honey, served with a sweet potato mash and a side of grilled zucchini.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.802919708029197
+2. Advertisement
+   Experience the unforgettable at Stars & Stripes BBQ! Our famous Mac & Cheese Deluxe just got an upgrade with premium aged cheeses, and our Deep South Pecan Pie is now bursting with buttery, bourbon-infused pecans. Plus, don't miss our spicier Vegan Smoky Black Bean Chili and the new Fiery Buffalo Chicken Wrap for the brave at heart. Join us for bold flavors that set us apart!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 20.0, 'description': 'Our signature Smoked Beef Brisket is seasoned with a unique blend of spices that enhance its natural flavors, making it even more irresistible.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Savor the richer flavors in our Pulled Pork Sandwich, featuring a new spice mix that adds a delightful kick to this classic favorite.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Our BBQ Ribs are now seasoned with a special homemade rub that provides a deeper and more complex flavor profile, complemented by our signature BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 7.0, 'description': 'Our Grilled Corn on the Cob is now seasoned with a special spice blend, adding a punch of flavor to this grilled delight.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 15.0, 'description': 'Our Mac & Cheese Deluxe is now even more indulgent with a blend of premium aged cheeses for an unrivaled creamy taste, finished with a crunchy herbed breadcrumb topping.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 18.0, 'description': 'Our Deep South Pecan Pie is richer than ever, filled with buttery caramelized pecans and a hint of bourbon, all in our signature flaky crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 14.0, 'description': 'Our Vegan Smoky Black Bean Chili has been revamped with a bold blend of spices for a more dynamic and satisfying heat.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 10.0, 'description': 'Our Bourbon Chocolate Brownie now has a more pronounced bourbon flavor, paired with the richness of dark chocolate for a truly decadent dessert.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 16.0, 'description': 'Our Seasonal Grilled Veggie Platter now comes with an exotic spice mix seasoning, elevating the natural flavors of the garden-fresh vegetables.'}, {'id': 17, 'name': 'Seasonal Berry Cobbler', 'price': 14.0, 'description': 'A delightful mix of fresh, locally-sourced berries topped with a crispy, golden cobbler crust, served warm with a scoop of vanilla ice cream.'}, {'id': 18, 'name': 'Fiery Buffalo Chicken Wrap', 'price': 14.0, 'description': 'A spicy delight, our Fiery Buffalo Chicken Wrap is packed with crispy chicken tossed in our signature hot sauce, wrapped with fresh greens and creamy blue cheese dressing.'}]
+4. Comments
+   [{'day': 10, 'name': 'Xavier', 'score': 8, 'content': 'The Smoked Beef Brisket and BBQ Ribs were delightful with their smoky taste. The Mac & Cheese Deluxe offered comforting richness, though I craved a slightly bolder flavor. The Deep South Pecan Pie was enjoyable, yet I anticipated a more pronounced pecan essence. Overall, a hearty meal with room for flavor enhancement.'}, {'day': 10, 'name': 'Tina', 'score': 8, 'content': "The Smoked Beef Brisket, Grilled Corn on the Cob, and Deep South Pecan Pie were delectable with a solid smoky essence. Slight seasoning enhancement could perfect the dishes. Consistently superior to American Gourmet Bistro's recent offerings."}, {'day': 10, 'name': 'Quincy', 'score': 8, 'content': 'The Grilled Corn on the Cob and the Seasonal Grilled Veggie Platter were fresh and flavorful, aligning with my low-calorie needs. The Vegan Smoky Black Bean Chili was hearty, yet could benefit from a bit more spice. An enjoyable meal overall, though a touch more seasoning could enhance the dishes.'}, {'day': 10, 'name': 'Paula', 'score': 8, 'content': "The Smoked Beef Brisket was tender with a pleasing smoky taste, and the Mac & Cheese Deluxe was satisfyingly creamy. However, the Deep South Pecan Pie could have had a stronger pecan flavor. Overall, a delightful meal but there's room for a little more seasoning in the dishes."}, {'day': 10, 'name': 'Jake', 'score': 7, 'content': "The Vegan Smoky Black Bean Chili had a robust flavor, meeting my low-sodium needs. However, it lacked a bit in depth and excitement. A touch more spice could enhance it. It's healthier than what I've had before but could be more thrilling in taste."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Stars & Stripes BBQ has a higher customer score and favorable comments on their flavors. The chosen dishes satisfy my preference for hearty meals with room for a bit more pecan flavor."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.81
+Mac & Cheese Deluxe: 0.81
+Deep South Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was superbly smoky and tender, the Mac & Cheese Deluxe rich and comforting, and the Deep South Pecan Pie had a delightful sweetness to it."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Embark on a culinary journey with American Fresh Feast's new signature dishes! Delight in our health-conscious, flavor-packed menu featuring Grilled Veggie & Super Greens Salad, Avocado & Heirloom Tomato Toast, and Herb-Crusted Wild Salmon. Experience the freshest local produce and vibrant dishes crafted for the discerning palate. Join us for a dining experience that nourishes body and soul!
+3. Menu 
+   [{'id': 15, 'name': 'Grilled Veggie & Super Greens Salad', 'price': 14.0, 'description': 'A rejuvenating mix of grilled seasonal veggies atop a bed of super greens with a tangy lemon-herb vinaigrette.'}, {'id': 17, 'name': 'Avocado & Heirloom Tomato Toast', 'price': 13.0, 'description': 'Creamy avocado spread on artisan sourdough, topped with heirloom tomatoes, arugula, and a drizzle of balsamic reduction.'}, {'id': 18, 'name': 'Wild Berry & Baby Spinach Salad', 'price': 15.0, 'description': 'A medley of wild berries, tender baby spinach, crumbled goat cheese, and toasted walnuts with a raspberry vinaigrette.'}, {'id': 19, 'name': 'Herb-Crusted Wild Salmon', 'price': 22.0, 'description': 'Wild-caught salmon with a herb crust, served with roasted root vegetables and a citrus-dill sauce.'}, {'id': 20, 'name': 'High-Protein Nut & Seed Blend', 'price': 9.0, 'description': 'A carefully curated mix of high-protein nuts and seeds, combined with dried berries for a nutritious snack on the go.'}, {'id': 21, 'name': 'Honey & Lemon Roasted Chicken', 'price': 19.0, 'description': 'Tender chicken breast roasted with a glaze of local honey and fresh lemon, accompanied by a quinoa and kale pilaf.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.808219178082192
+2. Advertisement
+   Savor the bolder taste of America at Stars & Stripes BBQ! Indulge in our richer Smoked Beef Brisket and BBQ Ribs with enhanced seasoning for a deeper flavor. Our Mac & Cheese Deluxe now features a blend of premium aged cheeses. Plus, try our new Spicy Sweet Potato Fries for a sweet and spicy treat. Elevate your dining experience with our bold flavors!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 21.0, 'description': 'Our signature Smoked Beef Brisket is seasoned with a unique blend of spices that enhance its natural flavors, making it even more irresistible.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Savor the richer flavors in our Pulled Pork Sandwich, featuring a new spice mix that adds a delightful kick to this classic favorite.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Our BBQ Ribs are now seasoned with a special homemade rub that provides a deeper and more complex flavor profile, complemented by our signature BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 8.0, 'description': 'Our Grilled Corn on the Cob is now seasoned with a special spice blend, adding a punch of flavor to this grilled delight.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 16.0, 'description': 'Our Mac & Cheese Deluxe is now even more indulgent with a blend of premium aged cheeses for an unrivaled creamy taste, finished with a crunchy herbed breadcrumb topping.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 18.0, 'description': 'Our Deep South Pecan Pie is richer than ever, filled with buttery caramelized pecans and a hint of bourbon, all in our signature flaky crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 14.0, 'description': 'Our Vegan Smoky Black Bean Chili has been revamped with a bold blend of spices for a more dynamic and satisfying heat.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 10.0, 'description': 'Our Bourbon Chocolate Brownie now has a more pronounced bourbon flavor, paired with the richness of dark chocolate for a truly decadent dessert.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 16.0, 'description': 'Our Seasonal Grilled Veggie Platter now comes with an exotic spice mix seasoning, elevating the natural flavors of the garden-fresh vegetables.'}, {'id': 17, 'name': 'Seasonal Berry Cobbler', 'price': 14.0, 'description': 'A delightful mix of fresh, locally-sourced berries topped with a crispy, golden cobbler crust, served warm with a scoop of vanilla ice cream.'}, {'id': 19, 'name': 'Spicy Sweet Potato Fries', 'price': 9.0, 'description': 'Crispy sweet potato fries with a kick, seasoned with our secret blend of spices for that perfect balance of sweet and spicy.'}]
+4. Comments
+   [{'day': 11, 'name': 'Yara', 'score': 8, 'content': 'The Vegan Smoky Black Bean Chili, Grilled Corn on the Cob, and Seasonal Grilled Veggie Platter were all flavorful and satisfying. As a vegan, I appreciate the variety and the spices used, although a bit more heat in the chili would be welcome. Service was attentive, making it a pleasant dining experience overall.'}, {'day': 11, 'name': 'Ruby', 'score': 8, 'content': "The Smoked Beef Brisket, Mac & Cheese Deluxe, and Deep South Pecan Pie all offered a satisfying depth of flavor, with scores reflecting their high quality. However, there's room for improvement in the pecan pie's nuttiness. Overall, a commendable dining experience with a few minor adjustments needed for perfection."}, {'day': 11, 'name': 'Hugo', 'score': 8, 'content': 'The Smoked Beef Brisket delivered a robust smokiness, though a pinch more seasoning could elevate it further. The Grilled Corn on the Cob was a flavorful accompaniment, yet could benefit from additional spices. The Deep South Pecan Pie was indulgent, but a stronger pecan profile would enhance the dessert. Overall, a very satisfying meal with minor room for improvement.'}, {'day': 11, 'name': 'Felix', 'score': 8, 'content': "The Smoked Beef Brisket, Mac & Cheese Deluxe, and Deep South Pecan Pie offered a homey and satisfying taste, but lacked the depth expected from the advertised flavors. A more pronounced seasoning could elevate the dishes. Still, it's a better experience compared to American Gourmet Bistro's recent reviews."}, {'day': 11, 'name': 'Tara', 'score': 8, 'content': 'The Smoked Beef Brisket, Mac & Cheese Deluxe, and Bourbon Chocolate Brownie all offered a delightful smoky and rich taste, aligning with my preference for bold flavors. However, to reach perfection, an elevated spice level could enhance the overall experience. It surpasses American Gourmet Bistro in adventure and taste.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Stars & Stripes BBQ has a higher customer score and comments suggest a more satisfying experience with the type of rich, hearty flavors I enjoy."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.83
+Mac & Cheese Deluxe: 0.83
+Deep South Pecan Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was exceptionally tender and flavorful. The Mac & Cheese Deluxe was perfectly creamy and indulgent. The Deep South Pecan Pie was delicious, with just the right amount of sweetness."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Discover bold flavors at American Fusion Flare! Indulge in our Smokey BBQ Fusion Burger, Twisted Mac & Cheese, Crispy Skin Maple Duck, and our special Bourbon Peach Cobbler. Each dish is a twist on an American classic, made with high-quality ingredients. Visit us for a unique dining experience that fuses tradition with innovation.
+3. Menu 
+   [{'id': 19, 'name': 'Herb-Crusted Wild Salmon', 'price': 22.0, 'description': 'Wild-caught salmon with a herb crust, served with roasted root vegetables and a citrus-dill sauce.'}, {'id': 21, 'name': 'Honey & Lemon Roasted Chicken', 'price': 19.0, 'description': 'Tender chicken breast roasted with a glaze of local honey and fresh lemon, accompanied by a quinoa and kale pilaf.'}, {'id': 22, 'name': 'Smokey BBQ Fusion Burger', 'price': 18.0, 'description': 'A juicy patty infused with a blend of spices, topped with caramelized onions, cheddar, and our smokey BBQ sauce, all nestled between a toasted brioche bun.'}, {'id': 23, 'name': 'Twisted Mac & Cheese', 'price': 16.0, 'description': 'Al dente macaroni in a creamy, three-cheese sauce, with a crispy herbed breadcrumb topping and a drizzle of truffle oil.'}, {'id': 24, 'name': 'Crispy Skin Maple Duck', 'price': 24.0, 'description': 'Perfectly roasted duck with crispy skin, glazed in a rich maple syrup reduction, served with a side of spiced sweet potato mash.'}, {'id': 25, 'name': 'Bourbon Peach Cobbler', 'price': 14.0, 'description': 'Warm, spiced peaches with a splash of bourbon, tucked under a golden, buttery cobbler crust. Served with vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.79375
+2. Advertisement
+   Come taste the classics perfected at Stars & Stripes BBQ! Our Smoked Beef Brisket and Mac & Cheese are now bursting with deeper flavors. Enjoy the enhanced richness of our Deep South Pecan Pie, and don't miss our new Classic American Cheeseburger. Home-style American cooking just got better!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 23.0, 'description': 'Our signature Smoked Beef Brisket is seasoned with a unique blend of spices that enhance its natural flavors, making it even more irresistible.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Savor the richer flavors in our Pulled Pork Sandwich, featuring a new spice mix that adds a delightful kick to this classic favorite.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Our BBQ Ribs are now seasoned with a special homemade rub that provides a deeper and more complex flavor profile, complemented by our signature BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 8.0, 'description': 'Our Grilled Corn on the Cob is now seasoned with a special spice blend, adding a punch of flavor to this grilled delight.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 18.0, 'description': 'Our Mac & Cheese Deluxe is now even more indulgent with a blend of premium aged cheeses for an unrivaled creamy taste, finished with a crunchy herbed breadcrumb topping.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 20.0, 'description': 'Our Deep South Pecan Pie is richer than ever, filled with buttery caramelized pecans and a hint of bourbon, all in our signature flaky crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 16.0, 'description': 'Our Vegan Smoky Black Bean Chili has been revamped with a bold blend of spices for a more dynamic and satisfying heat.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 12.0, 'description': 'Our Bourbon Chocolate Brownie now has a more pronounced bourbon flavor, paired with the richness of dark chocolate for a truly decadent dessert.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 16.0, 'description': 'Our Seasonal Grilled Veggie Platter now comes with an exotic spice mix seasoning, elevating the natural flavors of the garden-fresh vegetables.'}, {'id': 20, 'name': 'Classic American Cheeseburger', 'price': 15.0, 'description': 'A juicy beef patty with melted cheese, fresh lettuce, tomato, and onions, served with a side of fries.'}]
+4. Comments
+   [{'day': 12, 'name': 'Xavier', 'score': 8, 'content': 'The smoky flavors of the brisket and ribs resonated well with my Caribbean palate, though the seasoning could be bolder. The Mac & Cheese Deluxe was comforting but lacked a wow factor. The Pecan Pie was good, yet the pecan essence could be stronger. Overall, hearty but with room for flavor enhancement.'}, {'day': 12, 'name': 'Paula', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe both had a comforting, homey taste with a good balance of smokiness and creaminess, though I expected a bit more depth of flavor. The Deep South Pecan Pie was enjoyable but could have been more flavorful. Overall a solid meal.'}, {'day': 12, 'name': 'Jake', 'score': 7, 'content': "The Vegan Smoky Black Bean Chili was flavorful with the right amount of smokiness, but it could use a bit more spice to match my taste for bold flavors. It's a good low-sodium option, yet I'd like to see more variety in seasoning for a perfect score."}, {'day': 12, 'name': 'Felix', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe were hearty with a home-style taste, though they could use a bolder seasoning. The Deep South Pecan Pie was enjoyable but needs a stronger pecan flavor. Overall, a solid meal with room for flavor enhancement.'}, {'day': 12, 'name': 'Emma', 'score': 8, 'content': "The Vegan Smoky Black Bean Chili and Seasonal Grilled Veggie Platter were both hearty and flavorful, aligning with my organic preferences. However, a touch more spice could enhance the chili. It's a step above American Gourmet Bistro's recent offerings, which seemed to lack in flavor."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "I prefer Stars & Stripes BBQ for its higher customer score and the dishes mentioned align with my preference for rich, hearty meals. The consistent praise for flavor is appealing."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.84
+Mac & Cheese Deluxe: 0.83
+Deep South Pecan Pie: 0.83
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was delightfully smoky and satisfyingly tender. The Mac & Cheese Deluxe provided a comforting creaminess, and the Deep South Pecan Pie rounded off the meal with a lovely, sweet finish."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Step into American Comfort Diner for heartwarming classics! Enjoy our Homestyle Beef Meatloaf, Country Fried Chicken, and Classic Cheeseburger. Savor the nostalgia with BBQ Pulled Pork Sandwiches and our delicious Apple Pie a la Mode. Each dish crafted to perfection with quality ingredients. Join us for an authentic American dining experience!
+3. Menu 
+   [{'id': 22, 'name': 'Smokehouse BBQ Burger', 'price': 15.0, 'description': 'A juicy patty topped with smoked cheddar, crispy onion rings, and our signature BBQ sauce, sandwiched in a toasted brioche bun.'}, {'id': 26, 'name': 'Homestyle Beef Meatloaf', 'price': 17.0, 'description': 'Classic meatloaf with a rich tomato glaze, served with buttery mashed potatoes and seasonal vegetables.'}, {'id': 27, 'name': 'Country Fried Chicken', 'price': 16.0, 'description': 'Crispy, golden-brown fried chicken served with homemade gravy, corn on the cob, and creamy coleslaw.'}, {'id': 28, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, onions, and pickles, served on a toasted sesame seed bun with fries.'}, {'id': 29, 'name': 'BBQ Pulled Pork Sandwich', 'price': 15.0, 'description': 'Slow-cooked pulled pork smothered in BBQ sauce, topped with coleslaw on a soft brioche bun, served with sweet potato fries.'}, {'id': 30, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Traditional apple pie with a flaky crust, filled with cinnamon-spiced apples, served warm with vanilla ice cream.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.7894736842105265
+2. Advertisement
+   Discover bold flavors at Stars & Stripes BBQ! Experience our newly enhanced Smoked Beef Brisket with a richer spice blend, indulge in our creamier Mac & Cheese Deluxe, and savor the deeper bourbon essence in our Pecan Pie. Fresh vegan options now pack a punch. Your taste adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 25.0, 'description': 'Our signature Smoked Beef Brisket is seasoned with a unique blend of spices that enhance its natural flavors, making it even more irresistible.'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 12.0, 'description': 'Savor the richer flavors in our Pulled Pork Sandwich, featuring a new spice mix that adds a delightful kick to this classic favorite.'}, {'id': 3, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Our BBQ Ribs are now seasoned with a special homemade rub that provides a deeper and more complex flavor profile, complemented by our signature BBQ sauce.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 8.0, 'description': 'Our Grilled Corn on the Cob is now seasoned with a special spice blend, adding a punch of flavor to this grilled delight.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 20.0, 'description': 'Our Mac & Cheese Deluxe is now even more indulgent with a blend of premium aged cheeses for an unrivaled creamy taste, finished with a crunchy herbed breadcrumb topping.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 22.0, 'description': 'Our Deep South Pecan Pie is richer than ever, filled with buttery caramelized pecans and a hint of bourbon, all in our signature flaky crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 16.0, 'description': 'Our Vegan Smoky Black Bean Chili has been revamped with a bold blend of spices for a more dynamic and satisfying heat.'}, {'id': 13, 'name': 'Bourbon Chocolate Brownie', 'price': 12.0, 'description': 'Our Bourbon Chocolate Brownie now has a more pronounced bourbon flavor, paired with the richness of dark chocolate for a truly decadent dessert.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 16.0, 'description': 'Our Seasonal Grilled Veggie Platter now comes with an exotic spice mix seasoning, elevating the natural flavors of the garden-fresh vegetables.'}]
+4. Comments
+   [{'day': 13, 'name': 'Ulysses', 'score': 8, 'content': 'The Smoked Beef Brisket was tender with a satisfying smoky flavor, and the Mac & Cheese Deluxe was comforting, though both could benefit from more depth. The Bourbon Chocolate Brownie was the highlight with its rich flavor. Overall a delightful meal, but room for bolder seasoning.'}, {'day': 13, 'name': 'Ruby', 'score': 8, 'content': 'The Smoked Beef Brisket and Mac & Cheese Deluxe were satisfying, yet could benefit from a bit more seasoning depth. The Deep South Pecan Pie was good, but a stronger pecan flavor would enhance it further. Overall, a solid meal, but still some room for improvement.'}, {'day': 13, 'name': 'Iris', 'score': 7, 'content': "The Vegan Smoky Black Bean Chili was good, with a score of 0.83 reflecting its quality. It had a robust flavor that catered to my salad preference, but could benefit from a bit more spice. Service was commendable, and the experience overall was better than what I've heard about American Gourmet Bistro."}, {'day': 13, 'name': 'Hugo', 'score': 8, 'content': 'The Smoked Beef Brisket and Grilled Corn on the Cob were both near perfection in smokiness, though a hint more spice would enhance them. The Deep South Pecan Pie was rich but could benefit from a stronger pecan presence. Overall, a delightful meal that could use subtle improvements.'}, {'day': 13, 'name': 'Felix', 'score': 8, 'content': "The Smoked Beef Brisket was tender with a satisfactory smoky essence, though a bolder spice blend could enhance it. The Mac & Cheese Deluxe was creamy but yearned for a sharper cheese profile. The Deep South Pecan Pie's flavor was good, yet a stronger pecan touch would improve it."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Stars & Stripes BBQ has a higher customer score, and the comments suggest their dishes, particularly the ones I selected, have rich and satisfying flavors."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Smoked Beef Brisket: 0.84
+Mac & Cheese Deluxe: 0.83
+Deep South Pecan Pie: 0.83
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "score": 8,
+    "comment": "The Smoked Beef Brisket and Mac & Cheese Deluxe were both rich in flavor, though I've had slightly better at previous visits. The Deep South Pecan Pie was enjoyable but could use a bit more pecan presence. Overall, a very satisfying meal with room for a touch more finesse."
+}
+
+[System->Leo]: The Restaurant " American Gourmet Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Discover the new taste of tradition at American Comfort Diner! Indulge in our elevated Smokehouse BBQ Burger, rich Homestyle Beef Meatloaf, and our new decadent desserts: Chocolate Cake and Southern Pecan Pie. Perfect for family dinners or a cozy night out. Come taste the difference quality and care make!
+3. Menu 
+   [{'id': 22, 'name': 'Smokehouse BBQ Burger', 'price': 18.0, 'description': 'A juicy patty topped with smoked cheddar, crispy onion rings, and our signature BBQ sauce, sandwiched in a toasted brioche bun.'}, {'id': 26, 'name': 'Homestyle Beef Meatloaf', 'price': 20.0, 'description': 'Classic meatloaf with a rich tomato glaze, served with buttery mashed potatoes and seasonal vegetables.'}, {'id': 27, 'name': 'Country Fried Chicken', 'price': 18.0, 'description': 'Crispy, golden-brown fried chicken served with homemade gravy, corn on the cob, and creamy coleslaw.'}, {'id': 28, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, onions, and pickles, served on a toasted sesame seed bun with fries.'}, {'id': 29, 'name': 'BBQ Pulled Pork Sandwich', 'price': 18.0, 'description': 'Slow-cooked pulled pork smothered in BBQ sauce, topped with coleslaw on a soft brioche bun, served with sweet potato fries.'}, {'id': 30, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Traditional apple pie with a flaky crust, filled with cinnamon-spiced apples, served warm with vanilla ice cream.'}, {'id': 31, 'name': 'Decadent Chocolate Cake', 'price': 10.0, 'description': 'Rich and moist chocolate cake with a velvety chocolate ganache, served with fresh berries and whipped cream.'}, {'id': 32, 'name': 'Southern Pecan Pie', 'price': 10.0, 'description': 'A classic Southern delight, our Pecan Pie is filled with toasted pecans in a sweet and sticky filling, all baked in a flaky crust.'}]
+4. Comments
+   [{'day': 6, 'name': 'Peter', 'score': 5, 'content': "Despite previous enjoyment, the Gourmet Apple Pie fell short with a fair score of 0.56. The pie's flavor was not as rich as I remembered, and compared to Stars & Stripes BBQ's offerings, it lacked a memorable taste. Service was adequate, but the overall experience did not live up to expectations."}, {'day': 6, 'name': 'Maggie', 'score': 5, 'content': "The New York Luxe Cheesecake was a letdown compared to past visits. The texture wasn't as creamy, and the berry compote lacked freshness. Having enjoyed better desserts at Stars & Stripes BBQ, this experience was underwhelming."}, {'day': 5, 'name': 'Xena', 'score': 6, 'content': "The Ultimate American Burger, Wild Mushroom Risotto, and New York Luxe Cheesecake were all quite average. Although the presentation was good, the flavors didn't meet my expectations for Italian cuisine. I've had more vibrant tastes at Stars & Stripes BBQ, so it was a bit disappointing."}, {'day': 4, 'name': 'Umar', 'score': 6, 'content': 'The Smoked Maple Glazed Salmon and Wild Mushroom Risotto were satisfactory, meeting my dietary needs but lacking the exceptional flavor I expected. Considering my past experiences, the dishes here could benefit from more culinary creativity to truly satisfy a discerning palate.'}, {'day': 1, 'name': 'Wade', 'score': 6, 'content': "The burger and salad were decent but nothing exceptional. Flavors were satisfactory, and portions were ample, aligning well with my simple tastes. However, there's room for improvement in taste complexity. Might try Stars & Stripes BBQ next time for comparison."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.791443850267379
+2. Advertisement
+   Stars & Stripes BBQ is elevating American cuisine! Our signature dishes like Smoked Beef Brisket, Mac & Cheese Deluxe, and Deep South Pecan Pie now feature bolder, richer flavors with high-quality ingredients. Come taste the upgrade and savor the difference that freshly sourced, premium products make. Your palate's pleasure is our passion!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked Beef Brisket', 'price': 28.0, 'description': 'Our signature Smoked Beef Brisket is seasoned with a unique blend of spices that enhance its natural flavors, making it even more irresistible.'}, {'id': 6, 'name': 'Mac & Cheese Deluxe', 'price': 22.0, 'description': 'Our Mac & Cheese Deluxe is now even more indulgent with a blend of premium aged cheeses for an unrivaled creamy taste, finished with a crunchy herbed breadcrumb topping.'}, {'id': 8, 'name': 'Deep South Pecan Pie', 'price': 25.0, 'description': 'Our Deep South Pecan Pie is richer than ever, filled with buttery caramelized pecans and a hint of bourbon, all in our signature flaky crust.'}, {'id': 11, 'name': 'Vegan Smoky Black Bean Chili', 'price': 18.0, 'description': 'Our Vegan Smoky Black Bean Chili has been revamped with a bold blend of spices for a more dynamic and satisfying heat.'}, {'id': 15, 'name': 'Seasonal Grilled Veggie Platter', 'price': 18.0, 'description': 'Our Seasonal Grilled Veggie Platter now comes with an exotic spice mix seasoning, elevating the natural flavors of the garden-fresh vegetables.'}]
+4. Comments
+   [{'day': 14, 'name': 'Wade', 'score': 7, 'content': "The Pulled Pork Sandwich at Stars & Stripes BBQ was good with a score of 0.81, aligning with my preference for simple, hearty meals. While the taste was satisfying, there's room for a more dynamic flavor. Service was decent, making it a solid choice for my budget."}, {'day': 14, 'name': 'Ruby', 'score': 8, 'content': 'The Smoked Beef Brisket had a delightful smokiness, yet lacked a bit in spice complexity. The Mac & Cheese Deluxe was creamy and satisfying, but could use a sharper cheese blend. The Deep South Pecan Pie was rich, but more prominent pecan flavor would improve it. Overall, very good, with minor tweaks needed.'}, {'day': 14, 'name': 'Paula', 'score': 8, 'content': 'The Smoked Beef Brisket was robust, yet could use a bolder spice mix. The Mac & Cheese Deluxe was creamy and comforting, though a sharper cheese could elevate it. The Pecan Pie had a nice texture, but a more pronounced pecan flavor would make it exceptional. Overall, a satisfying experience.'}, {'day': 14, 'name': 'Oscar', 'score': 8, 'content': 'The Smoked Beef Brisket and Grilled Corn on the Cob were both very enjoyable with authentic smoky flavors. The Deep South Pecan Pie had a nice sweetness but could use a more pronounced pecan taste. Overall, a solid traditional meal, though slight enhancements would be welcome.'}, {'day': 14, 'name': 'Nora', 'score': 8, 'content': "The Smoked Beef Brisket and Grilled Corn were flavorful and well-executed, fitting my gluten-free needs. The Pecan Pie lacked a bit of the richness I prefer. While the meal was generally good, there's room to enhance the depth of flavors. It surpassed my experiences at American Gourmet Bistro."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes" : [
+        "Smoked Beef Brisket", "Mac & Cheese Deluxe", "Deep South Pecan Pie"
+    ],
+    "reason" : "Opting for Stars & Stripes BBQ due to its higher customer score and positive feedback on dishes that align with my enjoyment of rich, hearty meals, despite minor suggestions for enhancing flavors."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked Beef Brisket: 0.83
+Mac & Cheese Deluxe: 0.83
+Deep South Pecan Pie: 0.82
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Smoked Beef Brisket was succulent, the Mac & Cheese Deluxe creamy and satisfying, and the Deep South Pecan Pie had a delightful balance of sweet and nutty flavors."
+}
+

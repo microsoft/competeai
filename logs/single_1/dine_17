@@ -1,0 +1,910 @@
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the authentic taste of America right here at Classic American Diner! Our signature Smokey BBQ Ribs and Classic Cheeseburger are waiting to tantalize your taste buds. Join us for a culinary journey that celebrates the heart of American cuisine.
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs slathered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 3, 'name': 'Fried Chicken Basket', 'price': 15.0, 'description': 'Crispy fried chicken with a side of mashed potatoes and gravy.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Classic American apple pie topped with vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and shaved parmesan.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy three-cheese macaroni with a golden breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 9.0, 'description': 'Traditional New England clam chowder served with oyster crackers.'}, {'id': 10, 'name': 'Pulled Pork Sandwich', 'price': 13.0, 'description': 'Slow-cooked pulled pork with coleslaw on a toasted bun.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right here in town! Come to USA Flavor Haven and indulge in our authentic Smoked BBQ Ribs and Classic Cheeseburgers. Special offer: Mention this ad for a free dessert with any entree. Limited time only!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs slow-cooked and smoked over hickory, served with house BBQ sauce'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'Juicy beef patty with cheddar, lettuce, tomato, and our special sauce on a brioche bun'}, {'id': 3, 'name': 'Cobb Salad', 'price': 18.0, 'description': 'Fresh greens with grilled chicken, bacon, boiled eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Pulled Pork Sandwich', 'price': 15.0, 'description': 'Succulent pulled pork with slaw on a toasted bun, served with fries'}, {'id': 5, 'name': "Mac 'n' Cheese", 'price': 14.0, 'description': 'Creamy three-cheese macaroni baked to golden perfection'}, {'id': 6, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with celery and blue cheese dressing'}, {'id': 7, 'name': 'Key Lime Pie', 'price': 9.0, 'description': 'Tart and sweet key lime pie with a graham cracker crust and whipped cream'}, {'id': 8, 'name': 'Chocolate Brownie Sundae', 'price': 10.0, 'description': 'Warm chocolate brownie with vanilla ice cream and hot fudge'}, {'id': 9, 'name': 'Sweet Potato Fries', 'price': 8.0, 'description': 'Crispy sweet potato fries with a hint of cinnamon'}, {'id': 10, 'name': 'Cornbread', 'price': 5.0, 'description': 'Homemade cornbread with honey butter'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "USA Flavor Haven",
+    "dishes": [
+        "Smoked BBQ Ribs",
+        "Cobb Salad"
+    ],
+    "reason": "USA Flavor Haven offers a slightly more sophisticated menu with the inclusion of dishes like Cobb Salad, accommodating my dietary restriction with a dairy-free option."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smoked BBQ Ribs: 0.61
+Cobb Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "USA Flavor Haven",
+    "feeling": "The smoked BBQ ribs were flavorful, although not as tender as I'd hoped. The Cobb Salad was fresh and suited my dietary needs well. Overall, a satisfactory dining experience."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.571428571428571
+2. Advertisement
+   Discover the new tastes at Classic American Diner! Indulge in our improved Apple Pie a la Mode with a flakier crust and our bold Caesar Salad with a new flavorful dressing. Plus, try our new Vegan Delight Salad and Diabetic-Friendly Berry Parfait. Come savor the innovation!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs slathered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 3, 'name': 'Fried Chicken Basket', 'price': 15.0, 'description': 'Crispy fried chicken with a side of mashed potatoes and gravy.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Our new and improved apple pie with a flakier crust and richer apple filling, served warm with premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Caesar Salad', 'price': 11.0, 'description': 'Fresh romaine lettuce with a new bold and flavorful Caesar dressing, garlic croutons, and shaved parmesan, with optional anchovies.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy three-cheese macaroni with a golden breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 9.0, 'description': 'Traditional New England clam chowder served with oyster crackers.'}, {'id': 11, 'name': 'Vegan Delight Salad', 'price': 12.0, 'description': 'A vibrant mix of organic greens, cherry tomatoes, cucumbers, roasted chickpeas, and avocado, tossed in a house-made vegan dressing.'}, {'id': 12, 'name': 'Diabetic-Friendly Berry Parfait', 'price': 7.0, 'description': 'Layers of fresh berries, diabetic-friendly yogurt, and sugar-free granola, creating a delicious and health-conscious dessert option.'}]
+4. Comments
+   [{'day': 1, 'name': 'Lara', 'score': 8, 'content': "The Clam Chowder at Classic American Diner was quite good, with a generous portion and a rich, creamy taste. It didn't reach perfection, but it was satisfying. I've yet to try USA Flavor Haven, but based on this experience, I would return here for another meal."}, {'day': 1, 'name': 'Jake', 'score': 7, 'content': 'The Fried Chicken Basket was satisfyingly crispy, aligning with my love for fried food. The Caesar Salad was fresh, although I had to request less dressing due to my low-sodium diet. The Mac & Cheese was comforting, but could have been less salty. Overall, a good meal with room for improvement.'}, {'day': 1, 'name': 'Iris', 'score': 7, 'content': 'The Caesar Salad was fresh and had the right balance of dressing and parmesan, although it could have been more innovative. The service was satisfactory, and the prices were reasonable for my budget. A good experience overall, but room for improvement in terms of culinary creativity.'}, {'day': 1, 'name': 'Felix', 'score': 8, 'content': 'The Smokey BBQ Ribs were tender and flavorful, scoring high on my list. The Cheeseburger was satisfactory, though not exceptional. The Apple Pie a la Mode had a nice taste but could use more filling. Overall, a pleasant dining experience with room for dessert improvement.'}, {'day': 1, 'name': 'Dexter', 'score': 8, 'content': 'The Smokey BBQ Ribs were delicious and satisfied my taste for barbecue, scoring high on flavor. The Buffalo Wings were decent but could use a bit more spice. The Apple Pie a la Mode was good, though not exceptional. Compared to other experiences, it was a very satisfying meal.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Come try USA Flavor Haven's new Signature Pulled Pork Sandwich and Stars and Stripes Sundae! Experience unique flavors that set us apart. Plus, join our loyalty program and get a discount on your fifth visit. Your taste buds will thank you!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked BBQ Ribs', 'price': 24.0, 'description': 'Tender ribs slow-cooked and smoked over hickory, served with house BBQ sauce'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 18.0, 'description': 'Juicy beef patty with cheddar, lettuce, tomato, and our special sauce on a brioche bun'}, {'id': 3, 'name': 'Cobb Salad', 'price': 20.0, 'description': 'Fresh greens with grilled chicken, bacon, boiled eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Signature Pulled Pork Sandwich', 'price': 18.0, 'description': 'Our special slow-roasted pulled pork with a secret glaze, topped with homemade coleslaw on a toasted artisan bun, served with seasoned fries'}, {'id': 5, 'name': "Mac 'n' Cheese", 'price': 16.0, 'description': 'Creamy three-cheese macaroni baked to golden perfection'}, {'id': 6, 'name': 'Buffalo Wings', 'price': 14.0, 'description': 'Spicy buffalo wings served with celery and blue cheese dressing'}, {'id': 7, 'name': 'Zesty Key Lime Pie', 'price': 11.0, 'description': 'Our key lime pie with an extra zesty lime flavor and a delicious graham cracker crust, topped with fresh whipped cream and lime zest'}, {'id': 8, 'name': 'Chocolate Brownie Sundae', 'price': 10.0, 'description': 'Warm chocolate brownie with vanilla ice cream and hot fudge'}, {'id': 11, 'name': 'Stars and Stripes Sundae', 'price': 12.0, 'description': 'A patriotic dessert featuring layers of red velvet cake, blueberry compote, and vanilla bean ice cream, adorned with a sprinkle of stars'}]
+4. Comments
+   [{'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}, {'day': 1, 'name': 'David', 'score': 6, 'content': "The Cobb Salad was decent but could use more seasoning to enhance the flavors. Considering my dietary needs, it was a fair choice, but not exceptional. I've had better salads with more vibrant dressings elsewhere. A nice touch was the free dessert offer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Vegan Delight Salad",
+        "Diabetic-Friendly Berry Parfait"
+    ],
+    "reason": "Classic American Diner offers a Vegan Delight Salad which suits my dairy-free diet, and their Diabetic-Friendly Berry Parfait seems like a sophisticated dessert that aligns with my refined taste."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan Delight Salad: 0.81
+Diabetic-Friendly Berry Parfait: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Vegan Delight Salad was a refreshing choice, aligning well with my dairy-free requirements. The Diabetic-Friendly Berry Parfait, while health-conscious, offered a sophisticated and enjoyable end to my meal."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.653846153846154
+2. Advertisement
+   Treat your taste buds to the 'American Dream Sundae,' our newest dessert sensation! Plus, enjoy our richer Apple Pie a la Mode and even smokier BBQ Ribs. Every bite is a journey through the heart of American flavors at Classic American Diner.
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 19.0, 'description': 'Our famous ribs with a new smokier house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Our classic apple pie with a generous filling of cinnamon-spiced apples, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Caesar Salad', 'price': 11.0, 'description': 'Fresh romaine lettuce with a new bold and flavorful Caesar dressing, garlic croutons, and shaved parmesan, with optional anchovies.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy three-cheese macaroni with a golden breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 9.0, 'description': 'Traditional New England clam chowder served with oyster crackers.'}, {'id': 11, 'name': 'Vegan Delight Salad', 'price': 12.0, 'description': 'A vibrant mix of organic greens, cherry tomatoes, cucumbers, roasted chickpeas, and avocado, tossed in a house-made vegan dressing.'}, {'id': 12, 'name': 'Diabetic-Friendly Berry Parfait', 'price': 7.0, 'description': 'Layers of fresh berries, diabetic-friendly yogurt, and sugar-free granola, creating a delicious and health-conscious dessert option.'}, {'id': 13, 'name': 'American Dream Sundae', 'price': 10.0, 'description': 'A delectable trio of vanilla, strawberry, and chocolate ice cream, topped with hot fudge, whipped cream, and a cherry.'}]
+4. Comments
+   [{'day': 2, 'name': 'Ulysses', 'score': 8, 'content': 'The Smokey BBQ Ribs were quite tender, though lacking a bit in the smoky flavor I anticipated. The Caesar Salad had a nice bold dressing. The Apple Pie a la Mode was delightful, with a flaky crust, but could have had a richer apple filling. The Berry Parfait was a pleasant surprise, fresh and well-balanced.'}, {'day': 2, 'name': 'Tina', 'score': 8, 'content': "The Smokey BBQ Ribs were quite succulent and the highlight of the meal. The Caesar Salad, while fresh, lacked a certain flair. The Apple Pie a la Mode was comforting, but not extraordinary. Compared to past experiences, it was a good meal, yet there's room for elevation in flavor."}, {'day': 2, 'name': 'Steve', 'score': 8, 'content': 'The Caesar Salad was well-prepared, fitting my dietary needs, while the Diabetic-Friendly Berry Parfait was a refreshing end to the meal. Compared to my previous experiences, the dishes here continue to satisfy with their health-conscious options.'}, {'day': 2, 'name': 'Nora', 'score': 7, 'content': 'The Caesar Salad was satisfactory but lacked a creative twist. The Berry Parfait was quite refreshing, yet not exceptional. Compared to USA Flavor Haven, the dining experience here feels more conventional. I suggest enhancing the flavor profiles to meet higher expectations.'}, {'day': 2, 'name': 'Lara', 'score': 7, 'content': "The Clam Chowder at Classic American Diner was good, with a score of 0.78 aligning with my seafood preference. Although it didn't quite reach 'outstanding,' it was still a pleasurable dish. The price point is fair, but I believe there's room for flavor enhancement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover the bolder flavors at USA Flavor Haven! Indulge in our revamped Smoked BBQ Ribs and Zesty Key Lime Pie, or try our new Spicy Shrimp Tacos and American Apple Crumble. Excite your palate and enjoy a dining experience that's a cut above the rest!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked BBQ Ribs', 'price': 22.0, 'description': 'Succulent ribs smoked over hickory, with a new, bolder house BBQ sauce'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'Premium beef patty with aged cheddar, crisp lettuce, and heirloom tomato on a brioche bun, enhanced with our signature sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 18.0, 'description': 'Crisp greens with herb-marinated grilled chicken, crispy bacon, soft-boiled eggs, ripe avocado, and a more vibrant blue cheese dressing'}, {'id': 4, 'name': 'Signature Pulled Pork Sandwich', 'price': 18.0, 'description': 'Our special slow-roasted pulled pork with a secret glaze, topped with homemade coleslaw on a toasted artisan bun, served with seasoned fries'}, {'id': 5, 'name': "Mac 'n' Cheese", 'price': 14.0, 'description': "Our classic mac 'n' cheese with a richer three-cheese blend and a crispy herbed breadcrumb topping"}, {'id': 6, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Buffalo wings with a spicier sauce served with celery and a more robust blue cheese dressing'}, {'id': 7, 'name': 'Zesty Key Lime Pie', 'price': 10.0, 'description': 'Our key lime pie with a tangier lime flavor, a more buttery graham cracker crust, and topped with freshly whipped cream and lime zest'}, {'id': 8, 'name': 'Chocolate Brownie Sundae', 'price': 9.0, 'description': 'Decadent warm chocolate brownie with premium vanilla ice cream, draped in a richer hot fudge sauce'}, {'id': 12, 'name': 'Spicy Shrimp Tacos', 'price': 17.0, 'description': 'Grilled spicy shrimp in soft corn tortillas with a zesty slaw and a kick of lime, served with avocado cream'}, {'id': 13, 'name': 'American Apple Crumble', 'price': 12.0, 'description': 'Warm spiced apple filling with a crispy oat topping, served with cinnamon ice cream'}]
+4. Comments
+   [{'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}, {'day': 1, 'name': 'David', 'score': 6, 'content': "The Cobb Salad was decent but could use more seasoning to enhance the flavors. Considering my dietary needs, it was a fair choice, but not exceptional. I've had better salads with more vibrant dressings elsewhere. A nice touch was the free dessert offer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Vegan Delight Salad",
+        "Diabetic-Friendly Berry Parfait"
+    ],
+    "reason": "Classic American Diner's Vegan Delight Salad meets my dairy-free needs, while the Diabetic-Friendly Berry Parfait caters to a sophisticated palate, aligning with my gourmet preferences."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan Delight Salad: 0.81
+Diabetic-Friendly Berry Parfait: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Vegan Delight Salad was exquisitely fresh, aligning perfectly with my dairy-free needs. The Diabetic-Friendly Berry Parfait was a delightful treat that catered to my sophisticated taste without compromising my health."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.75
+2. Advertisement
+   Discover the newly refined smokiness of our Smokey BBQ Ribs and the indulgent creaminess of our four-cheese Mac & Cheese! Plus, introducing the 'Innovative Apple Delight' - a revolutionary take on apple desserts. Classic American Diner, where every dish tells a story of culinary innovation.
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 20.0, 'description': 'Our famous ribs with a new smokier house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Our classic apple pie with a generous filling of cinnamon-spiced apples, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Caesar Salad', 'price': 11.0, 'description': 'Fresh romaine lettuce with a new bold and flavorful Caesar dressing, garlic croutons, and shaved parmesan, with optional anchovies.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 9.0, 'description': 'Traditional New England clam chowder served with oyster crackers.'}, {'id': 12, 'name': 'Diabetic-Friendly Berry Parfait', 'price': 7.0, 'description': 'Layers of fresh berries, diabetic-friendly yogurt, and sugar-free granola, creating a delicious and health-conscious dessert option.'}, {'id': 13, 'name': 'American Dream Sundae', 'price': 10.0, 'description': 'A delectable trio of vanilla, strawberry, and chocolate ice cream, topped with hot fudge, whipped cream, and a cherry.'}, {'id': 14, 'name': 'Innovative Apple Delight', 'price': 11.0, 'description': 'Reinvented apple dessert with spiced apple compote, a flaky puff pastry, and a side of caramel sauce.'}]
+4. Comments
+   [{'day': 3, 'name': 'Xavier', 'score': 8, 'content': 'The Smokey BBQ Ribs were robust in flavor, though a tad less smoky than expected. The Caesar Salad had a satisfying crunch and zest. The Apple Pie a la Mode was a harmonious blend of sweetness and texture. Overall, a delightful meal that could be enhanced with a bit more smokiness in the ribs.'}, {'day': 3, 'name': 'Ruby', 'score': 8, 'content': "The Smokey BBQ Ribs were tender with a satisfying smokiness, though I've tasted more nuanced flavors elsewhere. The Apple Pie a la Mode was comforting, but could benefit from a spicier filling. The American Dream Sundae was a delightful conclusion, albeit a tad conventional in flavor."}, {'day': 3, 'name': 'Felix', 'score': 8, 'content': "The Smokey BBQ Ribs were delicious, with a satisfying smoky flavor, deserving an 8.5. The Apple Pie a la Mode, while enjoyable, had room for improvement in apple richness. Compared to previous meals, this was a gratifying experience, though there's potential for a more exceptional dessert."}, {'day': 3, 'name': 'Brian', 'score': 8, 'content': 'The Buffalo Wings and Mac & Cheese were satisfying with their classic flavors, though they could be more innovative. The Apple Pie a la Mode was a standout with its perfect sweetness. Compared to previous experiences, the meal was good but still has room for a unique twist.'}, {'day': 3, 'name': 'Xena', 'score': 8, 'content': 'The Smokey BBQ Ribs were succulent with a satisfying smoky flavor, and the Apple Pie a la Mode had a delightful crust, though the apple filling could be richer. Overall, a great meal with room for subtle improvements in depth of flavor.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Savor the new USA Flavor Haven experience with improved prices and explosive tastes! Enjoy our top-rated Smoked BBQ Ribs, now more affordable, and don't miss the Garlic Butter Steak Bites – a sensational new addition. Plus, sweeten the deal with our delectable American Apple Crumble for just $10!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked BBQ Ribs', 'price': 20.0, 'description': 'Succulent ribs smoked over hickory, with a new, bolder house BBQ sauce'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'Premium beef patty with aged cheddar, crisp lettuce, and heirloom tomato on a brioche bun, enhanced with our signature sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 16.0, 'description': 'Crisp greens with herb-marinated grilled chicken, crispy bacon, soft-boiled eggs, ripe avocado, and a more vibrant blue cheese dressing'}, {'id': 5, 'name': "Mac 'n' Cheese", 'price': 12.0, 'description': "Our classic mac 'n' cheese with a richer three-cheese blend and a crispy herbed breadcrumb topping"}, {'id': 6, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Buffalo wings with a spicier sauce served with celery and a more robust blue cheese dressing'}, {'id': 7, 'name': 'Zesty Key Lime Pie', 'price': 9.0, 'description': 'Our key lime pie with a tangier lime flavor, a more buttery graham cracker crust, and topped with freshly whipped cream and lime zest'}, {'id': 8, 'name': 'Chocolate Brownie Sundae', 'price': 8.0, 'description': 'Decadent warm chocolate brownie with premium vanilla ice cream, draped in a richer hot fudge sauce'}, {'id': 12, 'name': 'Spicy Shrimp Tacos', 'price': 15.0, 'description': 'Grilled spicy shrimp in soft corn tortillas with a zesty slaw and a kick of lime, served with avocado cream'}, {'id': 13, 'name': 'American Apple Crumble', 'price': 10.0, 'description': 'Warm spiced apple filling with a crispy oat topping, served with cinnamon ice cream'}, {'id': 14, 'name': 'Garlic Butter Steak Bites', 'price': 20.0, 'description': 'Juicy steak bites sautéed in garlic butter and herbs, served with a side of mashed potatoes.'}]
+4. Comments
+   [{'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}, {'day': 1, 'name': 'David', 'score': 6, 'content': "The Cobb Salad was decent but could use more seasoning to enhance the flavors. Considering my dietary needs, it was a fair choice, but not exceptional. I've had better salads with more vibrant dressings elsewhere. A nice touch was the free dessert offer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Diabetic-Friendly Berry Parfait"
+    ],
+    "reason": "Given my dietary restrictions, the Diabetic-Friendly Berry Parfait from Classic American Diner is the perfect choice, appealing to my sophisticated tastes without any dairy content."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Diabetic-Friendly Berry Parfait: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "score": 8,
+    "comment": "The Diabetic-Friendly Berry Parfait was a delightful blend of flavors that catered well to my dietary needs. While I enjoyed the sophisticated touch, I found it slightly lacking in innovation compared to previous gourmet experiences."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.735849056603773
+2. Advertisement
+   Classic American Diner invites you to savor our updated menu! Enjoy deeper, richer flavors with our new Clam Chowder and spicier Apple Delight. Delight in our vegan and diabetic-friendly options, including the new Savory Vegan Delight and Signature Berry Bliss Parfait. Perfect service, perfect meal—every time!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 20.0, 'description': 'Our famous ribs with a new smokier house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Our classic apple pie with a generous filling of cinnamon-spiced apples, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Caesar Salad', 'price': 12.0, 'description': 'Fresh romaine with a new house-made vegan Caesar dressing, garlic croutons, and a sprinkle of nutritional yeast for a cheesy flavor.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 11.0, 'description': 'Richer New England clam chowder, now with more clams and a deeper flavor profile, served with oyster crackers.'}, {'id': 12, 'name': 'Signature Berry Bliss Parfait', 'price': 9.0, 'description': 'An exquisite sugar-free parfait with layers of fresh berries, diabetic-friendly yogurt, and almond-crunch granola for a memorable dessert experience.'}, {'id': 14, 'name': 'Innovative Apple Delight', 'price': 13.0, 'description': 'Enhanced apple dessert with a more spiced apple compote, served with a flaky puff pastry and a side of rich caramel sauce.'}, {'id': 15, 'name': 'Savory Vegan Delight', 'price': 15.0, 'description': 'A hearty plant-based dish featuring a medley of seasoned vegetables, protein-rich tofu, and quinoa, garnished with a flavorful vegan sauce.'}]
+4. Comments
+   [{'day': 4, 'name': 'Tina', 'score': 8, 'content': 'The Smokey BBQ Ribs were quite flavorsome, though I expected a bit more smokiness based on the description. The Caesar Salad was fresh but lacked a unique twist. The Innovative Apple Delight was a pleasant surprise, inventive and tasty, but could use a touch more caramel sauce for perfection.'}, {'day': 4, 'name': 'Chloe', 'score': 8, 'content': "The Caesar Salad was crisp and well-dressed, satisfying yet light on the palate. The Diabetic-Friendly Berry Parfait was a sweet ending without the sugar spike. Both dishes were good, but I'm still searching for that standout flavor to elevate the experience further."}, {'day': 4, 'name': 'Zach', 'score': 8, 'content': "The Caesar Salad was a delightful gluten-free option. The Innovative Apple Delight was a high point, offering a unique twist that catered to my connoisseur taste. While the dishes were good, they still fell short of the exceptional French cuisine I've savored before."}, {'day': 4, 'name': 'Yasmine', 'score': 6, 'content': 'The Caesar Salad was modified to be vegan, which I appreciate, but it resulted in a dish that was quite basic with a lack of depth in flavor. A dedicated vegan dressing would be a welcome improvement. Compared to previous meals, this experience was underwhelming.'}, {'day': 4, 'name': 'Vicky', 'score': 8, 'content': 'The Smokey BBQ Ribs were quite satisfying, with a good balance of smokiness. The Mac & Cheese was comforting, though it could use a bit more flavor depth. The Apple Pie a la Mode was delightful, but the apple filling could be richer. Overall, a solid meal that met my expectations for comfort food.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.2
+2. Advertisement
+   Discover USA Flavor Haven's new health-conscious, innovative dishes! Indulge in our Vegan Jackfruit BBQ Sandwich, savor our Gluten-Free Mac 'n' Cheese, and satisfy your sweet tooth with our Diabetic-Friendly Blueberry Muffin. Perfect for all dietary needs without sacrificing flavor!
+3. Menu 
+   [{'id': 1, 'name': 'Smoked BBQ Ribs', 'price': 20.0, 'description': 'Succulent ribs smoked over hickory, with a new, bolder house BBQ sauce'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'Premium beef patty with aged cheddar, crisp lettuce, and heirloom tomato on a brioche bun, enhanced with our signature sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 16.0, 'description': 'Crisp greens with herb-marinated grilled chicken, crispy bacon, soft-boiled eggs, ripe avocado, and a more vibrant blue cheese dressing'}, {'id': 5, 'name': "Gluten-Free Mac 'n' Cheese", 'price': 13.0, 'description': "Our classic mac 'n' cheese with a gluten-free pasta and a creamy, rich three-cheese blend."}, {'id': 7, 'name': 'Vegan Key Lime Pie', 'price': 10.0, 'description': 'A tangy and sweet vegan key lime pie with a gluten-free graham cracker crust, topped with coconut whipped cream.'}, {'id': 12, 'name': 'Low-Carb Spicy Shrimp Lettuce Wraps', 'price': 16.0, 'description': 'Grilled spicy shrimp served in crisp lettuce wraps with a zesty slaw and a kick of lime, accompanied by avocado cream.'}, {'id': 13, 'name': 'American Apple Crumble', 'price': 10.0, 'description': 'Warm spiced apple filling with a crispy oat topping, served with cinnamon ice cream'}, {'id': 14, 'name': 'Garlic Butter Steak Bites', 'price': 20.0, 'description': 'Juicy steak bites sautéed in garlic butter and herbs, served with a side of mashed potatoes.'}, {'id': 15, 'name': 'Vegan Jackfruit BBQ Sandwich', 'price': 15.0, 'description': 'Tender jackfruit smothered in a homemade BBQ sauce, topped with coleslaw on a gluten-free bun.'}, {'id': 16, 'name': 'Diabetic-Friendly Blueberry Muffin', 'price': 6.0, 'description': 'Sugar-free muffins bursting with fresh blueberries, perfect for a sweet treat without the guilt.'}]
+4. Comments
+   [{'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}, {'day': 1, 'name': 'David', 'score': 6, 'content': "The Cobb Salad was decent but could use more seasoning to enhance the flavors. Considering my dietary needs, it was a fair choice, but not exceptional. I've had better salads with more vibrant dressings elsewhere. A nice touch was the free dessert offer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Savory Vegan Delight",
+        "Signature Berry Bliss Parfait"
+    ],
+    "reason": "The Savory Vegan Delight and Signature Berry Bliss Parfait at Classic American Diner cater to my dairy-free diet and gourmet preferences, offering a sophisticated and health-conscious dining experience."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Savory Vegan Delight: 0.81
+Signature Berry Bliss Parfait: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "score": 7,
+    "comment": "The Savory Vegan Delight was a well-composed dish, though it could benefit from a bit more seasoning for depth. The Signature Berry Bliss Parfait was refreshing but lacked the innovative edge I've enjoyed in gourmet dining. A satisfactory meal, yet room for flavor enhancement remains."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.731343283582089
+2. Advertisement
+   Discover bold flavors at Classic American Diner! Our Smokey BBQ Ribs now come with a bourbon-infused BBQ sauce, and our Apple Pie a la Mode features a rich caramel drizzle. Plus, try our new Hearty Vegan Bowl and Low-Carb Grilled Chicken. Visit us for a fresh, flavorful experience!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 21.0, 'description': 'Our famous ribs with a new smokier, bourbon-infused house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 11.0, 'description': 'Our classic apple pie with a generous filling of cinnamon-spiced apples and a rich caramel drizzle, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Caesar Salad', 'price': 12.0, 'description': 'Fresh romaine with a new house-made vegan Caesar dressing, garlic croutons, and a sprinkle of nutritional yeast for a cheesy flavor.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 11.0, 'description': 'Richer New England clam chowder, now with more clams and a deeper flavor profile, served with oyster crackers.'}, {'id': 15, 'name': 'Savory Vegan Delight', 'price': 15.0, 'description': 'A hearty plant-based dish featuring a medley of seasoned vegetables, protein-rich tofu, and quinoa, garnished with a flavorful vegan sauce.'}, {'id': 16, 'name': 'Hearty Vegan Bowl', 'price': 15.0, 'description': 'A diverse bowl of quinoa, kale, roasted sweet potatoes, avocado, and black beans, topped with a lemon-tahini dressing.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}]
+4. Comments
+   [{'day': 5, 'name': 'Yara', 'score': 8, 'content': "The Savory Vegan Delight was well-prepared and flavorful, aligning perfectly with my vegan diet. The restaurant maintained the high standard I've come to expect. However, I would suggest adding more diverse vegan options to enhance the dining experience further."}, {'day': 5, 'name': 'Xavier', 'score': 8, 'content': "The Smokey BBQ Ribs were juicy with a nice tang, though I expected a bit more smokiness. The Caesar Salad's vegan dressing was a creative touch, very fresh. The Apple Pie a la Mode ended the meal on a sweet note, with delicious ice cream but could use a tad more cinnamon."}, {'day': 5, 'name': 'Valerie', 'score': 8, 'content': 'The Caesar Salad was fresh, but I expected a bit more creativity in flavor. The Signature Berry Bliss Parfait and Savory Vegan Delight were both satisfying and aligned with my health-conscious preferences, though not exceptionally outstanding. Overall, a good dining experience that respects my dietary choices.'}, {'day': 5, 'name': 'Paula', 'score': 8, 'content': 'The Smokey BBQ Ribs had a wonderful smoky taste, though I craved a touch more depth. The vegan Caesar Salad was fresh, but I missed the classic cheese flavor. The Signature Berry Bliss Parfait was delightfully healthy, but could use a bit more sweetness to satisfy.'}, {'day': 5, 'name': 'Hugo', 'score': 8, 'content': "The Smokey BBQ Ribs were robust in flavor, satisfying my gourmet tastes. The Caesar Salad's freshness added a nice balance, though it could use a unique twist. The Apple Pie a la Mode was delicious but could be richer. Overall, a hearty meal that largely met my expectations."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.2
+2. Advertisement
+   Experience luxury comfort food at USA Flavor Haven! Indulge in our new Premium Smoked BBQ Ribs, savor our Ultimate Ribeye Steak, and delight in our Decadent Chocolate Lava Cake. Each dish is crafted for superior taste and indulgence. Join us for a dining experience that's a cut above the rest!
+3. Menu 
+   [{'id': 1, 'name': 'Premium Smoked BBQ Ribs', 'price': 25.0, 'description': "Our famous ribs are now smoked for 12 hours, glazed with a luxurious Maker's Mark bourbon BBQ sauce, and served with artisanal coleslaw"}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'Premium beef patty with aged cheddar, crisp lettuce, and heirloom tomato on a brioche bun, enhanced with our signature sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 16.0, 'description': 'Crisp greens with herb-marinated grilled chicken, crispy bacon, soft-boiled eggs, ripe avocado, and a more vibrant blue cheese dressing'}, {'id': 13, 'name': 'American Apple Crumble', 'price': 10.0, 'description': 'Warm spiced apple filling with a crispy oat topping, served with cinnamon ice cream'}, {'id': 14, 'name': 'Truffle Garlic Butter Steak Bites', 'price': 22.0, 'description': 'Tender steak bites seasoned with black truffle salt, sautéed in garlic butter and fine herbs, served with a side of truffle aioli'}, {'id': 17, 'name': 'Ultimate Ribeye Steak', 'price': 30.0, 'description': 'A generous cut of Ribeye steak, perfectly seasoned and grilled to order, served with garlic butter and a side of truffle mashed potatoes'}, {'id': 18, 'name': 'Lobster Mac & Cheese', 'price': 25.0, 'description': 'Rich and creamy four-cheese mac & cheese topped with succulent lobster meat and a golden-brown breadcrumb crust'}, {'id': 19, 'name': 'Decadent Chocolate Lava Cake', 'price': 12.0, 'description': 'Warm, gooey chocolate cake with a molten chocolate center, served with vanilla bean ice cream and fresh berries'}]
+4. Comments
+   [{'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}, {'day': 1, 'name': 'David', 'score': 6, 'content': "The Cobb Salad was decent but could use more seasoning to enhance the flavors. Considering my dietary needs, it was a fair choice, but not exceptional. I've had better salads with more vibrant dressings elsewhere. A nice touch was the free dessert offer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Savory Vegan Delight",
+        "Hearty Vegan Bowl"
+    ],
+    "reason": "Classic American Diner's Savory Vegan Delight and Hearty Vegan Bowl are both dairy-free, aligning with my dietary needs, and the establishment has a higher customer score than USA Flavor Haven."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Savory Vegan Delight: 0.81
+Hearty Vegan Bowl: 0.79
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Savory Vegan Delight was satisfying with a harmonious blend of flavors, and the Hearty Vegan Bowl's diverse ingredients provided a delightful culinary experience, compatible with my dairy-free diet."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.7407407407407405
+2. Advertisement
+   Taste the innovation at Classic American Diner! Enjoy our new Signature Smoked Caesar Salad, enriched Clam Chowder with white wine, and indulge in our Spiced Caramel Apple Cheesecake. Perfectly paired with our famous Smokey BBQ Ribs. Come for the classics, stay for the surprises!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 21.0, 'description': 'Our famous ribs with a new smokier, bourbon-infused house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 11.0, 'description': 'Our classic apple pie with a generous filling of cinnamon-spiced apples and a rich caramel drizzle, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Signature Smoked Caesar Salad', 'price': 13.0, 'description': 'Crisp romaine tossed with our new bold, smoky dressing, garlic croutons, and a sprinkle of nutritional yeast for a cheesy flavor.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Savory Vegan Delight', 'price': 15.0, 'description': 'A hearty plant-based dish featuring a medley of seasoned vegetables, protein-rich tofu, and quinoa, garnished with a flavorful vegan sauce.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 18, 'name': 'Spiced Caramel Apple Cheesecake', 'price': 12.0, 'description': 'A decadent cheesecake with spiced apple compote and a rich caramel drizzle, topped with a cinnamon crumble.'}]
+4. Comments
+   [{'day': 6, 'name': 'Xavier', 'score': 8, 'content': "The Smokey BBQ Ribs had a robust flavor, though I anticipated a bit more smokiness. The Caesar Salad was refreshing with its vegan dressing. The Apple Pie a la Mode had a deliciously flaky crust but could benefit from more cinnamon. Overall, a very good meal that didn't disappoint."}, {'day': 6, 'name': 'Tina', 'score': 8, 'content': "The Smokey BBQ Ribs had a satisfying smokiness and were well-cooked, although I've had more complex flavors elsewhere. The Caesar Salad was fresh but could use a creative twist. The Apple Pie a la Mode was delightful, but I anticipated a richer caramel flavor. Overall, a solid dining experience."}, {'day': 6, 'name': 'Ruby', 'score': 8, 'content': 'The Smokey BBQ Ribs had a rich bourbon-infused sauce which I enjoyed, though I expected a bit more smoky depth. The Apple Pie a la Mode was a comforting classic with a nice caramel touch, but could have been elevated with a stronger spice profile. Overall, a satisfying meal for a discerning palate.'}, {'day': 6, 'name': 'Quincy', 'score': 8, 'content': "The Caesar Salad's healthy profile was perfect for my diet, and its price matched my budget. While it could have a bit more zest, it's a solid choice compared to my past experiences. A good eatery for the health-conscious."}, {'day': 6, 'name': 'Lara', 'score': 7, 'content': "The Clam Chowder at Classic American Diner was hearty, with a lovely creamy texture and a good clam to potato ratio, but it could benefit from a little more seasoning for depth of flavor. It's a dish I would come back for, though there's room for improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Discover the bold flavors of USA Flavor Haven! Our Signature Smoked BBQ Ribs and Luxe Lobster Mac & Cheese are crafted with the finest ingredients for an unforgettable taste. Enjoy our unique Gourmet Cheeseburger and Superfood Cobb Salad for a healthier twist. Indulge in our Molten Chocolate Lava Cake to finish. Dine with us for a truly American experience with a gourmet edge.
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked BBQ Ribs', 'price': 27.0, 'description': "12-hour hickory-smoked ribs with our signature Maker's Mark bourbon BBQ sauce, paired with a tangy apple-fennel slaw"}, {'id': 2, 'name': 'Gourmet Cheeseburger', 'price': 18.0, 'description': 'Grass-fed beef patty, aged cheddar, organic greens, heirloom tomato, house pickles, on an artisan brioche bun with our unique aioli'}, {'id': 3, 'name': 'Superfood Cobb Salad', 'price': 18.0, 'description': 'A nutritious blend of kale, spinach, grilled free-range chicken, avocado, quinoa, blueberries, and almonds with a light lemon vinaigrette'}, {'id': 14, 'name': 'Herb-Crusted Steak Bites', 'price': 24.0, 'description': 'Steak bites encrusted in a mix of fresh herbs, lightly fried, and served with a side of creamy horseradish sauce'}, {'id': 18, 'name': 'Luxe Lobster Mac & Cheese', 'price': 27.0, 'description': 'Gourmet four-cheese blend with chunks of fresh lobster, truffle oil, and a crispy panko-parmesan topping'}, {'id': 19, 'name': 'Molten Chocolate Lava Cake', 'price': 14.0, 'description': 'Intense dark chocolate cake with a silky molten center, served with raspberry coulis and handcrafted honeycomb'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Savory Vegan Delight",
+        "Signature Smoked Caesar Salad"
+    ],
+    "reason": "Classic American Diner offers a higher customer score and dishes that suit my dairy-free requirement. The Savory Vegan Delight and Smoked Caesar Salad cater to my sophisticated palate."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Savory Vegan Delight: 0.81
+Signature Smoked Caesar Salad: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Savory Vegan Delight and Signature Smoked Caesar Salad both provided a fulfilling gourmet experience without dairy, aligning with my sophisticated tastes."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.75
+2. Advertisement
+   Discover bold flavors at Classic American Diner! Savor our enhanced Smokey BBQ Ribs and Bold Smoked Caesar Salad, now with richer, bolder tastes. Delight in our new Rich Spiced Chocolate Cake with ginger-infused ice cream for a perfect finish. Experience our improved service speed for a truly enjoyable dining adventure.
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 23.0, 'description': 'Our famous ribs are now even smokier, glazed with a bourbon-infused house-made BBQ sauce, served with coleslaw and seasoned fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Grass-fed beef patty with aged cheddar, lettuce, tomato, onions, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Our classic apple pie is now richer with a blend of cinnamon and nutmeg in the filling, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Bold Smoked Caesar Salad', 'price': 15.0, 'description': 'Crisp romaine tossed in our new bolder, smoky dressing, with garlic croutons, parmesan shavings, and a hint of anchovy.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Savory Vegan Delight', 'price': 15.0, 'description': 'A hearty plant-based dish featuring a medley of seasoned vegetables, protein-rich tofu, and quinoa, garnished with a flavorful vegan sauce.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 19, 'name': 'Rich Spiced Chocolate Cake', 'price': 14.0, 'description': 'A luxurious chocolate cake infused with winter spices, served with a scoop of ginger-infused ice cream.'}]
+4. Comments
+   [{'day': 7, 'name': 'Yara', 'score': 8, 'content': 'The Savory Vegan Delight was satisfying, with well-seasoned vegetables and tofu that met my vegan needs. While delicious, I would appreciate even more vegan variety on the menu to enhance future visits.'}, {'day': 7, 'name': 'Xavier', 'score': 8, 'content': "The Smokey BBQ Ribs were tender with a commendable bourbon taste, yet I expected a richer smokiness. The Signature Smoked Caesar Salad's new dressing added a unique twist but could pack a stronger flavor punch. The Apple Pie a la Mode was delightful, though a bit more cinnamon would perfect it. An enjoyable meal overall."}, {'day': 7, 'name': 'Valerie', 'score': 8, 'content': "Classic American Diner's offerings like the Savory Vegan Delight satisfied my preference for organic foods. The Signature Smoked Caesar Salad was a creative twist on a classic, though I expected a bit more smokiness. The Spiced Caramel Apple Cheesecake was delightful but could benefit from a stronger spice profile."}, {'day': 7, 'name': 'Paula', 'score': 8, 'content': 'The Smokey BBQ Ribs were delectably tender and well-seasoned. The Signature Smoked Caesar Salad was a fresh and lighter side that complemented the meal, though it could have used a bit more punch in the dressing. The Spiced Caramel Apple Cheesecake was delightful, but I craved a tad more spice to truly elevate it.'}, {'day': 7, 'name': 'Max', 'score': 8, 'content': 'The Signature Smoked Caesar Salad and Savory Vegan Delight at Classic American Diner were both good plant-based options, though they could benefit from a bit more seasoning to enhance the flavors. The service was efficient, making it a pleasant dining experience overall.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Join us at USA Flavor Haven for a refined take on American classics! Revel in our Classic Smoked BBQ Ribs, indulge in the Ultimate Cheeseburger, or savor our Crispy Chicken Salad. Don't miss our Garlic Herb Steak Skewers and Classic Lobster Mac & Cheese. End your meal with our heavenly Chocolate Heaven Lava Cake!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Smoked BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smoked over hickory with a tangy house BBQ sauce, served with homemade cornbread and coleslaw.'}, {'id': 2, 'name': 'Ultimate Cheeseburger', 'price': 15.0, 'description': 'Juicy beef patty with melted cheddar, crisp lettuce, ripe tomato, and our special sauce on a toasted sesame bun.'}, {'id': 3, 'name': 'Crispy Chicken Salad', 'price': 16.0, 'description': 'Fresh greens tossed with crispy chicken strips, cherry tomatoes, cucumbers, and a honey-mustard dressing.'}, {'id': 14, 'name': 'Garlic Herb Steak Skewers', 'price': 21.0, 'description': 'Skewered morsels of steak marinated in garlic and herbs, chargrilled and served with a balsamic glaze.'}, {'id': 18, 'name': 'Classic Lobster Mac & Cheese', 'price': 25.0, 'description': 'A comforting blend of cheese, tender lobster meat, and macaroni, topped with a golden breadcrumb crust.'}, {'id': 19, 'name': 'Chocolate Heaven Lava Cake', 'price': 12.0, 'description': 'A decadent warm chocolate cake with a melting center, served with vanilla bean ice cream and chocolate shavings.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Savory Vegan Delight"
+    ],
+    "reason": "Classic American Diner's Savory Vegan Delight suits my dairy-free diet and gourmet tastes, and the restaurant's customer score is higher, indicating better overall satisfaction."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Savory Vegan Delight: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Savory Vegan Delight was beautifully presented and the flavors were well-balanced, providing a satisfying gourmet experience that respected my dairy-free dietary needs."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.775700934579439
+2. Advertisement
+   Indulge in our new Fireside Apple Cider - the perfect autumn companion! Our Smokey BBQ Ribs are now even more succulent with a richer bourbon glaze, and our Zesty Bold Smoked Caesar Salad has an added twist of lemon for extra zing. Don't miss our Intense Spiced Chocolate Cake with bold ginger-spiced ice cream for a decadent finish.
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 25.0, 'description': 'Succulent ribs smoked over applewood and glazed with a bourbon-infused house-made BBQ sauce, served with a signature coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Our classic apple pie is now richer with a blend of cinnamon and nutmeg in the filling, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Zesty Bold Smoked Caesar Salad', 'price': 17.0, 'description': 'Crisp romaine tossed in our zesty, smoky Caesar dressing, with crunchy garlic croutons, parmesan shavings, and a twist of lemon.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Savory Vegan Delight', 'price': 15.0, 'description': 'A hearty plant-based dish featuring a medley of seasoned vegetables, protein-rich tofu, and quinoa, garnished with a flavorful vegan sauce.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 19, 'name': 'Intense Spiced Chocolate Cake', 'price': 16.0, 'description': 'An exquisite chocolate cake heightened with aromatic winter spices and a side of bold ginger-spiced ice cream.'}, {'id': 20, 'name': 'Fireside Apple Cider', 'price': 7.0, 'description': 'A warming, spiced apple cider, mulled with cinnamon and cloves, perfect for complementing any meal.'}]
+4. Comments
+   [{'day': 8, 'name': 'Yara', 'score': 8, 'content': 'The Savory Vegan Delight was satisfying with a score of 0.81, catering well to my vegan diet. It was flavorful, but the menu could benefit from more vegan options. Despite this, the service was good, and the overall dining experience was positive.'}, {'day': 8, 'name': 'Wade', 'score': 8, 'content': 'The Classic Cheeseburger and Apple Pie a la Mode at Classic American Diner were comforting and met my expectations for simple, satisfying meals. The flavors were good, though the burger could have been a bit juicier. A solid choice for a hearty meal within my budget.'}, {'day': 8, 'name': 'Valerie', 'score': 8, 'content': 'The Savory Vegan Delight was a harmonious blend of flavors, though I expected a bit more seasoning. The Bold Smoked Caesar Salad was fresh; however, a stronger smoky essence would enhance it. The Rich Spiced Chocolate Cake was sumptuous, yet could benefit from a more pronounced spice mix. Solid, but room for refinement.'}, {'day': 8, 'name': 'Lara', 'score': 8, 'content': "The Clam Chowder at Classic American Diner, with its white wine enhancement, offered a comforting and rich seafood flavor that I enjoyed. Although it's quite good, I would suggest a touch more seasoning to perfect the dish. It's a satisfying choice for seafood lovers like me."}, {'day': 8, 'name': 'Iris', 'score': 8, 'content': 'The Bold Smoked Caesar Salad had a satisfying smoky touch, though I expected a bit more boldness in the flavor. The Savory Vegan Delight was hearty and fulfilling. Both dishes align well with my salad preference. A varied menu and consistent service would enhance the experience further.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Discover the new USA Flavor Haven menu! Enjoy our Classic American Burger, Hearty Grilled Chicken Club, and Crispy Buffalo Chicken Salad. Plus, don't miss our Vibrant Veggie Wrap and Chocolate Heaven Lava Cake. Great taste at even better prices!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Smoked BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smoked over hickory with a tangy house BBQ sauce, served with homemade cornbread and coleslaw.'}, {'id': 2, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'A perfect blend of savory beef patty with American cheese, lettuce, tomato, pickle, and our signature burger sauce.'}, {'id': 3, 'name': 'Crispy Buffalo Chicken Salad', 'price': 14.0, 'description': 'Crisp romaine lettuce with spicy buffalo chicken, blue cheese crumbles, celery, and ranch dressing.'}, {'id': 19, 'name': 'Chocolate Heaven Lava Cake', 'price': 10.0, 'description': 'A decadent warm chocolate cake with a melting center, served with vanilla bean ice cream and chocolate shavings.'}, {'id': 20, 'name': 'Hearty Grilled Chicken Club', 'price': 14.0, 'description': 'Grilled chicken breast with bacon, avocado, lettuce, tomato, and garlic aioli on toasted sourdough.'}, {'id': 21, 'name': 'Vibrant Veggie Wrap', 'price': 12.0, 'description': 'A colorful medley of grilled vegetables, hummus, and feta cheese in a spinach wrap.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Savory Vegan Delight",
+        "Zesty Bold Smoked Caesar Salad",
+        "Intense Spiced Chocolate Cake"
+    ],
+    "reason": "Classic American Diner offers a higher customer score and dishes that fit my dairy-free diet, such as the Savory Vegan Delight. Their Intense Spiced Chocolate Cake aligns with my gourmet taste."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Savory Vegan Delight: 0.81
+Zesty Bold Smoked Caesar Salad: 0.81
+Intense Spiced Chocolate Cake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Savory Vegan Delight was a delightful fusion of taste and health. The Zesty Bold Smoked Caesar Salad was a perfect blend of smokiness and freshness, while the Intense Spiced Chocolate Cake indulged my sophisticated palate without compromising my dairy-free diet."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.7844827586206895
+2. Advertisement
+   Discover bold flavors at Classic American Diner! Relish our new Ultimate Smoked Caesar Salad and Explosive Spiced Chocolate Cake, now with intensified taste profiles. Explore our fresh Keto-Friendly Avocado Burger and Herbaceous Vegan Power Bowl, catering to all dietary needs. Join us for a taste adventure that keeps getting better!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 25.0, 'description': 'Succulent ribs smoked over applewood and glazed with a bourbon-infused house-made BBQ sauce, served with a signature coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Our classic apple pie is now richer with a blend of cinnamon and nutmeg in the filling, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 6, 'name': 'Ultimate Smoked Caesar Salad', 'price': 18.0, 'description': 'A redefined classic with extra smoky flavor, crisp romaine, garlic croutons, parmesan shards, and a punchy Caesar dressing.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Savory Vegan Delight', 'price': 15.0, 'description': 'A hearty plant-based dish featuring a medley of seasoned vegetables, protein-rich tofu, and quinoa, garnished with a flavorful vegan sauce.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 19, 'name': 'Explosive Spiced Chocolate Cake', 'price': 17.0, 'description': 'Our chocolate cake takes a fiery twist with a mix of bold spices and a rich dark chocolate ganache, served with spicy cinnamon ice cream.'}, {'id': 21, 'name': 'Herbaceous Vegan Power Bowl', 'price': 16.0, 'description': 'A vibrant bowl of mixed grains, seasonal greens, and roasted vegetables, topped with a tangy herb dressing.'}, {'id': 22, 'name': 'Keto-Friendly Avocado Burger', 'price': 15.0, 'description': 'A no-bun, high-fat, low-carb burger with a grass-fed beef patty, layers of avocado, cheese, bacon, and a zesty aioli.'}]
+4. Comments
+   [{'day': 9, 'name': 'Valerie', 'score': 8, 'content': 'The Savory Vegan Delight was a well-composed dish that fit my organic preferences, although it could use a bit more seasoning for perfection. The Zesty Bold Smoked Caesar Salad was refreshing with a nice hint of smokiness. The Intense Spiced Chocolate Cake was rich and offered a good flavor profile but could be enhanced with stronger spice notes.'}, {'day': 9, 'name': 'Steve', 'score': 8, 'content': 'The Zesty Bold Smoked Caesar Salad was flavorful, though I expected more boldness in taste. The Low-Carb Grilled Chicken was well-cooked and suited my dietary needs. However, comparing to previous experiences, a bit more seasoning could enhance the dishes. Overall, a good meal that aligns with my health concerns.'}, {'day': 9, 'name': 'Quincy', 'score': 7, 'content': "The Zesty Bold Smoked Caesar Salad fit my dietary needs and was reasonably priced for my budget. The salad was fresh, though I expected a bit more boldness in flavor. Overall, a good choice for a low-calorie meal, but there's room for improvement in taste."}, {'day': 9, 'name': 'Dexter', 'score': 8, 'content': "The Smokey BBQ Ribs were a standout with a robust bourbon flavor that suited my barbecue taste, though I anticipated an even deeper smokiness. The Apple Pie a la Mode was nicely spiced, but I've had richer versions elsewhere. The Intense Spiced Chocolate Cake was enjoyable but could use more pronounced spice notes."}, {'day': 9, 'name': 'Quinn', 'score': 8, 'content': 'The Smokey BBQ Ribs were exceptionally flavorful with a perfect bourbon glaze. Buffalo Wings had a zesty heat, though slightly less punchy than anticipated. The Intense Spiced Chocolate Cake was a delightful fusion of sweet and spice, yet could have used a tad more intensity. Overall, a satisfying meal that catered to my bold tastes.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   USA Flavor Haven presents a fresh blend of indulgence and nourishment! Savor our Smoked Salmon Zen Bowl, Guilt-Free Turkey Burger, and Rainbow Veggie Power Wrap. Indulge with Intense Chocolate Indulgence Cake and Spicy Southwest Sweet Potato Skins. Perfect for all tastes!
+3. Menu 
+   [{'id': 19, 'name': 'Intense Chocolate Indulgence Cake', 'price': 12.0, 'description': 'A rich chocolate cake with a gooey center, infused with a hint of espresso and served with a scoop of vanilla bean ice cream.'}, {'id': 20, 'name': 'Ultimate Grilled Chicken Club', 'price': 15.0, 'description': 'Succulent grilled chicken with crispy bacon, creamy avocado, fresh lettuce, sun-ripened tomato, and a zesty garlic aioli on artisan sourdough.'}, {'id': 21, 'name': 'Rainbow Veggie Power Wrap', 'price': 13.0, 'description': 'An array of vibrant, grilled vegetables with smooth hummus, tangy feta, and a touch of spicy sauce wrapped in a whole grain tortilla.'}, {'id': 22, 'name': 'Smoked Salmon Zen Bowl', 'price': 16.0, 'description': 'Delicate smoked salmon with a zesty quinoa salad, ripe avocado, edamame, and a drizzle of lemon herb dressing.'}, {'id': 23, 'name': 'Guilt-Free Turkey Burger', 'price': 14.0, 'description': 'A lean turkey patty with mixed greens, vine-ripened tomato, red onion, and a light avocado yogurt sauce on a whole grain bun.'}, {'id': 24, 'name': 'Spicy Southwest Sweet Potato Skins', 'price': 11.0, 'description': 'Crispy baked sweet potato skins filled with a spicy black bean mix, topped with melted cheese and a dollop of sour cream.'}, {'id': 25, 'name': 'Refreshing Berry Spinach Salad', 'price': 12.0, 'description': 'Fresh spinach, mixed berries, toasted almonds, and feta cheese tossed in a raspberry vinaigrette.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes" : [
+        "Savory Vegan Delight",
+        "Explosive Spiced Chocolate Cake"
+    ],
+    "reason" : "Classic American Diner has a higher customer score and offers the Savory Vegan Delight and the dairy-free Explosive Spiced Chocolate Cake, which match my dairy-free diet and sophisticated taste."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Savory Vegan Delight: 0.81
+Explosive Spiced Chocolate Cake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Savory Vegan Delight was a culinary masterpiece, perfectly aligning with my dairy-free diet. The Explosive Spiced Chocolate Cake tantalized my sophisticated palate with its unique blend of spices."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.8
+2. Advertisement
+   Experience the new height of flavors at Classic American Diner with our enhanced Smokey BBQ Ribs, now smokier than ever! Indulge in the culinary delight of our new Innovative Vegan Explosion dish, crafted for the adventurous palate. Come in for a taste sensation that’s second to none!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 27.0, 'description': 'Our signature ribs now feature a more intense smokey flavor, slow-cooked and glazed with a bourbon-infused house-made BBQ sauce. Paired with our signature coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Our classic apple pie is now richer with a blend of cinnamon and nutmeg in the filling, served with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Crispier Buffalo Wings served with a new, bold blue cheese dip and celery sticks.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Savory Vegan Delight', 'price': 15.0, 'description': 'A hearty plant-based dish featuring a medley of seasoned vegetables, protein-rich tofu, and quinoa, garnished with a flavorful vegan sauce.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 19, 'name': 'Explosive Spiced Chocolate Cake', 'price': 17.0, 'description': 'Our chocolate cake takes a fiery twist with a mix of bold spices and a rich dark chocolate ganache, served with spicy cinnamon ice cream.'}, {'id': 21, 'name': 'Herbaceous Vegan Power Bowl', 'price': 16.0, 'description': 'A vibrant bowl of mixed grains, seasonal greens, and roasted vegetables, topped with a tangy herb dressing.'}, {'id': 22, 'name': 'Keto-Friendly Avocado Burger', 'price': 15.0, 'description': 'A no-bun, high-fat, low-carb burger with a grass-fed beef patty, layers of avocado, cheese, bacon, and a zesty aioli.'}, {'id': 23, 'name': 'Innovative Vegan Explosion', 'price': 17.0, 'description': 'Dive into our new vegan creation, a dynamic mix of grilled exotic vegetables, house-made vegan cheese, and a splash of spicy mango sauce, served with a side of quinoa salad.'}]
+4. Comments
+   [{'day': 10, 'name': 'Valerie', 'score': 8, 'content': 'The Savory Vegan Delight was satisfying, aligning well with my organic preferences, though it could use a touch more seasoning. The Ultimate Smoked Caesar Salad was fresh and had an appealing smokiness, yet I expected a more robust flavor. The Explosive Spiced Chocolate Cake had a good balance but lacked the promised intensity of spices.'}, {'day': 10, 'name': 'Tina', 'score': 8, 'content': "The Smokey BBQ Ribs were tender with a satisfying smokiness, but I've had more complex flavors in the past. The Ultimate Smoked Caesar Salad was a decent attempt at a twist on a classic but could have been smokier. The Explosive Spiced Chocolate Cake had a nice texture but lacked the promised intensity in flavor."}, {'day': 10, 'name': 'Quincy', 'score': 7, 'content': "The Ultimate Smoked Caesar Salad aligned with my low-calorie diet but lacked the boldness I expected. It's a decent option for my budget and health needs, yet could use more flavor. The high customer score influenced my choice, but there's room for improvement in taste."}, {'day': 10, 'name': 'Lara', 'score': 8, 'content': "The Clam Chowder at Classic American Diner was delightful, with white wine adding a sophisticated touch to the seafood flavor. While the overall taste was good, I believe a pinch more seasoning could elevate it to perfection. It's a dish that stands out, especially compared to others I've tried."}, {'day': 10, 'name': 'Hugo', 'score': 8, 'content': 'The Smokey BBQ Ribs were savory with a satisfying depth of flavor. The Ultimate Smoked Caesar Salad was good, but could use a bit more smokiness. The Explosive Spiced Chocolate Cake had a delightful kick, yet I anticipated a bolder spice blend. Overall, a gratifying gourmet experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Experience USA Flavor Haven's American Gastro Retreat: Exclusive, indulgent dining with our new menu! Featuring Smoked BBQ Bourbon Bliss, Signature American Gourmet Burger, Caramelized Peach & Pork Delight, Deep South Fried Chicken, and Old Fashioned Apple Pie Sundae. Come for the flavors, stay for the memories!
+3. Menu 
+   [{'id': 26, 'name': 'Smoked BBQ Bourbon Bliss', 'price': 27.0, 'description': 'Tender ribs smoked to perfection, glazed with our exclusive bourbon BBQ sauce, paired with garlic mashed potatoes and coleslaw.'}, {'id': 27, 'name': 'Signature American Gourmet Burger', 'price': 22.0, 'description': 'A juicy beef patty with crispy onion rings, blue cheese, and smoky bacon, served with our special sauce and hand-cut fries.'}, {'id': 28, 'name': 'Caramelized Peach & Pork Delight', 'price': 25.0, 'description': 'Succulent pork belly with a sweet and savory peach glaze, served with a side of roasted root vegetables.'}, {'id': 29, 'name': 'Deep South Fried Chicken', 'price': 20.0, 'description': 'Crispy, spiced buttermilk fried chicken with a side of creamy mac & cheese and collard greens.'}, {'id': 30, 'name': 'Old Fashioned Apple Pie Sundae', 'price': 14.0, 'description': 'Warm apple pie with cinnamon and nutmeg, topped with vanilla bean ice cream and a rich caramel drizzle.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Savory Vegan Delight",
+        "Explosive Spiced Chocolate Cake"
+    ],
+    "reason": "Classic American Diner has a higher customer score and offers options that fit my dairy-free diet, such as the Savory Vegan Delight and the dairy-free Explosive Spiced Chocolate Cake, which appeal to my sophisticated taste."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Savory Vegan Delight: 0.81
+Explosive Spiced Chocolate Cake: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "score": 8,
+    "comment": "The Savory Vegan Delight was a harmonious blend of health-conscious ingredients, meeting my dairy-free needs. The Explosive Spiced Chocolate Cake, while well-crafted, could have benefited from a bolder spice profile. Overall, a gratifying experience, though I've encountered more complex flavors in previous gourmet meals."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.798561151079137
+2. Advertisement
+   Discover bold Mediterranean flavors with our new Mediterranean Vegan Delight and Gluten-Free Mediterranean Chicken, and savor the intensity of our Spiced Apple Pie a la Mode and Intense Spiced Chocolate Cake. Classic American Diner – where unique tastes meet culinary excellence!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 27.0, 'description': 'Our signature ribs now feature a more intense smokey flavor, slow-cooked and glazed with a bourbon-infused house-made BBQ sauce. Paired with our signature coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Spiced Apple Pie a la Mode', 'price': 15.0, 'description': 'Our traditional apple pie gets a spicy twist with a mix of cinnamon, nutmeg, and clove in the filling, served with a scoop of premium vanilla ice cream and a caramel drizzle.'}, {'id': 7, 'name': 'New York Steak', 'price': 22.0, 'description': 'Premium New York strip steak cooked to your preference with a side of roasted vegetables.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Mediterranean Vegan Delight', 'price': 17.0, 'description': 'A bountiful vegan feast brimming with Mediterranean spices, roasted chickpeas, sun-dried tomatoes, and kalamata olives, served over couscous with a lemon-tahini dressing.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 19, 'name': 'Intense Spiced Chocolate Cake', 'price': 18.0, 'description': 'Indulge in our chocolate cake with an intense spicy kick, featuring a blend of chili and exotic spices, layered with a rich dark chocolate ganache, served with spicy cinnamon ice cream.'}, {'id': 21, 'name': 'Herbaceous Vegan Power Bowl', 'price': 16.0, 'description': 'A vibrant bowl of mixed grains, seasonal greens, and roasted vegetables, topped with a tangy herb dressing.'}, {'id': 23, 'name': 'Innovative Vegan Explosion', 'price': 17.0, 'description': 'Dive into our new vegan creation, a dynamic mix of grilled exotic vegetables, house-made vegan cheese, and a splash of spicy mango sauce, served with a side of quinoa salad.'}, {'id': 24, 'name': 'Gluten-Free Mediterranean Chicken', 'price': 18.0, 'description': 'Juicy grilled chicken marinated with Mediterranean herbs, served alongside a gluten-free quinoa tabbouleh and a cooling tzatziki sauce.'}]
+4. Comments
+   [{'day': 11, 'name': 'Valerie', 'score': 8, 'content': "Classic American Diner's Savory Vegan Delight and Herbaceous Vegan Power Bowl were true to their names, offering a satisfying organic experience. The Explosive Spiced Chocolate Cake, while good, lacked the intensity expected from its name. Overall, a solid meal with room for a bit more spice and seasoning."}, {'day': 11, 'name': 'Giselle', 'score': 8, 'content': "The Apple Pie a la Mode was comforting, though it could have used a touch more spice. The Explosive Spiced Chocolate Cake had a nice balance, yet I was expecting a bolder spice presence. Overall, a pleasant dining experience, but there's room for a more pronounced flavor profile."}, {'day': 11, 'name': 'Felix', 'score': 8, 'content': "The Smokey BBQ Ribs had a rich flavor, aligning well with my preference for Chinese cuisine. The Explosive Spiced Chocolate Cake, while good, lacked the intensity I expected. Overall, a satisfying meal but there's room for enhancement in the dessert's spice profile."}, {'day': 11, 'name': 'Xena', 'score': 8, 'content': 'The Smokey BBQ Ribs had a robust and satisfying smoky flavor, justifying their high score. The Apple Pie a la Mode was comforting, though I expected a bit more spice to match its description. The Explosive Spiced Chocolate Cake was indulgent, but I anticipated a bolder spice level. Overall, a tasty experience.'}, {'day': 11, 'name': 'William', 'score': 8, 'content': 'The Smokey BBQ Ribs had a delightful depth of flavor, although the smokiness was less pronounced than anticipated. The Explosive Spiced Chocolate Cake was enjoyable but could benefit from a bolder spice profile. Overall, a satisfying meal that offered good value within my budget.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Discover the taste of England at USA Flavor Haven! Enjoy our revamped menu with Local Smoked BBQ Ribs, Classic English Burger, Pork & Apple Country Platter, Herb-Crusted Fish & Chips, and Bramley Apple Crumble. Fresh, local ingredients meet American classics. Join us for a unique culinary experience!
+3. Menu 
+   [{'id': 26, 'name': 'Local Smoked BBQ Ribs', 'price': 21.0, 'description': 'Locally sourced ribs smoked with English oak, glazed in a cider BBQ sauce, with a side of seasonal greens and roasted new potatoes.'}, {'id': 27, 'name': 'Classic English Burger', 'price': 18.0, 'description': 'Grass-fed local beef patty, mature cheddar, caramelized onions, and a tangy local ale mustard sauce, served with thick-cut chips.'}, {'id': 28, 'name': 'Pork & Apple Country Platter', 'price': 20.0, 'description': 'Tender local pork cutlets with a spiced apple chutney, served with buttered peas and minted new potatoes.'}, {'id': 29, 'name': 'Herb-Crusted Fish & Chips', 'price': 17.0, 'description': 'Freshly caught fish in a crispy herb batter, served with mushy peas and tartar sauce, accompanied by sea-salted chips.'}, {'id': 30, 'name': 'Bramley Apple Crumble', 'price': 12.0, 'description': 'Warm Bramley apple crumble topped with a scoop of clotted cream ice cream, drizzled with a toffee sauce.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Mediterranean Vegan Delight",
+        "Intense Spiced Chocolate Cake"
+    ],
+    "reason": "Classic American Diner offers a higher customer score and dishes like Mediterranean Vegan Delight and Intense Spiced Chocolate Cake, aligning with my dairy-free dietary needs and gourmet taste preference."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mediterranean Vegan Delight: 0.81
+Intense Spiced Chocolate Cake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Mediterranean Vegan Delight was creatively seasoned, and the Intense Spiced Chocolate Cake catered to my sophisticated palate, both adhering to my dairy-free requirement."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.79874213836478
+2. Advertisement
+   Indulge in the intensified flavors of our Smokey BBQ Ribs, now with a more robust smoky essence. Satisfy your health-conscious palate with our enhanced Herbaceous Vegan Power Bowl and the new Bold American Chili. Classic American Diner – where every bite is a bold adventure!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 29.0, 'description': 'Our signature ribs now feature a more intense smokey flavor, slow-cooked and glazed with a bourbon-infused house-made BBQ sauce. Paired with our signature coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Spiced Apple Pie a la Mode', 'price': 15.0, 'description': 'Our traditional apple pie gets a spicy twist with a mix of cinnamon, nutmeg, and clove in the filling, served with a scoop of premium vanilla ice cream and a caramel drizzle.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'Our Mac & Cheese with an extra indulgent four-cheese blend and a crispy herbed breadcrumb topping.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Mediterranean Vegan Delight', 'price': 19.0, 'description': 'A bountiful vegan feast brimming with Mediterranean spices, roasted chickpeas, sun-dried tomatoes, and kalamata olives, served over couscous with a lemon-tahini dressing.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 19, 'name': 'Intense Spiced Chocolate Cake', 'price': 20.0, 'description': 'Indulge in our chocolate cake with an intense spicy kick, featuring a blend of chili and exotic spices, layered with a rich dark chocolate ganache, served with spicy cinnamon ice cream.'}, {'id': 21, 'name': 'Herbaceous Vegan Power Bowl', 'price': 18.0, 'description': 'A vibrant bowl of mixed grains, seasonal greens, and roasted vegetables, topped with a tangy herb dressing.'}, {'id': 23, 'name': 'Innovative Vegan Explosion', 'price': 17.0, 'description': 'Dive into our new vegan creation, a dynamic mix of grilled exotic vegetables, house-made vegan cheese, and a splash of spicy mango sauce, served with a side of quinoa salad.'}, {'id': 25, 'name': 'Bold American Chili', 'price': 16.0, 'description': 'A hearty bowl of classic American chili, rich with ground beef, kidney beans, and a secret blend of spices, topped with shredded cheese and sour cream.'}]
+4. Comments
+   [{'day': 12, 'name': 'Wade', 'score': 7, 'content': 'The Classic Cheeseburger was satisfactory, offering a simple, comforting taste that fits my budget, though it could have been juicier. The Apple Pie a la Mode had a delightful cinnamon flavor, but I expected a bit more spice based on the menu description. Overall, a good meal but with room for improvement.'}, {'day': 12, 'name': 'Ulysses', 'score': 8, 'content': 'The Smokey BBQ Ribs had a robust flavor, scoring high on my list. The Intense Spiced Chocolate Cake was good but could benefit from a more pronounced spice profile. Compared to USA Flavor Haven, the Diner provides a more adventurous culinary experience that matches my explorative personality.'}, {'day': 12, 'name': 'Tina', 'score': 8, 'content': 'The Smokey BBQ Ribs were succulent with a satisfying depth of smokiness, a clear highlight. The Mediterranean Vegan Delight, while healthful, lacked the bold zest I expected from Mediterranean fare. The Intense Spiced Chocolate Cake was indulgent but could use a bit more spice to truly live up to its name.'}, {'day': 12, 'name': 'Paula', 'score': 8, 'content': 'The Smokey BBQ Ribs offered a rich, deep flavor that I enjoyed thoroughly. The Intense Spiced Chocolate Cake had a pleasant spice level, although I anticipated a bit more intensity. Overall, a very satisfying meal with bold flavors that cater to my tastes.'}, {'day': 12, 'name': 'Max', 'score': 8, 'content': "The Mediterranean Vegan Delight and Herbaceous Vegan Power Bowl were both satisfying with well-balanced flavors. The score reflects the quality of the plant-based options. However, I've had more flavorful vegan dishes here before. A bit more spice could enhance these offerings."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Savor the fusion of American dining and English tradition at USA Flavor Haven! Indulge in our Local Smoked BBQ Ribs, Classic English Burger, and more, all prepared with the finest local produce. Experience the blend of cultures in every bite. Visit us for an unforgettable meal!
+3. Menu 
+   [{'id': 26, 'name': 'Local Smoked BBQ Ribs', 'price': 23.0, 'description': 'Locally sourced ribs smoked with English oak, glazed in a cider BBQ sauce, with a side of seasonal greens and roasted new potatoes.'}, {'id': 27, 'name': 'Classic English Burger', 'price': 20.0, 'description': 'Grass-fed local beef patty, mature cheddar, caramelized onions, and a tangy local ale mustard sauce, served with thick-cut chips.'}, {'id': 28, 'name': 'Pork & Apple Country Platter', 'price': 22.0, 'description': 'Tender local pork cutlets with a spiced apple chutney, served with buttered peas and minted new potatoes.'}, {'id': 29, 'name': 'Herb-Crusted Fish & Chips', 'price': 19.0, 'description': 'Freshly caught fish in a crispy herb batter, served with mushy peas and tartar sauce, accompanied by sea-salted chips.'}, {'id': 30, 'name': 'Bramley Apple Crumble', 'price': 14.0, 'description': 'Warm Bramley apple crumble topped with a scoop of clotted cream ice cream, drizzled with a toffee sauce.'}, {'id': 31, 'name': 'Roasted Beetroot & Goat Cheese Salad', 'price': 16.0, 'description': 'A vibrant salad of roasted local beetroot, creamy goat cheese, and toasted walnuts, drizzled with a honey-balsamic dressing.'}, {'id': 32, 'name': 'Sticky Toffee Pudding', 'price': 13.0, 'description': 'A classic English dessert, moist sponge cake covered in sticky toffee sauce, served warm with vanilla custard.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Mediterranean Vegan Delight",
+        "Intense Spiced Chocolate Cake"
+    ],
+    "reason": "Classic American Diner's menu features the Mediterranean Vegan Delight and Intense Spiced Chocolate Cake, which suit my dairy-free requirement and gourmet preferences, and the customer score is higher."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mediterranean Vegan Delight: 0.81
+Intense Spiced Chocolate Cake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Mediterranean Vegan Delight was flavorful and satisfying for my dairy-free diet. The Intense Spiced Chocolate Cake was a treat to my gourmet palate, though I expected a bit more spice."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.7894736842105265
+2. Advertisement
+   Discover our revamped Classic American Diner menu, featuring the even bolder Smokey BBQ Ribs, the luxurious Mac & Cheese Deluxe, and the spicier Intense Spiced Chocolate Cake. Plus, introducing the Grilled Seafood Platter for our health-conscious guests. Bold flavors in every dish – experience the upgrade!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 32.0, 'description': 'Our signature ribs are now bolder than ever, with a new smokey and spicy dry rub, slow-cooked to perfection and glazed with a bourbon-infused house-made BBQ sauce. Served with our signature coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Spiced Apple Pie a la Mode', 'price': 15.0, 'description': 'Our traditional apple pie gets a spicy twist with a mix of cinnamon, nutmeg, and clove in the filling, served with a scoop of premium vanilla ice cream and a caramel drizzle.'}, {'id': 8, 'name': 'Mac & Cheese Deluxe', 'price': 14.0, 'description': 'Our creamy Mac & Cheese is revamped with a sharper aged cheddar blend and a crispy herbed breadcrumb topping, accompanied by optional bacon or truffle oil to elevate the dish.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 12.0, 'description': 'Our clam chowder enriched with aromatic herbs and a splash of white wine for added depth, served with oyster crackers.'}, {'id': 15, 'name': 'Mediterranean Vegan Delight', 'price': 21.0, 'description': 'Our Mediterranean Vegan Delight now packs more punch with additional Mediterranean spices, roasted chickpeas, artichokes, sun-dried tomatoes, and kalamata olives, served over couscous with a more piquant lemon-tahini dressing.'}, {'id': 17, 'name': 'Low-Carb Grilled Chicken', 'price': 16.0, 'description': 'Perfectly grilled chicken breast served with a side of steamed vegetables and a light herb sauce, ideal for a low-carb diet.'}, {'id': 19, 'name': 'Intense Spiced Chocolate Cake', 'price': 22.0, 'description': 'Our chocolate cake is now even more thrilling with a hotter spice blend, featuring chili, cinnamon, and nutmeg, layered with a rich dark chocolate ganache, served with a scoop of homemade cinnamon-chili ice cream.'}, {'id': 21, 'name': 'Herbaceous Vegan Power Bowl', 'price': 20.0, 'description': 'Our Herbaceous Vegan Power Bowl is revitalized with a bolder herb dressing and a variety of seasonal greens, roasted vegetables, and mixed grains for a more flavorful and nutritious experience.'}, {'id': 26, 'name': 'Grilled Seafood Platter', 'price': 35.0, 'description': 'A selection of freshly grilled seafood, including shrimp, scallops, and seasonal fish, served with a side of garlic-lemon butter sauce and a medley of steamed seasonal vegetables.'}]
+4. Comments
+   [{'day': 13, 'name': 'Steve', 'score': 8, 'content': 'The Low-Carb Grilled Chicken was well-prepared, meeting my dietary needs, and the Herbaceous Vegan Power Bowl was fresh but could use a bit more flavor. While the dishes were good for my health, a little more seasoning could have elevated the taste.'}, {'day': 13, 'name': 'Paula', 'score': 8, 'content': 'The Smokey BBQ Ribs were succulent with a deep smoky flavor that I loved. The Intense Spiced Chocolate Cake had a good spice level, but could be more intense. Compared to previous experiences, the ribs were a highlight. A satisfying meal overall.'}, {'day': 13, 'name': 'Max', 'score': 7, 'content': 'The Mediterranean Vegan Delight and Herbaceous Vegan Power Bowl were both nourishing and flavorful, although lacking a bit in the bold spices I enjoy. A little more seasoning could elevate these dishes. Overall, a satisfying plant-based meal.'}, {'day': 13, 'name': 'Hugo', 'score': 8, 'content': "The Smokey BBQ Ribs had a robust flavor that I enjoyed, although I expected a bit more smokiness given my gourmet tastes. The Intense Spiced Chocolate Cake was enjoyable but could benefit from a stronger spice profile. Both dishes were good, but there's room for enhancing the boldness of flavors."}, {'day': 13, 'name': 'Brian', 'score': 7, 'content': "The Mac & Cheese was hearty with a satisfactory cheese blend, though it lacked the sharpness I prefer. The Spiced Apple Pie a la Mode had a good balance of sweetness and spice, making it a delightful dessert. Overall, a good meal but there's room for improvement in enhancing flavors."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Discover the unique taste of America meets England at USA Flavor Haven! Enjoy our revamped menu featuring Local Smoked BBQ Ribs with English oak, Classic English Burger with ale mustard sauce, and traditional dishes with a modern twist. Come in for an exceptional fusion experience!
+3. Menu 
+   [{'id': 26, 'name': 'Local Smoked BBQ Ribs', 'price': 25.0, 'description': 'Locally sourced ribs smoked with English oak, glazed in a cider BBQ sauce, with a side of seasonal greens and roasted new potatoes.'}, {'id': 27, 'name': 'Classic English Burger', 'price': 22.0, 'description': 'Grass-fed local beef patty, mature cheddar, caramelized onions, and a tangy local ale mustard sauce, served with thick-cut chips.'}, {'id': 28, 'name': 'Pork & Apple Country Platter', 'price': 24.0, 'description': 'Tender local pork cutlets with a spiced apple chutney, served with buttered peas and minted new potatoes.'}, {'id': 29, 'name': 'Herb-Crusted Fish & Chips', 'price': 21.0, 'description': 'Freshly caught fish in a crispy herb batter, served with mushy peas and tartar sauce, accompanied by sea-salted chips.'}, {'id': 30, 'name': 'Bramley Apple Crumble', 'price': 16.0, 'description': 'Warm Bramley apple crumble topped with a scoop of clotted cream ice cream, drizzled with a toffee sauce.'}, {'id': 31, 'name': 'Roasted Beetroot & Goat Cheese Salad', 'price': 18.0, 'description': 'A vibrant salad of roasted local beetroot, creamy goat cheese, and toasted walnuts, drizzled with a honey-balsamic dressing.'}, {'id': 32, 'name': 'Sticky Toffee Pudding', 'price': 15.0, 'description': 'A classic English dessert, moist sponge cake covered in sticky toffee sauce, served warm with vanilla custard.'}, {'id': 33, 'name': 'Cheddar Ale Soup', 'price': 14.0, 'description': 'A creamy soup blending sharp English cheddar and robust local ale, garnished with crispy bacon bits and chives.'}, {'id': 34, 'name': 'Lancashire Hotpot', 'price': 21.0, 'description': 'A comforting stew of lamb and root vegetables, slow-cooked in a rich gravy, topped with sliced potatoes.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Mediterranean Vegan Delight",
+        "Intense Spiced Chocolate Cake"
+    ],
+    "reason": "Classic American Diner suits my dairy-free diet with dishes like the Mediterranean Vegan Delight. The Intense Spiced Chocolate Cake satisfies my gourmet tastes. With a higher customer score, it promises a better dining experience."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mediterranean Vegan Delight: 0.81
+Intense Spiced Chocolate Cake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Mediterranean Vegan Delight was a delightfully seasoned dish that catered well to my dairy-free restrictions. The Intense Spiced Chocolate Cake indulged my sophisticated palate with its rich flavors and spice."
+}
+
+[System->Rachel]: The Restaurant " Classic American Diner "information as below:
+1. Customer Score: 7.797872340425532
+2. Advertisement
+   Embark on a flavor journey at Classic American Diner with our juicier Smokey BBQ Ribs and intensified Intense Spiced Chocolate Cake! Delight in our new American Spice Trail Burger and fresh Kale & Quinoa Vegan Salad. Bold, adventurous dining awaits you – let your taste buds soar!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 34.0, 'description': 'Our signature ribs are now even juicier, with an enhanced smoky and spicy dry rub. Slow-cooked to perfection, glazed with a bourbon-infused house-made BBQ sauce. Served with our signature coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Spiced Apple Pie a la Mode', 'price': 15.0, 'description': 'Our traditional apple pie gets a spicy twist with a mix of cinnamon, nutmeg, and clove in the filling, served with a scoop of premium vanilla ice cream and a caramel drizzle.'}, {'id': 8, 'name': 'Mac & Cheese Deluxe', 'price': 16.0, 'description': 'Our Mac & Cheese is even more decadent with an aged cheddar and gruyere blend, topped with a crispy herbed breadcrumb topping, served with optional bacon or truffle oil for an elevated dish.'}, {'id': 15, 'name': 'Mediterranean Vegan Delight', 'price': 23.0, 'description': 'Our Mediterranean Vegan Delight is spiced up with a blend of cumin, coriander, and sumac, with roasted chickpeas, artichokes, sun-dried tomatoes, olives, served over quinoa with a zestier lemon-tahini dressing.'}, {'id': 19, 'name': 'Intense Spiced Chocolate Cake', 'price': 24.0, 'description': 'Our chocolate cake gets an intense heat with a new spice blend featuring ancho chili, cinnamon, and nutmeg, layered with rich dark chocolate ganache, served with homemade cinnamon-chili ice cream.'}, {'id': 21, 'name': 'Herbaceous Vegan Power Bowl', 'price': 22.0, 'description': 'Our Herbaceous Vegan Power Bowl now features an even zestier herb dressing, with a mix of seasonal greens, roasted vegetables, and mixed grains, for an elevated flavorful and nutritious experience.'}, {'id': 27, 'name': 'American Spice Trail Burger', 'price': 18.0, 'description': 'A hearty grass-fed beef patty with our unique spice blend, sharp cheddar, and a smoky chipotle mayo. Served with a side of sweet potato fries.'}, {'id': 28, 'name': 'Kale & Quinoa Vegan Salad', 'price': 19.0, 'description': 'A superfood-packed salad with kale, quinoa, avocados, cherry tomatoes, and roasted nuts, tossed in an adventurous jalapeno-lime vinaigrette.'}]
+4. Comments
+   [{'day': 14, 'name': 'Yara', 'score': 8, 'content': 'The Mediterranean Vegan Delight and Herbaceous Vegan Power Bowl were both satisfying, with a score of 0.81. The flavors were fresh, though a touch more seasoning could enhance the dishes. Compared to USA Flavor Haven, the vegan options here are more aligned with my dietary preferences.'}, {'day': 14, 'name': 'Wade', 'score': 7, 'content': "The Mac & Cheese Deluxe was hearty, aligning with my simple tastes, but lacked a bit of sharpness I'd hoped for. The Spiced Apple Pie a la Mode was satisfyingly sweet and well-spiced. A good meal, but there's room for improvement in flavor richness."}, {'day': 14, 'name': 'Valerie', 'score': 8, 'content': 'The Mediterranean Vegan Delight was nicely seasoned, though I craved more Mediterranean spices. The Herbaceous Vegan Power Bowl was satisfying but could benefit from a zestier dressing. The Intense Spiced Chocolate Cake was enjoyable with a good level of spice. Overall, a pleasant dining experience with room for flavor enhancement.'}, {'day': 14, 'name': 'Oscar', 'score': 8, 'content': "The Smokey BBQ Ribs had a great depth of flavor, though not as smoky as I'd expected. The Spiced Apple Pie a la Mode was comforting with a nice spice level, but the crust could be flakier. Overall, a satisfying traditional meal with room for subtle improvements."}, {'day': 14, 'name': 'Jake', 'score': 7, 'content': "The Mediterranean Vegan Delight was satisfying, aligning with my health needs, though it could have used a touch more seasoning for my taste. A good choice for a low-sodium diet, yet the flavors were not as bold as I'd prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: The Restaurant " USA Flavor Haven "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Savor the bold flavors at USA Flavor Haven! Feast on our Signature Smoked BBQ Ribs, indulge in the Ultimate American Burger, or enjoy our new Zesty Lemon Herb Chicken. With fresh, locally-sourced ingredients and a menu that balances health with indulgence, your taste adventure awaits!
+3. Menu 
+   [{'id': 26, 'name': 'Signature Smoked BBQ Ribs', 'price': 32.0, 'description': 'Our signature ribs are now bolder than ever, with a new smoky and spicy dry rub, slow-cooked to perfection and glazed with a bourbon-infused house-made BBQ sauce. Served with our signature coleslaw and seasoned fries.'}, {'id': 27, 'name': 'Ultimate American Burger', 'price': 20.0, 'description': 'Juicy all-American beef patty, topped with our special sauce, crispy lettuce, ripe tomato, pickles, and onion on a toasted sesame seed bun, served with crispy fries.'}, {'id': 28, 'name': 'Pork & Apple Country Platter', 'price': 24.0, 'description': 'Tender local pork cutlets with a spiced apple chutney, served with buttered peas and minted new potatoes.'}, {'id': 29, 'name': 'Crispy Fish & Chips', 'price': 20.0, 'description': 'Beer-battered fresh catch of the day, served with thick-cut fries, classic mushy peas, and a tangy tartar sauce.'}, {'id': 30, 'name': 'Decadent Chocolate Lava Cake', 'price': 18.0, 'description': 'Our indulgent chocolate cake with a molten center, served warm with a scoop of premium vanilla ice cream and a dusting of powdered sugar.'}, {'id': 31, 'name': 'Superfood Salad', 'price': 18.0, 'description': 'A nutrient-packed salad featuring quinoa, kale, roasted sweet potatoes, avocado, toasted nuts, and seeds, tossed in a light lemon vinaigrette.'}, {'id': 32, 'name': 'Sticky Toffee Pudding', 'price': 15.0, 'description': 'A classic English dessert, moist sponge cake covered in sticky toffee sauce, served warm with vanilla custard.'}, {'id': 33, 'name': 'Cheddar Ale Soup', 'price': 14.0, 'description': 'A creamy soup blending sharp English cheddar and robust local ale, garnished with crispy bacon bits and chives.'}, {'id': 34, 'name': 'Lancashire Hotpot', 'price': 21.0, 'description': 'A comforting stew of lamb and root vegetables, slow-cooked in a rich gravy, topped with sliced potatoes.'}, {'id': 35, 'name': 'Zesty Lemon Herb Chicken', 'price': 21.0, 'description': 'Grilled chicken breast marinated in lemon and herbs, served with a side of garlic mashed potatoes and steamed seasonal vegetables.'}]
+4. Comments
+   [{'day': 6, 'name': 'Tara', 'score': 7, 'content': "The Premium Smoked BBQ Ribs had a decent smokiness, though I've enjoyed more complex flavors at Classic American Diner. The Cobb Salad was fresh but lacked a distinctive taste. The Decadent Chocolate Lava Cake was a highlight, rich and indulgent, but overall, the meal didn't fully meet my adventurous expectations."}, {'day': 4, 'name': 'Yara', 'score': 7, 'content': "The American Apple Crumble was quite good, with a score of 0.81. While it was enjoyable, I've had more memorable vegan desserts at Classic American Diner. The crumble could have been a tad more spiced to enhance the apple flavor."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': "USA Flavor Haven provided a fair dining experience. The smoked BBQ ribs were enjoyable, but not outstanding. The Cobb Salad was fresh, though unremarkable. The Mac 'n' Cheese and Key Lime Pie were satisfactory. Overall, a decent meal, but there's room for improvement in flavor depth and dish execution."}, {'day': 1, 'name': 'Zach', 'score': 6, 'content': "The Cobb Salad was fresh, fulfilling my dietary needs, but lacked distinctive flavor. The Key Lime Pie was enjoyable, yet could have used a zestier lime kick. Service was satisfactory. Previously, I've had more remarkable experiences with French cuisine that better suited my connoisseur palate."}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'The Chocolate Brownie Sundae was delightful, satisfying my sweet tooth, but I expected more from the Classic Cheeseburger. While the dessert promotion was a nice touch, the overall meal experience was fair. Hoping for more impressive flavors next time.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Rachel]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "dishes": [
+        "Mediterranean Vegan Delight",
+        "Intense Spiced Chocolate Cake"
+    ],
+    "reason": "The Classic American Diner offers a Mediterranean Vegan Delight that suits my dairy-free diet, and an Intense Spiced Chocolate Cake that caters to my gourmet tastes. Its customer score is higher, indicating better service and food quality."
+}
+
+[System->Rachel]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mediterranean Vegan Delight: 0.81
+Intense Spiced Chocolate Cake: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Rachel->all]: {
+    "restaurant": "Classic American Diner",
+    "feeling": "The Mediterranean Vegan Delight was superbly seasoned and aligned well with my dairy-free restriction. The Intense Spiced Chocolate Cake, while exquisitely rich, could have been more adventurous in its spice use to satisfy my sophisticated palate."
+}
+

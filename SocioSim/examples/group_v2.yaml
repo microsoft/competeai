@@ -1,0 +1,360 @@
+backends:
+  default_backend: &default_backend_anchor
+    temperature: 0.7
+    max_tokens: 1024
+    model: gpt-4-1106-preview
+    backend_type: openai-chat
+
+global_prompt:
+  boss: &default_global_prompt_boss
+    As the owner of a restaurant in a small England town, you find yourself in direct competition with another restaurant for customers. Your aim is to maximize profit. But customers are price sensitive and they tend to choose the one with the lower price for the same service. So you need to balance profit and customer acceptance. The competition will persist until one of the restaurants is forced to close down. In order to emerge victorious in this competition, it is imperative that you employ any necessary measures to secure success. 
+  customer: &default_global_prompt_customer
+    In the small town of England, there are currently two open restaurants. To assist in your decision-making process, you will be provided with menus and additional information for both establishments. Your task is to carefully compare the two restaurants and select one for your meal. (If you don't want to eat at both restaurants you can leave it out.) Your selection should maximize utility based on the criteria of paying lower price, having more delicious food and superior service.
+
+database_port_base: 9000
+
+players:
+  - name:  Qin
+    agent_type: boss
+    role_desc: You are a smart and capable restaurant owner who can identify your strengths and weaknesses in this competition. You start with a capital of $10,000. Your restaurant style is American. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's name (must include word 'American') and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration. Remember to keep an eye on your competitor's restaurant and make sure you are always one step ahead.
+    backend: *default_backend_anchor
+
+  - name: Lin
+    agent_type: boss
+    role_desc: You are a laid-back and intuitive restaurant owner who operates more on instinct than detailed analysis. You are a bold and innovative thinker, constantly coming up with new ideas and approaches. You start with a capital of $10,000. Your restaurant style is American. Every day, you can make changes to your restaurant's setup, including personnel, menu, and advertising, to maintain a competitive edge. First, decide on your restaurant's name (must include USA) and allocate your funds wisely. Then, follow the prompts to make gradual changes to your restaurant's configuration.
+    backend: *default_backend_anchor
+
+  - name: Alice
+    agent_type: customer
+    role_desc: "Income: $12,000 (Affluent), Taste: Local comfort foods, Health: Healthy, Dietary_restriction: None, Personality: Easy-going"
+    backend: *default_backend_anchor
+
+  - name: Bob
+    agent_type: customer
+    role_desc: "Income: $8,000 (Middle Class), Taste: Rice and noodle dishes, Health: No concerns, Dietary_restriction: None, Personality: Strict"
+    backend: *default_backend_anchor
+
+  - name: Charlie
+    agent_type: customer
+    role_desc: "Income: $15,000 (Affluent), Taste: Sandwiches and salads, Health: Healthy, Dietary_restriction: None, Personality: Picky"
+    backend: *default_backend_anchor
+
+  - name: David
+    agent_type: customer
+    role_desc: "Income: $10,000 (Middle Class), Taste: Breakfast foods, Health: High blood pressure, Dietary_restriction: Low sodium, Personality: Cheerful"
+    backend: *default_backend_anchor
+
+  - name: Eve
+    agent_type: customer
+    role_desc: "Income: $7,000 (Poor), Taste: Simple dishes, Health: Healthy, Dietary_restriction: None, Personality: Shy"
+    backend: *default_backend_anchor
+
+  - name: Frank
+    agent_type: customer
+    role_desc: "Income: $9,500 (Middle Class), Taste: Fast food, Health: Healthy, Dietary_restriction: None, Personality: Adventurous"
+    backend: *default_backend_anchor
+
+  - name: Grace
+    agent_type: customer
+    role_desc: "Income: $11,000 (Middle Class), Taste: Soups and stews, Health: Diabetic, Dietary_restriction: Low sugar, Personality: Friendly"
+    backend: *default_backend_anchor
+
+  - name: Henry
+    agent_type: customer
+    role_desc: "Income: $14,000 (Affluent), Taste: Meat, Health: Healthy, Dietary_restriction: None, Personality: Reserved"
+    backend: *default_backend_anchor
+
+  - name: Ivy
+    agent_type: customer
+    role_desc: "Income: $6,500 (Poor), Taste: Seafood, Health: Healthy, Dietary_restriction: None, Personality: Outspoken"
+    backend: *default_backend_anchor
+
+  - name: Jack
+    agent_type: customer
+    role_desc: "Income: $8,500 (Middle Class), Taste: Steak and meat dishes, Health: Healthy, Dietary_restriction: None, Personality: Energetic"
+    backend: *default_backend_anchor
+
+  - name: Katie
+    agent_type: customer
+    role_desc: "Income: $5,000 (Very Poor), Taste: Vegan dishes, Health: Healthy, Dietary_restriction: None, Personality: Compassionate"
+    backend: *default_backend_anchor
+
+  - name: Leo
+    agent_type: customer
+    role_desc: "Income: $13,500 (Affluent), Taste: Pasta and pizza, Health: Healthy, Dietary_restriction: None, Personality: Relaxed"
+    backend: *default_backend_anchor
+
+  - name: Maggie
+    agent_type: customer
+    role_desc: "Income: $9,000 (Middle Class), Taste: Chocolate and sweets, Health: Healthy, Dietary_restriction: None, Personality: Carefree"
+    backend: *default_backend_anchor
+
+  - name: Nate
+    agent_type: customer
+    role_desc: "Income: $7,500 (Poor), Taste: Grilled dishes, Health: Healthy, Dietary_restriction: None, Personality: Meticulous"
+    backend: *default_backend_anchor
+
+  - name: Olivia
+    agent_type: customer
+    role_desc: "Income: $13,000 (Affluent), Taste: Mediterranean cuisine, Health: Allergies, Dietary_restriction: Gluten-free, Personality: Artistic"
+    backend: *default_backend_anchor
+
+  - name: Peter
+    agent_type: customer
+    role_desc: "Income: $6,000 (Poor), Taste: Baked goods, Health: Healthy, Dietary_restriction: None, Personality: Curious"
+    backend: *default_backend_anchor
+
+  - name: Quinn
+    agent_type: customer
+    role_desc: "Income: $8,200 (Middle Class), Taste: Spicy food, Health: Healthy, Dietary_restriction: None, Personality: Bold"
+    backend: *default_backend_anchor
+
+  - name: Rachel
+    agent_type: customer
+    role_desc: "Income: $14,500 (Affluent), Taste: Gourmet dishes, Health: Lactose intolerant, Dietary_restriction: Dairy-free, Personality: Sophisticated"
+    backend: *default_backend_anchor
+
+  - name: Sam
+    agent_type: customer
+    role_desc: "Income: $5,500 (Very Poor), Taste: Home cooking, Health: Healthy, Dietary_restriction: None, Personality: Warm"
+    backend: *default_backend_anchor
+
+  - name: Tara
+    agent_type: customer
+    role_desc: "Income: $10,500 (Middle Class), Taste: Exotic fruits, Health: Healthy, Dietary_restriction: None, Personality: Adventurous"
+    backend: *default_backend_anchor
+
+  - name: Umar
+    agent_type: customer
+    role_desc: "Income: $12,500 (Affluent), Taste: Grilled seafood, Health: High cholesterol, Dietary_restriction: Low cholesterol, Personality: Discerning"
+    backend: *default_backend_anchor
+
+  - name: Vicky
+    agent_type: customer
+    role_desc: "Income: $7,300 (Poor), Taste: Comfort food, Health: Healthy, Dietary_restriction: None, Personality: Easygoing"
+    backend: *default_backend_anchor
+
+  - name: William
+    agent_type: customer
+    role_desc: "Income: $11,500 (Middle Class), Taste: Sushi and Japanese cuisine, Health: Healthy, Dietary_restriction: None, Personality: Reserved"
+    backend: *default_backend_anchor
+
+  - name: Xena
+    agent_type: customer
+    role_desc: "Income: $9,800 (Middle Class), Taste: Italian cuisine, Health: Healthy, Dietary_restriction: None, Personality: Lively"
+    backend: *default_backend_anchor
+
+  - name: Yasmine
+    agent_type: customer
+    role_desc: "Income: $7,800 (Poor), Taste: Vegan options, Health: Healthy, Dietary_restriction: Vegan, Personality: Compassionate"
+    backend: *default_backend_anchor
+
+  - name: Zach
+    agent_type: customer
+    role_desc: "Income: $12,200 (Affluent), Taste: French cuisine, Health: Gluten sensitivity, Dietary_restriction: Gluten-free, Personality: Connoisseur"
+    backend: *default_backend_anchor
+
+  - name: Amelia
+    agent_type: customer
+    role_desc: "Income: $8,700 (Middle Class), Taste: Mexican food, Health: Healthy, Dietary_restriction: None, Personality: Spirited"
+    backend: *default_backend_anchor
+
+  - name: Brian
+    agent_type: customer
+    role_desc: "Income: $6,200 (Poor), Taste: Street food, Health: Healthy, Dietary_restriction: None, Personality: Resourceful"
+    backend: *default_backend_anchor
+
+  - name: Chloe
+    agent_type: customer
+    role_desc: "Income: $10,300 (Middle Class), Taste: Indian cuisine, Health: Diabetic, Dietary_restriction: Low sugar, Personality: Thoughtful"
+    backend: *default_backend_anchor
+
+  - name: Dexter
+    agent_type: customer
+    role_desc: "Income: $13,800 (Affluent), Taste: Barbecue, Health: Healthy, Dietary_restriction: None, Personality: Sociable"
+    backend: *default_backend_anchor
+
+  - name: Emma
+    agent_type: customer
+    role_desc: "Income: $5,800 (Very Poor), Taste: Organic food, Health: Healthy, Dietary_restriction: None, Personality: Optimistic"
+    backend: *default_backend_anchor
+
+  - name: Felix
+    agent_type: customer
+    role_desc: "Income: $11,700 (Middle Class), Taste: Chinese cuisine, Health: Healthy, Dietary_restriction: None, Personality: Analytical"
+    backend: *default_backend_anchor
+
+  - name: Giselle
+    agent_type: customer
+    role_desc: "Income: $9,400 (Middle Class), Taste: Desserts, Health: Healthy, Dietary_restriction: None, Personality: Creative"
+    backend: *default_backend_anchor
+
+  - name: Hugo
+    agent_type: customer
+    role_desc: "Income: $14,200 (Affluent), Taste: Gourmet burgers, Health: Healthy, Dietary_restriction: None, Personality: Leader"
+    backend: *default_backend_anchor
+
+  - name: Iris
+    agent_type: customer
+    role_desc: "Income: $7,600 (Poor), Taste: Salads, Health: Healthy, Dietary_restriction: None, Personality: Gentle"
+    backend: *default_backend_anchor
+
+  - name: Jake
+    agent_type: customer
+    role_desc: "Income: $6,800 (Poor), Taste: Fried food, Health: High blood pressure, Dietary_restriction: Low sodium, Personality: Jovial"
+    backend: *default_backend_anchor
+  
+  - name: Lara
+    agent_type: customer
+    role_desc: "Income: $8,900 (Middle Class), Taste: Seafood, Health: Healthy, Dietary_restriction: None, Personality: Ambitious"
+    backend: *default_backend_anchor
+
+  - name: Max
+    agent_type: customer
+    role_desc: "Income: $5,300 (Very Poor), Taste: Plant-based meals, Health: Healthy, Dietary_restriction: None, Personality: Resourceful"
+    backend: *default_backend_anchor
+
+  - name: Nora
+    agent_type: customer
+    role_desc: "Income: $12,800 (Affluent), Taste: Fine dining, Health: Gluten intolerance, Dietary_restriction: Gluten-free, Personality: Elegant"
+    backend: *default_backend_anchor
+
+  - name: Oscar
+    agent_type: customer
+    role_desc: "Income: $9,600 (Middle Class), Taste: Traditional cuisine, Health: Healthy, Dietary_restriction: None, Personality: Reserved"
+    backend: *default_backend_anchor
+
+  - name: Paula
+    agent_type: customer
+    role_desc: "Income: $11,200 (Middle Class), Taste: Greek food, Health: Healthy, Dietary_restriction: None, Personality: Outgoing"
+    backend: *default_backend_anchor
+
+  - name: Quincy
+    agent_type: customer
+    role_desc: "Income: $6,400 (Poor), Taste: Fast food, Health: Overweight, Dietary_restriction: Low calorie, Personality: Easygoing"
+    backend: *default_backend_anchor
+
+  - name: Ruby
+    agent_type: customer
+    role_desc: "Income: $14,800 (Affluent), Taste: Sushi, Health: Healthy, Dietary_restriction: None, Personality: Discerning"
+    backend: *default_backend_anchor
+
+  - name: Steve
+    agent_type: customer
+    role_desc: "Income: $7,900 (Poor), Taste: Comfort food, Health: High cholesterol, Dietary_restriction: Low fat, Personality: Friendly"
+    backend: *default_backend_anchor
+
+  - name: Tina
+    agent_type: customer
+    role_desc: "Income: $10,800 (Middle Class), Taste: Mediterranean cuisine, Health: Healthy, Dietary_restriction: None, Personality: Charismatic"
+    backend: *default_backend_anchor
+
+  - name: Ulysses
+    agent_type: customer
+    role_desc: "Income: $13,300 (Affluent), Taste: International cuisine, Health: Healthy, Dietary_restriction: None, Personality: Explorer"
+    backend: *default_backend_anchor
+
+  - name: Valerie
+    agent_type: customer
+    role_desc: "Income: $8,300 (Middle Class), Taste: Organic foods, Health: Healthy, Dietary_restriction: None, Personality: Intellectual"
+    backend: *default_backend_anchor
+
+  - name: Wade
+    agent_type: customer
+    role_desc: "Income: $5,700 (Very Poor), Taste: Simple meals, Health: Healthy, Dietary_restriction: None, Personality: Hardworking"
+    backend: *default_backend_anchor
+
+  - name: Xavier
+    agent_type: customer
+    role_desc: "Income: $11,900 (Middle Class), Taste: Caribbean cuisine, Health: Healthy, Dietary_restriction: None, Personality: Vibrant"
+    backend: *default_backend_anchor
+
+  - name: Yara
+    agent_type: customer
+    role_desc: "Income: $9,200 (Middle Class), Taste: Vegetarian dishes, Health: Vegan, Dietary_restriction: Vegan, Personality: Compassionate"
+    backend: *default_backend_anchor
+  
+
+scenes:
+  - name: restaurant_design
+    scene_type: restaurant_design
+    players:
+      - Qin
+      - Lin
+  - name: dine
+    scene_type: dine
+    players:
+      # Single:
+      - Umar
+      - Katie
+      - Oscar
+      - Zach
+      - Leo
+      - David
+      - Quincy
+      - Jack
+      - Xena
+      - Bob
+
+      # # Family:
+      # # Affluent Family (4 people):
+      # - - Rachel
+      #   - Ruby
+      #   - Hugo
+      #   - Henry
+      # # Middle Class Family (4 people):
+      # - - William
+      #   - Felix
+      #   - Xavier
+      #   - Paula
+      # # Poor Family (3 people):
+      # - - Nate
+      #   - Vicky
+      #   - Steve
+      # # Very Poor Family (3 people):
+      # - - Wade
+      #   - Ivy
+      #   - Emma
+
+      # # Colleague:
+      # # Affluent Colleagues (2 people):
+      # - - Dexter
+      #   - Ulysses
+      # # Poor Colleagues (2 people):
+      # - - Yasmine
+      #   - Eve
+      # # Middle-Class Colleagues (3 people):
+      # - - Tara
+      #   - Tina
+      #   - Chloe
+      # # Middle-Class Colleagues (3 people):
+      # - - Frank
+      #   - Giselle
+      #   - Yara
+
+      # # Couple: 
+      # # Affluent Couples:
+      # - - Nora
+      #   - Alice
+      # # Middle-Class Couples:
+      # - - Maggie
+      #   - Valerie
+      # # Very Poor Couples:
+      # - - Max
+      #   - Sam
+
+      # # Friend:
+      # # Affluent Friends:
+      # - - Olivia
+      #   - Charlie
+      # # One Poor, One Middle-Class:
+      # - - Grace
+      #   - Peter
+      # # Two Middle-Class, One Poor:
+      # - - Amelia
+      #   - Lara
+      #   - Iris
+      # # Two Poor, One Middle-Class:
+      # - - Jake
+      #   - Brian
+      #   - Quinn

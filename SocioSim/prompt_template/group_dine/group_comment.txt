@@ -1,5 +1,5 @@
 As a group of customers, after tasting the dishes, engage in more than one round of discussion about your meal. 
-The score of each dish as below (1 is a excellent score):
+The score of each dish as below (Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29)):
 <INPUT 0>
 
  In the first round, each member should express their individual comments and scores. No format restrictions

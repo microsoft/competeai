@@ -1,0 +1,10 @@
+name,day1,day2,day3,day4,day5,day6,day7,day8,day9,day10,day11,day12,day13,day14,day15
+id,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+income,159,52,30,92,11,0,9,10,31,0,0,0,41,12,20
+expense,200,316,200,183,173,183,306,216,223,206,216,206,200,193,216
+num_of_customer,13,4,2,5,1,0,1,1,2,0,0,0,2,1,1
+num_of_chef,1,2,1,1,1,1,2,1,1,1,1,1,1,1,1
+chef_salary,3000,6500,3000,2500,2200,2500,6200,3500,3700,3200,3500,3200,3000,2800,3500
+dish_score,0.5428571428571429,0.8948717948717947,0.5529567382508558,0.5,0.4664285714285713,0.5,0.87,0.6,0.62,0.5700000000000002,0.6,0.5700000000000002,0.5499999999999999,0.5300000000000001,0.6
+customer_score,5.833333333333333,5.875,5.777777777777778,5.818181818181818,5.818181818181818,5.818181818181818,5.818181818181818,5.818181818181818,5.6923076923076925,5.6923076923076925,5.6923076923076925,5.6923076923076925,5.6923076923076925,5.6923076923076925,5.642857142857143
+dishes,"{""Independence Chicken Wrap"": 4, ""Liberty BBQ Ribs"": 8, ""Patriot Pie"": 5, ""Founding Fathers' Feast"": 2, ""Freedom Burger"": 3}","{""Health-Conscious Harvest Salad"": 4, ""Veggie Victory Burger"": 3}","{""Health-Conscious Harvest Salad"": 2, ""Revolutionary Beet Burger"": 1, ""Veggie Victory Burger"": 1}","{""Blazing Buffalo Burger"": 2, ""Sizzling Steakhouse Salad"": 3, ""Freedom Burger"": 2, ""Patriot Pie"": 2, ""Liberty BBQ Ribs"": 2, ""Revolutionary Beet Burger"": 1}","{""Freedom Burger"": 1, ""Patriot Pie"": 1}",{},"{""Veggie Victory Burger"": 1}","{""Veggie Victory Burger"": 1}","{""Craft Ale-Battered Fish & Chips"": 1, ""Heirloom Tomato & Burrata Salad"": 1, ""Veggie Victory Burger"": 1}",{},{},{},"{""Patriotic Prime Ribeye"": 1, ""American Dream Apple Pie"": 1, ""Liberty Lobster Roll"": 1}","{""Heirloom Tomato & Burrata Salad"": 1}","{""Patriotic Prime Ribeye"": 1}"

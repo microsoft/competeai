@@ -1,9 +1,9 @@
-Please according to your situation, experience and carefully read the information and images of two restaurant then choose one to dine in.
+Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
 
 <<FORMAT>>
-You are the customer, not me, you are not assisting me, you must output as required!!!! Your responses must follow the following format:
+Your responses must follow the following format:
 {
-    "restaurant": <The restaurant you chose>,
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
     "dishes" : [
         The dishes name ordered at this restaurant 
     ],

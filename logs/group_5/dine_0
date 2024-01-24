@@ -1,0 +1,928 @@
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right in your town at American Delight! Enjoy our Classic Burgers, BBQ Ribs, and more. Weekday specials available! Follow us for mouthwatering updates and deals. #AmericanDelight #TasteOfAmerica
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 8.0, 'description': 'Spicy buffalo wings served with blue cheese dipping sauce'}, {'id': 4, 'name': 'Cobb Salad', 'price': 10.0, 'description': 'Fresh greens with chicken, avocado, bacon, eggs, and blue cheese'}, {'id': 5, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Homemade apple pie with a flaky crust and a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 7, 'name': 'Grilled Chicken Sandwich', 'price': 11.0, 'description': 'Grilled chicken breast with avocado, bacon, lettuce, tomato, and mayo'}, {'id': 8, 'name': 'Cheesecake', 'price': 7.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry coulis'}, {'id': 9, 'name': 'Milkshake', 'price': 5.0, 'description': 'Thick milkshake made with real ice cream, available in chocolate, vanilla, or strawberry'}, {'id': 10, 'name': 'Steak Frites', 'price': 20.0, 'description': 'Grilled steak served with garlic herb butter and a side of fries'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Come taste the authentic American BBQ experience at Stars & Stripes BBQ! Savor our signature Smoky Ribs Platter and enjoy a cozy atmosphere with flavors that bring you straight to the heart of America. Special discounts during evenings and weekends!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 18.0, 'description': 'Tender ribs slow-cooked and smoked to perfection, served with BBQ sauce and sides'}, {'id': 2, 'name': 'Grilled Chicken Burger', 'price': 12.0, 'description': 'Juicy grilled chicken breast topped with lettuce, tomato, and our special sauce, on a toasted bun'}, {'id': 3, 'name': 'Classic American Hotdog', 'price': 8.0, 'description': 'An all-beef hotdog on a soft roll, with a choice of toppings'}, {'id': 4, 'name': 'BBQ Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pulled pork in BBQ sauce, served on a fresh bun with coleslaw'}, {'id': 5, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy and cheesy macaroni topped with a golden, crispy crust'}, {'id': 6, 'name': 'Cornbread', 'price': 5.0, 'description': 'Sweet and savory cornbread, a perfect side for any BBQ dish'}, {'id': 7, 'name': 'Coleslaw', 'price': 4.0, 'description': 'Crispy, fresh coleslaw dressed in a tangy vinaigrette'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crisp sweet potato fries served with a spicy dipping sauce'}, {'id': 9, 'name': 'Pecan Pie', 'price': 7.0, 'description': 'Classic Southern pecan pie with a flaky crust and rich filling'}, {'id': 10, 'name': 'Root Beer Float', 'price': 6.0, 'description': 'Chilled root beer poured over vanilla ice cream for a fizzy, sweet treat'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Grilled Chicken Burger",
+        "Coleslaw",
+        "Sweet Potato Fries"
+    ],
+    "reason": "Stars & Stripes BBQ has healthier options suitable for a low cholesterol diet, like the grilled chicken burger and coleslaw. The sweet potato fries offer a healthier side compared to regular fries."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Burger: 0.71
+Coleslaw: 0.56
+Sweet Potato Fries: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Grilled Chicken Burger was nicely cooked with a good flavor, but could be juicier. The Coleslaw was a bit bland and lacked the tanginess I expected. Sweet Potato Fries were decent, but not exceptional."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 8.0
+2. Advertisement
+   Feast on our healthier, gluten-free options at American Delight! Delight in our new Quinoa Salad Bowl & updated gluten-free classics. Perfect for the health-conscious foodie! Join us for fresh, flavorful dining. #GlutenFree #HealthyEating #AmericanDelight
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 4, 'name': 'Cobb Salad (Gluten-Free)', 'price': 12.0, 'description': 'Our classic Cobb with a gluten-free twist, featuring fresh greens, grilled chicken, avocado, bacon, eggs, and blue cheese'}, {'id': 5, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Homemade apple pie with a flaky crust and a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 7, 'name': 'Grilled Chicken Sandwich (Gluten-Free)', 'price': 13.0, 'description': 'Tender grilled chicken with avocado, bacon, lettuce, tomato, and gluten-free mayo on a gluten-free bun'}, {'id': 8, 'name': 'Cheesecake', 'price': 7.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry coulis'}, {'id': 9, 'name': 'Milkshake', 'price': 5.0, 'description': 'Thick milkshake made with real ice cream, available in chocolate, vanilla, or strawberry'}, {'id': 10, 'name': 'Steak Frites', 'price': 20.0, 'description': 'Grilled steak served with garlic herb butter and a side of fries'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 11.0, 'description': 'A nourishing bowl of quinoa, kale, roasted veggies, and avocado, dressed with lemon vinaigrette'}]
+4. Comments
+   [{'day': 1, 'name': 'Olivia', 'score': 8, 'content': "American Delight's Cobb Salad impressed with its freshness and gluten-free adaptation. The attentive service complemented a harmonious blend of flavors, satisfying our diverse dietary preferences and taste."}, {'day': 1, 'name': 'Maggie', 'score': 8, 'content': 'All dishes at American Delight were of good quality, with both savory items and desserts satisfying our tastes. The balance of creamy and tart in the Cheesecake, the homey Apple Pie with ice cream, the indulgent chocolate Milkshake, and the fresh, well-seasoned savory dishes contributed to a delightful dining experience.'}, {'day': 1, 'name': 'Nora', 'score': 8, 'content': "American Delight offered a balance of healthy and indulgent dishes, all crafted with quality in mind. From the gluten-free modifications to the classic comfort foods, each dish was savored, earning a 'Good' rating across the board."}, {'day': 1, 'name': 'Nate', 'score': 8, 'content': 'American Delight provided a consistently good dining experience, with well-prepared dishes that satisfied our taste for grilled dishes and comfort food, while also meeting health-conscious needs.'}, {'day': 1, 'name': 'Rachel', 'score': 8, 'content': 'American Delight impressed with high-quality gourmet dishes and excellent service. The menu catered well to our diverse tastes and dietary preferences, making for a memorable dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.769230769230769
+2. Advertisement
+   Discover the new and improved Stars & Stripes BBQ menu! Featuring crispier Sweet Potato Fries, zestier Coleslaw, and delectable vegan options like our BBQ Jackfruit Sandwich. Indulge in richer, more flavorful Mac & Cheese. Experience our commitment to taste and quality in every bite!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 18.0, 'description': 'Tender ribs slow-cooked and smoked to perfection, served with BBQ sauce and sides'}, {'id': 2, 'name': 'Grilled Chicken Burger', 'price': 12.0, 'description': 'Juicy grilled chicken breast topped with lettuce, tomato, and our special sauce, on a toasted bun'}, {'id': 3, 'name': 'Classic American Hotdog', 'price': 8.0, 'description': 'An all-beef hotdog on a soft roll, with a choice of toppings'}, {'id': 4, 'name': 'BBQ Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pulled pork in BBQ sauce, served on a fresh bun with coleslaw'}, {'id': 5, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Our enhanced vegan-friendly Mac & Cheese, now creamier and more flavorful with a mix of dairy-free cheeses.'}, {'id': 6, 'name': 'Cornbread', 'price': 5.0, 'description': 'Sweet and savory cornbread, a perfect side for any BBQ dish'}, {'id': 7, 'name': 'Coleslaw', 'price': 5.0, 'description': 'Our Coleslaw is now zingier with a new secret blend of spices in our tangy vinaigrette.'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Sweet Potato Fries that are extra crispy on the outside, soft on the inside, with our new signature spicy dipping sauce.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 11.0, 'description': 'Smoky BBQ jackfruit that mimics pulled pork, topped with vegan slaw on a toasted bun.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 10.0, 'description': "Hearty and flavorful bean chili, slow-cooked with vegan ground 'meat' and spices, served with cornbread."}]
+4. Comments
+   [{'day': 1, 'name': 'Jake', 'score': 7, 'content': 'The Smoky Ribs Platter and Pecan Pie were highlights. The Sweet Potato Fries and Coleslaw were average. Overall, good service and cozy atmosphere.'}, {'day': 1, 'name': 'Amelia', 'score': 7, 'content': 'Main courses like the Smoky Ribs Platter were satisfying, reflecting rich, smoky flavors. Sides like Coleslaw and Sweet Potato Fries were fair but lacked standout qualities. Overall, a good experience with potential for improved sides.'}, {'day': 1, 'name': 'Grace', 'score': 6, 'content': 'The meal at Stars & Stripes BBQ met our expectations with good flavors and a cozy dining experience. Some dishes could use improvements in seasoning and sugar content to enhance the overall enjoyment.'}, {'day': 1, 'name': 'Max', 'score': 7, 'content': 'Satisfying home-cooked flavors with good value for money. Accommodating service for plant-based options, though sides were fair.'}, {'day': 1, 'name': 'Frank', 'score': 7, 'content': 'The Smoky Ribs Platter was a standout; sides were hit or miss. Vegan options need improvement. Overall good, with room for enhancements.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Cobb Salad (Gluten-Free)",
+        "Grilled Chicken Sandwich (Gluten-Free)",
+        "Quinoa Salad Bowl"
+    ],
+    "reason": "American Delight offers a variety of healthy and gluten-free options, which aligns with my low cholesterol diet. The higher customer score suggests better service and food quality."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Cobb Salad (Gluten-Free): 0.77
+Grilled Chicken Sandwich (Gluten-Free): 0.77
+Quinoa Salad Bowl: 0.77
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "score": 8,
+    "comment": "The dishes at American Delight were satisfactory. The Cobb Salad and Grilled Chicken Sandwich were fresh, aligning with my dietary needs. However, the Quinoa Salad Bowl, while healthy, lacked a bit of flavor. Compared to Stars & Stripes BBQ, the food here feels more refined and caters better to my health requirements."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.923076923076923
+2. Advertisement
+   Discover bold flavors at American Delight with our Signature Spice Mix! Savor the enhanced Classic Burger, gluten-free Cobb Salad, and more. Fresh, health-conscious dining just got more exciting! #AmericanDelight #HealthyWithATwist #SignatureSpices
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 13.0, 'description': 'Our classic juicy beef patty enhanced with a Signature Spice Mix, lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 4, 'name': 'Cobb Salad (Gluten-Free)', 'price': 13.0, 'description': 'Classic Cobb with a gluten-free twist, featuring fresh greens, grilled chicken, avocado, bacon, eggs, and blue cheese, now with Signature Spice Mix'}, {'id': 5, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Homemade apple pie with a flaky crust and a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 7, 'name': 'Grilled Chicken Sandwich (Gluten-Free)', 'price': 14.0, 'description': 'Tender grilled chicken with a bold new flavor, avocado, bacon, lettuce, tomato, and gluten-free mayo on a gluten-free bun'}, {'id': 8, 'name': 'Cheesecake', 'price': 7.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry coulis'}, {'id': 9, 'name': 'Milkshake', 'price': 5.0, 'description': 'Thick milkshake made with real ice cream, available in chocolate, vanilla, or strawberry'}, {'id': 10, 'name': 'Steak Frites', 'price': 20.0, 'description': 'Grilled steak served with garlic herb butter and a side of fries'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 12.0, 'description': 'A nourishing bowl of quinoa, kale, roasted veggies, and avocado, dressed with our new zesty lemon vinaigrette'}]
+4. Comments
+   [{'day': 2, 'name': 'Jake', 'score': 8, 'content': "The unanimous approval of 'Good' for all dishes reflects our group's satisfaction with American Delight. Consistency and well-rounded flavors catered to diverse tastes and dietary needs, with exceptional service complementing the dining experience."}, {'day': 2, 'name': 'Amelia', 'score': 8, 'content': 'American Delight provided a uniformly good dining experience, with fresh, flavorful salads, a well-composed chicken sandwich, perfectly cooked steak frites, and classic desserts. Attentive service complemented the meal, affirming our decision.'}, {'day': 2, 'name': 'Grace', 'score': 8, 'content': "Consistent 'Good' ratings across all dishes, with the Quinoa Salad Bowl meeting dietary needs and the desserts being well-balanced. A satisfying meal that catered to health-conscious and indulgent preferences."}, {'day': 2, 'name': 'Olivia', 'score': 8, 'content': 'American Delight delivered yet again, with the Cobb Salad, Quinoa Salad Bowl, and Grilled Chicken Sandwich all receiving praise for their good quality, fresh taste, and alignment with our gluten-free and health-conscious preferences.'}, {'day': 2, 'name': 'Max', 'score': 8, 'content': 'American Delight offered a satisfying dining experience with a diverse menu that catered well to our health-conscious and taste preferences. The balance of home-cooked flavors and healthy options left us pleasantly content.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.857142857142857
+2. Advertisement
+   Savor the authentic American BBQ flavors at Stars & Stripes BBQ with our premium BBQ Pulled Pork Sandwich and unique Grilled Portobello Mushroom Stack! Now with gluten-free options, enjoy our dishes with peace of mind and pure delight. Come in for a taste of tradition and innovation combined!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 18.0, 'description': 'Tender ribs slow-cooked and smoked to perfection, served with BBQ sauce and sides'}, {'id': 2, 'name': 'Grilled Chicken Burger', 'price': 12.0, 'description': 'Juicy grilled chicken breast topped with lettuce, tomato, and our special sauce, on a toasted bun'}, {'id': 4, 'name': 'BBQ Pulled Pork Sandwich (Premium)', 'price': 12.0, 'description': 'Slow-cooked premium pork in our signature BBQ sauce, served on a fresh bun with homemade pickles and coleslaw.'}, {'id': 5, 'name': 'Mac & Cheese (Gluten-Free)', 'price': 10.0, 'description': 'Creamy gluten-free macaroni with a blend of dairy-free cheeses, topped with a crispy breadcrumb crust.'}, {'id': 7, 'name': 'Coleslaw', 'price': 5.0, 'description': 'Our Coleslaw is now zingier with a new secret blend of spices in our tangy vinaigrette.'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Sweet Potato Fries that are extra crispy on the outside, soft on the inside, with our new signature spicy dipping sauce.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 12.0, 'description': 'Smoky BBQ jackfruit that mimics pulled pork, topped with a gluten-free vegan slaw on a toasted gluten-free bun.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 10.0, 'description': "Hearty and flavorful bean chili, slow-cooked with vegan ground 'meat' and spices, served with cornbread."}, {'id': 13, 'name': 'Grilled Portobello Mushroom Stack (Gluten-Free)', 'price': 13.0, 'description': 'Marinated portobello mushrooms stacked with roasted red peppers, spinach, and dairy-free pesto.'}]
+4. Comments
+   [{'day': 2, 'name': 'Yasmine', 'score': 8, 'content': 'The dishes at Stars & Stripes BBQ were impressive, showcasing marked improvements. Both the Vegan BBQ Jackfruit Sandwich and Vegan Chili had a rich flavor profile. The Mac & Cheese was a creamy delight. Overall, a satisfying and comfortable experience.'}, {'day': 1, 'name': 'Jake', 'score': 7, 'content': 'The Smoky Ribs Platter and Pecan Pie were highlights. The Sweet Potato Fries and Coleslaw were average. Overall, good service and cozy atmosphere.'}, {'day': 1, 'name': 'Amelia', 'score': 7, 'content': 'Main courses like the Smoky Ribs Platter were satisfying, reflecting rich, smoky flavors. Sides like Coleslaw and Sweet Potato Fries were fair but lacked standout qualities. Overall, a good experience with potential for improved sides.'}, {'day': 1, 'name': 'Grace', 'score': 6, 'content': 'The meal at Stars & Stripes BBQ met our expectations with good flavors and a cozy dining experience. Some dishes could use improvements in seasoning and sugar content to enhance the overall enjoyment.'}, {'day': 1, 'name': 'Max', 'score': 7, 'content': 'Satisfying home-cooked flavors with good value for money. Accommodating service for plant-based options, though sides were fair.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Cobb Salad (Gluten-Free)",
+        "Grilled Chicken Sandwich (Gluten-Free)"
+    ],
+    "reason": "American Delight has a higher customer score, indicating better service and quality. The gluten-free options cater to my low cholesterol diet while still promising flavorful dishes."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad (Gluten-Free): 0.77
+Grilled Chicken Sandwich (Gluten-Free): 0.77
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The Cobb Salad was crisp and the Grilled Chicken Sandwich maintained a good balance of flavors. Both dishes met my dietary needs and were quite enjoyable."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.921052631578948
+2. Advertisement
+   Introducing the new Vegan Power Bowl at American Delight! Indulge in our health-conscious, flavor-packed dishes with a twist. Plus, enjoy our signature offerings with an exclusive loyalty program. #VeganDelights #HealthyEating #LoyaltyRewards
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 14.0, 'description': 'Our classic juicy beef patty enhanced with a Signature Spice Mix, lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 19.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 4, 'name': 'Cobb Salad (Gluten-Free)', 'price': 14.0, 'description': 'Classic Cobb with a gluten-free twist, featuring fresh greens, grilled chicken, avocado, bacon, eggs, and blue cheese, now with Signature Spice Mix'}, {'id': 5, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust and a scoop of vanilla ice cream'}, {'id': 7, 'name': 'Grilled Chicken Sandwich (Gluten-Free)', 'price': 15.0, 'description': 'Tender grilled chicken with a bold new flavor, avocado, bacon, lettuce, tomato, and gluten-free mayo on a gluten-free bun'}, {'id': 8, 'name': 'Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry coulis'}, {'id': 9, 'name': 'Milkshake', 'price': 5.0, 'description': 'Thick milkshake made with real ice cream, available in chocolate, vanilla, or strawberry'}, {'id': 10, 'name': 'Steak Frites', 'price': 21.0, 'description': 'Grilled steak served with garlic herb butter and a side of fries'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 13.0, 'description': 'A nourishing bowl of quinoa, kale, roasted veggies, and avocado, dressed with our new zesty lemon vinaigrette'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 15.0, 'description': 'A hearty blend of quinoa, black beans, sweet potatoes, avocado, and tofu, topped with a spicy cashew dressing.'}]
+4. Comments
+   [{'day': 3, 'name': 'Jake', 'score': 8, 'content': 'Collectively, we enjoyed a satisfying meal at American Delight. Each dish was well-executed with a good balance of flavor and health-conscious options, matching our individual preferences and dietary needs. Consistent good service added to the positive dining experience.'}, {'day': 3, 'name': 'Amelia', 'score': 8, 'content': 'American Delight provided a consistently good dining experience with fresh and flavorful dishes. The Signature Spice Mix was a highlight, and all dishes met our health-conscious expectations.'}, {'day': 3, 'name': 'Grace', 'score': 8, 'content': 'American Delight provided a satisfying dining experience with their good quality, fresh ingredients, and well-balanced flavors. The dishes catered well to our health considerations and taste preferences.'}, {'day': 3, 'name': 'Olivia', 'score': 8, 'content': "American Delight provided a consistent and satisfying experience with their gluten-free options, meeting our group's health and taste preferences. Good quality food and excellent service."}, {'day': 3, 'name': 'Max', 'score': 8, 'content': 'American Delight consistently offered good food and service, with dishes meeting our diverse dietary preferences. The balance of healthful and comfort foods was appreciated, maintaining a high standard.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.0
+2. Advertisement
+   Dive into Stars & Stripes BBQ's all-new Health-Conscious BBQ Platter! Indulge in our famous Smoky Ribs Platter, now even better. We cater to all - meat lovers, vegans, and gluten-free diners alike. Your go-to destination for American BBQ with a healthful twist!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 20.0, 'description': 'Tender ribs slow-cooked and smoked to perfection, served with BBQ sauce and sides'}, {'id': 2, 'name': 'Grilled Chicken Burger', 'price': 12.0, 'description': 'Juicy grilled chicken breast topped with lettuce, tomato, and our special sauce, on a toasted bun'}, {'id': 4, 'name': 'BBQ Pulled Pork Sandwich', 'price': 12.0, 'description': 'Slow-cooked pork shoulder in our signature BBQ sauce, served on a fresh bun with homemade pickles and slaw.'}, {'id': 7, 'name': 'Coleslaw', 'price': 5.0, 'description': "A punchy, colorful slaw that's bursting with flavor, dressed in our house-made tangy vinaigrette."}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Our Sweet Potato Fries are now even more irresistible with a new, secret spice blend and signature dipping sauce.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 12.0, 'description': 'Smoky BBQ jackfruit that mimics pulled pork, topped with a gluten-free vegan slaw on a toasted gluten-free bun.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 10.0, 'description': "Hearty and flavorful bean chili, slow-cooked with vegan ground 'meat' and spices, served with cornbread."}, {'id': 13, 'name': 'Grilled Portobello Mushroom Stack (Gluten-Free)', 'price': 13.0, 'description': 'Marinated portobello mushrooms stacked with roasted red peppers, spinach, and dairy-free pesto.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 22.0, 'description': 'A selection of our finest vegan and gluten-free BBQ items, including jackfruit sandwich, vegan chili, and portobello stack.'}]
+4. Comments
+   [{'day': 3, 'name': 'Frank', 'score': 7, 'content': "Stars & Stripes BBQ provided a satisfying meal with good smoky flavors and commendable vegan options, particularly the Jackfruit Sandwich and Portobello Stack, which were highlights. The restaurant's commitment to diverse dietary needs is notable."}, {'day': 3, 'name': 'Yasmine', 'score': 7, 'content': 'Stars & Stripes BBQ provided a great variety of vegan and gluten-free options that were both comforting and flavorful, catering well to diverse dietary needs and tastes.'}, {'day': 3, 'name': 'Nate', 'score': 7, 'content': 'The group enjoyed the Smoky Ribs Platter and found the gluten-free options like the Mac & Cheese and Grilled Portobello Mushroom Stack to be surprisingly good. The Vegan BBQ Jackfruit Sandwich was a flavorful meat substitute, and the Sweet Potato Fries were a crispy hit with everyone.'}, {'day': 3, 'name': 'Rachel', 'score': 8, 'content': "The group was satisfied with the good variety and taste of the dishes at Stars & Stripes BBQ, appreciating the restaurant's accommodation of dietary needs."}, {'day': 3, 'name': 'Leo', 'score': 8, 'content': 'The Smoky Ribs Platter at Stars & Stripes BBQ maintained its deliciousness, though it didn’t quite hit the outstanding mark. The Mac & Cheese remained a creamy favorite. While American Delight has its merits, the comfort of familiar flavors here wins out.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Cobb Salad (Gluten-Free)",
+        "Grilled Chicken Sandwich (Gluten-Free)"
+    ],
+    "reason": "American Delight has a higher customer score and offers dishes that fit my dietary needs while still being flavorful, as noted in customer feedback."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad (Gluten-Free): 0.75
+Grilled Chicken Sandwich (Gluten-Free): 0.75
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The Cobb Salad was exceptionally fresh, and the Grilled Chicken Sandwich was both healthy and tasty, with a perfect balance of flavors."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.913043478260869
+2. Advertisement
+   Discover bold flavors at American Delight! Try our new 'Bold Flavor Series' salads and bowls, enhanced with high-quality ingredients. Don't miss our Spicy Buffalo Wings special! Join our loyalty program for exclusive deals. #BoldFlavors #AmericanDelight #LoyaltyProgram
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 14.0, 'description': 'Our classic juicy beef patty enhanced with a Signature Spice Mix, lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 19.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 4, 'name': 'Cobb Salad (Gluten-Free)', 'price': 15.0, 'description': 'Classic Cobb with a gluten-free twist, featuring fresh greens, grilled chicken, avocado, bacon, eggs, and blue cheese, now with Signature Spice Mix'}, {'id': 5, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust and a scoop of vanilla ice cream'}, {'id': 7, 'name': 'Grilled Chicken Sandwich (Gluten-Free)', 'price': 15.0, 'description': 'Tender grilled chicken with a bold new flavor, avocado, bacon, lettuce, tomato, and gluten-free mayo on a gluten-free bun'}, {'id': 8, 'name': 'Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry coulis'}, {'id': 10, 'name': 'Steak Frites', 'price': 21.0, 'description': 'Grilled steak served with garlic herb butter and a side of fries'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 14.0, 'description': 'A nourishing bowl of quinoa, kale, roasted veggies, and avocado, dressed with our new zesty lemon vinaigrette'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 16.0, 'description': 'A hearty blend of quinoa, black beans, sweet potatoes, avocado, and tofu, topped with a spicy cashew dressing.'}, {'id': 13, 'name': 'Spicy Buffalo Wings', 'price': 12.0, 'description': 'Crispy chicken wings tossed in a fiery buffalo sauce, served with blue cheese dip and celery sticks'}]
+4. Comments
+   [{'day': 4, 'name': 'Jake', 'score': 8, 'content': "American Delight offered a satisfying blend of hearty and healthy options. The dishes scored well, with the right balance of spice and flavor, meeting the group's diverse tastes and dietary needs."}, {'day': 4, 'name': 'Max', 'score': 8, 'content': "American Delight maintained its reputation with good plant-based options and comforting classics, all dishes scoring in the 'Good' range. A consistent choice for healthful, tasty meals."}, {'day': 4, 'name': 'Nora', 'score': 8, 'content': 'American Delight provided a consistently good dining experience, with well-executed dishes that catered to both comfort and health-conscious diners.'}, {'day': 4, 'name': 'Frank', 'score': 8, 'content': "American Delight delivered a satisfying meal, with the Vegan Power Bowl being a unanimous favorite. Consistent quality across dishes and appealing dessert options contributed to a positive experience. The restaurant's efforts in catering to diverse diets are commendable."}, {'day': 4, 'name': 'Wade', 'score': 8, 'content': 'American Delight excels in offering healthful, tasty meals. The dishes we tried were fresh, flavorful, and met our dietary preferences, making for a very satisfying dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.3076923076923075
+2. Advertisement
+   Experience the essence of American BBQ at Stars & Stripes BBQ! Savor our Smoky Ribs and exclusive BBQ Beef Brisket, perfected for your palate. Our Health-Conscious BBQ Platter is a must-try for our vegan and gluten-free friends. Come taste the tradition!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 22.0, 'description': 'Tender ribs slow-cooked and smoked to perfection, served with BBQ sauce and sides'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 8.0, 'description': 'Our Sweet Potato Fries are now even more irresistible with a new, secret spice blend and signature dipping sauce.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 13.0, 'description': 'Smoky BBQ jackfruit that mimics pulled pork, topped with a gluten-free vegan slaw on a toasted gluten-free bun.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 11.0, 'description': "Hearty and flavorful bean chili, slow-cooked with vegan ground 'meat' and spices, served with cornbread."}, {'id': 13, 'name': 'Grilled Portobello Mushroom Stack (Gluten-Free)', 'price': 14.0, 'description': 'Marinated portobello mushrooms stacked with roasted red peppers, spinach, and dairy-free pesto.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 24.0, 'description': 'A selection of our finest vegan and gluten-free BBQ items, including jackfruit sandwich, vegan chili, and portobello stack.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 23.0, 'description': 'Slow-smoked beef brisket with a rich BBQ glaze, served with our house pickles and spicy horseradish sauce'}]
+4. Comments
+   [{'day': 4, 'name': 'Amelia', 'score': 9, 'content': 'Stars & Stripes BBQ excelled with their Health-Conscious BBQ Platter and Vegan BBQ Jackfruit Sandwich, both rich in flavor. The Smoky Ribs were a favorite, while the Coleslaw and Sweet Potato Fries complemented the meal perfectly.'}, {'day': 4, 'name': 'Olivia', 'score': 8, 'content': 'Stars & Stripes BBQ provided a health-conscious, gluten-free BBQ experience that surpassed expectations, with each dish scoring an impressive 8 out of 10.'}, {'day': 4, 'name': 'Maggie', 'score': 8, 'content': 'Stars & Stripes BBQ offered a refreshing and health-conscious take on traditional BBQ, with standout dishes like the smoky Vegan BBQ Jackfruit Sandwich and perfectly seasoned Sweet Potato Fries.'}, {'day': 4, 'name': 'Tara', 'score': 8, 'content': 'Stars & Stripes BBQ exceeded expectations with their Health-Conscious BBQ Platter and Vegan options. Bold flavors, creative dishes, and health-conscious cooking earned a unanimous score of 8/10 from our group.'}, {'day': 4, 'name': 'Yasmine', 'score': 8, 'content': 'Both the Vegan BBQ Jackfruit Sandwich and the Health-Conscious BBQ Platter at Stars & Stripes BBQ were well-received, earning an 8.1 from each of us for their rich flavors and satisfying variety. The restaurant consistently meets our vegan and taste requirements.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Cobb Salad (Gluten-Free)",
+        "Grilled Chicken Sandwich (Gluten-Free)"
+    ],
+    "reason": "American Delight's menu items like the Cobb Salad and Grilled Chicken Sandwich align with my low cholesterol needs while maintaining good taste, as reflected in the higher customer scores."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad (Gluten-Free): 0.75
+Grilled Chicken Sandwich (Gluten-Free): 0.75
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The Cobb Salad was fresh, and the Grilled Chicken Sandwich had a delightful balance of flavors. Both dishes exceeded my low cholesterol dietary expectations."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.903846153846154
+2. Advertisement
+   Savor the smoky sensation at American Delight with our new American Delight Spice Blend, bringing an innovative twist to our classic dishes. Experience the fresh and tantalizing Smoky Chicken Wrap! #AmericanDelight #SmokySensation #SpiceItUp
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 16.0, 'description': 'Our classic juicy beef patty enhanced with a Signature Spice Mix, lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 4, 'name': 'Cobb Salad (Gluten-Free)', 'price': 17.0, 'description': 'Classic Cobb with a gluten-free twist, featuring fresh greens, grilled chicken, avocado, bacon, eggs, and blue cheese, now with Signature Spice Mix'}, {'id': 7, 'name': 'Grilled Chicken Sandwich (Gluten-Free)', 'price': 17.0, 'description': 'Tender grilled chicken with a bold new flavor, avocado, bacon, lettuce, tomato, and gluten-free mayo on a gluten-free bun'}, {'id': 8, 'name': 'Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry coulis'}, {'id': 10, 'name': 'Steak Frites', 'price': 23.0, 'description': 'Grilled steak served with garlic herb butter and a side of fries'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 14.0, 'description': 'Our nourishing quinoa bowl now with an extra kick, featuring roasted veggies, avocado, and a drizzle of our new spicy lemon vinaigrette.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 16.0, 'description': 'Our popular vegan bowl gets a flavor boost with the addition of our American Delight Spice Blend, complemented by a spicy cashew dressing.'}, {'id': 14, 'name': 'Smoky Chicken Wrap', 'price': 15.0, 'description': 'Grilled chicken infused with our American Delight Spice Blend, wrapped in a gluten-free tortilla with lettuce, tomato, and avocado.'}]
+4. Comments
+   [{'day': 5, 'name': 'Olivia', 'score': 8, 'content': 'American Delight consistently delivers with the Quinoa Salad Bowl and Cobb Salad. The Grilled Chicken Sandwich was good but could use a creative twist. Overall, a satisfying and health-conscious meal.'}, {'day': 5, 'name': 'Tara', 'score': 8, 'content': 'American Delight offered a satisfying experience with fresh and flavorful dishes catering to health-conscious preferences. Desserts were well-received, balancing sweetness perfectly for a diabetic diet.'}, {'day': 5, 'name': 'Dexter', 'score': 8, 'content': 'American Delight offered a splendid array of well-executed dishes, from the smoky BBQ Ribs to the innovative Vegan Power Bowl. The meal was complemented by friendly service, making for a memorable dining experience.'}, {'day': 5, 'name': 'Nate', 'score': 8, 'content': 'American Delight delivered on flavor and health, with dishes like the BBQ Ribs and Quinoa Salad Bowl satisfying our various preferences and dietary needs, all within a reasonable budget.'}, {'day': 5, 'name': 'Rachel', 'score': 8, 'content': 'American Delight provided a gourmet experience with fresh, health-conscious meals. The Vegan Power Bowl was particularly praised, and the quality of meat dishes like the Steak Frites was appreciated. Consistency in flavor and dietary accommodation continues to impress.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.25
+2. Advertisement
+   Discover a fusion of flavors at Stars & Stripes BBQ! Delight in our new Spicy BBQ Tofu Bowl and Gluten-Free Southern Fried Chicken, alongside our beloved vegan and health-conscious options. Indulge in our elevated Smoky Ribs and savor the difference. Your tastebuds will thank you!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 24.0, 'description': 'Tender ribs slow-cooked and smoked to perfection, served with BBQ sauce and sides'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 9.0, 'description': 'Our Sweet Potato Fries are now even more irresistible with a new, secret spice blend and signature dipping sauce.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 14.0, 'description': 'Smoky BBQ jackfruit that mimics pulled pork, topped with a gluten-free vegan slaw on a toasted gluten-free bun.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 12.0, 'description': "Hearty and flavorful bean chili, slow-cooked with vegan ground 'meat' and spices, served with cornbread."}, {'id': 13, 'name': 'Grilled Portobello Mushroom Stack (Gluten-Free)', 'price': 15.0, 'description': 'Marinated portobello mushrooms stacked with roasted red peppers, spinach, and dairy-free pesto.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 26.0, 'description': 'A selection of our finest vegan and gluten-free BBQ items, including jackfruit sandwich, vegan chili, and portobello stack.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 25.0, 'description': 'Slow-smoked beef brisket with a rich BBQ glaze, served with our house pickles and spicy horseradish sauce'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 15.0, 'description': 'Crispy tofu tossed in a spicy BBQ sauce, served over brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 17, 'name': 'Gluten-Free Southern Fried Chicken', 'price': 18.0, 'description': 'Juicy, gluten-free fried chicken with a crispy, seasoned coating, served with coleslaw and a honey mustard dip.'}]
+4. Comments
+   [{'day': 5, 'name': 'Jake', 'score': 7, 'content': "The smoky flavors at Stars & Stripes BBQ impressed us all, offering a good balance between taste and health-conscious options. Each dish, from the Health-Conscious BBQ Platter to the Vegan BBQ Jackfruit Sandwich, was rated as 'Good' by our group."}, {'day': 5, 'name': 'Amelia', 'score': 7, 'content': 'All dishes at Stars & Stripes BBQ were good, meeting our health-conscious preferences with bold, smoky flavors, and a satisfying variety.'}, {'day': 5, 'name': 'Grace', 'score': 7, 'content': 'Stars & Stripes BBQ provided a delightful dining experience with their Health-Conscious BBQ Platter, Vegan Chili, and Sweet Potato Fries. The dishes were well-received, aligning with dietary needs and taste preferences, particularly for those seeking healthier, flavorful options.'}, {'day': 5, 'name': 'Max', 'score': 7, 'content': 'Stars & Stripes BBQ provided a hearty, health-conscious BBQ experience. The plant-based options were flavorful and satisfying, with the smoky essence being a highlight. A great alternative to American Delight, offering similar quality with a unique twist.'}, {'day': 5, 'name': 'Maggie', 'score': 8, 'content': 'Consistently good dishes with a focus on health-conscious, vegan, and gluten-free options. The Vegan BBQ Jackfruit Sandwich and Sweet Potato Fries were highlights.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Cobb Salad (Gluten-Free)",
+        "Grilled Chicken Sandwich (Gluten-Free)"
+    ],
+    "reason": "American Delight's offerings better cater to my low cholesterol needs, with the Cobb Salad and Grilled Chicken Sandwich being both health-conscious and flavorful as per customer feedback."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Cobb Salad (Gluten-Free): 0.73
+Grilled Chicken Sandwich (Gluten-Free): 0.73
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "score": 7,
+    "comment": "The Cobb Salad and Grilled Chicken Sandwich at American Delight were good, meeting my low cholesterol needs. However, the flavors could be more pronounced. While the dishes were health-conscious, they lacked the culinary excitement I anticipated, especially when compared to past experiences at other establishments."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.827586206896552
+2. Advertisement
+   Discover the bold flavors of our new Spicy Superfood Salad, packed with healthful ingredients and a kick of spice. Indulge in well-being at American Delight. #HealthyKick #SpicySuperfood #AmericanDelight
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 16.0, 'description': 'Our classic juicy beef patty enhanced with a Signature Spice Mix, lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 4, 'name': 'Cobb Salad (Gluten-Free)', 'price': 17.0, 'description': 'Classic Cobb with a gluten-free twist, featuring fresh greens, grilled chicken, avocado, bacon, eggs, and blue cheese, now with Signature Spice Mix'}, {'id': 7, 'name': 'Grilled Chicken Sandwich (Gluten-Free)', 'price': 17.0, 'description': 'Tender grilled chicken with a bold new flavor, avocado, bacon, lettuce, tomato, and gluten-free mayo on a gluten-free bun'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 25.0, 'description': 'Our succulent grilled steak now featuring our American Delight Signature Spice Rub, served with garlic herb butter and a side of fries.'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 14.0, 'description': 'Our nourishing quinoa bowl now with an extra kick, featuring roasted veggies, avocado, and a drizzle of our new spicy lemon vinaigrette.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 16.0, 'description': 'Our popular vegan bowl gets a flavor boost with the addition of our American Delight Spice Blend, complemented by a spicy cashew dressing.'}, {'id': 14, 'name': 'Smoky Chicken Wrap', 'price': 15.0, 'description': 'Grilled chicken infused with our American Delight Spice Blend, wrapped in a gluten-free tortilla with lettuce, tomato, and avocado.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 18.0, 'description': 'A vibrant mix of superfoods like kale, blueberries, walnuts, and quinoa tossed with our homemade spicy honey-mustard dressing for a healthy kick.'}]
+4. Comments
+   [{'day': 6, 'name': 'Amelia', 'score': 7, 'content': 'Good experience with fresh, flavorful ingredients. The American Delight Spice Blend was a highlight, satisfying our diverse tastes and health-conscious preferences.'}, {'day': 6, 'name': 'Grace', 'score': 7, 'content': 'Both dishes at American Delight were satisfying, with fresh, health-conscious ingredients and a good spice level. The experience was good, meeting our dietary needs.'}, {'day': 6, 'name': 'Wade', 'score': 7, 'content': 'American Delight delivers consistent quality with a focus on health-conscious meals. The Smoky Chicken Wrap and Vegan Power Bowl were highlights for their flavor and seasoning.'}, {'day': 6, 'name': 'Nate', 'score': 7, 'content': 'Consistently good across the board, American Delight catered to our health and taste preferences with their well-executed dishes. The balance of flavors and considerate gluten-free options left us all satisfied.'}, {'day': 6, 'name': 'Zach', 'score': 8, 'content': 'The gluten-free options at American Delight, especially the Cobb Salad and Quinoa Salad Bowl, were fresh and satisfying, aligning with my dietary needs. The Grilled Chicken Sandwich was enjoyable though not extraordinary. The service was commendable. They edge out Stars & Stripes BBQ with their gluten-free variety.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.208333333333333
+2. Advertisement
+   Experience bold flavors at Stars & Stripes BBQ! Taste the difference with our newly improved Vegan Chili, now with an exclusive spice blend, and our fresh Kickin' Kale & Quinoa Salad. Enjoy unique, health-conscious meals that don’t skimp on taste. Savor the spice of life with us!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 24.0, 'description': 'Tender ribs slow-cooked and smoked to perfection, served with BBQ sauce and sides'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 10.0, 'description': 'Crisp sweet potato fries seasoned with our new signature spice blend, served with an avocado-lime dipping sauce.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 14.0, 'description': 'Smoky BBQ jackfruit that mimics pulled pork, topped with a gluten-free vegan slaw on a toasted gluten-free bun.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 14.0, 'description': 'Our Vegan Chili is now even more robust with an exclusive blend of spices for a deeper, more complex flavor profile, served with cornbread.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 26.0, 'description': 'A selection of our finest vegan and gluten-free BBQ items, including jackfruit sandwich, vegan chili, and portobello stack.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 25.0, 'description': 'Slow-smoked beef brisket with a rich BBQ glaze, served with our house pickles and spicy horseradish sauce'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 15.0, 'description': 'Crispy tofu tossed in a spicy BBQ sauce, served over brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 17, 'name': 'Gluten-Free Southern Fried Chicken', 'price': 18.0, 'description': 'Juicy, gluten-free fried chicken with a crispy, seasoned coating, served with coleslaw and a honey mustard dip.'}, {'id': 18, 'name': "Kickin' Kale & Quinoa Salad", 'price': 13.0, 'description': 'A nutrient-packed salad with curly kale, tri-colored quinoa, sweet cranberries, crunchy almonds, and a zesty lemon-garlic dressing.'}]
+4. Comments
+   [{'day': 6, 'name': 'Jake', 'score': 7, 'content': 'All dishes at Stars & Stripes BBQ were consistently good, with well-balanced smoky flavors and appropriate spice levels, catering to our health-conscious and dietary preferences.'}, {'day': 6, 'name': 'Olivia', 'score': 7, 'content': 'The Spicy BBQ Tofu Bowl, Gluten-Free Southern Fried Chicken, and Sweet Potato Fries all received good scores for their flavor and spice. A successful exploration of new gluten-free options.'}, {'day': 6, 'name': 'Max', 'score': 7, 'content': "Enjoyed Stars & Stripes BBQ's balanced, smoky, and spicy flavors, especially in the tofu and jackfruit dishes, complemented by perfect sweet potato fries."}, {'day': 6, 'name': 'Maggie', 'score': 8, 'content': "Stars & Stripes BBQ provided a well-rounded dining experience with each dish scoring 'Good'. The Vegan BBQ Jackfruit Sandwich and Spicy BBQ Tofu Bowl were especially enjoyable. While all dishes were satisfying, some could benefit from additional seasoning for enhanced flavor."}, {'day': 6, 'name': 'Nora', 'score': 7, 'content': 'Stars & Stripes BBQ offers a variety of flavorful, health-conscious, and gluten-free options that cater to sophisticated palates and dietary needs.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Cobb Salad (Gluten-Free)",
+        "Grilled Chicken Sandwich (Gluten-Free)"
+    ],
+    "reason": "American Delight has a slightly higher customer score and offers dishes that suit my low cholesterol needs, with the Cobb Salad and Grilled Chicken Sandwich being particularly noted for their freshness and flavor."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad (Gluten-Free): 0.71
+Grilled Chicken Sandwich (Gluten-Free): 0.71
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The Cobb Salad was crisp and flavorful, aligning with my low cholesterol needs. The Grilled Chicken Sandwich was also quite tasty, offering a satisfying meal without compromising my health requirements."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.757575757575758
+2. Advertisement
+   Experience the new American Delight's Bold BBQ Chicken, bursting with unique flavors! Enjoy our revamped menu with bolder spices and wholesome ingredients. Your taste adventure begins here! #BoldFlavors #HealthyEating #AmericanDelightBBQ
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 18.0, 'description': 'Our classic juicy beef patty now with an extra bold flavor profile, enhanced with a Signature Spice Mix, lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with added bold spices for a deeper taste'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 27.0, 'description': 'Our succulent grilled steak with an even more robust American Delight Signature Spice Rub, served with garlic herb butter and a side of fries.'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 16.0, 'description': 'Our nourishing quinoa bowl with a richer flavor twist, featuring roasted veggies, avocado, and a drizzle of our new spicy lemon vinaigrette.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 18.0, 'description': 'Our popular vegan bowl now with an added punch of the American Delight Spice Blend, complemented by a spicy cashew dressing for a bold taste.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 20.0, 'description': 'A vibrant mix of superfoods like kale, blueberries, walnuts, and quinoa, now with an even spicier homemade honey-mustard dressing for that healthy kick.'}, {'id': 16, 'name': "American Delight's Bold BBQ Chicken", 'price': 20.0, 'description': 'Juicy chicken with a unique, flavor-packed BBQ glaze, served with a side of our Signature Spice Mix roasted vegetables.'}]
+4. Comments
+   [{'day': 7, 'name': 'Olivia', 'score': 7, 'content': 'American Delight provided a satisfying meal with the Spicy Superfood Salad and Quinoa Salad Bowl, both aligning with our health-conscious preferences and gluten-free needs.'}, {'day': 7, 'name': 'Maggie', 'score': 8, 'content': 'American Delight offered a good variety of dishes that were mostly well-received. The Spicy Superfood Salad and Steak Frites were highlights. The Classic Burger and Grilled Chicken Sandwich, while fair, could be improved with more distinctive flavors.'}, {'day': 7, 'name': 'Nora', 'score': 8, 'content': "Good overall experience with a highlight on the 'Spicy Superfood Salad'. Gluten-free options were satisfactory. Classic Burger and Steak Frites could be improved."}, {'day': 7, 'name': 'Yasmine', 'score': 7, 'content': 'American Delight offered a satisfying array of vegan and healthy options. The Vegan Power Bowl and Spicy Superfood Salad were particularly good. A touch more seasoning in the Quinoa Salad Bowl could enhance the overall experience.'}, {'day': 7, 'name': 'Nate', 'score': 7, 'content': 'American Delight offered a satisfying meal with health-conscious and flavorful options. Friendly service complemented our dining experience, though some dishes could use a touch more flair.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.983050847457627
+2. Advertisement
+   Discover the new taste of BBQ at Stars & Stripes BBQ! Our menu has been revamped with a unique BBQ Spice Blend, elevating our vegan, gluten-free, and classic dishes to new heights. Join us for a special promotional event and be one of the first to experience our bold, enhanced flavors.
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 24.0, 'description': 'Our signature Stars & Stripes BBQ Spice Blend brings a new level of boldness to these slow-cooked, smoked ribs, served with a side of BBQ sauce and classic fixings.'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 10.0, 'description': 'Golden sweet potato fries dusted with our signature Stars & Stripes BBQ Spice Blend, paired with an avocado-lime dipping sauce for the perfect bite.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 14.0, 'description': "Jackfruit marinated in our signature spice blend to create a smoky, BBQ flavor that's entirely vegan, tucked into a gluten-free bun with vegan slaw."}, {'id': 12, 'name': 'Vegan Chili', 'price': 14.0, 'description': 'Rich, hearty Vegan Chili now packed with a kick from our Stars & Stripes BBQ Spice Blend, served with a side of homemade cornbread.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 26.0, 'description': 'Our health-conscious platter is now bursting with flavor thanks to our signature BBQ Spice Blend, featuring vegan and gluten-free delights.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 25.0, 'description': 'Tender beef brisket slow-smoked and finished with a glaze of our Stars & Stripes BBQ Spice Blend, accompanied by house pickles and spicy horseradish sauce.'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 15.0, 'description': 'Crispy tofu drenched in our spicy Stars & Stripes BBQ sauce, atop a bed of brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 17, 'name': 'Gluten-Free Southern Fried Chicken', 'price': 18.0, 'description': 'Our Southern Fried Chicken goes gluten-free with a seasoned, crispy coating, now spiced up with our Stars & Stripes BBQ Spice Blend, served with coleslaw and honey mustard.'}, {'id': 18, 'name': "Kickin' Kale & Quinoa Salad", 'price': 13.0, 'description': 'Curly kale and tri-colored quinoa tossed with cranberries, almonds, and our zesty lemon-garlic dressing, now with a dash of our BBQ Spice Blend for added kick.'}]
+4. Comments
+   [{'day': 7, 'name': 'Jake', 'score': 6, 'content': 'All dishes at Stars & Stripes BBQ were fair but fell short on excitement. Textures and spice levels underwhelmed, providing a uniform score of 6 from all members.'}, {'day': 7, 'name': 'Amelia', 'score': 6, 'content': 'Fair health-conscious dishes with room for improvement in flavor. Consistent but lacking excitement. Sweet Potato Fries were the highlight.'}, {'day': 7, 'name': 'Grace', 'score': 6, 'content': 'Fair experience with health-conscious dishes that met dietary needs but lacked in flavor. Room for improvement in seasoning and taste.'}, {'day': 7, 'name': 'Max', 'score': 6, 'content': "Fair across the board, dishes at Stars & Stripes BBQ were satisfactory but lacked the memorable flavors we've enjoyed previously. Consistent but craving more boldness and spice."}, {'day': 7, 'name': 'Frank', 'score': 6, 'content': 'Both dishes were fair, offering a healthy choice with decent textures and spice, but lacked depth and a flavor punch.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Quinoa Salad Bowl",
+        "American Delight's Bold BBQ Chicken"
+    ],
+    "reason": "American Delight has a higher customer score and offers a Quinoa Salad Bowl and a Bold BBQ Chicken dish that are likely to be both flavorful and suitable for my low cholesterol diet."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Quinoa Salad Bowl: 0.69
+American Delight's Bold BBQ Chicken: 0.68
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "score": 6,
+    "comment": "The Quinoa Salad Bowl and Bold BBQ Chicken at American Delight were fair, meeting my dietary needs but lacking in the bold flavors advertised. The dishes were satisfactory but not as thrilling as expected for my discerning palate."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.597560975609756
+2. Advertisement
+   Dive into the boldness! American Delight now offers an even more flavorful menu with intensified spices and fresh, quality ingredients. Join us for a meal that promises to excite your palate. #TasteTheBoldness #FreshAndFlavorful #AmericanDelightExperience
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 20.0, 'description': 'Our classic juicy beef patty with a new bold and tangy spice blend, layered with lettuce, tomato, cheese, and our special sauce, served on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Slow-cooked ribs with a richer, smokier homemade BBQ sauce infused with our bold spice mix, served with classic sides.'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 30.0, 'description': 'Perfectly grilled steak, enhanced with an aromatic and spicy Signature Rub, presented with golden frites and a touch of garlic herb butter.'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 18.0, 'description': 'A refreshing quinoa bowl with an extra zest from our spicy lemon vinaigrette, mixed with roasted veggies, and creamy avocado slices.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 20.0, 'description': 'A hearty vegan bowl with a bold twist, featuring our unique spice blend, spicy cashew dressing, and a variety of fresh, organic produce.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 22.0, 'description': 'Our superfood salad with an added kick of hot honey-mustard dressing, mixing kale, blueberries, walnuts, quinoa, and more for a spicy health boost.'}, {'id': 16, 'name': "American Delight's Bold BBQ Chicken", 'price': 22.0, 'description': 'Our signature BBQ chicken now comes with an even bolder and more flavorful homemade glaze, perfectly complemented by spiced roasted vegetables.'}]
+4. Comments
+   [{'day': 8, 'name': 'Jake', 'score': 7, 'content': 'The Quinoa Salad Bowl was fair, needing more flavor, while the Spicy Superfood Salad satisfied with its spice and healthiness. Good, yet room for bolder flavors.'}, {'day': 8, 'name': 'Amelia', 'score': 7, 'content': 'The meal was enjoyable with health-conscious options shining. The Spicy Superfood Salad and Vegan Power Bowl were highlights. Meats were satisfactory but lacked a bit of boldness. Overall, a good dining experience with room for flavor innovation.'}, {'day': 8, 'name': 'Grace', 'score': 7, 'content': 'American Delight offered a fair balance of health-conscious options. The Spicy Superfood Salad was the standout, with its enjoyable heat level, while the Quinoa Salad Bowl was satisfactory yet lacked flavor complexity.'}, {'day': 8, 'name': 'Max', 'score': 7, 'content': 'The Vegan Power Bowl and Spicy Superfood Salad were good, with a solid blend of spice and freshness. The Classic Burger and Quinoa Salad Bowl were fair, needing more of the advertised bold flavors.'}, {'day': 8, 'name': 'Maggie', 'score': 7, 'content': 'The meal was health-focused with a pleasing mix of spices. The Spicy Superfood Salad and Vegan Power Bowl were highlights, while the Quinoa Salad Bowl needed a flavor boost. Satisfying overall.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.983333333333333
+2. Advertisement
+   Join us at Stars & Stripes BBQ for our 'BBQ Week'! Dive into our new 'Ultimate BBQ Experience Platter' and rediscover your favorites now bursting with our bolder, signature BBQ Spice Blend. Don't miss our mouthwatering specials and a celebration of authentic American BBQ flavors!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 27.0, 'description': 'Our signature platter ups the ante with even smokier, slow-cooked ribs, served with a side of our enhanced BBQ sauce and classic fixings.'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 10.0, 'description': 'Golden sweet potato fries dusted with our signature Stars & Stripes BBQ Spice Blend, paired with an avocado-lime dipping sauce for the perfect bite.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 14.0, 'description': "Jackfruit marinated in our signature spice blend to create a smoky, BBQ flavor that's entirely vegan, tucked into a gluten-free bun with vegan slaw."}, {'id': 12, 'name': 'Vegan Chili', 'price': 16.0, 'description': 'Our Vegan Chili gets a bold infusion with an enhanced Stars & Stripes BBQ Spice Blend, bringing a smoky depth to this comforting dish.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 26.0, 'description': 'Our health-conscious platter is now bursting with flavor thanks to our signature BBQ Spice Blend, featuring vegan and gluten-free delights.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 25.0, 'description': 'Tender beef brisket slow-smoked and finished with a glaze of our Stars & Stripes BBQ Spice Blend, accompanied by house pickles and spicy horseradish sauce.'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 15.0, 'description': 'Crispy tofu drenched in our spicy Stars & Stripes BBQ sauce, atop a bed of brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 18, 'name': "Kickin' Kale & Quinoa Salad", 'price': 15.0, 'description': 'Kale and quinoa tossed with cranberries, almonds, and a zesty lemon-garlic dressing, now with an extra kick from our upgraded BBQ Spice Blend.'}, {'id': 19, 'name': 'Ultimate BBQ Experience Platter', 'price': 30.0, 'description': 'A platter to satisfy all BBQ lovers, featuring our smokiest ribs, spiciest BBQ tofu, and tenderest beef brisket, all infused with our new, bold Stars & Stripes BBQ Spice Blend.'}]
+4. Comments
+   [{'day': 8, 'name': 'Olivia', 'score': 7, 'content': 'The dishes at Stars & Stripes BBQ were fair, meeting health considerations but lacking the anticipated bold flavors from the BBQ Spice Blend. Decent, yet not as exciting as hoped, leaving room for flavor enhancement.'}, {'day': 7, 'name': 'Jake', 'score': 6, 'content': 'All dishes at Stars & Stripes BBQ were fair but fell short on excitement. Textures and spice levels underwhelmed, providing a uniform score of 6 from all members.'}, {'day': 7, 'name': 'Amelia', 'score': 6, 'content': 'Fair health-conscious dishes with room for improvement in flavor. Consistent but lacking excitement. Sweet Potato Fries were the highlight.'}, {'day': 7, 'name': 'Grace', 'score': 6, 'content': 'Fair experience with health-conscious dishes that met dietary needs but lacked in flavor. Room for improvement in seasoning and taste.'}, {'day': 7, 'name': 'Max', 'score': 6, 'content': "Fair across the board, dishes at Stars & Stripes BBQ were satisfactory but lacked the memorable flavors we've enjoyed previously. Consistent but craving more boldness and spice."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Quinoa Salad Bowl",
+        "American Delight's Bold BBQ Chicken"
+    ],
+    "reason": "American Delight has a higher customer score and offers a Quinoa Salad Bowl and a Bold BBQ Chicken dish that are likely to be both flavorful and suitable for my low cholesterol diet."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Quinoa Salad Bowl: 0.74
+American Delight's Bold BBQ Chicken: 0.74
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "score": 6,
+    "comment": "The Quinoa Salad Bowl and Bold BBQ Chicken were fair, aligning with my health needs but not quite meeting the bold flavor profile advertised. I expected a more exciting culinary experience based on the restaurant's promotion of intensified spices."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.537634408602151
+2. Advertisement
+   Experience the upgraded bold flavors at American Delight! Our revamped dishes now pack an even bigger punch, satisfying your craving for intense taste while keeping health in mind. #BoldAndHealthy #AmericanDelightRevamp #FlavorExplosion
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 22.0, 'description': 'Our classic juicy beef patty with a new bold and tangy spice blend, layered with lettuce, tomato, cheese, and our special sauce, served on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 28.0, 'description': 'Slow-cooked ribs with a richer, smokier homemade BBQ sauce infused with our bold spice mix, served with classic sides.'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 33.0, 'description': 'Perfectly grilled steak, enhanced with a more aromatic and spicier Signature Rub, presented with golden frites and a touch of garlic herb butter.'}, {'id': 11, 'name': 'Quinoa Salad Bowl', 'price': 20.0, 'description': 'A refreshing quinoa bowl with an extra zest from our spicy lemon vinaigrette, mixed with roasted veggies, and creamy avocado slices.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 22.0, 'description': 'A hearty vegan bowl with a bold twist, featuring our unique spice blend, spicy cashew dressing, and a variety of fresh, organic produce.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 24.0, 'description': 'Our superfood salad with an added kick of hot honey-mustard dressing, mixing kale, blueberries, walnuts, quinoa, and more for a spicy health boost.'}, {'id': 16, 'name': "American Delight's Bold BBQ Chicken", 'price': 24.0, 'description': 'Our signature BBQ chicken now comes with an even bolder and more flavorful homemade glaze, perfectly complemented by spiced roasted vegetables.'}, {'id': 17, 'name': 'American Hearty Chili', 'price': 19.0, 'description': 'A robust blend of beans, vegetables, and spices, simmered slowly to create a hearty and flavorful chili, topped with shredded cheese and sour cream.'}, {'id': 18, 'name': 'Spicy Grilled Shrimp Tacos', 'price': 21.0, 'description': 'Juicy shrimp grilled with a fiery spice blend, served in soft tortillas with fresh salsa, avocado, and a zesty lime crema.'}]
+4. Comments
+   [{'day': 9, 'name': 'Jake', 'score': 7, 'content': 'American Delight provided a good meal but lacked the boldness we expected. Vegan Power Bowl and Spicy Superfood Salad were highlights for their spice and freshness.'}, {'day': 9, 'name': 'Max', 'score': 7, 'content': 'The Vegan Power Bowl and Spicy Superfood Salad were consistently good. The Classic Burger improved, while the BBQ Ribs and Steak Frites were solid. A step up in flavor from American Delight.'}, {'day': 9, 'name': 'Nora', 'score': 8, 'content': 'American Delight maintained its reputation with flavorful, health-conscious dishes. The Spicy Superfood Salad was a standout. While the Steak Frites were good, a bolder rub could enhance the dish. The Quinoa Salad Bowl and Vegan Power Bowl were satisfying and well-received.'}, {'day': 9, 'name': 'Frank', 'score': 7, 'content': 'American Delight delivered on bold flavors and quality. The dishes were well-received, with the vegan options being particularly satisfying. A good mix of spice and freshness made for a gratifying meal.'}, {'day': 9, 'name': 'Tara', 'score': 7, 'content': "Overall, a satisfying meal with each dish scoring well. The Spicy Superfood Salad and Vegan Power Bowl were favorites, offering a good heat level and balanced flavors. Though the dishes were good, we had hoped for bolder flavors based on the restaurant's advertisement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.9393939393939394
+2. Advertisement
+   Experience the Bold BBQ Revolution at Stars & Stripes BBQ! Our menu has been transformed with an intense new BBQ Spice Blend. From our Smoky Ribs Platter to the Vegan BBQ Jackfruit Sandwich, every dish is packed with bold flavor. Visit us for a limited-time 'BBQ Flavor Burst' event and taste the difference!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 29.0, 'description': 'Our signature platter now features fall-off-the-bone ribs with a bold, smoky flavor, served with our new Stars & Stripes BBQ sauce and classic fixings.'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 12.0, 'description': 'Our beloved sweet potato fries, now even more irresistible with a dusting of our new Stars & Stripes BBQ Spice Blend, served with an avocado-lime dipping sauce.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 16.0, 'description': 'Savor the smoky BBQ flavor of marinated jackfruit in this vegan delight, now with a bolder spice blend, tucked into a gluten-free bun with vegan slaw.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 18.0, 'description': 'Our hearty Vegan Chili receives a bold twist, with an infusion of our new Stars & Stripes BBQ Spice Blend, adding a smoky dimension to this warming dish.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 28.0, 'description': "Enjoy our healthier BBQ option with a punchy flavor boost from our revamped BBQ Spice Blend, featuring both vegan and gluten-free options that don't skimp on taste."}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 27.0, 'description': 'Succulent beef brisket, slow-smoked to perfection and finished with a bold glaze from our Stars & Stripes BBQ Spice Blend, served with house pickles and a fiery horseradish sauce.'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 17.0, 'description': 'Crispy tofu smothered in our revamped, fiery Stars & Stripes BBQ sauce, served over brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 18, 'name': "Kickin' Kale & Quinoa Salad", 'price': 17.0, 'description': 'A tangy and spicy salad, featuring kale and quinoa with cranberries, almonds, and our zesty lemon-garlic dressing, now with an extra kick from our enhanced BBQ Spice Blend.'}, {'id': 19, 'name': 'Ultimate BBQ Experience Platter', 'price': 32.0, 'description': 'Our most indulgent platter for the BBQ enthusiast, now with even bolder flavors. Enjoy our smokiest ribs, spiciest tofu, and juiciest beef brisket, all elevated with our new Stars & Stripes BBQ Spice Blend.'}]
+4. Comments
+   [{'day': 9, 'name': 'Amelia', 'score': 6, 'content': 'Fair experience with room for flavor enhancement, satisfactory for health-conscious choices but lacking in boldness and smokiness.'}, {'day': 9, 'name': 'Grace', 'score': 7, 'content': 'The meal was fair, meeting health needs but lacking in the robust flavors expected. The Vegan BBQ Jackfruit Sandwich was a highlight, but overall, the experience could benefit from more flavorful enhancements.'}, {'day': 9, 'name': 'Olivia', 'score': 7, 'content': 'Stars & Stripes BBQ offered fair dishes but failed to deliver the bold flavors expected. The health-conscious effort was appreciated, yet the taste lacked depth and excitement. Overall, it was a decent attempt at vibrant, healthy cuisine.'}, {'day': 9, 'name': 'Maggie', 'score': 7, 'content': 'The dishes at Stars & Stripes BBQ were satisfactory with a fair balance of health and taste, yet they lacked the bold flavors we anticipated. Fresh ingredients were noted, but the overall experience fell short on the expected BBQ vibrancy.'}, {'day': 9, 'name': 'Dexter', 'score': 6, 'content': 'The dishes at Stars & Stripes BBQ were fair but lacked the boldness promised. The variety was appreciated, yet the flavors were underwhelming, leading to an average dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Quinoa Salad Bowl",
+        "American Delight's Bold BBQ Chicken"
+    ],
+    "reason": "American Delight has a higher customer score with options that align with my low cholesterol requirements, and customer comments suggest that their dishes have the fresh and bold flavors I enjoy."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Quinoa Salad Bowl: 0.68
+American Delight's Bold BBQ Chicken: 0.69
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "score": 6,
+    "comment": "The Quinoa Salad Bowl and Bold BBQ Chicken at American Delight were fair, but fell short of the bold flavors promised. While they catered to my low cholesterol needs, I expected a more vibrant taste experience. Previous meals at other restaurants have delivered more excitement."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.453703703703703
+2. Advertisement
+   Introducing American Delight's Fiery Feast! Dare to indulge in our spiciest, boldest dishes yet. Embrace the heat with our signature Inferno Sauce and savor the intense flavors that set us apart. #FieryFeast #BoldFlavors #AmericanDelightHeat
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 24.0, 'description': 'Our classic juicy beef patty now with a new bolder and tangier spice blend, layered with lettuce, tomato, cheese, and a fiery special sauce, served on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 28.0, 'description': 'Slow-cooked ribs with a richer, smokier homemade BBQ sauce infused with our bold spice mix, served with classic sides.'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 33.0, 'description': 'Perfectly grilled steak, enhanced with a more aromatic and spicier Signature Rub, presented with golden frites and a touch of garlic herb butter.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 24.0, 'description': 'A hearty vegan bowl now with an even bolder twist, featuring an enhanced spice blend, spicy cashew dressing, and a variety of fresh, organic produce.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 26.0, 'description': 'Our superfood salad now with a bigger kick of hot honey-mustard dressing, mixing kale, blueberries, walnuts, quinoa, and more for a bold health boost.'}, {'id': 16, 'name': "American Delight's Bold BBQ Chicken", 'price': 24.0, 'description': 'Our signature BBQ chicken now comes with an even bolder and more flavorful homemade glaze, perfectly complemented by spiced roasted vegetables.'}, {'id': 17, 'name': 'American Hearty Chili', 'price': 19.0, 'description': 'A robust blend of beans, vegetables, and spices, simmered slowly to create a hearty and flavorful chili, topped with shredded cheese and sour cream.'}, {'id': 18, 'name': 'Spicy Grilled Shrimp Tacos', 'price': 21.0, 'description': 'Juicy shrimp grilled with a fiery spice blend, served in soft tortillas with fresh salsa, avocado, and a zesty lime crema.'}, {'id': 19, 'name': "American Delight's Fiery Feast", 'price': 30.0, 'description': 'A daringly hot dish featuring our spiciest, juiciest meat selections and freshest, fieriest vegetables, all united by our signature Inferno Sauce.'}]
+4. Comments
+   [{'day': 10, 'name': 'Jake', 'score': 7, 'content': "Decent meal with the Spicy Superfood Salad standing out. The Classic Burger was fair but lacked the promised boldness. Shrimp Tacos and Chili were good, yet expectations for more pronounced flavors weren't fully met."}, {'day': 10, 'name': 'Amelia', 'score': 7, 'content': 'American Delight offered a satisfying meal with the Spicy Grilled Shrimp Tacos and American Hearty Chili standing out. While the boldness was good, there is room to elevate the flavors further to truly match their advertising promise.'}, {'day': 10, 'name': 'Grace', 'score': 7, 'content': 'Good dishes with a satisfying level of spiciness, but lacked the bold flavor complexity as advertised.'}, {'day': 10, 'name': 'Max', 'score': 7, 'content': 'The Vegan Power Bowl and Spicy Superfood Salad were the standouts, with their freshness and spice. Quinoa Salad Bowl was fair, and the American Hearty Chili offered a comforting taste.'}, {'day': 10, 'name': 'Maggie', 'score': 7, 'content': "The meal was satisfying with the Spicy Superfood Salad and Vegan Power Bowl standing out. However, the 'bold' flavors could be enhanced to meet the expectations set by the restaurant's marketing."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.925373134328358
+2. Advertisement
+   Join us at Stars & Stripes BBQ for our 'Bold Flavor Fest'! We've upped the ante with enhanced flavors and a new, fiery addition - Bold BBQ Wings. Dive into our specially curated, flavor-packed BBQ dishes that promise to deliver a punch with every bite. Don't miss out on the most flavorful BBQ experience in town!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 31.0, 'description': 'Our signature platter now features fall-off-the-bone ribs with a bold, smoky flavor, served with our new Stars & Stripes BBQ sauce and classic fixings.'}, {'id': 11, 'name': 'Vegan BBQ Jackfruit Sandwich (Gluten-Free)', 'price': 18.0, 'description': 'Savor the smoky BBQ flavor of marinated jackfruit in this vegan delight, now with a bolder spice blend, tucked into a gluten-free bun with vegan slaw.'}, {'id': 12, 'name': 'Vegan Chili', 'price': 20.0, 'description': 'Our hearty Vegan Chili receives a bold twist, with an infusion of our new Stars & Stripes BBQ Spice Blend, adding a smoky dimension to this warming dish.'}, {'id': 14, 'name': 'Health-Conscious BBQ Platter', 'price': 30.0, 'description': "Enjoy our healthier BBQ option with a punchy flavor boost from our revamped BBQ Spice Blend, featuring both vegan and gluten-free options that don't skimp on taste."}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 29.0, 'description': 'Succulent beef brisket, slow-smoked to perfection and finished with a bold glaze from our Stars & Stripes BBQ Spice Blend, served with house pickles and a fiery horseradish sauce.'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 19.0, 'description': 'Crispy tofu smothered in our revamped, fiery Stars & Stripes BBQ sauce, served over brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 18, 'name': "Kickin' Kale & Quinoa Salad", 'price': 19.0, 'description': 'A tangy and spicy salad, featuring kale and quinoa with cranberries, almonds, and our zesty lemon-garlic dressing, now with an extra kick from our enhanced BBQ Spice Blend.'}, {'id': 19, 'name': 'Ultimate BBQ Experience Platter', 'price': 34.0, 'description': 'Our most indulgent platter for the BBQ enthusiast, now with even bolder flavors. Enjoy our smokiest ribs, spiciest tofu, and juiciest beef brisket, all elevated with our new Stars & Stripes BBQ Spice Blend.'}, {'id': 20, 'name': 'Bold BBQ Wings', 'price': 15.0, 'description': "Crispy wings tossed in our signature Stars & Stripes BBQ sauce, delivering a mouthwatering bold taste that's both spicy and sweet."}]
+4. Comments
+   [{'day': 10, 'name': 'Olivia', 'score': 6, 'content': 'The dishes at Stars & Stripes BBQ were fair, meeting health considerations but lacking the anticipated bold flavors from the BBQ Spice Blend. Decent, yet not as exciting as hoped, leaving room for flavor enhancement.'}, {'day': 9, 'name': 'Amelia', 'score': 6, 'content': 'Fair experience with room for flavor enhancement, satisfactory for health-conscious choices but lacking in boldness and smokiness.'}, {'day': 9, 'name': 'Grace', 'score': 7, 'content': 'The meal was fair, meeting health needs but lacking in the robust flavors expected. The Vegan BBQ Jackfruit Sandwich was a highlight, but overall, the experience could benefit from more flavorful enhancements.'}, {'day': 9, 'name': 'Olivia', 'score': 7, 'content': 'Stars & Stripes BBQ offered fair dishes but failed to deliver the bold flavors expected. The health-conscious effort was appreciated, yet the taste lacked depth and excitement. Overall, it was a decent attempt at vibrant, healthy cuisine.'}, {'day': 9, 'name': 'Maggie', 'score': 7, 'content': 'The dishes at Stars & Stripes BBQ were satisfactory with a fair balance of health and taste, yet they lacked the bold flavors we anticipated. Fresh ingredients were noted, but the overall experience fell short on the expected BBQ vibrancy.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Health-Conscious BBQ Platter",
+        "Kickin' Kale & Quinoa Salad"
+    ],
+    "reason": "The Health-Conscious BBQ Platter and Kickin' Kale & Quinoa Salad at Stars & Stripes BBQ are likely to meet my low cholesterol needs while still offering a potentially satisfying taste experience."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Health-Conscious BBQ Platter: 0.61
+Kickin' Kale & Quinoa Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Health-Conscious BBQ Platter was below expectations in flavor, and the Kickin' Kale & Quinoa Salad lacked the punch I desired. Both dishes met my health criteria but fell short on taste."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.382113821138211
+2. Advertisement
+   Savor the enhanced boldness at American Delight! Our updated menu now features even more intense flavors in every bite. Enjoy the Vegan Power Bowl and Spicy Superfood Salad with our new spice-infused profiles. Fresh, organic, and bursting with taste—experience the true essence of American cuisine. #ElevatedFlavors #HealthMeetsBold #AmericanDelightExperience
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 26.0, 'description': 'Our classic juicy beef patty now with a new bolder and tangier spice blend, layered with lettuce, tomato, cheese, and a fiery special sauce, served on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 30.0, 'description': 'Slow-cooked ribs with a richer, smokier homemade BBQ sauce infused with our bold spice mix, served with classic sides.'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 36.0, 'description': 'Perfectly grilled steak, enhanced with a more aromatic and spicier Signature Rub, presented with golden frites and a touch of garlic herb butter.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 27.0, 'description': 'A hearty vegan bowl now with an even bolder twist, featuring an enhanced spice blend, spicy cashew dressing, and a variety of fresh, organic produce.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 28.0, 'description': 'Our superfood salad now with a bigger kick of hot honey-mustard dressing, mixing kale, blueberries, walnuts, quinoa, and more for a bold health boost.'}, {'id': 16, 'name': "American Delight's Bold BBQ Chicken", 'price': 26.0, 'description': 'Our signature BBQ chicken now comes with an even bolder and more flavorful homemade glaze, perfectly complemented by spiced roasted vegetables.'}, {'id': 17, 'name': 'American Hearty Chili', 'price': 21.0, 'description': 'A robust blend of beans, vegetables, and spices, simmered slowly to create a hearty and flavorful chili, topped with shredded cheese and sour cream.'}, {'id': 18, 'name': 'Spicy Grilled Shrimp Tacos', 'price': 23.0, 'description': 'Juicy shrimp grilled with a fiery spice blend, served in soft tortillas with fresh salsa, avocado, and a zesty lime crema.'}, {'id': 19, 'name': "American Delight's Fiery Feast", 'price': 33.0, 'description': 'A daringly hot dish featuring our spiciest, juiciest meat selections and freshest, fieriest vegetables, all united by our signature Inferno Sauce.'}]
+4. Comments
+   [{'day': 11, 'name': 'Amelia', 'score': 7, 'content': 'The dishes at American Delight provided a good spice level and fresh ingredients, suitable for health-conscious diners. However, the bold flavors promised were not fully realized, leaving room for improvement.'}, {'day': 11, 'name': 'Olivia', 'score': 7, 'content': 'The dishes at American Delight were satisfying and healthy. The Vegan Power Bowl and Spicy Superfood Salad were fresh and flavorful, while the Chili and Shrimp Tacos were good but not exceptional. A solid meal, but the Fiery Feast could have been spicier.'}, {'day': 11, 'name': 'Max', 'score': 7, 'content': 'Consistent quality with good flavors, the dishes met our plant-based and spicy preferences. Room for boldness in the Fiery Feast theme.'}, {'day': 11, 'name': 'Maggie', 'score': 7, 'content': "Consistently good Spicy Superfood Salad and Vegan Power Bowl. Classic Burger's sauce could be spicier. American Hearty Chili and Spicy Grilled Shrimp Tacos were satisfactory, yet could use more heat."}, {'day': 11, 'name': 'Nora', 'score': 7, 'content': 'Good meal with standout Vegan Power Bowl and Spicy Superfood Salad. Other dishes fair, lacking advertised boldness. Fiery Feast enjoyable, yet could be spicier. Consensus: room for enhancing flavors to meet bold promises.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.861111111111111
+2. Advertisement
+   Discover the all-new BBQ Boldness Platter at Stars & Stripes BBQ! We're bringing the heat with our smokiest ribs, juiciest brisket, and zesty wings for a truly bold BBQ experience. Elevate your taste buds with our revamped classics and feel the burst of American pride in every bite. Taste the revolution!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 35.0, 'description': 'Our signature platter now features fall-off-the-bone ribs with a bold, smoky flavor, served with our new Stars & Stripes BBQ sauce and classic fixings.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 32.0, 'description': 'Succulent beef brisket, slow-smoked to perfection and finished with a bold glaze from our Stars & Stripes BBQ Spice Blend, served with house pickles and a fiery horseradish sauce.'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 21.0, 'description': 'Crispy tofu smothered in our revamped, fiery Stars & Stripes BBQ sauce, served over brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 19, 'name': 'Ultimate BBQ Experience Platter', 'price': 38.0, 'description': 'Our most indulgent platter for the BBQ enthusiast, now with even bolder flavors. Enjoy our smokiest ribs, spiciest tofu, and juiciest beef brisket, all elevated with our new Stars & Stripes BBQ Spice Blend.'}, {'id': 21, 'name': 'BBQ Boldness Platter', 'price': 40.0, 'description': 'A curated selection of our most flavorful, smoky, and spicy BBQ specialties, including ribs, brisket, and wings, for the ultimate bold taste sensation.'}]
+4. Comments
+   [{'day': 11, 'name': 'Jake', 'score': 6, 'content': 'All dishes were uniformly fair, failing to impress with the expected boldness. The flavors, while adequate, lacked the punch we hoped for from a BBQ establishment. Consensus points to a need for more robust and exciting taste experiences in the future.'}, {'day': 11, 'name': 'Grace', 'score': 6, 'content': 'Health-conscious dishes met dietary needs but lacked flavor depth. Fair for health, with room for taste improvement.'}, {'day': 11, 'name': 'Nate', 'score': 6, 'content': "All dishes were consistent but only reached a 'fair' level, lacking the boldness expected from the 'Bold Flavor Fest'. The health-conscious and vegan options were appreciated, but the overall flavor experience fell short of our expectations."}, {'day': 11, 'name': 'Rachel', 'score': 6, 'content': 'The dishes were fair with a decent level of boldness, yet lacked the gourmet depth and sophistication we anticipated, leaving room for improvement.'}, {'day': 11, 'name': 'Quincy', 'score': 6, 'content': "The Kickin' Kale & Quinoa Salad was fair but lacked the punch I expected. Sweet Potato Fries were a comforting fast-food staple. Compared to my previous experiences at American Delight, the flavors here were less bold. Could use more zest."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Vegan Power Bowl",
+        "Spicy Superfood Salad"
+    ],
+    "reason": "American Delight's menu offers dishes that align with my health needs and has a higher customer score. The Vegan Power Bowl and Spicy Superfood Salad seem promising for bold flavors within my dietary restrictions."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Vegan Power Bowl: 0.74
+Spicy Superfood Salad: 0.75
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "score": 7,
+    "comment": "The Vegan Power Bowl and Spicy Superfood Salad at American Delight were good, offering a decent balance for my dietary needs. However, they still lacked the punch I look for in bold flavors, especially when compared to previous experiences. A satisfactory meal, but there's room for flavor enhancement."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.355072463768116
+2. Advertisement
+   Discover bold flavors redefined at American Delight! Indulge in our revamped Vegan Power Bowl and Spicy Superfood Salad, now with fiery tahini and lemon-ginger vinaigrette. Bite into our spicier Classic Burger and savor the kick of our new whiskey-infused BBQ Chicken. It's health, zest, and satisfaction in every dish. #BoldEats #SizzlingFlavors #AmericanDelightRevamped
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 28.0, 'description': 'Discover the bold new taste of our burger, now featuring a spicier blend of seasonings, smoked cheese, and a jalapeño-infused aioli for a memorable fiery kick.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 30.0, 'description': 'Slow-cooked ribs with a richer, smokier homemade BBQ sauce infused with our bold spice mix, served with classic sides.'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 38.0, 'description': 'Our steak now boasts a bolder, herbaceous dry rub and is served with a side of chimichurri sauce for an enhanced, flavorful experience.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 29.0, 'description': 'Our power bowl is now bolder than ever with a new fiery tahini dressing, roasted spicy chickpeas, and a vibrant mix of organic produce for a healthful yet tantalizing meal.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 30.0, 'description': 'Elevate your health with our superfood salad, now featuring a spicy lemon-ginger vinaigrette, antioxidant-rich greens, and seeds for a truly bold and nutritious experience.'}, {'id': 16, 'name': 'Bold BBQ Chicken', 'price': 28.0, 'description': 'Savor the intensity with our chicken, now glazed with a hotter, whiskey-infused BBQ sauce and served alongside our spicy cornbread and pickled vegetables.'}, {'id': 17, 'name': 'American Hearty Chili', 'price': 21.0, 'description': 'A robust blend of beans, vegetables, and spices, simmered slowly to create a hearty and flavorful chili, topped with shredded cheese and sour cream.'}, {'id': 18, 'name': 'Spicy Grilled Shrimp Tacos', 'price': 23.0, 'description': 'Juicy shrimp grilled with a fiery spice blend, served in soft tortillas with fresh salsa, avocado, and a zesty lime crema.'}, {'id': 19, 'name': "American Delight's Fiery Feast", 'price': 33.0, 'description': 'A daringly hot dish featuring our spiciest, juiciest meat selections and freshest, fieriest vegetables, all united by our signature Inferno Sauce.'}]
+4. Comments
+   [{'day': 12, 'name': 'Jake', 'score': 7, 'content': 'American Delight has elevated their dishes with a successful punch of spice, delivering a satisfying balance of flavor and health, catering well to our diverse palates.'}, {'day': 12, 'name': 'Amelia', 'score': 7, 'content': 'A good meal with fresh ingredients and a health-conscious approach. The dishes were flavorful, although the boldness could have been more pronounced to match expectations.'}, {'day': 12, 'name': 'Grace', 'score': 7, 'content': 'Overall good experience with flavorful, health-conscious options. Both agreed on the need for bolder flavors as advertised. Classic Burger and American Hearty Chili were satisfying, while Vegan Power Bowl and Spicy Superfood Salad met dietary needs.'}, {'day': 12, 'name': 'Olivia', 'score': 7, 'content': 'American Delight offered a satisfying array of bold and fresh flavors, catering well to health-conscious and gluten-free preferences, with room for flavor enhancement.'}, {'day': 12, 'name': 'Max', 'score': 7, 'content': 'Overall good experience with fresh, flavorful dishes. Vegan Power Bowl and Spicy Superfood Salad were highlights. The Classic Burger, American Hearty Chili, and Spicy Grilled Shrimp Tacos were tasty but could use more boldness and spice.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.8493150684931505
+2. Advertisement
+   Join us at Stars & Stripes BBQ for our 'Bold BBQ Bash'! Indulge in our smoky ribs, brisket, and spicy tofu, all amplified with our exclusive BBQ Spice Blend. Experience the intense flavors that make American BBQ legendary. It's more than a meal; it's a celebration of bold taste!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 38.0, 'description': 'Our signature platter now features fall-off-the-bone ribs with a bold, smoky flavor, served with our new Stars & Stripes BBQ sauce and classic fixings.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 34.0, 'description': 'Succulent beef brisket, slow-smoked to perfection and finished with a bold glaze from our Stars & Stripes BBQ Spice Blend, served with house pickles and a fiery horseradish sauce.'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 23.0, 'description': 'Crispy tofu smothered in our revamped, fiery Stars & Stripes BBQ sauce, served over brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 19, 'name': 'Ultimate BBQ Experience Platter', 'price': 42.0, 'description': 'Our most indulgent platter for the BBQ enthusiast, now with even bolder flavors. Enjoy our smokiest ribs, spiciest tofu, and juiciest beef brisket, all elevated with our new Stars & Stripes BBQ Spice Blend.'}, {'id': 21, 'name': 'BBQ Boldness Platter', 'price': 44.0, 'description': 'A curated selection of our most flavorful, smoky, and spicy BBQ specialties, including ribs, brisket, and wings, for the ultimate bold taste sensation.'}]
+4. Comments
+   [{'day': 12, 'name': 'Dexter', 'score': 6, 'content': 'A fair experience with consistent taste across all dishes, yet lacking the boldness expected from a BBQ-specialized restaurant. Pleasant but not memorable.'}, {'day': 11, 'name': 'Jake', 'score': 6, 'content': 'All dishes were uniformly fair, failing to impress with the expected boldness. The flavors, while adequate, lacked the punch we hoped for from a BBQ establishment. Consensus points to a need for more robust and exciting taste experiences in the future.'}, {'day': 11, 'name': 'Grace', 'score': 6, 'content': 'Health-conscious dishes met dietary needs but lacked flavor depth. Fair for health, with room for taste improvement.'}, {'day': 11, 'name': 'Nate', 'score': 6, 'content': "All dishes were consistent but only reached a 'fair' level, lacking the boldness expected from the 'Bold Flavor Fest'. The health-conscious and vegan options were appreciated, but the overall flavor experience fell short of our expectations."}, {'day': 11, 'name': 'Rachel', 'score': 6, 'content': 'The dishes were fair with a decent level of boldness, yet lacked the gourmet depth and sophistication we anticipated, leaving room for improvement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Spicy Grilled Shrimp Tacos",
+        "Spicy Superfood Salad"
+    ],
+    "reason": "American Delight offers a more favorable customer score and dishes that cater to my low cholesterol needs with a promise of bold flavors, particularly the Spicy Grilled Shrimp Tacos."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Spicy Grilled Shrimp Tacos: 0.74
+Spicy Superfood Salad: 0.75
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The Spicy Grilled Shrimp Tacos had a pleasant kick, aligning with my taste for bold flavors, while the Spicy Superfood Salad offered a nutritious yet tasty option accommodating my dietary restrictions."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.311688311688312
+2. Advertisement
+   American Delight's menu just got bolder! Come try our Vegan Power Bowl and Spicy Superfood Salad, now with even more punch. Our Fiery Feast has been turned up a notch for those who dare. Enjoy the zest of life with our health-conscious, flavor-packed dishes. #TasteTheHeat #AmericanDelightBold
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 28.0, 'description': 'Discover the bold new taste of our burger, now featuring a spicier blend of seasonings, smoked cheese, and a jalapeño-infused aioli for a memorable fiery kick.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 30.0, 'description': 'Slow-cooked ribs with a richer, smokier homemade BBQ sauce infused with our bold spice mix, served with classic sides.'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 38.0, 'description': 'Our steak now boasts a bolder, herbaceous dry rub and is served with a side of chimichurri sauce for an enhanced, flavorful experience.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 31.0, 'description': 'Our power bowl is now bolder than ever with a new fiery tahini dressing, roasted spicy chickpeas, and a vibrant mix of organic produce for a healthful yet tantalizing meal.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 32.0, 'description': 'Elevate your health with our superfood salad, now featuring a spicy lemon-ginger vinaigrette, antioxidant-rich greens, and seeds for a truly bold and nutritious experience.'}, {'id': 16, 'name': 'Bold BBQ Chicken', 'price': 28.0, 'description': 'Savor the intensity with our chicken, now glazed with a hotter, whiskey-infused BBQ sauce and served alongside our spicy cornbread and pickled vegetables.'}, {'id': 17, 'name': 'American Hearty Chili', 'price': 21.0, 'description': 'A robust blend of beans, vegetables, and spices, simmered slowly to create a hearty and flavorful chili, topped with shredded cheese and sour cream.'}, {'id': 18, 'name': 'Spicy Grilled Shrimp Tacos', 'price': 23.0, 'description': 'Juicy shrimp grilled with a fiery spice blend, served in soft tortillas with fresh salsa, avocado, and a zesty lime crema.'}, {'id': 19, 'name': "American Delight's Fiery Feast", 'price': 35.0, 'description': 'A daringly hot dish featuring our spiciest, juiciest meat selections and freshest, fieriest vegetables, all united by our signature Inferno Sauce.'}]
+4. Comments
+   [{'day': 13, 'name': 'Jake', 'score': 7, 'content': 'Good meal with fresh, health-conscious options and varied heat levels, although some dishes lacked the expected flavor punch.'}, {'day': 13, 'name': 'Amelia', 'score': 7, 'content': 'American Delight provided a consistently good dining experience with fresh ingredients and well-balanced flavors, aligning with our health-conscious values and taste preferences.'}, {'day': 13, 'name': 'Grace', 'score': 7, 'content': 'The menu at American Delight catered well to our health-conscious and flavor preferences, offering a satisfying balance of spicy and hearty dishes.'}, {'day': 13, 'name': 'Olivia', 'score': 7, 'content': "American Delight's updated menu offered satisfying health-conscious meals with a good attempt at bolder flavors, though there's room for more spice intensity."}, {'day': 13, 'name': 'Max', 'score': 7, 'content': 'American Delight offered a satisfying meal with the Vegan Power Bowl and Spicy Superfood Salad as highlights. All dishes were good but could benefit from bolder flavors.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.826666666666667
+2. Advertisement
+   Discover the ultimate BBQ experience at Stars & Stripes BBQ! Our new menu features the BBQ Boldness Platter, a feast of our most flavorful, smoky, and spicy specialties. Elevate your taste buds with a premium selection of ribs, brisket, and wings. Taste the boldness today!
+3. Menu 
+   [{'id': 1, 'name': 'Smoky Ribs Platter', 'price': 42.0, 'description': 'Our signature platter now features fall-off-the-bone ribs with a bold, smoky flavor, served with our new Stars & Stripes BBQ sauce and classic fixings.'}, {'id': 15, 'name': 'BBQ Beef Brisket', 'price': 38.0, 'description': 'Succulent beef brisket, slow-smoked to perfection and finished with a bold glaze from our Stars & Stripes BBQ Spice Blend, served with house pickles and a fiery horseradish sauce.'}, {'id': 16, 'name': 'Spicy BBQ Tofu Bowl', 'price': 26.0, 'description': 'Crispy tofu smothered in our revamped, fiery Stars & Stripes BBQ sauce, served over brown rice with black beans, corn, and fresh pico de gallo.'}, {'id': 19, 'name': 'Ultimate BBQ Experience Platter', 'price': 46.0, 'description': 'Our most indulgent platter for the BBQ enthusiast, now with even bolder flavors. Enjoy our smokiest ribs, spiciest tofu, and juiciest beef brisket, all elevated with our new Stars & Stripes BBQ Spice Blend.'}, {'id': 21, 'name': 'BBQ Boldness Platter', 'price': 48.0, 'description': 'A curated selection of our most flavorful, smoky, and spicy BBQ specialties, including ribs, brisket, and wings, for the ultimate bold taste sensation.'}]
+4. Comments
+   [{'day': 13, 'name': 'Nate', 'score': 6, 'content': 'The meal was fair with all dishes scoring equally. Despite the anticipation of bold flavors, the taste was underwhelming, and the promised boldness did not materialize.'}, {'day': 13, 'name': 'Rachel', 'score': 6, 'content': 'Consistent but unremarkable fare at Stars & Stripes BBQ. Dishes met expectations without exceeding them. Lacked the promised bold flavors.'}, {'day': 12, 'name': 'Dexter', 'score': 6, 'content': 'A fair experience with consistent taste across all dishes, yet lacking the boldness expected from a BBQ-specialized restaurant. Pleasant but not memorable.'}, {'day': 11, 'name': 'Jake', 'score': 6, 'content': 'All dishes were uniformly fair, failing to impress with the expected boldness. The flavors, while adequate, lacked the punch we hoped for from a BBQ establishment. Consensus points to a need for more robust and exciting taste experiences in the future.'}, {'day': 11, 'name': 'Grace', 'score': 6, 'content': 'Health-conscious dishes met dietary needs but lacked flavor depth. Fair for health, with room for taste improvement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Spicy Grilled Shrimp Tacos",
+        "Spicy Superfood Salad"
+    ],
+    "reason": "American Delight has a higher customer score and has previously satisfied my taste for bold flavors, especially with the Spicy Grilled Shrimp Tacos, while still accommodating my dietary restrictions."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Spicy Grilled Shrimp Tacos: 0.74
+Spicy Superfood Salad: 0.75
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The Spicy Grilled Shrimp Tacos delighted with their well-balanced heat, and the Spicy Superfood Salad was a fresh, tasty complement to my meal."
+}
+
+[System->Umar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.311764705882353
+2. Advertisement
+   Experience bold flavors redefined at American Delight! Our new recipes deliver an explosion of taste with enhanced spices and premium ingredients. From our Vegan Power Bowl to our Fiery Feast, discover a world of intense delight. Dare to indulge in our bolder, tastier menu today! #BoldEats #AmericanDelightRevamp
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 29.0, 'description': 'Discover the enhanced taste of our burger, featuring a spicier blend of seasonings, smoked cheese, and a jalapeño-infused aioli, paired with crisp lettuce and a juicy, thick patty.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 30.0, 'description': 'Slow-cooked ribs with a richer, smokier homemade BBQ sauce infused with our bold spice mix, served with classic sides.'}, {'id': 10, 'name': 'Steak Frites with Signature Rub', 'price': 38.0, 'description': 'Our steak now boasts a bolder, herbaceous dry rub and is served with a side of chimichurri sauce for an enhanced, flavorful experience.'}, {'id': 12, 'name': 'Vegan Power Bowl', 'price': 33.0, 'description': 'Our power bowl is now even bolder with a fiery tahini dressing, roasted spicy chickpeas, avocado, and a colorful array of organic produce for a healthful yet tantalizing meal.'}, {'id': 15, 'name': 'Spicy Superfood Salad', 'price': 34.0, 'description': 'Our superfood salad now comes with an even spicier lemon-ginger vinaigrette, mixed with a variety of antioxidant-rich greens and seeds for a bold nutritional powerhouse.'}, {'id': 16, 'name': 'Bold BBQ Chicken', 'price': 29.0, 'description': 'Our chicken is now bolder, glazed with a spicier, whiskey-infused BBQ sauce and complemented by our homemade spicy cornbread and tangy pickled vegetables.'}, {'id': 17, 'name': 'American Hearty Chili', 'price': 21.0, 'description': 'A robust blend of beans, vegetables, and spices, simmered slowly to create a hearty and flavorful chili, topped with shredded cheese and sour cream.'}, {'id': 18, 'name': 'Spicy Grilled Shrimp Tacos', 'price': 23.0, 'description': 'Juicy shrimp grilled with a fiery spice blend, served in soft tortillas with fresh salsa, avocado, and a zesty lime crema.'}, {'id': 19, 'name': "American Delight's Fiery Feast", 'price': 37.0, 'description': 'Embrace the heat with our Fiery Feast, featuring our hottest meats and freshest spicy vegetables, all brought together by our signature Inferno Sauce for a truly fiery dining experience.'}]
+4. Comments
+   [{'day': 14, 'name': 'Jake', 'score': 7, 'content': 'American Delight delivered with a well-spiced and health-conscious meal. The updated menu provided bold flavors that suited our tastes, with the Vegan Power Bowl being a standout dish.'}, {'day': 14, 'name': 'Amelia', 'score': 8, 'content': 'The dishes at American Delight were flavorful and healthy, meeting our expectations for a balance of spice and nutrition. Each dish was well-received, contributing to a delightful dining experience.'}, {'day': 14, 'name': 'Grace', 'score': 7, 'content': 'American Delight offered a satisfying meal with well-balanced, flavorful dishes. The chili and salads were particularly notable for their hearty and health-conscious profiles.'}, {'day': 14, 'name': 'Olivia', 'score': 8, 'content': "American Delight's dishes were both healthful and flavorful, aligning well with our dietary preferences. The updated Vegan Power Bowl and Spicy Superfood Salad were fresh, vibrant, and offered a pleasant spice level."}, {'day': 14, 'name': 'Max', 'score': 8, 'content': 'The Vegan Power Bowl and Spicy Superfood Salad were both well-received for their healthful ingredients and satisfying flavors. While good, a notch up in boldness could make them outstanding.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 6.805194805194805
+2. Advertisement
+   Indulge in the boldness of Stars & Stripes BBQ! Featuring our Signature Smoky Ribs, Bold Beef Brisket, Fiery Tofu & Veggie Skillet, Ultimate BBQ Combo, and the BBQ Masterpiece Platter. Each dish is a symphony of smoky, spicy flavors, crafted for the BBQ aficionado. Join us for a taste adventure!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoky Ribs', 'price': 45.0, 'description': 'Tender ribs smoked over hickory and glazed with our Stars & Stripes bold BBQ sauce, served with a side of crispy seasoned fries and coleslaw.'}, {'id': 15, 'name': 'Bold Beef Brisket', 'price': 40.0, 'description': 'Our beef brisket is given a bold twist with a smoky rub and a spicy Stars & Stripes BBQ glaze, accompanied by jalapeño cornbread and tangy slaw.'}, {'id': 16, 'name': 'Fiery Tofu & Veggie Skillet', 'price': 28.0, 'description': 'Sizzling skillet of spicy tofu and seasonal vegetables, tossed in our fiery Stars & Stripes BBQ sauce, served over quinoa for a healthy kick.'}, {'id': 19, 'name': 'Ultimate BBQ Combo', 'price': 50.0, 'description': 'A combination platter featuring our best smoked ribs, spicy wings, and pulled pork, all slathered in our signature Stars & Stripes BBQ sauce.'}, {'id': 21, 'name': 'BBQ Masterpiece Platter', 'price': 52.0, 'description': 'A masterful mix of our top BBQ selections: ribs, brisket, and chicken, each prepared with unique spices to offer an explosion of bold flavors.'}]
+4. Comments
+   [{'day': 14, 'name': 'Maggie', 'score': 6, 'content': 'The group found the BBQ dishes at Stars & Stripes BBQ to be consistently fair, but lacking the boldness that was advertised. The experience was satisfactory, yet not as memorable or flavorful as hoped for.'}, {'day': 14, 'name': 'Wade', 'score': 6, 'content': 'The group found the BBQ Boldness Platter and Spicy BBQ Tofu Bowl to be fair, with both dishes scoring 5.7. While satisfactory, they lacked the promised boldness and were average in flavor.'}, {'day': 13, 'name': 'Nate', 'score': 6, 'content': 'The meal was fair with all dishes scoring equally. Despite the anticipation of bold flavors, the taste was underwhelming, and the promised boldness did not materialize.'}, {'day': 13, 'name': 'Rachel', 'score': 6, 'content': 'Consistent but unremarkable fare at Stars & Stripes BBQ. Dishes met expectations without exceeding them. Lacked the promised bold flavors.'}, {'day': 12, 'name': 'Dexter', 'score': 6, 'content': 'A fair experience with consistent taste across all dishes, yet lacking the boldness expected from a BBQ-specialized restaurant. Pleasant but not memorable.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Umar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "dishes": [
+        "Spicy Grilled Shrimp Tacos",
+        "Spicy Superfood Salad"
+    ],
+    "reason": "American Delight has a higher customer score and my previous experiences indicate that it offers the bold flavors I enjoy, along with options that meet my dietary restrictions."
+}
+
+[System->Umar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Spicy Grilled Shrimp Tacos: 0.74
+Spicy Superfood Salad: 0.73
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Umar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The Spicy Grilled Shrimp Tacos were succulent with the perfect level of heat, while the Spicy Superfood Salad was a delightful accompaniment, offering fresh, zesty flavors that cater to my dietary needs."
+}
+

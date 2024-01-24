@@ -9,13 +9,13 @@ Please keep in mind the following rules:
   - It is crucial to find the right approach for your restaurant, as this is the first and most important aspect. Consider factors such as selling more dishes at a lower cost, catering to a high-end clientele or other strategies
 (2) Chefs:
   - You are not allowed to communicate with or train the chefs.
-  - The level of a chef is directly proportional to their salary.
+  - The level of a chef is directly proportional to their salary. 
 (3) Dishes:
-  - The taste of a dish is determined by its original price. If you wish to enhance the taste, you can adjust the original price to procure better ingredients.
-  - The ratio of the cost price to the selling price of a dish impacts the customer's experience.
+  - The taste of the dish is determined by two aspects, one is the cost-effectiveness of the dish, and the other is the level of the chef
+  - Cost-effectiveness is the ratio of original price to selling price, The higher The value, the better the cost-effectiveness
 (4) Advertisement:
   - The only available channel for advertising is the advertising module. If you wish to communicate with customers, you can only do so through this module.
 
-Your first task is to analyze the your history summaries and rival information, such as the trend of customer flow, income, expense, your and rival's advantages, disadvantages, give your finds, no less than 200 words.
-Your second task is to design or revise your strategy, then write it down, no more than 60 words
-Your third task is to create a general plan based on this strategy, then write it down, no more than 150 words. 
+Your first task is to analyze the above information, then write it down.
+Your second task is to design or revise your strategy, then write it down.
+Your third task is to create a general plan based on this strategy, then write it down.

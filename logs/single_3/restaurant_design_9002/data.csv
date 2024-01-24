@@ -1,0 +1,10 @@
+name,day1,day2,day3,day4,day5,day6,day7,day8,day9,day10,day11,day12,day13,day14,day15
+id,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+income,187,6,12,95,28,10,0,0,0,0,0,24,0,0,0
+expense,183,190,306,200,190,183,183,190,200,193,183,183,193,183,186
+num_of_customer,18,1,2,5,2,2,0,0,0,0,0,1,0,0,0
+num_of_chef,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1
+chef_salary,2500,2700,6200,3000,2700,2500,2500,2700,3000,2800,2500,2500,2800,2500,2600
+dish_score,0.4966666666666667,0.52,0.87,0.5499999999999999,0.52,0.5,0.5,0.52,0.55,0.5300000000000001,0.5,0.5,0.5300000000000001,0.5,0.5099999999999999
+customer_score,5.875,5.875,5.875,5.888888888888889,5.9,5.75,5.75,5.75,5.75,5.75,5.75,5.75,5.75,5.75,5.75
+dishes,"{""Cobb Salad"": 11, ""New York Cheesecake"": 11, ""Classic American Burger"": 9, ""BBQ Ribs"": 3, ""Buffalo Chicken Wings"": 2}","{""Cobb Salad"": 1}","{""Gourmet Apple Pie"": 1, ""Elevated Cobb Salad"": 1}","{""Smoked Maple Glazed Salmon"": 2, ""Wild Mushroom Risotto"": 3, ""New York Luxe Cheesecake"": 3, ""Ultimate American Burger"": 1, ""Elevated Cobb Salad"": 2}","{""New York Luxe Cheesecake"": 2, ""Ultimate American Burger"": 1, ""Wild Mushroom Risotto"": 1}","{""New York Luxe Cheesecake"": 1, ""Gourmet Apple Pie"": 1}",{},{},{},{},{},"{""Grilled Veggie & Super Greens Salad"": 1, ""Avocado & Heirloom Tomato Toast"": 1, ""Herb-Crusted Wild Salmon"": 1}",{},{},{}

@@ -1,0 +1,10 @@
+name,day1,day2,day3,day4,day5,day6,day7,day8,day9,day10,day11,day12,day13,day14,day15
+id,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+income,474,135,159,38,7,23,0,0,0,0,0,0,38,0,8
+expense,200,200,200,183,183,190,200,206,200,206,216,206,213,206,206
+num_of_customer,35,11,13,3,1,1,0,0,0,0,0,0,1,0,1
+num_of_chef,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+chef_salary,3000,3000,3000,2500,2500,2700,3000,3200,3000,3200,3500,3200,3400,3200,3200
+dish_score,0.55,0.5499999999999999,0.5499999999999999,0.5,0.5,0.52,0.5499999999999999,0.5700000000000002,0.5499999999999999,0.5700000000000002,0.5999999999999999,0.5700000000000002,0.5874747474747474,0.5700000000000002,0.5700000000000002
+customer_score,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0
+dishes,"{""Local Beef Burger"": 8, ""Wild-Caught Fish Tacos"": 18, ""Farmers' Market Salad"": 28, ""Homestyle Mac & Cheese"": 9, ""Free-Range Chicken Sandwich"": 1}","{""Farmers' Market Salad"": 11, ""Wild-Caught Fish Tacos"": 4, ""Local Beef Burger"": 1, ""Homestyle Mac & Cheese"": 1}","{""Farmers' Market Salad"": 12, ""Free-Range Chicken Sandwich"": 1, ""Wild-Caught Fish Tacos"": 5, ""Local Beef Burger"": 1}","{""Farmers' Market Salad"": 1, ""Free-Range Chicken Sandwich"": 1, ""Wild-Caught Fish Tacos"": 2}","{""Homestyle Mac & Cheese"": 1}","{""Wild-Caught Fish Tacos"": 1, ""Farmers' Market Salad"": 1}",{},{},{},{},{},{},"{""Bold Caribbean Fish Tacos"": 1, ""Vibrant Vegan Fiesta Bowl"": 1, ""Innovative Berry Swirl Cheesecake"": 1}",{},"{""Classic American Apple Pie"": 1}"

@@ -1,0 +1,897 @@
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right here in town! Indulge in our Smokey BBQ Ribs or savor the Classic American Burger at True American Flavors. Visit us this weekend for live entertainment and exclusive deals!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs slathered in our signature smokey BBQ sauce'}, {'id': 2, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 10.0, 'description': 'Fresh greens topped with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 7.0, 'description': 'Classic apple pie topped with vanilla ice cream'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of tradition at USA Diner Delights. Indulge in our new signature dishes featuring locally sourced, premium ingredients that support our community farmers. Experience unique flavors and a commitment to quality with every bite. Join us for our special Farm-to-Table Nights! #USADinerDelights #LocalEats #FarmFresh
+3. Menu 
+   [{'id': 1, 'name': 'Local Beef Burger', 'price': 18.0, 'description': 'Grass-fed local beef patty with homemade BBQ sauce, organic lettuce, and heirloom tomato on an artisan bun.'}, {'id': 2, 'name': 'Wild-Caught Fish Tacos', 'price': 16.0, 'description': 'Tacos with wild-caught fish, fresh slaw, and avocado lime dressing, wrapped in homemade corn tortillas.'}, {'id': 3, 'name': "Farmers' Market Salad", 'price': 14.0, 'description': 'Seasonal greens and vegetables sourced from local farmers, served with a choice of house-made dressings.'}, {'id': 4, 'name': 'Free-Range Chicken Sandwich', 'price': 17.0, 'description': 'Roasted free-range chicken with avocado, bacon, and herbed mayo on toasted sourdough.'}, {'id': 5, 'name': 'Homestyle Mac & Cheese', 'price': 12.0, 'description': 'Rich and creamy macaroni with a blend of three cheeses, topped with a crispy breadcrumb crust.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "USA Diner Delights",
+    "dishes" : [
+        "Farmers' Market Salad", "Wild-Caught Fish Tacos"
+    ],
+    "reason" : "USA Diner Delights offers a menu with locally sourced, premium ingredients and homemade items, which aligns with my fine dining taste and supports my gluten-free diet with options like homemade corn tortillas."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Farmers' Market Salad: 0.61
+Wild-Caught Fish Tacos: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "USA Diner Delights",
+    "feeling": "The Farmers' Market Salad was a delightful array of fresh flavors, and the Wild-Caught Fish Tacos were excellently prepared with a perfect balance of textures."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.25
+2. Advertisement
+   Join us at True American Flavors for an unforgettable dining experience! Savor our enhanced Signature Steak and new Dish of the Day. Plus, enjoy our more frequent live entertainment during peak hours. Don't miss out on the true taste of America!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slathered in our signature smokey BBQ sauce'}, {'id': 2, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 12.0, 'description': 'Fresh greens topped with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 25.0, 'description': 'Premium grilled steak with herb butter and seasonal vegetables'}]
+4. Comments
+   [{'day': 1, 'name': 'Wade', 'score': 7, 'content': 'The Classic American Burger and Buffalo Wings were satisfying and wallet-friendly. While tasty, the flavors were not exceptional. Service was adequate, but I noticed other establishments offer more creative dishes. Overall, good for a simple meal.'}, {'day': 1, 'name': 'Brian', 'score': 7, 'content': "The dishes had a homey taste, reminiscent of classic street food, which I enjoyed. However, the flavors weren't particularly outstanding. The live entertainment added a nice touch. Good value for money, but there's room for improvement in taste complexity."}, {'day': 1, 'name': 'Sam', 'score': 7, 'content': "The Classic American Burger and Apple Pie a la Mode were satisfying, offering a taste of home. However, compared to other experiences, the flavors could be more distinctive. Service was decent, but there's room for improvement to make it memorable."}, {'day': 1, 'name': 'Quinn', 'score': 8, 'content': "The Buffalo Wings at True American Flavors were delightfully spicy, satisfying my taste for heat. The ribs had a delectable smokey flavor, though I've had more tender ones elsewhere. The atmosphere with live entertainment added to the experience, making it a memorable meal."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Savor the enhanced flavors of USA Diner Delights with our improved recipes! Indulge in the richer, more robust Homestyle Mac & Cheese, the fresher Farmers' Market Salad, and the zestier Wild-Caught Fish Tacos. Plus, don't miss our new American Dream Apple Crisp, a tribute to local produce and classic American taste. Join us for Live Music Night this week for a truly memorable dining experience. #USADinerDelights #TasteTheDifference #LiveMusic
+3. Menu 
+   [{'id': 1, 'name': 'Local Beef Burger', 'price': 18.0, 'description': 'Grass-fed local beef patty with homemade BBQ sauce, organic lettuce, and heirloom tomato on an artisan bun.'}, {'id': 2, 'name': 'Wild-Caught Fish Tacos', 'price': 17.6, 'description': 'Tacos with wild-caught fish, fresh slaw, and avocado lime dressing, wrapped in homemade corn tortillas.'}, {'id': 3, 'name': "Farmers' Market Salad", 'price': 15.4, 'description': 'Seasonal greens and vegetables sourced from local farmers, served with a choice of house-made dressings.'}, {'id': 4, 'name': 'Free-Range Chicken Sandwich', 'price': 17.0, 'description': 'Roasted free-range chicken with avocado, bacon, and herbed mayo on toasted sourdough.'}, {'id': 5, 'name': 'Homestyle Mac & Cheese', 'price': 13.2, 'description': 'Rich and creamy macaroni with a blend of three cheeses, topped with a crispy breadcrumb crust.'}, {'id': 6, 'name': 'American Dream Apple Crisp', 'price': 8.0, 'description': 'Warm spiced apple crisp made with local apples and a crunchy oat topping, served with a scoop of vanilla ice cream.'}]
+4. Comments
+   [{'day': 1, 'name': 'Ulysses', 'score': 6, 'content': 'The focus on locally sourced ingredients was appreciated, and the flavors were decent, but the overall experience lacked a memorable punch. The dishes were satisfactory, yet I expected more innovation and a stronger flavor profile given the farm-to-table concept.'}, {'day': 1, 'name': 'Ruby', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, but the flavors didn't meet my expectations for the price point. The use of local ingredients is commendable; however, more attention to the seasoning could enhance the dining experience."}, {'day': 1, 'name': 'Felix', 'score': 6, 'content': "The dishes at USA Diner Delights were fresh, but the flavors didn't quite meet my expectations for Chinese cuisine preferences. The commitment to local ingredients is commendable, though the Wild-Caught Fish Tacos and Farmers' Market Salad were just fair in taste."}, {'day': 1, 'name': 'Yasmine', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but I found it rather ordinary in flavor. For a vegan option, I expected more creativity. Service was decent, but there's room for improvement in both taste and presentation. I'll consider revisiting if the menu evolves."}, {'day': 1, 'name': 'William', 'score': 6, 'content': "The Farmers' Market Salad and Wild-Caught Fish Tacos were fresh but lacked the wow factor I expected. The ingredients' quality was apparent, yet the flavors didn't quite meet my anticipation for a memorable meal."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Cobb Salad", "Signature Steak"
+    ],
+    "reason" : "True American Flavors has a higher customer score, indicating better service and taste. Their menu includes a gluten-free Cobb Salad, and the Signature Steak offers a fine dining experience suitable for my elegant taste."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad: 0.81
+Signature Steak: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Cobb Salad was crisp and well-composed, while the Signature Steak was succulent, cooked to perfection, and rich in flavor, reflecting my preference for fine dining and quality ingredients."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.454545454545454
+2. Advertisement
+   Discover True American Flavors' new menu highlight, the American Spice-Rubbed Chicken, and our improved Smokey BBQ Ribs and Signature Steak. Enjoy vibrant weekend live entertainment and earn rewards with our loyalty program. Taste the unique spirit of America here!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs slathered in our signature smokey BBQ sauce'}, {'id': 2, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 12.0, 'description': 'Fresh greens topped with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 28.0, 'description': 'Premium grilled steak with herb butter and seasonal vegetables'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 19.0, 'description': 'Locally sourced chicken with a bold American spice rub, served with seasonal veggies'}]
+4. Comments
+   [{'day': 2, 'name': 'Xavier', 'score': 8, 'content': "The Smokey BBQ Ribs had a rich, satisfying taste, and the Cobb Salad was fresh, a delightful balance of flavors. The Apple Pie a la Mode ended the meal sweetly. While the dishes were good, they didn't quite transport me to the Caribbean vibrancy I adore. Still, a commendable dining experience."}, {'day': 2, 'name': 'Tina', 'score': 8, 'content': 'The Smokey BBQ Ribs and Cobb Salad from True American Flavors were good, with the ribs being smoky and satisfying. However, compared to previous meals at USA Diner Delights, the flavors here could be more distinctive. The live entertainment was a nice addition to the ambiance.'}, {'day': 2, 'name': 'Chloe', 'score': 7, 'content': "The Cobb Salad was fresh and aligned with my dietary needs, but lacked the bold flavors I enjoy in Indian cuisine. While the score is higher than USA Diner Delights, I'd appreciate more spice and seasoning variety. Good effort on catering to health-conscious diners."}, {'day': 2, 'name': 'Sam', 'score': 7, 'content': "The Classic American Burger and Apple Pie a la Mode were comforting, reminiscent of home cooking. While satisfying, the flavors could benefit from a bit more innovation. Service was friendly yet unremarkable. A good visit overall, but there's potential for a more unique dining experience."}, {'day': 2, 'name': 'Peter', 'score': 8, 'content': 'The Apple Pie a la Mode was delightful, with a perfect balance of sweetness and spice. The crust was flaky, and the ice cream a creamy complement. While the flavors were not groundbreaking, they provided a comforting, traditional taste that I enjoyed.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover bold flavors at USA Diner Delights! Try our revamped Farmers' Market Salad with signature dressings and the juicier Local Beef Burger. Experience our new vibrant atmosphere, celebrating American culture. Don't forget our loyalty program for exclusive deals. #NewFlavors #AmericanAmbiance #LoyaltyRewards
+3. Menu 
+   [{'id': 1, 'name': 'Local Beef Burger', 'price': 19.0, 'description': 'Grass-fed local beef patty with homemade BBQ sauce, organic lettuce, and heirloom tomato on an artisan bun.'}, {'id': 2, 'name': 'Wild-Caught Fish Tacos', 'price': 18.0, 'description': 'Tacos with wild-caught fish, fresh slaw, and avocado lime dressing, wrapped in homemade corn tortillas.'}, {'id': 3, 'name': "Farmers' Market Salad", 'price': 16.0, 'description': 'Seasonal greens and vegetables sourced from local farmers, served with a choice of house-made dressings.'}, {'id': 4, 'name': 'Free-Range Chicken Sandwich', 'price': 18.0, 'description': 'Roasted free-range chicken with avocado, bacon, and herbed mayo on toasted sourdough.'}, {'id': 5, 'name': 'Homestyle Mac & Cheese', 'price': 14.0, 'description': 'Rich and creamy macaroni with a blend of three cheeses, topped with a crispy breadcrumb crust.'}, {'id': 6, 'name': 'American Dream Apple Crisp', 'price': 9.0, 'description': 'Warm spiced apple crisp made with local apples and a crunchy oat topping, served with a scoop of vanilla ice cream.'}]
+4. Comments
+   [{'day': 2, 'name': 'Katie', 'score': 6, 'content': "The Farmers' Market Salad was fresh, aligning with my vegan lifestyle, yet it lacked a distinctive flavor profile. Appreciate the local produce, but for a higher score, I'd recommend more creativity in seasoning and dressing to elevate the experience."}, {'day': 1, 'name': 'Ulysses', 'score': 6, 'content': 'The focus on locally sourced ingredients was appreciated, and the flavors were decent, but the overall experience lacked a memorable punch. The dishes were satisfactory, yet I expected more innovation and a stronger flavor profile given the farm-to-table concept.'}, {'day': 1, 'name': 'Ruby', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, but the flavors didn't meet my expectations for the price point. The use of local ingredients is commendable; however, more attention to the seasoning could enhance the dining experience."}, {'day': 1, 'name': 'Felix', 'score': 6, 'content': "The dishes at USA Diner Delights were fresh, but the flavors didn't quite meet my expectations for Chinese cuisine preferences. The commitment to local ingredients is commendable, though the Wild-Caught Fish Tacos and Farmers' Market Salad were just fair in taste."}, {'day': 1, 'name': 'Yasmine', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but I found it rather ordinary in flavor. For a vegan option, I expected more creativity. Service was decent, but there's room for improvement in both taste and presentation. I'll consider revisiting if the menu evolves."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Cobb Salad", "Signature Steak"
+    ],
+    "reason" : "True American Flavors has a higher customer score, suggesting superior service and food quality. The gluten-free options like the Cobb Salad cater to my dietary needs, while the Signature Steak aligns with my preference for fine dining."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad: 0.81
+Signature Steak: 0.86
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Cobb Salad was delightfully fresh, and the Signature Steak was a culinary triumph, rich and flavorful, satisfying my fine dining inclinations perfectly."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.52
+2. Advertisement
+   Introducing Spiced Local Veggie Burger & Bold Blueberry Peach Cobbler at True American Flavors! Savour the freshness of local produce with innovative twists. Plus, our enhanced Smokey BBQ Ribs & Signature Steak await you. Join us for a memorable dining experience and lively weekend entertainment!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 24.0, 'description': 'Tender ribs slathered in our signature smokey BBQ sauce'}, {'id': 3, 'name': 'Cobb Salad', 'price': 12.0, 'description': 'Fresh greens topped with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 30.0, 'description': 'Premium grilled steak with herb butter and seasonal vegetables'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 21.0, 'description': 'Locally sourced chicken with a bold American spice rub, served with seasonal veggies'}, {'id': 8, 'name': 'Spiced Local Veggie Burger', 'price': 15.0, 'description': 'A vegetarian delight featuring a spiced bean patty made with local produce, topped with artisanal cheese and avocado on a multigrain bun'}, {'id': 9, 'name': 'Bold Blueberry & Peach Cobbler', 'price': 10.0, 'description': 'Rustic cobbler with juicy blueberries and peaches, topped with a crumbly oat topping, served with cinnamon-spiced cream'}]
+4. Comments
+   [{'day': 3, 'name': 'Paula', 'score': 8, 'content': 'The Smokey BBQ Ribs were a standout with their tender texture and rich flavor. The Cobb Salad was fresh, though more imaginative seasoning could enhance it. Apple Pie a la Mode concluded the meal on a high note. A solid dining option compared to previous experiences.'}, {'day': 3, 'name': 'Oscar', 'score': 7, 'content': 'The Smokey BBQ Ribs were quite good, though not exceptional. The Cobb Salad was fresh, aligning with health expectations, but could use bolder flavors. Apple Pie a la Mode was a comforting classic. Overall, a pleasant experience, if not overly memorable compared to previous meals at USA Diner Delights.'}, {'day': 3, 'name': 'Lara', 'score': 7, 'content': "The American Spice-Rubbed Chicken had a robust flavor, but it didn't quite reach the outstanding mark. While better than some past meals, it lacked a certain wow factor. The overall experience was good, yet there's room for more creativity in flavor pairing."}, {'day': 3, 'name': 'Chloe', 'score': 7, 'content': 'The American Spice-Rubbed Chicken had a satisfying level of boldness, yet still fell short of the rich flavors I relish in Indian cuisine. While service was commendable, I find myself missing the spice variety that Indian dishes offer. A good attempt, but not exceptional.'}, {'day': 3, 'name': 'Zach', 'score': 7, 'content': 'The Cobb Salad and American Spice-Rubbed Chicken at True American Flavors were satisfactory with fresh ingredients, aligning with my gluten-free needs. However, as a connoisseur of French cuisine, I found the flavors a bit simple. They could improve by incorporating more sophisticated seasoning to elevate the dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Spice up your life with USA Diner Delights' new Sizzling American Skillet and refreshed Wild-Caught Fish Tacos with Caribbean flair! Enjoy our Farmers' Market Salad with tropical fruit dressing. Join us for American Spice Night every other Wednesday. #BoldFlavors #LocalFresh #SpiceNight
+3. Menu 
+   [{'id': 1, 'name': 'Local Beef Burger', 'price': 19.0, 'description': 'Grass-fed local beef patty with homemade BBQ sauce, organic lettuce, and heirloom tomato on an artisan bun.'}, {'id': 2, 'name': 'Wild-Caught Fish Tacos', 'price': 20.0, 'description': 'Tacos with wild-caught fish, vibrant Caribbean slaw, and spicy mango dressing, wrapped in homemade corn tortillas.'}, {'id': 3, 'name': "Farmers' Market Salad", 'price': 18.0, 'description': 'Seasonal greens and vegetables sourced from local farmers, served with an innovative tropical fruit dressing.'}, {'id': 4, 'name': 'Free-Range Chicken Sandwich', 'price': 18.0, 'description': 'Roasted free-range chicken with avocado, bacon, and herbed mayo on toasted sourdough.'}, {'id': 5, 'name': 'Homestyle Mac & Cheese', 'price': 14.0, 'description': 'Rich and creamy macaroni with a blend of three cheeses, topped with a crispy breadcrumb crust.'}, {'id': 6, 'name': 'American Dream Apple Crisp', 'price': 9.0, 'description': 'Warm spiced apple crisp made with local apples and a crunchy oat topping, served with a scoop of vanilla ice cream.'}, {'id': 7, 'name': 'Sizzling American Skillet', 'price': 20.0, 'description': 'A hearty mix of grilled meats and vegetables with a unique American spice blend, served in a hot skillet.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Cobb Salad", "Signature Steak"
+    ],
+    "reason" : "True American Flavors has a superior customer score, indicating better service and potentially higher quality food. Their gluten-free options like the Cobb Salad and the fine-dining-aligned Signature Steak suit my dietary needs and elegant taste."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad: 0.81
+Signature Steak: 0.85
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Cobb Salad was refreshingly crisp, and the Signature Steak was a true indulgence, cooked to tender perfection. An exceptional dining experience that catered to both my gluten intolerance and my preference for elegant, fine dining."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.619047619047619
+2. Advertisement
+   Dive into a world of bold flavors at True American Flavors! Discover our new Innovative American Cheesecake, and indulge in improved classics like our Smokey BBQ Ribs, now with a bourbon BBQ sauce, and our Signature Steak with a red wine reduction. Experience culinary creativity with every bite!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 26.0, 'description': 'Slow-cooked ribs in a rich, house-made bourbon BBQ sauce for a deeper flavor'}, {'id': 3, 'name': 'Cobb Salad', 'price': 12.0, 'description': 'Fresh greens topped with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 33.0, 'description': 'Aged steak grilled to perfection, served with a creative mushroom and red wine reduction'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 21.0, 'description': 'Locally sourced chicken with a bold American spice rub, served with seasonal veggies'}, {'id': 8, 'name': 'Spiced Local Veggie Burger', 'price': 15.0, 'description': 'A vegetarian delight featuring a spiced bean patty made with local produce, topped with artisanal cheese and avocado on a multigrain bun'}, {'id': 9, 'name': 'Bold Blueberry & Peach Cobbler', 'price': 12.0, 'description': 'Warm cobbler with a vanilla bean and lavender twist, topped with a golden oat crumble'}, {'id': 10, 'name': 'Innovative American Cheesecake', 'price': 11.0, 'description': 'Classic New York cheesecake with a seasonal berry compote and a spiced graham cracker crust'}]
+4. Comments
+   [{'day': 4, 'name': 'Ruby', 'score': 8, 'content': "The Signature Steak remained a highlight with its well-executed flavors. The Bold Blueberry & Peach Cobbler was a comforting end, though not as exceptional as past desserts. While this meal was good, I believe there's room for improvement to reach outstanding status."}, {'day': 4, 'name': 'Hugo', 'score': 8, 'content': "The Signature Steak had top-notch beef quality that almost rivaled my previous gourmet burger experiences. While the flavors were rich, there's room for a more creative sauce or seasoning to complement the steak and elevate the entire dish to perfection."}, {'day': 4, 'name': 'Giselle', 'score': 8, 'content': 'The Apple Pie a la Mode was delicious, with a satisfying balance of flavors. The live entertainment enhanced the dining experience. However, the dessert could be improved with a touch more spice to the apples for a perfect score.'}, {'day': 4, 'name': 'Felix', 'score': 7, 'content': 'The Smokey BBQ Ribs had a satisfying smokiness but could benefit from a more complex flavor profile. The Apple Pie a la Mode was enjoyable, though not exceptional. While better than my experiences at USA Diner Delights, a touch more culinary creativity could elevate the dishes.'}, {'day': 4, 'name': 'Emma', 'score': 7, 'content': 'The Spiced Local Veggie Burger was hearty with a delightful blend of spices, though I missed the boldness I anticipated. The Blueberry & Peach Cobbler was the highlight, with a perfect balance of sweetness and tartness. Comparatively, the flavors here are more innovative than USA Diner Delights.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Introducing the new Customizable American Burger! Craft your own flavor masterpiece at USA Diner Delights and rediscover our Wild-Caught Fish Tacos now with an exciting Caribbean twist! Freshness and innovation at every bite. #CustomBurger #CaribbeanTacos #FreshInnovations
+3. Menu 
+   [{'id': 1, 'name': 'Local Beef Burger', 'price': 21.0, 'description': 'Grass-fed local beef patty with homemade BBQ sauce, organic lettuce, and heirloom tomato on an artisan bun.'}, {'id': 2, 'name': 'Wild-Caught Fish Tacos', 'price': 22.0, 'description': 'Tacos with wild-caught fish, vibrant Caribbean slaw, and spicy mango dressing, wrapped in homemade corn tortillas.'}, {'id': 3, 'name': "Farmers' Market Salad", 'price': 20.0, 'description': 'Seasonal greens and vegetables sourced from local farmers, served with an innovative tropical fruit dressing.'}, {'id': 4, 'name': 'Free-Range Chicken Sandwich', 'price': 20.0, 'description': 'Roasted free-range chicken with avocado, bacon, and herbed mayo on toasted sourdough.'}, {'id': 5, 'name': 'Homestyle Mac & Cheese', 'price': 15.0, 'description': 'Rich and creamy macaroni with a blend of three cheeses, topped with a crispy breadcrumb crust.'}, {'id': 6, 'name': 'American Dream Apple Crisp', 'price': 9.0, 'description': 'Warm spiced apple crisp made with local apples and a crunchy oat topping, served with a scoop of vanilla ice cream.'}, {'id': 7, 'name': 'Sizzling American Skillet', 'price': 20.0, 'description': 'A hearty mix of grilled meats and vegetables with a unique American spice blend, served in a hot skillet.'}, {'id': 8, 'name': 'Customizable American Burger', 'price': 21.0, 'description': 'Choose your toppings on our grass-fed beef patty, with options including cheese, bacon, avocado, and our special sauce.'}, {'id': 9, 'name': 'Seasonal Special Pie', 'price': 10.0, 'description': 'A monthly rotating pie featuring seasonal fruits and spices, served with homemade whipped cream.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Cobb Salad", "Signature Steak"
+    ],
+    "reason" : "True American Flavors has a higher customer score, and the gluten-free Cobb Salad and fine-dining Signature Steak meet my dietary requirements and elegant taste."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad: 0.81
+Signature Steak: 0.86
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Cobb Salad was fresh and satisfyingly crisp, while the Signature Steak was exquisitely flavorful, providing a refined dining experience befitting my elegant tastes."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.615384615384615
+2. Advertisement
+   Savor the new heights of American cuisine at True American Flavors! Relish our enhanced Smokey BBQ Ribs with an exclusive hickory and applewood sauce, and our revamped American Spice-Rubbed Chicken adorned with a zesty citrus glaze. Delight in our new Twisted Berry-Lemon Cheesecake, a fresh take on a classic dessert. Come for the taste, stay for the experience!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 28.0, 'description': 'Smokey BBQ Ribs glazed with a unique hickory and applewood sauce for a standout flavor'}, {'id': 3, 'name': 'Cobb Salad', 'price': 12.0, 'description': 'Fresh greens topped with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 33.0, 'description': 'Aged steak grilled to perfection, served with a creative mushroom and red wine reduction'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 23.0, 'description': 'Juicy chicken with a new bold American spice rub, complemented by a zesty citrus glaze'}, {'id': 8, 'name': 'Spiced Local Veggie Burger', 'price': 15.0, 'description': 'A vegetarian delight featuring a spiced bean patty made with local produce, topped with artisanal cheese and avocado on a multigrain bun'}, {'id': 10, 'name': 'Innovative American Cheesecake', 'price': 11.0, 'description': 'Classic New York cheesecake with a seasonal berry compote and a spiced graham cracker crust'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 13.0, 'description': 'A zesty lemon cheesecake with a mixed berry swirl, garnished with fresh local berries'}]
+4. Comments
+   [{'day': 5, 'name': 'Wade', 'score': 7, 'content': "The Buffalo Wings were good with a decent spicy kick, aligning with my simple taste preferences. However, I'd like the flavor to be a bit more distinct to truly stand out. Overall, it's a fair meal for the price, though not exceptional."}, {'day': 5, 'name': 'Paula', 'score': 8, 'content': 'The Smokey BBQ Ribs were a flavorful delight, though a tad shy of perfect. The Cobb Salad was fresh, but could use a bit more zest. Apple Pie a la Mode was comforting, yet lacked a hint of innovation. Overall, a very satisfying meal that outshines my experiences at USA Diner Delights.'}, {'day': 5, 'name': 'Dexter', 'score': 8, 'content': "The Smokey BBQ Ribs had a deep flavor, although not quite outstanding. Buffalo Wings were enjoyable with a decent heat level. The Apple Pie a la Mode was a delightful classic. Overall, a very good meal but there's room for improvement in flavor depth to reach perfection."}, {'day': 5, 'name': 'Brian', 'score': 7, 'content': 'The Buffalo Wings and Apple Pie a la Mode delivered satisfying street food flavors, a good match for my taste. The Spiced Local Veggie Burger was decent but lacked a memorable kick. Overall, a pleasing meal aligned with my budget, albeit missing a wow factor.'}, {'day': 5, 'name': 'William', 'score': 8, 'content': 'The Innovative American Cheesecake was a delightful fusion of classic and novel flavors. The berry compote was a vibrant touch, and the spiced crust a pleasant surprise. While it scored well, I still long for the complexity and refinement of Japanese cuisine I cherish.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Come taste the boldness at USA Diner Delights! Our revamped Wild-Caught Fish Tacos and Farmers' Market Salad pack a punch with vibrant, robust flavors. Plus, don't miss our new Bold American Chili, a hearty classic reimagined. #BoldFlavors #LocalFreshness #AmericanChili
+3. Menu 
+   [{'id': 1, 'name': 'Local Beef Burger', 'price': 21.0, 'description': 'Grass-fed local beef patty with homemade BBQ sauce, organic lettuce, and heirloom tomato on an artisan bun.'}, {'id': 2, 'name': 'Wild-Caught Fish Tacos', 'price': 24.0, 'description': 'Tacos with wild-caught fish, enhanced with a bold and zesty Caribbean slaw, spicy mango dressing, wrapped in homemade corn tortillas.'}, {'id': 3, 'name': "Farmers' Market Salad", 'price': 22.0, 'description': 'Crisp seasonal greens and veggies from local farms, tossed with an inventive, bold tropical fruit dressing.'}, {'id': 6, 'name': 'American Dream Apple Crisp', 'price': 11.0, 'description': 'Caramelized local apples and a crunchy cinnamon oat topping, served with a scoop of premium vanilla bean ice cream.'}, {'id': 7, 'name': 'Sizzling American Skillet', 'price': 20.0, 'description': 'A hearty mix of grilled meats and vegetables with a unique American spice blend, served in a hot skillet.'}, {'id': 8, 'name': 'Customizable American Burger', 'price': 21.0, 'description': 'Choose your toppings on our grass-fed beef patty, with options including cheese, bacon, avocado, and our special sauce.'}, {'id': 9, 'name': 'Seasonal Special Pie', 'price': 10.0, 'description': 'A monthly rotating pie featuring seasonal fruits and spices, served with homemade whipped cream.'}, {'id': 10, 'name': 'Bold American Chili', 'price': 18.0, 'description': 'Hearty slow-cooked chili with a blend of spices, local beef, and kidney beans, topped with sharp cheddar and green onions.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Cobb Salad", "Signature Steak"
+    ],
+    "reason" : "True American Flavors offers a more sophisticated dining experience with higher customer scores, and gluten-free options like the Cobb Salad suit my dietary restrictions."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad: 0.81
+Signature Steak: 0.86
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Cobb Salad was delightfully crisp and catered perfectly to my gluten-free needs, while the Signature Steak was sublime, enhancing my fine dining experience."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.626865671641791
+2. Advertisement
+   Discover the bold flavors of True American Flavors! Introducing our Bold American Super Salad, a daring blend of fresh greens and vibrant dressing. Indulge in our richer Smokey BBQ Ribs and enhanced Signature Steak with creative sauces. For our vegan friends, the Spiced Local Veggie Burger now packs a more memorable punch. Satisfy your sweet tooth with our inventive cheesecakes. Elevate your dining experience with us today!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 30.0, 'description': 'Smokey BBQ Ribs glazed with a unique hickory and applewood sauce for an even richer and deeper flavor'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 35.0, 'description': 'Aged steak grilled to perfection, served with a more creative mushroom and red wine reduction for a richer taste'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 23.0, 'description': 'Juicy chicken with a new bold American spice rub, complemented by a zesty citrus glaze'}, {'id': 8, 'name': 'Spiced Local Veggie Burger', 'price': 17.0, 'description': 'A vegetarian delight featuring a spiced bean patty made with local produce, topped with a memorable and bold artisanal spice blend, cheese, and avocado on a multigrain bun'}, {'id': 10, 'name': 'Innovative American Cheesecake', 'price': 11.0, 'description': 'Classic New York cheesecake with a seasonal berry compote and a spiced graham cracker crust'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 13.0, 'description': 'A zesty lemon cheesecake with a mixed berry swirl, garnished with fresh local berries'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 14.0, 'description': 'A vibrant mix of kale, spinach, and arugula, with roasted nuts, seasonal berries, and a daring honey-mustard dressing'}]
+4. Comments
+   [{'day': 6, 'name': 'Wade', 'score': 7, 'content': 'The Buffalo Wings and Cobb Salad were both good, providing a hearty meal that fits my budget and simple tastes. The flavors were satisfactory, though not exceptional. It would be great to see a touch more creativity in the seasoning.'}, {'day': 6, 'name': 'Valerie', 'score': 8, 'content': "The Cobb Salad was crisp, though I wished for a bit more innovation in flavor. The Signature Steak was a highlight, perfectly cooked and savory. The Spiced Local Veggie Burger, while wholesome, could use a more memorable spice profile. A delightful meal overall, but there's room for subtle enhancements."}, {'day': 6, 'name': 'Ruby', 'score': 8, 'content': 'The Signature Steak at True American Flavors remains a solid choice, expertly cooked and satisfying. The Twisted Berry-Lemon Cheesecake was a pleasant surprise, balancing tart and sweet nicely. While both dishes were good, they lacked a certain wow factor to be deemed outstanding.'}, {'day': 6, 'name': 'Max', 'score': 8, 'content': "The Spiced Local Veggie Burger was rich in flavor, aligning with my plant-based diet and tastes. While delicious, it could use a tad more innovation to truly stand out. Still, it's a significant step up from the underwhelming Farmers' Market Salad at USA Diner Delights."}, {'day': 6, 'name': 'Felix', 'score': 8, 'content': 'The Signature Steak was expertly cooked, hitting the mark on taste and texture. The Twisted Berry-Lemon Cheesecake offered a refreshing twist on a classic. However, the cheesecake could have a more pronounced berry flavor to achieve a perfect balance. Overall, a strong culinary experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Dive into flavor at USA Diner Delights with our Bold Caribbean Fish Tacos and Spicy American BBQ Burger! Join us for our American Spice Fest and savor the innovation. #SpiceFest #BoldEats #LocalFresh
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 26.0, 'description': 'Tacos with zesty, wild-caught fish, topped with a bold, spicy Caribbean sauce and fresh slaw, wrapped in a homemade tortilla.'}, {'id': 10, 'name': 'Bold American Chili', 'price': 18.0, 'description': 'Hearty slow-cooked chili with a blend of spices, local beef, and kidney beans, topped with sharp cheddar and green onions.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 23.0, 'description': 'Juicy beef patty with our signature spicy BBQ sauce, crispy onions, and melted cheese on a toasted brioche bun.'}, {'id': 12, 'name': 'Ultimate American Fries', 'price': 9.0, 'description': 'Crispy fries topped with a blend of melted cheeses, smoky bacon bits, and a sprinkle of our special American spice mix.'}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 22.0, 'description': 'Traditional meatloaf made with a mix of local beef and pork, glazed with a tangy tomato-based sauce, served with garlic mashed potatoes.'}, {'id': 14, 'name': 'Classic American Sundae', 'price': 10.0, 'description': 'Decadent vanilla ice cream sundae with hot fudge, whipped cream, nuts, and a cherry on top, served in a classic glass.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors has a higher customer score, indicating better service and food quality. The gluten-free salad and fine-dining steak meet my dietary needs and taste for elegance."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Signature Steak: 0.86
+Bold American Super Salad: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Signature Steak was exquisitely prepared, offering a rich and elegant taste that satisfied my fine dining preference. The Bold American Super Salad was a refreshing and delightful gluten-free option that complemented the steak beautifully."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.670731707317073
+2. Advertisement
+   Experience the evolution of American cuisine at True American Flavors! Savor our new Vibrant Vegan Power Burger and our reinvented Bold American Super Salad with a zesty dressing. Our Smokey BBQ Ribs and Signature Steak have been elevated with richer sauces and sides. Plus, indulge in our unique cheesecakes with seasonal berries. Join us for a meal that's as creative as it is satisfying. Your taste adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 33.0, 'description': 'Tender ribs coated in a smoky cherry-bourbon BBQ sauce, slow-roasted to perfection, and served with a side of crispy seasoned fries'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 38.0, 'description': 'Prime cut steak with a smoky rub, flame-grilled and finished with a whiskey-infused compound butter, accompanied by herbed garlic potatoes'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 23.0, 'description': 'Juicy chicken with a new bold American spice rub, complemented by a zesty citrus glaze'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 19.0, 'description': 'A plant-based patty infused with a medley of herbs and spices, topped with a tangy vegan aioli, fresh lettuce, tomato, and served on a toasted artisanal bun'}, {'id': 10, 'name': 'Innovative American Cheesecake', 'price': 11.0, 'description': 'Classic New York cheesecake with a seasonal berry compote and a spiced graham cracker crust'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 13.0, 'description': 'A zesty lemon cheesecake with a mixed berry swirl, garnished with fresh local berries'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 16.0, 'description': 'An enhanced mix of fresh greens, quinoa, avocado, toasted seeds, and dried cranberries, tossed in a bold citrus-herb vinaigrette'}]
+4. Comments
+   [{'day': 7, 'name': 'Yara', 'score': 8, 'content': "The Spiced Local Veggie Burger was a good choice, offering a commendable harmony of flavors for my vegan diet. Compared to my previous experience at USA Diner Delights, this burger has a more robust taste, though there's still room for a bit more creativity in the spice blend."}, {'day': 7, 'name': 'Tina', 'score': 8, 'content': 'The American Spice-Rubbed Chicken had a delightful kick, and the Twisted Berry-Lemon Cheesecake was a harmonious blend of tangy and sweet. However, the chicken could use a tad more moisture, and the cheesecake a bolder berry flavor to truly dazzle.'}, {'day': 7, 'name': 'Steve', 'score': 8, 'content': 'The Spiced Local Veggie Burger was hearty, aligning with my dietary needs, though it could benefit from a bit more spice. The Bold American Super Salad was a vibrant choice that was both healthy and flavorful. A more dynamic seasoning in both dishes would enhance the experience.'}, {'day': 7, 'name': 'Ruby', 'score': 8, 'content': "The Signature Steak was hearty and well-seasoned, and the Innovative American Cheesecake had a unique twist that I enjoyed. While both dishes were quite satisfying, there's still room for a touch of excellence to reach an outstanding level."}, {'day': 7, 'name': 'Oscar', 'score': 7, 'content': 'The Smokey BBQ Ribs were quite good, though not exceptional. The Apple Pie a la Mode was a comforting classic. Overall, a pleasant experience, if not overly memorable compared to previous meals at USA Diner Delights.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Experience the bold tastes of America at USA Diner Delights! Introducing our new Signature American BBQ Ribs and revamped Bold Caribbean Fish Tacos. Pair it with our American Craft Beer Selection for the ultimate dining experience. #BoldTastes #LocalCraft #AmericanEats
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 27.0, 'description': 'Tacos with zesty, wild-caught fish, topped with a bold, spicy Caribbean sauce and fresh slaw, wrapped in a homemade tortilla. Now with an extra kick of our homemade hot sauce for a truly vibrant flavor.'}, {'id': 10, 'name': 'Bold American Chili', 'price': 18.0, 'description': 'Hearty slow-cooked chili with a blend of spices, local beef, and kidney beans, topped with sharp cheddar and green onions.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 23.0, 'description': 'Juicy beef patty with our signature spicy BBQ sauce, crispy onions, and melted cheese on a toasted brioche bun.'}, {'id': 12, 'name': 'Ultimate American Fries', 'price': 9.0, 'description': 'Crispy fries topped with a blend of melted cheeses, smoky bacon bits, and a sprinkle of our special American spice mix.'}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 23.0, 'description': 'Traditional meatloaf made with a mix of local beef and pork, glazed with a tangy tomato-based sauce, and a hint of smoked paprika, served with garlic mashed potatoes and seasonal greens.'}, {'id': 15, 'name': 'Signature American BBQ Ribs', 'price': 28.0, 'description': 'Tender ribs smothered in a rich, smoky BBQ sauce, served with a side of coleslaw and seasoned corn on the cob.'}, {'id': 16, 'name': 'American Craft Beer Selection', 'price': 7.0, 'description': 'A curated selection of local craft beers, featuring a variety of styles from pale ales to stouts, to perfectly complement our bold American flavors.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors has a higher customer score and offers gluten-free options that meet my dietary needs. The Signature Steak and Bold American Super Salad cater to my elegant taste."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Signature Steak: 0.86
+Bold American Super Salad: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Signature Steak was succulent and cooked to perfection, truly aligning with my fine dining preferences. The Bold American Super Salad was a delightful, gluten-free complement to the meal."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.691489361702128
+2. Advertisement
+   Discover the bold new flavors at True American Flavors! Our Smokey BBQ Ribs now feature a tantalizing mango-habanero glaze, and our desserts have been dramatically reimagined. Indulge in the Avant-Garde American Cheesecake with a spicy berry compote, and enjoy the enhanced zest of our Twisted Berry-Lemon Cheesecake. Come in for a taste revolution that promises to excite your palate!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 35.0, 'description': 'Tender ribs basted in an exotic mango-habanero glaze, smoked over applewood, and served with a side of crispy seasoned fries.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 38.0, 'description': 'Prime cut steak with a smoky rub, flame-grilled and finished with a whiskey-infused compound butter, accompanied by herbed garlic potatoes'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 23.0, 'description': 'Juicy chicken with a new bold American spice rub, complemented by a zesty citrus glaze'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 19.0, 'description': 'A plant-based patty infused with a medley of herbs and spices, topped with a tangy vegan aioli, fresh lettuce, tomato, and served on a toasted artisanal bun'}, {'id': 10, 'name': 'Avant-Garde American Cheesecake', 'price': 14.0, 'description': 'A reinvented New York cheesecake with a fiery berry compote, set on a ginger-spiced crust.'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 15.0, 'description': 'A zesty lemon cheesecake intensified with a mixed berry swirl, topped with a lemon zest-infused whipped cream and fresh local berries.'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 16.0, 'description': 'An enhanced mix of fresh greens, quinoa, avocado, toasted seeds, and dried cranberries, tossed in a bold citrus-herb vinaigrette'}]
+4. Comments
+   [{'day': 8, 'name': 'Xavier', 'score': 8, 'content': "The Smokey BBQ Ribs offered a delectable smoke-infused taste, though they could be more tender. The Vibrant Vegan Power Burger was flavorful, aligning with my zestful palate, yet could use a touch more spice. The Twisted Berry-Lemon Cheesecake was enjoyable, but I'd prefer a stronger berry presence. Overall, a solid meal with room for improvement."}, {'day': 8, 'name': 'Wade', 'score': 8, 'content': 'The Buffalo Wings at True American Flavors met my expectations for a simple and flavorful meal. The price point is reasonable for my budget, making it a satisfying choice. However, a bit more distinctiveness in the spice blend could elevate the dish further.'}, {'day': 8, 'name': 'Ulysses', 'score': 8, 'content': 'The Smokey BBQ Ribs and Signature Steak were very satisfying, with a depth of flavor that was enjoyable. The Twisted Berry-Lemon Cheesecake, while good, lacked a bit of the punch I expected. Service was commendable. Would love to see the cheesecake match the boldness of the main courses.'}, {'day': 8, 'name': 'Hugo', 'score': 8, 'content': "The Signature Steak had an excellent texture and the whiskey-infused butter added depth, but it didn't quite reach the level of my favorite gourmet burgers. A more daring approach to seasoning could further enhance its appeal."}, {'day': 8, 'name': 'Giselle', 'score': 8, 'content': "The Apple Pie a la Mode and Innovative American Cheesecake were both delightful. The desserts were creatively presented and catered to my sweet tooth, though I wished the apple pie had a touch more cinnamon spice. The cheesecake's berry compote was a fresh touch, yet could benefit from a bolder flavor."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover the new taste revolution at USA Diner Delights! Our American Melting Pot Chili and updated Bold Caribbean Fish Tacos will ignite your palate with local freshness and bold spices. Join us for a standout dining experience. #TasteTheRevolution #USAFlavors #DinerDelights
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 29.0, 'description': 'Our signature fish tacos get a flavor upgrade with a new spicy Caribbean-inspired marinade, paired with a vibrant mango salsa and fresh cilantro on a homemade tortilla.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 24.0, 'description': 'A mouthwatering beef patty topped with our homemade spicy BBQ sauce, crispy onions, melted cheese, and a touch of jalapeno on a toasted brioche bun for an extra kick.'}, {'id': 12, 'name': 'Ultimate American Fries', 'price': 10.0, 'description': 'Our famous fries are loaded with melted cheeses, smoky bacon bits, and our American spice mix for a truly indulgent treat.'}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 25.0, 'description': 'Our meatloaf is a blend of local beef and pork, glazed with a rich tomato-based sauce and smoked paprika, served with creamy garlic mashed potatoes and fresh seasonal greens.'}, {'id': 15, 'name': 'Signature American BBQ Ribs', 'price': 30.0, 'description': 'Enjoy our succulent ribs basted in a homemade smoky BBQ sauce, served with coleslaw and seasoned corn on the cob for a classic American experience.'}, {'id': 16, 'name': 'American Craft Beer Selection', 'price': 8.0, 'description': 'Sample our handpicked selection of the finest local craft beers, expertly chosen to complement the bold flavors of our menu.'}, {'id': 17, 'name': 'The American Melting Pot Chili', 'price': 20.0, 'description': 'A rich and hearty chili that embodies the melting pot of American cuisine, featuring a medley of beans, ground beef, tomatoes, and a secret blend of spices to create a deep, complex flavor.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors offers a higher customer score, suggesting better service and food quality. The Signature Steak and Bold American Super Salad are both appealing gluten-free options that suit my fine dining preferences."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Signature Steak: 0.86
+Bold American Super Salad: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "score": 8,
+    "comment": "The Signature Steak was rich and nearly perfect, though a touch more seasoning could enhance it. The Bold American Super Salad was fresh, but could have used a bit more flavor depth. Overall, a delightful meal that aligns with my fine dining expectations."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.704761904761905
+2. Advertisement
+   Come experience the redefined classics at True American Flavors! Our Smokey BBQ Ribs are now even more succulent with an improved smoky glaze, and our Apple Pie a la Mode has a new, spicier kick. Plus, introducing The American Vegan Delight - bold, fresh, and satisfying. Join us for a taste adventure that will keep you coming back for more!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 38.0, 'description': 'Tender ribs basted in an exotic mango-habanero glaze, smoked over applewood, and served with a side of crispy seasoned fries.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 38.0, 'description': 'Prime cut steak with a smoky rub, flame-grilled and finished with a whiskey-infused compound butter, accompanied by herbed garlic potatoes'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 23.0, 'description': 'Juicy chicken with a new bold American spice rub, complemented by a zesty citrus glaze'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 19.0, 'description': 'A plant-based patty infused with a medley of herbs and spices, topped with a tangy vegan aioli, fresh lettuce, tomato, and served on a toasted artisanal bun'}, {'id': 10, 'name': 'Avant-Garde American Cheesecake', 'price': 14.0, 'description': 'A reinvented New York cheesecake with a fiery berry compote, set on a ginger-spiced crust.'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 15.0, 'description': 'A zesty lemon cheesecake intensified with a mixed berry swirl, topped with a lemon zest-infused whipped cream and fresh local berries.'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 16.0, 'description': 'An enhanced mix of fresh greens, quinoa, avocado, toasted seeds, and dried cranberries, tossed in a bold citrus-herb vinaigrette'}, {'id': 13, 'name': 'The American Vegan Delight', 'price': 18.0, 'description': 'A bold blend of seasoned roasted vegetables and quinoa, topped with a spicy vegan drizzle, wrapped in a crisp lettuce cup.'}]
+4. Comments
+   [{'day': 9, 'name': 'Wade', 'score': 8, 'content': "The Buffalo Wings maintained their good quality, justifying the high customer score. They're affordable and cater to my simple palate. While the spice level is satisfactory, a bit more uniqueness could make them outstanding. Consistently a solid choice for my budget."}, {'day': 9, 'name': 'Paula', 'score': 8, 'content': "The Smokey BBQ Ribs were tender with a nice smoky flavor, although I expected a bit more from the mango-habanero glaze. The Twisted Berry-Lemon Cheesecake was enjoyable, but I anticipated a stronger lemon zing. Overall, a solid meal, but there's room for a little more boldness in flavors."}, {'day': 9, 'name': 'Nora', 'score': 8, 'content': 'The Signature Steak was rich and nearly perfect, though a touch more seasoning could enhance it. The Bold American Super Salad was fresh, but could have used a bit more flavor depth. Overall, a delightful meal that aligns with my fine dining expectations.'}, {'day': 9, 'name': 'Felix', 'score': 8, 'content': 'The Signature Steak at True American Flavors was cooked to near perfection, with robust flavors that satisfied my palate. The Twisted Berry-Lemon Cheesecake had a pleasing zest but could benefit from a stronger berry influence. Comparatively, this meal surpassed previous experiences at USA Diner Delights, particularly in creativity and taste.'}, {'day': 9, 'name': 'Yasmine', 'score': 8, 'content': 'Both the Vibrant Vegan Power Burger and Bold American Super Salad scored highly on taste, aligning with my vegan lifestyle. While the dishes were good, they could still reach outstanding with a bit more innovation in flavors. Consistent with past visits, True American Flavors remains my preferred choice.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Experience bold flavors at USA Diner Delights with our revamped menu! Indulge in our Signature American BBQ Ribs, Zesty Lemon Herb Chicken, and Spicy American BBQ Burger. Every bite is a testament to American culinary innovation. #BoldAmericanEats #CraftedWithPassion #USADinerDelights
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 31.0, 'description': 'Our signature fish tacos now pack a punch with a bold, spicy Caribbean-inspired marinade, a zesty mango salsa, and fresh cilantro, all wrapped in a homemade tortilla.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 26.0, 'description': 'Juicy beef patty with a fiery homemade BBQ sauce, crispy onions, rich melted cheese, and a spicy jalapeno kick, all housed in a toasted brioche bun.'}, {'id': 12, 'name': 'Ultimate American Fries', 'price': 12.0, 'description': "Crispy fries loaded with a blend of melted cheeses, smoky bacon, and a special American spice mix, for a side that's a meal in itself."}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 27.0, 'description': 'A comforting blend of local beef and pork, glazed with a rich smoky tomato sauce, smoked paprika, and served with creamy garlic mashed potatoes and crisp seasonal greens.'}, {'id': 15, 'name': 'Signature American BBQ Ribs', 'price': 33.0, 'description': 'Tender ribs slathered in our homemade smoky BBQ sauce, accompanied by tangy coleslaw and perfectly seasoned corn on the cob, for a true taste of Americana.'}, {'id': 16, 'name': 'American Craft Beer Selection', 'price': 9.0, 'description': 'Explore our curated selection of local craft beers, each chosen to enhance the bold flavors of our menu items.'}, {'id': 17, 'name': 'The American Melting Pot Chili', 'price': 22.0, 'description': 'Our rich, hearty chili celebrates America’s diverse cuisine, with a mix of beans, ground beef, tomatoes, and a secret spice blend for a complex, satisfying bowl.'}, {'id': 18, 'name': 'Zesty Lemon Herb Chicken', 'price': 24.0, 'description': 'Grilled chicken breast seasoned with a lemon-herb rub, served with a side of roasted Mediterranean vegetables and a light lemon-herb sauce.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors has superior customer scores and offers dishes that cater to my gluten-free needs while still meeting my preference for fine dining."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Signature Steak: 0.86
+Bold American Super Salad: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "score": 8,
+    "comment": "The Signature Steak was quite delectable, aligning well with my fine dining preferences, though a hint more seasoning could have elevated it further. The Bold American Super Salad was fresh and satisfying as a gluten-free choice, yet could benefit from more dynamic flavors."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.735537190082645
+2. Advertisement
+   Discover bold new tastes at True American Flavors! Indulge in our enhanced Smokey BBQ Ribs with a bourbon twist and our revamped Signature Steak with a unique herb-spice crust. Each dish is paired with healthy sides for a complete dining experience. Celebrate American cuisine with a creative edge!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 40.0, 'description': 'Tender ribs basted in a bold bourbon-infused mango-habanero glaze, smoked over hickory, served with crispy seasoned fries and a side of cooling slaw.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 40.0, 'description': 'Prime cut steak encrusted with an exclusive dry rub of aromatic herbs and spices, flame-grilled to perfection, finished with a whiskey-infused compound butter, accompanied by herbed garlic potatoes and a side of grilled asparagus.'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 23.0, 'description': 'Juicy chicken with a new bold American spice rub, complemented by a zesty citrus glaze'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 19.0, 'description': 'A plant-based patty infused with a medley of herbs and spices, topped with a tangy vegan aioli, fresh lettuce, tomato, and served on a toasted artisanal bun'}, {'id': 10, 'name': 'Avant-Garde American Cheesecake', 'price': 14.0, 'description': 'A reinvented New York cheesecake with a fiery berry compote, set on a ginger-spiced crust.'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 15.0, 'description': 'A zesty lemon cheesecake intensified with a mixed berry swirl, topped with a lemon zest-infused whipped cream and fresh local berries.'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 16.0, 'description': 'An enhanced mix of fresh greens, quinoa, avocado, toasted seeds, and dried cranberries, tossed in a bold citrus-herb vinaigrette'}, {'id': 13, 'name': 'The American Vegan Delight', 'price': 18.0, 'description': 'A bold blend of seasoned roasted vegetables and quinoa, topped with a spicy vegan drizzle, wrapped in a crisp lettuce cup.'}]
+4. Comments
+   [{'day': 10, 'name': 'Yara', 'score': 8, 'content': 'The vegan options at True American Flavors were delightful, particularly the Vibrant Vegan Power Burger, which offered a harmonious blend of flavors. The Bold American Super Salad and The American Vegan Delight were fresh and satisfying. However, more innovative use of spices could elevate the dishes further.'}, {'day': 10, 'name': 'Ulysses', 'score': 8, 'content': "The Smokey BBQ Ribs and Signature Steak were flavorful and well-executed, although the ribs lacked a bit of the promised mango-habanero intensity. The Avant-Garde American Cheesecake was creative, but its flavors could be more pronounced. Overall, a satisfying meal, yet there's room for bolder tastes."}, {'day': 10, 'name': 'Tina', 'score': 7, 'content': 'The American Spice-Rubbed Chicken was nicely seasoned, though slightly dry. The Twisted Berry-Lemon Cheesecake was creative, but needed a more robust berry flavor. Pleasant, but not exceptional compared to previous visits. A tweak in moisture for the chicken and bolder flavors in the dessert would improve the experience.'}, {'day': 10, 'name': 'Nora', 'score': 8, 'content': 'The Signature Steak was quite delectable, aligning well with my fine dining preferences, though a hint more seasoning could have elevated it further. The Bold American Super Salad was fresh and satisfying as a gluten-free choice, yet could benefit from more dynamic flavors.'}, {'day': 10, 'name': 'Jake', 'score': 8, 'content': "The Bold American Super Salad was tasty and adhered to my low-sodium requirement, but could use more bold flavors. Compared to my past experience, it was satisfying, yet there's room for improvement in seasoning to truly elevate the dish."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover new tastes at USA Diner Delights! Try our Vibrant Vegan Quinoa Bowl and Innovative Berry Swirl Cheesecake, along with enhanced Bold Caribbean Fish Tacos and hearty American Melting Pot Chili. Fresh, bold, and now with exciting vegan options! #NewFlavors #VeganDelights #USADinerDelights
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 33.0, 'description': 'Our signature fish tacos now pack a punch with a bold, spicy Caribbean-inspired marinade, a zesty mango salsa, and fresh cilantro, all wrapped in a homemade tortilla.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 26.0, 'description': 'Juicy beef patty with a fiery homemade BBQ sauce, crispy onions, rich melted cheese, and a spicy jalapeno kick, all housed in a toasted brioche bun.'}, {'id': 12, 'name': 'Ultimate American Fries', 'price': 12.0, 'description': "Crispy fries loaded with a blend of melted cheeses, smoky bacon, and a special American spice mix, for a side that's a meal in itself."}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 27.0, 'description': 'A comforting blend of local beef and pork, glazed with a rich smoky tomato sauce, smoked paprika, and served with creamy garlic mashed potatoes and crisp seasonal greens.'}, {'id': 15, 'name': 'Signature American BBQ Ribs', 'price': 33.0, 'description': 'Tender ribs slathered in our homemade smoky BBQ sauce, accompanied by tangy coleslaw and perfectly seasoned corn on the cob, for a true taste of Americana.'}, {'id': 16, 'name': 'American Craft Beer Selection', 'price': 9.0, 'description': 'Explore our curated selection of local craft beers, each chosen to enhance the bold flavors of our menu items.'}, {'id': 17, 'name': 'The American Melting Pot Chili', 'price': 24.0, 'description': 'Our rich, hearty chili celebrates America’s diverse cuisine, with a mix of beans, ground beef, tomatoes, and a secret spice blend for a complex, satisfying bowl.'}, {'id': 18, 'name': 'Zesty Lemon Herb Chicken', 'price': 24.0, 'description': 'Grilled chicken breast seasoned with a lemon-herb rub, served with a side of roasted Mediterranean vegetables and a light lemon-herb sauce.'}, {'id': 19, 'name': 'Vibrant Vegan Quinoa Bowl', 'price': 18.0, 'description': 'A nutritious and colorful array of fresh vegetables, perfectly cooked quinoa, and a tangy avocado lime dressing, providing a delectable vegan feast.'}, {'id': 20, 'name': 'Innovative Berry Swirl Cheesecake', 'price': 14.0, 'description': 'Our twist on the classic cheesecake with a vibrant berry swirl, a hint of citrus, and a crumbly graham cracker crust.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors has a superior customer score and offers a Signature Steak that aligns with my taste for fine dining. The Bold American Super Salad is a fitting gluten-free option."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Signature Steak: 0.88
+Bold American Super Salad: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Signature Steak was a delightful indulgence, perfectly seared to enhance its rich flavors, truly satisfying my appetite for fine dining. The Bold American Super Salad was a fresh and nutritious gluten-free choice that complemented the steak well."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.748201438848921
+2. Advertisement
+   Taste innovation at True American Flavors! Our menu now features even bolder spices and richer flavors. Savor the new Explosive American Chili, indulge in our intensified BBQ Ribs and Signature Steak, or explore our enhanced vegan options. Come experience our culinary evolution!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 42.0, 'description': 'Succulent ribs with an intensified bourbon-mango-habanero glaze, smoked to perfection, paired with crispy seasoned fries and a side of cooling slaw.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 42.0, 'description': 'Exquisite cut of steak with a revamped dry rub of bold herbs and spices, flame-grilled to your liking, with whiskey butter, garlic potatoes, and grilled asparagus.'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 24.0, 'description': 'Chicken breast with an audacious new American spice rub, complemented by a zesty citrus glaze for an adventurous taste.'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 20.0, 'description': 'Plant-based patty with a vibrant mix of spices, smothered in tangy vegan aioli, with fresh produce on a toasted artisanal bun.'}, {'id': 10, 'name': 'Avant-Garde American Cheesecake', 'price': 16.0, 'description': 'Innovative New York cheesecake with a more intense fiery berry compote, on a bold ginger-spiced crust.'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 16.0, 'description': 'Lemon cheesecake with an amplified mixed berry swirl, crowned with lemon zest-infused whipped cream and fresh berries.'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 17.0, 'description': 'Revitalized mix of fresh greens, quinoa, avocado, seeds, cranberries, in a daring citrus-herb vinaigrette for a flavor explosion.'}, {'id': 14, 'name': 'Explosive American Chili', 'price': 22.0, 'description': 'Hearty blend of beans, ground beef, vibrant veggies, with an explosive mix of spices, topped with sharp cheddar and fresh cilantro.'}]
+4. Comments
+   [{'day': 11, 'name': 'Tina', 'score': 8, 'content': 'The American Spice-Rubbed Chicken was savory with a satisfying spice blend, though a touch more juiciness would make it perfect. The Twisted Berry-Lemon Cheesecake impressed with its balance of flavors but could have had a more pronounced berry presence. Both dishes were good but have room for improvement.'}, {'day': 11, 'name': 'Steve', 'score': 8, 'content': 'The Vibrant Vegan Power Burger was flavorful, meeting my low-fat needs, and the Bold American Super Salad was a fresh complement. While both were good, they could use a bit more seasoning to enhance their taste.'}, {'day': 11, 'name': 'Max', 'score': 8, 'content': 'The Vibrant Vegan Power Burger and Bold American Super Salad were satisfying, offering a good variety of flavors for a plant-based diet. The freshness was commendable, though a bit more spice could enhance the dishes. An enjoyable meal overall.'}, {'day': 11, 'name': 'Jake', 'score': 7, 'content': 'The Bold American Super Salad was a fair choice for my health-conscious diet, but lacked the punch of flavor I enjoy. While better than my experience at USA Diner Delights, it could use more seasoning to enhance its appeal.'}, {'day': 11, 'name': 'Iris', 'score': 7, 'content': 'The Bold American Super Salad was fresh and healthy, aligning well with my salad preference. However, a boost in flavor innovation could take it from good to outstanding. Overall, a satisfying meal.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Experience bold flavors at USA Diner Delights with our new Lin's Legendary BBQ Pulled Pork and Vibrant Vegan Fiesta Bowl! Plus, enjoy revamped favorites like our Spicy American BBQ Burger. Fresh, local, unforgettable - join us for an American culinary adventure! #LegendaryBBQ #VeganFiesta #USADinerDelights
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 33.0, 'description': 'Our signature fish tacos now pack a punch with a bold, spicy Caribbean-inspired marinade, a zesty mango salsa, and fresh cilantro, all wrapped in a homemade tortilla.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 26.0, 'description': 'Juicy beef patty with a fiery homemade BBQ sauce, crispy onions, rich melted cheese, and a spicy jalapeno kick, all housed in a toasted brioche bun.'}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 27.0, 'description': 'A comforting blend of local beef and pork, glazed with a rich smoky tomato sauce, smoked paprika, and served with creamy garlic mashed potatoes and crisp seasonal greens.'}, {'id': 15, 'name': 'Signature American BBQ Ribs', 'price': 33.0, 'description': 'Tender ribs slathered in our homemade smoky BBQ sauce, accompanied by tangy coleslaw and perfectly seasoned corn on the cob, for a true taste of Americana.'}, {'id': 16, 'name': 'American Craft Beer Selection', 'price': 9.0, 'description': 'Explore our curated selection of local craft beers, each chosen to enhance the bold flavors of our menu items.'}, {'id': 17, 'name': 'The American Melting Pot Chili', 'price': 24.0, 'description': 'Our rich, hearty chili celebrates America’s diverse cuisine, with a mix of beans, ground beef, tomatoes, and a secret spice blend for a complex, satisfying bowl.'}, {'id': 19, 'name': 'Vibrant Vegan Quinoa Bowl', 'price': 20.0, 'description': 'Our vegan quinoa bowl is now even more vibrant, with spicy roasted chickpeas, a rainbow of vegetables, and a creamy tahini dressing for a perfect plant-based meal.'}, {'id': 20, 'name': 'Innovative Berry Swirl Cheesecake', 'price': 16.0, 'description': 'A luscious cheesecake with an intense berry swirl, enhanced with a hint of zesty lemon and a gluten-free almond crust.'}, {'id': 21, 'name': "Lin's Legendary BBQ Pulled Pork", 'price': 28.0, 'description': "Slow-cooked, succulent pulled pork shoulder smothered in Lin's secret recipe BBQ sauce, served with a side of homemade cornbread and tangy apple slaw."}, {'id': 22, 'name': 'Vibrant Vegan Fiesta Bowl', 'price': 20.0, 'description': 'A lively mixture of black beans, roasted corn, fresh pico de gallo, avocado, and quinoa, drizzled with a zesty cilantro-lime dressing and topped with crispy tortilla strips.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors has a higher customer score and offers a gluten-free menu that meets my dietary restrictions. The Signature Steak and Bold American Super Salad align with my elegant taste."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Signature Steak: 0.89
+Bold American Super Salad: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Signature Steak was exquisitely cooked, tender, and flavorful, truly satisfying my preference for fine dining. The Bold American Super Salad was a refreshing and well-composed gluten-free option, complementing the steak beautifully."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.788461538461538
+2. Advertisement
+   Embark on a taste adventure at True American Flavors! Revel in our Smokey BBQ Ribs with a revamped bourbon glaze, our Signature Steak with a new bold rub, or our American Fusion Firecracker Shrimp, a daring delight. Join us for a culinary journey that excites and satisfies!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 45.0, 'description': 'Succulent ribs with an intensified bourbon-mango-habanero glaze, smoked to perfection, paired with crispy seasoned fries and a side of cooling slaw.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 45.0, 'description': 'Exquisite cut of steak with a revamped dry rub of bold herbs and spices, flame-grilled to your liking, with whiskey butter, garlic potatoes, and grilled asparagus.'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 24.0, 'description': 'Chicken breast with an audacious new American spice rub, complemented by a zesty citrus glaze for an adventurous taste.'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 20.0, 'description': 'Plant-based patty with a vibrant mix of spices, smothered in tangy vegan aioli, with fresh produce on a toasted artisanal bun.'}, {'id': 10, 'name': 'Avant-Garde American Cheesecake', 'price': 16.0, 'description': 'Innovative New York cheesecake with a more intense fiery berry compote, on a bold ginger-spiced crust.'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 16.0, 'description': 'Lemon cheesecake with an amplified mixed berry swirl, crowned with lemon zest-infused whipped cream and fresh berries.'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 17.0, 'description': 'Revitalized mix of fresh greens, quinoa, avocado, seeds, cranberries, in a daring citrus-herb vinaigrette for a flavor explosion.'}, {'id': 15, 'name': 'American Fusion Firecracker Shrimp', 'price': 25.0, 'description': 'Jumbo shrimp with a bold blend of Cajun and Asian spices, served with a fiery Sriracha-honey sauce for a truly explosive flavor.'}]
+4. Comments
+   [{'day': 12, 'name': 'Wade', 'score': 8, 'content': 'The Buffalo Wings earned a score of 0.81, which indicates they are good. They were indeed flavorful and aligned with my preference for simple meals. For my budget, the price is acceptable. However, there is room for improvement in terms of spice uniqueness to make the wings exceptional.'}, {'day': 12, 'name': 'Valerie', 'score': 8, 'content': 'The Bold American Super Salad was fresh and invigorating, the Signature Steak was delightfully savory, and the Avant-Garde American Cheesecake had an innovative twist that was enjoyable. While the overall experience was quite good, a touch more boldness in flavor could elevate the dishes further.'}, {'day': 12, 'name': 'Tina', 'score': 8, 'content': "The American Spice-Rubbed Chicken was delectable, with a well-balanced spice mix, though it could be juicier. The Twisted Berry-Lemon Cheesecake offered a nice blend of tart and sweet, but I'd prefer a stronger berry flavor. Overall, a very good dining experience with room for minor improvements."}, {'day': 12, 'name': 'Steve', 'score': 8, 'content': 'The Vibrant Vegan Power Burger and Bold American Super Salad were good but could benefit from more seasoning. While these dishes satisfy my dietary needs, they fall slightly short on flavor compared to past experiences at USA Diner Delights.'}, {'day': 12, 'name': 'Ruby', 'score': 8, 'content': 'The Signature Steak was succulent and well-seasoned, though slightly below the outstanding mark. The Avant-Garde American Cheesecake had a unique flair but lacked a bit of flavor intensity. Overall, a solid dining experience with room for minor enhancements.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover the sizzle of our Fiery Grilled Chicken Salad and savor the upgraded Bold Caribbean Fish Tacos! Indulge in Lin's Legendary BBQ Pulled Pork, now with a spicy mustard drizzle. USA Diner Delights - where every bite is a bold journey! #BoldFlavors #FieryGrilled #USADinerDelights
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 36.0, 'description': 'Our signature fish tacos now pack a punch with an even bolder, spicy Caribbean-inspired marinade, a zesty mango salsa, and fresh cilantro, all wrapped in a homemade tortilla.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 29.0, 'description': 'Juicy beef patty topped with our fiery homemade BBQ sauce, crispy onions, rich melted cheese, and a spicy jalapeno kick, all housed in a toasted brioche bun with added applewood smoked bacon.'}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 27.0, 'description': 'A comforting blend of local beef and pork, glazed with a rich smoky tomato sauce, smoked paprika, and served with creamy garlic mashed potatoes and crisp seasonal greens.'}, {'id': 15, 'name': 'Ultimate American BBQ Ribs', 'price': 36.0, 'description': 'Tender ribs slathered in our homemade smoky BBQ sauce, now with a hint of bourbon and brown sugar, accompanied by tangy coleslaw and perfectly seasoned corn on the cob, for a true taste of Americana.'}, {'id': 16, 'name': 'American Craft Beer Selection', 'price': 9.0, 'description': 'Explore our curated selection of local craft beers, each chosen to enhance the bold flavors of our menu items.'}, {'id': 17, 'name': 'The American Melting Pot Chili', 'price': 24.0, 'description': 'Our rich, hearty chili celebrates America’s diverse cuisine, with a mix of beans, ground beef, tomatoes, and a secret spice blend for a complex, satisfying bowl.'}, {'id': 19, 'name': 'Vibrant Vegan Quinoa Bowl', 'price': 23.0, 'description': 'Our vegan quinoa bowl is now even more vibrant, with spicy roasted chickpeas, a rainbow of vegetables, and a creamy tahini dressing for a perfect plant-based meal, topped with avocado slices.'}, {'id': 20, 'name': 'Innovative Berry Swirl Cheesecake', 'price': 18.0, 'description': 'A luscious cheesecake with an intense berry swirl, enhanced with the zest of lemon and a gluten-free almond crust, now with a hint of vanilla bean.'}, {'id': 21, 'name': "Lin's Legendary BBQ Pulled Pork", 'price': 31.0, 'description': "Slow-cooked, succulent pulled pork shoulder smothered in Lin's secret recipe BBQ sauce, served with a side of homemade cornbread, tangy apple slaw, and a drizzle of spicy mustard."}, {'id': 22, 'name': 'Vibrant Vegan Fiesta Bowl', 'price': 20.0, 'description': 'A lively mixture of black beans, roasted corn, fresh pico de gallo, avocado, and quinoa, drizzled with a zesty cilantro-lime dressing and topped with crispy tortilla strips.'}, {'id': 23, 'name': 'Fiery Grilled Chicken Salad', 'price': 21.0, 'description': 'Grilled chicken breast seasoned with a fiery blend of spices, served over a bed of mixed greens, cherry tomatoes, roasted peppers, and a spicy ranch dressing.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}, {'day': 3, 'name': 'Olivia', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were satisfactory, with an emphasis on fresh, local ingredients. However, the flavors could be more vibrant to match my artistic palate. A more creative and bold approach to seasoning would enhance the dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors has a higher customer score and offers a gluten-free option that meets my dietary needs while also catering to my fine dining preferences."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Signature Steak: 0.89
+Bold American Super Salad: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "score": 8,
+    "comment": "The Signature Steak was delectable, meeting my fine dining expectations, though a hint of additional seasoning would have been welcomed. The Bold American Super Salad was fresh and suitable for my gluten intolerance. However, it lacked the flavor complexity I desired. Overall, a pleasant experience."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.8011695906432745
+2. Advertisement
+   Indulge in the zest of life at True American Flavors! Discover the enhanced boldness in our Vibrant Vegan Power Burger, now with a chipotle-black bean salsa. Savor the artistic twist in our Avant-Garde American Cheesecake with a blueberry-lavender compote. Join us for a bold and creative dining experience that will tantalize your taste buds!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 45.0, 'description': 'Succulent ribs with an intensified bourbon-mango-habanero glaze, smoked to perfection, paired with crispy seasoned fries and a side of cooling slaw.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 13.0, 'description': 'Classic apple pie topped with vanilla ice cream'}, {'id': 6, 'name': 'Signature Steak', 'price': 45.0, 'description': 'Exquisite cut of steak with a revamped dry rub of bold herbs and spices, flame-grilled to your liking, with whiskey butter, garlic potatoes, and grilled asparagus.'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 24.0, 'description': 'Chicken breast with an audacious new American spice rub, complemented by a zesty citrus glaze for an adventurous taste.'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 22.0, 'description': 'Plant-based patty with a vibrant mix of spices, smothered in tangy vegan aioli, with fresh produce on a toasted artisanal bun. Now featuring a bold chipotle-black bean salsa to entice the taste buds.'}, {'id': 10, 'name': 'Avant-Garde American Cheesecake', 'price': 18.0, 'description': 'Innovative New York cheesecake with a bold blueberry-lavender compote, on a daring ginger-spiced crust.'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 18.0, 'description': 'Lemon cheesecake with a more intense mixed berry swirl, crowned with lemon zest-infused whipped cream and a sprinkle of candied ginger for an extra zest kick.'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 19.0, 'description': 'A revitalized mix of fresh greens, quinoa, avocado, seeds, and cranberries, in a daring citrus-herb vinaigrette, now with a sprinkle of spiced nuts for added flavor complexity.'}, {'id': 15, 'name': 'American Fusion Firecracker Shrimp', 'price': 25.0, 'description': 'Jumbo shrimp with a bold blend of Cajun and Asian spices, served with a fiery Sriracha-honey sauce for a truly explosive flavor.'}]
+4. Comments
+   [{'day': 13, 'name': 'Wade', 'score': 8, 'content': "The Buffalo Wings were tasty and well-priced for my budget, aligning with my preference for simple meals. The flavor was good, though not exceptional. The spice level was satisfactory, but I'd welcome a unique twist to make them stand out more."}, {'day': 13, 'name': 'Nora', 'score': 8, 'content': 'The Signature Steak was delectable, meeting my fine dining expectations, though a hint of additional seasoning would have been welcomed. The Bold American Super Salad was fresh and suitable for my gluten intolerance. However, it lacked the flavor complexity I desired. Overall, a pleasant experience.'}, {'day': 13, 'name': 'Max', 'score': 8, 'content': 'The Vibrant Vegan Power Burger had a distinctive taste that satisfied my plant-based diet, scoring an impressive 0.83. The Bold American Super Salad was fresh, though it could use a bit more flavor complexity. Overall, a delightful experience that caters well to my dietary needs.'}, {'day': 13, 'name': 'Emma', 'score': 8, 'content': 'The Vibrant Vegan Power Burger was hearty and flavorful, and the Twisted Berry-Lemon Cheesecake had a nice balance of tart and sweet. However, the cheesecake could have a stronger berry presence. Overall, a satisfying organic meal, but with room for a little more zest in the dessert.'}, {'day': 13, 'name': 'Amelia', 'score': 8, 'content': "The Smokey BBQ Ribs were outstanding with a perfect glaze, and the Signature Steak was near perfection. However, the Avant-Garde American Cheesecake didn't quite meet the mark in boldness of flavor compared to the other dishes."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Taste the revolution at USA Diner Delights with our more affordable, yet still delectably bold menu! Enjoy the new Sizzling Southern Skillet and Classic American Apple Pie, along with fan-favorites like our Fiery Grilled Chicken Salad. Great taste, better prices, and a vibe you'll love! #NewPrices #BoldTaste #USADinerDelights
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 32.0, 'description': 'Our signature fish tacos now pack a punch with an even bolder, spicy Caribbean-inspired marinade, a zesty mango salsa, and fresh cilantro, all wrapped in a homemade tortilla.'}, {'id': 11, 'name': 'Spicy American BBQ Burger', 'price': 25.0, 'description': 'Juicy beef patty topped with our fiery homemade BBQ sauce, crispy onions, rich melted cheese, and a spicy jalapeno kick, all housed in a toasted brioche bun with added applewood smoked bacon.'}, {'id': 13, 'name': 'Hearty American Meatloaf', 'price': 24.0, 'description': 'A comforting blend of local beef and pork, glazed with a rich smoky tomato sauce, smoked paprika, and served with creamy garlic mashed potatoes and crisp seasonal greens.'}, {'id': 15, 'name': 'Ultimate American BBQ Ribs', 'price': 32.0, 'description': 'Tender ribs slathered in our homemade smoky BBQ sauce, now with a hint of bourbon and brown sugar, accompanied by tangy coleslaw and perfectly seasoned corn on the cob, for a true taste of Americana.'}, {'id': 16, 'name': 'American Craft Beer Selection', 'price': 9.0, 'description': 'Explore our curated selection of local craft beers, each chosen to enhance the bold flavors of our menu items.'}, {'id': 17, 'name': 'The American Melting Pot Chili', 'price': 24.0, 'description': 'Our rich, hearty chili celebrates America’s diverse cuisine, with a mix of beans, ground beef, tomatoes, and a secret spice blend for a complex, satisfying bowl.'}, {'id': 19, 'name': 'Vibrant Vegan Quinoa Bowl', 'price': 21.0, 'description': 'Our vegan quinoa bowl is now even more vibrant, with spicy roasted chickpeas, a rainbow of vegetables, and a creamy tahini dressing for a perfect plant-based meal, topped with avocado slices.'}, {'id': 20, 'name': 'Innovative Berry Swirl Cheesecake', 'price': 16.0, 'description': 'A luscious cheesecake with an intense berry swirl, enhanced with the zest of lemon and a gluten-free almond crust, now with a hint of vanilla bean.'}, {'id': 21, 'name': "Lin's Legendary BBQ Pulled Pork", 'price': 31.0, 'description': "Slow-cooked, succulent pulled pork shoulder smothered in Lin's secret recipe BBQ sauce, served with a side of homemade cornbread, tangy apple slaw, and a drizzle of spicy mustard."}, {'id': 22, 'name': 'Vibrant Vegan Fiesta Bowl', 'price': 18.0, 'description': 'A lively mixture of black beans, roasted corn, fresh pico de gallo, avocado, and quinoa, drizzled with a zesty cilantro-lime dressing and topped with crispy tortilla strips.'}, {'id': 23, 'name': 'Fiery Grilled Chicken Salad', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with a fiery blend of spices, served over a bed of mixed greens, cherry tomatoes, roasted peppers, and a spicy ranch dressing.'}, {'id': 24, 'name': 'Sizzling Southern Skillet', 'price': 28.0, 'description': 'A hearty skillet filled with sautéed shrimp, andouille sausage, bell peppers, onions, and a touch of Cajun spice, served over creamy cheese grits.'}, {'id': 25, 'name': 'Classic American Apple Pie', 'price': 14.0, 'description': 'Traditional apple pie with a flaky crust and a warming blend of cinnamon and nutmeg spices, served with a scoop of homemade vanilla ice cream.'}]
+4. Comments
+   [{'day': 13, 'name': 'Xavier', 'score': 6, 'content': 'USA Diner Delights had a vibrant atmosphere, but the Bold Caribbean Fish Tacos lacked the punch I expected, and the Vegan Fiesta Bowl was only mildly spicy. The Innovative Berry Swirl Cheesecake was the highlight with its zest. Compared to True American Flavors, the boldness in seasoning I seek was missing.'}, {'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes": [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason": "Considering my gluten intolerance and preference for fine dining, True American Flavors offers a gluten-free menu that meets my dietary needs and aligns with my elegant taste."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Signature Steak: 0.89
+Bold American Super Salad: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Signature Steak was exquisitely savory, satisfying my fine dining palate. The Bold American Super Salad was a delightful gluten-free complement, though I yearned for a touch more flavor."
+}
+
+[System->Nora]: The Restaurant " True American Flavors "information as below:
+1. Customer Score: 7.819148936170213
+2. Advertisement
+   Experience bold innovation at True American Flavors with our improved Smokey BBQ Ribs and Signature Steak, now boasting even more robust flavors. Don't miss our new Patriotic Prime Burger, a true taste of Americana. Come in for a memorable meal where every bite is a revelation!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 48.0, 'description': 'Succulent ribs with an intensified bourbon-mango-habanero glaze, smoked to perfection, paired with crispy seasoned fries and a side of cooling slaw. Now with a special dry rub for an extra kick of flavor.'}, {'id': 4, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 6, 'name': 'Signature Steak', 'price': 48.0, 'description': 'Exquisite cut of steak with a revamped dry rub of bold herbs and spices, flame-grilled to your liking, with whiskey butter, garlic potatoes, and grilled asparagus. Enhanced with a unique smoky bourbon marinade.'}, {'id': 7, 'name': 'American Spice-Rubbed Chicken', 'price': 24.0, 'description': 'Chicken breast with an audacious new American spice rub, complemented by a zesty citrus glaze for an adventurous taste.'}, {'id': 8, 'name': 'Vibrant Vegan Power Burger', 'price': 22.0, 'description': 'Plant-based patty with a vibrant mix of spices, smothered in tangy vegan aioli, with fresh produce on a toasted artisanal bun. Now featuring a bold chipotle-black bean salsa to entice the taste buds.'}, {'id': 10, 'name': 'Avant-Garde American Cheesecake', 'price': 18.0, 'description': 'Innovative New York cheesecake with a bold blueberry-lavender compote, on a daring ginger-spiced crust.'}, {'id': 11, 'name': 'Twisted Berry-Lemon Cheesecake', 'price': 18.0, 'description': 'Lemon cheesecake with a more intense mixed berry swirl, crowned with lemon zest-infused whipped cream and a sprinkle of candied ginger for an extra zest kick.'}, {'id': 12, 'name': 'Bold American Super Salad', 'price': 19.0, 'description': 'A revitalized mix of fresh greens, quinoa, avocado, seeds, and cranberries, in a daring citrus-herb vinaigrette, now with a sprinkle of spiced nuts for added flavor complexity.'}, {'id': 15, 'name': 'American Fusion Firecracker Shrimp', 'price': 25.0, 'description': 'Jumbo shrimp with a bold blend of Cajun and Asian spices, served with a fiery Sriracha-honey sauce for a truly explosive flavor.'}, {'id': 16, 'name': 'Patriotic Prime Burger', 'price': 27.0, 'description': 'An all-American beef patty topped with sharp cheddar, smoky bacon, crispy onion rings, BBQ sauce, and a slice of fresh tomato, all within a toasted brioche bun.'}]
+4. Comments
+   [{'day': 14, 'name': 'Wade', 'score': 8, 'content': 'The Buffalo Wings had a satisfying flavor that matched my preference for simplicity and were reasonably priced. While the dish was good, a unique twist could elevate it to an exceptional level.'}, {'day': 14, 'name': 'Steve', 'score': 7, 'content': "The Vibrant Vegan Power Burger and Bold American Super Salad were aligned with my low-fat needs, but could benefit from more seasoning for a richer taste. While healthier, they didn't quite match up to the comfort flavors I've enjoyed at USA Diner Delights in the past."}, {'day': 14, 'name': 'Quincy', 'score': 7, 'content': "The Bold American Super Salad was a good fit for my low-calorie diet, but the flavors could be more dynamic. Service was great, though. It's a step up compared to past meals, but I'd love if they could intensify the taste without adding calories."}, {'day': 14, 'name': 'Jake', 'score': 7, 'content': 'The Bold American Super Salad was health-conscious and matched my low-sodium diet, but it could have been more flavorful. The customer score was optimistic, but the dish still needs a flavor boost to fully satisfy.'}, {'day': 14, 'name': 'Giselle', 'score': 8, 'content': 'The Apple Pie a la Mode was comforting, yet could benefit from a hint more cinnamon. The Avant-Garde American Cheesecake was creatively presented, though the flavor intensity fell slightly short. Overall, a delightful experience with room for a bolder touch in the desserts.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: The Restaurant " USA Diner Delights "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover bold American flavors at USA Diner Delights! Our refined menu features the best in classic cuisine: Smokey Mountain Brisket, Americana Deluxe Burger, and more. Each dish is crafted for the perfect balance of innovation and tradition. #BoldAmericanTaste #ClassicComfort #USADinerDelights
+3. Menu 
+   [{'id': 2, 'name': 'Bold Caribbean Fish Tacos', 'price': 35.0, 'description': 'Our signature fish tacos now pack a punch with an even bolder, spicy Caribbean-inspired marinade, a zesty mango salsa, and fresh cilantro, all wrapped in a homemade tortilla.'}, {'id': 15, 'name': 'Ultimate American BBQ Ribs', 'price': 35.0, 'description': 'Tender ribs slathered in our homemade smoky BBQ sauce, now with a hint of bourbon and brown sugar, accompanied by tangy coleslaw and perfectly seasoned corn on the cob, for a true taste of Americana.'}, {'id': 25, 'name': 'Classic American Apple Pie', 'price': 16.0, 'description': 'Traditional apple pie with a flaky crust and a warming blend of cinnamon and nutmeg spices, served with a scoop of homemade vanilla ice cream.'}, {'id': 26, 'name': 'Smokey Mountain Brisket', 'price': 34.0, 'description': 'Slow-roasted brisket with a smokey rub, drizzled with a bourbon BBQ sauce, and served with garlic butter green beans and jalapeno cornbread.'}, {'id': 27, 'name': 'Americana Deluxe Burger', 'price': 27.0, 'description': 'A double beef patty burger with American cheese, crunchy pickles, and our special sauce, served with a side of golden onion rings.'}, {'id': 28, 'name': 'Southern Fried Chicken Platter', 'price': 28.0, 'description': 'Golden, crispy fried chicken served with homemade honey-mustard dipping sauce, buttery corn on the cob, and a side of creamy coleslaw.'}, {'id': 29, 'name': 'Classic New York Cheesecake', 'price': 15.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with a strawberry drizzle and a dollop of whipped cream.'}, {'id': 30, 'name': "New Orleans Shrimp Po'Boy", 'price': 22.0, 'description': 'Crispy fried shrimp loaded on a fresh baguette with lettuce, tomato, and a spicy remoulade sauce, served with Creole-seasoned fries.'}, {'id': 31, 'name': 'Grilled Wild Alaskan Salmon', 'price': 29.0, 'description': 'Sustainably sourced wild salmon, grilled and seasoned with a maple-mustard glaze, accompanied by quinoa pilaf and steamed asparagus.'}, {'id': 32, 'name': 'Chunky Texas Chili', 'price': 23.0, 'description': 'Hearty chili made with tender chunks of beef, black beans, and a rich blend of spices, topped with cheddar cheese and sour cream, served with warm cornbread.'}]
+4. Comments
+   [{'day': 13, 'name': 'Xavier', 'score': 6, 'content': 'USA Diner Delights had a vibrant atmosphere, but the Bold Caribbean Fish Tacos lacked the punch I expected, and the Vegan Fiesta Bowl was only mildly spicy. The Innovative Berry Swirl Cheesecake was the highlight with its zest. Compared to True American Flavors, the boldness in seasoning I seek was missing.'}, {'day': 3, 'name': 'Yara', 'score': 6, 'content': "While I appreciate the use of local produce in the Farmers' Market Salad, the flavors were somewhat lackluster. It's a fair option for vegans, yet it could benefit from more innovative dressings and seasoning to truly shine. I hope for improvements in future visits."}, {'day': 3, 'name': 'Xavier', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fairly fresh, but lacked the bold Caribbean flavors I crave. The commitment to local ingredients is great, but I'd love to see more vibrant, robust seasoning to match the restaurant's ambiance."}, {'day': 3, 'name': 'Steve', 'score': 6, 'content': "The Farmers' Market Salad was fresh, but the flavors were muted, lacking the richness I anticipated. It's healthier for my diet, yet needs more zest. Compared to past meals, it's not as satisfying. A sprinkle of innovation could raise its appeal."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "The Wild-Caught Fish Tacos and Farmers' Market Salad were fresh, adhering to my dietary needs, but lacked the robust flavors I expected. As a discerning diner with a penchant for grilled seafood, I found the dishes satisfactory but not exceptional. Could improve with more seasoning."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Nora]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "dishes" : [
+        "Signature Steak", "Bold American Super Salad"
+    ],
+    "reason" : "True American Flavors has a higher customer score and offers dishes that satisfy both my fine dining preferences and gluten-free dietary needs."
+}
+
+[System->Nora]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Signature Steak: 0.89
+Bold American Super Salad: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Nora->all]: {
+    "restaurant": "True American Flavors",
+    "feeling": "The Signature Steak was superb, cooked to perfection, offering a fine dining experience that I relish. The Bold American Super Salad was a delightful, healthy accompaniment, though I would have preferred a bit more flavor."
+}
+

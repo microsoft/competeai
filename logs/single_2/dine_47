@@ -1,0 +1,929 @@
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of true American cuisine at American Flavors! Try our signature dishes: Classic American Burger, BBQ Ribs Platter, and New York Cheesecake. Perfect for family dinners or a night out with friends. Join us for a dining experience filled with flavor!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, onions, pickles, and our secret sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Chopped greens with chicken, bacon, blue cheese, avocado, egg, and a tangy dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 7.0, 'description': 'Creamy cheesecake with a graham cracker crust and fruit topping.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Craving authentic American BBQ? Look no further! Stars & Stripes BBQ has the best smoked brisket in town. Join us for a taste of America right here in your backyard. Special weekday deals available!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 20.0, 'description': 'Slow-smoked brisket with a house-made dry rub and BBQ sauce'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 15.0, 'description': 'Tender pulled pork in BBQ sauce served with coleslaw on a brioche bun'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Corn on the cob with butter, salt, and a sprinkle of smoked paprika'}, {'id': 5, 'name': "Classic Mac 'n' Cheese", 'price': 8.0, 'description': 'Creamy macaroni and cheese with a crispy breadcrumb topping'}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust, served with vanilla ice cream'}, {'id': 8, 'name': 'Root Beer Float', 'price': 6.0, 'description': 'Classic root beer float with vanilla ice cream'}, {'id': 9, 'name': 'Coleslaw', 'price': 4.0, 'description': 'Freshly made coleslaw with a tangy dressing'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries with a side of spicy mayo dip'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "American Flavors",
+    "dishes": [
+        "Classic American Burger",
+        "Cobb Salad",
+        "New York Cheesecake"
+    ],
+    "reason": "American Flavors offers reasonably priced, simple meals like the burger and salad, fitting my taste and budget. The dessert option also appeals to my preference for a classic, sweet treat."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.51
+Cobb Salad: 0.51
+New York Cheesecake: 0.51
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "American Flavors",
+    "feeling": "The meal was satisfactory. The burger was decent and filling, the salad was fresh, and the cheesecake ended the meal on a sweet note."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Savor the new American Flavors! Introducing our Grilled Vegetable Skewers and Vegan Burger, alongside upgraded classics like our Classic American Burger and BBQ Ribs Platter. Come enjoy our healthier options in a family-friendly setting. Don't miss our indulgent New York Cheesecake!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'An upgraded juicy beef patty with organic lettuce, heirloom tomato, caramelized onions, pickles, and our enhanced secret sauce on a toasted artisanal bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Slow-cooked pork ribs smothered in our improved signature BBQ sauce, served with homemade coleslaw and seasoned fries.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Chopped greens with chicken, bacon, blue cheese, avocado, egg, and a tangy dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake made with the finest ingredients, served with a fresh berry compote.'}, {'id': 6, 'name': 'Grilled Vegetable Skewers', 'price': 9.0, 'description': 'A medley of fresh seasonal vegetables, grilled to perfection with a light seasoning.'}, {'id': 7, 'name': 'Vegan Burger', 'price': 11.0, 'description': 'A hearty plant-based burger patty on a whole-wheat bun, topped with lettuce, tomato, and our special vegan sauce.'}]
+4. Comments
+   [{'day': 1, 'name': 'Hugo', 'score': 5, 'content': "The dishes at American Flavors were fair, but not exceptional. The Classic American Burger lacked the gourmet quality I anticipated. The BBQ Ribs Platter and New York Cheesecake were satisfactory, yet didn't impress. I've had better dining experiences elsewhere and expect more from a meal at this price point."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.4375
+2. Advertisement
+   Discover bold flavors at Stars & Stripes BBQ! Now serving our creamy, premium Mac 'n' Cheese and introducing the new BBQ Jackfruit Sandwich for our vegan friends. Experience our enhanced sides and signature dishes. Don’t miss our Southern Comfort Night every week!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 20.0, 'description': 'Slow-smoked brisket with a house-made dry rub and BBQ sauce'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 15.0, 'description': 'Tender pulled pork in BBQ sauce served with coleslaw on a brioche bun'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Corn on the cob with butter, salt, and a sprinkle of smoked paprika'}, {'id': 5, 'name': "Classic Mac 'n' Cheese", 'price': 10.0, 'description': 'Creamy macaroni and cheese with a crispy breadcrumb topping'}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust, served with vanilla ice cream'}, {'id': 8, 'name': 'Root Beer Float', 'price': 6.0, 'description': 'Classic root beer float with vanilla ice cream'}, {'id': 9, 'name': 'Coleslaw', 'price': 4.0, 'description': 'Freshly made coleslaw with a blend of tangy and sweet dressing'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend and served with spicy mayo dip'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 14.0, 'description': 'Tender pulled jackfruit in a smoky BBQ sauce served on a toasted bun with coleslaw'}]
+4. Comments
+   [{'day': 1, 'name': 'Yara', 'score': 7, 'content': 'The Grilled Corn on the Cob and Sweet Potato Fries were enjoyable, but I missed vegan protein options. A suggestion would be to include hearty plant-based dishes for a more satisfying meal.'}, {'day': 1, 'name': 'Tina', 'score': 8, 'content': "The smoked brisket was flavorful with a perfect smoky taste, though I've had more tender ones before. The corn on the cob was a decent side, but not remarkable. The apple pie ended the meal on a high note with its homely taste. A solid BBQ experience overall."}, {'day': 1, 'name': 'Steve', 'score': 7, 'content': "The Grilled Corn on the Cob and Coleslaw were fresh, which I appreciated given my health concerns. Mac 'n' Cheese was comforting but a bit heavy. Overall, a decent meal but would love more low-fat options."}, {'day': 1, 'name': 'Quincy', 'score': 7, 'content': "The side dishes at Stars & Stripes BBQ were satisfying and well-flavored, especially given my need for lighter options. The grilled corn was a standout, though I found the sweet potato fries and coleslaw fairly standard. Good value for money, but I'd be curious to try the main dishes if they offer lighter fare."}, {'day': 1, 'name': 'Paula', 'score': 8, 'content': "The Signature Smoked Brisket was flavorful, though not exceptional. The Mac 'n' Cheese was comforting but could use a sharper cheese flavor. The Apple Pie ended the meal nicely, albeit a tad too sweet. Overall, a solid BBQ experience but with room for improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ offers hearty, simple dishes at prices that align with my budget, and the customer scores suggest a favorable dining experience."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Mac 'n' Cheese: 0.8
+Grilled Corn on the Cob: 0.74
+Apple Pie: 0.8
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Mac 'n' Cheese was creamy and satisfying, the grilled corn was well-seasoned, and the apple pie provided a delightful finish to the meal."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Experience the bold new taste of health at American Flavors! Our menu now features the reinvented Grilled Vegetable Skewers and the exquisite Vegan Gourmet Burger. Plus, try our new Spicy Sweet Potato Wedges! Indulge in flavor, savor wellness.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'An upgraded juicy beef patty with organic lettuce, heirloom tomato, caramelized onions, pickles, and our enhanced secret sauce on a toasted artisanal bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Slow-cooked pork ribs smothered in our improved signature BBQ sauce, served with homemade coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Chopped greens with chicken, bacon, blue cheese, avocado, egg, and a tangy dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake made with the finest ingredients, served with a fresh berry compote.'}, {'id': 6, 'name': 'Grilled Vegetable Skewers', 'price': 11.0, 'description': 'Assorted seasonal vegetables, grilled with a mix of aromatic herbs and spices for an enhanced flavor profile.'}, {'id': 7, 'name': 'Vegan Gourmet Burger', 'price': 13.0, 'description': 'Our plant-based burger, now with gourmet umami-rich mushrooms, caramelized onions, and a sun-dried tomato vegan aioli, on a rustic whole-grain bun.'}, {'id': 8, 'name': 'Spicy Sweet Potato Wedges', 'price': 8.0, 'description': 'Roasted sweet potato wedges with a kick of spice, served with a cool cilantro-lime dip.'}]
+4. Comments
+   [{'day': 2, 'name': 'Ulysses', 'score': 5, 'content': "While the healthier options like the Grilled Vegetable Skewers and Vegan Burger were a nice attempt, they fell short in flavor. The New York Cheesecake, although a classic, wasn't exceptional. Compared to Stars & Stripes BBQ, the overall taste experience here was less satisfying."}, {'day': 2, 'name': 'Quincy', 'score': 5, 'content': 'The Grilled Vegetable Skewers and Cobb Salad were underwhelming, lacking in flavor and not meeting my expectations for a satisfying meal. Compared to Stars & Stripes BBQ, the experience fell short in both taste and enjoyment.'}, {'day': 2, 'name': 'Paula', 'score': 5, 'content': 'The Grilled Vegetable Skewers were underwhelming and lacked seasoning. The Classic American Burger was mediocre, not living up to my expectations for a gourmet experience. The New York Cheesecake was average, missing that rich, indulgent quality. Compared to my previous meal at Stars & Stripes BBQ, the dishes here fell short in flavor and satisfaction.'}, {'day': 2, 'name': 'Oscar', 'score': 5, 'content': "The meal was mediocre - the American Burger and Cobb Salad were just passable, and the cheesecake lacked the richness I expected. This was surprising given the high customer score. I've had better experiences at similar restaurants."}, {'day': 2, 'name': 'Jake', 'score': 5, 'content': 'The Cobb Salad and Grilled Vegetable Skewers were just fair, lacking in flavor. Despite the high customer score, the meal did not meet expectations. Perhaps considering some seasoning adjustments might improve the taste without adding too much sodium.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.4
+2. Advertisement
+   Taste the innovation at Stars & Stripes BBQ! Savor our enhanced Classic Mac 'n' Cheese now even creamier and our new Spicy Black Bean Burger. Plus, our BBQ Jackfruit Sandwich is bolder than ever! Join us for a unique dining experience that caters to all.
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 20.0, 'description': 'Slow-smoked brisket with a house-made dry rub and BBQ sauce'}, {'id': 2, 'name': 'Pulled Pork Sandwich', 'price': 15.0, 'description': 'Tender pulled pork in BBQ sauce served with coleslaw on a brioche bun'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Corn on the cob with butter, salt, and a sprinkle of smoked paprika'}, {'id': 5, 'name': "Classic Mac 'n' Cheese", 'price': 12.0, 'description': 'Creamy macaroni and cheese with a crispy breadcrumb topping'}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust, served with vanilla ice cream'}, {'id': 8, 'name': 'Root Beer Float', 'price': 6.0, 'description': 'Classic root beer float with vanilla ice cream'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend and served with spicy mayo dip'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Tender pulled jackfruit in a smoky BBQ sauce served on a toasted bun with coleslaw'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 15.0, 'description': 'A zesty black bean patty with avocado, lettuce, tomato, and a spicy vegan mayo on a whole grain bun'}]
+4. Comments
+   [{'day': 2, 'name': 'Xavier', 'score': 8, 'content': "The Smoked Brisket and BBQ Ribs were quite tasty with a good smoky flavor, though not the best I've had. The Mac 'n' Cheese could be cheesier. The Apple Pie was homey but slightly too sweet. Overall, a hearty meal that satisfied my craving for BBQ."}, {'day': 2, 'name': 'Hugo', 'score': 7, 'content': "While the Signature Smoked Brisket and Apple Pie were quite satisfying, the Classic Mac 'n' Cheese lacked the depth of flavor I craved. Compared to my previous experience at American Flavors, Stars & Stripes BBQ offered a better overall meal, but there's still room for improvement in the richness of their dishes."}, {'day': 2, 'name': 'Chloe', 'score': 6, 'content': 'The BBQ Jackfruit Sandwich was a fair attempt at a vegan option, though it could have used a bit more flavor and texture variety. The customer service was commendable, but the overall experience fell short when compared to previous meals. More innovative vegan dishes would be appreciated.'}, {'day': 2, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Corn on the Cob was satisfactory, but lacked a unique flair. The BBQ Jackfruit Sandwich was a healthier choice, though it could benefit from more robust flavors. Compared to my previous experience at American Flavors, I found the options here to align better with my dietary needs but still crave more seasoning.'}, {'day': 2, 'name': 'Tara', 'score': 7, 'content': "The Signature Smoked Brisket had a robust flavor, though not the best I've had. The BBQ Jackfruit Sandwich was a pleasant surprise, offering a tasty alternative to meat. While the Grilled Corn on the Cob was somewhat plain, overall it was a decent meal. I'd like to see more exotic options in the future."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Given the recent experiences and customer feedback, Stars & Stripes BBQ seems to offer heartier and more satisfying dishes that suit my simple tastes, all within a reasonable price range."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Mac 'n' Cheese: 0.81
+Grilled Corn on the Cob: 0.75
+Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The meal was comforting and filling. The Mac 'n' Cheese was creamy, the Corn on the Cob had a nice smoky flavor, and the Apple Pie was a delightful treat."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Discover the Signature Experience at American Flavors! Savour dishes crafted with the freshest local ingredients like our Local Harvest Cobb Salad and Signature American Burger. Enjoy our new Heritage Apple Pie, a delightful twist on tradition. Taste the difference, taste the freshness!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger', 'price': 16.0, 'description': 'Our classic burger with a gourmet twist: grass-fed beef, organic toppings, and a special house sauce, all on a freshly baked artisan bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Slow-cooked pork ribs smothered in our improved signature BBQ sauce, served with homemade coleslaw and seasoned fries.'}, {'id': 4, 'name': 'Local Harvest Cobb Salad', 'price': 13.0, 'description': 'A fresh take on the classic with locally sourced greens, free-range chicken, artisanal bacon, organic avocado, cage-free egg, and a house-made herb dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake made with the finest ingredients, served with a fresh berry compote.'}, {'id': 6, 'name': "Farmers' Market Grilled Vegetables", 'price': 13.0, 'description': 'Seasonal vegetables from local farms, grilled to perfection with a blend of fresh herbs and extra virgin olive oil.'}, {'id': 7, 'name': 'Vegan Gourmet Burger', 'price': 13.0, 'description': 'Our plant-based burger, now with gourmet umami-rich mushrooms, caramelized onions, and a sun-dried tomato vegan aioli, on a rustic whole-grain bun.'}, {'id': 8, 'name': 'Spicy Sweet Potato Wedges', 'price': 8.0, 'description': 'Roasted sweet potato wedges with a kick of spice, served with a cool cilantro-lime dip.'}, {'id': 9, 'name': 'Heritage Apple Pie', 'price': 9.0, 'description': 'Homemade pie featuring heritage variety apples, a hint of cinnamon, and a buttery crust, served with artisanal vanilla ice cream.'}]
+4. Comments
+   [{'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}, {'day': 2, 'name': 'Ulysses', 'score': 5, 'content': "While the healthier options like the Grilled Vegetable Skewers and Vegan Burger were a nice attempt, they fell short in flavor. The New York Cheesecake, although a classic, wasn't exceptional. Compared to Stars & Stripes BBQ, the overall taste experience here was less satisfying."}, {'day': 2, 'name': 'Quincy', 'score': 5, 'content': 'The Grilled Vegetable Skewers and Cobb Salad were underwhelming, lacking in flavor and not meeting my expectations for a satisfying meal. Compared to Stars & Stripes BBQ, the experience fell short in both taste and enjoyment.'}, {'day': 2, 'name': 'Paula', 'score': 5, 'content': 'The Grilled Vegetable Skewers were underwhelming and lacked seasoning. The Classic American Burger was mediocre, not living up to my expectations for a gourmet experience. The New York Cheesecake was average, missing that rich, indulgent quality. Compared to my previous meal at Stars & Stripes BBQ, the dishes here fell short in flavor and satisfaction.'}, {'day': 2, 'name': 'Oscar', 'score': 5, 'content': "The meal was mediocre - the American Burger and Cobb Salad were just passable, and the cheesecake lacked the richness I expected. This was surprising given the high customer score. I've had better experiences at similar restaurants."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.341463414634147
+2. Advertisement
+   Discover bold flavors and healthy eats at Stars & Stripes BBQ! Try our new Quinoa & Roasted Vegetable Salad and revamped Grilled Corn with a zesty twist. Indulge in our richer, sharper Classic Mac 'n' Cheese. Perfect for every palate - fresh, flavorful, and satisfying!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 20.0, 'description': 'Slow-smoked brisket with a house-made dry rub and BBQ sauce'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Grilled corn seasoned with a special herb blend and a hint of lime for an extra zing'}, {'id': 5, 'name': "Classic Mac 'n' Cheese", 'price': 12.0, 'description': "Rich, creamy mac 'n' cheese made with a blend of sharp aged cheeses and a crunchy garlic panko topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust, served with vanilla ice cream'}, {'id': 8, 'name': 'Root Beer Float', 'price': 6.0, 'description': 'Classic root beer float with vanilla ice cream'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend and served with spicy mayo dip'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Tender pulled jackfruit in a smoky BBQ sauce served on a toasted bun with coleslaw'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 15.0, 'description': 'A zesty black bean patty with avocado, lettuce, tomato, and a spicy vegan mayo on a whole grain bun'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 12.0, 'description': 'A nutritious mix of quinoa, roasted seasonal vegetables, tossed with a light lemon herb dressing'}]
+4. Comments
+   [{'day': 3, 'name': 'Quincy', 'score': 7, 'content': 'The Spicy Black Bean Burger had a satisfying kick, aligning well with my dietary needs and fast food tastes. The Grilled Corn on the Cob was decent but could use more flavor. Overall, a good meal that edges out American Flavors in satisfaction.'}, {'day': 3, 'name': 'Oscar', 'score': 7, 'content': "The Signature Smoked Brisket had a decent smokiness, yet not as succulent as expected. The Mac 'n' Cheese lacked some creaminess, and the Apple Pie, while homey, was overly sweet. Better than my mediocre meal at American Flavors, but there's room for enhancement."}, {'day': 3, 'name': 'Jake', 'score': 7, 'content': "The Spicy Black Bean Burger was a good effort towards a healthier option, though it could have been more flavorful. It's a better choice compared to my previous meal at American Flavors, but there's still room for improvement in taste."}, {'day': 3, 'name': 'Brian', 'score': 7, 'content': "The Grilled Corn on the Cob was decent, though lacking a unique touch. The Mac 'n' Cheese and Sweet Potato Fries were good, reminiscent of the street food I enjoy, but could use a bit more innovation to truly stand out."}, {'day': 3, 'name': 'Zach', 'score': 7, 'content': "The BBQ Jackfruit Sandwich offered a decent gluten-free alternative with satisfactory flavors, albeit it could use more depth. The Grilled Corn on the Cob was a bit plain and could be seasoned better. The Apple Pie, while comforting, was not remarkable. Overall, a good meal but there's room for improvement, especially when compared to the French cuisine I prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ's menu suits my simple taste with hearty, comforting options like Mac 'n' Cheese, and their customer scores suggest consistently satisfying meals within my budget."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Mac 'n' Cheese: 0.81
+Grilled Corn on the Cob: 0.75
+Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Mac 'n' Cheese was truly comforting, the Grilled Corn had a nice touch of zest, and the Apple Pie rounded off the meal sweetly. It was all satisfying and worth the price."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Embark on a culinary journey with American Flavors' revamped menu! Indulge in our Deluxe New York Cheesecake and Refined Heritage Apple Pie for a taste of true craftsmanship. Enjoy our gourmet burgers and supreme BBQ platters. Fresh, local, unmatched—experience dining that's a slice above the rest!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 18.0, 'description': 'An upscale version of our Signature American Burger with premium aged beef, organic heirloom tomato, and our specialty truffle-infused sauce.'}, {'id': 2, 'name': 'BBQ Ribs Platter Supreme', 'price': 22.0, 'description': "Our BBQ Ribs Platter now with a honey-glaze finish and served with a side of truffle mac 'n' cheese and apple cider vinegar slaw."}, {'id': 4, 'name': 'Local Harvest Cobb Salad', 'price': 13.0, 'description': 'A fresh take on the classic with locally sourced greens, free-range chicken, artisanal bacon, organic avocado, cage-free egg, and a house-made herb dressing.'}, {'id': 5, 'name': 'New York Cheesecake Deluxe', 'price': 10.0, 'description': 'Elevated New York Cheesecake with a richer blend of cheeses and a homemade graham cracker crust, topped with seasonal berry reduction.'}, {'id': 6, 'name': "Farmers' Market Grilled Vegetables", 'price': 13.0, 'description': 'Seasonal vegetables from local farms, grilled to perfection with a blend of fresh herbs and extra virgin olive oil.'}, {'id': 7, 'name': 'Vegan Gourmet Burger', 'price': 13.0, 'description': 'Our plant-based burger, now with gourmet umami-rich mushrooms, caramelized onions, and a sun-dried tomato vegan aioli, on a rustic whole-grain bun.'}, {'id': 8, 'name': 'Spicy Sweet Potato Wedges', 'price': 8.0, 'description': 'Roasted sweet potato wedges with a kick of spice, served with a cool cilantro-lime dip.'}, {'id': 10, 'name': 'Refined Heritage Apple Pie', 'price': 10.0, 'description': 'Our Heritage Apple Pie with a deeper flavor profile, featuring a mix of tart and sweet apples, a dash of brandy, and a perfectly flaky crust.'}]
+4. Comments
+   [{'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}, {'day': 2, 'name': 'Ulysses', 'score': 5, 'content': "While the healthier options like the Grilled Vegetable Skewers and Vegan Burger were a nice attempt, they fell short in flavor. The New York Cheesecake, although a classic, wasn't exceptional. Compared to Stars & Stripes BBQ, the overall taste experience here was less satisfying."}, {'day': 2, 'name': 'Quincy', 'score': 5, 'content': 'The Grilled Vegetable Skewers and Cobb Salad were underwhelming, lacking in flavor and not meeting my expectations for a satisfying meal. Compared to Stars & Stripes BBQ, the experience fell short in both taste and enjoyment.'}, {'day': 2, 'name': 'Paula', 'score': 5, 'content': 'The Grilled Vegetable Skewers were underwhelming and lacked seasoning. The Classic American Burger was mediocre, not living up to my expectations for a gourmet experience. The New York Cheesecake was average, missing that rich, indulgent quality. Compared to my previous meal at Stars & Stripes BBQ, the dishes here fell short in flavor and satisfaction.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.375
+2. Advertisement
+   Come savor the richness of our enhanced Classic Mac 'n' Cheese and the perfect flakiness of our updated Apple Pie at Stars & Stripes BBQ! Enjoy our crowd-pleasing Signature Smoked Brisket, now even more succulent. Every bite is a taste of America - don't miss out!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 20.0, 'description': 'Slow-smoked brisket with a house-made dry rub and BBQ sauce'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Grilled corn seasoned with a special herb blend and a hint of lime for an extra zing'}, {'id': 5, 'name': "Classic Mac 'n' Cheese", 'price': 14.0, 'description': "Our Mac 'n' Cheese made creamier with a blend of sharp aged cheeses and a crispy breadcrumb topping."}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 8.0, 'description': 'Classic apple pie with a less sweet filling and a perfectly flaky crust, served with vanilla ice cream.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend and served with spicy mayo dip'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Tender pulled jackfruit in a smoky BBQ sauce served on a toasted bun with coleslaw'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 15.0, 'description': 'A zesty black bean patty with avocado, lettuce, tomato, and a spicy vegan mayo on a whole grain bun'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 12.0, 'description': 'A nutritious mix of quinoa, roasted seasonal vegetables, tossed with a light lemon herb dressing'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}]
+4. Comments
+   [{'day': 4, 'name': 'Xavier', 'score': 7, 'content': "The Signature Smoked Brisket and BBQ Ribs were enjoyable with robust flavors, but the Brisket could be juicier. The Mac 'n' Cheese was satisfactory, yet I've tasted creamier versions elsewhere. The Apple Pie was good, not overly sweet as I feared. Overall, a pleasant meal that could use some refinement."}, {'day': 4, 'name': 'Ulysses', 'score': 7, 'content': "The Signature Smoked Brisket was robust in flavor, though slightly less succulent than anticipated. Mac 'n' Cheese was comforting, albeit not as creamy as I prefer. The Apple Pie's crust was commendable but the sweetness was overpowering. While enjoyable, this meal lags behind the exquisite international cuisine I've savored elsewhere."}, {'day': 4, 'name': 'Ruby', 'score': 8, 'content': "The Signature Smoked Brisket was deeply smoky and satisfying, living up to its billing. The Mac 'n' Cheese could use a touch more creaminess, and the Apple Pie, while good, wasn't exceptional. Overall, a solid meal that surpasses my past experiences at American Flavors."}, {'day': 4, 'name': 'Paula', 'score': 8, 'content': "The Signature Smoked Brisket was rich and satisfying, and the Mac 'n' Cheese was creamy with a delightful crunch, although it could be sharper. The Apple Pie was good but slightly too sweet. Overall, a hearty and enjoyable meal, better than my experience at American Flavors."}, {'day': 4, 'name': 'Oscar', 'score': 7, 'content': "The brisket's smokiness was enjoyable, yet it lacked tenderness. The Mac 'n' Cheese needed more creaminess. The Apple Pie's sweetness was slightly overpowering. A better dining experience than American Flavors, but improvements are needed for a truly satisfying meal."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ's menu offers hearty and straightforward dishes that suit my tastes and provide a satisfying meal at a reasonable cost, as reflected in customer feedback."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Mac 'n' Cheese: 0.81
+Grilled Corn on the Cob: 0.75
+Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Mac 'n' Cheese was creamy and hit the spot, the corn was a bit less seasoned than I like, but still enjoyable, and the apple pie was a delightful treat."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Discover unbeatable value at American Flavors! Savor our enhanced Classic American Burger and Grilled Chicken Caesar Salad, each now only $12! Relish the refined taste of our Refined Heritage Apple Pie for just $8. Quality, flavor, and value in every bite—come taste the difference!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 16.0, 'description': 'An upscale version of our Signature American Burger with premium aged beef, organic heirloom tomato, and our specialty truffle-infused sauce.'}, {'id': 2, 'name': 'BBQ Ribs Platter Supreme', 'price': 20.0, 'description': "Our BBQ Ribs Platter now with a honey-glaze finish and served with a side of truffle mac 'n' cheese and apple cider vinegar slaw."}, {'id': 4, 'name': 'Local Harvest Cobb Salad', 'price': 11.0, 'description': 'A fresh take on the classic with locally sourced greens, free-range chicken, artisanal bacon, organic avocado, cage-free egg, and a house-made herb dressing.'}, {'id': 6, 'name': "Farmers' Market Grilled Vegetables", 'price': 11.0, 'description': 'Seasonal vegetables from local farms, grilled to perfection with a blend of fresh herbs and extra virgin olive oil.'}, {'id': 7, 'name': 'Vegan Gourmet Burger', 'price': 11.0, 'description': 'Our plant-based burger, now with gourmet umami-rich mushrooms, caramelized onions, and a sun-dried tomato vegan aioli, on a rustic whole-grain bun.'}, {'id': 8, 'name': 'Spicy Sweet Potato Wedges', 'price': 7.0, 'description': 'Roasted sweet potato wedges with a kick of spice, served with a cool cilantro-lime dip.'}, {'id': 10, 'name': 'Refined Heritage Apple Pie', 'price': 8.0, 'description': 'Our Heritage Apple Pie with a deeper flavor profile, featuring a mix of tart and sweet apples, a dash of brandy, and a perfectly flaky crust.'}, {'id': 11, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A traditional beef burger with lettuce, tomato, cheese, and our house sauce, served with fries.'}, {'id': 12, 'name': 'Grilled Chicken Caesar Salad', 'price': 12.0, 'description': 'Grilled free-range chicken on a bed of crisp romaine lettuce, tossed with Caesar dressing, croutons, and Parmesan shavings.'}]
+4. Comments
+   [{'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}, {'day': 2, 'name': 'Ulysses', 'score': 5, 'content': "While the healthier options like the Grilled Vegetable Skewers and Vegan Burger were a nice attempt, they fell short in flavor. The New York Cheesecake, although a classic, wasn't exceptional. Compared to Stars & Stripes BBQ, the overall taste experience here was less satisfying."}, {'day': 2, 'name': 'Quincy', 'score': 5, 'content': 'The Grilled Vegetable Skewers and Cobb Salad were underwhelming, lacking in flavor and not meeting my expectations for a satisfying meal. Compared to Stars & Stripes BBQ, the experience fell short in both taste and enjoyment.'}, {'day': 2, 'name': 'Paula', 'score': 5, 'content': 'The Grilled Vegetable Skewers were underwhelming and lacked seasoning. The Classic American Burger was mediocre, not living up to my expectations for a gourmet experience. The New York Cheesecake was average, missing that rich, indulgent quality. Compared to my previous meal at Stars & Stripes BBQ, the dishes here fell short in flavor and satisfaction.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.442857142857143
+2. Advertisement
+   Discover the new heights of flavor at Stars & Stripes BBQ with our refined Signature Smoked Brisket and indulgent Gourmet Mac 'n' Cheese. Health-conscious foodies can rejoice with our enhanced Quinoa & Roasted Vegetable Salad. Elevate your dining experience without the premium cost - join us tonight!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 22.0, 'description': 'Tender, slow-smoked brisket with a house-made dry rub and BBQ sauce, now even juicier'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Grilled corn seasoned with a special herb blend and a hint of lime for an extra zing'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 16.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 9.0, 'description': 'Our classic apple pie with a balanced sweetness and a perfectly flaky crust, served with vanilla ice cream'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend and served with spicy mayo dip'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Tender pulled jackfruit in a smoky BBQ sauce served on a toasted bun with coleslaw'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 15.0, 'description': 'A zesty black bean patty with avocado, lettuce, tomato, and a spicy vegan mayo on a whole grain bun'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 13.0, 'description': 'A nutritious mix of quinoa, roasted seasonal vegetables, tossed with a light lemon herb dressing, now with added nuts and seeds for extra crunch'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}]
+4. Comments
+   [{'day': 5, 'name': 'Steve', 'score': 7, 'content': 'The Grilled Corn on the Cob was nicely seasoned, though could have a bit more zing. The Spicy Black Bean Burger had a good spice level, but the patty was a tad dry. Quinoa & Roasted Vegetable Salad was fresh but lacked a punch of flavor. A decent meal, yet room for improvement.'}, {'day': 5, 'name': 'Ruby', 'score': 8, 'content': "The Signature Smoked Brisket was well-seasoned and satisfying. The Mac 'n' Cheese, while creamy, could benefit from a sharper cheese flavor. The Apple Pie's crust was excellent, but the sweetness level was a tad high for my taste. Overall a delightful meal, outshining my previous experiences at American Flavors."}, {'day': 5, 'name': 'Max', 'score': 8, 'content': 'The Quinoa & Roasted Vegetable Salad was fresh, the Spicy Black Bean Burger was well-seasoned, and the Sweet Potato Fries were delightfully crispy. Overall, a satisfying plant-based meal, though still room for improvement to reach culinary excellence. A more robust flavor profile could enhance the dishes further.'}, {'day': 5, 'name': 'Amelia', 'score': 8, 'content': "The Smoked Brisket was flavorful but could be more tender. Mac 'n' Cheese was enjoyable, though lacking that extra creaminess. The Apple Pie was nice but overly sweet. Overall, a hearty meal that satisfies, yet there's room for improvement."}, {'day': 5, 'name': 'Xena', 'score': 8, 'content': "The Signature Smoked Brisket delivered on flavor, though could be a tad juicier. The Mac 'n' Cheese was hearty but would benefit from a sharper cheese profile. The Apple Pie's balance of sweetness was on point. A heartwarming meal overall, though previous visits had a slight edge in succulence and creaminess."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ has consistently provided satisfying meals with flavors that suit my simple tastes, and the prices fit my budget."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Corn on the Cob: 0.75
+Apple Pie: 0.85
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Grilled Corn on the Cob was perfectly seasoned, and the Apple Pie had just the right amount of sweetness. A truly enjoyable meal."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.0
+2. Advertisement
+   Indulge in the new Ultimate Heritage Apple Pie and Juicy American Burger Deluxe at American Flavors! Experience our commitment to richer flavors and supreme quality. Don't miss our new savory BBQ Pulled Pork Sandwich. Come in for a taste of America's best—where every bite is a journey of flavor!
+3. Menu 
+   [{'id': 1, 'name': 'Juicy American Burger Deluxe', 'price': 17.0, 'description': 'Our Signature American Burger Deluxe with extra-juicy aged beef, organic heirloom tomato, and a richer, creamier truffle-infused sauce.'}, {'id': 2, 'name': 'BBQ Ribs Platter Supreme', 'price': 20.0, 'description': "Our BBQ Ribs Platter now with a honey-glaze finish and served with a side of truffle mac 'n' cheese and apple cider vinegar slaw."}, {'id': 4, 'name': 'Local Harvest Cobb Salad', 'price': 11.0, 'description': 'A fresh take on the classic with locally sourced greens, free-range chicken, artisanal bacon, organic avocado, cage-free egg, and a house-made herb dressing.'}, {'id': 7, 'name': 'Vegan Gourmet Burger', 'price': 11.0, 'description': 'Our plant-based burger, now with gourmet umami-rich mushrooms, caramelized onions, and a sun-dried tomato vegan aioli, on a rustic whole-grain bun.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 9.0, 'description': 'Our Heritage Apple Pie reimagined with a richer mix of cinnamon-spiced apples, a splash of apple brandy for depth, and a buttery crumble topping.'}, {'id': 11, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A traditional beef burger with lettuce, tomato, cheese, and our house sauce, served with fries.'}, {'id': 12, 'name': 'Grilled Chicken Caesar Salad', 'price': 12.0, 'description': 'Grilled free-range chicken on a bed of crisp romaine lettuce, tossed with Caesar dressing, croutons, and Parmesan shavings.'}, {'id': 13, 'name': 'Savory BBQ Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked, tender pulled pork smothered in our signature BBQ sauce, served on a toasted brioche bun with a side of tangy coleslaw.'}]
+4. Comments
+   [{'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}, {'day': 2, 'name': 'Ulysses', 'score': 5, 'content': "While the healthier options like the Grilled Vegetable Skewers and Vegan Burger were a nice attempt, they fell short in flavor. The New York Cheesecake, although a classic, wasn't exceptional. Compared to Stars & Stripes BBQ, the overall taste experience here was less satisfying."}, {'day': 2, 'name': 'Quincy', 'score': 5, 'content': 'The Grilled Vegetable Skewers and Cobb Salad were underwhelming, lacking in flavor and not meeting my expectations for a satisfying meal. Compared to Stars & Stripes BBQ, the experience fell short in both taste and enjoyment.'}, {'day': 2, 'name': 'Paula', 'score': 5, 'content': 'The Grilled Vegetable Skewers were underwhelming and lacked seasoning. The Classic American Burger was mediocre, not living up to my expectations for a gourmet experience. The New York Cheesecake was average, missing that rich, indulgent quality. Compared to my previous meal at Stars & Stripes BBQ, the dishes here fell short in flavor and satisfaction.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.457831325301205
+2. Advertisement
+   Taste the burst of summer with every bite at Stars & Stripes BBQ! Enjoy our popular Signature Smoked Brisket, now juicier, and our revamped Gourmet Mac 'n' Cheese with sharper, aged cheeses. Don't miss our new 'Flavor Burst Pickles' for an extra kick. Come for the flavor, stay for the value!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 22.0, 'description': 'Tender, slow-smoked brisket with a house-made dry rub and BBQ sauce, now even juicier'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 4.0, 'description': 'Grilled corn seasoned with a bold spice mix and a hint of lime for that extra zing'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 8.0, 'description': 'Our classic apple pie with a refined sweetness and a perfectly flaky crust'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Tender pulled jackfruit in a smoky BBQ sauce served on a toasted bun with coleslaw'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 14.0, 'description': 'A zesty black bean patty with avocado, lettuce, tomato, and a vegan chipotle mayo on a whole grain bun'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 12.0, 'description': 'A nutritious mix of quinoa, roasted seasonal vegetables, tossed with a vibrant lemon herb dressing, now with added nuts and seeds for extra flavor and crunch'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 15, 'name': 'Flavor Burst Pickles', 'price': 3.0, 'description': 'A jar of our homemade pickles, seasoned with a secret blend of spices to give your meal an extra burst of flavor'}]
+4. Comments
+   [{'day': 6, 'name': 'Steve', 'score': 7, 'content': 'The Grilled Corn on the Cob was satisfying with a hint of lime, though I craved more zest. The Spicy Black Bean Burger was substantial but would benefit from more moisture. The Quinoa & Roasted Vegetable Salad was nutritious and flavorful, complementing the meal well. Overall, a good dining experience.'}, {'day': 6, 'name': 'Lara', 'score': 8, 'content': "The Signature Smoked Brisket was quite impressive with its deep flavor, though a touch more juiciness would be perfect. The Quinoa & Roasted Vegetable Salad was a healthy delight, albeit needing a bit more seasoning. The Apple Pie's sweetness was well-balanced, making for a satisfying end to the meal."}, {'day': 6, 'name': 'Jake', 'score': 7, 'content': "The Quinoa & Roasted Vegetable Salad was healthy but could use more flavor. Crispy Onion Rings satisfied my fried food craving but were just good, not great. Better than American Flavors' bland options, but still room for taste enhancement at Stars & Stripes BBQ."}, {'day': 6, 'name': 'Iris', 'score': 7, 'content': "The Quinoa & Roasted Vegetable Salad was quite fresh, aligning with my healthy eating habits, though it could use a touch more flavor. A better experience compared to American Flavors' Cobb Salad, but there’s room for taste improvement at Stars & Stripes BBQ."}, {'day': 6, 'name': 'Giselle', 'score': 8, 'content': "The Apple Pie at Stars & Stripes BBQ was a treat with its flaky crust, though slightly too sweet. The Gourmet Mac 'n' Cheese was rich and satisfying, with a lovely crispy topping. However, the dishes could use a hint more flavor complexity. A very good meal overall, but still room for improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Considering my simple taste and budget, Stars & Stripes BBQ offers comforting, straightforward dishes like Mac 'n' Cheese, and their higher customer score indicates a more satisfying experience."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Corn on the Cob: 0.81
+Apple Pie: 0.85
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Grilled Corn on the Cob was decent, though I expected a bit more flavor. The Apple Pie was enjoyable, with a nice sweetness level."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.285714285714286
+2. Advertisement
+   Discover the bold flavors of our Signature American Burger Deluxe and the warm, comforting embrace of our Ultimate Heritage Apple Pie at American Flavors. Our new Hearty American Meatloaf is a must-try! Every dish promises a memorable dining experience. Join us for a celebration of taste!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 18.0, 'description': 'Our Signature American Burger Deluxe with extra-juicy aged beef, organic heirloom tomato, and a richer, creamier truffle-infused sauce.'}, {'id': 2, 'name': 'BBQ Ribs Platter Supreme', 'price': 20.0, 'description': "Our BBQ Ribs Platter now with a honey-glaze finish and served with a side of truffle mac 'n' cheese and apple cider vinegar slaw."}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 10.0, 'description': 'Our Heritage Apple Pie reimagined with a richer mix of cinnamon-spiced apples, a splash of apple brandy for depth, and a buttery crumble topping.'}, {'id': 14, 'name': 'Hearty American Meatloaf', 'price': 15.0, 'description': 'Traditional meatloaf with a twist - a blend of beef and pork, topped with a tangy glaze, served with garlic mashed potatoes and seasonal vegetables.'}]
+4. Comments
+   [{'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}, {'day': 2, 'name': 'Ulysses', 'score': 5, 'content': "While the healthier options like the Grilled Vegetable Skewers and Vegan Burger were a nice attempt, they fell short in flavor. The New York Cheesecake, although a classic, wasn't exceptional. Compared to Stars & Stripes BBQ, the overall taste experience here was less satisfying."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.531914893617022
+2. Advertisement
+   Discover bold flavors at Stars & Stripes BBQ! Savor our Signature Smoked Brisket and indulge in our new Smoky BBQ Mushroom Stack. Enjoy revamped vegetarian options with a zestier, juicier taste. Our Apple Pie is now perfected with less sweetness. Experience the taste of America with every dish!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 22.0, 'description': 'Tender, slow-smoked brisket with a house-made dry rub and BBQ sauce, now even juicier'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Grilled corn seasoned with our bold new spice mix, featuring a hint of lime and an extra kick of chili for that zesty flavor'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 8.0, 'description': 'Our classic apple pie with a refined recipe for less sweetness and a perfectly flaky crust'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 17.0, 'description': 'Smokey pulled jackfruit in a tangy BBQ sauce, served on a toasted bun with a slaw featuring a creamy, zesty dressing to elevate the juiciness'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 15.0, 'description': 'Our spicy black bean patty with a new juicier recipe, avocado, lettuce, tomato, and a vegan chipotle mayo on a whole grain bun'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 12.0, 'description': 'A nutritious mix of quinoa, roasted seasonal vegetables, tossed with a vibrant lemon herb dressing, now with added nuts and seeds for extra flavor and crunch'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 16, 'name': 'Smoky BBQ Mushroom Stack', 'price': 16.0, 'description': 'A tower of grilled, smoky mushrooms topped with caramelized onions and a drizzle of savory BBQ sauce'}]
+4. Comments
+   [{'day': 7, 'name': 'Yara', 'score': 8, 'content': 'The BBQ Jackfruit Sandwich and Spicy Black Bean Burger were quite enjoyable with a good balance of flavors, aligning with my vegan diet. The Quinoa & Roasted Vegetable Salad was fresh, though it could benefit from a bolder dressing. A delightful vegan meal overall, but there’s room for a slight improvement in taste.'}, {'day': 7, 'name': 'Ulysses', 'score': 7, 'content': "The Smoked Brisket and Mac 'n' Cheese were both rich and satisfying, though not as exceptional as international delicacies I've relished before. The Apple Pie was good but could be less sweet. Overall, a commendable meal, but there's room for more complexity and refinement in flavors."}, {'day': 7, 'name': 'Tina', 'score': 9, 'content': "The Signature Smoked Brisket was delectably smoky, though a tad more moisture would make it exceptional. The Gourmet Mac 'n' Cheese was a creamy delight, just shy of perfection. The Apple Pie ended the meal on a high note, despite being slightly too sweet for my taste. Overall, a fantastic dining experience."}, {'day': 7, 'name': 'Steve', 'score': 8, 'content': 'The Spicy Black Bean Burger was hearty, though it could be juicier. Quinoa & Roasted Vegetable Salad was fresh but needed a flavor boost. Grilled Corn on the Cob was tasty but lacked zest. Overall, a satisfying meal that supports my health goals, with room for improvement in flavor.'}, {'day': 7, 'name': 'Max', 'score': 7, 'content': 'The Quinoa & Roasted Vegetable Salad was fresh but needed more seasoning. The Spicy Black Bean Burger and Sweet Potato Fries were enjoyable, though could be more flavorful. Compared to American Flavors, Stars & Stripes BBQ offers better options for my plant-based diet, but still has room for taste enhancement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Grilled Corn on the Cob",
+        "Gourmet Mac 'n' Cheese",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ has a higher customer score, and the dishes like Mac 'n' Cheese align with my simple tastes, all while fitting within my budget."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Grilled Corn on the Cob: 0.81
+Gourmet Mac 'n' Cheese: 0.9
+Apple Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "score": 8,
+    "comment": "The Gourmet Mac 'n' Cheese was creamy and satisfying, hitting the mark on comfort food. The Grilled Corn could use a little more seasoning for my taste, but was still enjoyable. The Apple Pie was good, with a nice balance of sweetness, though a touch more spice would enhance it."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.285714285714286
+2. Advertisement
+   Indulge in perfected classics at American Flavors with our juicier Signature American Burger Deluxe and the Ultimate Heritage Apple Pie, now served with artisanal ice cream. Experience our new Smoked Chicken & Avocado Salad for a lighter yet flavorful option. Quality and taste in every bite!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 18.0, 'description': 'Our Signature American Burger Deluxe with extra-juicy aged beef, organic heirloom tomato, and a richer, creamier truffle-infused sauce, now with an additional smoky flavor.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 10.0, 'description': 'Our Heritage Apple Pie reimagined with an even richer mix of cinnamon-spiced apples, a splash of apple brandy for depth, and a buttery crumble topping, served with artisanal vanilla bean ice cream.'}, {'id': 14, 'name': 'American Homestyle Meatloaf', 'price': 15.0, 'description': 'Traditional meatloaf with a twist - a blend of beef and pork, topped with a tangy glaze, and served with garlic mashed potatoes and heirloom carrots.'}, {'id': 15, 'name': 'Smoked Chicken & Avocado Salad', 'price': 14.0, 'description': 'Juicy smoked chicken breast served over a bed of fresh greens, ripe avocado, sweet corn, and black beans, tossed with a tangy lime-cilantro vinaigrette.'}]
+4. Comments
+   [{'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}, {'day': 2, 'name': 'Ulysses', 'score': 5, 'content': "While the healthier options like the Grilled Vegetable Skewers and Vegan Burger were a nice attempt, they fell short in flavor. The New York Cheesecake, although a classic, wasn't exceptional. Compared to Stars & Stripes BBQ, the overall taste experience here was less satisfying."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.576576576576577
+2. Advertisement
+   Stars & Stripes BBQ is rolling out a new menu! Enjoy our juicier Signature Smoked Brisket, spiced-up Grilled Corn, and a more balanced Apple Pie. We've fine-tuned flavors across the board for a superior taste experience that's as bold as America itself. Come taste the perfection!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 22.0, 'description': 'Tender, slow-smoked brisket with a house-made dry rub and BBQ sauce, now even juicier'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 5.0, 'description': 'Grilled corn seasoned with our bold new spice mix, featuring hints of lime, chili, and an extra dash of exotic spices for an unforgettable flavor.'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 8.0, 'description': 'Our classic apple pie with a refined recipe for a perfect balance of sweetness and a perfectly flaky crust.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 17.0, 'description': 'Smokey pulled jackfruit in a tangy BBQ sauce, served on a toasted bun with a slaw featuring a creamy, zesty dressing to elevate the juiciness'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 15.0, 'description': 'Our spicy black bean patty with a juicier recipe, topped with avocado, lettuce, tomato, and a vegan chipotle mayo on a whole grain bun, now with a hint of smoky flavor.'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 12.0, 'description': 'A nutritious mix of quinoa, roasted seasonal vegetables, tossed with a vibrant lemon herb dressing, now with added nuts, seeds, and a bolder dressing for extra flavor and texture.'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 16, 'name': 'Smoky BBQ Mushroom Stack', 'price': 16.0, 'description': 'A tower of grilled, smoky mushrooms topped with caramelized onions and a drizzle of savory BBQ sauce'}]
+4. Comments
+   [{'day': 8, 'name': 'Wade', 'score': 8, 'content': "The Gourmet Mac 'n' Cheese was creamy and satisfying, hitting the mark on comfort food. The Grilled Corn could use a little more seasoning for my taste, but was still enjoyable. The Apple Pie was good, with a nice balance of sweetness, though a touch more spice would enhance it."}, {'day': 8, 'name': 'Valerie', 'score': 8, 'content': "The Quinoa & Roasted Vegetable Salad was nutritious with an organic flair, though it could use a punchier dressing for flavor. The Apple Pie's subtler sweetness was appreciated, aligning with my preference for less sugary desserts. Overall, a commendable meal, yet there's room for flavor enhancement."}, {'day': 8, 'name': 'Ruby', 'score': 9, 'content': "The Signature Smoked Brisket was succulent, with the right amount of smokiness. The Gourmet Mac 'n' Cheese was creamy, though could use a bit more sharpness in the cheese. The Apple Pie had a superb crust, but was slightly sweeter than my preference. Overall, an exquisite meal that outshines American Flavors."}, {'day': 8, 'name': 'Max', 'score': 7, 'content': "The Quinoa & Roasted Vegetable Salad was nutritious but lacked a punch of flavor. The Spicy Black Bean Burger was decent, though it could be juicier. Sweet Potato Fries were satisfactory. Overall, a good meal but there's room for improvement, especially when compared to previous experiences for more dynamic flavors."}, {'day': 8, 'name': 'Emma', 'score': 8, 'content': 'The Quinoa & Roasted Vegetable Salad was nutritious and satisfying, aligning with my organic preference. The Apple Pie had the right amount of sweetness. While the meal was quite good, a touch more seasoning could enhance the flavors. Compared to previous visits, it maintains quality but could use a slight boost in zest.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ has a higher customer score and offers hearty, comforting dishes that suit my simple tastes and budget."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Corn on the Cob: 0.81
+Apple Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Grilled Corn on the Cob was satisfying, though I wished for more seasoning. The Apple Pie was a delightful end to the meal with its sweetness."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Discover bold flavors at American Flavors! Our Signature American Burger Deluxe and Ultimate Heritage Apple Pie have been reinvented with even richer tastes. Don't miss our new Bold BBQ Pulled Pork Sandwich - a savory sensation. Come taste the difference quality ingredients make!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 20.0, 'description': 'Our best-selling burger with extra-juicy aged beef, organic heirloom tomato, and a bolder, creamier truffle-infused sauce, with a hint of smoky flavor to satisfy the cravings for depth and richness.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 12.0, 'description': 'The classic apple pie with a richer blend of cinnamon-spiced apples and a splash of apple brandy for added depth, encased in a flakier, buttery crust, served with premium vanilla bean ice cream.'}, {'id': 16, 'name': 'Bold BBQ Pulled Pork Sandwich', 'price': 16.0, 'description': 'Tender, slow-cooked pulled pork smothered in our house-made bold BBQ sauce, topped with a crisp apple-cabbage slaw, and served on a toasted brioche bun.'}]
+4. Comments
+   [{'day': 9, 'name': 'Hugo', 'score': 6, 'content': "The Signature American Burger Deluxe lacked the juiciness expected of a gourmet burger, and the Ultimate Heritage Apple Pie, while having a good texture, didn't quite deliver the depth of flavor I crave. The Smoked Chicken & Avocado Salad was refreshing but needed more zest. Compared to Stars & Stripes BBQ, my experience here was underwhelming."}, {'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.608
+2. Advertisement
+   Freshly enhanced flavors have arrived at Stars & Stripes BBQ! Savor the bolder Grilled Corn, zestier Quinoa Salad, and juicier BBQ Jackfruit Sandwich. Our Apple Pie is now sweeter, and every dish is seasoned to perfection. Join us for a taste sensation that celebrates American spirit and innovation!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 22.0, 'description': 'Tender, slow-smoked brisket with a house-made dry rub and BBQ sauce, now even juicier'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 18.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Our Grilled Corn on the Cob is now dressed with a rich and spicy seasoning blend to enhance its natural sweetness and bring out a bold flavor.'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 9.0, 'description': 'Our classic Apple Pie is now perfected with a touch more sweetness and a perfectly flaky crust to satisfy your dessert cravings.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 18.0, 'description': 'Our BBQ Jackfruit Sandwich is juicier than ever, with a tangy BBQ sauce and a slaw that adds the perfect touch of creaminess and zest.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 16.0, 'description': 'Our Spicy Black Bean Burger now includes an extra hint of juiciness and smokiness that will tantalize your taste buds.'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 13.0, 'description': 'Our Quinoa & Roasted Vegetable Salad is refreshed with an even zestier lemon herb dressing and a new mix of crunchy nuts and seeds for a bold flavor.'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 16, 'name': 'Smoky BBQ Mushroom Stack', 'price': 16.0, 'description': 'A tower of grilled, smoky mushrooms topped with caramelized onions and a drizzle of savory BBQ sauce'}]
+4. Comments
+   [{'day': 9, 'name': 'Yara', 'score': 8, 'content': 'The vegan dishes at Stars & Stripes BBQ were quite satisfying, especially the BBQ Jackfruit Sandwich. Each dish was good but could use a bit more seasoning for perfection. Compared to American Flavors, the variety and quality of vegan options here are superior.'}, {'day': 9, 'name': 'Valerie', 'score': 7, 'content': "The Quinoa & Roasted Vegetable Salad was fresh, aligning with my organic preferences, but could benefit from a zestier dressing. The Apple Pie had a pleasing subtlety in sweetness, though a dash more spice would elevate it. A good meal overall, but there's room for flavor enhancement compared to previous visits."}, {'day': 9, 'name': 'Tina', 'score': 8, 'content': "The Signature Smoked Brisket was nearly perfect in smokiness, yet could benefit from a bit more tenderness. The Gourmet Mac 'n' Cheese was delightfully creamy with a satisfying texture. The Apple Pie was enjoyable but could be less sweet. Overall, a very good meal, surpassing my previous experiences at American Flavors."}, {'day': 9, 'name': 'Nora', 'score': 8, 'content': 'The Quinoa & Roasted Vegetable Salad was nutritious, yet could benefit from a zestier dressing. Sweet Potato Fries were crisp but lacked a certain elegance in seasoning. Compared to my previous visits, the dishes maintain quality but could use a flavor boost.'}, {'day': 9, 'name': 'Giselle', 'score': 8, 'content': "The Apple Pie's balance of sweetness was spot-on, complemented by a flaky crust. The Gourmet Mac 'n' Cheese was creamy and had a satisfying texture. While the meal was delicious, a touch of complexity in flavors could enhance the dining experience further, making it truly outstanding."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ's higher customer score and menu options fit my simple taste and budget, while offering satisfying and comforting meals."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Grilled Corn on the Cob: 0.81
+Apple Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "score": 7,
+    "comment": "The Grilled Corn on the Cob was good but could use more seasoning. The Apple Pie had a nice level of sweetness, although a little extra spice would make it better. Overall a satisfying meal, but there's room for improvement in flavors to make the dishes stand out."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   American Flavors invites you to indulge in our revamped Signature American Burger Deluxe, now juicier with double-aged beef and smoky bourbon sauce. Savor our Ultimate Heritage Apple Pie with brandy-infused apples. Try the new Bold BBQ Pulled Pork Sandwich and Smoky Mountain Chicken Wings for a true taste of America!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 22.0, 'description': 'Our best-selling burger, now with double-aged beef, a layer of melted artisan cheese, organic heirloom tomato, and a smoky, creamy bourbon-infused sauce for an unmatched American taste.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 14.0, 'description': 'Our elevated classic apple pie features a medley of tart and sweet apples, a hint of cinnamon, and a generous pour of apple brandy, all encased in our flakiest, buttery crust.'}, {'id': 16, 'name': 'Bold BBQ Pulled Pork Sandwich', 'price': 18.0, 'description': 'Tender, slow-cooked pulled pork lavished in our signature spicy-sweet BBQ sauce, topped with zesty apple-cabbage slaw, nestled in a toasted artisan brioche bun.'}, {'id': 17, 'name': 'Smoky Mountain Chicken Wings', 'price': 12.0, 'description': 'Crispy wings coated in our house-blend smoky rub, served with a side of tangy blue cheese dip to kick up the flavor.'}, {'id': 18, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Rich, creamy cheesecake made with the finest cream cheese and a hint of lemon zest, on a graham cracker crust, topped with a fresh berry compote.'}]
+4. Comments
+   [{'day': 9, 'name': 'Hugo', 'score': 6, 'content': "The Signature American Burger Deluxe lacked the juiciness expected of a gourmet burger, and the Ultimate Heritage Apple Pie, while having a good texture, didn't quite deliver the depth of flavor I crave. The Smoked Chicken & Avocado Salad was refreshing but needed more zest. Compared to Stars & Stripes BBQ, my experience here was underwhelming."}, {'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.612676056338028
+2. Advertisement
+   Come taste the new and improved Stars & Stripes BBQ menu! Our Signature Smoked Brisket and BBQ Ribs are now even more tender and our Spicy Black Bean Burger juicier than ever. Plus, try our Quinoa Salad with a zestier dressing and our Grilled Corn with a spicy kick. Delicious improvements you asked for!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 24.0, 'description': 'Tender, slow-smoked brisket with a house-made dry rub and BBQ sauce, now even juicier'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 20.0, 'description': 'Half rack of pork ribs glazed with our signature BBQ sauce'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Our Grilled Corn on the Cob is now dressed with a richer and spicier seasoning blend to enhance its natural sweetness and bring out a bold flavor.'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 9.0, 'description': 'Our classic Apple Pie is now perfected with a touch more sweetness and a perfectly flaky crust to satisfy your dessert cravings.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 18.0, 'description': 'Our BBQ Jackfruit Sandwich is juicier than ever, with a tangy BBQ sauce and a slaw that adds the perfect touch of creaminess and zest.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 18.0, 'description': 'Our Spicy Black Bean Burger now includes an extra hint of juiciness and smokiness that will tantalize your taste buds.'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 13.0, 'description': 'Our Quinoa & Roasted Vegetable Salad now features a punchier lemon herb dressing and an enhanced mix of crunchy nuts and seeds for a full-bodied flavor.'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 16, 'name': 'Smoky BBQ Mushroom Stack', 'price': 16.0, 'description': 'A tower of grilled, smoky mushrooms topped with caramelized onions and a drizzle of savory BBQ sauce'}]
+4. Comments
+   [{'day': 10, 'name': 'Yara', 'score': 8, 'content': 'The vegan dishes at Stars & Stripes BBQ were generally good, with the BBQ Jackfruit Sandwich and the Spicy Black Bean Burger being particularly enjoyable. The Quinoa & Roasted Vegetable Salad, while fresh, could benefit from a more vibrant dressing. Overall, a satisfying dining experience that caters well to my vegan diet.'}, {'day': 10, 'name': 'Wade', 'score': 7, 'content': "The Grilled Corn on the Cob was good but could use more seasoning. The Apple Pie had a nice level of sweetness, although a little extra spice would make it better. Overall a satisfying meal, but there's room for improvement in flavors to make the dishes stand out."}, {'day': 10, 'name': 'Oscar', 'score': 8, 'content': "The Signature Smoked Brisket was deliciously smoky, though a touch more tenderness would make it perfect. The Gourmet Mac 'n' Cheese was rich and creamy but could benefit from a sharper cheese flavor. The Apple Pie was good, but a bit too sweet for my taste. Overall, a satisfying traditional meal."}, {'day': 10, 'name': 'Max', 'score': 7, 'content': "The Quinoa & Roasted Vegetable Salad was hearty but could use more zest. The Spicy Black Bean Burger was flavorful, yet I'd prefer a juicier patty. Sweet Potato Fries were well-cooked but lacked seasoning. Overall, an enjoyable meal with room for flavor enhancement."}, {'day': 10, 'name': 'Hugo', 'score': 9, 'content': "The Signature Smoked Brisket was a standout with its deep flavor, and the Gourmet Mac 'n' Cheese nearly hit the peak of creamy decadence. The Apple Pie, while good, was slightly too sweet for my palate. Overall, a superior meal to American Flavors, confirming my preference for Stars & Stripes BBQ."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob",
+        "Apple Pie"
+    ],
+    "reason": "Stars & Stripes BBQ has a higher customer score, with dishes that suit my preference for simple, hearty meals, all at reasonable prices for my budget."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Grilled Corn on the Cob: 0.81
+Apple Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "score": 7,
+    "comment": "The Grilled Corn on the Cob and Apple Pie were both good, with a rating of 0.81, indicating a satisfying meal. However, there's still room for improvement in flavors to make these dishes truly outstanding. Consistency in the level of seasoning would enhance the dining experience."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Discover gourmet American dining at American Flavors with our enhanced Signature American Burger Deluxe and the Ultimate Heritage Apple Pie. Delight in our new Decadent Chocolate Brownie and Velvety Red Velvet Cake for a perfect end to your meal. Come for the quality, stay for the flavor!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 24.0, 'description': 'Our best-selling burger, now with double-aged beef, a layer of melted artisan cheese, organic heirloom tomato, and a smoky, creamy bourbon-infused sauce for an unmatched American taste.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 16.0, 'description': 'Our elevated classic apple pie features a medley of tart and sweet apples, a hint of cinnamon, and a generous pour of apple brandy, all encased in our flakiest, buttery crust.'}, {'id': 18, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Rich, creamy cheesecake made with the finest cream cheese and a hint of lemon zest, on a graham cracker crust, topped with a fresh berry compote.'}, {'id': 19, 'name': 'Decadent Chocolate Brownie', 'price': 12.0, 'description': 'A luxurious, fudgy chocolate brownie with premium cocoa and chunks of dark chocolate, served with a scoop of vanilla bean ice cream.'}, {'id': 20, 'name': 'Velvety Red Velvet Cake', 'price': 12.0, 'description': 'A slice of rich red velvet cake with a silky cream cheese frosting, garnished with fresh berries and a drizzle of raspberry coulis.'}]
+4. Comments
+   [{'day': 9, 'name': 'Hugo', 'score': 6, 'content': "The Signature American Burger Deluxe lacked the juiciness expected of a gourmet burger, and the Ultimate Heritage Apple Pie, while having a good texture, didn't quite deliver the depth of flavor I crave. The Smoked Chicken & Avocado Salad was refreshing but needed more zest. Compared to Stars & Stripes BBQ, my experience here was underwhelming."}, {'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.6455696202531644
+2. Advertisement
+   Discover the bold new flavors at Stars & Stripes BBQ! Revel in our more tender Signature Smoked Brisket, succulent BBQ Ribs, and Apple Pie with just the right touch of sweetness and spice. Our zestier Quinoa Salad awaits health-conscious foodies. Indulge in culinary excellence today!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 26.0, 'description': 'Our Signature Smoked Brisket is now even more tender, with a deep smoky flavor that melts in your mouth.'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 22.0, 'description': 'Our BBQ Ribs Half Rack is now more succulent with a special tenderizing marinade to satisfy your craving for tenderness.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Our Grilled Corn on the Cob is now dressed with a richer and spicier seasoning blend to enhance its natural sweetness and bring out a bold flavor.'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 10.0, 'description': 'Our Apple Pie features a new recipe with reduced sweetness and a hint of spice, all wrapped in our flakiest crust yet.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 18.0, 'description': 'Our BBQ Jackfruit Sandwich is juicier than ever, with a tangy BBQ sauce and a slaw that adds the perfect touch of creaminess and zest.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 18.0, 'description': 'Our Spicy Black Bean Burger now includes an extra hint of juiciness and smokiness that will tantalize your taste buds.'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 14.0, 'description': 'Our refreshing Quinoa & Roasted Vegetable Salad now comes with an even zestier lemon herb dressing for a bold flavor kick.'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 16, 'name': 'Smoky BBQ Mushroom Stack', 'price': 16.0, 'description': 'A tower of grilled, smoky mushrooms topped with caramelized onions and a drizzle of savory BBQ sauce'}]
+4. Comments
+   [{'day': 11, 'name': 'Xavier', 'score': 8, 'content': "The brisket at Stars & Stripes BBQ had a superb smoky flavor, and the mac 'n' cheese was truly comforting. The apple pie, though a tad too sweet for my taste, still ended the meal nicely. Overall, a delicious experience, albeit with room for dessert improvement."}, {'day': 11, 'name': 'Wade', 'score': 7, 'content': "The Grilled Corn on the Cob and Apple Pie were both good, with a rating of 0.81, indicating a satisfying meal. However, there's still room for improvement in flavors to make these dishes truly outstanding. Consistency in the level of seasoning would enhance the dining experience."}, {'day': 11, 'name': 'Ruby', 'score': 9, 'content': "The Signature Smoked Brisket was exceptional, maintaining its reputation for smokiness and tenderness. Gourmet Mac 'n' Cheese was indulgent, but could be improved with a sharper cheese blend. The Apple Pie, while having a perfect crust, was a tad too sweet for my palate. Overall, a delightful culinary experience."}, {'day': 11, 'name': 'Quincy', 'score': 7, 'content': "The Spicy Black Bean Burger was decent but could be juicier. The Quinoa & Roasted Vegetable Salad was fresh, aligning with my dietary needs, yet it lacked a bold flavor. Overall, a good meal but there's room for improvement in taste and seasoning."}, {'day': 11, 'name': 'Paula', 'score': 8, 'content': "The Signature Smoked Brisket was nearly perfect in tenderness and smokiness. Gourmet Mac 'n' Cheese was truly indulgent, although a sharper cheese could enhance it. The Apple Pie was good but leaned towards too sweet. Overall, a hearty and satisfying meal, superior to American Flavors."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob"
+    ],
+    "reason": "Stars & Stripes BBQ has a higher customer score and offers comfort food that satisfies my simple taste, all at a price within my budget."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Grilled Corn on the Cob: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "score": 7,
+    "comment": "Stars & Stripes BBQ provided a comforting meal with their Classic Mac 'n' Cheese, which was creamy and satisfying. The Grilled Corn on the Cob was good but could benefit from more seasoning. Overall, a decent dining experience for the price, though it lacks a wow factor."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Experience the new flavors of America with our revamped Signature American Burger Deluxe—juicier than ever, and savor the deep aroma of our Ultimate Heritage Apple Pie. Indulge in freshness with our Zesty Smoked Chicken & Avocado Salad. American Flavors where taste meets tradition.
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 22.0, 'description': 'Juicy double-aged beef patty with a layer of melted artisan cheese, organic heirloom tomato, and a new tangy, bourbon-infused sauce for the ultimate American taste.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 14.0, 'description': 'A blend of tart and sweet apples with a touch of cinnamon and nutmeg, encased in our flakiest, buttery crust and a hint of apple brandy for a profound taste.'}, {'id': 21, 'name': 'Zesty Smoked Chicken & Avocado Salad', 'price': 13.0, 'description': 'Fresh greens, smoked chicken, ripe avocado, and a homemade zesty lemon-herb dressing for a refreshing and flavorful salad.'}]
+4. Comments
+   [{'day': 9, 'name': 'Hugo', 'score': 6, 'content': "The Signature American Burger Deluxe lacked the juiciness expected of a gourmet burger, and the Ultimate Heritage Apple Pie, while having a good texture, didn't quite deliver the depth of flavor I crave. The Smoked Chicken & Avocado Salad was refreshing but needed more zest. Compared to Stars & Stripes BBQ, my experience here was underwhelming."}, {'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.676300578034682
+2. Advertisement
+   Join us at Stars & Stripes BBQ for unforgettable flavors! Savor the perfect balance in our updated Apple Pie and enjoy the crunch in our improved Quinoa Salad. Earn rewards with our new loyalty program. Your next favorite meal is here!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 26.0, 'description': 'Our Signature Smoked Brisket is now even more tender, with a deep smoky flavor that melts in your mouth.'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 24.0, 'description': 'Our BBQ Ribs Half Rack is now more succulent with a special tenderizing marinade to satisfy your craving for tenderness.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Our Grilled Corn on the Cob is now dressed with a richer and spicier seasoning blend to enhance its natural sweetness and bring out a bold flavor.'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 10.0, 'description': 'Our Apple Pie now features a better-balanced sweetness with a hint of cinnamon spice, wrapped in our buttery, flaky crust.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 18.0, 'description': 'Our BBQ Jackfruit Sandwich is juicier than ever, with a tangy BBQ sauce and a slaw that adds the perfect touch of creaminess and zest.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 18.0, 'description': 'Our Spicy Black Bean Burger now includes an extra hint of juiciness and smokiness that will tantalize your taste buds.'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 14.0, 'description': 'Our Quinoa & Roasted Vegetable Salad is now enhanced with crunchy nuts and seeds for added texture and a zesty lemon herb dressing.'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 16, 'name': 'Smoky BBQ Mushroom Stack', 'price': 16.0, 'description': 'A tower of grilled, smoky mushrooms topped with caramelized onions and a drizzle of savory BBQ sauce'}]
+4. Comments
+   [{'day': 12, 'name': 'Wade', 'score': 7, 'content': "Stars & Stripes BBQ provided a comforting meal with their Classic Mac 'n' Cheese, which was creamy and satisfying. The Grilled Corn on the Cob was good but could benefit from more seasoning. Overall, a decent dining experience for the price, though it lacks a wow factor."}, {'day': 12, 'name': 'Ulysses', 'score': 9, 'content': "The Signature Smoked Brisket was superb, offering an excellent smoky flavor. Gourmet Mac 'n' Cheese was creamy and comforting. Apple Pie had a fine crust but was slightly sweeter than I prefer. Overall, a more gratifying experience compared to American Flavors."}, {'day': 12, 'name': 'Ruby', 'score': 9, 'content': "The Signature Smoked Brisket was exceptional, with a perfect balance of tenderness and smokiness. The Gourmet Mac 'n' Cheese was creamy and flavorful, although a sharper cheese would elevate it. The Apple Pie, while delicious, was a bit too sweet for my palate. Overall, a highly enjoyable dining experience."}, {'day': 12, 'name': 'Quincy', 'score': 7, 'content': 'The Quinoa & Roasted Vegetable Salad fit my low-calorie diet well, scoring nicely on my health scale. The Grilled Corn on the Cob was a bit lackluster, needing more seasoning. Both dishes were satisfactory, but I do hope for more flavorful options in the future.'}, {'day': 12, 'name': 'Oscar', 'score': 8, 'content': "The Signature Smoked Brisket's savory smokiness was impressive, Gourmet Mac 'n' Cheese was deliciously creamy, but Apple Pie was a bit too sweet. An enjoyable meal with room for dessert improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob"
+    ],
+    "reason": "Stars & Stripes BBQ offers comfort food that aligns with my simple tastes at prices within my budget, and it has a higher customer score than American Flavors."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Corn on the Cob: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Classic Mac 'n' Cheese was creamy and comforting just as I like. The Grilled Corn on the Cob, although it could have used a bit more spice, was still enjoyable."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Come taste the value at American Flavors! Our Signature American Burger Deluxe is now more affordable than ever, paired with our Ultimate Heritage Apple Pie at a new lower price. Plus, don't miss our new Classic American Meatloaf, a hearty delight. Quality dining made accessible.
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 20.0, 'description': 'Juicy double-aged beef patty with a layer of melted artisan cheese, crisp lettuce, heirloom tomato, and our new tangy, bourbon-infused sauce, all housed in a toasted brioche bun.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 12.0, 'description': 'A harmonious mix of tart and sweet apples spiced with cinnamon and nutmeg, encased in our all-butter flaky crust, served with a scoop of vanilla bean ice cream.'}, {'id': 21, 'name': 'Zesty Smoked Chicken & Avocado Salad', 'price': 12.0, 'description': 'Succulent smoked chicken, creamy avocado slices, fresh greens, and a vibrant homemade zesty lemon-herb dressing come together for a salad bursting with flavor.'}, {'id': 22, 'name': 'Classic American Meatloaf', 'price': 16.0, 'description': 'Our Classic American Meatloaf is made with a blend of seasoned beef and pork, glazed with a sweet and tangy sauce, served with creamy mashed potatoes and green beans.'}]
+4. Comments
+   [{'day': 9, 'name': 'Hugo', 'score': 6, 'content': "The Signature American Burger Deluxe lacked the juiciness expected of a gourmet burger, and the Ultimate Heritage Apple Pie, while having a good texture, didn't quite deliver the depth of flavor I crave. The Smoked Chicken & Avocado Salad was refreshing but needed more zest. Compared to Stars & Stripes BBQ, my experience here was underwhelming."}, {'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.698924731182796
+2. Advertisement
+   Discover the new tastes of Stars & Stripes BBQ! Dive into our enhanced Quinoa Salad with a bold dressing, and indulge in our less-sweet, spicier Apple Pie. Wake up with our Sunrise Breakfast Bowl! Loyalty rewards await our beloved patrons.
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 26.0, 'description': 'Our Signature Smoked Brisket is now even more tender, with a deep smoky flavor that melts in your mouth.'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 24.0, 'description': 'Our BBQ Ribs Half Rack is now more succulent with a special tenderizing marinade to satisfy your craving for tenderness.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Our Grilled Corn on the Cob is now dressed with a richer and spicier seasoning blend to enhance its natural sweetness and bring out a bold flavor.'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 10.0, 'description': 'Classic American Apple Pie with a twist - less sugar, more spice, and everything nice, encased in our famous buttery, flaky crust.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 18.0, 'description': 'Our BBQ Jackfruit Sandwich is juicier than ever, with a tangy BBQ sauce and a slaw that adds the perfect touch of creaminess and zest.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 18.0, 'description': 'Our Spicy Black Bean Burger now includes an extra hint of juiciness and smokiness that will tantalize your taste buds.'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 14.0, 'description': 'Our Quinoa & Roasted Vegetable Salad now comes with an even more vibrant and robust dressing, perfect for starting your day or as a hearty lunch.'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 17, 'name': 'Sunrise Breakfast Bowl', 'price': 15.0, 'description': 'A hearty bowl of scrambled eggs, diced smoked brisket, roasted potatoes, and bell peppers, topped with a sprinkle of cheddar and a dash of our signature BBQ sauce.'}]
+4. Comments
+   [{'day': 13, 'name': 'Ulysses', 'score': 9, 'content': "The Signature Smoked Brisket was exquisite, with an impeccable smoky flavor. The Gourmet Mac 'n' Cheese was rich and indulgent. The Apple Pie was delightful, despite being slightly sweeter than preferred. Overall, a superior dining experience compared to American Flavors."}, {'day': 13, 'name': 'Steve', 'score': 7, 'content': 'The Spicy Black Bean Burger and Quinoa & Roasted Vegetable Salad met my dietary needs, but could use more flavor. Satisfactory, but not as exciting as I hoped. Compared to past meals, a bit more seasoning would make a big difference.'}, {'day': 13, 'name': 'Oscar', 'score': 8, 'content': "The Signature Smoked Brisket was outstanding with its deep smoky essence, and the Gourmet Mac 'n' Cheese was a creamy delight. The Apple Pie's sweetness was a tad overdone for my taste. Consistent with my past experiences, the meal was enjoyable, though the dessert could be improved."}, {'day': 13, 'name': 'Max', 'score': 8, 'content': 'The Quinoa & Roasted Vegetable Salad was refreshing, yet could benefit from a bolder dressing. The Spicy Black Bean Burger was satisfying with its spiciness, but a bit more moisture in the patty would be welcome. Sweet Potato Fries were enjoyable, though a touch more seasoning would enhance them.'}, {'day': 13, 'name': 'Lara', 'score': 9, 'content': 'The Signature Smoked Brisket was truly exceptional, with a perfect smoky flavor. The Quinoa & Roasted Vegetable Salad, while fresh, could benefit from a zestier dressing. The Apple Pie was delightful, although slightly too sweet for my taste. Overall, a very satisfying experience compared to my previous meals.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob"
+    ],
+    "reason": "Stars & Stripes BBQ has a higher customer score and offers comfort food that satisfies my simple taste, all at a price within my budget."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Corn on the Cob: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Classic Mac 'n' Cheese was creamy and hit the spot, very satisfying for my simple tastes. The Grilled Corn on the Cob was enjoyable, though a little more seasoning would have made it perfect."
+}
+
+[System->Wade]: The Restaurant " American Flavors "information as below:
+1. Customer Score: 5.333333333333333
+2. Advertisement
+   Discover bold flavors at American Flavors with our revamped menu! Indulge in the new smoky BBQ Beef Brisket or spicy Buffalo Chicken Wings. Don't forget our famous Ultimate Heritage Apple Pie, now with an even richer spice blend. Exceptional taste, irresistible prices!
+3. Menu 
+   [{'id': 1, 'name': 'Signature American Burger Deluxe', 'price': 18.0, 'description': 'Juicy double-aged beef patty with a layer of melted artisan cheese, crisp lettuce, heirloom tomato, and our new tangy, smoky bourbon-infused sauce, all housed in a toasted brioche bun.'}, {'id': 10, 'name': 'Ultimate Heritage Apple Pie', 'price': 14.0, 'description': 'A rich blend of tart and sweet apples spiced with cinnamon, nutmeg, and a hint of clove, encased in our all-butter flaky crust, served with a scoop of vanilla bean ice cream.'}, {'id': 23, 'name': 'Smoky BBQ Beef Brisket', 'price': 22.0, 'description': 'Tender beef brisket slow-cooked with our signature smoky BBQ sauce, served with a side of garlic mashed potatoes and buttered corn.'}, {'id': 24, 'name': 'Spicy Buffalo Chicken Wings', 'price': 12.0, 'description': 'Crispy chicken wings coated in our fiery homemade Buffalo sauce, served with blue cheese dressing and celery sticks.'}]
+4. Comments
+   [{'day': 9, 'name': 'Hugo', 'score': 6, 'content': "The Signature American Burger Deluxe lacked the juiciness expected of a gourmet burger, and the Ultimate Heritage Apple Pie, while having a good texture, didn't quite deliver the depth of flavor I crave. The Smoked Chicken & Avocado Salad was refreshing but needed more zest. Compared to Stars & Stripes BBQ, my experience here was underwhelming."}, {'day': 7, 'name': 'Giselle', 'score': 6, 'content': "The Ultimate Heritage Apple Pie was decent, with a fair balance of sweetness, but it lacked the depth I expected. The truffle mac 'n' cheese was creatively presented but didn't hit the mark. My past experiences at Stars & Stripes BBQ were more satisfying overall."}, {'day': 7, 'name': 'Zach', 'score': 8, 'content': "The Juicy American Burger Deluxe was a gluten-free success, though it could be juicier. The Local Harvest Cobb Salad was crisp and fresh, but required a bit more dressing. The Ultimate Heritage Apple Pie was delightful with its depth of flavor, outshining the previous pies I've had. A very good meal with minor tweaks needed."}, {'day': 4, 'name': 'Maggie', 'score': 5, 'content': 'The Heritage Apple Pie had a fresh approach, but it lacked the depth of flavor I anticipated. It was fair but not as satisfying as the desserts at Stars & Stripes BBQ, which better cater to my love for sweets.'}, {'day': 3, 'name': 'Nora', 'score': 5, 'content': "The Cobb Salad and Grilled Vegetable Skewers were decent, yet lacked the sophistication I expected for fine dining. Both dishes could use more seasoning to enhance their natural flavors. Compared to my past experiences, American Flavors' offerings were underwhelming and not on par with the culinary excellence I prefer."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: The Restaurant " Stars & Stripes BBQ "information as below:
+1. Customer Score: 7.759803921568627
+2. Advertisement
+   Savor the bold and delightful! Our Signature Smoked Brisket is a smoky sensation, now paired with our revamped Apple Pie, less sweet with a spicier kick! Plus, our Quinoa & Roasted Vegetable Salad just got zestier! Come taste the innovation at Stars & Stripes BBQ!
+3. Menu 
+   [{'id': 1, 'name': 'Signature Smoked Brisket', 'price': 26.0, 'description': 'Our Signature Smoked Brisket is now even more tender, with a deep smoky flavor that melts in your mouth.'}, {'id': 3, 'name': 'BBQ Ribs Half Rack', 'price': 24.0, 'description': 'Our BBQ Ribs Half Rack is now more succulent with a special tenderizing marinade to satisfy your craving for tenderness.'}, {'id': 4, 'name': 'Grilled Corn on the Cob', 'price': 6.0, 'description': 'Our Grilled Corn on the Cob is now dressed with a richer and spicier seasoning blend to enhance its natural sweetness and bring out a bold flavor.'}, {'id': 5, 'name': "Gourmet Mac 'n' Cheese", 'price': 14.0, 'description': "Luxurious Mac 'n' Cheese with a blend of sharp aged cheeses, truffle oil, and a crispy breadcrumb topping"}, {'id': 6, 'name': 'BBQ Chicken Wings', 'price': 12.0, 'description': 'Crispy wings tossed in our BBQ sauce, served with blue cheese dip'}, {'id': 7, 'name': 'Apple Pie', 'price': 10.0, 'description': 'Classic American Apple Pie with reduced sugar, enhanced with cinnamon, nutmeg, and a hint of allspice for a perfectly balanced dessert.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries seasoned with our signature spice blend'}, {'id': 11, 'name': 'BBQ Jackfruit Sandwich', 'price': 18.0, 'description': 'Our BBQ Jackfruit Sandwich is juicier than ever, with a tangy BBQ sauce and a slaw that adds the perfect touch of creaminess and zest.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 18.0, 'description': 'Our Spicy Black Bean Burger now includes an extra hint of juiciness and smokiness that will tantalize your taste buds.'}, {'id': 13, 'name': 'Quinoa & Roasted Vegetable Salad', 'price': 14.0, 'description': 'Our Quinoa & Roasted Vegetable Salad is now bolder with a zesty lemon-herb dressing, roasted seeds, and a sprinkle of feta for a refreshing yet hearty dish.'}, {'id': 14, 'name': 'Crispy Onion Rings', 'price': 7.0, 'description': 'Golden and crunchy onion rings with a special seasoning, served with a tangy dipping sauce.'}, {'id': 17, 'name': 'Sunrise Breakfast Bowl', 'price': 15.0, 'description': 'A hearty bowl of scrambled eggs, diced smoked brisket, roasted potatoes, and bell peppers, topped with a sprinkle of cheddar and a dash of our signature BBQ sauce.'}]
+4. Comments
+   [{'day': 14, 'name': 'Xavier', 'score': 9, 'content': "The smoky brisket was a Caribbean delight, and the mac 'n' cheese's creamy richness was spot on. The apple pie, though less sweet, could still use a spice adjustment. Overall, a fantastic meal that outshines American Flavors."}, {'day': 14, 'name': 'Valerie', 'score': 8, 'content': 'The Quinoa & Roasted Vegetable Salad was vibrant, though the dressing could be zestier. The Apple Pie had a comforting spice level but could be less sweet. Overall satisfying, yet still room for improvement compared to previous visits.'}, {'day': 14, 'name': 'Ruby', 'score': 9, 'content': "The Signature Smoked Brisket was near perfection, with the Gourmet Mac 'n' Cheese being exceptionally creamy. The Apple Pie, while good, was a bit too sweet for my taste. Overall, this meal solidified my preference for Stars & Stripes BBQ over American Flavors."}, {'day': 14, 'name': 'Oscar', 'score': 8, 'content': "The Signature Smoked Brisket was near perfection in smokiness and tenderness. The Gourmet Mac 'n' Cheese was delightfully creamy, yet could use a bit more sharpness in flavor. The Apple Pie, although less sweet than before, still skews towards overly sweet for my palate. Overall, a very good dining experience."}, {'day': 14, 'name': 'Felix', 'score': 8, 'content': 'The Signature Smoked Brisket was superb, though the BBQ Jackfruit Sandwich could use a bit more flavor. The Apple Pie was nice but would improve with additional spice. Overall, a great meal but not as impressive as previous visits.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Wade]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "dishes": [
+        "Classic Mac 'n' Cheese",
+        "Grilled Corn on the Cob"
+    ],
+    "reason": "Stars & Stripes BBQ has a more appealing customer score, offers hearty comfort food within my budget, and the dishes align with my simple taste preferences."
+}
+
+[System->Wade]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Corn on the Cob: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Wade->all]: {
+    "restaurant": "Stars & Stripes BBQ",
+    "feeling": "The Grilled Corn on the Cob was satisfying with its smoky flavor, but I would have enjoyed a bit more seasoning. Overall, a good meal for the price."
+}
+

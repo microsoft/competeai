@@ -1,0 +1,901 @@
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right in your town! Indulge in our 'American Epicurean Delight' with signature dishes like our Classic American Burger and BBQ Ribs Platter. Join us for daily specials and a loyalty rewards program that keeps giving back. Follow us on social media for exclusive deals!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 22.0, 'description': 'Tender ribs smothered in BBQ sauce with coleslaw and fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': "Mac 'n' Cheese", 'price': 10.0, 'description': 'Creamy three-cheese blend with a crispy breadcrumb topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Classic apple pie served with vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries with a side of chipotle aioli'}, {'id': 9, 'name': 'Iced Americano', 'price': 4.0, 'description': 'Refreshingly strong iced coffee for the caffeine lovers'}, {'id': 10, 'name': 'Craft Beer Selection', 'price': 7.0, 'description': 'A selection of the finest American craft beers'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover 'Affordable Luxury' at USA Diner! Indulge in our new gourmet American-inspired dishes like the New York Strip Steak and California Cobb Salad. Savor sophistication without the hefty price tag. Come taste the difference today!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 18.0, 'description': 'Fresh greens topped with grilled chicken, avocado, bacon, blue cheese, and a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 12.0, 'description': 'Creamy New England-style chowder loaded with clams and potatoes.'}, {'id': 5, 'name': 'American Apple Pie', 'price': 10.0, 'description': 'Classic apple pie with a flaky crust, served with vanilla ice cream.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "American Epicurean Delight",
+    "dishes" : [
+        "Cobb Salad", "Sweet Potato Fries"
+    ],
+    "reason" : "I prefer the 'American Epicurean Delight' for its variety of options, including the organic-sounding Cobb Salad, and the Sweet Potato Fries as a healthier side."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Cobb Salad: 0.72
+Sweet Potato Fries: 0.66
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "American Epicurean Delight",
+    "feeling": "The meal was enjoyable with fresh ingredients in the Cobb Salad, and the Sweet Potato Fries were a tasty, healthier treat."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.0
+2. Advertisement
+   Join us at 'American Epicurean Delight' for a delectable journey! Our revamped Mac 'n' Cheese and crispier Sweet Potato Fries await you. Plus, explore our new Cajun Chicken Sandwich and Vegan BBQ Jackfruit Sliders for a twist on American classics. Exceptional service in a cozy ambiance. Follow us for updates!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 22.0, 'description': 'Tender ribs smothered in BBQ sauce with coleslaw and fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': "Mac 'n' Cheese", 'price': 12.0, 'description': 'Extra creamy three-cheese blend with a crispy breadcrumb topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Classic apple pie served with vanilla ice cream'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 7.0, 'description': 'Crispier sweet potato fries with a side of chipotle aioli'}, {'id': 11, 'name': 'Cajun Chicken Sandwich', 'price': 13.0, 'description': 'Spicy grilled chicken with Cajun seasonings, served with lettuce, tomato, and a zesty sauce'}, {'id': 12, 'name': 'Vegan BBQ Jackfruit Sliders', 'price': 11.0, 'description': 'Slow-cooked jackfruit in BBQ sauce, topped with coleslaw on mini buns'}]
+4. Comments
+   [{'day': 1, 'name': 'Yara', 'score': 7, 'content': "The Sweet Potato Fries were fairly tasty, but could have been crisper. The Mac 'n' Cheese was good, though it lacked the richness of traditional cheese. A vegan cheese substitute would enhance it. Overall, a pleasant meal but room for improvement in vegan offerings."}, {'day': 1, 'name': 'Felix', 'score': 7, 'content': "The Classic American Burger had a satisfying flavor, though not exceptional. Mac 'n' Cheese was comforting but could use a bit more sharpness in taste. Apple Pie a la Mode ended the meal pleasantly. Overall, a good dining experience, but there's room for improvement in flavor depth."}, {'day': 1, 'name': 'Brian', 'score': 7, 'content': "The Classic American Burger was juicy and satisfying, and the Buffalo Chicken Wings had a nice spice to them. The Sweet Potato Fries could be crisper. Overall, a good meal but there's room for improvement."}, {'day': 1, 'name': 'Tara', 'score': 7, 'content': "The Classic American Burger was juicy and satisfying, while the Apple Pie a la Mode had a nice balance of sweetness. The Craft Beer was a good complement to the meal. However, I've had more adventurous flavors elsewhere, so I'd love to see more exotic options on the menu."}, {'day': 1, 'name': 'Sam', 'score': 7, 'content': "Enjoyed the Classic American Burger, was juicy and satisfying. Mac 'n' Cheese could use a bit more flavor, while the Apple Pie a la Mode was decent but not remarkable. A solid meal overall, but there's room for improvement in taste."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 8.0
+2. Advertisement
+   Experience unique American flavors at USA Diner! Try our exclusive Stars & Stripes Burger and deluxe American Apple Pie. Refresh with Liberty Lemonade, and enjoy an unforgettable dining adventure. Visit us for a true taste of America!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 18.0, 'description': 'Fresh greens topped with grilled chicken, avocado, bacon, blue cheese, and a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 12.0, 'description': 'Creamy New England-style chowder loaded with clams and potatoes.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 12.0, 'description': 'Our enhanced classic apple pie with a mix of tart and sweet apples, a hint of cinnamon, and a buttery crumble topping, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 20.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a drizzle of bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 8.0, 'description': 'A refreshing blend of homemade lemonade, muddled mint, and a splash of blueberry syrup, garnished with a lemon wheel.'}]
+4. Comments
+   [{'day': 1, 'name': 'Lara', 'score': 8, 'content': 'The Boston Clam Chowder had a good balance of flavors and was quite satisfying. The portion size and the quality of ingredients met my expectations for a middle-class dining experience. I would have appreciated a more diverse seafood selection, but overall, it was a pleasant meal.'}, {'day': 1, 'name': 'Iris', 'score': 8, 'content': "The California Cobb Salad was fresh and flavorful, meeting my salad preference. The 'Affordable Luxury' concept was well-reflected in the quality of the food. However, the service could be more attentive. Overall, a good dining experience."}, {'day': 1, 'name': 'Jack', 'score': 8, 'content': 'The New York Strip Steak was cooked to near perfection, with robust flavors. The BBQ Ribs were succulent, albeit slightly less impressive than the steak. The American Apple Pie was a delightful end to the meal, though it could have been a tad more flavorful. Overall, a satisfying dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes" : [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason" : "I chose 'USA Diner' for its higher customer score and the fresh, organic appeal of the California Cobb Salad, paired with a refreshing Liberty Lemonade."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.81
+Liberty Lemonade: 0.73
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad was exceptionally fresh, and the Liberty Lemonade had a perfect balance of flavors, making for a refreshing dining experience."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.076923076923077
+2. Advertisement
+   Savor the taste of freedom at 'American Epicurean Delight' with our new Freedom Feast Burger and Independence Day Sundae! Enjoy our improved Mac 'n' Cheese and crispiest Sweet Potato Fries. Indulge in a memorable meal in our cozy setting. Follow us for exciting flavors and offers!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 22.0, 'description': 'Tender ribs smothered in BBQ sauce with coleslaw and fries'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': "Mac 'n' Cheese", 'price': 14.0, 'description': 'Rich four-cheese blend with a crispy herb breadcrumb topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust'}, {'id': 8, 'name': 'Sweet Potato Fries', 'price': 9.0, 'description': 'Perfectly crispy sweet potato fries with a sprinkle of sea salt and a side of chipotle aioli'}, {'id': 12, 'name': 'Vegan BBQ Jackfruit Sliders', 'price': 11.0, 'description': 'Slow-cooked jackfruit in BBQ sauce, topped with coleslaw on mini buns'}, {'id': 13, 'name': 'Freedom Feast Burger', 'price': 18.0, 'description': 'Patriotic burger with a prime beef patty, a slice of Vermont cheddar, smoky bacon, and a splash of bourbon BBQ sauce, served with seasoned fries'}, {'id': 14, 'name': 'Independence Day Sundae', 'price': 10.0, 'description': 'A festive sundae with red velvet cake, blueberry compote, vanilla bean ice cream, topped with whipped cream and a sparkler'}]
+4. Comments
+   [{'day': 2, 'name': 'Max', 'score': 8, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful surprise, with a rich, smoky flavor that didn't make me miss the meat. Sweet Potato Fries were a tasty side, though could've been a touch crispier. A very good plant-based meal overall."}, {'day': 2, 'name': 'Iris', 'score': 7, 'content': "The Cobb Salad at American Epicurean Delight was good, aligning with my taste for salads. While the flavors were satisfactory, they didn't quite match the freshness of the California Cobb Salad I had at USA Diner. The cozy ambiance was a plus, yet the culinary experience could be enhanced."}, {'day': 2, 'name': 'Giselle', 'score': 7, 'content': "The New York Cheesecake and Apple Pie a la Mode were satisfying but lacked a wow factor. The flavors were good, not great. Service was commendable. I've had better experiences with desserts elsewhere, so I’d suggest a bit more innovation to match their cozy ambiance."}, {'day': 2, 'name': 'Brian', 'score': 7, 'content': "The dishes were generally good with the burger being juicy and the wings flavorful. However, there's room for improvement in the crispiness of the sweet potato fries. A more consistent dining experience would elevate the meal further."}, {'day': 2, 'name': 'Vicky', 'score': 7, 'content': "The American Epicurean Delight provided a cozy meal with the Classic American Burger standing out. The Mac 'n' Cheese was enjoyable, though lacking a bit in flavor depth. Apple Pie a la Mode rounded off the meal nicely. Overall, a comforting experience, but there's room for taste enhancement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.9411764705882355
+2. Advertisement
+   Discover bold flavors and attentive service at USA Diner! Indulge in our new Grilled Chicken with Wild Mushroom Sauce and enjoy less-sweet, more refreshing Liberty Lemonade. Perfectly balanced dishes await you. Join us for an elevated American dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 18.0, 'description': 'Fresh greens topped with grilled chicken, avocado, bacon, blue cheese, and a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 12.0, 'description': 'Creamy New England-style chowder loaded with clams and potatoes.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 12.0, 'description': 'Our enhanced classic apple pie with a mix of tart and sweet apples, a hint of cinnamon, and a buttery crumble topping, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 20.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a drizzle of bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 9.0, 'description': 'A less sweet, refreshing blend of homemade lemonade, muddled mint, and a splash of blueberry syrup, garnished with a lemon wheel.'}, {'id': 8, 'name': 'Grilled Chicken with Wild Mushroom Sauce', 'price': 18.0, 'description': 'Succulent grilled chicken breast topped with a rich wild mushroom sauce, served with a side of roasted vegetables.'}]
+4. Comments
+   [{'day': 2, 'name': 'Xavier', 'score': 8, 'content': "The Texas BBQ Ribs were tender, complemented by the American Apple Pie Deluxe's rich flavor. The Liberty Lemonade was refreshing, though less impressive. USA Diner offered a better experience than American Epicurean Delight, aligning well with my taste for vibrant and hearty meals."}, {'day': 2, 'name': 'Ulysses', 'score': 8, 'content': 'The New York Strip Steak was excellently prepared, and the Boston Clam Chowder had a delightful balance of flavors. The American Apple Pie Deluxe was enjoyable, though not as flavorful as I anticipated. Compared to American Epicurean Delight, the dishes here are more to my liking, with a touch of uniqueness in the offerings.'}, {'day': 2, 'name': 'Jake', 'score': 7, 'content': "The California Cobb Salad was fresh, aligning with my health needs, and the Boston Clam Chowder offered comforting warmth. However, both dishes could benefit from a bit more seasoning to enhance flavors. A solid meal, but there's room for improvement."}, {'day': 2, 'name': 'Felix', 'score': 8, 'content': 'The New York Strip Steak had a robust flavor and was satisfyingly prepared. The American Apple Pie Deluxe was enjoyable, though slightly less impressive. The Liberty Lemonade was refreshing but could benefit from a stronger flavor profile. Overall, a good experience, surpassing my previous one at American Epicurean Delight.'}, {'day': 2, 'name': 'Dexter', 'score': 8, 'content': 'The Texas BBQ Ribs had a robust flavor, satisfying my barbecue craving, and the American Apple Pie Deluxe was a delightful finish with its buttery crumble topping. However, compared to American Epicurean Delight, the pie here was a standout. Service could be more attentive.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes" : [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason" : "I chose 'USA Diner' because it has a higher customer score and offers fresh, organic options like the California Cobb Salad, which aligns with my healthy, organic food preference."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.81
+Liberty Lemonade: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad was fresh and satisfying, aligning with my preference for organic ingredients. The Liberty Lemonade was pleasantly less sweet and very refreshing."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.0588235294117645
+2. Advertisement
+   Introducing the exquisite Liberty Burger, the new crown jewel of 'American Epicurean Delight'! Elevate your dining experience with this luxurious blend of prime beef, foie gras, and black truffle. Indulge in our refined American classics with a modern twist. Your culinary adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 17.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 24.0, 'description': 'Tender ribs smothered in BBQ sauce with coleslaw and fries'}, {'id': 5, 'name': 'Cobb Salad', 'price': 16.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 13, 'name': 'Freedom Feast Burger', 'price': 20.0, 'description': 'Patriotic burger with a prime beef patty, a slice of Vermont cheddar, smoky bacon, and a splash of bourbon BBQ sauce, served with seasoned fries'}, {'id': 15, 'name': 'Liberty Burger', 'price': 28.0, 'description': 'A majestic burger featuring a prime beef patty, gold-leaf foie gras, black truffle aioli, and aged cheddar on a brioche bun, served with truffle fries.'}]
+4. Comments
+   [{'day': 3, 'name': 'Yara', 'score': 7, 'content': 'The Vegan BBQ Jackfruit Sliders were hearty with a satisfying texture, reminiscent of pulled pork. The Sweet Potato Fries, although not exceptional, were a pleasant side. Both dishes were good but lacked a certain flair that would elevate them to outstanding. Consistency in quality would be appreciated for future visits.'}, {'day': 3, 'name': 'Steve', 'score': 7, 'content': "The Cobb Salad and Sweet Potato Fries were commendable for my dietary restrictions, though could use a flavor boost. A satisfying meal overall, but the restaurant could improve by enhancing the dish's taste profiles. Service was good, making for a pleasant dining experience."}, {'day': 3, 'name': 'Maggie', 'score': 7, 'content': "The New York Cheesecake and Independence Day Sundae were enjoyable, though not exceptional. The flavors were good, but not as memorable as I had hoped. Service was decent. In comparison, USA Diner's American Apple Pie Deluxe previously left a stronger impression on me."}, {'day': 3, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were flavorful, a good vegan option. Sweet Potato Fries were decent but could be crisper. Overall, a satisfactory meal but there's room for improvement in taste and texture. My prior experiences here were better."}, {'day': 2, 'name': 'Max', 'score': 8, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful surprise, with a rich, smoky flavor that didn't make me miss the meat. Sweet Potato Fries were a tasty side, though could've been a touch crispier. A very good plant-based meal overall."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.9375
+2. Advertisement
+   Savor the enhanced flavors of USA Diner's favorites! Our Stars & Stripes Burger, California Cobb Salad, and American Apple Pie Deluxe are now more delicious than ever. Come and experience our signature American dishes with a unique twist. Plus, don't miss our special combo offer for a truly unforgettable meal!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 19.8, 'description': 'Fresh greens topped with grilled chicken, avocado, bacon, blue cheese, and a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 24.2, 'description': 'Tender ribs smothered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 12.0, 'description': 'Creamy New England-style chowder loaded with clams and potatoes.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 13.2, 'description': 'Our enhanced classic apple pie with a mix of tart and sweet apples, a hint of cinnamon, and a buttery crumble topping, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 22.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a drizzle of bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 9.0, 'description': 'A less sweet, refreshing blend of homemade lemonade, muddled mint, and a splash of blueberry syrup, garnished with a lemon wheel.'}, {'id': 8, 'name': 'Grilled Chicken with Wild Mushroom Sauce', 'price': 19.8, 'description': 'Succulent grilled chicken breast topped with a rich wild mushroom sauce, served with a side of roasted vegetables.'}]
+4. Comments
+   [{'day': 3, 'name': 'Ulysses', 'score': 8, 'content': 'The New York Strip Steak was robust and cooked to my liking. The Boston Clam Chowder was hearty, though it could use a hint more seasoning. The American Apple Pie Deluxe was satisfactory but could benefit from a bit more flavor. Overall, a very good dining experience that aligns with my taste for classic American cuisine with a unique twist.'}, {'day': 3, 'name': 'Tina', 'score': 8, 'content': "The California Cobb Salad was fresh, aligning with my healthy diet, and the American Apple Pie Deluxe had a delightful flavor that lived up to its name. Compared to my past experience at American Epicurean Delight, USA Diner's dishes had a slight edge in freshness and taste."}, {'day': 3, 'name': 'Ruby', 'score': 8, 'content': 'The California Cobb Salad and American Apple Pie Deluxe at USA Diner were both satisfying with a score of 0.81, reflecting a good standard. The flavors were well-balanced, aligning with my discerning taste. A more innovative approach could elevate the dining experience further.'}, {'day': 3, 'name': 'Quincy', 'score': 7, 'content': "The California Cobb Salad was fresh, fitting into my dietary needs. However, it lacked a bit of flavor compared to past experiences at American Epicurean Delight. Service was good, but there's room for improvement in taste."}, {'day': 3, 'name': 'Lara', 'score': 8, 'content': 'The Boston Clam Chowder had a heartwarming taste, true to my seafood love, though it could have a more pronounced clam flavor. The American Apple Pie Deluxe was delightful, but a touch more cinnamon could enhance it. Overall, a gratifying meal, slightly better than my previous experiences.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes" : [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason" : "I prefer 'USA Diner' for its slightly higher customer score and the availability of fresh, organic options like the California Cobb Salad that suits my healthy lifestyle."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.81
+Liberty Lemonade: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad was fresh and organic, aligning with my healthy preferences, and the Liberty Lemonade was uniquely refreshing."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.05
+2. Advertisement
+   Discover the taste of tradition with a twist at 'American Epicurean Delight'! Savor our new Star-Spangled Apple Pie, indulge in the Patriot's Plate, and experience the consistent quality of our fan-favorite Liberty Burger. Join us for a culinary celebration of American flavors!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 17.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 24.0, 'description': 'Tender ribs smothered in BBQ sauce with coleslaw and fries'}, {'id': 5, 'name': 'Cobb Salad', 'price': 16.0, 'description': 'Fresh greens with chicken, bacon, eggs, avocado, and blue cheese'}, {'id': 15, 'name': 'Liberty Burger', 'price': 25.0, 'description': 'A majestic burger featuring a prime beef patty, gold-leaf foie gras, black truffle aioli, and aged cheddar on a brioche bun, served with truffle fries.'}, {'id': 16, 'name': "Patriot's Plate", 'price': 22.0, 'description': 'A sampler platter featuring mini versions of our Liberty Burger, BBQ Ribs, and Classic American Burger, served with Sweet Potato Fries.'}, {'id': 17, 'name': 'Star-Spangled Apple Pie', 'price': 14.0, 'description': 'Traditional apple pie infused with cinnamon and nutmeg, topped with a lattice crust and a scoop of artisanal vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 4, 'name': 'Max', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were tasty but could use more BBQ sauce for extra flavor. The Sweet Potato Fries were good but not as crispy as I like. Overall, it was a pleasant meal but I've had better experiences here before."}, {'day': 4, 'name': 'Brian', 'score': 7, 'content': "The Classic American Burger was well-seasoned and satisfying. Although the burger scored well in taste, I feel there's room for improvement in the overall dining experience for higher satisfaction."}, {'day': 4, 'name': 'Katie', 'score': 7, 'content': 'The Vegan BBQ Jackfruit Sliders remained a satisfying choice, aligning with my vegan diet, but the consistency in quality seems to fluctuate. The Sweet Potato Fries could have been crisper. While the service is commendable, a more consistent culinary execution would enhance the dining experience.'}, {'day': 3, 'name': 'Yara', 'score': 7, 'content': 'The Vegan BBQ Jackfruit Sliders were hearty with a satisfying texture, reminiscent of pulled pork. The Sweet Potato Fries, although not exceptional, were a pleasant side. Both dishes were good but lacked a certain flair that would elevate them to outstanding. Consistency in quality would be appreciated for future visits.'}, {'day': 3, 'name': 'Steve', 'score': 7, 'content': "The Cobb Salad and Sweet Potato Fries were commendable for my dietary restrictions, though could use a flavor boost. A satisfying meal overall, but the restaurant could improve by enhancing the dish's taste profiles. Service was good, making for a pleasant dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.955555555555556
+2. Advertisement
+   Excite your taste buds with USA Diner's newly perfected dishes! Indulge in our robust California Cobb Salad, flavor-packed Boston Clam Chowder, and our irresistibly spiced American Apple Pie Deluxe. Plus, welcome the exquisite Patriot's Prime Ribeye to our menu - a must-try for steak lovers. Experience culinary innovation at its best!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 20.0, 'description': 'Crisp greens topped with grilled chicken, avocado, bacon, robust blue cheese dressing, and a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 24.2, 'description': 'Tender ribs smothered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 13.0, 'description': 'Creamy New England-style chowder brimming with clams, potatoes, and a touch of extra seasoning for that perfect flavor.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 14.0, 'description': 'Our enhanced classic apple pie with a generous mix of tart and sweet apples, a rich hint of cinnamon, and a buttery crumble topping, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 22.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a drizzle of bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 9.0, 'description': 'A less sweet, refreshing blend of homemade lemonade, muddled mint, and a splash of blueberry syrup, garnished with a lemon wheel.'}, {'id': 8, 'name': 'Grilled Chicken with Wild Mushroom Sauce', 'price': 21.0, 'description': 'Grilled chicken breast with a complex wild mushroom sauce, infused with herbs and a splash of white wine, served with a side of roasted vegetables.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 30.0, 'description': 'A succulent, perfectly seasoned ribeye steak served with a side of garlic herb butter and fresh garden vegetables.'}]
+4. Comments
+   [{'day': 4, 'name': 'Valerie', 'score': 8, 'content': 'The California Cobb Salad was crisp and healthful, though it could benefit from a more robust dressing. The New York Strip Steak was cooked beautifully, but a touch more seasoning could enhance its flavor. Overall, a satisfying meal that edges out my prior experiences at American Epicurean Delight.'}, {'day': 4, 'name': 'Ruby', 'score': 8, 'content': 'The dishes at USA Diner were consistently good, with the California Cobb Salad and American Apple Pie Deluxe both earning a score of 0.81. While the flavors were well-balanced, I believe incorporating more innovative elements could enhance the dining experience. Despite this, USA Diner remains my preferred choice over American Epicurean Delight.'}, {'day': 4, 'name': 'Paula', 'score': 8, 'content': 'The freshness of the California Cobb Salad was impressive, complementing my healthy diet, and the American Apple Pie Deluxe had a comforting homemade feel. Though, a hint more seasoning in the salad and spice in the pie could enhance the flavors. Overall, a delightful meal that outshines my previous visit to American Epicurean Delight.'}, {'day': 4, 'name': 'Felix', 'score': 8, 'content': 'The Grilled Chicken with Wild Mushroom Sauce was well-prepared, though the sauce could use more complexity. The American Apple Pie Deluxe was enjoyable with a good texture, but could be enhanced with more spice. The Liberty Lemonade was refreshing. A solid meal overall, but still room for improvement.'}, {'day': 4, 'name': 'Dexter', 'score': 8, 'content': 'The Texas BBQ Ribs were succulent and hit the mark for my barbecue preference. The American Apple Pie Deluxe impressed with its buttery crumble topping. While the meal was enjoyable, more innovative flavors could have further enhanced the experience. Service was good, though not as exceptional as the food.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes" : [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason" : "I'm choosing 'USA Diner' for its higher customer score and the organic appeal of the California Cobb Salad, which is in line with my preference for healthy, organic food."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below :
+
+California Cobb Salad: 0.81
+Liberty Lemonade: 0.74
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "score": 8,
+    "comment": "The California Cobb Salad was fresh, aligning with my organic preferences, though a zestier dressing could enhance it. The Liberty Lemonade was refreshing, albeit a tad more mint would add to its appeal. A delightful meal overall, but room for a touch more flavor in both dishes."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.041666666666667
+2. Advertisement
+   Step into American Epicurean Delight for an exclusive taste of our Eagle's Embrace Burger! Experience the perfect blend of bold flavors and high-quality ingredients. Don't miss out on this unique American culinary adventure, right here in the heart of our town!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 18.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 26.0, 'description': 'Tender ribs smothered in BBQ sauce with coleslaw and fries'}, {'id': 15, 'name': 'Liberty Burger', 'price': 25.0, 'description': 'A majestic burger featuring a prime beef patty, gold-leaf foie gras, black truffle aioli, and aged cheddar on a brioche bun, served with truffle fries.'}, {'id': 16, 'name': "Patriot's Plate", 'price': 22.0, 'description': 'A sampler platter featuring mini versions of our Liberty Burger, BBQ Ribs, and Classic American Burger, served with Sweet Potato Fries.'}, {'id': 17, 'name': 'Star-Spangled Apple Pie', 'price': 16.0, 'description': 'Traditional apple pie infused with cinnamon and nutmeg, topped with a lattice crust and a scoop of artisanal vanilla bean ice cream.'}, {'id': 18, 'name': "Eagle's Embrace Burger", 'price': 28.0, 'description': "A bold combination of a juicy beef patty, Eagle's special sauce, sharp cheddar cheese, crispy onion rings, and a touch of smoky bacon, topped with a unique pickle relish."}]
+4. Comments
+   [{'day': 5, 'name': 'Wade', 'score': 7, 'content': "The Classic American Burger was juicy and met my expectations for a simple meal, but I think the flavor could be richer. The service was decent, though not exceptional. In comparison, USA Diner's clam chowder had a more distinct taste, which I preferred slightly."}, {'day': 5, 'name': 'Max', 'score': 7, 'content': "The modified plant-based Cobb Salad was fresh, though it lacked the depth of flavor I've experienced in previous meals. It's a good option for my dietary needs, but I'd appreciate more inventive plant-based offerings to enhance the meal."}, {'day': 5, 'name': 'Brian', 'score': 7, 'content': 'The Classic American Burger had a robust flavor, earning a good score. However, service could be more attentive. Comparing to my previous experiences, the consistency of the Sweet Potato Fries still needs improvement. A more engaging dining experience could boost the overall satisfaction.'}, {'day': 5, 'name': 'Vicky', 'score': 7, 'content': 'The Classic American Burger and Star-Spangled Apple Pie were satisfying, staying true to my comfort food preferences. However, the burger could have had more dynamic flavors, and the pie, while good, lacked a unique touch. Compared to USA Diner, the experience was cozy but could benefit from a culinary boost.'}, {'day': 4, 'name': 'Max', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were tasty but could use more BBQ sauce for extra flavor. The Sweet Potato Fries were good but not as crispy as I like. Overall, it was a pleasant meal but I've had better experiences here before."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.9423076923076925
+2. Advertisement
+   Discover the richer flavors of USA Diner's enhanced menu! Our new zestier California Cobb Salad, delectably seasoned American Apple Pie Deluxe, and the bold Stars & Stripes Burger await you. Join us for an exceptional dining experience where every bite is a celebration of taste.
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 21.0, 'description': 'Crisp greens topped with grilled chicken, avocado, bacon, a new zestier house-made dressing, and a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 24.2, 'description': 'Tender ribs smothered in our signature BBQ sauce, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 13.0, 'description': 'Creamy New England-style chowder brimming with clams, potatoes, and a touch of extra seasoning for that perfect flavor.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 15.0, 'description': 'Our enhanced classic apple pie with a generous mix of tart and sweet apples, a richer hint of cinnamon, and a buttery crumble topping, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a richer bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 9.0, 'description': 'A less sweet, refreshing blend of homemade lemonade, muddled mint, and a splash of blueberry syrup, garnished with a lemon wheel.'}, {'id': 8, 'name': 'Grilled Chicken with Wild Mushroom Sauce', 'price': 21.0, 'description': 'Grilled chicken breast with a complex wild mushroom sauce, infused with herbs and a splash of white wine, served with a side of roasted vegetables.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}]
+4. Comments
+   [{'day': 5, 'name': 'Steve', 'score': 8, 'content': 'The California Cobb Salad at USA Diner was fresh, aligning with my health-conscious diet. An improved dressing would make it perfect. Its score edges out my previous experience at American Epicurean Delight.'}, {'day': 5, 'name': 'Quincy', 'score': 7, 'content': "The California Cobb Salad was fresh, aligning with my low-calorie needs. However, it lacked the flavor punch I anticipated. Service was decent, but overall, the dish and experience didn't quite match my previous visits to American Epicurean Delight."}, {'day': 5, 'name': 'Emma', 'score': 8, 'content': 'The California Cobb Salad was fresh, aligning with my organic preferences, though a zestier dressing could enhance it. The Liberty Lemonade was refreshing, albeit a tad more mint would add to its appeal. A delightful meal overall, but room for a touch more flavor in both dishes.'}, {'day': 5, 'name': 'Xena', 'score': 8, 'content': "The Patriot's Prime Ribeye was succulent, earning a high score, while the American Apple Pie Deluxe's crumble topping was a delight. Slight improvements in seasoning could elevate the dishes further. Overall, a very satisfying meal, outperforming my past experiences at American Epicurean Delight."}, {'day': 5, 'name': 'Tara', 'score': 8, 'content': 'The Stars & Stripes Burger was an exciting blend of flavors, really suiting my taste for adventure. The American Apple Pie Deluxe and Grilled Chicken with Wild Mushroom Sauce were both good but lacked a bit of the wow factor. Overall, a delicious meal with room for some spice and flair enhancement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "I'm choosing 'USA Diner' again because the customer score is higher and they offer a zestier version of the California Cobb Salad, which aligns with my organic food preference."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.83
+Liberty Lemonade: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The zestier California Cobb Salad was a delightful match for my organic food preference, and the Liberty Lemonade was refreshingly less sweet, just as desired."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.08
+2. Advertisement
+   Discover bold flavors at American Epicurean Delight with our enhanced Liberty Burger, now with a richer truffle aioli! Indulge in our new Star-Spangled Caramel Apple Pie for a unique twist on a classic. Exclusive, unforgettable tastes await you!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 18.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 26.0, 'description': 'Tender ribs smothered in BBQ sauce with coleslaw and fries'}, {'id': 15, 'name': 'Liberty Burger', 'price': 25.0, 'description': 'An improved Liberty Burger with an intensified black truffle aioli to provide a more pronounced truffle flavor, paired with our signature truffle fries.'}, {'id': 16, 'name': "Patriot's Plate", 'price': 22.0, 'description': 'A sampler platter featuring mini versions of our Liberty Burger, BBQ Ribs, and Classic American Burger, served with Sweet Potato Fries.'}, {'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 16.0, 'description': 'Our Star-Spangled Apple Pie with a twist of rich caramel drizzle for a unique, indulgent flavor, served with artisanal vanilla bean ice cream.'}, {'id': 18, 'name': "Eagle's Embrace Burger", 'price': 28.0, 'description': "A bold combination of a juicy beef patty, Eagle's special sauce, sharp cheddar cheese, crispy onion rings, and a touch of smoky bacon, topped with a unique pickle relish."}]
+4. Comments
+   [{'day': 6, 'name': 'Hugo', 'score': 8, 'content': "The Liberty Burger was a culinary treat, reflecting the gourmet quality I value, though it could have a more pronounced truffle flavor. The Star-Spangled Apple Pie was enjoyable but lacked a distinctive touch to truly elevate it. While both dishes were good, they didn't quite surpass previous meals at USA Diner."}, {'day': 5, 'name': 'Wade', 'score': 7, 'content': "The Classic American Burger was juicy and met my expectations for a simple meal, but I think the flavor could be richer. The service was decent, though not exceptional. In comparison, USA Diner's clam chowder had a more distinct taste, which I preferred slightly."}, {'day': 5, 'name': 'Max', 'score': 7, 'content': "The modified plant-based Cobb Salad was fresh, though it lacked the depth of flavor I've experienced in previous meals. It's a good option for my dietary needs, but I'd appreciate more inventive plant-based offerings to enhance the meal."}, {'day': 5, 'name': 'Brian', 'score': 7, 'content': 'The Classic American Burger had a robust flavor, earning a good score. However, service could be more attentive. Comparing to my previous experiences, the consistency of the Sweet Potato Fries still needs improvement. A more engaging dining experience could boost the overall satisfaction.'}, {'day': 5, 'name': 'Vicky', 'score': 7, 'content': 'The Classic American Burger and Star-Spangled Apple Pie were satisfying, staying true to my comfort food preferences. However, the burger could have had more dynamic flavors, and the pie, while good, lacked a unique touch. Compared to USA Diner, the experience was cozy but could benefit from a culinary boost.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.90625
+2. Advertisement
+   Excite your palate at USA Diner with our newly refined menu! Indulge in the bolder zest of our California Cobb Salad, the richer cinnamon flavor of our American Apple Pie Deluxe, and the refreshed taste of our Liberty Lemonade. Plus, don't miss our new Seasonal Sensation Salad, bursting with fresh, seasonal ingredients. Come taste the difference today!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 22.0, 'description': 'Crisp greens topped with grilled chicken, avocado, bacon, a bolder zestier house-made dressing, and a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 13.0, 'description': 'Creamy New England-style chowder brimming with clams, potatoes, and a touch of extra seasoning for that perfect flavor.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 16.0, 'description': 'Our classic apple pie with an extra mix of tart and sweet apples, a bolder cinnamon essence, and a buttery crumble topping, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a richer bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 10.0, 'description': 'A refreshing blend of homemade lemonade, a more robust muddled mint, and a splash of blueberry syrup, garnished with a lemon wheel.'}, {'id': 8, 'name': 'Grilled Chicken with Wild Mushroom Sauce', 'price': 21.0, 'description': 'Grilled chicken breast with a complex wild mushroom sauce, infused with herbs and a splash of white wine, served with a side of roasted vegetables.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}]
+4. Comments
+   [{'day': 6, 'name': 'Steve', 'score': 7, 'content': 'The California Cobb Salad was fresh and adhered to my health-conscious diet. However, the dressing lacked the zestiness advertised. A more flavorful dressing could elevate the dish. My previous experiences at American Epicurean Delight were comparable, but the higher score at USA Diner was expected to mean a better taste experience.'}, {'day': 6, 'name': 'Quincy', 'score': 7, 'content': "The California Cobb Salad was decent and aligned with my low-calorie diet, but it didn't excite my taste buds. I remember the food at American Epicurean Delight being more flavorful. Service at USA Diner was good, but I'm looking for a meal that's both healthy and tasty."}, {'day': 6, 'name': 'Dexter', 'score': 8, 'content': 'The Texas BBQ Ribs and American Apple Pie Deluxe at USA Diner were good, with the ribs meeting my barbecue cravings and the pie offering a satisfying sweet finish. However, I believe the flavors could be bolder to make the dishes truly outstanding. Service was friendly but could be more prompt.'}, {'day': 6, 'name': 'Chloe', 'score': 8, 'content': "The California Cobb Salad was fresh, meeting my diabetic needs, though a bit more zest could enhance it. The Liberty Lemonade was appropriately less sweet but could use a hint more flavor. Overall, a good meal but there's room for improvement in the taste department."}, {'day': 6, 'name': 'Umar', 'score': 7, 'content': 'The California Cobb Salad was fresh, catering to my health needs, but could use a zestier dressing. The Boston Clam Chowder was comforting, yet lacked a depth of flavor compared to my past seafood experiences. Overall, a good meal but there’s room for improvement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes" : [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason" : "I've enjoyed the fresh, organic ingredients of the California Cobb Salad before, and I'm eager to try the zestier dressing. The Liberty Lemonade's less sweet taste suits my health-conscious lifestyle."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below :
+
+California Cobb Salad: 0.84
+Liberty Lemonade: 0.75
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "score": 7,
+    "comment": "The California Cobb Salad was fresh, though the new zestier dressing still lacked a bit of punch. The Liberty Lemonade was refreshing but could benefit from a stronger mint flavor. Overall, a pleasant meal, but there's room for flavor enhancement to meet the expectations set by the advertisements."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.0
+2. Advertisement
+   Savor the upgraded classics at American Epicurean Delight! Our Classic American Burger now with a smoky twist, and the refined Patriot's Plate with gourmet sauces. Don't miss our Star-Spangled Caramel Apple Pie paired with homemade cinnamon ice cream. Exceptional taste in every bite!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 20.0, 'description': 'Juicy beef patty with lettuce, tomato, aged cheddar, and our special sauce, now with a hint of smoky flavor'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 29.0, 'description': 'Succulent ribs in a new, improved BBQ sauce with a hint of bourbon, served with coleslaw and sweet potato fries'}, {'id': 15, 'name': 'Liberty Burger', 'price': 28.0, 'description': 'Our Liberty Burger with a richer blend of aged cheddar and black truffle aioli, paired with truffle parmesan fries'}, {'id': 16, 'name': "Patriot's Plate", 'price': 24.0, 'description': 'A refined sampler featuring our best burgers and BBQ ribs, now with gourmet dipping sauces and seasoned sweet potato fries'}, {'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 18.0, 'description': 'Our signature apple pie enhanced with rich caramel and a touch of cinnamon, served with homemade cinnamon ice cream'}, {'id': 18, 'name': "Eagle's Embrace Burger", 'price': 30.0, 'description': "A deluxe burger with a prime beef patty, Eagle's special sauce, aged cheddar, crispy onion rings, and smoky bacon, topped with a unique pickle relish"}]
+4. Comments
+   [{'day': 7, 'name': 'Yara', 'score': 6, 'content': 'While the Vegan BBQ Jackfruit Sliders were adequate, they lacked the creative flair expected from previous visits. The Sweet Potato Fries were satisfactory but not exceptional. American Epicurean Delight has potential for great vegan cuisine, but they need to elevate their game to truly impress.'}, {'day': 7, 'name': 'Quincy', 'score': 6, 'content': "The Patriot's Plate was affordable, yet the flavors didn't meet my expectations for a hearty meal. While it fits my dietary restrictions, the taste was underwhelming compared to past meals at USA Diner, where the food had more zest."}, {'day': 7, 'name': 'Brian', 'score': 7, 'content': "The Classic American Burger was quite enjoyable, scoring well for its taste. The experience, however, lacked a bit in service and the Sweet Potato Fries' consistency could be better. A more attentive service and consistent quality in sides would enhance the overall dining experience."}, {'day': 7, 'name': 'Eve', 'score': 7, 'content': 'The Classic American Burger was hearty, and the Star-Spangled Caramel Apple Pie ended the meal on a high note. However, the burger could use a bit more seasoning. Compared to my previous experiences, the food here is good for the price but could benefit from more flavorful touches.'}, {'day': 6, 'name': 'Hugo', 'score': 8, 'content': "The Liberty Burger was a culinary treat, reflecting the gourmet quality I value, though it could have a more pronounced truffle flavor. The Star-Spangled Apple Pie was enjoyable but lacked a distinctive touch to truly elevate it. While both dishes were good, they didn't quite surpass previous meals at USA Diner."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.87012987012987
+2. Advertisement
+   Discover bold flavors at USA Diner! Savor our enhanced California Cobb Salad with extra bold dressing, dive into a richer seafood experience with our Boston Clam Chowder, and top off your meal with our American Apple Pie Deluxe, now with bolder cinnamon essence. Plus, try our new Freedom Fries Fiesta, a celebration of taste in every bite!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 22.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, and our new extra bold zestier house-made dressing, finished with a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 13.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 16.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, intensified with a bolder cinnamon essence, and a buttery crumble topping, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a richer bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 10.0, 'description': 'Our homemade lemonade now with a stronger muddled mint essence and a splash of blueberry syrup, garnished with a lemon wheel for an invigorating twist.'}, {'id': 8, 'name': 'Grilled Chicken with Wild Mushroom Sauce', 'price': 21.0, 'description': 'Grilled chicken breast with a complex wild mushroom sauce, infused with herbs and a splash of white wine, served with a side of roasted vegetables.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}, {'id': 11, 'name': 'Freedom Fries Fiesta', 'price': 14.0, 'description': 'A patriotic platter of our crispy fries, seasoned with a secret spice mix and served with three house-made dipping sauces for the ultimate flavor experience.'}]
+4. Comments
+   [{'day': 7, 'name': 'Tina', 'score': 8, 'content': "The California Cobb Salad was notably fresh, and the American Apple Pie Deluxe had a pleasing balance of tart and sweet flavors. Though not exceptional, the dishes were satisfying. I recall American Epicurean Delight's offerings to be slightly less memorable in comparison."}, {'day': 7, 'name': 'Ruby', 'score': 8, 'content': "The Patriot's Prime Ribeye was delectably cooked, aligning with my taste for premium meats, while the California Cobb Salad's freshness suited my health-conscious diet. The American Apple Pie Deluxe was a pleasant end, though not innovative. Across the board, a more creative approach could enhance the dining experience."}, {'day': 7, 'name': 'Paula', 'score': 8, 'content': "The California Cobb Salad was refreshingly crisp, albeit needing a zestier kick. The American Apple Pie Deluxe had a lovely sweetness, but the cinnamon could be bolder. While both dishes were good, they didn't quite reach the 'outstanding' level I anticipated from USA Diner's reputation."}, {'day': 7, 'name': 'Lara', 'score': 8, 'content': 'The Boston Clam Chowder was creamy and satisfying, but could benefit from a richer clam flavor. The American Apple Pie Deluxe was a sweet treat, yet a bit more cinnamon could intensify the taste. Overall, a solid dining experience, though not as exceptional as it could be.'}, {'day': 7, 'name': 'Jake', 'score': 7, 'content': 'The California Cobb Salad was reasonably fresh but could benefit from a zestier dressing. The Grilled Chicken with Wild Mushroom Sauce was good, though not exceptional. Both dishes were suitable for my health constraints but lacked a bit in flavor compared to previous visits.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes" : [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason" : "USA Diner's menu appeals to my preference for organic foods with dishes like the California Cobb Salad, and the customer score suggests consistent satisfaction."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below :
+
+California Cobb Salad: 0.84
+Liberty Lemonade: 0.75
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "score": 7,
+    "comment": "The California Cobb Salad's organic ingredients were fresh, though the dressing could be zestier. Liberty Lemonade had a nice minty touch but wasn't exceptional. Enjoyable, but not as remarkable as anticipated."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.032258064516129
+2. Advertisement
+   Discover bold flavors at American Epicurean Delight! Introducing the Great American Steak, American Harvest Veggie Burger, and Southern Comfort Chicken & Waffles. Our beloved Classic American Burger just got better with applewood smoked bacon and a brioche bun. Plus, indulge in our enhanced Star-Spangled Caramel Apple Pie. Join us for an unforgettable dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 22.0, 'description': 'A juicy beef patty with lettuce, tomato, aged cheddar, and our special sauce, now with applewood smoked bacon and a brioche bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 29.0, 'description': 'Succulent ribs in a new, improved BBQ sauce with a hint of bourbon, served with coleslaw and sweet potato fries'}, {'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 20.0, 'description': 'Our signature apple pie with a deeper caramel flavor, flaky crust, and a sprinkle of sea salt, served with premium vanilla bean ice cream.'}, {'id': 19, 'name': 'Great American Steak', 'price': 32.0, 'description': 'A perfectly grilled ribeye steak with a herb-infused butter, served with a side of garlic mashed potatoes and seasonal vegetables.'}, {'id': 20, 'name': 'American Harvest Veggie Burger', 'price': 22.0, 'description': 'A hearty plant-based patty topped with avocado, sprouts, and a zesty sun-dried tomato aioli, served on a whole-grain bun with sweet potato fries.'}, {'id': 21, 'name': 'Southern Comfort Chicken & Waffles', 'price': 26.0, 'description': 'Crispy fried chicken on top of a fluffy Belgian waffle, drizzled with spicy honey and served with a side of buttery maple syrup.'}]
+4. Comments
+   [{'day': 8, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful treat that aligned with my vegan lifestyle. While the Sweet Potato Fries had a satisfying crunch, they lacked a touch of seasoning. Compared to my past experiences, today's meal was good but there's room for improvement in flavor depth."}, {'day': 8, 'name': 'Henry', 'score': 8, 'content': "The Liberty Burger was rich and satisfying, and the BBQ Ribs Platter met my expectations for tenderness and flavor. The Star-Spangled Caramel Apple Pie offered a delightful end to the meal, though it could have featured a stronger caramel note. Overall, a very good dining experience, slightly edged out USA Diner's steak on flavor complexity."}, {'day': 7, 'name': 'Yara', 'score': 6, 'content': 'While the Vegan BBQ Jackfruit Sliders were adequate, they lacked the creative flair expected from previous visits. The Sweet Potato Fries were satisfactory but not exceptional. American Epicurean Delight has potential for great vegan cuisine, but they need to elevate their game to truly impress.'}, {'day': 7, 'name': 'Quincy', 'score': 6, 'content': "The Patriot's Plate was affordable, yet the flavors didn't meet my expectations for a hearty meal. While it fits my dietary restrictions, the taste was underwhelming compared to past meals at USA Diner, where the food had more zest."}, {'day': 7, 'name': 'Brian', 'score': 7, 'content': "The Classic American Burger was quite enjoyable, scoring well for its taste. The experience, however, lacked a bit in service and the Sweet Potato Fries' consistency could be better. A more attentive service and consistent quality in sides would enhance the overall dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.865168539325842
+2. Advertisement
+   Indulge in the all-new American Dream Sundae, only at USA Diner! Plus, enjoy our zestier California Cobb Salad, a richer Boston Clam Chowder, and an even more decadent American Apple Pie Deluxe. Come for the flavors, stay for the memories. Don't miss out – visit us today!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 24.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, our new extra bold zestier house-made dressing, and a sprinkle of artisanal cheese crumbles, finished with a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 15.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs and a hint of smoky bacon.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 18.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, intensified with a bolder cinnamon essence, a buttery crumble topping, and a drizzle of warm caramel, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a richer bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 10.0, 'description': 'Our homemade lemonade now with a stronger muddled mint essence and a splash of blueberry syrup, garnished with a lemon wheel for an invigorating twist.'}, {'id': 8, 'name': 'Grilled Chicken with Wild Mushroom Sauce', 'price': 21.0, 'description': 'Grilled chicken breast with a complex wild mushroom sauce, infused with herbs and a splash of white wine, served with a side of roasted vegetables.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}, {'id': 12, 'name': 'The American Dream Sundae', 'price': 17.0, 'description': 'Layers of warm apple pie filling, cinnamon ice cream, and rich caramel, topped with whipped cream and a cherry, served in a souvenir USA Diner glass.'}]
+4. Comments
+   [{'day': 8, 'name': 'Yara', 'score': 8, 'content': "The Seasonal Sensation Salad was fresh and the light vinaigrette complemented the dish well. It's a good vegan option, but I would have enjoyed a bit more variety in the types of vegetables used. It's a step up from my previous experience at American Epicurean Delight, where the dishes were satisfactory but not as fresh."}, {'day': 8, 'name': 'Xavier', 'score': 8, 'content': 'The Texas BBQ Ribs were tender, with a robust smoky flavor that I enjoyed, and the American Apple Pie Deluxe had a great balance of tartness and sweetness. The Liberty Lemonade was refreshing but could use a bit more punch to stand out. Overall, a satisfying visit, but slight improvements would make it exceptional.'}, {'day': 8, 'name': 'Valerie', 'score': 8, 'content': "The California Cobb Salad had a nice blend of fresh, organic components, only lacking a zestier dressing to elevate it. The New York Strip Steak was very well-prepared, though a hint more seasoning would have perfected it. Both dishes were enjoyable and align with my health-conscious preferences, yet there's room for enhancement."}, {'day': 8, 'name': 'Oscar', 'score': 8, 'content': 'The Stars & Stripes Burger had a robust flavor from the bourbon BBQ sauce, though the pineapple could be more integrated. American Apple Pie Deluxe was comforting, but could use a touch more cinnamon. Overall, a satisfying meal that edges out past experiences at American Epicurean Delight.'}, {'day': 8, 'name': 'Giselle', 'score': 8, 'content': 'The American Apple Pie Deluxe had a good balance of tart and sweet flavors, and the buttery crumble was a creative touch. However, the cinnamon could have been bolder. Compared to past experiences, it was satisfying but not exceptional.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "USA Diner has a higher customer score and offers a California Cobb Salad with organic ingredients that fits my health-conscious diet. The less sweet Liberty Lemonade also aligns with my preference."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.84
+Liberty Lemonade: 0.75
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The freshness and organic quality of the California Cobb Salad were satisfying, and the Liberty Lemonade's reduced sweetness complimented my meal perfectly."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.0
+2. Advertisement
+   Savor the enhanced flavors at American Epicurean Delight! Our American Harvest Veggie Burger now packs a punch with added spices, and we're excited to introduce our new Freedom Trail Chili and Eagle’s Flight Caesar Salad. Come in for a taste of America's best, where every bite is a celebration of flavor!
+3. Menu 
+   [{'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 20.0, 'description': 'Our signature apple pie with a deeper caramel flavor, flaky crust, and a sprinkle of sea salt, served with premium vanilla bean ice cream.'}, {'id': 19, 'name': 'Great American Steak', 'price': 32.0, 'description': 'A perfectly grilled ribeye steak with a herb-infused butter, served with a side of garlic mashed potatoes and seasonal vegetables.'}, {'id': 20, 'name': 'American Harvest Veggie Burger', 'price': 24.0, 'description': 'A hearty plant-based patty with a robust blend of spices, topped with avocado, sprouts, and a zesty sun-dried tomato aioli, served on a whole-grain bun with perfectly crisp sweet potato fries.'}, {'id': 21, 'name': 'Southern Comfort Chicken & Waffles', 'price': 26.0, 'description': 'Crispy fried chicken on top of a fluffy Belgian waffle, drizzled with spicy honey and served with a side of buttery maple syrup.'}, {'id': 22, 'name': 'Freedom Trail Chili', 'price': 18.0, 'description': 'A rich, hearty chili with a mix of beans, ground beef, and a secret blend of spices, topped with shredded cheese and a dollop of sour cream, served with homemade cornbread.'}, {'id': 23, 'name': 'Eagle’s Flight Caesar Salad', 'price': 20.0, 'description': 'Crisp romaine lettuce tossed with our signature Caesar dressing, house-made croutons, shaved Parmesan, and grilled chicken strips, garnished with a sprinkle of bacon bits.'}]
+4. Comments
+   [{'day': 9, 'name': 'Yasmine', 'score': 7, 'content': "The American Harvest Veggie Burger was a good vegan option, though it could benefit from more seasoning to enhance the flavors. While it satisfies health and dietary needs, it doesn't quite match the freshness and vibrancy of dishes like the Seasonal Sensation Salad I previously enjoyed at USA Diner."}, {'day': 9, 'name': 'Katie', 'score': 6, 'content': 'The American Harvest Veggie Burger had a good texture, but it could use more flavorful seasoning. The sweet potato fries lacked consistency in crispness. Overall, an acceptable meal but it falls short compared to previous experiences, particularly the Vegan BBQ Jackfruit Sliders which had more distinct flavors.'}, {'day': 8, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful treat that aligned with my vegan lifestyle. While the Sweet Potato Fries had a satisfying crunch, they lacked a touch of seasoning. Compared to my past experiences, today's meal was good but there's room for improvement in flavor depth."}, {'day': 8, 'name': 'Henry', 'score': 8, 'content': "The Liberty Burger was rich and satisfying, and the BBQ Ribs Platter met my expectations for tenderness and flavor. The Star-Spangled Caramel Apple Pie offered a delightful end to the meal, though it could have featured a stronger caramel note. Overall, a very good dining experience, slightly edged out USA Diner's steak on flavor complexity."}, {'day': 7, 'name': 'Yara', 'score': 6, 'content': 'While the Vegan BBQ Jackfruit Sliders were adequate, they lacked the creative flair expected from previous visits. The Sweet Potato Fries were satisfactory but not exceptional. American Epicurean Delight has potential for great vegan cuisine, but they need to elevate their game to truly impress.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.8686868686868685
+2. Advertisement
+   Experience the burst of fresh flavors at USA Diner with our new Freedom Flavors Feast, featuring a monthly rotating special that will tantalize your taste buds! Plus, savor the enhanced taste of our California Cobb Salad, now zestier, and our American Apple Pie Deluxe, richer with cinnamon. Refresh with our invigorated Liberty Lemonade. Taste the innovation, this month and every month!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 26.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, our new extra bold zestier house-made dressing with an herbaceous punch, and a sprinkle of artisanal cheese crumbles, finished with a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 17.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs and a hint of smoky bacon, with an added touch of sherry.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 20.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, intensified with a bolder cinnamon essence, a buttery streusel topping, and a drizzle of warm caramel, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a richer bourbon BBQ sauce, topped with a star-shaped pineapple slice.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 12.0, 'description': 'Our homemade lemonade now with a stronger muddled mint essence, a splash of blueberry syrup, and a hint of ginger for an invigorating twist, garnished with a lemon wheel.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}, {'id': 12, 'name': 'The American Dream Sundae', 'price': 17.0, 'description': 'Layers of warm apple pie filling, cinnamon ice cream, and rich caramel, topped with whipped cream and a cherry, served in a souvenir USA Diner glass.'}, {'id': 13, 'name': 'Freedom Flavors Feast', 'price': 30.0, 'description': 'A monthly rotating special featuring the freshest, most flavorful ingredients of the season, thoughtfully prepared to delight your taste buds.'}]
+4. Comments
+   [{'day': 9, 'name': 'Max', 'score': 8, 'content': "The California Cobb Salad had a delightful zest, and the Seasonal Sensation Salad was fresh and satisfying. Both dishes complemented my plant-based diet well. While they were good, they didn't quite reach the outstanding mark. A bit more creativity could elevate the overall dining experience."}, {'day': 9, 'name': 'Lara', 'score': 8, 'content': "The Boston Clam Chowder was hearty with a good creaminess, though the clam flavor could be more pronounced. The American Apple Pie Deluxe was enjoyable, but would benefit from a stronger cinnamon presence. Overall, a gratifying meal, but there's room for refinement compared to previous visits."}, {'day': 9, 'name': 'Amelia', 'score': 8, 'content': "The Stars & Stripes Burger was quite good with its rich bourbon BBQ sauce, though the pineapple slice could be better incorporated. The American Apple Pie Deluxe had a pleasing texture, but the cinnamon flavor wasn't as bold as I'd like. The Liberty Lemonade was decently refreshing. Overall, a solid experience with room for improvement."}, {'day': 9, 'name': 'Vicky', 'score': 8, 'content': "USA Diner provided a meal that matched my health and comfort food needs. The Cobb Salad was vibrant and the Apple Pie Deluxe was indulgent. While both were good, I've had slightly more flavorful experiences before. A tad more zest in the salad and spice in the pie would make it perfect."}, {'day': 9, 'name': 'Umar', 'score': 8, 'content': "The California Cobb Salad's freshness met my dietary needs but could benefit from a zestier dressing. The Boston Clam Chowder was hearty and catered to my seafood taste, though it lacked a bit in flavor depth. Overall, a delightful meal, but with slight room for improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "USA Diner's higher customer score and the organic elements of the California Cobb Salad fit my health-conscious diet. The Liberty Lemonade's stronger mint essence suits my preference for less sweet beverages."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.82
+Liberty Lemonade: 0.76
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad's freshness and organic nature were satisfying, and the Liberty Lemonade's minty zest was pleasantly invigorating."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.029411764705882
+2. Advertisement
+   Indulge in the reinvented classics at American Epicurean Delight! Our menu is refined with the Star-Spangled Caramel Apple Pie, bursting with richer caramel, and the Great American Steak, grilled to your definition of perfection. Experience our new Patriotic Prime Rib, a culinary masterpiece. Join us for an unforgettable dining experience where tradition meets excellence.
+3. Menu 
+   [{'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 22.0, 'description': 'Our iconic apple pie with a more pronounced caramel flavor, encased in a perfectly flaky crust, sprinkled with a touch of sea salt, served with a scoop of premium vanilla bean ice cream.'}, {'id': 19, 'name': 'Great American Steak', 'price': 35.0, 'description': 'An exquisite ribeye steak, grilled to perfection, complemented by a savory herb butter, served alongside garlic mashed potatoes and a medley of seasonal vegetables.'}, {'id': 24, 'name': 'Patriotic Prime Rib', 'price': 37.0, 'description': 'A succulent prime rib, seasoned with our secret spice blend and slow-roasted to tender perfection, served with a side of rosemary au jus and horseradish cream.'}]
+4. Comments
+   [{'day': 10, 'name': 'Henry', 'score': 8, 'content': 'The Great American Steak was tender, but lacked a bit of seasoning for my taste. The Star-Spangled Caramel Apple Pie was delightful, though the caramel flavor could be more pronounced. Overall, a satisfying meal but room for improvement compared to previous experiences at USA Diner.'}, {'day': 9, 'name': 'Yasmine', 'score': 7, 'content': "The American Harvest Veggie Burger was a good vegan option, though it could benefit from more seasoning to enhance the flavors. While it satisfies health and dietary needs, it doesn't quite match the freshness and vibrancy of dishes like the Seasonal Sensation Salad I previously enjoyed at USA Diner."}, {'day': 9, 'name': 'Katie', 'score': 6, 'content': 'The American Harvest Veggie Burger had a good texture, but it could use more flavorful seasoning. The sweet potato fries lacked consistency in crispness. Overall, an acceptable meal but it falls short compared to previous experiences, particularly the Vegan BBQ Jackfruit Sliders which had more distinct flavors.'}, {'day': 8, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful treat that aligned with my vegan lifestyle. While the Sweet Potato Fries had a satisfying crunch, they lacked a touch of seasoning. Compared to my past experiences, today's meal was good but there's room for improvement in flavor depth."}, {'day': 8, 'name': 'Henry', 'score': 8, 'content': "The Liberty Burger was rich and satisfying, and the BBQ Ribs Platter met my expectations for tenderness and flavor. The Star-Spangled Caramel Apple Pie offered a delightful end to the meal, though it could have featured a stronger caramel note. Overall, a very good dining experience, slightly edged out USA Diner's steak on flavor complexity."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.882882882882883
+2. Advertisement
+   Indulge in USA Diner's bold new flavors! Our Stars & Stripes Burger now perfectly blends sweet pineapple with savory bourbon BBQ, and our California Cobb Salad is zestier than ever! Sip on the improved Liberty Lemonade, now with a stronger ginger kick. Plus, try our new additions: the Ultimate Grilled Cheese and Wild West Wings. Unforgettable tastes await you!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 28.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, our new extra bold zestier house-made dressing with an herbaceous punch, and a sprinkle of artisanal cheese crumbles, finished with a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 17.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs and a hint of smoky bacon, with an added touch of sherry.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 22.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, intensified with a bolder cinnamon essence, a buttery streusel topping, and a drizzle of warm caramel, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a bolder bourbon BBQ sauce, perfectly integrating a star-shaped pineapple slice for a sweet and savory burst with every bite.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 14.0, 'description': 'Our homemade lemonade now with a stronger muddled mint essence, a splash of blueberry syrup, and a hint of ginger for an invigorating twist, garnished with a lemon wheel.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}, {'id': 14, 'name': 'Ultimate Grilled Cheese', 'price': 18.0, 'description': 'A gourmet twist on the classic, featuring a blend of artisanal cheeses melted between slices of buttery, toasted sourdough bread, accompanied by our house-made tomato basil soup.'}, {'id': 15, 'name': 'Wild West Wings', 'price': 19.0, 'description': 'Juicy chicken wings tossed in our unique smoky-sweet BBQ sauce, served with a side of blue cheese dressing and crisp celery sticks.'}]
+4. Comments
+   [{'day': 10, 'name': 'Yara', 'score': 8, 'content': 'The Seasonal Sensation Salad was vibrant and flavorful, aligning well with my vegan lifestyle. While the salad was fresh, a greater variety of ingredients could enhance it further. Compared to American Epicurean Delight, USA Diner provided a more satisfying fresh meal experience.'}, {'day': 10, 'name': 'Valerie', 'score': 8, 'content': 'The California Cobb Salad was vibrant, yet could use a zestier dressing. The New York Strip Steak had a satisfying flavor, though a touch more seasoning would elevate it. Comparatively, the dishes here met my health-conscious needs better than previous experiences elsewhere, with room for subtle enhancements.'}, {'day': 10, 'name': 'Ruby', 'score': 8, 'content': "The California Cobb Salad was vibrant and the Patriot's Prime Ribeye was cooked to perfection, truly satisfying. However, the American Apple Pie Deluxe, while enjoyable, lacked the innovative flair I anticipated. A more creative approach could further enhance the dining experience."}, {'day': 10, 'name': 'Nora', 'score': 8, 'content': 'The California Cobb Salad was fresh and aligned with my gluten-free diet, though a bit more zest could enhance it. The New York Strip Steak was near perfection, truly satisfying my fine dining preference. However, slightly more creativity could take USA Diner to the next level.'}, {'day': 10, 'name': 'Hugo', 'score': 8, 'content': "The Stars & Stripes Burger was a gourmet highlight, though a stronger bourbon BBQ flavor would've been appreciated. The California Cobb Salad's freshness complemented the meal, yet could use a zestier dressing. The American Apple Pie Deluxe was satisfactory, but a more robust cinnamon infusion would enhance it. Overall, a delightful dining experience with room for subtle improvements."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "USA Diner's higher customer score assures consistent satisfaction, and their California Cobb Salad with organic ingredients suits my health-conscious diet. The improved Liberty Lemonade aligns with my preference for less sweet drinks."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.82
+Liberty Lemonade: 0.77
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad was delightfully fresh with its organic ingredients, and the Liberty Lemonade offered a refreshing, subtly sweet taste that was just right."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.029411764705882
+2. Advertisement
+   Discover the taste of tradition with a twist at American Epicurean Delight! Savor our Star-Spangled Caramel Apple Pie with artisanal cinnamon ice cream, or bite into the Liberty Burger, a new take on a classic. Don't miss our Freedom Fries and refreshing American Dream Soda. Your culinary journey to America's heart starts here!
+3. Menu 
+   [{'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 24.0, 'description': 'Our iconic apple pie with a more pronounced caramel flavor, encased in a perfectly flaky crust, served with a scoop of artisanal cinnamon ice cream.'}, {'id': 19, 'name': 'Great American Steak', 'price': 35.0, 'description': 'An exquisite ribeye steak, grilled to perfection, complemented by a savory herb butter, served alongside garlic mashed potatoes and a medley of seasonal vegetables.'}, {'id': 24, 'name': 'Patriotic Prime Rib', 'price': 37.0, 'description': 'A succulent prime rib, seasoned with our secret spice blend and slow-roasted to tender perfection, served with a side of rosemary au jus and horseradish cream.'}, {'id': 25, 'name': 'Freedom Fries', 'price': 8.0, 'description': 'Crispy golden fries seasoned with our signature spice blend and served with a side of our homemade star-spangled ketchup.'}, {'id': 26, 'name': 'Liberty Burger', 'price': 18.0, 'description': 'A juicy beef patty topped with American cheese, crispy onions, and a tangy liberty sauce, served on a toasted brioche bun with a side of Freedom Fries.'}, {'id': 27, 'name': "Eagle's Nest Salad", 'price': 16.0, 'description': 'A fresh mix of baby spinach, arugula, grilled chicken, dried cranberries, toasted almonds, and goat cheese, tossed with a house-made raspberry vinaigrette.'}, {'id': 28, 'name': 'American Dream Soda', 'price': 6.0, 'description': 'A refreshing and fizzy homemade soda with blueberry and lemon flavors, garnished with fresh mint and a twist of lemon.'}]
+4. Comments
+   [{'day': 10, 'name': 'Henry', 'score': 8, 'content': 'The Great American Steak was tender, but lacked a bit of seasoning for my taste. The Star-Spangled Caramel Apple Pie was delightful, though the caramel flavor could be more pronounced. Overall, a satisfying meal but room for improvement compared to previous experiences at USA Diner.'}, {'day': 9, 'name': 'Yasmine', 'score': 7, 'content': "The American Harvest Veggie Burger was a good vegan option, though it could benefit from more seasoning to enhance the flavors. While it satisfies health and dietary needs, it doesn't quite match the freshness and vibrancy of dishes like the Seasonal Sensation Salad I previously enjoyed at USA Diner."}, {'day': 9, 'name': 'Katie', 'score': 6, 'content': 'The American Harvest Veggie Burger had a good texture, but it could use more flavorful seasoning. The sweet potato fries lacked consistency in crispness. Overall, an acceptable meal but it falls short compared to previous experiences, particularly the Vegan BBQ Jackfruit Sliders which had more distinct flavors.'}, {'day': 8, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful treat that aligned with my vegan lifestyle. While the Sweet Potato Fries had a satisfying crunch, they lacked a touch of seasoning. Compared to my past experiences, today's meal was good but there's room for improvement in flavor depth."}, {'day': 8, 'name': 'Henry', 'score': 8, 'content': "The Liberty Burger was rich and satisfying, and the BBQ Ribs Platter met my expectations for tenderness and flavor. The Star-Spangled Caramel Apple Pie offered a delightful end to the meal, though it could have featured a stronger caramel note. Overall, a very good dining experience, slightly edged out USA Diner's steak on flavor complexity."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.885245901639344
+2. Advertisement
+   Savor the enhanced flavors at USA Diner! Experience our American Apple Pie Deluxe with a bolder cinnamon kick, enjoy our California Cobb Salad with an even zestier dressing, and refresh with our Liberty Lemonade, now zestier with a hint of ginger. Come taste the difference and celebrate America's culinary spirit with us!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 29.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, our new extra bold zestier house-made dressing with an herbaceous punch, and a sprinkle of artisanal cheese crumbles, finished with a hard-boiled egg.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 17.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs and a hint of smoky bacon, with an added touch of sherry.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 23.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, intensified with a bolder cinnamon essence, a buttery streusel topping, and a drizzle of warm caramel, served with premium vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a bolder bourbon BBQ sauce, perfectly integrating a star-shaped pineapple slice for a sweet and savory burst with every bite.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 15.0, 'description': 'Our homemade lemonade now with a stronger muddled mint essence, a splash of blueberry syrup, and a hint of ginger for an invigorating twist, garnished with a lemon wheel.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}, {'id': 14, 'name': 'Ultimate Grilled Cheese', 'price': 18.0, 'description': 'A gourmet twist on the classic, featuring a blend of artisanal cheeses melted between slices of buttery, toasted sourdough bread, accompanied by our house-made tomato basil soup.'}, {'id': 15, 'name': 'Wild West Wings', 'price': 19.0, 'description': 'Juicy chicken wings tossed in our unique smoky-sweet BBQ sauce, served with a side of blue cheese dressing and crisp celery sticks.'}]
+4. Comments
+   [{'day': 11, 'name': 'Steve', 'score': 8, 'content': "The California Cobb Salad was fresh and met my dietary needs, though it lacked the zest promised in the advertisement. While better than American Epicurean Delight's options for my health, a more robust dressing could elevate the salad."}, {'day': 11, 'name': 'Jake', 'score': 7, 'content': 'The California Cobb Salad was fresh and met my health requirements, yet the dressing lacked the bold zest promised in the advertisement. For my taste, a punchier flavor would enhance the experience. It was good but not as remarkable as I hoped, considering my dietary restrictions.'}, {'day': 11, 'name': 'Felix', 'score': 8, 'content': 'The New York Strip Steak was well-prepared, and the American Apple Pie Deluxe had a comforting, homey taste. The Liberty Lemonade was refreshing, albeit could benefit from more zest. Comparatively, the steak and pie here were more flavorful than my past experiences at American Epicurean Delight.'}, {'day': 11, 'name': 'Chloe', 'score': 8, 'content': "The California Cobb Salad was fresh, meeting my dietary needs with its zestier dressing. The Liberty Lemonade was suitably low in sugar but could use a bit more ginger for flavor. A good meal, but there's room for a little more creativity, especially in comparison with previous experiences."}, {'day': 11, 'name': 'Yasmine', 'score': 8, 'content': 'The Seasonal Sensation Salad was fresh and flavorful, aligning with my vegan preferences. While the dish was enjoyable, I would suggest a greater variety of ingredients to enhance its taste and appeal further.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "USA Diner's higher customer score suggests better overall satisfaction. Their California Cobb Salad with organic ingredients suits my health-conscious diet, and the less sweet Liberty Lemonade aligns with my preference for organic food."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.83
+Liberty Lemonade: 0.77
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad's organic ingredients were tasty and healthful, while the Liberty Lemonade offered a refreshing and not overly sweet complement to the meal."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.029411764705882
+2. Advertisement
+   Indulge in bold flavors at American Epicurean Delight! Experience our enhanced Great American Steak and rich Star-Spangled Caramel Apple Pie. Discover our new vegan and gluten-free offerings, Vibrant Vegan Delight and Gluten-Free Gastronomy. Elevate your dining with our signature dishes crafted for diverse tastes!
+3. Menu 
+   [{'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 26.0, 'description': 'Our iconic apple pie with a richer caramel essence, encased in a flaky crust, paired with cinnamon-spiced ice cream.'}, {'id': 19, 'name': 'Great American Steak', 'price': 38.0, 'description': 'A premium ribeye steak, seasoned with a robust spice blend, grilled to your liking, and served with garlic-herb mashed potatoes.'}, {'id': 24, 'name': 'Patriotic Prime Rib', 'price': 37.0, 'description': 'A succulent prime rib, seasoned with our secret spice blend and slow-roasted to tender perfection, served with a side of rosemary au jus and horseradish cream.'}, {'id': 26, 'name': 'Liberty Burger', 'price': 18.0, 'description': 'A juicy beef patty topped with American cheese, crispy onions, and a tangy liberty sauce, served on a toasted brioche bun with a side of Freedom Fries.'}, {'id': 28, 'name': 'American Dream Soda', 'price': 6.0, 'description': 'A refreshing and fizzy homemade soda with blueberry and lemon flavors, garnished with fresh mint and a twist of lemon.'}, {'id': 29, 'name': 'Vibrant Vegan Delight', 'price': 22.0, 'description': 'A colorful assortment of fresh seasonal vegetables, quinoa, and a tangy lemon herb dressing, catering to our vegan patrons.'}, {'id': 30, 'name': 'Gluten-Free Gastronomy', 'price': 24.0, 'description': 'A delectable selection of gluten-free ingredients, featuring grilled chicken, roasted vegetables, and a light balsamic glaze.'}]
+4. Comments
+   [{'day': 10, 'name': 'Henry', 'score': 8, 'content': 'The Great American Steak was tender, but lacked a bit of seasoning for my taste. The Star-Spangled Caramel Apple Pie was delightful, though the caramel flavor could be more pronounced. Overall, a satisfying meal but room for improvement compared to previous experiences at USA Diner.'}, {'day': 9, 'name': 'Yasmine', 'score': 7, 'content': "The American Harvest Veggie Burger was a good vegan option, though it could benefit from more seasoning to enhance the flavors. While it satisfies health and dietary needs, it doesn't quite match the freshness and vibrancy of dishes like the Seasonal Sensation Salad I previously enjoyed at USA Diner."}, {'day': 9, 'name': 'Katie', 'score': 6, 'content': 'The American Harvest Veggie Burger had a good texture, but it could use more flavorful seasoning. The sweet potato fries lacked consistency in crispness. Overall, an acceptable meal but it falls short compared to previous experiences, particularly the Vegan BBQ Jackfruit Sliders which had more distinct flavors.'}, {'day': 8, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful treat that aligned with my vegan lifestyle. While the Sweet Potato Fries had a satisfying crunch, they lacked a touch of seasoning. Compared to my past experiences, today's meal was good but there's room for improvement in flavor depth."}, {'day': 8, 'name': 'Henry', 'score': 8, 'content': "The Liberty Burger was rich and satisfying, and the BBQ Ribs Platter met my expectations for tenderness and flavor. The Star-Spangled Caramel Apple Pie offered a delightful end to the meal, though it could have featured a stronger caramel note. Overall, a very good dining experience, slightly edged out USA Diner's steak on flavor complexity."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.865671641791045
+2. Advertisement
+   Discover bold flavors at USA Diner with our revamped California Cobb Salad, now zestier and topped with tangy blue cheese for an added kick! Indulge in our American Apple Pie Deluxe, richer with a robust cinnamon infusion and premium cinnamon ice cream. Plus, try our new Harvest Veggie Delight for a fresh, plant-based option. Taste the freshness, relish the zest!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 32.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, our new extra bold house-made dressing with an herbaceous punch, artisanal cheese crumbles, finished with a hard-boiled egg, and a sprinkle of tangy blue cheese for added zest.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 17.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs and a hint of smoky bacon, with an added touch of sherry.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 25.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, heightened with a bolder cinnamon essence, a buttery streusel topping, and a generous drizzle of warm caramel, served with a scoop of premium cinnamon-infused vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 23.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a bolder bourbon BBQ sauce, perfectly integrating a star-shaped pineapple slice for a sweet and savory burst with every bite.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 15.0, 'description': 'Our homemade lemonade now with a stronger muddled mint essence, a splash of blueberry syrup, and a hint of ginger for an invigorating twist, garnished with a lemon wheel.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}, {'id': 15, 'name': 'Wild West Wings', 'price': 19.0, 'description': 'Juicy chicken wings tossed in our unique smoky-sweet BBQ sauce, served with a side of blue cheese dressing and crisp celery sticks.'}, {'id': 16, 'name': 'Harvest Veggie Delight', 'price': 22.0, 'description': 'A hearty plant-based patty made from our unique blend of vegetables and grains, served on a whole grain bun with a vibrant avocado spread, pickled red onion, and a side of sweet potato fries.'}]
+4. Comments
+   [{'day': 12, 'name': 'Yara', 'score': 8, 'content': 'The Seasonal Sensation Salad had a good balance of freshness and flavor, aligning with my vegan diet. An 8 score reflects its quality, though a broader variety of vegetables would enhance the dish. It still outshines American Epicurean Delight in terms of freshness and dietary suitability.'}, {'day': 12, 'name': 'Nora', 'score': 8, 'content': 'The California Cobb Salad was fresh, satisfying my gluten-free needs, but could use more zest. The New York Strip Steak was delicious, aligning with my fine dining preferences. Overall, an enjoyable experience, though not quite exceptional. A touch more creativity could enhance the dishes.'}, {'day': 12, 'name': 'Max', 'score': 8, 'content': 'The salads at USA Diner, especially the California Cobb Salad, were fresh and aligned with my plant-based diet, though they could benefit from more creative flavors. The zestiness was enjoyable, but a bit more boldness could elevate the experience compared to my previous dining experiences.'}, {'day': 12, 'name': 'Lara', 'score': 8, 'content': 'The Boston Clam Chowder had a lovely creaminess and the seafood flavor was satisfying, aligning with my seafood preference. The American Apple Pie Deluxe had a good balance of sweetness with a hint of cinnamon, a delightful finish. While both dishes were good, they could be enhanced for a perfect score.'}, {'day': 12, 'name': 'Amelia', 'score': 8, 'content': "The Stars & Stripes Burger was flavorful, with the pineapple adding a unique touch, though I'd prefer a better integration of it. The American Apple Pie Deluxe was quite satisfying, but I expected a stronger cinnamon note. Liberty Lemonade was good but fell short on the promised ginger zest. A hearty meal overall."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "USA Diner's menu features the California Cobb Salad with organic ingredients, catering to my preference for organic food. The higher customer score indicates consistent satisfaction, aligning with my optimistic outlook."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below :
+
+California Cobb Salad: 0.83
+Liberty Lemonade: 0.77
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "score": 8,
+    "comment": "The California Cobb Salad's organic ingredients were quite fresh, aligning with my health preferences, but I expected more zest. The Liberty Lemonade was refreshing, although the ginger zest wasn't as strong as advertised. Good meal, but there's room for improvement in flavor strength."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.029411764705882
+2. Advertisement
+   Join us at American Epicurean Delight for a taste of innovation! Delight in our revamped Star-Spangled Caramel Apple Pie, savor the upgraded Great American Steak, and welcome our new American Pioneer Pancakes. With fresh vegan and gluten-free options, there's something extraordinary for everyone!
+3. Menu 
+   [{'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 30.0, 'description': 'Our iconic apple pie, now with an even richer homemade caramel essence, encased in a perfectly flaky crust, served with a scoop of hand-churned cinnamon-spiced ice cream.'}, {'id': 19, 'name': 'Great American Steak', 'price': 42.0, 'description': 'A premium hand-selected ribeye steak, expertly seasoned with a signature spice blend, grilled to your precise preference, and served with a side of creamy garlic-herb mashed potatoes and seasonal vegetables.'}, {'id': 24, 'name': 'Patriotic Prime Rib', 'price': 37.0, 'description': 'A succulent prime rib, seasoned with our secret spice blend and slow-roasted to tender perfection, served with a side of rosemary au jus and horseradish cream.'}, {'id': 26, 'name': 'Liberty Burger', 'price': 20.0, 'description': 'Our classic all-American beef patty, topped with aged cheddar, crispy artisanal bacon, and our signature liberty sauce, nestled in a fresh brioche bun and accompanied by a heap of golden Freedom Fries.'}, {'id': 28, 'name': 'American Dream Soda', 'price': 6.0, 'description': 'A refreshing and fizzy homemade soda with blueberry and lemon flavors, garnished with fresh mint and a twist of lemon.'}, {'id': 29, 'name': 'Vibrant Vegan Delight', 'price': 24.0, 'description': "A rainbow of fresh, locally-sourced vegetables, perfectly paired with organic quinoa and dressed in a zesty lemon herb vinaigrette, celebrating the best of nature's produce."}, {'id': 30, 'name': 'Gluten-Free Gastronomy', 'price': 26.0, 'description': 'A thoughtful curation of gluten-free ingredients, this dish offers tender grilled chicken, an array of roasted seasonal vegetables, and is finished with a drizzle of aged balsamic reduction.'}, {'id': 31, 'name': 'American Pioneer Pancakes', 'price': 16.0, 'description': 'Fluffy, golden-brown pancakes crafted from heirloom grains, served with pure maple syrup, a dollop of whipped cream, and a side of fresh mixed berries.'}]
+4. Comments
+   [{'day': 10, 'name': 'Henry', 'score': 8, 'content': 'The Great American Steak was tender, but lacked a bit of seasoning for my taste. The Star-Spangled Caramel Apple Pie was delightful, though the caramel flavor could be more pronounced. Overall, a satisfying meal but room for improvement compared to previous experiences at USA Diner.'}, {'day': 9, 'name': 'Yasmine', 'score': 7, 'content': "The American Harvest Veggie Burger was a good vegan option, though it could benefit from more seasoning to enhance the flavors. While it satisfies health and dietary needs, it doesn't quite match the freshness and vibrancy of dishes like the Seasonal Sensation Salad I previously enjoyed at USA Diner."}, {'day': 9, 'name': 'Katie', 'score': 6, 'content': 'The American Harvest Veggie Burger had a good texture, but it could use more flavorful seasoning. The sweet potato fries lacked consistency in crispness. Overall, an acceptable meal but it falls short compared to previous experiences, particularly the Vegan BBQ Jackfruit Sliders which had more distinct flavors.'}, {'day': 8, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful treat that aligned with my vegan lifestyle. While the Sweet Potato Fries had a satisfying crunch, they lacked a touch of seasoning. Compared to my past experiences, today's meal was good but there's room for improvement in flavor depth."}, {'day': 8, 'name': 'Henry', 'score': 8, 'content': "The Liberty Burger was rich and satisfying, and the BBQ Ribs Platter met my expectations for tenderness and flavor. The Star-Spangled Caramel Apple Pie offered a delightful end to the meal, though it could have featured a stronger caramel note. Overall, a very good dining experience, slightly edged out USA Diner's steak on flavor complexity."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.878378378378378
+2. Advertisement
+   Experience the boldness at USA Diner! Our California Cobb Salad bursts with even more zest, and the American Apple Pie Deluxe is now richer with cinnamon. Enjoy the perfectly balanced Stars & Stripes Burger and refresh yourself with our stronger Liberty Lemonade. Come for the flavors, stay for the satisfaction!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 27.5, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 34.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, our new extra bold house-made dressing with an even more herbaceous punch, artisanal cheese crumbles, finished with a hard-boiled egg, and a dusting of tangy blue cheese for added zest.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 17.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs and a hint of smoky bacon, with an added touch of sherry.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 27.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, heightened with an even bolder cinnamon essence, a buttery streusel topping, and a generous drizzle of warm caramel, served with a scoop of premium cinnamon-infused vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 25.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a richer bourbon BBQ sauce, perfectly integrating a star-shaped pineapple slice for a sweet and savory burst with every bite.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 17.0, 'description': 'Our homemade lemonade now with a bolder muddled mint essence, a splash of blueberry syrup, and a stronger hint of ginger for an invigorating twist, garnished with a lemon wheel.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 31.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 20.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}, {'id': 15, 'name': 'Wild West Wings', 'price': 19.0, 'description': 'Juicy chicken wings tossed in our unique smoky-sweet BBQ sauce, served with a side of blue cheese dressing and crisp celery sticks.'}]
+4. Comments
+   [{'day': 13, 'name': 'Wade', 'score': 8, 'content': 'The Boston Clam Chowder was hearty but could use a stronger clam flavor. The American Apple Pie Deluxe was delightful, with a nice balance of sweetness and texture. Both dishes were comforting and within my budget, aligning with my simple tastes. A satisfying meal overall.'}, {'day': 13, 'name': 'Valerie', 'score': 8, 'content': 'The California Cobb Salad was exceptionally fresh, though the dressing could have been zestier. The New York Strip Steak was a highlight, perfectly cooked and flavorful. While both dishes were enjoyable, a touch more boldness in seasoning could further elevate the experience, surpassing past dining encounters.'}, {'day': 13, 'name': 'Paula', 'score': 8, 'content': "The California Cobb Salad was fresh with a nice zest, but could use more bold flavors. The American Apple Pie Deluxe was enjoyable, though a stronger cinnamon profile would be preferred. Both dishes were good, but I've had slightly better experiences with the freshness at this diner in the past."}, {'day': 13, 'name': 'Max', 'score': 8, 'content': "The USA Diner's salads were quite good, with the California Cobb Salad offering a nice zest. However, both salads could reach new heights with a bit more creativity in flavor. They stood out compared to American Epicurean Delight for their fresh, plant-based focus."}, {'day': 13, 'name': 'Hugo', 'score': 8, 'content': 'The Stars & Stripes Burger was robust in flavor, though more integration of the pineapple would be ideal. The California Cobb Salad lacked a bit of the promised bold dressing. The American Apple Pie Deluxe was enjoyable but could benefit from a stronger cinnamon profile. Overall, a satisfying experience with room for improvement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "USA Diner's menu features organic elements and their customer score is higher, suggesting consistent quality and customer satisfaction which align with my optimistic personality."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.85
+Liberty Lemonade: 0.78
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad was refreshing with its organic ingredients, and the Liberty Lemonade had a pleasant, not-too-sweet taste."
+}
+
+[System->Emma]: The Restaurant " American Epicurean Delight "information as below:
+1. Customer Score: 7.0285714285714285
+2. Advertisement
+   Excite your palate with bold flavors and innovative creations at American Epicurean Delight! Try our new bourbon-infused Star-Spangled Caramel Apple Pie and the daring Freedom Fusion Burger, plus the Great American Steak with a unique coffee-cocoa crust. Adventure awaits in every bite!
+3. Menu 
+   [{'id': 17, 'name': 'Star-Spangled Caramel Apple Pie', 'price': 32.0, 'description': 'Our iconic apple pie, now with an even richer homemade caramel sauce, infused with a hint of bourbon, encased in a perfectly flaky crust, served with a scoop of hand-churned cinnamon-spiced ice cream.'}, {'id': 19, 'name': 'Great American Steak', 'price': 45.0, 'description': 'A premium hand-selected ribeye steak, now featuring a unique coffee-cocoa crust, expertly seasoned, grilled to your precise preference, and served with a side of creamy garlic-herb mashed potatoes and seasonal vegetables.'}, {'id': 24, 'name': 'Patriotic Prime Rib', 'price': 37.0, 'description': 'A succulent prime rib, seasoned with our secret spice blend and slow-roasted to tender perfection, served with a side of rosemary au jus and horseradish cream.'}, {'id': 28, 'name': 'American Dream Soda', 'price': 6.0, 'description': 'A refreshing and fizzy homemade soda with blueberry and lemon flavors, garnished with fresh mint and a twist of lemon.'}, {'id': 29, 'name': 'Vibrant Vegan Delight', 'price': 24.0, 'description': "A rainbow of fresh, locally-sourced vegetables, perfectly paired with organic quinoa and dressed in a zesty lemon herb vinaigrette, celebrating the best of nature's produce."}, {'id': 30, 'name': 'Gluten-Free Gastronomy', 'price': 26.0, 'description': 'A thoughtful curation of gluten-free ingredients, this dish offers tender grilled chicken, an array of roasted seasonal vegetables, and is finished with a drizzle of aged balsamic reduction.'}, {'id': 31, 'name': 'American Pioneer Pancakes', 'price': 16.0, 'description': 'Fluffy, golden-brown pancakes crafted from heirloom grains, served with pure maple syrup, a dollop of whipped cream, and a side of fresh mixed berries.'}, {'id': 32, 'name': 'Freedom Fusion Burger', 'price': 28.0, 'description': 'A daring blend of flavors, this burger features a beef patty infused with smoky BBQ pulled pork, topped with crispy onion rings and a tangy apple coleslaw, encased in a toasted brioche bun.'}]
+4. Comments
+   [{'day': 14, 'name': 'Ruby', 'score': 7, 'content': "The Star-Spangled Caramel Apple Pie had a welcoming twist, but the caramel was underwhelming. The Great American Steak was well-cooked, yet it lacked the seasoning depth I relish. The American Pioneer Pancakes were satisfactory, but not remarkable. Overall, a decent experience, but USA Diner's prime ribeye still holds my preference for its flavors."}, {'day': 10, 'name': 'Henry', 'score': 8, 'content': 'The Great American Steak was tender, but lacked a bit of seasoning for my taste. The Star-Spangled Caramel Apple Pie was delightful, though the caramel flavor could be more pronounced. Overall, a satisfying meal but room for improvement compared to previous experiences at USA Diner.'}, {'day': 9, 'name': 'Yasmine', 'score': 7, 'content': "The American Harvest Veggie Burger was a good vegan option, though it could benefit from more seasoning to enhance the flavors. While it satisfies health and dietary needs, it doesn't quite match the freshness and vibrancy of dishes like the Seasonal Sensation Salad I previously enjoyed at USA Diner."}, {'day': 9, 'name': 'Katie', 'score': 6, 'content': 'The American Harvest Veggie Burger had a good texture, but it could use more flavorful seasoning. The sweet potato fries lacked consistency in crispness. Overall, an acceptable meal but it falls short compared to previous experiences, particularly the Vegan BBQ Jackfruit Sliders which had more distinct flavors.'}, {'day': 8, 'name': 'Katie', 'score': 7, 'content': "The Vegan BBQ Jackfruit Sliders were a delightful treat that aligned with my vegan lifestyle. While the Sweet Potato Fries had a satisfying crunch, they lacked a touch of seasoning. Compared to my past experiences, today's meal was good but there's room for improvement in flavor depth."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: The Restaurant " USA Diner "information as below:
+1. Customer Score: 7.881987577639752
+2. Advertisement
+   Discover the enhanced flavors at USA Diner! Indulge in our New York Strip Steak and California Cobb Salad with more boldness in every bite. Savor the improved taste of our signature Stars & Stripes Burger and the sweet richness of our American Apple Pie Deluxe. Refresh with our invigorated Liberty Lemonade. Quality dining redefined!
+3. Menu 
+   [{'id': 1, 'name': 'New York Strip Steak', 'price': 29.0, 'description': 'Grilled to perfection, served with garlic butter and a side of mashed potatoes.'}, {'id': 2, 'name': 'California Cobb Salad', 'price': 36.0, 'description': 'Crisp greens topped with succulent grilled chicken, avocado, bacon, our new extra bold house-made dressing with an even more herbaceous punch, artisanal cheese crumbles, finished with a hard-boiled egg, and a dusting of tangy blue cheese for added zest.'}, {'id': 3, 'name': 'Texas BBQ Ribs', 'price': 27.0, 'description': 'Tender ribs smothered in our signature BBQ sauce, now with a touch of smoky flavor, served with coleslaw and fries.'}, {'id': 4, 'name': 'Boston Clam Chowder', 'price': 17.0, 'description': 'Our creamy New England-style chowder now with a richer seafood broth, brimming with clams, potatoes, and a savory blend of herbs and a hint of smoky bacon, with an added touch of sherry.'}, {'id': 5, 'name': 'American Apple Pie Deluxe', 'price': 29.0, 'description': 'Our classic apple pie with a generous mix of tart and sweet apples, heightened with an even bolder cinnamon essence, a buttery streusel topping, and a generous drizzle of warm caramel, served with a scoop of premium cinnamon-infused vanilla ice cream.'}, {'id': 6, 'name': 'Stars & Stripes Burger', 'price': 27.0, 'description': 'Our signature beef patty with blue cheese, crispy bacon, and a richer bourbon BBQ sauce, perfectly integrating a star-shaped pineapple slice for a sweet and savory burst with every bite.'}, {'id': 7, 'name': 'Liberty Lemonade', 'price': 19.0, 'description': 'Our homemade lemonade now with a bolder muddled mint essence, a splash of blueberry syrup, and a stronger hint of ginger for an invigorating twist, garnished with a lemon wheel.'}, {'id': 9, 'name': "Patriot's Prime Ribeye", 'price': 33.0, 'description': 'A succulent, perfectly seasoned ribeye steak with enhanced seasoning, served with a side of garlic herb butter and fresh garden vegetables.'}, {'id': 10, 'name': 'Seasonal Sensation Salad', 'price': 22.0, 'description': 'A vibrant mix of seasonal vegetables and fruits, tossed with a light, herby vinaigrette, topped with toasted seeds.'}]
+4. Comments
+   [{'day': 14, 'name': 'Lara', 'score': 8, 'content': 'The Boston Clam Chowder was creamy with a decent seafood flavor, but could benefit from a more pronounced clam taste. The American Apple Pie Deluxe had a nice cinnamon kick, though the overall flavors could be more pronounced for perfection. A solid meal, but not without room for improvement.'}, {'day': 14, 'name': 'Jake', 'score': 7, 'content': 'The California Cobb Salad was fresh, aligning with my health needs, but the dressing lacked the punch I expected. It was a good meal, but could be improved with a bolder flavor to fully satisfy my preferences.'}, {'day': 14, 'name': 'Hugo', 'score': 8, 'content': "The Stars & Stripes Burger was a culinary delight, with perfect gourmet quality. The California Cobb Salad was fresh, though the dressing lacked the boldness I crave. The American Apple Pie Deluxe was good, but the cinnamon could be stronger. Compared to American Epicurean Delight, USA Diner's burger is more innovative, aligning with my gourmet tastes."}, {'day': 14, 'name': 'Chloe', 'score': 8, 'content': "The California Cobb Salad was aptly suited for my dietary needs, though it could benefit from a bolder dressing to truly excel. The Liberty Lemonade was refreshing with its reduced sugar content, aligning well with my diabetic condition. An enjoyable meal overall, but I'd welcome more adventurous flavors next time."}, {'day': 14, 'name': 'Brian', 'score': 8, 'content': 'The Texas BBQ Ribs had a fantastic smoky flavor that lived up to my street food expectations, and the American Apple Pie Deluxe was rich with cinnamon, making for a comforting end to the meal. Still, the ribs could be a touch more tender, and the pie even more flavorful.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Emma]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "dishes": [
+        "California Cobb Salad", "Liberty Lemonade"
+    ],
+    "reason": "I appreciate USA Diner's use of organic ingredients, as seen in their California Cobb Salad, which aligns with my health-conscious and organic food preferences. The customer score is higher, indicating better satisfaction which suits my optimistic nature."
+}
+
+[System->Emma]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+California Cobb Salad: 0.85
+Liberty Lemonade: 0.76
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Emma->all]: {
+    "restaurant": "USA Diner",
+    "feeling": "The California Cobb Salad had a great mix of fresh, organic ingredients, and the Liberty Lemonade was refreshing, though I wished it was a bit zestier."
+}
+

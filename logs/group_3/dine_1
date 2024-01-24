@@ -1,0 +1,894 @@
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the authentic taste of America right here in town! Join us at American Aroma for classic delights like our juicy burgers, tender BBQ ribs, and heavenly cheesecakes. Your next meal could be your best yet!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Caesar Salad', 'price': 9.0, 'description': 'Crisp romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese.'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 7.0, 'description': 'Creamy cheesecake with a graham cracker crust, served with a berry compote.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Classic macaroni in a rich, creamy cheese sauce, topped with breadcrumbs.'}, {'id': 7, 'name': 'Apple Pie', 'price': 6.0, 'description': 'Traditional apple pie with a flaky crust, served with vanilla ice cream.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 13.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 9, 'name': 'Clam Chowder', 'price': 8.0, 'description': 'Creamy New England clam chowder served with oyster crackers.'}, {'id': 10, 'name': 'Iced Tea', 'price': 3.0, 'description': 'Refreshing iced tea brewed from premium tea leaves, served with lemon.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the new taste of tradition at Stars & Stripes Diner! Our signature dishes now feature premium ingredients for a truly American feast. Join us for a dining experience where quality meets comfort. Bring this ad for a 10% discount on our upgraded 'Taste of America' combo meal!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 12.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Tender pork ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens topped with chicken, avocado, bacon, blue cheese, and a hard-boiled egg with your choice of dressing.'}, {'id': 6, 'name': 'Milkshake Trio', 'price': 9.0, 'description': 'A sampling of chocolate, vanilla, and strawberry milkshakes, perfect for sharing or indulging alone.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "dishes": [
+        "Cobb Salad"
+    ],
+    "reason": "Chose for the Cobb Salad without chicken, bacon, egg, and cheese, aligning with my vegan diet. The 10% discount offer also suits my limited budget better."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Cobb Salad: 0.76
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "score": 7,
+    "comment": "The modified vegan Cobb Salad was enjoyable, but lacked the variety I hoped for. A greater selection of vegan options would be appreciated. The discount was a welcome bonus for my budget."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Discover bold flavors and new favorites at American Aroma! Our revamped menu features high-quality ingredients in dishes like the upscale Classic American Burger, succulent BBQ Ribs, and the new signature Southern Fried Chicken. Indulge in American classics perfected just for you!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and cornbread.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 11.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Classic macaroni in a rich, creamy cheese sauce, topped with breadcrumbs.'}, {'id': 7, 'name': 'Apple Pie', 'price': 8.0, 'description': 'Traditional apple pie with a flaky crust, served with vanilla ice cream.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 13.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 10, 'name': 'Iced Tea', 'price': 3.0, 'description': 'Refreshing iced tea brewed from premium tea leaves, served with lemon.'}, {'id': 11, 'name': 'Southern Fried Chicken', 'price': 16.0, 'description': 'Crispy fried chicken served with homemade gravy and mashed potatoes.'}]
+4. Comments
+   [{'day': 1, 'name': 'Jake', 'score': 5, 'content': "The dishes at American Aroma were fair, with average flavors that didn't stand out. The meal was satisfactory overall, but the restaurant didn't meet our expectations for bold and vibrant tastes."}, {'day': 1, 'name': 'Frank', 'score': 8, 'content': 'American Aroma provided a satisfying dining experience with commendable vegan options. The Caesar Salad, dairy-free Mac & Cheese, and Apple Pie were all hits, each earning high praise and an average score of 8 from the group.'}, {'day': 1, 'name': 'Wade', 'score': 5, 'content': 'Our meal was just fair, with all dishes lacking the expected flavors. The Clam Chowder, Caesar Salad, Mac & Cheese, and Apple Pie all fell short of our hopes. Perhaps a different choice would have provided a more satisfying experience.'}, {'day': 1, 'name': 'Nate', 'score': 5, 'content': 'The family found the meal at American Aroma to be average, with expectations for comfort food not fully met. Dishes were fair but lacked the desired flavor intensity.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.75
+2. Advertisement
+   Experience bold flavors at Stars & Stripes Diner with our new Spicy Cajun Pasta and Southwest Veggie Burger! Enjoy the richness of American cuisine with a twist. Mention this ad for a 10% discount on these new additions!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 12.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Tender pork ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens topped with chicken, avocado, bacon, blue cheese, and a hard-boiled egg with your choice of dressing.'}, {'id': 6, 'name': 'Milkshake Trio', 'price': 9.0, 'description': 'A sampling of chocolate, vanilla, and strawberry milkshakes, perfect for sharing or indulging alone.'}, {'id': 7, 'name': 'Spicy Cajun Pasta', 'price': 15.0, 'description': 'Al dente pasta with a creamy Cajun sauce, sautéed peppers, onions, and succulent pieces of chicken, topped with Parmesan cheese.'}, {'id': 8, 'name': 'Southwest Veggie Burger', 'price': 13.0, 'description': 'A hearty black bean patty with corn, avocado, lettuce, and tomato, served with a tangy lime-cilantro mayo on a whole wheat bun.'}]
+4. Comments
+   [{'day': 1, 'name': 'Amelia', 'score': 8, 'content': 'The Stars & Stripes Diner provided a variety of flavorful dishes, catering to our diverse tastes. The atmosphere was welcoming, and the service excellent. A memorable dining experience that satisfied our cravings and offered great value.'}, {'day': 1, 'name': 'Grace', 'score': 8, 'content': 'The meal at Stars & Stripes Diner was enjoyable with fresh salads, flavorful burgers, and well-prepared wings. The apple pie concluded our dining experience on a sweet note. Overall, a pleasing meal for both health-conscious and indulgent preferences.'}, {'day': 1, 'name': 'Olivia', 'score': 8, 'content': 'Stars & Stripes Diner offered a satisfying dining experience, with well-executed dishes catering to our tastes. The accommodation for dietary restrictions was appreciated, enhancing our enjoyment of the flavorful Cheeseburger and refreshing Cobb Salad.'}, {'day': 1, 'name': 'Max', 'score': 8, 'content': "Both the Classic Cheeseburger and Milkshake Trio were hits. The diner's willingness to customize the Cobb Salad for a plant-based option was appreciated, enhancing our dining experience."}, {'day': 1, 'name': 'Maggie', 'score': 8, 'content': "The meal at Stars & Stripes Diner was a delightful experience that blended Maggie's sweet tooth with Valerie's health-conscious preferences. The dishes scored high on flavor and quality, offering both comfort and a touch of indulgence."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "dishes": [
+        "Southwest Veggie Burger"
+    ],
+    "reason": "The Southwest Veggie Burger aligns with my vegan diet and the diner's high customer score suggests better service and food quality."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Southwest Veggie Burger: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "feeling": "The Southwest Veggie Burger was delicious and satisfying, perfectly aligning with my vegan preferences. I'm pleased with the quality and service."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Taste the local difference at American Aroma! Enjoy competitive prices on your favorite dishes like our Classic American Burger and BBQ Ribs. Plus, try our new Farm-to-Table Salad with freshly sourced ingredients. Limited time offer: Local Craft Beer at $4 only!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 17.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and cornbread.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Classic macaroni in a rich, creamy cheese sauce, topped with breadcrumbs.'}, {'id': 7, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Traditional apple pie with a flaky crust, served with vanilla ice cream.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 12.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 10, 'name': 'Iced Tea', 'price': 3.0, 'description': 'Refreshing iced tea brewed from premium tea leaves, served with lemon.'}, {'id': 11, 'name': 'Southern Fried Chicken', 'price': 16.0, 'description': 'Crispy fried chicken served with homemade gravy and mashed potatoes.'}, {'id': 12, 'name': 'Local Craft Beer', 'price': 5.0, 'description': 'A selection of the finest local craft beers, showcasing the best of regional brewing.'}, {'id': 13, 'name': 'Farm-to-Table Salad', 'price': 11.0, 'description': 'A fresh salad made with locally sourced, seasonal produce, served with a homemade dressing.'}]
+4. Comments
+   [{'day': 1, 'name': 'Jake', 'score': 5, 'content': "The dishes at American Aroma were fair, with average flavors that didn't stand out. The meal was satisfactory overall, but the restaurant didn't meet our expectations for bold and vibrant tastes."}, {'day': 1, 'name': 'Frank', 'score': 8, 'content': 'American Aroma provided a satisfying dining experience with commendable vegan options. The Caesar Salad, dairy-free Mac & Cheese, and Apple Pie were all hits, each earning high praise and an average score of 8 from the group.'}, {'day': 1, 'name': 'Wade', 'score': 5, 'content': 'Our meal was just fair, with all dishes lacking the expected flavors. The Clam Chowder, Caesar Salad, Mac & Cheese, and Apple Pie all fell short of our hopes. Perhaps a different choice would have provided a more satisfying experience.'}, {'day': 1, 'name': 'Nate', 'score': 5, 'content': 'The family found the meal at American Aroma to be average, with expectations for comfort food not fully met. Dishes were fair but lacked the desired flavor intensity.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.705882352941177
+2. Advertisement
+   Indulge in our new Red Velvet Cheesecake and enjoy the fresh, bold flavors of our updated Cobb Salad! Visit Stars & Stripes Diner for a taste of innovation. Mention this ad for a special dessert offer!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 13.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 19.0, 'description': 'Tender pork ribs smothered in our house BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 15.0, 'description': 'Fresh greens topped with chicken, avocado, bacon, and a hard-boiled egg with our new bold house dressing.'}, {'id': 6, 'name': 'Milkshake Trio', 'price': 9.0, 'description': 'A sampling of chocolate, vanilla, and strawberry milkshakes, perfect for sharing or indulging alone.'}, {'id': 7, 'name': 'Spicy Cajun Pasta', 'price': 15.0, 'description': 'Al dente pasta with a creamy Cajun sauce, sautéed peppers, onions, and succulent pieces of chicken, topped with Parmesan cheese.'}, {'id': 8, 'name': 'Southwest Veggie Burger', 'price': 13.0, 'description': 'A hearty black bean patty with corn, avocado, lettuce, and tomato, served with a tangy lime-cilantro mayo on a whole wheat bun.'}, {'id': 9, 'name': 'Red Velvet Cheesecake', 'price': 9.0, 'description': 'Decadent red velvet cheesecake with a silky cream cheese frosting, garnished with fresh berries.'}]
+4. Comments
+   [{'day': 2, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes Diner provided a satisfying meal for our diverse tastes and dietary needs, with good flavors and reasonable portions. Service was accommodating, making it a pleasant dining experience overall.'}, {'day': 2, 'name': 'Amelia', 'score': 8, 'content': 'Consistently good dishes with the Classic Cheeseburger being a highlight. Excellent meal in a comfortable setting with friends.'}, {'day': 2, 'name': 'Grace', 'score': 8, 'content': 'Stars & Stripes Diner provided a satisfying balance of health-conscious and indulgent options, with commendable accommodation for dietary needs. Fresh, flavorful dishes like the Cobb Salad and Spicy Cajun Pasta, alongside sweet treats like the Milkshake Trio and Apple Pie à la Mode, made for a delightful meal.'}, {'day': 2, 'name': 'Olivia', 'score': 7, 'content': 'Consistently good across all dishes, with particularly noteworthy fresh salads and desserts. The diner maintains high standards in both flavor and service.'}, {'day': 2, 'name': 'Max', 'score': 6, 'content': 'The dairy-free Mac & Cheese was a fair attempt that satisfied our dietary needs but lacked a standout flavor profile.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "dishes": [
+        "Southwest Veggie Burger"
+    ],
+    "reason": "Opting again for the Southwest Veggie Burger due to its vegan ingredients and previous satisfying experience. The higher customer score reaffirms my choice for consistent quality and service."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Southwest Veggie Burger: 0.76
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "feeling": "The Southwest Veggie Burger was once again a delightful choice, maintaining the high standards of taste and quality that I've come to appreciate from this diner."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 6.714285714285714
+2. Advertisement
+   Discover American Aroma's fresh, local flavors! Our new Local Delight Burger and Seasonal Berry Crumble are must-tries. Enjoy our signature BBQ Ribs and Southern Fried Chicken at better prices. Join our loyalty program for exclusive deals!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and cornbread.'}, {'id': 5, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 7, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Traditional apple pie with a flaky crust, served with vanilla ice cream.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 12.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 11, 'name': 'Southern Fried Chicken', 'price': 15.0, 'description': 'Crispy fried chicken served with homemade gravy and mashed potatoes.'}, {'id': 12, 'name': 'Local Craft Beer', 'price': 5.0, 'description': 'A selection of the finest local craft beers, showcasing the best of regional brewing.'}, {'id': 13, 'name': 'Farm-to-Table Salad', 'price': 10.0, 'description': 'A fresh salad made with locally sourced, seasonal produce, served with a homemade dressing.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 14.0, 'description': 'Grass-fed local beef patty, organic lettuce, heirloom tomato, house sauce, served with sweet potato fries.'}, {'id': 15, 'name': 'Seasonal Berry Crumble', 'price': 8.0, 'description': 'Warm berry crumble made with seasonal fruits, topped with a scoop of local artisanal ice cream.'}]
+4. Comments
+   [{'day': 3, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma delivered a very good dining experience with a tasty and diverse menu. The freshness of the Farm-to-Table Salad and the flavorsome meats left us satisfied. A delightful visit that matched our adventurous expectations.'}, {'day': 3, 'name': 'Max', 'score': 8, 'content': 'American Aroma provided a satisfying experience with fresh, flavorful options like the Farm-to-Table Salad. The customized Classic American Burger was a hit, and the Apple Pie ended our meal on a sweet note.'}, {'day': 3, 'name': 'Dexter', 'score': 8, 'content': 'American Aroma impressed with its BBQ Ribs and consistently good dishes. A culinary adventure that paid off with fresh, flavorful experiences.'}, {'day': 1, 'name': 'Jake', 'score': 5, 'content': "The dishes at American Aroma were fair, with average flavors that didn't stand out. The meal was satisfactory overall, but the restaurant didn't meet our expectations for bold and vibrant tastes."}, {'day': 1, 'name': 'Frank', 'score': 8, 'content': 'American Aroma provided a satisfying dining experience with commendable vegan options. The Caesar Salad, dairy-free Mac & Cheese, and Apple Pie were all hits, each earning high praise and an average score of 8 from the group.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.73469387755102
+2. Advertisement
+   Come taste the difference with our new American Super Salad and improved BBQ Ribs Platter! Fresh, bold flavors await at Stars & Stripes Diner. Bring this ad for 10% off your first Super Salad!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 13.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Slow-cooked pork ribs with a new improved smoky BBQ sauce, served with coleslaw, cornbread, and a side of pickles.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 15.0, 'description': 'Fresh greens topped with chicken, avocado, bacon, and a hard-boiled egg with our new bold house dressing.'}, {'id': 6, 'name': 'Milkshake Trio', 'price': 9.0, 'description': 'A sampling of chocolate, vanilla, and strawberry milkshakes, perfect for sharing or indulging alone.'}, {'id': 7, 'name': 'Spicy Cajun Pasta', 'price': 16.0, 'description': 'Perfectly cooked pasta tossed in a rich, spicy Cajun sauce with andouille sausage, shrimp, bell peppers, and topped with fresh herbs.'}, {'id': 8, 'name': 'Southwest Veggie Burger', 'price': 13.0, 'description': 'A hearty black bean patty with corn, avocado, lettuce, and tomato, served with a tangy lime-cilantro mayo on a whole wheat bun.'}, {'id': 9, 'name': 'Red Velvet Cheesecake', 'price': 9.0, 'description': 'Decadent red velvet cheesecake with a silky cream cheese frosting, garnished with fresh berries.'}, {'id': 10, 'name': 'American Super Salad', 'price': 14.0, 'description': 'A vibrant mix of kale, spinach, avocado, quinoa, cherry tomatoes, grilled chicken, and a lemon vinaigrette.'}]
+4. Comments
+   [{'day': 3, 'name': 'Jake', 'score': 8, 'content': 'The diner delivered on taste and variety, catering well to our health and flavor preferences. Standouts were the Buffalo Chicken Wings and Classic Cheeseburger, with the Milkshake Trio rounding off a satisfying meal.'}, {'day': 3, 'name': 'Grace', 'score': 8, 'content': 'Stars & Stripes Diner offered a delightful dining experience with a variety of well-prepared dishes that catered to our tastes and dietary needs. The service was excellent, contributing to a thoroughly enjoyable meal.'}, {'day': 3, 'name': 'Olivia', 'score': 8, 'content': 'Another satisfying visit to Stars & Stripes Diner, with the Classic Cheeseburger being a highlight. Fresh salads and delectable desserts continue to make our dining experiences enjoyable.'}, {'day': 3, 'name': 'Maggie', 'score': 8, 'content': 'Consistently good dishes with a balance of health-conscious and indulgent options. Stars & Stripes Diner delivers on taste and quality.'}, {'day': 3, 'name': 'Nora', 'score': 8, 'content': 'The Spicy Cajun Pasta and Red Velvet Cheesecake at Stars & Stripes Diner were both hits, offering the right balance of spice, comfort, and sweetness. Another enjoyable dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "dishes": [
+        "Southwest Veggie Burger"
+    ],
+    "reason": "Given my vegan diet, the Southwest Veggie Burger at Stars & Stripes Diner remains the best option. The diner's high customer score suggests a continued positive experience with both food and service."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Southwest Veggie Burger: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "Stars & Stripes Diner",
+    "feeling": "The Southwest Veggie Burger was outstanding, definitely aligning with my vegan lifestyle and tastes. The service was excellent, making the dining experience truly enjoyable."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.470588235294118
+2. Advertisement
+   Come taste the freshness at American Aroma with our new Vegan American Burger and Plant-Powered Protein Bowl! Enjoy our commitment to local produce and indulge in favorites like our Farm-to-Table Salad. Sign up for our loyalty program for more delicious deals!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and cornbread.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 13.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 11, 'name': 'Southern Fried Chicken', 'price': 16.0, 'description': 'Crispy fried chicken served with homemade gravy and mashed potatoes.'}, {'id': 12, 'name': 'Local Craft Beer', 'price': 6.0, 'description': 'A selection of the finest local craft beers, showcasing the best of regional brewing.'}, {'id': 13, 'name': 'Farm-to-Table Salad', 'price': 11.0, 'description': 'A fresh salad made with locally sourced, seasonal produce, served with a homemade dressing.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 15.0, 'description': 'Grass-fed local beef patty, organic lettuce, heirloom tomato, house sauce, served with sweet potato fries.'}, {'id': 15, 'name': 'Seasonal Berry Crumble', 'price': 9.0, 'description': 'Warm berry crumble made with seasonal fruits, topped with a scoop of local artisanal ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 13.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 12.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing.'}]
+4. Comments
+   [{'day': 4, 'name': 'Jake', 'score': 8, 'content': 'American Aroma surpassed expectations with fresh, flavorful options like the Farm-to-Table Salad, Southern Fried Chicken, and BBQ Ribs. Balanced seasoning and the loyalty program added value, making for a unanimously positive experience.'}, {'day': 4, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma offered a delightful dining experience with fresh, flavorful dishes like the Farm-to-Table Salad and the Local Delight Burger. The Grilled Chicken Sandwich and Seasonal Berry Crumble rounded off a satisfying meal.'}, {'day': 4, 'name': 'Olivia', 'score': 8, 'content': 'American Aroma impressed with their Farm-to-Table Salad and Seasonal Berry Crumble, both showcasing freshness and taste. The restaurant catered well to our health and dietary preferences.'}, {'day': 4, 'name': 'Maggie', 'score': 8, 'content': 'American Aroma provided a consistent and delightful dining experience with an emphasis on fresh, local ingredients. All dishes, from the healthy Farm-to-Table Salad to the indulgent Seasonal Berry Crumble, were satisfying and well-executed.'}, {'day': 4, 'name': 'Tara', 'score': 8, 'content': 'American Aroma delivered a delightful dining experience with their emphasis on fresh, locally sourced ingredients. The Local Delight Burger, Farm-to-Table Salad, and Seasonal Berry Crumble were all appreciated for their freshness and flavor. A solid choice for quality and taste.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.754385964912281
+2. Advertisement
+   Discover Stars & Stripes Diner's fresh take with our 'Local Flavors' specials! Savor the locally sourced Classic Cheeseburger, American Super Salad, and more. Plus, join our loyalty program for exclusive perks. Taste the local difference today!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 13.0, 'description': 'A juicy local beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun. Featuring locally sourced ingredients.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 20.0, 'description': 'Slow-cooked pork ribs with a new improved smoky BBQ sauce, served with coleslaw, cornbread, and a side of pickles.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic American apple pie with a new flakier crust topped with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 15.0, 'description': 'Fresh greens topped with local chicken, avocado, bacon, and a hard-boiled egg with our new bold house dressing.'}, {'id': 6, 'name': 'Milkshake Trio', 'price': 9.0, 'description': 'A sampling of chocolate, vanilla, and strawberry milkshakes, perfect for sharing or indulging alone.'}, {'id': 7, 'name': 'Spicy Cajun Pasta', 'price': 16.0, 'description': 'Perfectly cooked pasta tossed in a rich, spicy Cajun sauce with andouille sausage, shrimp, bell peppers, and topped with fresh herbs.'}, {'id': 8, 'name': 'Southwest Veggie Burger', 'price': 13.0, 'description': 'A hearty black bean patty with corn, avocado, lettuce, and tomato, served with a tangy lime-cilantro mayo on a whole wheat bun.'}, {'id': 9, 'name': 'Red Velvet Cheesecake', 'price': 9.0, 'description': 'Decadent red velvet cheesecake with a silky cream cheese frosting, garnished with fresh berries.'}, {'id': 10, 'name': 'American Super Salad', 'price': 14.0, 'description': 'A vibrant mix of kale, spinach, avocado, quinoa, cherry tomatoes, grilled chicken, and a lemon vinaigrette. Now with locally sourced produce.'}]
+4. Comments
+   [{'day': 4, 'name': 'Grace', 'score': 8, 'content': 'A delightful mix of healthy and indulgent dishes that catered to dietary needs without compromising on flavor. Consistent quality across the board.'}, {'day': 4, 'name': 'Max', 'score': 8, 'content': 'Both the Southwest Veggie Burger and the American Super Salad satisfied our plant-based preferences, offering balanced flavors and fresh ingredients. Consistent with past experiences, the diner provided a meal that was both delicious and budget-conscious.'}, {'day': 4, 'name': 'Nora', 'score': 8, 'content': 'A very good dining experience with standout dishes like the Classic Cheeseburger. Spicy Cajun Pasta slightly underperformed, but overall satisfaction remained high.'}, {'day': 4, 'name': 'Frank', 'score': 8, 'content': 'Stars & Stripes Diner provided a delightful experience with a variety of well-received dishes. The fresh American Super Salad, succulent BBQ Ribs, and comforting desserts were notable highlights.'}, {'day': 4, 'name': 'Nate', 'score': 8, 'content': 'The BBQ Ribs Platter was consistently satisfying across visits, and the American Super Salad impressed with its freshness and healthiness, complementing the ribs perfectly.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger",
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma has introduced new vegan options like the Vegan American Burger and Plant-Powered Protein Bowl, which cater to my dietary needs. The loyalty program is a bonus for future savings."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan American Burger: 0.75
+Plant-Powered Protein Bowl: 0.75
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Vegan American Burger and the Plant-Powered Protein Bowl were both delectable and fulfilling, perfectly aligning with my vegan lifestyle. The service was commendable and added to the positive dining experience."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.612903225806452
+2. Advertisement
+   Savor the enhanced flavors at American Aroma! Our revamped menu features higher-quality ingredients for richer tastes in every bite. Try our smoky BBQ Ribs and new Smoky Mountain Chili. Join our loyalty program for exclusive offers and taste the difference quality makes!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our house BBQ sauce, served with coleslaw and cornbread.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 11, 'name': 'Southern Fried Chicken', 'price': 17.0, 'description': 'Crispy fried chicken served with homemade gravy and mashed potatoes.'}, {'id': 12, 'name': 'Local Craft Beer', 'price': 6.0, 'description': 'A selection of the finest local craft beers, showcasing the best of regional brewing.'}, {'id': 13, 'name': 'Farm-to-Table Salad', 'price': 12.0, 'description': 'A fresh salad made with locally sourced, seasonal produce, served with a homemade dressing.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 16.0, 'description': 'Grass-fed local beef patty, organic lettuce, heirloom tomato, house sauce, served with sweet potato fries.'}, {'id': 15, 'name': 'Seasonal Berry Crumble', 'price': 10.0, 'description': 'Warm berry crumble made with seasonal fruits, topped with a scoop of local artisanal ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 14.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 13.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing.'}, {'id': 18, 'name': 'Smoky Mountain Chili', 'price': 12.0, 'description': 'Robust beef and bean chili with a smoky flavor, topped with cheddar cheese and served with corn chips.'}]
+4. Comments
+   [{'day': 5, 'name': 'Jake', 'score': 8, 'content': 'All dishes at American Aroma met our diverse preferences with a good balance of flavor and health-conscious choices. The BBQ Ribs, Southern Fried Chicken, and Seasonal Berry Crumble were standouts, and the fresh salad and craft beer perfectly complemented the meal.'}, {'day': 5, 'name': 'Olivia', 'score': 8, 'content': "American Aroma provided a delightful experience with their fresh, health-conscious offerings. Each dish was enjoyed for its freshness and flavor, reflecting the restaurant's commitment to quality."}, {'day': 5, 'name': 'Max', 'score': 8, 'content': 'American Aroma provided a fulfilling plant-based meal. The Vegan American Burger, Plant-Powered Protein Bowl, and Farm-to-Table Salad all scored a 7.5, reflecting fresh ingredients and satisfying flavors that catered well to our dietary preferences.'}, {'day': 5, 'name': 'Maggie', 'score': 8, 'content': 'American Aroma impressed us with the freshness and flavors of their health-conscious dishes. The Vegan American Burger was a pleasant surprise, and the Seasonal Berry Crumble perfectly catered to a sweet craving, rounding out a satisfying dining experience.'}, {'day': 5, 'name': 'Nora', 'score': 8, 'content': 'American Aroma offered a consistently good dining experience with fresh, flavorful dishes. The Vegan American Burger and Plant-Powered Protein Bowl were standout dishes for their healthful and satisfying qualities.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.774193548387097
+2. Advertisement
+   Introducing the new 'Stars & Stripes Fusion Bowl' at Stars & Stripes Diner! Customize your bowl with fresh, local ingredients for a healthy, flavorful experience. Enjoy 10% off on this new delight for a limited time. Don't forget our loyalty rewards - your ticket to great savings and exclusive offers!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 12.0, 'description': 'A juicy local beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun. Featuring locally sourced ingredients.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Slow-cooked pork ribs with a new improved smoky BBQ sauce, served with coleslaw, cornbread, and a side of pickles.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 10.0, 'description': 'Spicy buffalo wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie à la Mode', 'price': 8.0, 'description': 'Classic American apple pie with a new flakier crust topped with a scoop of vanilla ice cream.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Fresh greens topped with local chicken, avocado, bacon, and a hard-boiled egg with our new bold house dressing.'}, {'id': 7, 'name': 'Spicy Cajun Pasta', 'price': 16.0, 'description': 'Perfectly cooked pasta tossed in a rich, spicy Cajun sauce with andouille sausage, shrimp, bell peppers, and topped with fresh herbs.'}, {'id': 8, 'name': 'Southwest Veggie Power Burger', 'price': 12.0, 'description': 'A plant-powered black bean patty with corn, avocado, lettuce, and tomato, served with a tangy lime-cilantro mayo on a whole wheat bun. Now featuring more local, organic ingredients.'}, {'id': 9, 'name': 'Red Velvet Cheesecake', 'price': 9.0, 'description': 'Decadent red velvet cheesecake with a silky cream cheese frosting, garnished with fresh berries.'}, {'id': 11, 'name': 'Stars & Stripes Fusion Bowl', 'price': 14.0, 'description': 'Customizable bowl with a base of quinoa or mixed greens, choice of grilled chicken, tofu, or black beans, and an assortment of fresh toppings with house-made dressings.'}]
+4. Comments
+   [{'day': 5, 'name': 'Amelia', 'score': 8, 'content': 'Stars & Stripes Diner consistently pleased with dishes hitting the mark on taste and quality. The Spicy Cajun Pasta, American Super Salad, and Southwest Veggie Burger all garnered favorable scores, reflecting a successful dining experience.'}, {'day': 5, 'name': 'Grace', 'score': 8, 'content': 'Consistent quality and fresh taste were the hallmarks of this visit to Stars & Stripes Diner. The salads were vibrant, and the veggie burger and apple pie maintained their excellent standards. Overall, a very satisfying meal.'}, {'day': 5, 'name': 'Frank', 'score': 8, 'content': "A cohesive meal with each dish meeting or surpassing expectations. The BBQ Ribs were exceptional, while the vegan options and dessert satisfied all palates. Accommodating and delicious, a testament to Stars & Stripes Diner's consistent quality."}, {'day': 5, 'name': 'Wade', 'score': 8, 'content': 'Consistently good experience with fresh, flavorful dishes. Classic Cheeseburger remains a favorite. The Apple Pie and salads were satisfying, and the Spicy Cajun Pasta was a pleasant seafood inclusion.'}, {'day': 5, 'name': 'Leo', 'score': 8, 'content': "The Spicy Cajun Pasta offered a delightful heat and the Classic Cheeseburger was cooked to juicy perfection. The Apple Pie à la Mode was a harmonious blend of textures and temperatures, and the Milkshake Trio provided a sweet ending to the meal. While enjoyable, none of the dishes had that exceptional 'wow' factor."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger", 
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma offers a variety of vegan options like the Vegan American Burger and Plant-Powered Protein Bowl, catering to my vegan diet. The loyalty program also aligns with my financial interests."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan American Burger: 0.81
+Plant-Powered Protein Bowl: 0.82
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Vegan American Burger was delightfully savory and the Plant-Powered Protein Bowl was both nutritious and flavorful. A great meal that suited my vegan lifestyle perfectly."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.7073170731707314
+2. Advertisement
+   Discover your perfect meal with our new American Fusion Bowl - endlessly customizable for your taste! Enjoy our Local Delight Burger with hand-cut fries and relish the freshness in our updated Farm-to-Table Salad. Indulge in our redefined BBQ Ribs and Southern Fried Chicken. Freshness and flavor at American Aroma – where every bite is a delight!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Succulent ribs with an improved recipe for our house BBQ sauce, served with a side of garlic mashed potatoes and seasoned vegetables.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 11, 'name': 'Southern Fried Chicken', 'price': 17.0, 'description': 'Our classic fried chicken, now with a special blend of herbs and spices, served with buttered corn on the cob and coleslaw.'}, {'id': 13, 'name': 'Farm-to-Table Salad', 'price': 12.0, 'description': 'An array of the freshest local produce, served with our new signature dressing and house-baked croutons.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 16.0, 'description': 'Our signature local beef patty with a new savory sauce, organic greens, and heirloom tomato, served with hand-cut fries.'}, {'id': 15, 'name': 'Seasonal Berry Crumble', 'price': 10.0, 'description': 'Our beloved crumble with a new twist: a mix of seasonal berries and a crisper topping, served with homemade cinnamon ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 14.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 13.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing.'}, {'id': 18, 'name': 'Smoky Mountain Chili', 'price': 12.0, 'description': 'Robust beef and bean chili with a smoky flavor, topped with cheddar cheese and served with corn chips.'}, {'id': 19, 'name': 'American Fusion Bowl', 'price': 15.0, 'description': 'A customizable bowl with your choice of protein, fresh local vegetables, and a variety of house-made sauces, served over quinoa or mixed greens.'}]
+4. Comments
+   [{'day': 6, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma provided a variety of fresh, flavorful dishes. The Farm-to-Table Salad impressed with its freshness, the Smoky Mountain Chili and BBQ Ribs were satisfying, and the dessert ended the meal on a sweet note. Room for improvement remains, but a solid choice overall.'}, {'day': 6, 'name': 'Grace', 'score': 8, 'content': 'American Aroma impressed with its quality and flavor, offering health-conscious dishes without sacrificing taste. The Smoky Mountain Chili and Farm-to-Table Salad were standout selections, and the Seasonal Berry Crumble was a delightful low-sugar dessert. The Vegan American Burger and Local Craft Beer rounded out a satisfying meal.'}, {'day': 6, 'name': 'Olivia', 'score': 8, 'content': 'Enjoyable meal with fresh ingredients and satisfying flavors. Salad and crumble were highlights, while the chili was slightly less impressive.'}, {'day': 6, 'name': 'Max', 'score': 8, 'content': 'Both the Vegan American Burger and Plant-Powered Protein Bowl were fresh and flavorful, scoring 8.1 and 8.2 respectively. The Seasonal Berry Crumble ended the meal on a high note with a score of 8.2. American Aroma upheld its commitment to quality.'}, {'day': 6, 'name': 'Maggie', 'score': 8, 'content': 'American Aroma delivered an exceptionally satisfying experience with fresh, quality dishes. The Farm-to-Table Salad and Seasonal Berry Crumble were highlights, and even the Vegan American Burger and Smoky Mountain Chili impressed. A consistent delight for our tastebuds.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.797101449275362
+2. Advertisement
+   Come taste the local difference at Stars & Stripes Diner! Our new 'Local Delight Burger' features the finest ingredients from local farms. Pair it with our hand-picked apple pie for a true American feast. Check in weekly for exciting specials and remember to join our loyalty program for exclusive offers!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 11.0, 'description': 'Our signature local beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun. Always a favorite.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Slow-cooked pork ribs with a new improved smoky BBQ sauce, served with coleslaw, cornbread, and a side of pickles.'}, {'id': 4, 'name': 'Apple Pie à la Mode', 'price': 7.0, 'description': 'Our classic American apple pie made with hand-picked local apples, served warm with a scoop of premium vanilla ice cream.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A bed of crisp lettuce topped with grilled chicken, avocado, bacon, egg, and our new zesty house dressing.'}, {'id': 7, 'name': 'Spicy Cajun Pasta', 'price': 15.0, 'description': 'A hearty serving of pasta with a spicier Cajun sauce, andouille sausage, shrimp, bell peppers, and a sprinkle of fresh herbs. For those who like it hot.'}, {'id': 8, 'name': 'Southwest Veggie Power Burger', 'price': 11.0, 'description': 'Our popular black bean patty with an even more flavorful blend of corn, avocado, lettuce, and tomato, served with a zesty lime-cilantro mayo on a whole wheat bun.'}, {'id': 9, 'name': 'Red Velvet Cheesecake', 'price': 8.0, 'description': 'Luxurious red velvet cheesecake with an even creamier frosting, fresh seasonal berries, and a hint of citrus zest.'}, {'id': 11, 'name': 'Stars & Stripes Fusion Bowl', 'price': 13.0, 'description': 'Create your own bowl with a base of quinoa or mixed greens, grilled chicken, tofu, or black beans, and a variety of fresh, local toppings with house-made dressings.'}, {'id': 12, 'name': 'Local Delight Burger', 'price': 15.0, 'description': 'A mouthwatering beef patty from local farms with organic heirloom tomatoes, artisanal cheese, and a special house sauce, served with a side of sweet potato fries.'}]
+4. Comments
+   [{'day': 6, 'name': 'Jake', 'score': 8, 'content': "The dishes at Stars & Stripes Diner impressed us with their balance of flavor and healthiness. The customizable Fusion Bowl and flavorful Southwest Veggie Burger met Jake's dietary needs without compromising taste. The Spicy Cajun Pasta and Classic Cheeseburger were particularly outstanding."}, {'day': 6, 'name': 'Frank', 'score': 8, 'content': 'The group enjoyed another visit to Stars & Stripes Diner, with the BBQ Ribs Platter and the Cobb Salad receiving high praise. The Apple Pie à la Mode was a delightful end to the meal, and the Fusion Bowl, while good, lacked a bit of excitement.'}, {'day': 6, 'name': 'Dexter', 'score': 8, 'content': 'Stars & Stripes Diner satisfied again with their BBQ Ribs Platter and innovative Fusion Bowl. The Veggie Burger and Apple Pie à la Mode were hits, while the Spicy Cajun Pasta brought a welcomed kick to our meal.'}, {'day': 6, 'name': 'Wade', 'score': 8, 'content': 'The Classic Cheeseburger remains a group favorite, consistently scoring high. Apple Pie à la Mode and Cobb Salad were enjoyed by all for their freshness. The Spicy Cajun Pasta was good but lacked the expected spice level. Overall, a very good dining experience.'}, {'day': 6, 'name': 'Nate', 'score': 8, 'content': 'Consistently satisfying with the BBQ Ribs and Fusion Bowl scoring highly. The fresh Cobb Salad and tasty Veggie Burger rounded out a great family meal. Stars & Stripes Diner remains a favorite for its good value and delicious options.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger",
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma offers a variety of vegan options that fit my dietary needs, and its loyalty program is beneficial for my financial situation."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan American Burger: 0.83
+Plant-Powered Protein Bowl: 0.84
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Vegan American Burger and Plant-Powered Protein Bowl were both exceptional. The flavors were robust and satisfying, perfectly complementing my vegan diet."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.901960784313726
+2. Advertisement
+   Experience the extraordinary with our American Aroma Special Fusion Bowl! Savor our Signature Seasonal Berry Crumble and delight in our Deluxe Classic American Burger. Discover the freshness of our American Aroma Exclusive Salad. Every dish crafted with premium local ingredients for the discerning palate. Visit American Aroma for an unforgettable dining journey!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 15.0, 'description': 'A deluxe beef patty with premium toppings including aged cheddar, crisp lettuce, heirloom tomato, and our exclusive sauce, served with gourmet fries.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 23.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables.'}, {'id': 8, 'name': 'Grilled Chicken Sandwich', 'price': 14.0, 'description': 'Grilled chicken breast with avocado, bacon, and honey mustard, served on a toasted bun.'}, {'id': 13, 'name': 'Farm-to-Table Salad', 'price': 12.0, 'description': 'An array of the freshest local produce, served with our new signature dressing and house-baked croutons.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 16.0, 'description': 'Our signature local beef patty with a new savory sauce, organic greens, and heirloom tomato, served with hand-cut fries.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 12.0, 'description': 'A delightful mix of the finest seasonal berries with our signature crisper topping, accompanied by artisanal homemade cinnamon ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 14.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 13.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing.'}, {'id': 18, 'name': 'Smoky Mountain Chili', 'price': 12.0, 'description': 'Robust beef and bean chili with a smoky flavor, topped with cheddar cheese and served with corn chips.'}, {'id': 19, 'name': 'American Aroma Special Fusion Bowl', 'price': 18.0, 'description': 'Our premium bowl with your choice of top-quality protein, organic local vegetables, and unique house-made sauces, served over gourmet quinoa or mixed greens.'}, {'id': 20, 'name': 'American Aroma Exclusive Salad', 'price': 14.0, 'description': 'An exquisite selection of the freshest local greens and vegetables, tossed with a luxurious, homemade dressing and topped with gourmet croutons.'}]
+4. Comments
+   [{'day': 7, 'name': 'Amelia', 'score': 9, 'content': 'The meal at American Aroma exceeded our expectations with its customizable American Fusion Bowl and the freshness of the Farm-to-Table Salad. The BBQ Ribs and Seasonal Berry Crumble were indulgent and balanced. A delightful dining experience that satisfied our diverse tastes.'}, {'day': 7, 'name': 'Grace', 'score': 9, 'content': 'American Aroma delivered an exceptional dining experience with fresh, flavorful dishes satisfying diverse tastes and dietary needs. Highly recommended.'}, {'day': 7, 'name': 'Olivia', 'score': 9, 'content': 'American Aroma excelled with fresh, high-quality ingredients, offering a delightful variety that catered to our dietary preferences and Mediterranean taste.'}, {'day': 7, 'name': 'Maggie', 'score': 9, 'content': 'American Aroma impressed with quality and taste. Fusion Bowl and Plant-Powered Bowl were highlights. The Berry Crumble was outstanding, and the freshness of the salad and burger rounded out a near-perfect dining experience.'}, {'day': 7, 'name': 'Nora', 'score': 9, 'content': 'American Aroma delivered an exquisite dining experience with a blend of health-conscious and satisfying dishes, all while catering to our dietary needs.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.740259740259741
+2. Advertisement
+   Discover fresh flavors at Stars & Stripes Diner with our new American Local Fusion Bowl - customize it with local, seasonal ingredients for a healthy feast! Also introducing our dairy-free apple pie option. First-timers get 10% off!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 11.0, 'description': 'Our signature local beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun. Always a favorite.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Slow-cooked pork ribs with a new improved smoky BBQ sauce, served with coleslaw, cornbread, and a side of pickles.'}, {'id': 4, 'name': 'Apple Pie à la Mode (Dairy-Free Option)', 'price': 8.0, 'description': 'Our classic American apple pie made with local apples, now available with a dairy-free ice cream option for our vegan and lactose-intolerant friends.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A bed of crisp lettuce topped with grilled chicken, avocado, bacon, egg, and our new zesty house dressing.'}, {'id': 8, 'name': 'Southwest Veggie Power Burger', 'price': 11.0, 'description': 'Our popular black bean patty with an even more flavorful blend of corn, avocado, lettuce, and tomato, served with a zesty lime-cilantro mayo on a whole wheat bun.'}, {'id': 11, 'name': 'American Local Fusion Bowl', 'price': 14.0, 'description': 'Our new signature dish! A customizable, healthy option using fresh local ingredients with your choice of protein, served over quinoa or mixed greens.'}, {'id': 12, 'name': 'Local Delight Burger', 'price': 15.0, 'description': 'A mouthwatering beef patty from local farms with organic heirloom tomatoes, artisanal cheese, and a special house sauce, served with a side of sweet potato fries.'}, {'id': 13, 'name': 'Healthy American Quinoa Salad', 'price': 12.0, 'description': 'A nutritious and delicious blend of quinoa, fresh local veggies, and a zesty lemon-herb dressing, designed for health-conscious diners.'}]
+4. Comments
+   [{'day': 7, 'name': 'Jake', 'score': 7, 'content': 'The diner provides fair options for various tastes and dietary needs, but some dishes could benefit from enhanced flavor profiles.'}, {'day': 7, 'name': 'Max', 'score': 7, 'content': 'The dining experience at Stars & Stripes Diner met our plant-based and budget-friendly needs. Both the Southwest Veggie Power Burger and Apple Pie à la Mode scored 7.1, offering a satisfying and consistent quality that aligns with our health-conscious choices.'}, {'day': 7, 'name': 'Yasmine', 'score': 8, 'content': 'Stars & Stripes Diner provided a satisfying experience with the Southwest Veggie Power Burger and Classic Cheeseburger standing out. Desserts ended the meal on a high note, despite a less impressive cheesecake. Good value and taste overall.'}, {'day': 7, 'name': 'Dexter', 'score': 7, 'content': 'The BBQ Ribs Platter and Local Delight Burger were highlights. Apple Pie à la Mode was pleasurable, but Fusion Bowl and Spicy Cajun Pasta need refinement for a truly adventurous palate.'}, {'day': 7, 'name': 'Nate', 'score': 8, 'content': 'Once more, Stars & Stripes Diner delivered a satisfying meal. The BBQ Ribs Platter remained a group favorite, and the Local Delight Burger showcased quality local produce. The Cobb Salad added a fresh touch, while the Apple Pie à la Mode ended things on a sweet note.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger", 
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma's variety in vegan options like the Vegan American Burger and Plant-Powered Protein Bowl align with my compassionate lifestyle. The loyalty program also suits my financial situation."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan American Burger: 0.83
+Plant-Powered Protein Bowl: 0.84
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Vegan American Burger was exquisitely flavorful, and the Plant-Powered Protein Bowl was both hearty and delicious, perfectly suiting my vegan preferences."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.907692307692308
+2. Advertisement
+   Indulge in bold flavors with our Enhanced Farm-to-Table Salad and Ultimate American Fusion Bowl! Don't miss our Weekly Special, a unique culinary delight each week. Fresh, local, and innovative - American Aroma is your destination for an extraordinary dining experience. Join us and taste the difference!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 15.0, 'description': 'A deluxe beef patty with premium toppings including aged cheddar, crisp lettuce, heirloom tomato, and our exclusive sauce, served with gourmet fries.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 23.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables.'}, {'id': 13, 'name': 'Enhanced Farm-to-Table Salad', 'price': 14.0, 'description': 'An elevated array of the freshest local produce, now featuring gourmet additions like goat cheese, candied walnuts, and a new balsamic reduction dressing.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 16.0, 'description': 'Our signature local beef patty with a new savory sauce, organic greens, and heirloom tomato, served with hand-cut fries.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 12.0, 'description': 'A delightful mix of the finest seasonal berries with our signature crisper topping, accompanied by artisanal homemade cinnamon ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 14.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 13.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing.'}, {'id': 18, 'name': 'Smoky Mountain Chili', 'price': 12.0, 'description': 'Robust beef and bean chili with a smoky flavor, topped with cheddar cheese and served with corn chips.'}, {'id': 19, 'name': 'Ultimate American Fusion Bowl', 'price': 20.0, 'description': 'Our redesigned premium bowl with a choice of top-quality protein, exotic local vegetables, and innovative house-made sauces, served over ancient grains or organic mixed greens.'}, {'id': 20, 'name': 'American Aroma Exclusive Salad', 'price': 14.0, 'description': 'An exquisite selection of the freshest local greens and vegetables, tossed with a luxurious, homemade dressing and topped with gourmet croutons.'}, {'id': 21, 'name': "American Aroma's Weekly Special", 'price': 20.0, 'description': "A unique, rotating weekly special showcasing the best of American cuisine with a modern twist, featuring seasonal ingredients and chef's creative flair."}]
+4. Comments
+   [{'day': 8, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma provided a fresh and flavorful meal with a standout Farm-to-Table Salad. The Fusion Bowl and Berry Crumble were also delightful. Consistently good service complemented our dining experience.'}, {'day': 8, 'name': 'Grace', 'score': 9, 'content': 'American Aroma excelled with health-conscious dishes that were flavorful and satisfying. The balance of taste and dietary consideration was perfect for our needs.'}, {'day': 8, 'name': 'Olivia', 'score': 8, 'content': 'American Aroma maintained their high standards, offering fresh and flavorful dishes. Both salads impressed, the Plant-Powered Bowl was fulfilling, and the Berry Crumble ended the meal on a high note.'}, {'day': 8, 'name': 'Max', 'score': 8, 'content': "The Vegan American Burger and Plant-Powered Protein Bowl were once again delicious, scoring 8.3 and 8.4 respectively. The Signature Seasonal Berry Crumble ended the meal on a sweet note with a score of 8.1. We're consistently pleased with the quality at American Aroma."}, {'day': 8, 'name': 'Nora', 'score': 8, 'content': 'American Aroma sustains its high standards, offering flavorful, health-conscious dishes that cater to our dietary preferences, with the Plant-Powered Protein Bowl and Vegan American Burger as consistent favorites.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.765432098765432
+2. Advertisement
+   Come taste the difference with our 'Weekly Local Harvest Special' at Stars & Stripes Diner, featuring unique dishes made with the freshest local produce! Also, don't miss our enhanced American Local Fusion Bowl. Enjoy a symphony of flavors with every bite!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 11.0, 'description': 'Our signature local beef patty with melted cheese, lettuce, tomato, and our special sauce on a toasted bun. Always a favorite.'}, {'id': 2, 'name': 'BBQ Ribs Platter', 'price': 18.0, 'description': 'Slow-cooked pork ribs with a new improved smoky BBQ sauce, served with coleslaw, cornbread, and a side of pickles.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A bed of crisp lettuce topped with grilled chicken, avocado, bacon, egg, and our new zesty house dressing.'}, {'id': 8, 'name': 'Southwest Veggie Power Burger', 'price': 11.0, 'description': 'Our popular black bean patty with an even more flavorful blend of corn, avocado, lettuce, and tomato, served with a zesty lime-cilantro mayo on a whole wheat bun.'}, {'id': 11, 'name': 'American Local Fusion Bowl', 'price': 16.0, 'description': 'Our enhanced signature dish! A healthy, customizable option with unique and flavorful toppings using fresh local ingredients, served over quinoa or mixed greens.'}, {'id': 12, 'name': 'Local Delight Burger', 'price': 15.0, 'description': 'A mouthwatering beef patty from local farms with organic heirloom tomatoes, artisanal cheese, and a special house sauce, served with a side of sweet potato fries.'}, {'id': 13, 'name': 'Healthy American Quinoa Salad', 'price': 12.0, 'description': 'A nutritious and delicious blend of quinoa, fresh local veggies, and a zesty lemon-herb dressing, designed for health-conscious diners.'}, {'id': 14, 'name': 'Weekly Local Harvest Special', 'price': 17.0, 'description': "Each week, we feature a new dish crafted with the freshest seasonal produce sourced from local farms, showcasing the best of our community's bounty."}]
+4. Comments
+   [{'day': 8, 'name': 'Jake', 'score': 9, 'content': 'Stars & Stripes Diner exceeded our expectations with customizable dishes that catered to health and taste. Excellent value, accommodating service, and a consistently high-quality meal.'}, {'day': 8, 'name': 'Maggie', 'score': 8, 'content': 'Both the American Local Fusion Bowl and the dairy-free Apple Pie à la Mode at Stars & Stripes Diner were impressive, offering a fresh, flavorful dining experience.'}, {'day': 8, 'name': 'Dexter', 'score': 9, 'content': 'Stars & Stripes Diner excels with its BBQ Ribs Platter and innovative dishes like the Fusion Bowl. The Quinoa Salad and dairy-free Apple Pie à la Mode add to a balanced, satisfying meal. A blend of comfort and novelty.'}, {'day': 8, 'name': 'David', 'score': 7, 'content': "The Cobb Salad and Fusion Bowl were tailored to my dietary needs, but lacked depth in flavor. Service was amiable, though not exceptional. I've dined at American Aroma before, and while both offer customization, Stars & Stripes could improve on taste complexity."}, {'day': 7, 'name': 'Jake', 'score': 7, 'content': 'The diner provides fair options for various tastes and dietary needs, but some dishes could benefit from enhanced flavor profiles.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger", 
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma has a higher customer score and offers a variety of vegan options that suit my lifestyle. The loyalty program is also financially beneficial for me."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Vegan American Burger: 0.83
+Plant-Powered Protein Bowl: 0.84
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "score": 8,
+    "comment": "The Vegan American Burger and Plant-Powered Protein Bowl had robust flavors that delighted my vegan palate. However, I would appreciate a bit more creativity in the dish presentation. The service was attentive and the loyalty program adds value, enhancing the overall dining experience."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.9375
+2. Advertisement
+   Savor the new bold flavors at American Aroma! Try our revamped Deluxe Classic American Burger with smoky aioli, or indulge in our spicy Premium BBQ Ribs. Embrace health with our enriched Vegan American Burger or the vibrant Plant-Powered Protein Bowl. Experience our Weekly Special: a daring fusion of sweet and spice. Join us for a culinary adventure that will tantalize your taste buds and nourish your soul.
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 16.0, 'description': 'A deluxe beef patty with premium toppings including aged cheddar, crisp lettuce, heirloom tomato, and our exclusive sauce, served with gourmet fries. Now with a bold new smoky aioli to elevate the flavor.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 24.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a spicier, more robust premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables.'}, {'id': 13, 'name': 'Enhanced Farm-to-Table Salad', 'price': 15.0, 'description': 'An elevated array of the freshest local produce, now featuring gourmet additions like goat cheese, candied walnuts, and a new balsamic reduction dressing, with an extra touch of exotic spices.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 16.0, 'description': 'Our signature local beef patty with a new savory sauce, organic greens, and heirloom tomato, served with hand-cut fries.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 12.0, 'description': 'A delightful mix of the finest seasonal berries with our signature crisper topping, accompanied by artisanal homemade cinnamon ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 15.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries. Enhanced with a smoky vegan sauce to give it a more complex flavor profile.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 14.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing. Now with added herbed tofu and spiced nuts for a bold taste.'}, {'id': 18, 'name': 'Smoky Mountain Chili', 'price': 12.0, 'description': 'Robust beef and bean chili with a smoky flavor, topped with cheddar cheese and served with corn chips.'}, {'id': 19, 'name': 'Ultimate American Fusion Bowl', 'price': 20.0, 'description': 'Our redesigned premium bowl with a choice of top-quality protein, exotic local vegetables, and innovative house-made sauces, served over ancient grains or organic mixed greens.'}, {'id': 20, 'name': 'American Aroma Exclusive Salad', 'price': 14.0, 'description': 'An exquisite selection of the freshest local greens and vegetables, tossed with a luxurious, homemade dressing and topped with gourmet croutons.'}, {'id': 21, 'name': "American Aroma's Weekly Special", 'price': 21.0, 'description': "A unique, rotating weekly special showcasing the best of American cuisine with a modern twist, featuring seasonal ingredients and chef's creative flair. This week's special: a daring blend of sweet and spicy flavors."}]
+4. Comments
+   [{'day': 9, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma delivered a consistently high-quality dining experience, with fresh, flavorful dishes that catered to our diverse tastes and health-conscious preferences.'}, {'day': 9, 'name': 'Grace', 'score': 9, 'content': 'American Aroma excelled with health-conscious dishes that were flavorful and satisfying. The balance of taste and dietary consideration was perfect for our needs.'}, {'day': 9, 'name': 'Olivia', 'score': 9, 'content': 'American Aroma delivered another impressive meal, with the Enhanced Farm-to-Table Salad and Plant-Powered Protein Bowl standing out. Consistent quality and creative weekly specials reinforce our preference for this restaurant.'}, {'day': 9, 'name': 'Max', 'score': 8, 'content': 'Returning to American Aroma, we enjoyed the Vegan American Burger and Plant-Powered Protein Bowl, both scoring above 8.3. The Signature Seasonal Berry Crumble and Enhanced Farm-to-Table Salad, with their freshness and flavor, rounded out a delightful meal.'}, {'day': 9, 'name': 'Maggie', 'score': 8, 'content': 'Another enjoyable visit to American Aroma with consistently fresh and flavorful dishes. Both the Enhanced Farm-to-Table Salad and the Signature Seasonal Berry Crumble were highlights of our dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.773809523809524
+2. Advertisement
+   Discover bold flavors at Stars & Stripes Diner with our Ultimate Classic Cheeseburger and Deluxe BBQ Ribs Platter! Indulge in our new Signature Seasonal Berry Cheesecake for dessert. Fresh, local, and unforgettable - join us for an authentic American dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate Classic Cheeseburger', 'price': 14.0, 'description': 'Our signature beef patty topped with premium aged cheddar, crispy organic lettuce, heirloom tomato, and our exclusive gourmet sauce, on a fresh-baked bun.'}, {'id': 2, 'name': 'Deluxe BBQ Ribs Platter', 'price': 22.0, 'description': 'Our finest cut of ribs, slow-cooked and glazed with a signature BBQ sauce, served with truffle garlic mashed potatoes and fresh local vegetables.'}, {'id': 5, 'name': 'Super Cobb Salad', 'price': 15.0, 'description': 'A generous bed of organic greens topped with grilled free-range chicken, ripe avocado, crispy bacon, hard-boiled eggs, and our homemade zesty dressing.'}, {'id': 12, 'name': 'Local Delight Burger', 'price': 15.0, 'description': 'A mouthwatering beef patty from local farms with organic heirloom tomatoes, artisanal cheese, and a special house sauce, served with a side of sweet potato fries.'}, {'id': 15, 'name': 'Signature Seasonal Berry Cheesecake', 'price': 13.0, 'description': 'A decadent cheesecake made with a blend of the finest seasonal berries and a crispy graham cracker crust, served with a side of fresh whipped cream.'}, {'id': 16, 'name': 'Signature Spicy Cajun Pasta', 'price': 17.0, 'description': 'Al dente pasta tossed with a fiery Cajun sauce, succulent shrimp, andouille sausage, bell peppers, and a sprinkle of parmesan. A spicy delight!'}, {'id': 17, 'name': 'Heartland Apple Pie', 'price': 12.0, 'description': 'Our traditional American apple pie, made with tart local apples and a flaky, buttery crust, served à la mode with vanilla bean ice cream.'}, {'id': 18, 'name': 'Americana Milkshake Trio', 'price': 10.0, 'description': 'A trio of classic milkshakes in vanilla, chocolate, and strawberry, made with premium ice cream and topped with whipped cream and a cherry.'}]
+4. Comments
+   [{'day': 9, 'name': 'Jake', 'score': 8, 'content': 'Diverse menu at Stars & Stripes Diner satisfied our group with its balance of flavor and health. Standouts were the BBQ Ribs Platter and Classic Cheeseburger, with the Spicy Cajun Pasta earning top marks for spice.'}, {'day': 9, 'name': 'Dexter', 'score': 8, 'content': "The BBQ Ribs Platter was the meal's highlight, offering succulent, smoky flavors. While the American Local Fusion Bowl was creative, it lacked in flavor depth. The Weekly Local Harvest Special was fresh and innovative. The vegetarian options, Southwest Veggie Power Burger and Healthy American Quinoa Salad, were both enjoyable and satisfying. The Local Delight Burger remained a reliably tasty option. Overall, a very good dining experience with some dishes leaving room for more boldness in flavor."}, {'day': 9, 'name': 'Leo', 'score': 8, 'content': "The Classic Cheeseburger at Stars & Stripes Diner was good but didn't reach the outstanding level I anticipated. It was juicy and well-constructed, yet it lacked a distinctive flavor to elevate it above the norm. Despite this, it was a satisfying meal, but there's room for improvement."}, {'day': 8, 'name': 'Jake', 'score': 9, 'content': 'Stars & Stripes Diner exceeded our expectations with customizable dishes that catered to health and taste. Excellent value, accommodating service, and a consistently high-quality meal.'}, {'day': 8, 'name': 'Maggie', 'score': 8, 'content': 'Both the American Local Fusion Bowl and the dairy-free Apple Pie à la Mode at Stars & Stripes Diner were impressive, offering a fresh, flavorful dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger", 
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma provides a diverse range of vegan options like the Vegan American Burger and Plant-Powered Protein Bowl, which align with my vegan diet and compassionate values. The loyalty program is also advantageous for my budget."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan American Burger: 0.83
+Plant-Powered Protein Bowl: 0.83
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Vegan American Burger was incredibly tasty, and the Plant-Powered Protein Bowl was both filling and flavorful, perfectly aligning with my vegan lifestyle."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.947368421052632
+2. Advertisement
+   Experience the richness of American Aroma's new gourmet offerings! Revel in our enhanced Deluxe Classic American Burger with a rich bourbon BBQ sauce, and savor the intensified flavors of our Premium BBQ Ribs with smoky chipotle seasoning. Don't miss our new Gourmet American Apple Pie, served warm with vanilla bean ice cream. Delight in our improved Signature Seasonal Berry Crumble with lavender-infused ice cream. Taste the evolution of tradition and freshness at American Aroma!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 18.0, 'description': 'A deluxe beef patty with premium toppings including aged cheddar, crisp lettuce, heirloom tomato, and our exclusive sauce, served with gourmet fries. Now featuring a unique, house-made bourbon BBQ sauce for a bold flavor twist.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 26.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a spicier, more robust premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables. Now with additional smoky chipotle seasoning for depth.'}, {'id': 13, 'name': 'Enhanced Farm-to-Table Salad', 'price': 15.0, 'description': 'An elevated array of the freshest local produce, now featuring gourmet additions like goat cheese, candied walnuts, and a new balsamic reduction dressing, with an extra touch of exotic spices.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 16.0, 'description': 'Our signature local beef patty with a new savory sauce, organic greens, and heirloom tomato, served with hand-cut fries.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 14.0, 'description': 'Our beloved berry crumble with an enhanced recipe for an even richer taste, featuring a mixture of seasonal berries and a golden-brown oat topping, now served with a scoop of homemade lavender-infused ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 15.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries. Enhanced with a smoky vegan sauce to give it a more complex flavor profile.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 14.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing. Now with added herbed tofu and spiced nuts for a bold taste.'}, {'id': 18, 'name': 'Smoky Mountain Chili', 'price': 12.0, 'description': 'Robust beef and bean chili with a smoky flavor, topped with cheddar cheese and served with corn chips.'}, {'id': 19, 'name': 'Ultimate American Fusion Bowl', 'price': 20.0, 'description': 'Our redesigned premium bowl with a choice of top-quality protein, exotic local vegetables, and innovative house-made sauces, served over ancient grains or organic mixed greens.'}, {'id': 20, 'name': 'American Aroma Exclusive Salad', 'price': 14.0, 'description': 'An exquisite selection of the freshest local greens and vegetables, tossed with a luxurious, homemade dressing and topped with gourmet croutons.'}, {'id': 21, 'name': "American Aroma's Weekly Special", 'price': 21.0, 'description': "A unique, rotating weekly special showcasing the best of American cuisine with a modern twist, featuring seasonal ingredients and chef's creative flair. This week's special: a daring blend of sweet and spicy flavors."}, {'id': 22, 'name': 'Gourmet American Apple Pie', 'price': 13.0, 'description': 'Our take on the classic American dessert, made with organic, spiced apples in a flaky, buttery crust, served warm with premium vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 10, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma maintains its high standards with fresh, flavorful dishes. The Salad, BBQ Ribs, and Berry Crumble were standouts, ensuring a delightful dining experience.'}, {'day': 10, 'name': 'Grace', 'score': 9, 'content': 'A memorable dining experience with well-balanced flavors catering to health and taste. Each dish impressed, especially the chili and crumble, respecting dietary needs without sacrificing enjoyment.'}, {'day': 10, 'name': 'Olivia', 'score': 8, 'content': "American Aroma's dishes complemented our health-conscious preferences well, with the Enhanced Farm-to-Table Salad and Plant-Powered Protein Bowl being particularly noteworthy. The Signature Seasonal Berry Crumble and Weekly Special added enjoyable variety to our meal."}, {'day': 10, 'name': 'Maggie', 'score': 8, 'content': 'American Aroma continues to impress with its consistent quality, especially the Enhanced Farm-to-Table Salad. The Berry Crumble and Weekly Special were both hits, contributing to another memorable dining experience.'}, {'day': 10, 'name': 'Nora', 'score': 8, 'content': 'American Aroma impressed us again with their Plant-Powered Protein Bowl and Vegan American Burger. The Weekly Special added a delightful twist, and the Enhanced Farm-to-Table Salad was a fresh complement. Ending with the Signature Seasonal Berry Crumble was perfect.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.781609195402299
+2. Advertisement
+   Join us at Stars & Stripes Diner for a taste of local tradition! Enjoy our Ultimate Classic Cheeseburger and Deluxe BBQ Ribs Platter with ingredients sourced from nearby farms. Don't miss our Weekly Local Harvest Special, and end on a sweet note with our Signature Seasonal Berry Cheesecake. Fresh, sustainable, and purely American.
+3. Menu 
+   [{'id': 1, 'name': 'Ultimate Classic Cheeseburger', 'price': 16.0, 'description': 'Our signature beef patty topped with premium aged cheddar, crispy organic lettuce, heirloom tomato, and our exclusive gourmet sauce. Now with locally sourced beef.'}, {'id': 2, 'name': 'Deluxe BBQ Ribs Platter', 'price': 25.0, 'description': 'Our finest cut of ribs, slow-cooked and glazed with a signature BBQ sauce, served with truffle garlic mashed potatoes and fresh local vegetables. Sourced from local farms.'}, {'id': 5, 'name': 'Super Cobb Salad', 'price': 16.0, 'description': 'A generous bed of organic greens topped with grilled free-range chicken, ripe avocado, crispy bacon, hard-boiled eggs, and our homemade zesty dressing. Featuring locally sourced ingredients.'}, {'id': 15, 'name': 'Signature Seasonal Berry Cheesecake', 'price': 14.0, 'description': 'A decadent cheesecake made with a blend of the finest seasonal berries and a crispy graham cracker crust, served with a side of fresh whipped cream. Berries sourced from local farms.'}, {'id': 19, 'name': 'Weekly Local Harvest Special', 'price': 18.0, 'description': 'A weekly rotating special that showcases the best of the local harvest. This week features a sweet and spicy roasted butternut squash with a touch of local honey and chili.'}]
+4. Comments
+   [{'day': 10, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes Diner delivered on flavor and value with the Deluxe BBQ Ribs Platter and Cheeseburger scoring high. The Super Cobb Salad offered a healthy yet tasty option, and the Berry Cheesecake was a hit for its perfect balance.'}, {'day': 10, 'name': 'Max', 'score': 8, 'content': "Both the Signature Seasonal Berry Cheesecake and the Heartland Apple Pie scored an 8.1, showcasing Stars & Stripes Diner's ability to offer delightful, budget-friendly plant-based desserts."}, {'day': 10, 'name': 'Tara', 'score': 8, 'content': 'Stars & Stripes Diner provided a satisfying mix of bold and health-conscious choices. The dishes were well-received, offering variety and catering to our adventurous and healthy preferences.'}, {'day': 9, 'name': 'Jake', 'score': 8, 'content': 'Diverse menu at Stars & Stripes Diner satisfied our group with its balance of flavor and health. Standouts were the BBQ Ribs Platter and Classic Cheeseburger, with the Spicy Cajun Pasta earning top marks for spice.'}, {'day': 9, 'name': 'Dexter', 'score': 8, 'content': "The BBQ Ribs Platter was the meal's highlight, offering succulent, smoky flavors. While the American Local Fusion Bowl was creative, it lacked in flavor depth. The Weekly Local Harvest Special was fresh and innovative. The vegetarian options, Southwest Veggie Power Burger and Healthy American Quinoa Salad, were both enjoyable and satisfying. The Local Delight Burger remained a reliably tasty option. Overall, a very good dining experience with some dishes leaving room for more boldness in flavor."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger", 
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma provides a variety of vegan options that are aligned with my dietary preferences, and the customer score is slightly higher compared to Stars & Stripes Diner."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan American Burger: 0.83
+Plant-Powered Protein Bowl: 0.83
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Vegan American Burger and Plant-Powered Protein Bowl were delectable. Each bite was a celebration of flavors that suited my vegan lifestyle perfectly."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.9363636363636365
+2. Advertisement
+   Indulge in American Aroma's bold flavors with our newly intensified dishes! Relish the enhanced Deluxe Classic American Burger, savor our spicier Premium BBQ Ribs, and discover our new Chef's Choice Weekly Special. Refresh with our Signature Seasonal Berry Crumble now paired with homemade lavender ice cream. Celebrate the fusion of innovation and tradition with us!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 19.0, 'description': 'A deluxe beef patty with premium toppings including aged cheddar, crisp lettuce, heirloom tomato, and our exclusive sauce, served with gourmet fries. Now featuring a unique, house-made bourbon BBQ sauce for a bold flavor twist.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 28.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a spicier, more robust premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables. Now with additional smoky chipotle seasoning for depth.'}, {'id': 13, 'name': 'Enhanced Farm-to-Table Salad', 'price': 16.0, 'description': 'An elevated array of the freshest local produce, now with added gourmet ingredients like goat cheese, candied walnuts, and a new balsamic reduction dressing, with an extra touch of exotic spices for even more flavor.'}, {'id': 14, 'name': 'Local Delight Burger', 'price': 16.0, 'description': 'Our signature local beef patty with a new savory sauce, organic greens, and heirloom tomato, served with hand-cut fries.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 14.0, 'description': 'Our beloved berry crumble with an enhanced recipe for an even richer taste, featuring a mixture of seasonal berries and a golden-brown oat topping, now served with a scoop of homemade rosemary-infused ice cream.'}, {'id': 16, 'name': 'Vegan American Burger', 'price': 15.0, 'description': 'A plant-based patty with vegan cheese, lettuce, tomato, and vegan mayo, served with sweet potato fries. Now with an enhanced smoky vegan sauce to give it a richer complexity.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 15.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing. Now with added herbed tofu and spiced nuts for a bold taste.'}, {'id': 19, 'name': 'Ultimate American Fusion Bowl', 'price': 22.0, 'description': 'Our redesigned premium bowl with a choice of top-quality protein, exotic local vegetables, and innovative house-made sauces, served over ancient grains or organic mixed greens.'}, {'id': 20, 'name': 'American Aroma Exclusive Salad', 'price': 14.0, 'description': 'An exquisite selection of the freshest local greens and vegetables, tossed with a luxurious, homemade dressing and topped with gourmet croutons.'}, {'id': 21, 'name': "American Aroma's Weekly Special", 'price': 22.0, 'description': "A unique, rotating weekly special showcasing the best of American cuisine with a modern twist, featuring seasonal ingredients and chef's creative flair. This week's special: a daring blend of sweet and spicy flavors."}, {'id': 22, 'name': 'Gourmet American Apple Pie', 'price': 14.0, 'description': 'Our take on the classic American dessert, made with organic, spiced apples in a flaky, buttery crust, served warm with premium vanilla bean ice cream.'}, {'id': 23, 'name': "Chef's Choice Weekly Special", 'price': 23.0, 'description': "A unique, chef-curated dish that changes weekly, spotlighting the freshest, most flavorful ingredients available. This week's selection features a surprise element that promises to delight your taste buds."}]
+4. Comments
+   [{'day': 11, 'name': 'Jake', 'score': 8, 'content': 'American Aroma delivered with its flavorful menu, offering a blend of indulgent and healthy dishes that impressed us all. The standout was the Deluxe Classic American Burger, complemented by a delightful berry crumble.'}, {'day': 11, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma delivered a satisfying dining experience with fresh, flavorful dishes. All members enjoyed the meal, notably the salad and protein bowl. Consistent quality across the board.'}, {'day': 11, 'name': 'Grace', 'score': 8, 'content': 'American Aroma provided a medley of flavors catering to our health-focused yet indulgent preferences. The Smoky Mountain Chili and Enhanced Farm-to-Table Salad were exceptional. Overall, a delightful dining experience.'}, {'day': 11, 'name': 'Olivia', 'score': 8, 'content': 'American Aroma consistently delivers with fresh, creative dishes that cater to our gluten-free and Mediterranean tastes, making each dining experience enjoyable.'}, {'day': 11, 'name': 'Max', 'score': 8, 'content': 'American Aroma provided a consistently high-quality dining experience, with the Vegan American Burger and Plant-Powered Protein Bowl being particularly noteworthy. The new Enhanced Farm-to-Table Salad impressed with fresh flavors, while the Signature Seasonal Berry Crumble was a delightful conclusion.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.786516853932584
+2. Advertisement
+   Discover the heart of American dining at Stars & Stripes Diner! Featuring our new Heartland Beef Burger, Smoked Country Ribs, and American Bounty Salad, all crafted with the freshest local ingredients. Indulge in our Seasonal Berry Bliss Cheesecake and Homestead Apple Crisp for a truly hometown dessert experience. Fresh, locally inspired, and deliciously American.
+3. Menu 
+   [{'id': 1, 'name': 'Heartland Beef Burger', 'price': 17.0, 'description': 'A heartwarming classic with a locally sourced beef patty, aged cheddar, organic lettuce, and heirloom tomato, topped with our house special sauce.'}, {'id': 2, 'name': 'Smoked Country Ribs', 'price': 26.0, 'description': 'Tender ribs smoked over local hickory, slathered in our artisan BBQ sauce, with sides of garlic mashed potatoes and heirloom vegetables.'}, {'id': 5, 'name': 'American Bounty Salad', 'price': 17.0, 'description': 'A vibrant selection of crisp organic greens, free-range chicken, ripe avocado, artisanal bacon, and farm-fresh eggs, dressed in our signature vinaigrette.'}, {'id': 15, 'name': 'Seasonal Berry Bliss Cheesecake', 'price': 15.0, 'description': 'Our velvety cheesecake bursting with the freshest local berries, resting on a golden crust, and served with a dollop of freshly whipped cream.'}, {'id': 20, 'name': 'Homestead Apple Crisp', 'price': 14.0, 'description': 'Warm spiced apples from nearby orchards topped with a buttery oat crumble, served with a scoop of homemade cinnamon ice cream.'}]
+4. Comments
+   [{'day': 11, 'name': 'Maggie', 'score': 8, 'content': "Stars & Stripes Diner provided a well-rounded meal with good flavors and fresh ingredients. While the cheesecake was enjoyable, there's a lingering preference for American Aroma's Berry Crumble. The balance of healthy and indulgent options met our dining expectations."}, {'day': 11, 'name': 'William', 'score': 8, 'content': 'The family enjoyed a uniformly good dining experience at Stars & Stripes Diner, appreciating the fresh ingredients and well-crafted dishes. Each member gave a score of 7.5, resulting in a combined score of 8 out of 10.'}, {'day': 10, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes Diner delivered on flavor and value with the Deluxe BBQ Ribs Platter and Cheeseburger scoring high. The Super Cobb Salad offered a healthy yet tasty option, and the Berry Cheesecake was a hit for its perfect balance.'}, {'day': 10, 'name': 'Max', 'score': 8, 'content': "Both the Signature Seasonal Berry Cheesecake and the Heartland Apple Pie scored an 8.1, showcasing Stars & Stripes Diner's ability to offer delightful, budget-friendly plant-based desserts."}, {'day': 10, 'name': 'Tara', 'score': 8, 'content': 'Stars & Stripes Diner provided a satisfying mix of bold and health-conscious choices. The dishes were well-received, offering variety and catering to our adventurous and healthy preferences.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Vegan American Burger", 
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma offers a variety of vegan options suitable for my diet, and the loyalty program is beneficial for my financial situation."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Vegan American Burger: 0.83
+Plant-Powered Protein Bowl: 0.83
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Vegan American Burger was incredibly satisfying, and the Plant-Powered Protein Bowl nourished me with its variety of flavors and textures."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.950819672131147
+2. Advertisement
+   Experience the epitome of flavor at American Aroma! Delight in our Deluxe Classic American Burger now at $20, and our new $30 Premium BBQ Ribs with additional smoky chipotle seasoning. Indulge in the richness of our $15 Signature Seasonal Berry Crumble paired with rosemary-infused ice cream. Join us for a taste of excellence with our handcrafted, innovative dishes!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 20.0, 'description': 'A deluxe beef patty with premium toppings including aged cheddar, crisp lettuce, heirloom tomato, and our exclusive sauce, served with gourmet fries. Now featuring a unique, house-made bourbon BBQ sauce for a bold flavor twist.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 30.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a spicier, more robust premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables. Now with additional smoky chipotle seasoning for depth.'}, {'id': 13, 'name': 'Enhanced Farm-to-Table Salad', 'price': 16.0, 'description': 'An elevated array of the freshest local produce, now with added gourmet ingredients like goat cheese, candied walnuts, and a new balsamic reduction dressing, with an extra touch of exotic spices for even more flavor.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 15.0, 'description': 'Our beloved berry crumble with an enhanced recipe for an even richer taste, featuring a mixture of seasonal berries and a golden-brown oat topping, now served with a scoop of homemade rosemary-infused ice cream.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 15.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing. Now with added herbed tofu and spiced nuts for a bold taste.'}, {'id': 19, 'name': 'Ultimate American Fusion Bowl', 'price': 24.0, 'description': 'Our redesigned premium bowl with a choice of top-quality protein, exotic local vegetables, and innovative house-made sauces, served over ancient grains or organic mixed greens.'}, {'id': 21, 'name': "American Aroma's Weekly Special", 'price': 24.0, 'description': "A unique, rotating weekly special showcasing the best of American cuisine with a modern twist, featuring seasonal ingredients and chef's creative flair. This week's special: a daring blend of sweet and spicy flavors."}, {'id': 23, 'name': "Chef's Choice Weekly Special", 'price': 25.0, 'description': "A unique, chef-curated dish that changes weekly, spotlighting the freshest, most flavorful ingredients available. This week's selection features a surprise element that promises to delight your taste buds."}]
+4. Comments
+   [{'day': 12, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma impressed with their innovative twists on classic dishes. The bourbon BBQ sauce and lavender ice cream were standout additions. Consistently delicious and satisfying across the board.'}, {'day': 12, 'name': 'Grace', 'score': 8, 'content': 'American Aroma provided another exceptional dining experience with fresh, healthy, and flavorful dishes. Both the Deluxe Burger and the Plant Bowl impressed with unique twists.'}, {'day': 12, 'name': 'Olivia', 'score': 8, 'content': 'American Aroma excelled with fresh, flavorful offerings. The Enhanced Farm-to-Table Salad, Plant-Powered Protein Bowl, and Signature Seasonal Berry Crumble were all remarkable. Consistently excellent, catering to health and taste.'}, {'day': 12, 'name': 'Max', 'score': 8, 'content': 'American Aroma upheld its reputation for fresh, flavorful plant-based cuisine. The Enhanced Farm-to-Table Salad was exceptional, and the Vegan American Burger and Plant-Powered Protein Bowl were robust and satisfying. The Seasonal Berry Crumble provided a sweet finish to a delightful meal.'}, {'day': 12, 'name': 'Maggie', 'score': 8, 'content': 'American Aroma provided an excellent dinner experience with standout dishes like the Enhanced Farm-to-Table Salad and the Deluxe Classic American Burger. Fresh ingredients and creative twists on classic flavors made our meal memorable.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.793478260869565
+2. Advertisement
+   Join us at Stars & Stripes Diner for a taste of innovation with our new menu! Enjoy the Patriot's Prime Beef Burger, Hickory Smoked BBQ Ribs, and our fresh Harvest Garden Salad. Don't miss this week's Weekly Star Special, where our chefs surprise you with creative, seasonal delights. Indulge in our Mixed Berry Cheesecake Delight and Cinnamon Orchard Apple Crisp for the perfect finish. Local, sustainable, and bursting with flavor!
+3. Menu 
+   [{'id': 1, 'name': "Patriot's Prime Beef Burger", 'price': 18.0, 'description': 'Our upgraded classic with prime local beef, smoked gouda, crisp greens, and a tangy house sauce, topped with a fried onion ring.'}, {'id': 2, 'name': 'Hickory Smoked BBQ Ribs', 'price': 28.0, 'description': 'Locally-sourced ribs smoked to perfection, glazed with a bourbon-infused BBQ sauce, accompanied by truffle-infused mashed potatoes and grilled asparagus.'}, {'id': 5, 'name': 'Harvest Garden Salad', 'price': 18.0, 'description': 'A bounty of fresh greens, quinoa, roasted pumpkin seeds, and dried cranberries, tossed in an apple cider vinaigrette, with optional grilled chicken or tofu.'}, {'id': 15, 'name': 'Mixed Berry Cheesecake Delight', 'price': 16.0, 'description': 'A new twist on our classic, featuring a mix of local berries and a lemon-infused cheesecake layer, on a graham cracker base, topped with lemon zest.'}, {'id': 20, 'name': 'Cinnamon Orchard Apple Crisp', 'price': 15.0, 'description': 'Our reimagined apple crisp with a touch of cinnamon and nutmeg, using heirloom apples, served with vanilla bean ice cream drizzled with caramel.'}, {'id': 21, 'name': 'Weekly Star Special', 'price': 20.0, 'description': "A rotating showcase of culinary innovation, featuring the freshest seasonal ingredients with a unique Stars & Stripes twist. Ask us about this week's creation!"}]
+4. Comments
+   [{'day': 12, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes Diner impressed with fresh, flavorful dishes catering to our diverse tastes and health needs. Consistently good across the board.'}, {'day': 12, 'name': 'Dexter', 'score': 8, 'content': 'Consistently good dishes with the Heartland Beef Burger and Smoked Country Ribs being enjoyable. Salads were fresh, and desserts comforting. A satisfying meal, though lacking extraordinary elements.'}, {'day': 12, 'name': 'Nate', 'score': 8, 'content': 'The Smoked Country Ribs, Heartland Beef Burger, and American Bounty Salad were all equally satisfying at a 7.7, offering a blend of smoky, savory, and fresh flavors. The Homestead Apple Crisp ended the meal on a high note with its comforting sweetness.'}, {'day': 11, 'name': 'Maggie', 'score': 8, 'content': "Stars & Stripes Diner provided a well-rounded meal with good flavors and fresh ingredients. While the cheesecake was enjoyable, there's a lingering preference for American Aroma's Berry Crumble. The balance of healthy and indulgent options met our dining expectations."}, {'day': 11, 'name': 'William', 'score': 8, 'content': 'The family enjoyed a uniformly good dining experience at Stars & Stripes Diner, appreciating the fresh ingredients and well-crafted dishes. Each member gave a score of 7.5, resulting in a combined score of 8 out of 10.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma has a higher customer score and offers a vegan dish that aligns with my dietary preferences, making it a suitable choice for my compassionate values."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Plant-Powered Protein Bowl: 0.83
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Plant-Powered Protein Bowl was exceptionally delightful, offering a harmonious blend of flavors and textures that catered perfectly to my vegan lifestyle."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.947368421052632
+2. Advertisement
+   Savor the innovation at American Aroma! Our Enhanced Farm-to-Table Salad is bursting with vibrant flavors, and our Deluxe Classic American Burger now packs a chipotle punch. Don't miss our new Signature American Cheesecake, a luxurious treat with local berries. Come for a fresh, health-conscious feast that excites the palate!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 20.0, 'description': 'Our classic burger now with an extra kick, featuring a dash of chipotle mayo and caramelized onions, all sandwiched between a freshly baked brioche bun.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 30.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a spicier, more robust premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables. Now with additional smoky chipotle seasoning for depth.'}, {'id': 13, 'name': 'Enhanced Farm-to-Table Salad', 'price': 16.0, 'description': 'An enhanced version of our beloved salad, now with a punchier, herbed vinaigrette and a sprinkle of spice-dusted croutons for a more vibrant taste.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 15.0, 'description': 'Our beloved berry crumble with an enhanced recipe for an even richer taste, featuring a mixture of seasonal berries and a golden-brown oat topping, now served with a scoop of homemade rosemary-infused ice cream.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 15.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing. Now with added herbed tofu and spiced nuts for a bold taste.'}, {'id': 19, 'name': 'Ultimate American Fusion Bowl', 'price': 24.0, 'description': 'Our redesigned premium bowl with a choice of top-quality protein, exotic local vegetables, and innovative house-made sauces, served over ancient grains or organic mixed greens.'}, {'id': 21, 'name': "American Aroma's Weekly Special", 'price': 24.0, 'description': "A unique, rotating weekly special showcasing the best of American cuisine with a modern twist, featuring seasonal ingredients and chef's creative flair. This week's special: a daring blend of sweet and spicy flavors."}, {'id': 24, 'name': 'Signature American Cheesecake', 'price': 16.0, 'description': 'A luxurious cheesecake with a velvety smooth filling, on a buttery graham cracker crust, topped with a berry compote featuring seasonal, local berries.'}]
+4. Comments
+   [{'day': 13, 'name': 'Jake', 'score': 8, 'content': 'American Aroma offered a well-rounded meal with fresh salads, flavorful burgers, and hearty ribs. Balanced options catered to health without sacrificing taste. A commendable dining experience.'}, {'day': 13, 'name': 'Grace', 'score': 8, 'content': 'American Aroma delivered on our health and taste expectations. Creative, fresh, and well-executed dishes with standout flavors made for a memorable dining experience. Excellent choice for health-conscious diners.'}, {'day': 13, 'name': 'Olivia', 'score': 8, 'content': 'The Enhanced Farm-to-Table Salad and Plant-Powered Protein Bowl remained impressive with their fresh, robust flavors. The Signature Seasonal Berry Crumble, although slightly less exceptional than before, was still enjoyable. The Weekly Specials were a delightful addition, ensuring a varied dining experience.'}, {'day': 13, 'name': 'Max', 'score': 8, 'content': 'American Aroma delivered again with the Enhanced Farm-to-Table Salad and Plant-Powered Protein Bowl scoring high for freshness and flavor. The Berry Crumble was slightly less impressive, yet satisfying. Consistent quality makes it a reliable choice.'}, {'day': 13, 'name': 'Tara', 'score': 8, 'content': "American Aroma provided a delightful meal with fresh, flavorful dishes like the Enhanced Farm-to-Table Salad and the Plant-Powered Protein Bowl. The Signature Seasonal Berry Crumble's rosemary-infused ice cream could have been more pronounced, but overall, a great dining experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.795918367346939
+2. Advertisement
+   Discover the new Stars & Stripes Diner menu! Featuring the exclusive Local Legend Burger, the sumptuous Signature Stars & Stripes Steak, and a revamped Weekly Star Special with our New England Clam and Corn Chowder. Come for the freshness, stay for the flavor. Your table is waiting!
+3. Menu 
+   [{'id': 1, 'name': "Patriot's Prime Beef Burger", 'price': 20.0, 'description': 'Our upgraded classic with prime local beef, smoked gouda, crisp greens, and a tangy house sauce, topped with a fried onion ring and a drizzle of our unique maple-bourbon glaze.'}, {'id': 2, 'name': 'Hickory Smoked BBQ Ribs', 'price': 28.0, 'description': 'Locally-sourced ribs smoked to perfection, glazed with a bourbon-infused BBQ sauce, accompanied by truffle-infused mashed potatoes and grilled asparagus.'}, {'id': 15, 'name': 'Mixed Berry Cheesecake Delight', 'price': 16.0, 'description': 'A new twist on our classic, featuring a mix of local berries and a lemon-infused cheesecake layer, on a graham cracker base, topped with lemon zest.'}, {'id': 20, 'name': 'Cinnamon Orchard Apple Crisp', 'price': 15.0, 'description': 'Our reimagined apple crisp with a touch of cinnamon and nutmeg, using heirloom apples, served with vanilla bean ice cream drizzled with caramel.'}, {'id': 21, 'name': 'Weekly Star Special', 'price': 22.0, 'description': "A rotating showcase of culinary innovation, now featuring 'The New England Clam and Corn Chowder', a rich and creamy delight with fresh clams, sweet corn, and a hint of thyme."}, {'id': 22, 'name': 'Local Legend Burger', 'price': 22.0, 'description': 'An exclusive burger featuring a dry-aged local beef patty, heritage blue cheese, arugula, and a spiced pear chutney, served in a brioche bun.'}, {'id': 23, 'name': 'Signature Stars & Stripes Steak', 'price': 30.0, 'description': 'A succulent rib-eye steak from locally raised cattle, seasoned with a secret spice blend and served with a side of garlic butter mushrooms and heirloom carrots.'}]
+4. Comments
+   [{'day': 13, 'name': 'Amelia', 'score': 8, 'content': 'Stars & Stripes Diner offered a uniformly good experience. The dishes, including the Weekly Star Special, were well-received though not Mexican-inspired as hoped. The desserts were a highlight, and overall satisfaction is reflected in our unanimous 7.5 scores.'}, {'day': 13, 'name': 'Maggie', 'score': 8, 'content': "Good, solid dishes across the board but lacking standout elements. Enjoyable experience, yet American Aroma's creativity and flavors are missed."}, {'day': 13, 'name': 'Nora', 'score': 8, 'content': "Stars & Stripes Diner offered a well-rounded dining experience with tasty dishes like the Patriot's Prime Beef Burger and the creative Weekly Star Special. The desserts were a sweet end to a satisfying meal. A delightful change from our usual choice."}, {'day': 13, 'name': 'Frank', 'score': 8, 'content': "A good meal with consistent flavors across the board. Dishes were enjoyable, with the Weekly Star Special and BBQ Ribs being highlights, yet lacked a standout 'wow' factor."}, {'day': 13, 'name': 'Rachel', 'score': 8, 'content': 'Good dishes with fresh ingredients, though not as exceptional as American Aroma. Enjoyed the variety and dairy-free options, but missed the creativity of past experiences.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma offers the Plant-Powered Protein Bowl, which aligns with my vegan diet. The customer score is higher and the loyalty program is financially beneficial."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Plant-Powered Protein Bowl: 0.83
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Plant-Powered Protein Bowl was exceptional, with a perfect balance of flavors and textures that delighted my vegan palate."
+}
+
+[System->Katie]: The Restaurant " American Aroma "information as below:
+1. Customer Score: 7.9523809523809526
+2. Advertisement
+   Indulge in American Aroma's culinary evolution with our newly refined Deluxe Classic American Burger and the vibrant Enhanced Farm-to-Table Salad. Experience the ultimate sweet finale with our lavish new dessert, the American Indulgence Chocolate Cake. Join us for an unforgettable dining adventure that marries tradition with innovation!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Classic American Burger', 'price': 22.0, 'description': 'Our classic burger now with an extra kick, featuring a dash of chipotle mayo and caramelized onions, all sandwiched between a freshly baked brioche bun.'}, {'id': 2, 'name': 'Premium BBQ Ribs', 'price': 30.0, 'description': 'Our finest cut of ribs, slow-cooked to perfection and glazed with a spicier, more robust premium house BBQ sauce, paired with truffle garlic mashed potatoes and seasonal vegetables. Now with additional smoky chipotle seasoning for depth.'}, {'id': 13, 'name': 'Enhanced Farm-to-Table Salad', 'price': 18.0, 'description': 'An enhanced version of our beloved salad, now with a punchier, herbed vinaigrette and a sprinkle of spice-dusted croutons for a more vibrant taste.'}, {'id': 15, 'name': 'Signature Seasonal Berry Crumble', 'price': 17.0, 'description': 'Our beloved berry crumble with an enhanced recipe for an even richer taste, featuring a mixture of seasonal berries and a golden-brown oat topping, now served with a scoop of homemade rosemary-infused ice cream.'}, {'id': 17, 'name': 'Plant-Powered Protein Bowl', 'price': 17.0, 'description': 'A mix of quinoa, black beans, avocado, roasted veggies, and pumpkin seeds with a lemon-tahini dressing. Now with added herbed tofu and spiced nuts for a bold taste.'}, {'id': 24, 'name': 'Signature American Cheesecake', 'price': 18.0, 'description': 'A luxurious cheesecake with a velvety smooth filling, on a buttery graham cracker crust, topped with a berry compote featuring seasonal, local berries.'}, {'id': 25, 'name': 'American Indulgence Chocolate Cake', 'price': 18.0, 'description': 'A decadent chocolate cake with layers of rich ganache, dark chocolate sponge, and a velvety chocolate mousse, topped with gold leaf and served with raspberry coulis.'}]
+4. Comments
+   [{'day': 14, 'name': 'Jake', 'score': 8, 'content': 'American Aroma provided a satisfying meal with well-received dishes. The Deluxe Classic American Burger and Enhanced Farm-to-Table Salad were highlights, while the cheesecake was a bit sweet for our taste.'}, {'day': 14, 'name': 'Amelia', 'score': 8, 'content': 'American Aroma delivered again with fresh and satisfying dishes. Salad and Protein Bowl were standouts, while the Weekly Special and Cheesecake pleasantly rounded out the meal.'}, {'day': 14, 'name': 'Grace', 'score': 8, 'content': 'American Aroma offered a well-rounded meal with fresh, flavorful options. The health-conscious approach was appreciated, especially for diabetic-friendly dishes that did not compromise on taste.'}, {'day': 14, 'name': 'Max', 'score': 8, 'content': "American Aroma upheld their reputation with the Enhanced Farm-to-Table Salad and Plant-Powered Protein Bowl. The Signature American Cheesecake was pleasant but didn't quite match the high standards of the other dishes."}, {'day': 14, 'name': 'Maggie', 'score': 8, 'content': 'Consistently delightful, American Aroma impressed us again, especially with the burger and salad. The new cheesecake was good but overshadowed by the superb berry crumble.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: The Restaurant " Stars & Stripes Diner "information as below:
+1. Customer Score: 7.803921568627451
+2. Advertisement
+   Savor health at Stars & Stripes Diner where local meets global! Indulge in our Heartland Harvest Grain Bowl and Americana Kale and Quinoa Salad, all with gluten-free options. Experience our dedication to fresh, local ingredients in every bite. Your journey to delicious wellness begins here!
+3. Menu 
+   [{'id': 1, 'name': "Patriot's Prime Beef Burger", 'price': 22.0, 'description': 'Our upgraded classic with prime local beef, smoked gouda, crisp greens, and a tangy house sauce, topped with a fried onion ring and a drizzle of our unique maple-bourbon glaze.'}, {'id': 2, 'name': 'Hickory Smoked BBQ Ribs', 'price': 30.0, 'description': 'Locally-sourced ribs smoked to perfection, glazed with a bourbon-infused BBQ sauce, accompanied by truffle-infused mashed potatoes and grilled asparagus.'}, {'id': 15, 'name': 'Mixed Berry Cheesecake Delight', 'price': 18.0, 'description': 'A new twist on our classic, featuring a mix of local berries and a lemon-infused cheesecake layer, on a graham cracker base, topped with lemon zest.'}, {'id': 20, 'name': 'Cinnamon Orchard Apple Crisp', 'price': 17.0, 'description': 'Our reimagined apple crisp with a touch of cinnamon and nutmeg, using heirloom apples, served with vanilla bean ice cream drizzled with caramel.'}, {'id': 21, 'name': 'Weekly Star Special', 'price': 24.0, 'description': "A rotating showcase of culinary innovation, now featuring 'The New England Clam and Corn Chowder', a rich and creamy delight with fresh clams, sweet corn, and a hint of thyme."}, {'id': 22, 'name': 'Local Legend Burger', 'price': 24.0, 'description': 'An exclusive burger featuring a dry-aged local beef patty, heritage blue cheese, arugula, and a spiced pear chutney, served in a brioche bun.'}, {'id': 23, 'name': 'Signature Stars & Stripes Steak', 'price': 32.0, 'description': 'A succulent rib-eye steak from locally raised cattle, seasoned with a secret spice blend and served with a side of garlic butter mushrooms and heirloom carrots.'}, {'id': 24, 'name': 'Heartland Harvest Grain Bowl', 'price': 18.0, 'description': 'A hearty, nutritious bowl with ancient grains, roasted seasonal vegetables, spiced chickpeas, and a zesty avocado dressing.'}, {'id': 25, 'name': 'Americana Kale and Quinoa Salad', 'price': 16.0, 'description': 'A vibrant salad with curly kale, tri-color quinoa, dried cranberries, toasted almonds, and a lemon-tahini dressing.'}]
+4. Comments
+   [{'day': 14, 'name': 'Olivia', 'score': 8, 'content': 'Stars & Stripes Diner provided a delightful dining experience with their gluten-free adaptations. The Local Legend Burger was a highlight, and the desserts were particularly exceptional. A great alternative to our usual spot, American Aroma.'}, {'day': 14, 'name': 'Nora', 'score': 8, 'content': "Stars & Stripes Diner impressed with the Local Legend Burger's high-quality beef and the Signature Steak's perfect seasoning. The Cinnamon Apple Crisp ended the meal on a high note. Comparable to our experiences at American Aroma."}, {'day': 14, 'name': 'Tara', 'score': 8, 'content': 'Each dish at Stars & Stripes Diner impressed with unique flavors and quality preparation. The Local Legend Burger and the Signature Stars & Stripes Steak were standout items, while the Weekly Star Special and dessert provided a comforting balance. A commendable dining experience.'}, {'day': 14, 'name': 'Wade', 'score': 8, 'content': 'The diner provided a well-rounded meal with standout dishes like the Weekly Star Special and the Local Legend Burger. Satisfying steak and ribs, with desserts that ended the meal on a high note.'}, {'day': 13, 'name': 'Amelia', 'score': 8, 'content': 'Stars & Stripes Diner offered a uniformly good experience. The dishes, including the Weekly Star Special, were well-received though not Mexican-inspired as hoped. The desserts were a highlight, and overall satisfaction is reflected in our unanimous 7.5 scores.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Katie]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "dishes": [
+        "Plant-Powered Protein Bowl"
+    ],
+    "reason": "American Aroma offers the Plant-Powered Protein Bowl, which suits my vegan diet, and the higher customer score implies better service and food quality."
+}
+
+[System->Katie]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Plant-Powered Protein Bowl: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Katie->all]: {
+    "restaurant": "American Aroma",
+    "feeling": "The Plant-Powered Protein Bowl was a delightful blend of flavors that satisfied my vegan preferences and left me feeling content and healthy."
+}
+

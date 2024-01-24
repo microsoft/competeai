@@ -35,7 +35,10 @@ def get_score_per_dish(request):
     menus = Menu.objects.all()
     # get the price and cost_price of each menu
     for menu in menus:
-        score2 = menu.cost_price / (0.8 * menu.price)
+        if menu.price == 0:
+            score2 = 1
+        else:
+            score2 = menu.cost_price / (0.8 * menu.price)
         score = 0.5 * score1 + 0.5 * score2
         score = round(score, 2)
         scores[menu.name] = score

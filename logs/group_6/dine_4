@@ -1,0 +1,942 @@
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the taste of America right here at Classic American Bistro! Indulge in our signature Smokey BBQ Ribs, savor the flavors of our Classic Cheeseburger, and delight in our New York Cheesecake. Join us for a culinary adventure that promises to tantalize your taste buds with the freshest, highest quality ingredients. Come in and taste the difference!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs glazed with our signature smokey BBQ sauce, served with coleslaw and fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 15.0, 'description': 'Juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a brioche bun.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with blue cheese dip and celery sticks.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and our creamy Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Classic cheesecake with a rich, dense, smooth, and creamy consistency topped with a fruit coulis.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'A creamy blend of cheeses with elbow macaroni, topped with a crispy breadcrumb crust.'}, {'id': 7, 'name': 'Grilled Salmon', 'price': 22.0, 'description': 'Perfectly grilled salmon fillet with a lemon herb butter sauce, accompanied by seasonal vegetables.'}, {'id': 8, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a flaky crust, served with vanilla ice cream on top.'}, {'id': 9, 'name': 'Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pork shoulder, shredded and tossed in BBQ sauce, on a soft bun with pickles and slaw.'}, {'id': 10, 'name': 'Fried Pickles', 'price': 7.0, 'description': 'Dill pickle spears coated in seasoned bread crumbs and deep-fried to golden perfection, served with ranch dressing.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right in your town! Come to American Flavors USA for authentic, high-quality American dishes. From our classic burgers to our mouthwatering ribs, each bite is a celebration of classic Americana. Join us for a dining experience like no other!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 10.0, 'description': 'Fresh mixed greens topped with grilled chicken, bacon, eggs, avocado, and blue cheese.'}, {'id': 4, 'name': 'Philly Cheesesteak', 'price': 11.0, 'description': 'Sliced steak with melted cheese, onions, and peppers on a hoagie roll.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 6.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 7.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust and strawberry topping.'}, {'id': 7, 'name': 'Fried Chicken Basket', 'price': 15.0, 'description': 'Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob.'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pork shoulder with tangy slaw on a brioche bun.'}, {'id': 9, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy cheese sauce mixed with macaroni and topped with a crunchy breadcrumb crust.'}, {'id': 10, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Classic American Bistro",
+    "dishes": [
+        "Mac & Cheese",
+        "Caesar Salad",
+        "New York Cheesecake"
+    ],
+    "reason": "I chose Classic American Bistro because the descriptive menu items like the creamy blend of cheeses in the Mac & Cheese appeal to my love for pasta, and the cheesecake seems indulgent."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mac & Cheese: 0.61
+Caesar Salad: 0.55
+New York Cheesecake: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Classic American Bistro",
+    "feeling": "The Mac & Cheese had a wonderful creamy texture, and the Caesar Salad was crisp and flavorful. The New York Cheesecake ended the meal on a high note with its smooth consistency."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover the bold flavors of our new Signature Smokey Ribs and Herb-Crusted Grilled Salmon at Classic American Bistro. Each dish is crafted to perfection with premium ingredients and a touch of culinary artistry. Visit us for an exceptional dining experience that will leave your palate craving for more!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 25.0, 'description': 'Tender ribs glazed with our signature smokey BBQ sauce, served with coleslaw and fries.'}, {'id': 2, 'name': 'Classic Cheeseburger', 'price': 15.0, 'description': 'Juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a brioche bun.'}, {'id': 3, 'name': 'Spicy Buffalo Chicken Wings', 'price': 13.0, 'description': 'Crispy wings tossed in our fiery homemade buffalo sauce, served with a cooling blue cheese dip and crisp celery sticks.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and our creamy Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Classic cheesecake with a rich, dense, smooth, and creamy consistency topped with a fruit coulis.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'A creamy blend of cheeses with elbow macaroni, topped with a crispy breadcrumb crust.'}, {'id': 7, 'name': 'Herb-Crusted Grilled Salmon', 'price': 24.0, 'description': 'Succulent grilled salmon with a crisp herb crust, drizzled with a dill-infused citrus butter, paired with organic seasonal vegetables.'}, {'id': 8, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a flaky crust, served with vanilla ice cream on top.'}, {'id': 9, 'name': 'Pulled Pork Sandwich', 'price': 14.0, 'description': 'Slow-cooked pork shoulder, shredded and tossed in BBQ sauce, on a soft bun with pickles and slaw.'}, {'id': 11, 'name': 'Signature Smokey Ribs', 'price': 28.0, 'description': "Our chef's special, extra-smokey ribs with a secret blend of herbs and spices, served with artisanal coleslaw and seasoned fries."}]
+4. Comments
+   [{'day': 1, 'name': 'Olivia', 'score': 6, 'content': 'Our experience was fair, with fresh ingredients but lacking exceptional flavor and culinary execution. The dishes met dietary needs but fell short of our Mediterranean and quality expectations.'}, {'day': 1, 'name': 'Maggie', 'score': 6, 'content': 'Fresh ingredients were appreciated, yet the dishes lacked the exceptional flavors we anticipated. Fair experience; room for taste improvement.'}, {'day': 1, 'name': 'Nora', 'score': 6, 'content': 'The meal was satisfactory with room for improvement. The Smokey BBQ Ribs were a highlight, but overall, the dishes lacked the refinement expected of fine dining.'}, {'day': 1, 'name': 'Frank', 'score': 6, 'content': 'Overall, the experience was satisfactory with room for improvement in flavor. Service was commendable and the effort to accommodate dietary needs was appreciated.'}, {'day': 1, 'name': 'Tara', 'score': 6, 'content': 'Classic American Bistro offered a fair dining experience with average dishes that met our health considerations but lacked in flavor depth and distinction.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 5.875
+2. Advertisement
+   Excite your palate with our new Smokin' Hot Brisket and Zesty Black Bean Burger at American Flavors USA! Savor the upgraded zest in our classic dishes and indulge in our revamped New York Cheesecake. Your taste adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Our classic Cobb, now with more zest! Fresh mixed greens, grilled chicken, crispy bacon, hard-boiled eggs, avocado, and blue cheese with a zippy house dressing.'}, {'id': 4, 'name': 'Philly Cheesesteak', 'price': 11.0, 'description': 'Sliced steak with melted cheese, onions, and peppers on a hoagie roll.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 6.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Our New York Cheesecake, now with a rich berry compote topping. Indulge in this classic dessert with a fruity twist.'}, {'id': 7, 'name': 'Fried Chicken Basket', 'price': 15.0, 'description': 'Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob.'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pork shoulder with tangy slaw on a brioche bun.'}, {'id': 9, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy cheese sauce mixed with macaroni and topped with a crunchy breadcrumb crust.'}, {'id': 11, 'name': "Smokin' Hot Brisket", 'price': 20.0, 'description': 'Slow-smoked beef brisket with a spicy BBQ glaze, served with jalapeño cornbread and coleslaw.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 13.0, 'description': 'A hearty black bean patty with zesty spices, topped with avocado and tomato salsa on a whole grain bun.'}]
+4. Comments
+   [{'day': 1, 'name': 'Jake', 'score': 6, 'content': 'The dishes at American Flavors USA were fair, offering a consistent quality across the board but lacking distinctiveness to elevate the dining experience. Each dish was satisfactory, but none stood out as exceptional.'}, {'day': 1, 'name': 'Amelia', 'score': 6, 'content': 'Fair across the board, American Flavors USA met basic expectations with satisfactory yet unremarkable dishes. Each offering was decent with room for improvement in flavor and execution.'}, {'day': 1, 'name': 'Grace', 'score': 6, 'content': 'Our dining experience at American Flavors USA was fair, with dishes that were satisfactory but lacked distinction in flavor. The meal was adequate for our dietary preferences and budget, but we anticipated more based on the menu descriptions.'}, {'day': 1, 'name': 'Max', 'score': 6, 'content': 'The dishes at American Flavors USA were fair but lacked distinction in flavor and creativity. The modified Cobb Salad was accommodating but missing protein, and the comfort dishes were average, meeting but not exceeding expectations.'}, {'day': 1, 'name': 'Yasmine', 'score': 6, 'content': 'Fair experience with room for enhancement. The dishes were average, lacking in flavor and creativity, especially the vegan option. The service was accommodating but the food offerings could be improved.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Classic American Bistro",
+    "dishes": [
+        "Mac & Cheese",
+        "Caesar Salad",
+        "New York Cheesecake"
+    ],
+    "reason": "Classic American Bistro offers a more appealing mac & cheese and a rich, creamy cheesecake that aligns with my preference for indulgent meals, despite a marginally higher customer score than American Flavors USA."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Mac & Cheese: 0.63
+Caesar Salad: 0.57
+New York Cheesecake: 0.63
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Classic American Bistro",
+    "feeling": "The Mac & Cheese was delightfully creamy, and I savored each bite. The Caesar Salad was fresh and well-dressed. The New York Cheesecake was a perfect finale, rich and smooth."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Experience the fresh, health-conscious delights at Classic American Bistro! Savor our new Lean Bison Burger and Kale & Quinoa Salad, each bursting with flavor and nutrition. Indulge in our enhanced New York Cheesecake with berry compote. Come for the taste, stay for the quality.
+3. Menu 
+   [{'id': 2, 'name': 'Classic Cheeseburger', 'price': 15.0, 'description': 'Juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a brioche bun.'}, {'id': 3, 'name': 'Spicy Buffalo Chicken Wings', 'price': 13.0, 'description': 'Crispy wings tossed in our fiery homemade buffalo sauce, served with a cooling blue cheese dip and crisp celery sticks.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with parmesan, croutons, and our creamy Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Classic cheesecake with a rich, dense, smooth, and creamy consistency, now topped with a mixed berry compote.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'A creamy blend of cheeses with elbow macaroni, topped with a crispy breadcrumb crust.'}, {'id': 7, 'name': 'Herb-Crusted Grilled Salmon', 'price': 26.0, 'description': 'Succulent grilled salmon with a refreshed herb crust, drizzled with a tangy lemon-herb butter, paired with a quinoa vegetable pilaf.'}, {'id': 8, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a flaky crust, served with vanilla ice cream on top.'}, {'id': 9, 'name': 'Pulled Pork Sandwich', 'price': 15.0, 'description': 'Slow-cooked pork shoulder, shredded and tossed in a tangy BBQ sauce, on a soft bun with pickles and a side of sweet potato fries.'}, {'id': 12, 'name': 'Lean Bison Burger', 'price': 17.0, 'description': 'Health-conscious bison patty, rich in protein and low in fat, with fresh greens, tomato, and a light mustard sauce on a whole grain bun.'}, {'id': 13, 'name': 'Kale & Quinoa Salad', 'price': 14.0, 'description': 'Superfood salad with crisp kale, nutty quinoa, fresh berries, and a light citrus vinaigrette.'}]
+4. Comments
+   [{'day': 2, 'name': 'Amelia', 'score': 6, 'content': 'All dishes at Classic American Bistro were fair but lacked exceptional qualities. The meal was satisfactory, with room for improvement in flavor and texture.'}, {'day': 2, 'name': 'Grace', 'score': 6, 'content': 'The Smokey BBQ Ribs shined, but the Herb-Crusted Grilled Salmon and Apple Pie a la Mode lacked the expected flair. The Caesar Salad was notably plain. The meal was satisfactory, with room for flavor enhancement.'}, {'day': 2, 'name': 'Tara', 'score': 6, 'content': 'The dishes were satisfactory, meeting health needs but lacking in flavor complexity and excitement, with the Smokey BBQ Ribs being the highlight.'}, {'day': 2, 'name': 'Dexter', 'score': 6, 'content': "The meal was satisfactory with consistent quality across dishes but lacked the distinctive flavors and excitement expected from the menu's promise. Desserts were the highlight in an otherwise average dining experience."}, {'day': 2, 'name': 'Wade', 'score': 6, 'content': 'The meal was generally fair; the Herb-Crusted Grilled Salmon and New York Cheesecake were the highlights, albeit not exceptional. Burger and Salad were average. Expected more from the price point.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 6.882352941176471
+2. Advertisement
+   Discover bold flavors at American Flavors USA with our new Bourbon Maple Glazed Chicken and Southwest Spiced Steak! Experience our enhanced Zesty Black Bean Burger with a smoky twist. Exceptional service and unforgettable tastes await you!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Our classic Cobb, now with more zest! Fresh mixed greens, grilled chicken, crispy bacon, hard-boiled eggs, avocado, and blue cheese with a zippy house dressing.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 6.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Our New York Cheesecake, now with a rich berry compote topping. Indulge in this classic dessert with a fruity twist.'}, {'id': 7, 'name': 'Fried Chicken Basket', 'price': 15.0, 'description': 'Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob.'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pork shoulder with tangy slaw on a brioche bun.'}, {'id': 11, 'name': "Smokin' Hot Brisket", 'price': 20.0, 'description': 'Slow-smoked beef brisket with a spicy BBQ glaze, served with jalapeño cornbread and coleslaw.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 14.0, 'description': 'Our black bean patty enhanced with a smoky chipotle sauce, avocado-lime mash, and crispy onions, on a toasted bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 17.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 22.0, 'description': 'A juicy steak rubbed with Southwest spices, served with a cilantro lime butter, black beans, and corn salsa.'}]
+4. Comments
+   [{'day': 2, 'name': 'Jake', 'score': 8, 'content': 'All dishes at American Flavors USA scored high, offering great taste, satisfying spice levels, and healthy options. The restaurant met diverse preferences, proving to be a hit for a budget-friendly, flavorful meal.'}, {'day': 2, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors USA offered a satisfying experience with their Zesty Black Bean Burger and Cobb Salad. The dishes were flavorful and catered to health-conscious preferences, with commendable service.'}, {'day': 2, 'name': 'Max', 'score': 8, 'content': 'Both diners enjoyed the balance of flavorful, home-style dishes and healthier options, with all dishes rating well. Great value and satisfying.'}, {'day': 2, 'name': 'Maggie', 'score': 8, 'content': 'American Flavors USA delivered a memorable dining experience with a perfect balance of creativity and flavor. Each dish was satisfying, with the cheesecake and brisket being highlights.'}, {'day': 2, 'name': 'Nora', 'score': 8, 'content': 'American Flavors USA provided a delightful dining experience, with well-executed dishes that catered to both comfort food lovers and gluten-free needs without compromising on flavor or quality.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "New York Cheesecake",
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken"
+    ],
+    "reason": "American Flavors USA has a higher customer score and comments suggest a balance of flavor and health, offering comfort food with a creative twist, which suits my relaxed personality."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+New York Cheesecake: 0.76
+Zesty Black Bean Burger: 0.8
+Bourbon Maple Glazed Chicken: 0.8
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The New York Cheesecake was decadently smooth with the berry compote adding a lovely tartness. The Zesty Black Bean Burger had a great texture and the smoky flavor was a delight. The Bourbon Maple Glazed Chicken was perfectly cooked with a balance of sweetness and savory."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Introducing The American Dream Burger, only at Classic American Bistro! Indulge in our premium burger with gourmet toppings and our unique dream sauce. Plus, enjoy revamped classics like the Herb-Crusted Grilled Salmon and our richer, creamier New York Cheesecake. Treat yourself to a memorable dining experience!
+3. Menu 
+   [{'id': 2, 'name': 'Classic Cheeseburger', 'price': 15.0, 'description': 'Juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a brioche bun.'}, {'id': 3, 'name': 'Spicy Buffalo Chicken Wings', 'price': 13.0, 'description': 'Crispy wings tossed in our fiery homemade buffalo sauce, served with a cooling blue cheese dip and crisp celery sticks.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 12.0, 'description': 'Revamped classic Caesar with crisp romaine, aged parmesan shards, house-made focaccia croutons, and our new signature Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 12.0, 'description': 'Our iconic cheesecake, now with an even richer and creamier texture, served with a choice of mixed berry or classic strawberry compote.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'A creamy blend of cheeses with elbow macaroni, topped with a crispy breadcrumb crust.'}, {'id': 7, 'name': 'Herb-Crusted Grilled Salmon', 'price': 28.0, 'description': 'Fresh, locally-sourced salmon with an updated herb crust, complemented by a lemon-herb butter sauce and a side of organic quinoa vegetable pilaf.'}, {'id': 8, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a flaky crust, served with vanilla ice cream on top.'}, {'id': 9, 'name': 'Pulled Pork Sandwich', 'price': 15.0, 'description': 'Slow-cooked pork shoulder, shredded and tossed in a tangy BBQ sauce, on a soft bun with pickles and a side of sweet potato fries.'}, {'id': 12, 'name': 'Lean Bison Burger', 'price': 17.0, 'description': 'Health-conscious bison patty, rich in protein and low in fat, with fresh greens, tomato, and a light mustard sauce on a whole grain bun.'}, {'id': 14, 'name': 'The American Dream Burger', 'price': 20.0, 'description': 'Premium beef patty, smoked bacon, aged cheddar, crispy onions, and our signature dream sauce on a toasted artisan bun.'}]
+4. Comments
+   [{'day': 2, 'name': 'Amelia', 'score': 6, 'content': 'All dishes at Classic American Bistro were fair but lacked exceptional qualities. The meal was satisfactory, with room for improvement in flavor and texture.'}, {'day': 2, 'name': 'Grace', 'score': 6, 'content': 'The Smokey BBQ Ribs shined, but the Herb-Crusted Grilled Salmon and Apple Pie a la Mode lacked the expected flair. The Caesar Salad was notably plain. The meal was satisfactory, with room for flavor enhancement.'}, {'day': 2, 'name': 'Tara', 'score': 6, 'content': 'The dishes were satisfactory, meeting health needs but lacking in flavor complexity and excitement, with the Smokey BBQ Ribs being the highlight.'}, {'day': 2, 'name': 'Dexter', 'score': 6, 'content': "The meal was satisfactory with consistent quality across dishes but lacked the distinctive flavors and excitement expected from the menu's promise. Desserts were the highlight in an otherwise average dining experience."}, {'day': 2, 'name': 'Wade', 'score': 6, 'content': 'The meal was generally fair; the Herb-Crusted Grilled Salmon and New York Cheesecake were the highlights, albeit not exceptional. Burger and Salad were average. Expected more from the price point.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.40625
+2. Advertisement
+   Come taste our new Spicy Southwest Chicken Skewers at American Flavors USA! Enjoy our diverse menu with bold gourmet flavors like our Bourbon Maple Glazed Chicken and the health-conscious Zesty Black Bean Burger. Indulge in quality, variety, and a culinary adventure!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 12.0, 'description': 'Our classic Cobb, now with more zest! Fresh mixed greens, grilled chicken, crispy bacon, hard-boiled eggs, avocado, and blue cheese with a zippy house dressing.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 7.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Our New York Cheesecake, now with a rich berry compote topping. Indulge in this classic dessert with a fruity twist.'}, {'id': 7, 'name': 'Fried Chicken Basket', 'price': 16.0, 'description': 'Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob.'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 11.0, 'description': 'Slow-cooked pork shoulder with tangy slaw on a brioche bun.'}, {'id': 11, 'name': "Smokin' Hot Brisket", 'price': 22.0, 'description': 'Slow-smoked beef brisket with a spicy BBQ glaze, served with jalapeño cornbread and coleslaw.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 15.0, 'description': 'Our black bean patty enhanced with a smoky chipotle sauce, avocado-lime mash, and crispy onions, on a toasted bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A juicy steak rubbed with Southwest spices, served with a cilantro lime butter, black beans, and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 16.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}]
+4. Comments
+   [{'day': 3, 'name': 'Jake', 'score': 8, 'content': 'American Flavors USA provided a mix of hearty and healthy options that were flavorful and well-received by all. The balance of savory, sweet, and spicy catered to our various tastes and dietary needs, earning a solid score from the group.'}, {'day': 3, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors USA delivered a meal that impressed us all, with a variety of dishes that were both flavorful and well-prepared. The service was exceptional, contributing to a satisfying dining experience. A solid choice for anyone looking for a mix of taste and health-conscious options.'}, {'day': 3, 'name': 'Grace', 'score': 8, 'content': 'The dishes at American Flavors USA were flavorful and catered to our health-conscious and taste preferences. The Black Bean Burger, Chicken, and Steak were all hits, and the desserts satisfied our sweet tooth without being excessive.'}, {'day': 3, 'name': 'Olivia', 'score': 8, 'content': "The meal was impressive, with the Zesty Black Bean Burger and Southwest Spiced Steak standing out. All dishes were flavorful and well-received, reflecting our satisfaction with American Flavors USA's offerings."}, {'day': 3, 'name': 'Max', 'score': 8, 'content': 'American Flavors USA impressed with the Zesty Black Bean Burger and Bourbon Maple Glazed Chicken, both scoring 8s. The Cobb Salad and New York Cheesecake followed closely, making for a very satisfying meal with fresh flavors and quality service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "New York Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score, and the recent comments about their dishes are very positive. The menu also offers a variety of flavorful and health-conscious options, which suits my relaxed personality."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.79
+Bourbon Maple Glazed Chicken: 0.8
+New York Cheesecake: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger was a delightful surprise, packed with flavor. The Bourbon Maple Glazed Chicken balanced sweetness and savory nuances perfectly. The New York Cheesecake was creamy with a tangy berry compote that complemented it well."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover the fresh flavors at Classic American Bistro! Savor the new Heartland Veggie Burger and Harvest Chicken Salad, alongside our improved American Dream Burger. Enjoy healthier options with our updated Caesar Salad and gluten-free New York Cheesecake. Come for the taste, stay for the experience!
+3. Menu 
+   [{'id': 2, 'name': 'Classic Cheeseburger', 'price': 15.0, 'description': 'Juicy beef patty with melted cheese, lettuce, tomato, and our special sauce on a brioche bun.'}, {'id': 4, 'name': 'Caesar Salad', 'price': 11.0, 'description': 'A refreshed take on the Caesar, with kale and romaine, shaved parmesan, multigrain croutons, and a lighter, tangy yogurt-based Caesar dressing.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 11.0, 'description': 'Classic New York Cheesecake, made with the finest ingredients, offering a gluten-free graham cracker crust and a choice of toppings: mixed berry or caramel pecan.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 12.0, 'description': 'A creamy blend of cheeses with elbow macaroni, topped with a crispy breadcrumb crust.'}, {'id': 7, 'name': 'Herb-Crusted Grilled Salmon', 'price': 25.0, 'description': 'Sustainably sourced salmon with a vibrant green herb crust, served with a citrus quinoa salad and a drizzle of aged balsamic.'}, {'id': 8, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Warm apple pie with a flaky crust, served with vanilla ice cream on top.'}, {'id': 14, 'name': 'The American Dream Burger', 'price': 18.0, 'description': 'Our best-selling beef patty, smoked bacon, aged cheddar, crispy onions, and our signature dream sauce, now with a side of seasoned sweet potato fries.'}, {'id': 15, 'name': 'Heartland Veggie Burger', 'price': 16.0, 'description': 'A wholesome veggie patty made from black beans, sweet corn, and fresh herbs, served with avocado-lime mash and sprouts on a multigrain bun.'}, {'id': 16, 'name': 'Harvest Chicken Salad', 'price': 14.0, 'description': 'Grilled chicken breast atop a bed of mixed greens, roasted butternut squash, dried cranberries, and spiced pecans, dressed with an apple cider vinaigrette.'}]
+4. Comments
+   [{'day': 2, 'name': 'Amelia', 'score': 6, 'content': 'All dishes at Classic American Bistro were fair but lacked exceptional qualities. The meal was satisfactory, with room for improvement in flavor and texture.'}, {'day': 2, 'name': 'Grace', 'score': 6, 'content': 'The Smokey BBQ Ribs shined, but the Herb-Crusted Grilled Salmon and Apple Pie a la Mode lacked the expected flair. The Caesar Salad was notably plain. The meal was satisfactory, with room for flavor enhancement.'}, {'day': 2, 'name': 'Tara', 'score': 6, 'content': 'The dishes were satisfactory, meeting health needs but lacking in flavor complexity and excitement, with the Smokey BBQ Ribs being the highlight.'}, {'day': 2, 'name': 'Dexter', 'score': 6, 'content': "The meal was satisfactory with consistent quality across dishes but lacked the distinctive flavors and excitement expected from the menu's promise. Desserts were the highlight in an otherwise average dining experience."}, {'day': 2, 'name': 'Wade', 'score': 6, 'content': 'The meal was generally fair; the Herb-Crusted Grilled Salmon and New York Cheesecake were the highlights, albeit not exceptional. Burger and Salad were average. Expected more from the price point.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.6
+2. Advertisement
+   Discover the flavors of America at American Flavors USA! Introducing our Grilled Portobello Burger for a delicious, health-friendly twist. Savor our customer favorites: Bourbon Maple Glazed Chicken and Spicy Southwest Chicken Skewers. Your journey to tantalizing tastes and wholesome dining starts here!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'Our classic Cobb, now with more zest! Fresh mixed greens, grilled chicken, crispy bacon, hard-boiled eggs, avocado, and blue cheese with a zippy house dressing.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 7.0, 'description': 'Classic American apple pie topped with a scoop of vanilla ice cream.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Our New York Cheesecake, now with a rich berry compote topping. Indulge in this classic dessert with a fruity twist.'}, {'id': 7, 'name': 'Fried Chicken Basket', 'price': 16.0, 'description': 'Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob.'}, {'id': 11, 'name': "Smokin' Hot Brisket", 'price': 23.0, 'description': 'Slow-smoked beef brisket with a spicy BBQ glaze, served with jalapeño cornbread and coleslaw.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 15.0, 'description': 'Our black bean patty enhanced with a smoky chipotle sauce, avocado-lime mash, and crispy onions, on a toasted bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A juicy steak rubbed with Southwest spices, served with a cilantro lime butter, black beans, and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 17.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}, {'id': 16, 'name': 'Grilled Portobello Burger', 'price': 14.0, 'description': 'A hearty grilled Portobello mushroom cap topped with melted Swiss cheese, roasted red peppers, and a light pesto aioli, served on a whole grain bun.'}]
+4. Comments
+   [{'day': 4, 'name': 'Jake', 'score': 8, 'content': 'American Flavors USA impressed with well-executed classics and healthier options, accommodating diverse palates and dietary needs, with standout service.'}, {'day': 4, 'name': 'Amelia', 'score': 8, 'content': 'Our group enjoyed the well-rounded flavors at American Flavors USA, with each dish receiving praise. The Mexican-inspired options were a highlight, and the healthy choices like the Cobb Salad complemented the meal. The service and quality were consistent with our expectations.'}, {'day': 4, 'name': 'Grace', 'score': 8, 'content': 'American Flavors USA provided a well-rounded dining experience. The Zesty Black Bean Burger and Bourbon Maple Glazed Chicken were flavorful highlights, and the freshness of the Cobb Salad and creamy New York Cheesecake with berry compote rounded off the meal perfectly.'}, {'day': 4, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors USA consistently satisfies with flavorful, health-conscious options. The Zesty Black Bean Burger and Spicy Southwest Chicken Skewers were highlights. Great for diverse diets, including gluten-free.'}, {'day': 4, 'name': 'Max', 'score': 8, 'content': 'The dishes at American Flavors USA were satisfying, flavor-rich and met our plant-based and comfort food preferences, providing a delightful dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "New York Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score, and recent comments highlight a satisfying balance of flavor and health, with positive remarks on the Zesty Black Bean Burger and Bourbon Maple Glazed Chicken."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.79
+Bourbon Maple Glazed Chicken: 0.8
+New York Cheesecake: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger was a flavorful delight, and the Bourbon Maple Glazed Chicken struck a perfect balance of sweet and savory. The New York Cheesecake was indulgently smooth, complemented by the berry compote."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.043478260869565
+2. Advertisement
+   Embark on a culinary journey at Classic American Bistro, featuring a revamped menu with locally-sourced ingredients and bold, innovative flavors. Indulge in our new Smashed Avocado Classic Burger, Superfood Caesar Salad, and Seasonal Berry Cheesecake. Perfect for foodies and health-conscious diners alike!
+3. Menu 
+   [{'id': 2, 'name': 'Smashed Avocado Classic Burger', 'price': 16.0, 'description': 'Grass-fed beef patty, smashed avocado, heirloom tomato, organic greens, and house sauce on an artisan bun.'}, {'id': 4, 'name': 'Superfood Caesar Salad', 'price': 12.0, 'description': 'Kale and baby spinach tossed in a light Caesar dressing, topped with toasted pumpkin seeds and a sprinkle of nutritional yeast.'}, {'id': 5, 'name': 'Seasonal Berry Cheesecake', 'price': 12.0, 'description': 'Creamy cheesecake topped with a fresh, seasonal berry compote on a gluten-free almond crust.'}, {'id': 6, 'name': 'Three-Cheese Mac & Greens', 'price': 13.0, 'description': 'A blend of three artisanal cheeses, elbow macaroni, and locally-sourced spinach, baked to perfection with a panko crust.'}, {'id': 7, 'name': 'Maple-Glazed Wild Salmon', 'price': 27.0, 'description': 'Line-caught wild salmon with a sweet maple glaze, served alongside a roasted seasonal vegetable medley.'}, {'id': 8, 'name': 'Old-Fashioned Apple Crumble Pie', 'price': 9.0, 'description': 'Rustic apple pie with a crumble topping, spiced with cinnamon and nutmeg, served with homemade vanilla bean ice cream.'}, {'id': 14, 'name': 'Ultimate Dream Burger', 'price': 19.0, 'description': 'Our signature beef patty, applewood smoked bacon, aged cheddar, crispy shallots, and dream sauce, on a toasted pretzel bun with garlic parmesan fries.'}, {'id': 15, 'name': 'Garden Harvest Veggie Burger', 'price': 17.0, 'description': 'A vibrant veggie patty loaded with garden vegetables, topped with a zesty lemon-tahini sauce, on a fresh-baked wheat bun.'}, {'id': 16, 'name': 'Autumn Chicken & Pomegranate Salad', 'price': 15.0, 'description': 'Succulent grilled chicken, mixed autumn leaves, pomegranate seeds, and candied walnuts, drizzled with a balsamic fig dressing.'}, {'id': 17, 'name': 'Local Beet & Goat Cheese Tart', 'price': 14.0, 'description': 'Roasted local beets, creamy goat cheese, on a flaky pastry crust, with a drizzle of honey-balsamic reduction.'}]
+4. Comments
+   [{'day': 5, 'name': 'Max', 'score': 6, 'content': 'Satisfactory meal with room for improvement. Dishes were fair but lacked distinctiveness. Fresh ingredients used, yet flavors did not impress.'}, {'day': 5, 'name': 'Nora', 'score': 7, 'content': 'Consistent fare but lacking in the distinctive flavors expected of fine dining and comfort food. Good for gluten-free options yet room for improvement in flavor depth and presentation.'}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': 'All dishes at Classic American Bistro were fair but lacked exceptional qualities. The meal was satisfactory, with room for improvement in flavor and texture.'}, {'day': 2, 'name': 'Grace', 'score': 6, 'content': 'The Smokey BBQ Ribs shined, but the Herb-Crusted Grilled Salmon and Apple Pie a la Mode lacked the expected flair. The Caesar Salad was notably plain. The meal was satisfactory, with room for flavor enhancement.'}, {'day': 2, 'name': 'Tara', 'score': 6, 'content': 'The dishes were satisfactory, meeting health needs but lacking in flavor complexity and excitement, with the Smokey BBQ Ribs being the highlight.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.671875
+2. Advertisement
+   Taste the season with American Flavors USA! Indulge in our new Seasonal Harvest Salad, bursting with fresh autumn flavors. Plus, don't miss our acclaimed Zesty Black Bean Burger and Bourbon Maple Glazed Chicken - a symphony of flavors awaits you!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'Our classic Cobb, now with more zest! Fresh mixed greens, grilled chicken, crispy bacon, hard-boiled eggs, avocado, and blue cheese with a zippy house dressing.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Our New York Cheesecake, now with a rich berry compote topping. Indulge in this classic dessert with a fruity twist.'}, {'id': 7, 'name': 'Fried Chicken Basket', 'price': 16.0, 'description': 'Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob.'}, {'id': 11, 'name': "Smokin' Hot Brisket", 'price': 23.0, 'description': 'Slow-smoked beef brisket with a spicy BBQ glaze, served with jalapeño cornbread and coleslaw.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 15.0, 'description': 'Our black bean patty enhanced with a smoky chipotle sauce, avocado-lime mash, and crispy onions, on a toasted bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A juicy steak rubbed with Southwest spices, served with a cilantro lime butter, black beans, and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 17.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}, {'id': 16, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A hearty grilled Portobello mushroom cap topped with melted Swiss cheese, roasted red peppers, and a light pesto aioli, served on a whole grain bun.'}, {'id': 17, 'name': 'Seasonal Harvest Salad', 'price': 14.0, 'description': 'A refreshing mix of seasonal greens, roasted pumpkin, spiced pecans, and goat cheese, tossed with a maple balsamic vinaigrette.'}]
+4. Comments
+   [{'day': 5, 'name': 'Jake', 'score': 8, 'content': 'American Flavors USA delivered on taste, accommodating dietary needs, and providing a satisfying experience with a blend of bold and healthy options.'}, {'day': 5, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors USA provided a diverse and satisfying meal that catered well to our tastes for Mexican food, with attentive service and a welcoming atmosphere.'}, {'day': 5, 'name': 'Grace', 'score': 8, 'content': 'American Flavors USA offers a variety of well-prepared dishes that cater to our health-conscious and diabetic-friendly needs, with a commendable service that enhances the dining experience.'}, {'day': 5, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors USA has consistently delivered with their health-conscious and flavorful menu. The Bourbon Maple Glazed Chicken was exceptional, and all dishes met our gluten-free needs. A reliable choice for delicious, quality meals.'}, {'day': 5, 'name': 'Maggie', 'score': 8, 'content': 'The meal was a hit with standout dishes like the Bourbon Maple Glazed Chicken and Spicy Southwest Chicken Skewers. Both the Zesty Black Bean Burger and Grilled Portobello Burger provided delicious vegetarian options. Consistent quality and flavor from American Flavors USA.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "New York Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score and the menu offers a balance of flavor and health, aligning with my relaxed personality and healthy lifestyle."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.79
+Bourbon Maple Glazed Chicken: 0.8
+New York Cheesecake: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger was incredibly tasty with just the right amount of spice. The Bourbon Maple Glazed Chicken was succulent and the glaze was a perfect blend of sweet and savory. The New York Cheesecake was rich, creamy, and the berry compote was a delightful addition."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.12
+2. Advertisement
+   Discover the taste of innovation at The American Dream Diner! Dive into our new Spicy Chipotle Chicken Bowl and Pecan-Crusted Trout, crafted for the flavor adventurer. Savor our signature dishes with a healthy twist, all prepared by our renowned Chef Ramsey. Your American dream meal awaits!
+3. Menu 
+   [{'id': 2, 'name': 'Smashed Avocado Classic Burger', 'price': 16.0, 'description': 'Grass-fed beef patty, smashed avocado, heirloom tomato, organic greens, and house sauce on an artisan bun.'}, {'id': 4, 'name': 'Superfood Caesar Salad', 'price': 12.0, 'description': 'Kale and baby spinach tossed in a light Caesar dressing, topped with toasted pumpkin seeds and a sprinkle of nutritional yeast.'}, {'id': 5, 'name': 'Seasonal Berry Cheesecake', 'price': 12.0, 'description': 'Creamy cheesecake topped with a fresh, seasonal berry compote on a gluten-free almond crust.'}, {'id': 6, 'name': 'Three-Cheese Mac & Greens', 'price': 25.0, 'description': 'A blend of three artisanal cheeses, elbow macaroni, and locally-sourced spinach, baked to perfection with a panko crust.'}, {'id': 8, 'name': 'Old-Fashioned Apple Crumble Pie', 'price': 9.0, 'description': 'Rustic apple pie with a crumble topping, spiced with cinnamon and nutmeg, served with homemade vanilla bean ice cream.'}, {'id': 14, 'name': 'Ultimate Dream Burger', 'price': 23.0, 'description': 'Our signature beef patty, applewood smoked bacon, aged cheddar, crispy shallots, and dream sauce, on a toasted pretzel bun with garlic parmesan fries.'}, {'id': 15, 'name': 'Garden Harvest Veggie Burger', 'price': 17.0, 'description': 'A vibrant veggie patty loaded with garden vegetables, topped with a zesty lemon-tahini sauce, on a fresh-baked wheat bun.'}, {'id': 16, 'name': 'Autumn Chicken & Pomegranate Salad', 'price': 17.0, 'description': 'Succulent grilled chicken, mixed autumn leaves, pomegranate seeds, and candied walnuts, drizzled with a balsamic fig dressing.'}, {'id': 18, 'name': 'Spicy Chipotle Chicken Bowl', 'price': 18.0, 'description': 'Grilled chipotle chicken served over a bed of brown rice and black beans, topped with corn salsa, fresh avocado, and a lime crema.'}, {'id': 19, 'name': 'Pecan-Crusted Trout', 'price': 26.0, 'description': 'Pan-seared trout with a crunchy pecan crust, accompanied by a sweet potato mash and sautéed green beans.'}]
+4. Comments
+   [{'day': 6, 'name': 'Olivia', 'score': 7, 'content': "Classic American Bistro's offerings were fair, achieving satisfactory scores. Dishes like the Smashed Avocado Burger and Maple-Glazed Salmon were good but lacked standout flavors. The gluten-free cheesecake was a highlight. Overall, a decent meal without the 'wow' factor."}, {'day': 6, 'name': 'William', 'score': 7, 'content': "Fair experience with consistent quality across dishes. Locally-sourced ingredients appreciated but flavors didn't exceed expectations or leave a lasting impression."}, {'day': 5, 'name': 'Max', 'score': 6, 'content': 'Satisfactory meal with room for improvement. Dishes were fair but lacked distinctiveness. Fresh ingredients used, yet flavors did not impress.'}, {'day': 5, 'name': 'Nora', 'score': 7, 'content': 'Consistent fare but lacking in the distinctive flavors expected of fine dining and comfort food. Good for gluten-free options yet room for improvement in flavor depth and presentation.'}, {'day': 2, 'name': 'Amelia', 'score': 6, 'content': 'All dishes at Classic American Bistro were fair but lacked exceptional qualities. The meal was satisfactory, with room for improvement in flavor and texture.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.698795180722891
+2. Advertisement
+   Discover bold flavors at American Flavors USA! Feast on our new Sizzling Garlic Butter Shrimp and revamped classics like the Zesty Black Bean Burger and Southwest Spiced Steak. Experience our culinary innovation with every bite. Your taste adventure starts here!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'Crisp mixed greens, succulent grilled chicken, smoked bacon, boiled eggs, fresh avocado, and creamy blue cheese, served with our enhanced bold house dressing.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Our New York Cheesecake, now with a rich berry compote topping. Indulge in this classic dessert with a fruity twist.'}, {'id': 7, 'name': 'Fried Chicken Basket', 'price': 16.0, 'description': 'Crispy fried chicken served with mashed potatoes, gravy, and corn on the cob.'}, {'id': 11, 'name': "Smokin' Hot Brisket", 'price': 23.0, 'description': 'Slow-smoked beef brisket with a spicy BBQ glaze, served with jalapeño cornbread and coleslaw.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 15.0, 'description': 'A hearty black bean patty topped with a tangy chipotle sauce, ripe avocado-lime mash, and crispy onions, encased in a warm, toasted bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 17.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}, {'id': 16, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A hearty grilled Portobello mushroom cap topped with melted Swiss cheese, roasted red peppers, and a light pesto aioli, served on a whole grain bun.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 19.0, 'description': 'Juicy shrimp sautéed in garlic butter, served with a side of aromatic jasmine rice and garnished with fresh parsley.'}]
+4. Comments
+   [{'day': 6, 'name': 'Jake', 'score': 8, 'content': 'American Flavors USA delivered a delightful mix of tastes. The Spicy Southwest Chicken Skewers and Zesty Black Bean Burger were highlights. Overall, a great dining experience with a focus on flavor and health.'}, {'day': 6, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors USA consistently delivers with its variety of well-crafted dishes. The balance of savory and sweet profiles paired with fresh ingredients made for another satisfying visit.'}, {'day': 6, 'name': 'Grace', 'score': 8, 'content': 'American Flavors USA delivered a delightful dining experience with dishes meeting our taste and dietary needs. The standout was the Bourbon Maple Glazed Chicken, and the New York Cheesecake was a treat suitable for a diabetic diet.'}, {'day': 6, 'name': 'Max', 'score': 8, 'content': 'American Flavors USA offered a variety of well-executed dishes, satisfying our cravings for both plant-based options and home-cooked flavors, with standout items like the Zesty Black Bean Burger and Bourbon Maple Glazed Chicken.'}, {'day': 6, 'name': 'Maggie', 'score': 8, 'content': 'American Flavors USA delivered a consistently high-quality dining experience with flavorful, health-conscious dishes, meeting our expectations for freshness and taste.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "New York Cheesecake"
+    ],
+    "reason": "American Flavors USA's menu options and high customer score align with my preference for flavorful dishes. The positive comments on their balance of taste and health suit my relaxed and health-conscious lifestyle."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.79
+Bourbon Maple Glazed Chicken: 0.8
+New York Cheesecake: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger was exceptionally flavorful, the Bourbon Maple Glazed Chicken had a perfect sweet and savory balance, and the New York Cheesecake was rich and satisfying with its berry compote."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.214285714285714
+2. Advertisement
+   Indulge in flavor and freshness at Classic American Bistro! Experience our newly updated menu with bold, complex tastes like the Garden Harvest Veggie Burger with Sweet Potato Fries and our Bourbon Pecan Apple Crumble Pie. Prepared by the acclaimed Chef Ramsey using premium, locally-sourced ingredients. Your journey to a memorable American dining experience starts here!
+3. Menu 
+   [{'id': 2, 'name': 'Smashed Avocado Classic Burger', 'price': 16.0, 'description': 'Grass-fed beef patty, smashed avocado, heirloom tomato, organic greens, and house sauce on an artisan bun.'}, {'id': 4, 'name': 'Superfood Caesar Salad with Grilled Chicken', 'price': 14.0, 'description': 'Kale and baby spinach tossed in a light Caesar dressing, topped with grilled chicken, toasted pumpkin seeds, and a sprinkle of nutritional yeast for a protein boost.'}, {'id': 5, 'name': 'Seasonal Berry Cheesecake', 'price': 12.0, 'description': 'Creamy cheesecake topped with a fresh, seasonal berry compote on a gluten-free almond crust.'}, {'id': 6, 'name': 'Three-Cheese Mac & Greens', 'price': 25.0, 'description': 'A blend of three artisanal cheeses, elbow macaroni, and locally-sourced spinach, baked to perfection with a panko crust.'}, {'id': 8, 'name': 'Bourbon Pecan Apple Crumble Pie', 'price': 11.0, 'description': 'Rustic apple pie with a bourbon pecan crumble topping, spiced with cinnamon and nutmeg, served with homemade vanilla bean ice cream.'}, {'id': 14, 'name': 'Ultimate Dream Burger', 'price': 23.0, 'description': 'Our signature beef patty, applewood smoked bacon, aged cheddar, crispy shallots, and dream sauce, on a toasted pretzel bun with garlic parmesan fries.'}, {'id': 15, 'name': 'Garden Harvest Veggie Burger with Sweet Potato Fries', 'price': 19.0, 'description': 'Our veggie patty loaded with garden vegetables, topped with zesty lemon-tahini sauce, on a fresh-baked wheat bun, served with sweet potato fries.'}, {'id': 16, 'name': 'Autumn Chicken & Pomegranate Salad', 'price': 17.0, 'description': 'Succulent grilled chicken, mixed autumn leaves, pomegranate seeds, and candied walnuts, drizzled with a balsamic fig dressing.'}, {'id': 18, 'name': 'Hickory-Smoked Chipotle Chicken Bowl', 'price': 20.0, 'description': 'Hickory-smoked chipotle chicken served over a bed of cilantro-lime rice and black beans, topped with corn salsa, fresh avocado, and a lime crema.'}, {'id': 19, 'name': 'Herb-Crusted Trout with Roasted Vegetables', 'price': 28.0, 'description': 'Pan-seared trout with a crunchy herb and pecan crust, accompanied by a roasted vegetable medley and a sweet potato mash.'}]
+4. Comments
+   [{'day': 7, 'name': 'Max', 'score': 7, 'content': 'Classic American Bistro provided a consistent and satisfying experience with well-prepared dishes like the Garden Harvest Veggie Burger and Smashed Avocado Classic Burger, which both Sam and I enjoyed. The Three-Cheese Mac & Greens and Seasonal Berry Cheesecake were also good, contributing to our decision to score the meal a solid 7 out of 10.'}, {'day': 7, 'name': 'Oscar', 'score': 7, 'content': 'The dishes at Classic American Bistro were good but not remarkable. The Smashed Avocado Classic Burger was satisfying, and the Superfood Caesar Salad was a healthy option, though it lacked a wow factor. The Old-Fashioned Apple Crumble Pie ended the meal on a sweet note. Overall, a decent dining experience.'}, {'day': 7, 'name': 'Katie', 'score': 7, 'content': "The Superfood Caesar Salad and Garden Harvest Veggie Burger were fresh and in line with my vegan preferences, but they lacked the flavor complexity I've found in dishes at American Flavors USA. While satisfying, a more vibrant use of herbs and spices could improve the experience."}, {'day': 6, 'name': 'Olivia', 'score': 7, 'content': "Classic American Bistro's offerings were fair, achieving satisfactory scores. Dishes like the Smashed Avocado Burger and Maple-Glazed Salmon were good but lacked standout flavors. The gluten-free cheesecake was a highlight. Overall, a decent meal without the 'wow' factor."}, {'day': 6, 'name': 'William', 'score': 7, 'content': "Fair experience with consistent quality across dishes. Locally-sourced ingredients appreciated but flavors didn't exceed expectations or leave a lasting impression."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.737373737373737
+2. Advertisement
+   American Flavors USA welcomes you to a world of exquisite tastes! Try our new Harvest Veggie Stack and enjoy revamped favorites like our signature Cobb Salad. Come for the unique flavors, stay for the health-conscious dining. Your culinary journey awaits!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs smothered in our homemade BBQ sauce, served with coleslaw and fries.'}, {'id': 3, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'Crisp mixed greens, succulent grilled chicken, smoked bacon, boiled eggs, fresh avocado, and creamy blue cheese, served with our signature bold house dressing.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Indulge in our classic New York Cheesecake, now with a rich berry compote topping for an exquisite blend of flavors.'}, {'id': 11, 'name': "Smokin' Hot Brisket", 'price': 23.0, 'description': 'Slow-smoked beef brisket with a spicy BBQ glaze, served with jalapeño cornbread and coleslaw.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 15.0, 'description': 'A hearty black bean patty topped with a tangy chipotle sauce, ripe avocado-lime mash, and crispy onions, encased in a warm, toasted bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 17.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}, {'id': 16, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A hearty grilled Portobello mushroom cap topped with melted Swiss cheese, roasted red peppers, and a light pesto aioli, served on a whole grain bun.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 19.0, 'description': 'Juicy shrimp sautéed in garlic butter, served with a side of aromatic jasmine rice and garnished with fresh parsley.'}, {'id': 19, 'name': 'Harvest Veggie Stack', 'price': 14.0, 'description': 'Layers of grilled seasonal vegetables stacked high, served with a balsamic reduction and herb-infused olive oil.'}]
+4. Comments
+   [{'day': 7, 'name': 'Jake', 'score': 8, 'content': 'American Flavors USA provided a delightful meal with well-seasoned, health-conscious options. The dishes were flavorful without being too salty, catering to our dietary needs. Consistently good food and service.'}, {'day': 7, 'name': 'Amelia', 'score': 8, 'content': 'Consistently good across the board, each dish at American Flavors USA was prepared with a clear focus on flavor and quality. The seafood and vegetarian options stood out, and the meal concluded nicely with a creamy cheesecake.'}, {'day': 7, 'name': 'Grace', 'score': 8, 'content': 'Overall, our group was satisfied with the meal at American Flavors USA. All dishes were rated good to excellent, with highlights being the Spicy Southwest Chicken Skewers. The restaurant maintained its reputation for flavorful, diabetic-friendly options.'}, {'day': 7, 'name': 'Olivia', 'score': 8, 'content': "The dishes at American Flavors USA were flavorful and well-received, meeting both Olivia's gluten-free needs and Charlie's healthy eating preferences. Overall, a satisfying and enjoyable meal."}, {'day': 7, 'name': 'Maggie', 'score': 8, 'content': 'The varied menu at American Flavors USA catered to our tastes, with standout dishes like the Sizzling Garlic Butter Shrimp. The health-conscious options were flavorful and appreciated.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "New York Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score with positive remarks on their dishes and service. Their menu aligns with my health-conscious lifestyle while also offering the flavors I enjoy."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.79
+Bourbon Maple Glazed Chicken: 0.8
+New York Cheesecake: 0.74
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger was delightfully spiced and satisfying. The Bourbon Maple Glazed Chicken offered a harmonious blend of flavors, and the New York Cheesecake was a creamy, dreamy finish to the meal."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.214285714285714
+2. Advertisement
+   Savor the bold new flavors at Classic American Bistro! Our revamped menu features the American Dream Deluxe Burger, Energizing Superfood Caesar, and Citrus Herb Roasted Chicken, all crafted by the exceptional Chef Ramsey. Join us for a culinary adventure that celebrates the spirit of American cuisine with locally-sourced, vibrant ingredients.
+3. Menu 
+   [{'id': 2, 'name': 'Smashed Avocado Classic Burger', 'price': 16.0, 'description': 'Grass-fed beef patty, smashed avocado, heirloom tomato, organic greens, and house sauce on an artisan bun.'}, {'id': 4, 'name': 'Energizing Superfood Caesar', 'price': 12.0, 'description': 'Crispy romaine and kale, avocado slices, mixed seeds, and a zesty lemon-garlic dressing, with optional grilled chicken or tofu.'}, {'id': 5, 'name': 'Seasonal Berry Cheesecake', 'price': 12.0, 'description': 'Creamy cheesecake topped with a fresh, seasonal berry compote on a gluten-free almond crust.'}, {'id': 8, 'name': 'Bourbon Pecan Apple Crumble Pie', 'price': 11.0, 'description': 'Rustic apple pie with a bourbon pecan crumble topping, spiced with cinnamon and nutmeg, served with homemade vanilla bean ice cream.'}, {'id': 14, 'name': 'American Dream Deluxe Burger', 'price': 21.0, 'description': 'Our classic burger with smoked bacon, sharp cheddar, onion jam, and dream sauce, on a brioche bun. Comes with truffle fries.'}, {'id': 15, 'name': 'Garden Harvest Veggie Burger with Sweet Potato Fries', 'price': 19.0, 'description': 'Our veggie patty loaded with garden vegetables, topped with zesty lemon-tahini sauce, on a fresh-baked wheat bun, served with sweet potato fries.'}, {'id': 16, 'name': 'Autumn Chicken & Pomegranate Salad', 'price': 17.0, 'description': 'Succulent grilled chicken, mixed autumn leaves, pomegranate seeds, and candied walnuts, drizzled with a balsamic fig dressing.'}, {'id': 18, 'name': 'Hickory-Smoked Chipotle Chicken Bowl', 'price': 20.0, 'description': 'Hickory-smoked chipotle chicken served over a bed of cilantro-lime rice and black beans, topped with corn salsa, fresh avocado, and a lime crema.'}, {'id': 19, 'name': 'Citrus Herb Roasted Chicken', 'price': 24.0, 'description': 'Juicy roasted chicken with a citrus herb glaze, served with a quinoa and roasted vegetable salad.'}, {'id': 20, 'name': 'Smokey BBQ Brisket Sandwich', 'price': 18.0, 'description': 'Slow-cooked brisket with our signature BBQ sauce, crispy onions, and coleslaw on a brioche bun, served with house pickles.'}]
+4. Comments
+   [{'day': 7, 'name': 'Max', 'score': 7, 'content': 'Classic American Bistro provided a consistent and satisfying experience with well-prepared dishes like the Garden Harvest Veggie Burger and Smashed Avocado Classic Burger, which both Sam and I enjoyed. The Three-Cheese Mac & Greens and Seasonal Berry Cheesecake were also good, contributing to our decision to score the meal a solid 7 out of 10.'}, {'day': 7, 'name': 'Oscar', 'score': 7, 'content': 'The dishes at Classic American Bistro were good but not remarkable. The Smashed Avocado Classic Burger was satisfying, and the Superfood Caesar Salad was a healthy option, though it lacked a wow factor. The Old-Fashioned Apple Crumble Pie ended the meal on a sweet note. Overall, a decent dining experience.'}, {'day': 7, 'name': 'Katie', 'score': 7, 'content': "The Superfood Caesar Salad and Garden Harvest Veggie Burger were fresh and in line with my vegan preferences, but they lacked the flavor complexity I've found in dishes at American Flavors USA. While satisfying, a more vibrant use of herbs and spices could improve the experience."}, {'day': 6, 'name': 'Olivia', 'score': 7, 'content': "Classic American Bistro's offerings were fair, achieving satisfactory scores. Dishes like the Smashed Avocado Burger and Maple-Glazed Salmon were good but lacked standout flavors. The gluten-free cheesecake was a highlight. Overall, a decent meal without the 'wow' factor."}, {'day': 6, 'name': 'William', 'score': 7, 'content': "Fair experience with consistent quality across dishes. Locally-sourced ingredients appreciated but flavors didn't exceed expectations or leave a lasting impression."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.773913043478261
+2. Advertisement
+   Savor the bold flavors of American Flavors USA with our updated menu! Indulge in the new Ultimate Philly Cheesesteak and American Dream Pancakes. Our fan-favorites like the Zesty Black Bean Burger and Sizzling Garlic Butter Shrimp are waiting for you. Experience the taste of America today!
+3. Menu 
+   [{'id': 3, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A modern twist on the classic with organic mixed greens, heritage chicken, crispy turkey bacon, avocado, soft-boiled egg, and a bold lemon-herb dressing.'}, {'id': 6, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Indulge in our classic New York Cheesecake, now with a rich berry compote topping for an exquisite blend of flavors.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 15.0, 'description': 'A hearty black bean patty topped with a tangy chipotle sauce, ripe avocado-lime mash, and crispy onions, encased in a warm, toasted bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 17.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}, {'id': 16, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A hearty grilled Portobello mushroom cap topped with melted Swiss cheese, roasted red peppers, and a light pesto aioli, served on a whole grain bun.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 19.0, 'description': 'Juicy shrimp sautéed in garlic butter, served with a side of aromatic jasmine rice and garnished with fresh parsley.'}, {'id': 19, 'name': 'Harvest Veggie Stack', 'price': 14.0, 'description': 'Layers of grilled seasonal vegetables stacked high, served with a balsamic reduction and herb-infused olive oil.'}, {'id': 20, 'name': 'American Dream Pancakes', 'price': 12.0, 'description': 'Fluffy pancakes layered with blueberry compote and whipped cream, topped with a drizzle of maple syrup and a sprinkle of cinnamon.'}, {'id': 21, 'name': 'Ultimate Philly Cheesesteak', 'price': 16.0, 'description': 'Thinly sliced ribeye steak with melted provolone, sautéed onions and peppers, packed into a freshly baked hoagie roll.'}]
+4. Comments
+   [{'day': 8, 'name': 'Jake', 'score': 8, 'content': 'The meal was a success with all dishes scored good to excellent. Favorites were the Zesty Black Bean Burger and Spicy Southwest Chicken Skewers. Satisfying for those with health-conscious and spicy preferences alike.'}, {'day': 8, 'name': 'Amelia', 'score': 8, 'content': 'The dishes at American Flavors USA met our expectations for flavor and quality. The standout was the Sizzling Garlic Butter Shrimp, and the overall dining experience was satisfying.'}, {'day': 8, 'name': 'Grace', 'score': 8, 'content': 'American Flavors USA delivered a satisfying experience with standout dishes like the Spicy Southwest Chicken Skewers. The balance of health-conscious ingredients and rich flavors catered well to our dietary needs and taste preferences.'}, {'day': 8, 'name': 'Olivia', 'score': 8, 'content': 'Our meal at American Flavors USA was a success, with each dish delivering on flavor and health. The Harvest Veggie Stack and Sizzling Garlic Butter Shrimp were particularly noteworthy. Consistent quality and attention to dietary needs were appreciated, making for a delightful dining experience.'}, {'day': 8, 'name': 'Max', 'score': 8, 'content': 'Delicious plant-based options and home-style cooking. The Zesty Black Bean Burger and Bourbon Maple Glazed Chicken were highlights. Overall, a satisfying balance of health and flavor.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "New York Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score, with favorable feedback on the Zesty Black Bean Burger and Bourbon Maple Glazed Chicken, aligning with my taste for flavorful and health-conscious meals."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Zesty Black Bean Burger: 0.79
+Bourbon Maple Glazed Chicken: 0.8
+New York Cheesecake: 0.74
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "score": 8,
+    "comment": "American Flavors USA offered a satisfying meal. The Zesty Black Bean Burger had a delightful kick, and the Bourbon Maple Glazed Chicken balanced sweet and savory well. The New York Cheesecake was creamy, though slightly less impressive. Overall, a good dining experience but room for dessert improvement."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.275862068965517
+2. Advertisement
+   Discover Classic American Bistro's local charm with our freshly curated menu! Delight in our Hearty American Beef Stew and Classic American Apple Pie, a homage to traditional American flavors. Crafted by Chef Ramsey, our dishes celebrate locally-sourced produce for a genuine taste of America. Visit us for an unforgettable dining experience where quality meets comfort.
+3. Menu 
+   [{'id': 2, 'name': 'Smashed Avocado Classic Burger', 'price': 14.0, 'description': 'Grass-fed beef patty, smashed avocado, heirloom tomato, organic greens, and house sauce on an artisan bun.'}, {'id': 4, 'name': 'Energizing Superfood Caesar', 'price': 10.0, 'description': 'Crispy romaine and kale, avocado slices, mixed seeds, and a zesty lemon-garlic dressing, with optional grilled chicken or tofu.'}, {'id': 14, 'name': 'American Dream Deluxe Burger', 'price': 19.0, 'description': 'Our classic burger with smoked bacon, sharp cheddar, onion jam, and dream sauce, on a brioche bun. Comes with truffle fries.'}, {'id': 15, 'name': 'Garden Harvest Veggie Burger with Sweet Potato Fries', 'price': 17.0, 'description': 'Our veggie patty loaded with garden vegetables, topped with zesty lemon-tahini sauce, on a fresh-baked wheat bun, served with sweet potato fries.'}, {'id': 16, 'name': 'Autumn Chicken & Pomegranate Salad', 'price': 15.0, 'description': 'Succulent grilled chicken, mixed autumn leaves, pomegranate seeds, and candied walnuts, drizzled with a balsamic fig dressing.'}, {'id': 18, 'name': 'Hickory-Smoked Chipotle Chicken Bowl', 'price': 18.0, 'description': 'Hickory-smoked chipotle chicken served over a bed of cilantro-lime rice and black beans, topped with corn salsa, fresh avocado, and a lime crema.'}, {'id': 19, 'name': 'Citrus Herb Roasted Chicken', 'price': 22.0, 'description': 'Juicy roasted chicken with a citrus herb glaze, served with a quinoa and roasted vegetable salad.'}, {'id': 20, 'name': 'Smokey BBQ Brisket Sandwich', 'price': 16.0, 'description': 'Slow-cooked brisket with our signature BBQ sauce, crispy onions, and coleslaw on a brioche bun, served with house pickles.'}, {'id': 21, 'name': 'Hearty American Beef Stew', 'price': 15.0, 'description': 'Tender chunks of beef with potatoes, carrots, and onions in a rich savory broth.'}, {'id': 22, 'name': 'Classic American Apple Pie', 'price': 10.0, 'description': 'Traditional apple pie with a flaky crust and a cinnamon-spiced apple filling, served with a scoop of vanilla ice cream.'}]
+4. Comments
+   [{'day': 9, 'name': 'William', 'score': 8, 'content': 'Classic American Bistro served up a variety of flavors that catered well to our group’s diverse palates, with commendable service and a vibrant atmosphere.'}, {'day': 7, 'name': 'Max', 'score': 7, 'content': 'Classic American Bistro provided a consistent and satisfying experience with well-prepared dishes like the Garden Harvest Veggie Burger and Smashed Avocado Classic Burger, which both Sam and I enjoyed. The Three-Cheese Mac & Greens and Seasonal Berry Cheesecake were also good, contributing to our decision to score the meal a solid 7 out of 10.'}, {'day': 7, 'name': 'Oscar', 'score': 7, 'content': 'The dishes at Classic American Bistro were good but not remarkable. The Smashed Avocado Classic Burger was satisfying, and the Superfood Caesar Salad was a healthy option, though it lacked a wow factor. The Old-Fashioned Apple Crumble Pie ended the meal on a sweet note. Overall, a decent dining experience.'}, {'day': 7, 'name': 'Katie', 'score': 7, 'content': "The Superfood Caesar Salad and Garden Harvest Veggie Burger were fresh and in line with my vegan preferences, but they lacked the flavor complexity I've found in dishes at American Flavors USA. While satisfying, a more vibrant use of herbs and spices could improve the experience."}, {'day': 6, 'name': 'Olivia', 'score': 7, 'content': "Classic American Bistro's offerings were fair, achieving satisfactory scores. Dishes like the Smashed Avocado Burger and Maple-Glazed Salmon were good but lacked standout flavors. The gluten-free cheesecake was a highlight. Overall, a decent meal without the 'wow' factor."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.793893129770993
+2. Advertisement
+   Come taste the innovation at American Flavors USA! Introducing the new Sunset Berry Cheesecake, bursting with citrus and berries on a gluten-free crust. Enjoy our enhanced Zesty Black Bean Burger and our classic dishes with a twist. Fresh, flavorful, and health-conscious dining awaits you!
+3. Menu 
+   [{'id': 3, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'Our classic Cobb revamped with a zestier lemon-herb dressing and an extra sprinkle of bold spices to invigorate your taste buds.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 15.0, 'description': 'Our beloved black bean patty gets a flavor boost with smoked paprika aioli, avocado-lime mash, and crispy onions in a gluten-free bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 17.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}, {'id': 16, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A hearty grilled Portobello mushroom cap topped with melted Swiss cheese, roasted red peppers, and a light pesto aioli, served on a whole grain bun.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 19.0, 'description': 'Juicy shrimp sautéed in garlic butter, served with a side of aromatic jasmine rice and garnished with fresh parsley.'}, {'id': 19, 'name': 'Harvest Veggie Stack', 'price': 14.0, 'description': 'Layers of grilled seasonal vegetables stacked high, served with a balsamic reduction and herb-infused olive oil.'}, {'id': 20, 'name': 'American Dream Pancakes', 'price': 12.0, 'description': 'Fluffy pancakes layered with blueberry compote and whipped cream, topped with a drizzle of maple syrup and a sprinkle of cinnamon.'}, {'id': 21, 'name': 'Ultimate Philly Cheesesteak', 'price': 16.0, 'description': 'Thinly sliced ribeye steak with melted provolone, sautéed onions and peppers, packed into a freshly baked hoagie roll.'}, {'id': 22, 'name': 'Sunset Berry Cheesecake', 'price': 11.0, 'description': 'A velvety cheesecake infused with citrus flavors, topped with a vibrant berry compote and a drizzle of pomegranate reduction on a gluten-free crust.'}]
+4. Comments
+   [{'day': 9, 'name': 'Jake', 'score': 8, 'content': 'All dishes from American Flavors USA scored high among us for their balanced spices and health-conscious options, perfect for our varied tastes and dietary needs.'}, {'day': 9, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors USA provided an excellent dining experience with a balance of healthy and flavorful dishes. The Sizzling Garlic Butter Shrimp and Spicy Southwest Chicken Skewers were particularly outstanding.'}, {'day': 9, 'name': 'Grace', 'score': 8, 'content': 'American Flavors USA offered a delightful mix of freshness and flavor, respecting dietary needs without compromising on taste.'}, {'day': 9, 'name': 'Olivia', 'score': 8, 'content': 'The meal at American Flavors USA was once again a satisfying experience, with each dish scoring high on flavor and presentation. Standouts included the Sizzling Garlic Butter Shrimp and the Zesty Black Bean Burger. The restaurant continues to impress with its dedication to health-conscious and gluten-free options.'}, {'day': 9, 'name': 'Max', 'score': 8, 'content': 'The meal at American Flavors USA was a hit with favorites like the Zesty Black Bean Burger and Bourbon Maple Glazed Chicken scoring high. New selections like the Harvest Veggie Stack and Sizzling Garlic Butter Shrimp also impressed. A well-rounded meal with a balance of health and indulgence.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "Sunset Berry Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score and offers a varied menu that includes the Zesty Black Bean Burger and Bourbon Maple Glazed Chicken, both aligning with my preference for flavorful and health-conscious meals."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.78
+Bourbon Maple Glazed Chicken: 0.79
+Sunset Berry Cheesecake: 0.75
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger offered a delightful mix of flavors, perfectly spiced. The Bourbon Maple Glazed Chicken was a savory treat, and the Sunset Berry Cheesecake was a luscious end to the meal."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.333333333333333
+2. Advertisement
+   Indulge in the flavors of America at Classic American Bistro. Our signature Liberty BBQ Pulled Pork Sandwich and Patriot's Prime Ribeye Steak are a must-try! Masterfully crafted by Chef Ramsey, our dishes are a celebration of local produce and American culinary excellence. Join us and savor the taste of tradition with a modern twist.
+3. Menu 
+   [{'id': 14, 'name': 'American Dream Deluxe Burger', 'price': 21.0, 'description': 'Our classic burger with smoked bacon, sharp cheddar, onion jam, and dream sauce, on a brioche bun. Comes with truffle fries.'}, {'id': 15, 'name': 'Garden Harvest Veggie Burger with Sweet Potato Fries', 'price': 18.0, 'description': 'Our veggie patty loaded with garden vegetables, topped with zesty lemon-tahini sauce, on a fresh-baked wheat bun, served with sweet potato fries.'}, {'id': 16, 'name': 'Autumn Chicken & Pomegranate Salad', 'price': 17.0, 'description': 'Succulent grilled chicken, mixed autumn leaves, pomegranate seeds, and candied walnuts, drizzled with a balsamic fig dressing.'}, {'id': 18, 'name': 'Hickory-Smoked Chipotle Chicken Bowl', 'price': 20.0, 'description': 'Hickory-smoked chipotle chicken served over a bed of cilantro-lime rice and black beans, topped with corn salsa, fresh avocado, and a lime crema.'}, {'id': 19, 'name': 'Citrus Herb Roasted Chicken', 'price': 24.0, 'description': 'Juicy roasted chicken with a citrus herb glaze, served with a quinoa and roasted vegetable salad.'}, {'id': 20, 'name': 'Smokey BBQ Brisket Sandwich', 'price': 18.0, 'description': 'Slow-cooked brisket with our signature BBQ sauce, crispy onions, and coleslaw on a brioche bun, served with house pickles.'}, {'id': 21, 'name': 'Hearty American Beef Stew', 'price': 17.0, 'description': 'Tender chunks of beef with potatoes, carrots, and onions in a rich savory broth.'}, {'id': 22, 'name': 'Classic American Apple Pie', 'price': 12.0, 'description': 'Traditional apple pie with a flaky crust and a cinnamon-spiced apple filling, served with a scoop of vanilla ice cream.'}, {'id': 23, 'name': 'Liberty BBQ Pulled Pork Sandwich', 'price': 16.0, 'description': 'Slow-roasted pulled pork smothered in Liberty BBQ sauce, topped with crispy slaw and served on a toasted brioche bun.'}, {'id': 24, 'name': "Patriot's Prime Ribeye Steak", 'price': 27.0, 'description': 'Grilled to perfection, this prime ribeye steak is seasoned with our signature spice blend and served with garlic mashed potatoes and grilled asparagus.'}]
+4. Comments
+   [{'day': 10, 'name': 'Max', 'score': 8, 'content': 'Classic American Bistro provided comforting, home-style dishes with consistent quality. Plant-based options were satisfying, and traditional dishes like the beef stew and apple pie hit the spot. Good variety and a positive experience overall.'}, {'day': 9, 'name': 'William', 'score': 8, 'content': 'Classic American Bistro served up a variety of flavors that catered well to our group’s diverse palates, with commendable service and a vibrant atmosphere.'}, {'day': 7, 'name': 'Max', 'score': 7, 'content': 'Classic American Bistro provided a consistent and satisfying experience with well-prepared dishes like the Garden Harvest Veggie Burger and Smashed Avocado Classic Burger, which both Sam and I enjoyed. The Three-Cheese Mac & Greens and Seasonal Berry Cheesecake were also good, contributing to our decision to score the meal a solid 7 out of 10.'}, {'day': 7, 'name': 'Oscar', 'score': 7, 'content': 'The dishes at Classic American Bistro were good but not remarkable. The Smashed Avocado Classic Burger was satisfying, and the Superfood Caesar Salad was a healthy option, though it lacked a wow factor. The Old-Fashioned Apple Crumble Pie ended the meal on a sweet note. Overall, a decent dining experience.'}, {'day': 7, 'name': 'Katie', 'score': 7, 'content': "The Superfood Caesar Salad and Garden Harvest Veggie Burger were fresh and in line with my vegan preferences, but they lacked the flavor complexity I've found in dishes at American Flavors USA. While satisfying, a more vibrant use of herbs and spices could improve the experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.815068493150685
+2. Advertisement
+   Discover bold flavors and healthy dining at American Flavors USA! Savor our popular Zesty Black Bean Burger, indulge in the new Smokin' Hot Brisket, and finish with our delightful Sunset Berry Cheesecake. Perfectly priced for quality and taste—come experience our crowd favorites!
+3. Menu 
+   [{'id': 3, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Our classic Cobb revamped with a zestier lemon-herb dressing and an extra sprinkle of bold spices to invigorate your taste buds.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 16.0, 'description': 'Our beloved black bean patty gets a flavor boost with smoked paprika aioli, avocado-lime mash, and crispy onions in a gluten-free bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 19.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 15, 'name': 'Spicy Southwest Chicken Skewers', 'price': 17.0, 'description': 'Grilled chicken skewers marinated in a spicy Southwest blend, served with a cooling avocado dip.'}, {'id': 16, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A hearty grilled Portobello mushroom cap topped with melted Swiss cheese, roasted red peppers, and a light pesto aioli, served on a whole grain bun.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 19.0, 'description': 'Juicy shrimp sautéed in garlic butter, served with a side of aromatic jasmine rice and garnished with fresh parsley.'}, {'id': 19, 'name': 'Harvest Veggie Stack', 'price': 14.0, 'description': 'Layers of grilled seasonal vegetables stacked high, served with a balsamic reduction and herb-infused olive oil.'}, {'id': 21, 'name': 'Ultimate Philly Cheesesteak', 'price': 16.0, 'description': 'Thinly sliced ribeye steak with melted provolone, sautéed onions and peppers, packed into a freshly baked hoagie roll.'}, {'id': 22, 'name': 'Sunset Berry Cheesecake', 'price': 12.0, 'description': 'A velvety cheesecake infused with citrus flavors, topped with a vibrant berry compote and a drizzle of pomegranate reduction on a gluten-free crust.'}, {'id': 23, 'name': "Smokin' Hot Brisket", 'price': 20.0, 'description': 'Tender brisket smoked over hickory, glazed with a spicy-sweet BBQ sauce, served with a side of tangy coleslaw and seasoned fries.'}]
+4. Comments
+   [{'day': 10, 'name': 'Jake', 'score': 8, 'content': 'American Flavors USA delivered a satisfying meal with a good mix of health-conscious and boldly flavored dishes, consistently meeting our diverse tastes and dietary needs.'}, {'day': 10, 'name': 'Amelia', 'score': 8, 'content': "American Flavors USA delivered a satisfying meal with each dish rated highly for freshness, balance of flavors, and quality. The restaurant's consistency in providing a delightful dining experience was appreciated by all members."}, {'day': 10, 'name': 'Grace', 'score': 8, 'content': 'American Flavors USA offered a satisfying variety of dishes that were well-received. The Zesty Black Bean Burger, Sunset Berry Cheesecake, and Sizzling Garlic Butter Shrimp were standouts, aligning with health-conscious preferences and diabetic-friendly needs.'}, {'day': 10, 'name': 'Olivia', 'score': 8, 'content': 'American Flavors USA continues to impress with its consistent quality and health-conscious options. The Zesty Black Bean Burger and Sizzling Garlic Butter Shrimp were standouts, while the Cobb Salad and Sunset Berry Cheesecake rounded out a thoroughly enjoyable meal.'}, {'day': 10, 'name': 'Maggie', 'score': 8, 'content': 'American Flavors USA delivered a pleasurable dining experience with the Zesty Black Bean Burger and the Bourbon Maple Glazed Chicken as highlights. The Sunset Berry Cheesecake, although lacking a chocolatey depth, was enjoyable. The Sizzling Garlic Butter Shrimp and Cobb Salad were commendable for their freshness. A great choice for health-conscious diners looking for flavor.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "Sunset Berry Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score and offers dishes that received positive feedback for their flavor and health-conscious options, matching my lifestyle and preferences."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.72
+Bourbon Maple Glazed Chicken: 0.73
+Sunset Berry Cheesecake: 0.68
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger was delightfully savory with a good spice level. The Bourbon Maple Glazed Chicken was excellently balanced, and the Sunset Berry Cheesecake was a refreshing and satisfying end to a delightful meal."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.387096774193548
+2. Advertisement
+   Discover bold flavors at Classic American Bistro! Experience our revamped menu with The American Innovator Burger and Patriot's Prime Ribeye Perfection, all crafted by Chef Ramsey using the finest local ingredients. Don't miss our new Stars & Stripes Berry Parfait—celebrate with us and taste the innovation!
+3. Menu 
+   [{'id': 14, 'name': 'The American Innovator Burger', 'price': 22.0, 'description': 'A fresh twist on our classic, with peppered bacon, aged cheddar, caramelized onion marmalade, and bourbon BBQ sauce, on a pretzel bun. Served with truffle fries.'}, {'id': 18, 'name': 'Hickory-Smoked Chipotle Chicken Bowl', 'price': 20.0, 'description': 'Hickory-smoked chipotle chicken served over a bed of cilantro-lime rice and black beans, topped with corn salsa, fresh avocado, and a lime crema.'}, {'id': 19, 'name': 'Citrus Herb Roasted Chicken', 'price': 24.0, 'description': 'Juicy roasted chicken with a citrus herb glaze, served with a quinoa and roasted vegetable salad.'}, {'id': 20, 'name': 'Smokey BBQ Brisket Sandwich', 'price': 18.0, 'description': 'Slow-cooked brisket with our signature BBQ sauce, crispy onions, and coleslaw on a brioche bun, served with house pickles.'}, {'id': 21, 'name': 'Hearty American Beef Stew', 'price': 17.0, 'description': 'Tender chunks of beef with potatoes, carrots, and onions in a rich savory broth.'}, {'id': 22, 'name': 'Classic American Apple Pie', 'price': 12.0, 'description': 'Traditional apple pie with a flaky crust and a cinnamon-spiced apple filling, served with a scoop of vanilla ice cream.'}, {'id': 23, 'name': 'Liberty BBQ Pulled Pork Deluxe', 'price': 17.0, 'description': 'Our succulent pulled pork elevated with a spicy honey-BBQ sauce, topped with apple-cabbage slaw, and served on an artisanal sourdough bun.'}, {'id': 24, 'name': "Patriot's Prime Ribeye Perfection", 'price': 28.0, 'description': 'Our prime ribeye, expertly seasoned with a unique herb crust, served with a side of truffle-roasted fingerling potatoes and balsamic-glazed brussel sprouts.'}, {'id': 25, 'name': 'Stars & Stripes Berry Parfait', 'price': 10.0, 'description': 'A patriotic parfait layered with fresh strawberries, blueberries, and creamy yogurt, topped with a drizzle of local honey and crunchy granola.'}]
+4. Comments
+   [{'day': 11, 'name': 'Dexter', 'score': 8, 'content': "The group enjoyed the well-executed dishes at Classic American Bistro, with each member rating the overall meal an 8 out of 10. The standout dishes included the Liberty BBQ Pulled Pork Sandwich and the Patriot's Prime Ribeye Steak, both of which were cooked to perfection and full of flavor."}, {'day': 10, 'name': 'Max', 'score': 8, 'content': 'Classic American Bistro provided comforting, home-style dishes with consistent quality. Plant-based options were satisfying, and traditional dishes like the beef stew and apple pie hit the spot. Good variety and a positive experience overall.'}, {'day': 9, 'name': 'William', 'score': 8, 'content': 'Classic American Bistro served up a variety of flavors that catered well to our group’s diverse palates, with commendable service and a vibrant atmosphere.'}, {'day': 7, 'name': 'Max', 'score': 7, 'content': 'Classic American Bistro provided a consistent and satisfying experience with well-prepared dishes like the Garden Harvest Veggie Burger and Smashed Avocado Classic Burger, which both Sam and I enjoyed. The Three-Cheese Mac & Greens and Seasonal Berry Cheesecake were also good, contributing to our decision to score the meal a solid 7 out of 10.'}, {'day': 7, 'name': 'Oscar', 'score': 7, 'content': 'The dishes at Classic American Bistro were good but not remarkable. The Smashed Avocado Classic Burger was satisfying, and the Superfood Caesar Salad was a healthy option, though it lacked a wow factor. The Old-Fashioned Apple Crumble Pie ended the meal on a sweet note. Overall, a decent dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.730061349693251
+2. Advertisement
+   Taste the difference with American Flavors USA's enhanced menu! Enjoy our best-selling Zesty Black Bean Burger, dive into the richer, more indulgent Sunset Berry Cheesecake, and welcome back the classic American Burger. Fresh, bold, and health-conscious—join us for an unforgettable dining experience!
+3. Menu 
+   [{'id': 3, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'Our signature Cobb Salad with an upgraded, more vibrant lemon-avocado dressing, and an extra kick from homemade spiced croutons.'}, {'id': 12, 'name': 'Zesty Black Bean Burger', 'price': 16.0, 'description': 'Our beloved black bean patty gets a flavor boost with smoked paprika aioli, avocado-lime mash, and crispy onions in a gluten-free bun.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken', 'price': 19.0, 'description': 'Grilled chicken breast with a sweet and savory bourbon maple glaze, served with roasted sweet potatoes and seasonal greens.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 19.0, 'description': 'Juicy shrimp sautéed in garlic butter, served with a side of aromatic jasmine rice and garnished with fresh parsley.'}, {'id': 19, 'name': 'Harvest Veggie Stack', 'price': 14.0, 'description': 'Layers of grilled seasonal vegetables stacked high, served with a balsamic reduction and herb-infused olive oil.'}, {'id': 22, 'name': 'Sunset Berry Cheesecake', 'price': 12.0, 'description': 'Our classic cheesecake gets a twist with deeper berry flavors and a richer, creamier texture, topped with a lush mixed berry compote on a gluten-free crust.'}, {'id': 23, 'name': "Smokin' Hot Brisket", 'price': 20.0, 'description': 'Tender brisket smoked over hickory, glazed with a spicy-sweet BBQ sauce, served with a side of tangy coleslaw and seasoned fries.'}, {'id': 24, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'A juicy beef patty with lettuce, tomato, pickles, and our secret sauce, served on a toasted sesame seed bun with a side of golden fries.'}]
+4. Comments
+   [{'day': 11, 'name': 'Jake', 'score': 7, 'content': "American Flavors USA delivered a comforting meal, with standout dishes like the Zesty Black Bean Burger and Spicy Southwest Chicken Skewers. Service was commendable, but there's room for more creativity in flavors."}, {'day': 11, 'name': 'Amelia', 'score': 7, 'content': 'Dishes were generally good with some room for enhanced flavors. Enjoyable meal with quality service.'}, {'day': 11, 'name': 'Grace', 'score': 7, 'content': "The dishes at American Flavors USA were consistently good, with the Sizzling Garlic Butter Shrimp being a standout. While the Sunset Berry Cheesecake didn't quite meet expectations, the overall experience remained positive, offering delicious, health-conscious options suitable for a diabetic diet."}, {'day': 11, 'name': 'Olivia', 'score': 7, 'content': 'American Flavors USA delivered a consistently good dining experience, with standout dishes like the Sizzling Garlic Butter Shrimp. A reliable choice for quality and service.'}, {'day': 11, 'name': 'Max', 'score': 7, 'content': 'A satisfying meal with each dish well-prepared. Highlights include the Sizzling Garlic Butter Shrimp for its rich flavor. Good balance between health and taste.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Zesty Black Bean Burger",
+        "Bourbon Maple Glazed Chicken",
+        "Sunset Berry Cheesecake"
+    ],
+    "reason": "American Flavors USA has a higher customer score and offers dishes that align with my preferences for flavorful, health-conscious meals, such as the Zesty Black Bean Burger and Bourbon Maple Glazed Chicken."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Zesty Black Bean Burger: 0.68
+Bourbon Maple Glazed Chicken: 0.69
+Sunset Berry Cheesecake: 0.64
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "feeling": "The Zesty Black Bean Burger was exceptionally flavorful with the right amount of spice. The Bourbon Maple Glazed Chicken was perfectly balanced, and the Sunset Berry Cheesecake was indulgently satisfying. A delightful meal overall."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.6923076923076925
+2. Advertisement
+   Introducing the Freedom Trail Chili and Bald Eagle Beef Dip at Classic American Bistro! Join us for a culinary journey with our innovative twists on American classics. Savour the rich heritage flavors crafted by Chef Ramsey. Celebrate tradition with a modern edge. Taste the difference—only at Classic American Bistro!
+3. Menu 
+   [{'id': 14, 'name': 'The American Innovator Burger', 'price': 22.0, 'description': 'Our innovative take on the classic burger with peppered bacon, aged cheddar, tangy pickled red onions, and smoky BBQ sauce on a brioche bun. Served with truffle fries.'}, {'id': 19, 'name': 'Citrus Herb Roasted Chicken', 'price': 24.0, 'description': 'Juicy roasted chicken with a citrus herb glaze, served with a quinoa and roasted vegetable salad.'}, {'id': 21, 'name': 'Hearty American Beef Stew', 'price': 17.0, 'description': 'Tender chunks of beef with potatoes, carrots, and onions in a rich savory broth.'}, {'id': 22, 'name': 'Classic American Apple Pie', 'price': 12.0, 'description': 'Traditional apple pie with a flaky crust and a cinnamon-spiced apple filling, served with a scoop of vanilla ice cream.'}, {'id': 23, 'name': 'Liberty BBQ Pulled Pork Deluxe', 'price': 17.0, 'description': 'Our succulent pulled pork elevated with a spicy honey-BBQ sauce, topped with apple-cabbage slaw, and served on an artisanal sourdough bun.'}, {'id': 24, 'name': "Patriot's Prime Ribeye Perfection", 'price': 28.0, 'description': 'Our prime ribeye with a bold coffee rub, served with a side of truffle-roasted fingerling potatoes and a bourbon-mushroom sauce.'}, {'id': 25, 'name': 'Stars & Stripes Berry Parfait', 'price': 10.0, 'description': 'A patriotic parfait layered with fresh strawberries, blueberries, and creamy yogurt, topped with a drizzle of local honey and crunchy granola.'}, {'id': 26, 'name': 'Freedom Trail Chili', 'price': 18.0, 'description': 'A hearty chili with a mix of beef, beans, and secret spices, topped with sour cream, cheddar cheese, and green onions, served with homemade cornbread.'}, {'id': 27, 'name': 'Bald Eagle Beef Dip', 'price': 23.0, 'description': 'Shaved prime rib on a rustic baguette, served with a rich au jus dipping sauce and horseradish cream, accompanied by garlic herb fries.'}]
+4. Comments
+   [{'day': 12, 'name': 'Jake', 'score': 8, 'content': 'Classic American Bistro provided a consistently good dining experience across the board. Each dish impressed with balanced flavors and met our diverse tastes and health considerations.'}, {'day': 12, 'name': 'Grace', 'score': 8, 'content': 'Classic American Bistro offers a variety of well-executed dishes that cater to different tastes and dietary needs, with consistent quality and satisfying flavors.'}, {'day': 12, 'name': 'Maggie', 'score': 8, 'content': 'The Classic American Bistro offered a uniformly good dining experience with well-executed dishes like the American Innovator Burger and the Stars & Stripes Berry Parfait, each earning a commendable 8 out of 10.'}, {'day': 12, 'name': 'Tara', 'score': 8, 'content': 'Classic American Bistro delivered a universally good dining experience, with all dishes scoring consistently high across the board. The balance of flavors and quality ingredients met our diverse tastes and dietary needs.'}, {'day': 12, 'name': 'Dexter', 'score': 8, 'content': 'Classic American Bistro provided a uniformly good dining experience, with each dish scoring an 8. The flavors were well-balanced, and the meal left us thoroughly satisfied.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.682080924855492
+2. Advertisement
+   Discover bold flavors at American Flavors USA! Our refined menu features the new Avocado Quinoa Power Bowl and Vegan BBQ Jackfruit Sandwich, alongside enhanced favorites like the Bourbon Maple Glazed Chicken Supreme. Perfect for the health-conscious and flavor seekers alike!
+3. Menu 
+   [{'id': 3, 'name': 'Cobb Salad Deluxe', 'price': 16.0, 'description': 'Elevated Cobb Salad with applewood smoked bacon, avocado, heirloom tomatoes, and a house-made blue cheese dressing.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 17.0, 'description': 'Our black bean burger with a spicy twist, chipotle mayo, fresh jalapeños, and a side of crispy tortilla chips.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken Supreme', 'price': 21.0, 'description': 'A succulent chicken breast with a richer bourbon maple glaze, accompanied by garlic mashed potatoes and grilled asparagus.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 19.0, 'description': 'Juicy shrimp sautéed in garlic butter, served with a side of aromatic jasmine rice and garnished with fresh parsley.'}, {'id': 19, 'name': 'Harvest Veggie Stack', 'price': 14.0, 'description': 'Layers of grilled seasonal vegetables stacked high, served with a balsamic reduction and herb-infused olive oil.'}, {'id': 25, 'name': 'Avocado Quinoa Power Bowl', 'price': 15.0, 'description': 'A nutritious bowl packed with quinoa, fresh avocado, spiced black beans, corn, cherry tomatoes, and a zesty lime dressing.'}, {'id': 26, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Smoky BBQ jackfruit with vegan slaw, served on a toasted artisan bun with a side of sweet potato fries.'}]
+4. Comments
+   [{'day': 12, 'name': 'Olivia', 'score': 7, 'content': 'A satisfactory dining experience, though not up to past excellence. Highlight was the Sizzling Garlic Butter Shrimp. Improvement needed to match previous high standards.'}, {'day': 12, 'name': 'Max', 'score': 7, 'content': 'Consistent and satisfying with standout plant-based options. The meal was overall good, though some dishes like the Cobb Salad and Sunset Berry Cheesecake could be improved.'}, {'day': 12, 'name': 'Nora', 'score': 7, 'content': "The meal was generally good, with the Sizzling Garlic Butter Shrimp standing out as the favorite. The flavors were balanced, but the Cobb Salad and Smokin' Hot Brisket lacked a bit of excitement. Consistent quality, but room for improvement in some dishes."}, {'day': 12, 'name': 'Frank', 'score': 7, 'content': "The meal was satisfactory, with the Bourbon Maple Glazed Chicken slightly standing out. Vegan options were appreciated, though overall, dishes lacked a wow factor. The dessert's richness and flavor fell short of expectations."}, {'day': 12, 'name': 'Yasmine', 'score': 7, 'content': 'The dishes were good, meeting our dietary needs with fresh ingredients, though they lacked some flavor complexity and zest.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Spicy Black Bean Burger",
+        "Bourbon Maple Glazed Chicken Supreme",
+        "Avocado Quinoa Power Bowl"
+    ],
+    "reason": "American Flavors USA has a higher customer score and offers a menu that includes health-conscious options like the Avocado Quinoa Power Bowl, which suits my preference for flavorful meals."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Spicy Black Bean Burger: 0.71
+Bourbon Maple Glazed Chicken Supreme: 0.72
+Avocado Quinoa Power Bowl: 0.7
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "score": 7,
+    "comment": "The dishes at American Flavors USA were satisfactory, with the Bourbon Maple Glazed Chicken standing out with a subtle sweetness. The Spicy Black Bean Burger could use a bit more zest, and the Avocado Quinoa Power Bowl was nourishing but lacked excitement. A good meal overall, but there's room for improvement in flavor complexity."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 6.914893617021277
+2. Advertisement
+   Discover Classic American Bistro's new signature dish—Patriot's Prime Ribeye Signature! Indulge in our coffee-rubbed prime ribeye, paired with garlic mashed potatoes and bourbon-mushroom sauce. Crafted by renowned Chef Ramsey, this dish celebrates the rich flavors of America. Experience a taste of tradition with us!
+3. Menu 
+   [{'id': 19, 'name': 'Revolutionary Citrus Roasted Chicken', 'price': 25.0, 'description': 'Herb-marinated chicken roasted to perfection with a citrus glaze, accompanied by a side of roasted sweet potatoes and seasonal greens.'}, {'id': 21, 'name': 'Hearty Colonial Beef Stew', 'price': 18.0, 'description': 'A robust stew with tender beef, potatoes, and traditional colonial herbs, served with a side of freshly baked cornbread.'}, {'id': 22, 'name': 'Classic American Apple Pie', 'price': 12.0, 'description': 'Traditional apple pie with a flaky crust and a cinnamon-spiced apple filling, served with a scoop of vanilla ice cream.'}, {'id': 23, 'name': 'Liberty BBQ Pulled Pork Deluxe', 'price': 17.0, 'description': 'Our succulent pulled pork elevated with a spicy honey-BBQ sauce, topped with apple-cabbage slaw, and served on an artisanal sourdough bun.'}, {'id': 24, 'name': "Patriot's Prime Ribeye Signature", 'price': 30.0, 'description': 'Our signature coffee-rubbed prime ribeye, served with garlic mashed potatoes and a side of bourbon-mushroom sauce.'}, {'id': 25, 'name': 'Stars & Stripes Berry Parfait', 'price': 10.0, 'description': 'A patriotic parfait layered with fresh strawberries, blueberries, and creamy yogurt, topped with a drizzle of local honey and crunchy granola.'}, {'id': 26, 'name': 'Freedom Trail Chili', 'price': 18.0, 'description': 'A hearty chili with a mix of beef, beans, and secret spices, topped with sour cream, cheddar cheese, and green onions, served with homemade cornbread.'}, {'id': 27, 'name': 'Bald Eagle Beef Dip', 'price': 23.0, 'description': 'Shaved prime rib on a rustic baguette, served with a rich au jus dipping sauce and horseradish cream, accompanied by garlic herb fries.'}, {'id': 28, 'name': 'American Pioneer Pot Roast', 'price': 26.0, 'description': 'Slow-cooked pot roast with root vegetables and a red wine reduction, reflecting the spirit of American pioneers.'}]
+4. Comments
+   [{'day': 13, 'name': 'Jake', 'score': 8, 'content': 'Consistent quality across all dishes with well-balanced flavors that cater to our health and taste preferences. Satisfactory experience with good service.'}, {'day': 13, 'name': 'Grace', 'score': 8, 'content': 'Classic American Bistro provided a harmonious blend of traditional flavors and health-conscious options, satisfying our diverse preferences and dietary needs.'}, {'day': 13, 'name': 'Olivia', 'score': 8, 'content': 'Classic American Bistro delivered a diverse menu that catered well to our health-conscious and gluten-free needs without sacrificing flavor, earning a solid 8 from us.'}, {'day': 13, 'name': 'Maggie', 'score': 8, 'content': 'Classic American Bistro provided a uniformly good dining experience, with each dish scoring an 8 out of 10 for its quality and flavor.'}, {'day': 13, 'name': 'Nora', 'score': 8, 'content': 'Classic American Bistro provided a consistent, good-quality meal with satisfactory gluten-free options. While lacking exceptional flair, the dishes were enjoyable and service commendable. An agreeable experience, yet the previous touch of American Flavors USA was missed.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.653846153846154
+2. Advertisement
+   Taste the explosion of flavors at American Flavors USA! Try our zesty Cobb Salad Deluxe, fiery Spicy Black Bean Burger, and new Bold-Spiced Sweet Potato Wedges. Plus, savor the enhanced Sizzling Garlic Butter Shrimp. Indulge in our healthful and bold culinary creations!
+3. Menu 
+   [{'id': 3, 'name': 'Cobb Salad Deluxe', 'price': 17.0, 'description': 'Our elevated Cobb Salad now with zesty pickled onions, crisp applewood smoked bacon, avocado, heirloom tomatoes, and a bold house-made blue cheese dressing.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 18.0, 'description': 'A spicy black bean burger topped with chipotle mayo, fresh jalapeños, melted pepper jack cheese, and a side of crispy tortilla chips.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken Supreme', 'price': 21.0, 'description': 'A succulent chicken breast with a richer bourbon maple glaze, accompanied by garlic mashed potatoes and grilled asparagus.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 24.0, 'description': 'A tender steak perfectly seasoned with Southwest spices and served with a side of creamy cilantro-lime butter, accompanied by a vibrant black bean and corn salsa.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 20.0, 'description': 'Juicy shrimp sautéed in a richer garlic butter sauce, served with aromatic jasmine rice and a sprinkle of red chili flakes.'}, {'id': 19, 'name': 'Harvest Veggie Stack', 'price': 14.0, 'description': 'Layers of grilled seasonal vegetables stacked high, served with a balsamic reduction and herb-infused olive oil.'}, {'id': 25, 'name': 'Avocado Quinoa Power Bowl', 'price': 15.0, 'description': 'A nutritious bowl packed with quinoa, fresh avocado, spiced black beans, corn, cherry tomatoes, and a zesty lime dressing.'}, {'id': 26, 'name': 'Vegan BBQ Jackfruit Sandwich', 'price': 16.0, 'description': 'Smoky BBQ jackfruit with vegan slaw, served on a toasted artisan bun with a side of sweet potato fries.'}, {'id': 27, 'name': 'Bold-Spiced Sweet Potato Wedges', 'price': 10.0, 'description': 'Crispy sweet potato wedges seasoned with a bold blend of spices, served with a creamy garlic aioli dip.'}]
+4. Comments
+   [{'day': 13, 'name': 'Amelia', 'score': 7, 'content': 'Our group enjoyed the consistent flavors of American Flavors USA, with standout dishes like the Sizzling Garlic Butter Shrimp. While most dishes were satisfying, the Cobb Salad Deluxe slightly underperformed. Overall, a good dining experience with room for improvement.'}, {'day': 13, 'name': 'Max', 'score': 7, 'content': 'The dishes were generally good, with a balance of health and taste. Plant-based options like the Spicy Black Bean Burger and Harvest Veggie Stack were highlights. Affordable prices and comforting flavors made for a satisfying experience.'}, {'day': 13, 'name': 'Yasmine', 'score': 7, 'content': 'The vegan options at American Flavors USA were satisfying, with the Harvest Veggie Stack being the standout dish. Service was good, complementing a pleasant dining experience.'}, {'day': 13, 'name': 'Wade', 'score': 7, 'content': 'Our favorites like the Bourbon Maple Glazed Chicken and Sizzling Garlic Butter Shrimp maintained good standards. The Harvest Veggie Stack was fresh, and the healthier options like the Avocado Quinoa Power Bowl and Vegan BBQ Jackfruit Sandwich were satisfying.'}, {'day': 13, 'name': 'William', 'score': 7, 'content': 'The group enjoyed the flavorful and health-conscious meal. Standouts were the Southwest Spiced Steak and Sizzling Garlic Butter Shrimp. Consistent with high standards and good service.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "dishes": [
+        "Bourbon Maple Glazed Chicken Supreme",
+        "Avocado Quinoa Power Bowl",
+        "Bold-Spiced Sweet Potato Wedges"
+    ],
+    "reason": "American Flavors USA has a slightly higher customer score and offers a variety of health-conscious dishes that appeal to my tastes, such as the Bourbon Maple Glazed Chicken Supreme."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Bourbon Maple Glazed Chicken Supreme: 0.74
+Avocado Quinoa Power Bowl: 0.72
+Bold-Spiced Sweet Potato Wedges: 0.72
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "American Flavors USA",
+    "score": 7,
+    "comment": "The Bourbon Maple Glazed Chicken Supreme had a pleasant sweetness, while the Avocado Quinoa Power Bowl was nutritious but could use more flavor. The Bold-Spiced Sweet Potato Wedges were a nice touch. Overall, a good meal, but not as impressive as past visits."
+}
+
+[System->Leo]: The Restaurant " Classic American Bistro "information as below:
+1. Customer Score: 7.072727272727272
+2. Advertisement
+   Unleash your taste buds with our Bold American Bison Burger, a new sensation at Classic American Bistro! Savor the unique blend of spices and whiskey BBQ sauce in every bite. Join us for a culinary adventure with Chef Ramsey's latest masterpiece, where American flavors meet bold innovation.
+3. Menu 
+   [{'id': 19, 'name': 'Revolutionary Citrus Roasted Chicken', 'price': 27.0, 'description': 'Herb-marinated chicken roasted to perfection with a citrus glaze, accompanied by a side of roasted sweet potatoes and seasonal greens.'}, {'id': 21, 'name': 'Hearty Colonial Beef Stew', 'price': 20.0, 'description': 'A robust stew with tender beef, potatoes, and traditional colonial herbs, served with a side of freshly baked cornbread.'}, {'id': 22, 'name': 'Classic American Apple Pie', 'price': 14.0, 'description': 'Traditional apple pie with a flaky crust and a cinnamon-spiced apple filling, served with a scoop of vanilla ice cream.'}, {'id': 23, 'name': 'Liberty BBQ Pulled Pork Deluxe', 'price': 19.0, 'description': 'Our succulent pulled pork elevated with a spicy honey-BBQ sauce, topped with apple-cabbage slaw, and served on an artisanal sourdough bun.'}, {'id': 24, 'name': "Patriot's Prime Ribeye Signature", 'price': 32.0, 'description': 'Our signature coffee-rubbed prime ribeye, served with garlic mashed potatoes and a side of bourbon-mushroom sauce.'}, {'id': 25, 'name': 'Stars & Stripes Berry Parfait', 'price': 12.0, 'description': 'A patriotic parfait layered with fresh strawberries, blueberries, and creamy yogurt, topped with a drizzle of local honey and crunchy granola.'}, {'id': 26, 'name': 'Freedom Trail Chili', 'price': 20.0, 'description': 'A hearty chili with a mix of beef, beans, and secret spices, topped with sour cream, cheddar cheese, and green onions, served with homemade cornbread.'}, {'id': 27, 'name': 'Bald Eagle Beef Dip', 'price': 25.0, 'description': 'Shaved prime rib on a rustic baguette, served with a rich au jus dipping sauce and horseradish cream, accompanied by garlic herb fries.'}, {'id': 29, 'name': 'Bold American Bison Burger', 'price': 28.0, 'description': 'A hearty bison patty seasoned with our secret spice blend, topped with smoked cheddar, crispy onions, and a tangy whiskey BBQ sauce, served with seasoned fries.'}]
+4. Comments
+   [{'day': 14, 'name': 'Jake', 'score': 8, 'content': 'Classic American Bistro provided a satisfying experience with well-balanced, health-conscious dishes. All members rated the meal consistently high, appreciating both the flavors and the consideration for dietary needs.'}, {'day': 14, 'name': 'Olivia', 'score': 8, 'content': 'All dishes at Classic American Bistro scored an 8, satisfying both taste and health preferences with their unique and flavorful profiles.'}, {'day': 14, 'name': 'Maggie', 'score': 8, 'content': "Classic American Bistro delivered a delightful dining experience with well-prepared dishes like the Patriot's Prime Ribeye Signature and satisfying desserts such as the Stars & Stripes Berry Parfait."}, {'day': 14, 'name': 'Nora', 'score': 8, 'content': 'All dishes at Classic American Bistro were savored for their rich flavors and satisfying quality, meriting a consistent score of 8.1 from both of us, reflecting their good range.'}, {'day': 14, 'name': 'Frank', 'score': 8, 'content': 'Classic American Bistro impressed us with creative, well-executed dishes that satisfied diverse dietary preferences, from vegan to meat-centric. Each dish scored an 8.1, reflecting delicious flavors and a memorable dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: The Restaurant " American Flavors USA "information as below:
+1. Customer Score: 7.626943005181347
+2. Advertisement
+   Discover bold new tastes at American Flavors USA! Featuring our innovative Zesty Chimichurri Tofu Platter and the fiery Harvest Veggie Stack Fire-Roasted Edition. Our menu is a tribute to health-conscious delights with a flavorful twist. Join us for a culinary adventure that caters to all palates!
+3. Menu 
+   [{'id': 3, 'name': 'Cobb Salad Deluxe', 'price': 17.0, 'description': 'Our elevated Cobb Salad now with zesty pickled onions, crisp applewood smoked bacon, avocado, heirloom tomatoes, and a bold house-made blue cheese dressing.'}, {'id': 12, 'name': 'Spicy Black Bean Burger', 'price': 18.0, 'description': 'A spicy black bean burger topped with chipotle mayo, fresh jalapeños, melted pepper jack cheese, and a side of crispy tortilla chips.'}, {'id': 13, 'name': 'Bourbon Maple Glazed Chicken Supreme', 'price': 21.0, 'description': 'A succulent chicken breast with a richer bourbon maple glaze, accompanied by garlic mashed potatoes and grilled asparagus.'}, {'id': 14, 'name': 'Southwest Spiced Steak', 'price': 26.0, 'description': 'A tender steak perfectly seasoned with Southwest spices, served with grilled street corn and a side of charred tomato salsa.'}, {'id': 18, 'name': 'Sizzling Garlic Butter Shrimp', 'price': 20.0, 'description': 'Juicy shrimp sautéed in a richer garlic butter sauce, served with aromatic jasmine rice and a sprinkle of red chili flakes.'}, {'id': 19, 'name': 'Harvest Veggie Stack Fire-Roasted Edition', 'price': 15.0, 'description': 'Our classic Harvest Veggie Stack with an added kick of fire-roasted peppers and sun-dried tomato pesto, drizzled with a balsamic reduction.'}, {'id': 25, 'name': 'Avocado Quinoa Power Bowl', 'price': 15.0, 'description': 'A nutritious bowl packed with quinoa, fresh avocado, spiced black beans, corn, cherry tomatoes, and a zesty lime dressing.'}, {'id': 27, 'name': 'Bold-Spiced Sweet Potato Wedges', 'price': 10.0, 'description': 'Crispy sweet potato wedges seasoned with a bold blend of spices, served with a creamy garlic aioli dip.'}, {'id': 28, 'name': 'Zesty Chimichurri Tofu Platter', 'price': 16.0, 'description': 'Grilled tofu steak topped with vibrant chimichurri sauce, served with a side of roasted root vegetables and quinoa salad.'}]
+4. Comments
+   [{'day': 14, 'name': 'Amelia', 'score': 8, 'content': 'American Flavors USA delivered a satisfying meal with the Sizzling Garlic Butter Shrimp as the standout. While dishes were well-received, some lacked a bold flavor punch. Consistent quality and healthy options make it a solid choice.'}, {'day': 14, 'name': 'Grace', 'score': 7, 'content': 'Overall, a satisfying dining experience with fresh, healthy options like the Harvest Veggie Stack and Avocado Quinoa Power Bowl. The Sizzling Garlic Butter Shrimp was a highlight. Seasoning could be enhanced, but American Flavors USA catered well to our dietary needs.'}, {'day': 14, 'name': 'Max', 'score': 7, 'content': 'The dishes at American Flavors USA offered a satisfying balance between comfort and health-conscious options, with particular praise for the Sizzling Garlic Butter Shrimp and Spicy Black Bean Burger.'}, {'day': 14, 'name': 'Tara', 'score': 7, 'content': 'American Flavors USA impressed with a variety of well-executed dishes, particularly the Sizzling Garlic Butter Shrimp. Health-conscious options like the Avocado Quinoa Power Bowl were appreciated, and the overall dining experience was satisfying and flavor-packed.'}, {'day': 14, 'name': 'Yasmine', 'score': 7, 'content': 'The dishes at American Flavors USA were generally good with the Harvest Veggie Stack as a highlight. Some dishes like the Cobb Salad could have had more zest, but overall the meal was satisfying and aligned with our health-conscious preferences.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Leo]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Classic American Bistro",
+    "dishes": [
+        "Revolutionary Citrus Roasted Chicken",
+        "Classic American Apple Pie",
+        "Bold American Bison Burger"
+    ],
+    "reason": "Classic American Bistro has a slightly higher customer score and offers a menu with unique, well-received dishes that cater to diverse dietary needs while providing a satisfying experience."
+}
+
+[System->Leo]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Revolutionary Citrus Roasted Chicken: 0.81
+Classic American Apple Pie: 0.81
+Bold American Bison Burger: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Leo->all]: {
+    "restaurant": "Classic American Bistro",
+    "feeling": "The Revolutionary Citrus Roasted Chicken was zesty and perfectly cooked. The Classic American Apple Pie brought a delightful sweetness to end the meal, and the Bold American Bison Burger was a juicy masterpiece with great flavors."
+}
+

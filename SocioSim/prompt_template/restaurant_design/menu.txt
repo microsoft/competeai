@@ -1,6 +1,5 @@
 Welcome to the Menu Management Module. Now your menu info as below:
 <INPUT 0>
-Existing dishes be shown in attached images
 
 <<FORMAT>>
 There are some rules:
@@ -17,8 +16,7 @@ You can perform the following actions:
         "description": <Item Description>,
         "price": <Integer>,
         "cost_price": <Integer>
-    },
-    "pic_desc": <A text to generate your dish picture. For example: "Name is xxx, Desc is xxx, more details..."
+    }
 }
 
 2. Delete an item from the menu:
@@ -36,8 +34,7 @@ You can perform the following actions:
         "description": <Item Description>,
         "price": <Integer>,
         "cost_price": <Integer>
-    },
-    "pic_desc": <If you are satisfied with current picture, return "None". Else give a new text to describe>
+    }
 }
 
 You can put forward other ideas or requests! please append to the end of JSON data.

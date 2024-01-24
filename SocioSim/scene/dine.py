@@ -159,11 +159,12 @@ class Dine(Scene):
 
         # text observation
         observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
+        
         # vision observation, get two restaurant images for showing
-        if curr_process['name'] == 'order':
-            observation_vision = image_pool.get_visible_images(restaurant_name="All")
-        else:
-            observation_vision = []
+        # if curr_process['name'] == 'order':
+        #     observation_vision = image_pool.get_visible_images(restaurant_name="All")
+        # else:
+        observation_vision = []
         
         for i in range(self.invalid_step_retry):
             try:
@@ -180,6 +181,11 @@ class Dine(Scene):
         # post-process
         if curr_process['name'] == 'order':
             restaurant = parsed_ouput['restaurant']
+            # error handle
+            if restaurant not in input.keys() or restaurant == 'None':
+                result = {self.players[0].name: {'restaurant': 'None'}}
+                self.terminal_flag = True
+                return result
             self.dishes = parsed_ouput['dishes']
             dish_score = input[restaurant]['dish_score']
             

@@ -79,18 +79,18 @@ class RestaurantDesign(Scene):
             res[restaurant] = {"today_offering": today_offering, "dish_score": dish_score}
             
             # Menu image
-            dish_ids = [d["id"] for d in menu]
-            folder_path = f"./logs/{EXP_NAME}/{cls.type_name}_{port}"
-            img_paths = [f"{folder_path}/menu_{id}.png" for id in dish_ids]
-            img_base64_menu = combine_images(input_paths=img_paths, output_path=f"{folder_path}/menu.png")
-            img_menu = Image(owner=restaurant, content=img_base64_menu, description="menu")
-            image_pool.append_image(img_menu)
-            # Restaurant image
-            img_base64_r = convert_img_to_base64(f"{folder_path}/basic_info_1.png")
-            img_r = Image(owner=restaurant, content=img_base64_r, description="basic_info")
-            image_pool.append_image(img_r)
+        #     dish_ids = [d["id"] for d in menu]
+        #     folder_path = f"./logs/{EXP_NAME}/{cls.type_name}_{port}"
+        #     img_paths = [f"{folder_path}/menu_{id}.png" for id in dish_ids]
+        #     img_base64_menu = combine_images(input_paths=img_paths, output_path=f"{folder_path}/menu.png")
+        #     img_menu = Image(owner=restaurant, content=img_base64_menu, description="menu")
+        #     image_pool.append_image(img_menu)
+        #     # Restaurant image
+        #     img_base64_r = convert_img_to_base64(f"{folder_path}/basic_info_1.png")
+        #     img_r = Image(owner=restaurant, content=img_base64_r, description="basic_info")
+        #     image_pool.append_image(img_r)
             
-        image_pool.print()
+        # image_pool.print()
             
         return res
         
@@ -145,8 +145,9 @@ class RestaurantDesign(Scene):
         history = True if curr_process['name'] == 'plan' else False
         observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn, history=history)
         # vision observation
-        r_name = PORT2NAME[self.port] if self.port in PORT2NAME else None
-        observation_vision = image_pool.get_visible_images(restaurant_name=r_name, step_name=curr_process['name'])
+        # r_name = PORT2NAME[self.port] if self.port in PORT2NAME else None
+        # observation_vision = image_pool.get_visible_images(restaurant_name=r_name, step_name=curr_process['name'])
+        observation_vision = []
         
         for i in range(self.invalid_step_retry):
             try:

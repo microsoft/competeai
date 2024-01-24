@@ -1,0 +1,957 @@
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience the taste of authentic American cuisine at American Delight! Indulge in our signature dishes like Classic American Burgers, Smoked BBQ Ribs, and New York Cheesecake. Quality ingredients, heartwarming flavors, and a dining experience that feels like home. Visit us and savor the difference!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'A delicious beef patty with cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 8.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, topped with a sweet strawberry sauce.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A hearty salad with mixed greens, chicken breast, avocado, bacon, blue cheese, eggs, and vinaigrette.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy macaroni and cheese topped with a golden, crispy breadcrumb crust.'}, {'id': 7, 'name': 'Apple Pie a la Mode', 'price': 7.0, 'description': 'Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.'}, {'id': 8, 'name': 'Milkshake', 'price': 6.0, 'description': 'Thick and creamy milkshake available in chocolate, vanilla, or strawberry.'}, {'id': 9, 'name': 'Grilled Chicken Caesar Salad', 'price': 14.0, 'description': 'Grilled chicken breast on a bed of romaine lettuce with croutons, parmesan, and Caesar dressing.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dipping sauce.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of authentic American cuisine at Stars & Stripes USA! Enjoy our signature dishes like Classic Cheeseburgers, BBQ Ribs, and Buffalo Wings. Join us for a culinary experience that celebrates quality and community. Visit us today and indulge in the flavors of America!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce. Served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 18.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 12.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Classic American apple pie topped with vanilla ice cream and caramel sauce.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 9.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry compote.'}, {'id': 6, 'name': 'Coke Float', 'price': 5.0, 'description': 'Chilled Coca-Cola poured over two scoops of vanilla ice cream.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Delight",
+    "dishes" : [
+        "Classic American Burger",
+        "Smoked BBQ Ribs",
+        "Cobb Salad",
+        "New York Cheesecake"
+    ],
+    "reason" : "American Delight offers a broader menu with more traditional options, which suits my taste for variety. Their descriptions suggest hearty, home-style cooking, which I prefer."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Classic American Burger: 0.79
+Smoked BBQ Ribs: 0.81
+Cobb Salad: 0.79
+New York Cheesecake: 0.73
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Delight",
+    "score": 8,
+    "comment": "The dishes at American Delight were satisfying, with the Smoked BBQ Ribs standing out for their flavor. The Classic American Burger and Cobb Salad were good but didn't exceed expectations. The New York Cheesecake could have been creamier. Overall, a solid meal, would recommend for those who enjoy traditional tastes."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 8.0
+2. Advertisement
+   Come taste the difference at American Delight with our newly improved New York Cheesecake and the irresistible Chocolate Lava Cake! Enjoy the diversity of American classics, fresh salads, and exquisite desserts. All made with high-quality ingredients for those who value flavor and satisfaction. Visit today and elevate your dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 15.0, 'description': 'A delicious beef patty with cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Our improved rich and creamy cheesecake with a buttery graham cracker crust, now topped with a luscious raspberry coulis.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'A hearty salad with mixed greens, chicken breast, avocado, bacon, blue cheese, eggs, and vinaigrette.'}, {'id': 6, 'name': 'Mac & Cheese', 'price': 10.0, 'description': 'Creamy macaroni and cheese topped with a golden, crispy breadcrumb crust.'}, {'id': 8, 'name': 'Milkshake', 'price': 6.0, 'description': 'Thick and creamy milkshake available in chocolate, vanilla, or strawberry.'}, {'id': 9, 'name': 'Grilled Chicken Caesar Salad', 'price': 14.0, 'description': 'Grilled chicken breast on a bed of romaine lettuce with croutons, parmesan, and Caesar dressing.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dipping sauce.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 9.0, 'description': 'A warm, decadent chocolate cake with a molten chocolate center, served with a scoop of premium vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 1, 'name': 'Jake', 'score': 8, 'content': 'American Delight offered a satisfying experience with fresh, flavorful dishes that catered well to our tastes and dietary preferences. Each dish scored high, and the service matched the quality of the food.'}, {'day': 1, 'name': 'Amelia', 'score': 8, 'content': 'American Delight impressed us with its robust flavors and quality. Ribs and salads were standout dishes, and the cheesecake ended our meal on a sweet note. A great value for a satisfying dining experience.'}, {'day': 1, 'name': 'Grace', 'score': 8, 'content': "Both the salads and main dishes at American Delight were rated 'Good'. The restaurant met dietary needs and provided a warm atmosphere with friendly service. Highly recommended for a balanced and tasty meal."}, {'day': 1, 'name': 'Olivia', 'score': 8, 'content': 'American Delight offered fresh, flavorful options catering to our dietary preferences. The salads were a highlight, and the desserts pleased. A commendable dining experience.'}, {'day': 1, 'name': 'Max', 'score': 8, 'content': 'American Delight provided a satisfying experience with their ability to adapt to a plant-based diet. The dishes were flavorful and the service met our needs well.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Introducing our Local Legendary Burger and Farmers' Market Salad, made with ingredients sourced from nearby farms. Taste the freshness at Stars & Stripes USA and join our loyalty program for exclusive offers. Come in for a meal that supports local producers!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 15.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce. Served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 19.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 13.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 9.0, 'description': 'Classic American apple pie topped with vanilla ice cream and caramel sauce.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry compote.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 16.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 12.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Delight",
+    "dishes" : [
+        "Classic American Burger",
+        "Smoked BBQ Ribs",
+        "Cobb Salad",
+        "Chocolate Lava Cake"
+    ],
+    "reason" : "American Delight has proven quality with a customer score of 8. Their menu includes a variety of traditional dishes I enjoy and they've recently improved their desserts."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic American Burger: 0.79
+Smoked BBQ Ribs: 0.81
+Cobb Salad: 0.79
+Chocolate Lava Cake: 0.78
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "American Delight",
+    "feeling": "The BBQ Ribs were a highlight with their smoky flavor. The Burger and Salad were quite satisfying, while the Chocolate Lava Cake ended the meal nicely, though not outstandingly."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.944444444444445
+2. Advertisement
+   Discover American Delight's new brunch specials! Enjoy local, fresh flavors with our American Brunch Eggs Benedict, Blueberry Pancakes, Avocado Toast, and Specialty Coffee. Indulge in the finest quality ingredients and savor the taste of America. Join us for a delightful brunch experience!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 16.0, 'description': 'A delicious beef patty with cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake', 'price': 10.0, 'description': 'Our improved rich and creamy cheesecake with a buttery graham cracker crust, now topped with a luscious raspberry coulis.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 15.0, 'description': 'A hearty salad with mixed greens, chicken breast, avocado, bacon, blue cheese, eggs, and vinaigrette.'}, {'id': 9, 'name': 'Grilled Chicken Caesar Salad', 'price': 14.0, 'description': 'Grilled chicken breast on a bed of romaine lettuce with croutons, parmesan, and Caesar dressing.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dipping sauce.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 9.0, 'description': 'A warm, decadent chocolate cake with a molten chocolate center, served with a scoop of premium vanilla bean ice cream.'}, {'id': 12, 'name': 'American Brunch Eggs Benedict', 'price': 14.0, 'description': 'Classic Eggs Benedict with poached eggs, ham, English muffins, and hollandaise sauce.'}, {'id': 13, 'name': 'American Blueberry Pancakes', 'price': 12.0, 'description': 'Fluffy pancakes filled with blueberries, served with maple syrup and whipped cream.'}, {'id': 14, 'name': 'Avocado Toast with Poached Egg', 'price': 12.0, 'description': 'Creamy avocado spread on toasted artisan bread, topped with a poached egg and a sprinkle of chili flakes.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 4.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}]
+4. Comments
+   [{'day': 2, 'name': 'Yasmine', 'score': 8, 'content': 'American Delight adeptly accommodated a vegan diet with a modified salad and tasty fries, while the classic burger and mac & cheese satisfied comfort food cravings. Overall, a pleasurable dining experience with commendable service.'}, {'day': 2, 'name': 'Quincy', 'score': 7, 'content': "The Cobb Salad was fresh, aligning with my dietary needs, and Sweet Potato Fries were a guilt-free indulgence. While tasty, the flavors weren't as satisfying as the classic fast food at Stars & Stripes. A solid choice for healthier options, but lacking that indulgent feel."}, {'day': 1, 'name': 'Jake', 'score': 8, 'content': 'American Delight offered a satisfying experience with fresh, flavorful dishes that catered well to our tastes and dietary preferences. Each dish scored high, and the service matched the quality of the food.'}, {'day': 1, 'name': 'Amelia', 'score': 8, 'content': 'American Delight impressed us with its robust flavors and quality. Ribs and salads were standout dishes, and the cheesecake ended our meal on a sweet note. A great value for a satisfying dining experience.'}, {'day': 1, 'name': 'Grace', 'score': 8, 'content': "Both the salads and main dishes at American Delight were rated 'Good'. The restaurant met dietary needs and provided a warm atmosphere with friendly service. Highly recommended for a balanced and tasty meal."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.071428571428571
+2. Advertisement
+   Discover the taste of tradition with our Local Hero Dish, changing daily to showcase the freshest local produce. Join us at Stars & Stripes USA for a unique culinary journey and become part of our loyalty program for delightful rewards!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce. Served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 14.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Classic American apple pie topped with vanilla ice cream and caramel sauce.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 11.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry compote.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 17.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 13.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 18.0, 'description': 'A special dish featuring the best of local produce and ingredients, changing daily to offer a unique, fresh culinary experience.'}]
+4. Comments
+   [{'day': 2, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes USA delivered an excellent dining experience with their fresh, locally-sourced ingredients. The dishes were consistently good, meeting our diverse tastes and health considerations. A commendable choice that satisfied on all fronts.'}, {'day': 2, 'name': 'Amelia', 'score': 8, 'content': 'Every dish at Stars & Stripes USA impressed us with its balance and freshness. The consensus is clear with uniform high scores across the board. The restaurant delivered a memorable and highly enjoyable dining experience.'}, {'day': 2, 'name': 'Grace', 'score': 8, 'content': "Stars & Stripes USA offered fresh, high-quality dishes with a focus on local ingredients. Both the Farmers' Market Salad and Local Legendary Burger scored well. The service was commendable, providing a warm and inviting dining experience."}, {'day': 2, 'name': 'Olivia', 'score': 8, 'content': 'The dishes at Stars & Stripes USA impressed with their freshness and quality. The restaurant excelled in accommodating dietary needs, and each dish scored an 8.1, reflecting a satisfying dining experience.'}, {'day': 2, 'name': 'Max', 'score': 8, 'content': "The Farmers' Market Salad at Stars & Stripes USA was a hit for its freshness and vibrant flavors. Supporting local farmers added to our satisfaction, making our choice to try a new place a rewarding one."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes" : [
+        "Classic Cheeseburger",
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason" : "Stars & Stripes USA has a slightly higher customer score and emphasizes fresh, locally-sourced ingredients. The menu offers traditional dishes with a focus on quality, aligning with my preferences for traditional cuisine."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Cheeseburger: 0.81
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Apple Pie a la Mode: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The meal was quite satisfying, with each dish delivering on flavor and quality. The freshness of the ingredients was evident, and the traditional tastes were well-executed."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.9523809523809526
+2. Advertisement
+   Join American Delight for an authentic local experience with our new 'Local Favorites' menu, featuring dishes made with the freshest ingredients sourced from nearby farms. Don't miss our live music nights and sign up for our loyalty program for exclusive deals. Savor the difference at American Delight!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 16.0, 'description': 'A delicious beef patty with cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 12.0, 'description': 'Our classic cheesecake enhanced with a blend of local cream cheese, topped with fresh berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 16.0, 'description': 'A new twist on our Cobb, featuring greens from local growers, cherry tomatoes, and a house-made artisanal blue cheese dressing.'}, {'id': 9, 'name': 'Grilled Chicken Caesar Salad', 'price': 14.0, 'description': 'Grilled chicken breast on a bed of romaine lettuce with croutons, parmesan, and Caesar dressing.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dipping sauce.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 9.0, 'description': 'A warm, decadent chocolate cake with a molten chocolate center, served with a scoop of premium vanilla bean ice cream.'}, {'id': 12, 'name': 'American Brunch Eggs Benedict Special', 'price': 16.0, 'description': 'Our Eggs Benedict with a local twist: poached free-range eggs, artisanal ham, English muffins, topped with a creamy hollandaise.'}, {'id': 13, 'name': 'American Blueberry Pancakes', 'price': 12.0, 'description': 'Fluffy pancakes filled with blueberries, served with maple syrup and whipped cream.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 4.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 17, 'name': 'Twilight Apple Crumble', 'price': 10.0, 'description': 'Warm spiced apples beneath a crispy oat topping, sourced from local orchards, served with cinnamon ice cream.'}]
+4. Comments
+   [{'day': 3, 'name': 'Amelia', 'score': 8, 'content': 'American Delight consistently offers a satisfying dining experience with a variety of fresh and flavorful dishes. The Eggs Benedict and salads were highlights, though the cheesecake slightly missed the mark.'}, {'day': 3, 'name': 'Max', 'score': 8, 'content': "The Chocolate Lava Cake at American Delight was a delightful treat, offering the perfect balance of gooeyness and richness. It rounded off our meal nicely, confirming the value and quality we've come to expect here."}, {'day': 3, 'name': 'Nate', 'score': 8, 'content': "American Delight maintained its reputation with us, offering consistently tasty Smoked BBQ Ribs and an exceptional Chocolate Lava Cake. The Grilled Chicken Caesar Salad and Sweet Potato Fries were enjoyable, complementing the meal well. It's a place that keeps us satisfied and looking forward to returning."}, {'day': 2, 'name': 'Yasmine', 'score': 8, 'content': 'American Delight adeptly accommodated a vegan diet with a modified salad and tasty fries, while the classic burger and mac & cheese satisfied comfort food cravings. Overall, a pleasurable dining experience with commendable service.'}, {'day': 2, 'name': 'Quincy', 'score': 7, 'content': "The Cobb Salad was fresh, aligning with my dietary needs, and Sweet Potato Fries were a guilt-free indulgence. While tasty, the flavors weren't as satisfying as the classic fast food at Stars & Stripes. A solid choice for healthier options, but lacking that indulgent feel."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.11111111111111
+2. Advertisement
+   Wake up to our new American Breakfast Platter and end on a sweet note with our Signature Dessert! Enjoy our locally sourced, innovative dishes and join our loyalty program for exclusive benefits. Visit Stars & Stripes USA for unforgettable flavors and fresh, quality ingredients.
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 16.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce. Served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 21.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 14.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Classic American apple pie topped with vanilla ice cream and caramel sauce.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 11.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry compote.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 17.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 13.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 18.0, 'description': 'A special dish featuring the best of local produce and ingredients, changing daily to offer a unique, fresh culinary experience.'}, {'id': 10, 'name': 'American Breakfast Platter', 'price': 15.0, 'description': 'Hearty platter with scrambled eggs, bacon, sausage, hash browns, toast, and a pancake. Perfect for a classic American breakfast experience.'}, {'id': 11, 'name': 'Signature Dessert', 'price': 12.0, 'description': 'Our special dessert featuring a seasonal fruit crumble served warm with homemade cinnamon ice cream.'}]
+4. Comments
+   [{'day': 3, 'name': 'Grace', 'score': 8, 'content': "Both the Farmers' Market Salad and the Local Hero Dish were fresh, flavorful, and met dietary needs. The Local Legendary Burger was also impressive, confirming Stars & Stripes as a favorite for quality, diabetic-friendly options."}, {'day': 3, 'name': 'Olivia', 'score': 8, 'content': 'The dishes at Stars & Stripes USA impressed with their freshness and quality. The restaurant excelled in accommodating dietary needs, and each dish scored an 8.1, reflecting a satisfying dining experience.'}, {'day': 3, 'name': 'Maggie', 'score': 8, 'content': "Stars & Stripes USA impressed us again with fresh, high-quality ingredients. The Local Hero Dish, vibrant Farmers' Market Salad, perfectly spiced Buffalo Wings, and indulgent Apple Pie a la Mode all scored an 8. Consistent excellence and local focus make it our favorite."}, {'day': 3, 'name': 'Nora', 'score': 8, 'content': "Stars & Stripes USA delivered again with fresh, local ingredients. The Farmers' Market Salad, gluten-free Local Hero Dish, BBQ Ribs, and New York Cheesecake each earned a 'Good' rating for their vibrant taste and quality."}, {'day': 3, 'name': 'Frank', 'score': 8, 'content': 'All dishes from Stars & Stripes USA were consistently good, with the Local Hero Dish being a highlight. Fresh ingredients and well-balanced flavors led to a unanimous score of 8 out of 10.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason": "Stars & Stripes USA has a higher customer score and emphasizes fresh, locally-sourced ingredients, which aligns with my preference for quality and traditional tastes."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Apple Pie a la Mode: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The BBQ Ribs were succulent and the sauce was flavorful. The Farmers' Market Salad was crisp and fresh, a perfect side dish. The Apple Pie a la Mode concluded the meal with a delightful sweetness and warmth."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.913043478260869
+2. Advertisement
+   Experience the flavors of America at American Delight with our revamped menu emphasizing local, seasonal ingredients. Enjoy our cozy ambiance and weekly specials that celebrate the best of American cuisine. Visit us for a meal that's as fresh as it is delicious, and become part of our community!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'A delicious beef patty with cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 11.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 11.0, 'description': 'Our classic cheesecake enhanced with a blend of local cream cheese, topped with fresh berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 15.0, 'description': 'A new twist on our Cobb, featuring greens from local growers, cherry tomatoes, and a house-made artisanal blue cheese dressing.'}, {'id': 9, 'name': 'Grilled Chicken Caesar Salad', 'price': 13.0, 'description': 'Grilled chicken breast on a bed of romaine lettuce with croutons, parmesan, and Caesar dressing.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 5.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dipping sauce.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 10.0, 'description': 'A warm, decadent chocolate cake with a molten chocolate center, served with a scoop of premium vanilla bean ice cream.'}, {'id': 12, 'name': 'American Brunch Eggs Benedict Special', 'price': 15.0, 'description': 'Our Eggs Benedict with a local twist: poached free-range eggs, artisanal ham, English muffins, topped with a creamy hollandaise.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 4.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 17, 'name': 'Twilight Apple Crumble', 'price': 10.0, 'description': 'Warm spiced apples beneath a crispy oat topping, sourced from local orchards, served with cinnamon ice cream.'}, {'id': 18, 'name': 'All-American Meatloaf', 'price': 17.0, 'description': 'Homestyle meatloaf with a rich glaze, served with mashed potatoes and seasonal veggies.'}]
+4. Comments
+   [{'day': 4, 'name': 'Nate', 'score': 8, 'content': 'American Delight provided a satisfying meal with highlights like the Smoked BBQ Ribs and fresh salads. The Chocolate Lava Cake ended our meal on a rich note. The restaurant catered well to our dietary preferences and budget.'}, {'day': 4, 'name': 'Katie', 'score': 7, 'content': 'The customized Cobb Salad Supreme was a decent vegan option, though it lacked some flair. The Sweet Potato Fries were good but could use more seasoning. Compared to Stars & Stripes USA, the commitment to local sourcing is appreciated, but overall flavors could be improved.'}, {'day': 3, 'name': 'Amelia', 'score': 8, 'content': 'American Delight consistently offers a satisfying dining experience with a variety of fresh and flavorful dishes. The Eggs Benedict and salads were highlights, though the cheesecake slightly missed the mark.'}, {'day': 3, 'name': 'Max', 'score': 8, 'content': "The Chocolate Lava Cake at American Delight was a delightful treat, offering the perfect balance of gooeyness and richness. It rounded off our meal nicely, confirming the value and quality we've come to expect here."}, {'day': 3, 'name': 'Nate', 'score': 8, 'content': "American Delight maintained its reputation with us, offering consistently tasty Smoked BBQ Ribs and an exceptional Chocolate Lava Cake. The Grilled Chicken Caesar Salad and Sweet Potato Fries were enjoyable, complementing the meal well. It's a place that keeps us satisfied and looking forward to returning."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.095238095238095
+2. Advertisement
+   Indulge in our new Sunrise Special Omelette for a perfect start to your day, and savor the irresistible Decadent Chocolate Delight for a satisfying finish! Experience our commitment to freshness with local produce in every bite. Stars & Stripes USA, where flavor meets quality!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 17.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce. Served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 22.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 14.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Classic American apple pie topped with vanilla ice cream and caramel sauce.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 11.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry compote.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 18.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 14.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 19.0, 'description': 'A special dish featuring the best of local produce and ingredients, changing daily to offer a unique, fresh culinary experience.'}, {'id': 10, 'name': 'American Breakfast Platter', 'price': 16.0, 'description': 'Hearty platter with scrambled eggs, bacon, sausage, hash browns, toast, and a pancake. Perfect for a classic American breakfast experience.'}, {'id': 12, 'name': 'Sunrise Special Omelette', 'price': 14.0, 'description': 'Fluffy omelette with a mix of local vegetables, cheese, and your choice of bacon or sausage. Served with toast and hash browns.'}, {'id': 13, 'name': 'Decadent Chocolate Delight', 'price': 12.0, 'description': 'Indulgent chocolate cake with a rich, gooey center, paired with a scoop of our homemade vanilla ice cream.'}]
+4. Comments
+   [{'day': 4, 'name': 'Jake', 'score': 8, 'content': 'The dishes at Stars & Stripes USA impressed us with their fresh, local ingredients, and each dish delivered on flavor. The restaurant catered well to our diverse tastes and dietary needs, maintaining a high standard across the board.'}, {'day': 4, 'name': 'Amelia', 'score': 8, 'content': 'Consistently good across all dishes, Stars & Stripes USA impressed with its Local Hero Dish, fresh salad, juicy cheeseburger, playful breakfast platter, and delightful desserts.'}, {'day': 4, 'name': 'Grace', 'score': 8, 'content': "The dishes at Stars & Stripes USA were all rated 'Good', with fresh ingredients and satisfying flavors. Both the Farmers' Market Salad and the Local Hero Dish were appreciated for their freshness and innovation. The desserts and American Breakfast Platter were delightful, making the overall dining experience commendable."}, {'day': 4, 'name': 'Olivia', 'score': 8, 'content': 'Stars & Stripes USA provided an exceptional dining experience with each dish scoring an 8.1 for freshness, quality, and flavor. The restaurant maintained its standard for delicious, locally-sourced, gluten-free friendly cuisine.'}, {'day': 4, 'name': 'Max', 'score': 8, 'content': "All dishes at Stars & Stripes USA impressed with their quality. The Farmers' Market Salad and Local Hero Dish were fresh and flavorful, while the Apple Pie a la Mode provided a perfectly balanced dessert."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes" : [
+        "Classic Cheeseburger",
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason" : "Stars & Stripes USA has a higher customer score and a strong emphasis on fresh, local ingredients, which suggests a higher quality of the traditional dishes that I enjoy."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Cheeseburger: 0.81
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Apple Pie a la Mode: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The meal was thoroughly enjoyable with each dish being fresh and well-prepared. The BBQ Ribs were tender, the Farmers' Market Salad crisp, and the Apple Pie a la Mode was a delightful end to the meal."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.933333333333334
+2. Advertisement
+   Join us at American Delight for an exclusive taste of our 'American Hero Dish' - a daily special crafted with the freshest local ingredients. Plus, don't miss our live music nights and loyalty rewards! Savor innovation, enjoy tradition, and celebrate flavors that tell a story.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'A delicious beef patty with cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 21.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 11.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 11.0, 'description': 'Our classic cheesecake enhanced with a blend of local cream cheese, topped with fresh berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 15.0, 'description': 'A new twist on our Cobb, featuring greens from local growers, cherry tomatoes, and a house-made artisanal blue cheese dressing.'}, {'id': 9, 'name': 'Grilled Chicken Caesar Salad', 'price': 13.0, 'description': 'Grilled chicken breast on a bed of romaine lettuce with croutons, parmesan, and Caesar dressing.'}, {'id': 10, 'name': 'Sweet Potato Fries', 'price': 6.0, 'description': 'Crispy sweet potato fries served with a spicy aioli dipping sauce.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 10.0, 'description': 'A warm, decadent chocolate cake with a molten chocolate center, served with a scoop of premium vanilla bean ice cream.'}, {'id': 12, 'name': 'American Brunch Eggs Benedict Special', 'price': 15.0, 'description': 'Our Eggs Benedict with a local twist: poached free-range eggs, artisanal ham, English muffins, topped with a creamy hollandaise.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 4.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 18.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 17, 'name': 'Twilight Apple Crumble', 'price': 10.0, 'description': 'Warm spiced apples beneath a crispy oat topping, sourced from local orchards, served with cinnamon ice cream.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 20.0, 'description': 'Daily special featuring the freshest local ingredients in an exclusive, innovative recipe.'}]
+4. Comments
+   [{'day': 5, 'name': 'Jake', 'score': 8, 'content': 'American Delight provided a satisfying meal that catered to our varied tastes and dietary needs, with each dish scoring high on flavor and appeal.'}, {'day': 5, 'name': 'Maggie', 'score': 8, 'content': 'American Delight impressed with its use of local ingredients, particularly in the Local Harvest Chicken. The Chocolate Lava Cake was a rich treat, and the overall meal was well-rounded with fresh, flavorful options.'}, {'day': 5, 'name': 'Tara', 'score': 8, 'content': 'American Delight offered a satisfying meal with fresh, flavorful salads and well-prepared mains. The Sweet Potato Fries could use more seasoning. Consistently good dishes that met health and taste preferences.'}, {'day': 5, 'name': 'Wade', 'score': 8, 'content': 'The Classic American Burger and desserts like the Chocolate Lava Cake delivered on flavor and quality, offering a satisfying and well-priced dining experience for our family.'}, {'day': 5, 'name': 'Nate', 'score': 8, 'content': 'American Delight delivered once again with their Smoked BBQ Ribs, Grilled Chicken Caesar Salad, and Chocolate Lava Cake, each earning an 8.1. The Sweet Potato Fries were good but could be crispier, rated at 7.5. A reliably delicious and satisfying meal for the whole family.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.055555555555555
+2. Advertisement
+   Come taste the difference at Stars & Stripes USA! Our Signature Berry Bliss Cheesecake, made with local berries, is a must-try. Plus, our enhanced menu now offers bolder flavors across all our dishes, including the beloved Farmers' Market Salad and Local Hero Dish - all crafted using the freshest local ingredients. Join us for a dining experience where every bite is a celebration of quality and taste!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 18.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce. Served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 23.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 14.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Classic American apple pie topped with vanilla ice cream and caramel sauce.'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 11.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust, served with berry compote.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 19.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 15.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 20.0, 'description': 'A special dish featuring the best of local produce and ingredients, changing daily to offer a unique, fresh culinary experience.'}, {'id': 12, 'name': 'Sunrise Special Omelette', 'price': 14.0, 'description': 'Fluffy omelette with a mix of local vegetables, cheese, and your choice of bacon or sausage. Served with toast and hash browns.'}, {'id': 13, 'name': 'Decadent Chocolate Delight', 'price': 12.0, 'description': 'Indulgent chocolate cake with a rich, gooey center, paired with a scoop of our homemade vanilla ice cream.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 13.0, 'description': 'Exquisite cheesecake infused with local berries, served with a berry coulis and fresh cream.'}]
+4. Comments
+   [{'day': 5, 'name': 'Amelia', 'score': 8, 'content': 'Delicious and fresh dishes with a focus on local produce. The Local Hero Dish delighted with a seafood surprise, and the Decadent Chocolate Delight was a perfect treat to conclude a satisfying meal.'}, {'day': 5, 'name': 'Grace', 'score': 8, 'content': "All dishes at Stars & Stripes USA were consistently fresh and well-prepared. The changing Local Hero Dish adds excitement, while the salads and desserts satisfy both health and taste, maintaining a 'Good' standard."}, {'day': 5, 'name': 'Olivia', 'score': 8, 'content': 'Stars & Stripes USA delivered an exceptional dining experience, with every dish showcasing freshness and quality, earning a consistent score of 8.1 from both of us. The variety and taste of the dishes met our adventurous and health-conscious preferences.'}, {'day': 5, 'name': 'Max', 'score': 8, 'content': 'The dishes at Stars & Stripes USA impressed us with their freshness, creativity, and value. Each item we tried today lived up to our expectations, making our dining experience thoroughly enjoyable.'}, {'day': 5, 'name': 'Nora', 'score': 8, 'content': "Stars & Stripes USA continues to impress with the quality and freshness of dishes like the Farmers' Market Salad and the Local Hero Dish. The BBQ Ribs and both desserts, Apple Pie a la Mode and New York Cheesecake, ended our meal on a high note."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes" : [
+        "Classic Cheeseburger",
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason" : "Stars & Stripes USA has a higher customer score and their emphasis on fresh, locally-sourced ingredients appeals to me. Their traditional dishes like BBQ Ribs and Apple Pie a la Mode sound very satisfying."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Cheeseburger: 0.81
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Apple Pie a la Mode: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The dishes were truly enjoyable. The Classic Cheeseburger was juicy, the BBQ Ribs were cooked to perfection, the Farmers' Market Salad was fresh and crisp, and the Apple Pie a la Mode was a delightful finish to the meal."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.942857142857143
+2. Advertisement
+   Step into the past with American Delight's 'Retro American Diner Night'! Indulge in our special Wild West BBQ Feast and enjoy a discount with our new 'Taste of America' loyalty card. Experience unique themed evenings, community events, and charity dinners. Join us for a journey through America's culinary heritage.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A delicious beef patty with cheese, lettuce, tomato, and our special sauce on a toasted bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 9.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 9.0, 'description': 'Our classic cheesecake enhanced with a blend of local cream cheese, topped with fresh berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 12.0, 'description': 'A new twist on our Cobb, featuring greens from local growers, cherry tomatoes, and a house-made artisanal blue cheese dressing.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 8.0, 'description': 'A warm, decadent chocolate cake with a molten chocolate center, served with a scoop of premium vanilla bean ice cream.'}, {'id': 12, 'name': 'American Brunch Eggs Benedict Special', 'price': 12.0, 'description': 'Our Eggs Benedict with a local twist: poached free-range eggs, artisanal ham, English muffins, topped with a creamy hollandaise.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 3.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 15.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 17, 'name': 'Twilight Apple Crumble', 'price': 8.0, 'description': 'Warm spiced apples beneath a crispy oat topping, sourced from local orchards, served with cinnamon ice cream.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 20.0, 'description': 'Daily special featuring the freshest local ingredients in an exclusive, innovative recipe.'}, {'id': 20, 'name': 'Retro American Meatloaf', 'price': 16.0, 'description': 'Classic meatloaf made with a blend of ground beef and pork, onions, bell peppers, and a tangy ketchup glaze. Served with mashed potatoes and green beans.'}, {'id': 21, 'name': 'Wild West BBQ Feast', 'price': 25.0, 'description': 'A hearty platter featuring our smoked BBQ ribs, pulled pork, brisket, served with baked beans, corn on the cob, and jalapeno cornbread.'}]
+4. Comments
+   [{'day': 6, 'name': 'Olivia', 'score': 8, 'content': "American Delight served up a satisfying meal with fresh ingredients and well-crafted dishes. Both the 'American Hero Dish' and salads were highlights, and the desserts ended our dinner on a sweet note. A strong 8, as we're still searching for that standout experience."}, {'day': 6, 'name': 'Max', 'score': 8, 'content': 'American Delight delighted us again with their ability to cater to dietary preferences. The Cobb Salad Supreme was fresh, the Sweet Potato Fries were flavorful, and the American Hero Dish was a plant-based treat. A very satisfying dinner.'}, {'day': 6, 'name': 'Nora', 'score': 8, 'content': "American Delight provided a 'Good' dining experience with fresh, local ingredients highlighted in every dish. The American Hero Dish and other selections were well-received, each earning a score of 8.1."}, {'day': 6, 'name': 'Nate', 'score': 8, 'content': 'American Delight remains a favorite with its Smoked BBQ Ribs and Chocolate Lava Cake. The American Hero Dish added variety and impressed us, while the Sweet Potato Fries could be improved.'}, {'day': 6, 'name': 'Bob', 'score': 8, 'content': 'The Mac & Cheese was delightful, with a creamy interior and a satisfyingly crispy top. While I have enjoyed various dishes at Stars & Stripes USA before, the consistency and my preference for noodle dishes make American Delight a better choice for me.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.059701492537313
+2. Advertisement
+   Discover local flavors at Stars & Stripes USA! Dive into our enhanced Farmers' Market Salad, indulge in the new Signature Berry Bliss Cheesecake, and savor the richness of our Local Hero Dish. We're elevating dining with bolder tastes and fresh, seasonal ingredients. Join us for a culinary journey that celebrates the best of American cuisine with a local twist!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 20.0, 'description': 'A juicy beef patty with melted cheese, lettuce, tomato, and our special sauce. Served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Tender pork ribs smothered in our signature BBQ sauce, served with coleslaw and cornbread.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Classic American apple pie topped with vanilla ice cream and caramel sauce.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 21.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 15.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 22.0, 'description': 'A special dish featuring the best of local produce and ingredients, changing daily to offer a unique, fresh culinary experience.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 15.0, 'description': 'Exquisite cheesecake infused with local berries, served with a berry coulis and fresh cream.'}, {'id': 15, 'name': 'Morning Glory Pancakes', 'price': 12.0, 'description': 'Fluffy pancakes made with organic flour, served with a selection of local berries and pure maple syrup.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 17.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 17, 'name': 'Southern Fried Chicken', 'price': 19.0, 'description': 'Crispy, golden-brown fried chicken with a hint of spice, accompanied by homemade biscuits and honey.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}]
+4. Comments
+   [{'day': 6, 'name': 'Jake', 'score': 8, 'content': "The meal at Stars & Stripes USA was a collective success, with each dish scoring a solid 8. Freshness and flavors were on point, satisfying health-conscious and taste-focused preferences alike. A testament to the restaurant's commitment to quality."}, {'day': 6, 'name': 'Amelia', 'score': 8, 'content': "All dishes impressed with their freshness and quality, especially the Local Hero Dish. Desserts were a delightful finale. The experience was a testament to the restaurant's commitment to local produce and culinary excellence."}, {'day': 6, 'name': 'Grace', 'score': 8, 'content': "Stars & Stripes USA provided an exceptional dining experience with the Farmers' Market Salad, Local Hero Dish, Signature Berry Bliss Cheesecake, and BBQ Ribs, all scoring 8.1 for their freshness, quality, and flavor, perfectly catering to our health-conscious and taste preferences."}, {'day': 6, 'name': 'Maggie', 'score': 8, 'content': "Stars & Stripes USA impressed with their commitment to fresh, organic ingredients. The Farmers' Market Salad, Local Hero Dish, and Signature Berry Bliss Cheesecake all scored 8.1 for their freshness, creativity, and delicious balance of flavors."}, {'day': 6, 'name': 'Frank', 'score': 8, 'content': "Consistently fresh and innovative, Stars & Stripes USA delivered again with their Farmers' Market Salad and Local Hero Dish. The Signature Berry Bliss Cheesecake was a dessert lover's dream. Our collective experience reinforces our love for this establishment's quality."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes" : [
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason" : "Stars & Stripes USA has a higher customer score and focuses on fresh, local ingredients, which likely means higher-quality traditional dishes."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Apple Pie a la Mode: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The meal was highly enjoyable, with the BBQ Ribs being particularly succulent and flavorful. The Farmers' Market Salad was fresh and vibrant, complementing the main course nicely, and the Apple Pie a la Mode ended the meal on a sweet and satisfying note."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.951219512195122
+2. Advertisement
+   Discover local flavors reinvented at American Delight! Our new 'Signature American Delight' section highlights innovative dishes crafted with the finest local ingredients. Join us for an authentic taste of America and enjoy our revamped classics like the American Hero Dish. Celebrate our culinary heritage and savor the difference freshness makes.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'A mouth-watering beef patty with aged cheddar, local organic lettuce, heirloom tomato, and our signature sauce on a toasted artisan bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 3, 'name': 'Buffalo Chicken Wings', 'price': 9.0, 'description': 'Spicy buffalo wings served with celery sticks and blue cheese dipping sauce.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 11.0, 'description': 'Our classic cheesecake, with a rich blend of local cream cheese and free-range eggs, topped with a compote of seasonal berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 14.0, 'description': 'Our reinvented Cobb with greens from local farms, ripe cherry tomatoes, and a house-made artisanal blue cheese dressing, garnished with crispy local bacon.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 10.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 12, 'name': 'American Brunch Eggs Benedict Special', 'price': 12.0, 'description': 'Our Eggs Benedict with a local twist: poached free-range eggs, artisanal ham, English muffins, topped with a creamy hollandaise.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 3.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 15.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 17, 'name': 'Twilight Apple Crumble', 'price': 8.0, 'description': 'Warm spiced apples beneath a crispy oat topping, sourced from local orchards, served with cinnamon ice cream.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 22.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 20, 'name': 'Retro American Meatloaf', 'price': 16.0, 'description': 'Classic meatloaf made with a blend of ground beef and pork, onions, bell peppers, and a tangy ketchup glaze. Served with mashed potatoes and green beans.'}, {'id': 21, 'name': 'Wild West BBQ Feast', 'price': 25.0, 'description': 'A hearty platter featuring our smoked BBQ ribs, pulled pork, brisket, served with baked beans, corn on the cob, and jalapeno cornbread.'}]
+4. Comments
+   [{'day': 7, 'name': 'Dexter', 'score': 8, 'content': 'American Delight provided an exceptional experience with their Wild West BBQ Feast and American Hero Dish. Fresh ingredients, creativity, and rich flavors throughout the meal, from the main course to the desserts and coffee, were commendable. A solid score of 8 from both of us.'}, {'day': 7, 'name': 'Wade', 'score': 8, 'content': 'The meal at American Delight was consistently good, with each dish impressing us once again. The affordability and loyalty program benefits added to the satisfaction of our dining experience.'}, {'day': 7, 'name': 'Nate', 'score': 8, 'content': "All dishes at American Delight were thoroughly enjoyed, with each member rating them as 'Good'. The Smoked BBQ Ribs and desserts were particularly delightful, and the Cobb Salad Supreme offered a fresher, healthier option that did not compromise on taste."}, {'day': 7, 'name': 'William', 'score': 8, 'content': 'American Delight impressed us with its well-executed dishes, particularly the Smoked BBQ Ribs and Wild West BBQ Feast. Each dessert was a delightful finale to a satisfying meal. Consistently good across the board.'}, {'day': 7, 'name': 'Bob', 'score': 8, 'content': 'While the Mac & Cheese was once again enjoyable, the consistency seems to have slightly declined. It lacked the crispiness I cherished before. I hope they return to their previous standard to fully match my noodle preference.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.0625
+2. Advertisement
+   Wake up to our new Stars & Stripes Special Omelette and Morning Glory Pancakes! Enjoy revamped classics with bold flavors like our whiskey-glazed BBQ Ribs and enhanced Local Hero Dish. Plus, join our loyalty program for exclusive rewards. Experience the fresh, local taste of America at Stars & Stripes USA!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 20.0, 'description': 'A juicy beef patty with aged cheddar, heirloom tomatoes, artisan lettuce, and our special sauce, served with seasoned fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Our classic American apple pie served warm, with a dollop of cinnamon-spiced ice cream and a drizzle of bourbon caramel sauce.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 21.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 15.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 22.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 15.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 15, 'name': 'Morning Glory Pancakes', 'price': 12.0, 'description': 'Fluffy pancakes made with organic flour, served with a selection of local berries and pure maple syrup.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 17.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 19, 'name': 'Stars & Stripes Special Omelette', 'price': 14.0, 'description': 'A fluffy three-egg omelette filled with local cheese, ham, and fresh vegetables, served with artisanal sourdough toast.'}]
+4. Comments
+   [{'day': 7, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes USA provided a meal that was both delectable and mindful of our health, offering fresh, high-quality ingredients and accommodating a variety of tastes.'}, {'day': 7, 'name': 'Amelia', 'score': 8, 'content': 'Stars & Stripes USA excelled with fresh, flavorful dishes. The salad, Local Hero Dish, salmon, chicken, and cheesecake all impressed. A delightful meal meeting our health and taste preferences.'}, {'day': 7, 'name': 'Grace', 'score': 8, 'content': "Stars & Stripes USA provided an exceptional dining experience with the Farmers' Market Salad, Local Hero Dish, Signature Berry Bliss Cheesecake, and BBQ Ribs, all scoring 8.1 for their freshness, quality, and flavor, perfectly catering to our health-conscious and taste preferences."}, {'day': 7, 'name': 'Olivia', 'score': 8, 'content': "Stars & Stripes USA delivered an exceptional meal with the Local Hero Dish showcasing local flavors, the Farmers' Market Salad offering fresh ingredients, and the Signature Berry Bliss Cheesecake providing a perfect finish. Both of us found the dishes outstanding, consistent with our high expectations."}, {'day': 7, 'name': 'Max', 'score': 8, 'content': "Both the Farmers' Market Salad and the Harvest Veggie Burger scored an 8 for their freshness, taste, and satisfying plant-based options. These dishes reflect Stars & Stripes USA's commitment to local produce and culinary excellence."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes" : [
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason" : "Stars & Stripes USA has a slightly higher customer score and offers traditional dishes with a focus on fresh, local ingredients, which I prefer for quality and taste."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Apple Pie a la Mode: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "score": 8,
+    "comment": "The BBQ Ribs were savory with a good smoke flavor, though not exceptional. The Farmers' Market Salad was fresh, aligning with my preference for traditional cuisine. The Apple Pie a la Mode was comforting but could have had a more pronounced cinnamon presence. Overall, a good meal worthy of the score."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.954545454545454
+2. Advertisement
+   Join us at American Delight for a fresh, health-focused feast! Our menu now features delicious Garden Veggie Wraps, nutrient-rich Quinoa & Black Bean Salads, and savory Grilled Portobello Burgers. Indulge in our new healthy options and beloved classics made with high-quality local ingredients. Experience the vibrant taste of America today!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 16.0, 'description': 'A mouth-watering beef patty with aged cheddar, local organic lettuce, heirloom tomato, and our signature sauce on a toasted artisan bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 13.0, 'description': 'Our classic cheesecake, with a rich blend of local cream cheese and free-range eggs, topped with a compote of seasonal berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 16.0, 'description': 'Our reinvented Cobb with greens from local farms, ripe cherry tomatoes, and a house-made artisanal blue cheese dressing, garnished with crispy local bacon.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 10.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 3.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 15.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 22.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 20, 'name': 'Retro American Meatloaf', 'price': 16.0, 'description': 'Classic meatloaf made with a blend of ground beef and pork, onions, bell peppers, and a tangy ketchup glaze. Served with mashed potatoes and green beans.'}, {'id': 21, 'name': 'Wild West BBQ Feast', 'price': 25.0, 'description': 'A hearty platter featuring our smoked BBQ ribs, pulled pork, brisket, served with baked beans, corn on the cob, and jalapeno cornbread.'}, {'id': 22, 'name': 'Garden Veggie Wrap', 'price': 13.0, 'description': 'A wholesome wrap filled with a medley of fresh garden vegetables, hummus, and organic greens, served with a side of fruit salad.'}, {'id': 23, 'name': 'Quinoa & Black Bean Salad', 'price': 12.0, 'description': 'A protein-packed salad with quinoa, black beans, sweet corn, cherry tomatoes, and avocado, tossed in a lime-cilantro dressing.'}, {'id': 24, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A juicy portobello mushroom cap, grilled and topped with roasted red peppers and goat cheese, served on a whole wheat bun with sweet potato fries.'}]
+4. Comments
+   [{'day': 8, 'name': 'Tara', 'score': 8, 'content': 'The unanimous approval of the dishes at American Delight reflects our satisfaction with the fresh, local ingredients and the inventive flavors that catered to our adventurous tastes and health needs.'}, {'day': 8, 'name': 'Dexter', 'score': 8, 'content': 'American Delight excelled with the Wild West BBQ Feast and American Hero Dish, while the Cobb Salad offered a fresh contrast. Deserts like the Cheesecake and Chocolate Lava Cake were richly satisfying. Overall, a reliably delightful culinary experience.'}, {'day': 8, 'name': 'William', 'score': 8, 'content': 'American Delight delighted us again with its local and innovative American Hero Dish. The BBQ Feast and desserts, especially the cheesecake, were exceptional. Consistent freshness and quality across dishes earned a collective score of 8.'}, {'day': 7, 'name': 'Dexter', 'score': 8, 'content': 'American Delight provided an exceptional experience with their Wild West BBQ Feast and American Hero Dish. Fresh ingredients, creativity, and rich flavors throughout the meal, from the main course to the desserts and coffee, were commendable. A solid score of 8 from both of us.'}, {'day': 7, 'name': 'Wade', 'score': 8, 'content': 'The meal at American Delight was consistently good, with each dish impressing us once again. The affordability and loyalty program benefits added to the satisfaction of our dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.041666666666666
+2. Advertisement
+   Discover bold flavors and fresh ingredients at Stars & Stripes USA! Savor our enhanced Farmers' Market Salad and indulge in the Signature Berry Bliss Cheesecake, now with more local berries. Try our new Ultimate Freedom Fries! Join our loyalty program for rewards. Taste the local difference where every bite supports local producers.
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 20.0, 'description': 'A juicy beef patty with aged cheddar, heirloom tomatoes, artisan lettuce, and our special sauce, served with seasoned fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 25.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Our classic American apple pie served warm, with a dollop of cinnamon-spiced ice cream and a drizzle of bourbon caramel sauce.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 21.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 17.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 22.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 17.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 15, 'name': 'Morning Glory Pancakes', 'price': 12.0, 'description': 'Fluffy pancakes made with organic flour, served with a selection of local berries and pure maple syrup.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 17.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 20, 'name': 'Ultimate Freedom Fries', 'price': 10.0, 'description': 'Crispy fries topped with a special blend of melted cheese, local bacon, and a signature spicy ranch sauce.'}]
+4. Comments
+   [{'day': 8, 'name': 'Jake', 'score': 8, 'content': 'Each dish at Stars & Stripes USA was a hit, offering a satisfying blend of health-conscious options, street food vibes, and sweet treats, all while catering to our diverse tastes.'}, {'day': 8, 'name': 'Amelia', 'score': 8, 'content': "The dishes at Stars & Stripes USA impressed us with their freshness and quality. The consistency across the Farmers' Market Salad, Morning Glory Pancakes, Sunset Grilled Salmon, and Local Hero Dish made our dining experience thoroughly enjoyable."}, {'day': 8, 'name': 'Grace', 'score': 8, 'content': 'Stars & Stripes USA delivered an array of dishes that were both tasty and health-conscious. Each dish, from the Local Hero Dish to the Morning Glory Pancakes, provided a satisfying experience. Perfect for those with dietary considerations.'}, {'day': 8, 'name': 'Olivia', 'score': 8, 'content': 'Consistent quality and fresh ingredients marked our dining experience at Stars & Stripes USA. Vibrant salads, innovative local dishes, perfectly cooked salmon, and a delightful cheesecake contributed to our satisfaction.'}, {'day': 8, 'name': 'Max', 'score': 8, 'content': "The Farmers' Market Salad and Harvest Veggie Burger at Stars & Stripes USA delivered on freshness and flavor, aligning perfectly with our plant-based preferences and health-conscious lifestyle."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "Classic Cheeseburger",
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason": "Stars & Stripes USA has a slightly higher customer score, and the menu includes traditional dishes that I enjoy, such as BBQ Ribs and Apple Pie. Their focus on fresh, local ingredients suggests a high-quality dining experience."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Cheeseburger: 0.81
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.85
+Apple Pie a la Mode: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The meal was memorable with the BBQ Ribs and Apple Pie standing out, while the Farmers' Market Salad was exceptionally fresh. Overall, a satisfying and enjoyable traditional dining experience."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.959183673469388
+2. Advertisement
+   Discover the charm of local flavors at American Delight! Our curated menu highlights fresh, locally-sourced ingredients in every dish. From our signature American Hero Dish to our health-conscious salads, enjoy the best of American cuisine with a homegrown twist. Join us for an authentic dining experience where quality meets comfort.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 18.0, 'description': 'A mouth-watering beef patty with aged cheddar, local organic lettuce, heirloom tomato, and our signature sauce on a toasted artisan bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 22.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 15.0, 'description': 'Our classic cheesecake, with a rich blend of local cream cheese and free-range eggs, topped with a compote of seasonal berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 18.0, 'description': 'Our reinvented Cobb with greens from local farms, ripe cherry tomatoes, and a house-made artisanal blue cheese dressing, garnished with crispy local bacon.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 12.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 15, 'name': 'Specialty Coffee', 'price': 4.0, 'description': 'A selection of premium, freshly brewed coffee options including espresso, latte, and cappuccino.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 17.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 24.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 22, 'name': 'Garden Veggie Wrap', 'price': 15.0, 'description': 'A wholesome wrap filled with a medley of fresh garden vegetables, hummus, and organic greens, served with a side of fruit salad.'}, {'id': 23, 'name': 'Quinoa & Black Bean Salad', 'price': 14.0, 'description': 'A protein-packed salad with quinoa, black beans, sweet corn, cherry tomatoes, and avocado, tossed in a lime-cilantro dressing.'}, {'id': 24, 'name': 'Grilled Portobello Burger', 'price': 17.0, 'description': 'A juicy portobello mushroom cap, grilled and topped with roasted red peppers and goat cheese, served on a whole wheat bun with sweet potato fries.'}]
+4. Comments
+   [{'day': 9, 'name': 'Maggie', 'score': 8, 'content': 'American Delight provided a refreshing change with healthy, fresh options. The Garden Veggie Wrap and Quinoa & Black Bean Salad were crisp and flavorful, while the Chocolate Lava Cake was a delightful indulgence. A satisfying experience overall.'}, {'day': 9, 'name': 'Frank', 'score': 8, 'content': 'American Delight offered a satisfying experience with their new dishes. The Garden Veggie Wrap and Quinoa & Black Bean Salad were fresh and flavorful. The desserts were decadent, and overall, the meal lived up to our expectations.'}, {'day': 9, 'name': 'Tara', 'score': 8, 'content': 'American Delight delivered a delightful dining experience with fresh, flavorful dishes. Each item, from the Grilled Portobello Burger to the Quinoa & Black Bean Salad, was healthy and satisfying, meeting our diverse tastes and dietary needs.'}, {'day': 9, 'name': 'Dexter', 'score': 8, 'content': 'American Delight impressed us again with its inventive American Hero Dish and the consistently delicious Wild West BBQ Feast. The fresh Garden Veggie Wrap and Quinoa & Black Bean Salad provided a perfect balance, while the desserts ended our meal on a high note.'}, {'day': 9, 'name': 'William', 'score': 8, 'content': 'The meal at American Delight was well-received, with the American Hero Dish and Smoked BBQ Ribs being highlights. Healthier options added a refreshing touch, and the Chocolate Lava Cake was a crowd-pleaser.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.046296296296296
+2. Advertisement
+   Refresh your palate at Stars & Stripes USA with our new Quinoa & Avocado Salad and Grilled Veggie Wrap! Experience our improved Classic Cheeseburger and BBQ Ribs with bolder flavors. Enjoy our ever-popular Signature Berry Bliss Cheesecake with even more local berries. Dine with us for a taste of America with a health-conscious twist!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 22.0, 'description': 'A juicy beef patty with aged cheddar, heirloom tomatoes, artisan lettuce, and our special sauce, served with seasoned fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 28.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Our classic American apple pie served warm, with a dollop of cinnamon-spiced ice cream and a drizzle of bourbon caramel sauce.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 21.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 17.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 22.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 17.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 17.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 21, 'name': 'Quinoa & Avocado Salad', 'price': 15.0, 'description': 'A refreshing mix of organic quinoa, ripe avocados, cherry tomatoes, and black beans, served with a zesty lime dressing.'}, {'id': 22, 'name': 'Grilled Veggie Wrap', 'price': 14.0, 'description': 'Grilled seasonal vegetables wrapped in a whole wheat tortilla with hummus and a light, creamy herb dressing.'}]
+4. Comments
+   [{'day': 9, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes USA provided a well-rounded dining experience with a commendable mix of healthy and indulgent options, consistently earning high praise from all of us for freshness, flavor, and quality.'}, {'day': 9, 'name': 'Amelia', 'score': 8, 'content': 'Stars & Stripes USA provided a consistently high-quality meal, with fresh ingredients and delightful flavors across all dishes. A highly enjoyable and memorable dining experience.'}, {'day': 9, 'name': 'Grace', 'score': 8, 'content': "Stars & Stripes USA continues to impress with its fresh ingredients and delicious dishes. Favorites like the Farmers' Market Salad and the Local Hero Dish were consistent hits, and the desserts, especially the Signature Berry Bliss Cheesecake, were delightful without being overly sweet."}, {'day': 9, 'name': 'Olivia', 'score': 8, 'content': 'Consistent quality and fresh ingredients marked our dining experience at Stars & Stripes USA. Vibrant salads, innovative local dishes, perfectly cooked salmon, and a delightful cheesecake contributed to our satisfaction.'}, {'day': 9, 'name': 'Max', 'score': 8, 'content': "The Farmers' Market Salad and Harvest Veggie Burger at Stars & Stripes USA were fresh and flavorful, reaffirming our preference for this restaurant's creative and quality plant-based options."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason": "Stars & Stripes USA has a higher customer score and offers BBQ Ribs, which I've previously enjoyed, alongside fresh salads and a classic Apple Pie dessert, which aligns with my preference for traditional dishes."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.85
+Apple Pie a la Mode: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The meal was quite satisfying. The BBQ Ribs were tender and smoky, the Farmers' Market Salad was crisp and flavorful, and the Apple Pie a la Mode was a deliciously sweet end to a traditional meal."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.96
+2. Advertisement
+   Join us at American Delight for a sustainable epicurean adventure! Our new Sustainable Seafood Special pairs perfectly with our range of local, fresh dishes. Experience the harmony of flavor and responsibility, where every meal supports local farmers and fishermen. Indulge in the true taste of America with us.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 16.0, 'description': 'A mouth-watering beef patty with aged cheddar, local organic lettuce, heirloom tomato, and our signature sauce on a toasted artisan bun.'}, {'id': 2, 'name': 'Smoked BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slow-cooked and glazed with our house-made BBQ sauce, served with fries and coleslaw.'}, {'id': 4, 'name': 'New York Cheesecake Deluxe', 'price': 13.0, 'description': 'Our classic cheesecake, with a rich blend of local cream cheese and free-range eggs, topped with a compote of seasonal berries from nearby farms.'}, {'id': 5, 'name': 'Cobb Salad Supreme', 'price': 16.0, 'description': 'Our reinvented Cobb with greens from local farms, ripe cherry tomatoes, and a house-made artisanal blue cheese dressing, garnished with crispy local bacon.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 10.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 15.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 22.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 22, 'name': 'Garden Veggie Wrap', 'price': 13.0, 'description': 'A wholesome wrap filled with a medley of fresh garden vegetables, hummus, and organic greens, served with a side of fruit salad.'}, {'id': 23, 'name': 'Quinoa & Black Bean Salad', 'price': 12.0, 'description': 'A protein-packed salad with quinoa, black beans, sweet corn, cherry tomatoes, and avocado, tossed in a lime-cilantro dressing.'}, {'id': 24, 'name': 'Grilled Portobello Burger', 'price': 15.0, 'description': 'A juicy portobello mushroom cap, grilled and topped with roasted red peppers and goat cheese, served on a whole wheat bun with sweet potato fries.'}, {'id': 25, 'name': 'Sustainable Seafood Special', 'price': 21.0, 'description': 'Seasonally inspired dish featuring sustainably sourced seafood, served with organic vegetables and a light, aromatic sauce.'}]
+4. Comments
+   [{'day': 10, 'name': 'Grace', 'score': 8, 'content': "American Delight impressed with fresh, local ingredients and healthy, flavorful dishes. Desserts were indulgent yet suitable for diabetics, reflecting the restaurant's commitment to quality and variety."}, {'day': 9, 'name': 'Maggie', 'score': 8, 'content': 'American Delight provided a refreshing change with healthy, fresh options. The Garden Veggie Wrap and Quinoa & Black Bean Salad were crisp and flavorful, while the Chocolate Lava Cake was a delightful indulgence. A satisfying experience overall.'}, {'day': 9, 'name': 'Frank', 'score': 8, 'content': 'American Delight offered a satisfying experience with their new dishes. The Garden Veggie Wrap and Quinoa & Black Bean Salad were fresh and flavorful. The desserts were decadent, and overall, the meal lived up to our expectations.'}, {'day': 9, 'name': 'Tara', 'score': 8, 'content': 'American Delight delivered a delightful dining experience with fresh, flavorful dishes. Each item, from the Grilled Portobello Burger to the Quinoa & Black Bean Salad, was healthy and satisfying, meeting our diverse tastes and dietary needs.'}, {'day': 9, 'name': 'Dexter', 'score': 8, 'content': 'American Delight impressed us again with its inventive American Hero Dish and the consistently delicious Wild West BBQ Feast. The fresh Garden Veggie Wrap and Quinoa & Black Bean Salad provided a perfect balance, while the desserts ended our meal on a high note.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.024193548387096
+2. Advertisement
+   Savor innovation with Stars & Stripes USA's new dish, 'The American Innovator'—a daily surprise that celebrates local produce and culinary creativity. Plus, indulge in our enhanced Classic Cheeseburger and BBQ Ribs, now with even bolder flavors. Don't miss our acclaimed Signature Berry Bliss Cheesecake, richer in local berries than ever before!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 24.0, 'description': 'A juicy beef patty with aged cheddar, heirloom tomatoes, artisan lettuce, and our special sauce, served with seasoned fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 30.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 10.0, 'description': 'Our classic American apple pie served warm, with a dollop of cinnamon-spiced ice cream and a drizzle of bourbon caramel sauce.'}, {'id': 7, 'name': 'Local Legendary Burger', 'price': 21.0, 'description': 'Our premium burger, featuring locally sourced beef and fresh, organic toppings. Served with hand-cut fries.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 17.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 22.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 17.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 17.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 21, 'name': 'Quinoa & Avocado Salad', 'price': 15.0, 'description': 'A refreshing mix of organic quinoa, ripe avocados, cherry tomatoes, and black beans, served with a zesty lime dressing.'}, {'id': 23, 'name': 'The American Innovator', 'price': 20.0, 'description': 'An imaginative dish that changes daily, featuring the best of local produce and American ingenuity.'}]
+4. Comments
+   [{'day': 10, 'name': 'Jake', 'score': 8, 'content': "Consistently good across the board, with the Farmers' Market Salad and Signature Berry Bliss Cheesecake as highlights. Satisfying for health-conscious and indulgent preferences alike."}, {'day': 10, 'name': 'Amelia', 'score': 8, 'content': 'Consistently delightful, with fresh, flavorful salads and perfectly cooked salmon. Cheesecake was a rich, satisfying finale. Each dish was a testament to their high standards.'}, {'day': 10, 'name': 'Olivia', 'score': 8, 'content': "Stars & Stripes USA delivered yet another delightful dining experience with fresh, high-quality dishes. Both the familiar and new menu items impressed, maintaining the restaurant's reputation for excellence in our eyes."}, {'day': 10, 'name': 'Max', 'score': 8, 'content': "Stars & Stripes USA impressed with its fresh, flavorful plant-based options. Both the Farmers' Market Salad and the Harvest Veggie Burger were highlights, and the Quinoa & Avocado Salad and Grilled Veggie Wrap complemented the meal perfectly."}, {'day': 10, 'name': 'Maggie', 'score': 8, 'content': 'Stars & Stripes USA provided an exceptional dining experience with a commitment to organic, local produce. Each dish, especially the standout Signature Berry Bliss Cheesecake, was crafted with care and presented a delightful fusion of flavors.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "Classic Cheeseburger",
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason": "Stars & Stripes USA's higher customer score and emphasis on traditional dishes with fresh, local ingredients align with my preferences for quality and taste."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Classic Cheeseburger: 0.81
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.85
+Apple Pie a la Mode: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "score": 8,
+    "comment": "The Classic Cheeseburger and BBQ Ribs were satisfying, with a good balance of flavors. The Farmers' Market Salad was notably fresh, and the Apple Pie a la Mode provided a comforting conclusion. While all dishes were good, none were exceptional, leaving room for improvement."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.95
+2. Advertisement
+   Discover our new signature dishes at American Delight! 'Heartland Beef Stew' and 'Pioneer Apple Harvest Salad' embody our commitment to local sourcing and sustainability. Our menu highlights fresh, creative flavors that celebrate America's heartland. Visit us for a unique dining experience that supports our community and tantalizes your taste buds.
+3. Menu 
+   [{'id': 5, 'name': 'Cobb Salad Supreme', 'price': 18.0, 'description': 'Our reinvented Cobb with greens from local farms, ripe cherry tomatoes, and a house-made artisanal blue cheese dressing, garnished with crispy local bacon.'}, {'id': 11, 'name': 'Chocolate Lava Cake', 'price': 12.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 17.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 24.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 22, 'name': 'Garden Veggie Wrap', 'price': 15.0, 'description': 'A wholesome wrap filled with a medley of fresh garden vegetables, hummus, and organic greens, served with a side of fruit salad.'}, {'id': 23, 'name': 'Quinoa & Black Bean Salad', 'price': 14.0, 'description': 'A protein-packed salad with quinoa, black beans, sweet corn, cherry tomatoes, and avocado, tossed in a lime-cilantro dressing.'}, {'id': 24, 'name': 'Grilled Portobello Burger', 'price': 17.0, 'description': 'A juicy portobello mushroom cap, grilled and topped with roasted red peppers and goat cheese, served on a whole wheat bun with sweet potato fries.'}, {'id': 25, 'name': 'Sustainable Seafood Special', 'price': 23.0, 'description': 'Seasonally inspired dish featuring sustainably sourced seafood, served with organic vegetables and a light, aromatic sauce.'}, {'id': 26, 'name': 'Heartland Beef Stew', 'price': 19.0, 'description': 'A hearty stew made with locally sourced beef, slow-cooked with root vegetables and a rich, savory broth, served with a side of freshly baked bread.'}, {'id': 27, 'name': 'Pioneer Apple Harvest Salad', 'price': 16.0, 'description': 'Crisp apples from nearby orchards tossed with organic mixed greens, candied walnuts, blue cheese crumbles, and a homemade apple cider vinaigrette.'}]
+4. Comments
+   [{'day': 11, 'name': 'Amelia', 'score': 8, 'content': 'American Delight impressed with its Sustainable Seafood Special, offering fresh and flavorful dishes. Each member enjoyed the balance of taste and health-conscious options, rating all dishes consistently high.'}, {'day': 11, 'name': 'Grace', 'score': 8, 'content': 'American Delight matched our health-conscious preferences with delectable dishes. The freshness and flavor of each dish, alongside the diabetic-friendly desserts, were commendable. A worthy alternative to our usual choice at Stars & Stripes USA.'}, {'day': 11, 'name': 'Olivia', 'score': 8, 'content': 'American Delight provided a fresh and satisfying experience, with the Sustainable Seafood Special standing out. The gluten-free options were flavorful, and the Cheesecake was a perfect finale.'}, {'day': 11, 'name': 'Maggie', 'score': 8, 'content': 'American Delight offered a consistently good dining experience with sustainable and flavorful choices. All dishes, especially the Sustainable Seafood Special and the Chocolate Lava Cake, were satisfying and received a score of 8 from both of us.'}, {'day': 11, 'name': 'Nora', 'score': 8, 'content': 'American Delight impressed with its commitment to sustainability and quality. The dishes were fresh, flavorful, and well-received, with special care for dietary needs. A delightful dining experience that matched our expectations.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.022556390977444
+2. Advertisement
+   Experience the fresh catch with our new Ocean's Bounty Platter, featuring sustainably sourced seafood. Enjoy our revamped Farmers' Market Salad, now zestier, and our Superfood Energy Bowl for a healthful boost. Stars & Stripes USA is committed to fresh, innovative, and sustainable dining. Taste the difference today!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 24.0, 'description': 'A juicy beef patty with aged cheddar, heirloom tomatoes, artisan lettuce, and our special sauce, served with seasoned fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 30.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 19.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 25.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 19.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 19.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 26.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 21, 'name': 'Quinoa & Avocado Salad', 'price': 15.0, 'description': 'A refreshing mix of organic quinoa, ripe avocados, cherry tomatoes, and black beans, served with a zesty lime dressing.'}, {'id': 23, 'name': 'The American Innovator', 'price': 20.0, 'description': 'An imaginative dish that changes daily, featuring the best of local produce and American ingenuity.'}, {'id': 24, 'name': "Ocean's Bounty Platter", 'price': 28.0, 'description': 'A platter featuring a selection of sustainably sourced seafood, including grilled shrimp, seared scallops, and a crab cake, served with a side of roasted vegetables.'}, {'id': 25, 'name': 'Superfood Energy Bowl', 'price': 18.0, 'description': 'A nutrient-packed bowl with kale, blueberries, walnuts, quinoa, and grilled chicken, drizzled with an acai-berry vinaigrette.'}]
+4. Comments
+   [{'day': 11, 'name': 'Jake', 'score': 8, 'content': 'Once again, Stars & Stripes USA impressed with its commitment to fresh, local ingredients. The Harvest Veggie Burger was a street food-inspired hit, and the Signature Berry Bliss Cheesecake ended the meal on a high note.'}, {'day': 11, 'name': 'Max', 'score': 8, 'content': "The fresh Farmers' Market Salad and the creativity of 'The American Innovator' impressed us, along with the consistently good Harvest Veggie Burger. The Signature Berry Bliss Cheesecake was a delightful finale to our meal."}, {'day': 11, 'name': 'Yasmine', 'score': 8, 'content': "Consistently satisfying, Stars & Stripes USA provided a delightful vegan meal with fresh ingredients. The Farmers' Market Salad and the Signature Berry Bliss Cheesecake were particularly noteworthy."}, {'day': 11, 'name': 'Wade', 'score': 8, 'content': "Stars & Stripes USA provided a consistent and satisfying experience. The American Innovator was good but lacked a wow factor. The freshness of the Farmers' Market Salad and the quality of the Sunset Grilled Salmon were highlights. The Signature Berry Bliss Cheesecake remained a favorite."}, {'day': 11, 'name': 'Nate', 'score': 8, 'content': "A balanced meal with both healthy options and comfort food. Fresh, local ingredients shone, though BBQ Ribs didn't outshine previous experiences."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Apple Pie a la Mode"
+    ],
+    "reason": "The slightly higher customer score at Stars & Stripes USA and the presence of traditional dishes that I have previously enjoyed, like the BBQ Ribs and Apple Pie, make it my preferred choice."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.83
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The BBQ Ribs were tender with just the right amount of smokiness, and the Farmers' Market Salad was crisp and refreshing. A gratifying traditional meal overall."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.958333333333333
+2. Advertisement
+   Experience the fresh taste of local innovation at American Delight with our 'Daily American Innovator' dish — changing daily to bring you new flavors made from the best local produce. Enjoy healthier options and our newly refined Chocolate Lava Cake for a sweet finish to your meal. Come support local with us!
+3. Menu 
+   [{'id': 11, 'name': 'Chocolate Lava Cake', 'price': 14.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 17.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 24.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 23, 'name': 'Quinoa & Black Bean Salad', 'price': 16.0, 'description': 'A protein-packed salad with quinoa, black beans, sweet corn, cherry tomatoes, and avocado, tossed in a lime-cilantro dressing.'}, {'id': 24, 'name': 'Grilled Portobello Burger', 'price': 19.0, 'description': 'A juicy portobello mushroom cap, grilled and topped with roasted red peppers and goat cheese, served on a whole wheat bun with sweet potato fries.'}, {'id': 25, 'name': 'Sustainable Seafood Special', 'price': 23.0, 'description': 'Seasonally inspired dish featuring sustainably sourced seafood, served with organic vegetables and a light, aromatic sauce.'}, {'id': 26, 'name': 'Heartland Beef Stew', 'price': 21.0, 'description': 'A hearty stew made with locally sourced beef, slow-cooked with root vegetables and a rich, savory broth, served with a side of freshly baked bread.'}, {'id': 27, 'name': 'Pioneer Apple Harvest Salad', 'price': 18.0, 'description': 'Crisp apples from nearby orchards tossed with organic mixed greens, candied walnuts, blue cheese crumbles, and a homemade apple cider vinaigrette.'}, {'id': 28, 'name': 'Daily American Innovator', 'price': 22.0, 'description': 'A unique, daily-changing dish that showcases the freshest local ingredients available. Designed to surprise and delight with American culinary creativity.'}]
+4. Comments
+   [{'day': 12, 'name': 'Jake', 'score': 8, 'content': 'American Delight offered a satisfying meal with the Heartland Beef Stew and Pioneer Apple Harvest Salad standing out. While good, it lacked an exceptional edge. A solid choice, comparable to our Stars & Stripes USA experiences.'}, {'day': 12, 'name': 'Amelia', 'score': 9, 'content': 'American Delight offered a satisfying experience with fresh, flavorful dishes that met our diverse tastes and health preferences, all within a comfortable budget.'}, {'day': 12, 'name': 'Grace', 'score': 8, 'content': 'American Delight met our health-conscious needs with a stellar lineup of dishes. The Heartland Beef Stew and Pioneer Apple Harvest Salad were standouts. The Local Harvest Chicken and Quinoa & Black Bean Salad satisfied our craving for nutritious, flavorsome food, while the Chocolate Lava Cake was a perfectly pitched, diabetic-friendly dessert.'}, {'day': 12, 'name': 'Max', 'score': 8, 'content': 'American Delight impressed us with their flavorful, fresh, and satisfying dishes, suitable for our plant-based diet and taste for home cooking.'}, {'day': 12, 'name': 'Maggie', 'score': 8, 'content': "American Delight excelled with a well-rounded menu. The Chocolate Lava Cake and the Pioneer Apple Harvest Salad were standouts, while the Heartland Beef Stew provided comfort. All dishes were prepared with quality ingredients, reflecting the restaurant's commitment to local sourcing and sustainability."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.03623188405797
+2. Advertisement
+   Discover the new tastes of America at Stars & Stripes USA! Indulge in our newly refined Classic Cheeseburger and BBQ Ribs, or opt for freshness with our enhanced Farmers' Market Salad. Our dedication to quality and flavor is unmatched. Join us for an exceptional dining experience with dishes that celebrate local produce and culinary innovation.
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 22.0, 'description': 'A juicy beef patty with aged cheddar, heirloom tomatoes, artisan lettuce, and our special sauce, served with seasoned fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 28.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 17.0, 'description': 'A vibrant salad with a variety of seasonal produce from local farms, tossed in a homemade vinaigrette.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 23.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 21.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 21.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 21, 'name': 'Quinoa & Avocado Salad', 'price': 17.0, 'description': 'A refreshing mix of organic quinoa, ripe avocados, cherry tomatoes, and black beans, served with a zesty lime dressing.'}, {'id': 23, 'name': 'The American Innovator', 'price': 22.0, 'description': 'An imaginative dish that changes daily, featuring the best of local produce and American ingenuity.'}, {'id': 24, 'name': "Ocean's Bounty Platter", 'price': 26.0, 'description': 'A platter featuring a selection of sustainably sourced seafood, including grilled shrimp, seared scallops, and a crab cake, served with a side of roasted vegetables.'}, {'id': 25, 'name': 'Superfood Energy Bowl', 'price': 20.0, 'description': 'A nutrient-packed bowl with kale, blueberries, walnuts, quinoa, and grilled chicken, drizzled with an acai-berry vinaigrette.'}]
+4. Comments
+   [{'day': 12, 'name': 'Olivia', 'score': 8, 'content': "A stellar dining experience with the Ocean's Bounty Platter and Farmers' Market Salad standing out for freshness. The Superfood Energy Bowl and Quinoa & Avocado Salad were nutritious and complemented the meal well."}, {'day': 12, 'name': 'Nora', 'score': 9, 'content': 'Stars & Stripes USA provides a delightful dining experience with consistent quality, fresh local ingredients, and a commitment to sustainable practices that resonates with our values.'}, {'day': 12, 'name': 'Nate', 'score': 9, 'content': "Stars & Stripes USA delivered a fresh and flavorful experience with their Farmers' Market Salad, Superfood Energy Bowl, and Ocean's Bounty Platter. It's a great spot for healthy and delicious comfort food that satisfies both taste and dietary needs."}, {'day': 12, 'name': 'William', 'score': 8, 'content': "The group enjoyed the Ocean's Bounty Platter and other selections for their freshness and taste. The Signature Berry Bliss Cheesecake was a unanimous favorite, concluding our meal on a high note."}, {'day': 12, 'name': 'David', 'score': 8, 'content': "The Farmers' Market Salad was fresh, aligning with my health needs, while the Quinoa & Avocado Salad was a satisfying breakfast alternative. Though tasty, I've had slightly better experiences before. An overall good meal with room for improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Classic Cheeseburger"
+    ],
+    "reason": "Given my previous positive experiences, Stars & Stripes USA's higher customer score and menu offerings like BBQ Ribs and Classic Cheeseburger align with my preferences for traditional dishes."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Classic Cheeseburger: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The BBQ Ribs were perfectly smoky, the Farmers' Market Salad was fresh and vibrant, and the Classic Cheeseburger was satisfyingly traditional."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.9743589743589745
+2. Advertisement
+   Join us at American Delight for a culinary journey with our Daily American Innovator. Each day brings a new creation with the freshest local ingredients. Savor the improved Chocolate Lava Cake and explore our health-conscious menu. Celebrate the art of American cuisine while supporting local sustainability!
+3. Menu 
+   [{'id': 11, 'name': 'Chocolate Lava Cake', 'price': 16.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 19.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 26.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 23, 'name': 'Quinoa & Black Bean Salad', 'price': 18.0, 'description': 'A protein-packed salad with quinoa, black beans, sweet corn, cherry tomatoes, and avocado, tossed in a lime-cilantro dressing.'}, {'id': 24, 'name': 'Grilled Portobello Burger', 'price': 21.0, 'description': 'A juicy portobello mushroom cap, grilled and topped with roasted red peppers and goat cheese, served on a whole wheat bun with sweet potato fries.'}, {'id': 25, 'name': 'Sustainable Seafood Special', 'price': 25.0, 'description': 'Seasonally inspired dish featuring sustainably sourced seafood, served with organic vegetables and a light, aromatic sauce.'}, {'id': 26, 'name': 'Heartland Beef Stew', 'price': 23.0, 'description': 'A hearty stew made with locally sourced beef, slow-cooked with root vegetables and a rich, savory broth, served with a side of freshly baked bread.'}, {'id': 27, 'name': 'Pioneer Apple Harvest Salad', 'price': 20.0, 'description': 'Crisp apples from nearby orchards tossed with organic mixed greens, candied walnuts, blue cheese crumbles, and a homemade apple cider vinaigrette.'}, {'id': 28, 'name': 'Daily American Innovator', 'price': 24.0, 'description': 'A unique, daily-changing dish that showcases the freshest local ingredients available. Designed to surprise and delight with American culinary creativity.'}]
+4. Comments
+   [{'day': 13, 'name': 'Amelia', 'score': 8, 'content': 'American Delight provided a well-rounded meal with fresh, flavorful dishes. The creativity of the Daily American Innovator and the indulgence of the Chocolate Lava Cake were highlights. Each dish met our health and taste expectations, making for a memorable dining experience.'}, {'day': 13, 'name': 'Grace', 'score': 8, 'content': 'American Delight delivered with a flavorful Heartland Beef Stew and a perfectly sweetened diabetic-friendly Chocolate Lava Cake, satisfying health and taste.'}, {'day': 13, 'name': 'Max', 'score': 8, 'content': 'American Delight offered a refreshing change with well-balanced, inventive plant-based dishes and a delightful dessert, marking a successful dining adventure.'}, {'day': 13, 'name': 'Yasmine', 'score': 8, 'content': 'American Delight impressed with consistent quality across dishes. The Quinoa & Black Bean Salad, Grilled Portobello Burger, and Daily American Innovator all earned solid eights for their fresh, flavorful ingredients and innovative appeal.'}, {'day': 13, 'name': 'Dexter', 'score': 8, 'content': 'American Delight impressed with their Daily American Innovator and commitment to sustainability. The dishes, including the indulgent Chocolate Lava Cake, were consistently good. A truly enjoyable dining experience with fresh ingredients and innovative cooking.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.046979865771812
+2. Advertisement
+   Savor the flavors of innovation at Stars & Stripes USA with our Patriot's Dream Pie, a new dessert rivaling the finest. Enjoy our enhanced Farmers' Market Salad and our signature, improved Classic Cheeseburger. Experience culinary creativity with dishes crafted from the freshest local ingredients. Your journey to delicious discovery starts here!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Cheeseburger', 'price': 23.0, 'description': 'Our signature beef patty with smoked gouda, heirloom tomatoes, organic lettuce, and a unique smoky sauce, served with herb-seasoned fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 28.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 18.0, 'description': 'An enhanced salad with peak-season ingredients from local farms, served with an artisanal cheese blend and a signature dressing.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 23.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 21.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 21.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 21, 'name': 'Quinoa & Avocado Salad', 'price': 17.0, 'description': 'A refreshing mix of organic quinoa, ripe avocados, cherry tomatoes, and black beans, served with a zesty lime dressing.'}, {'id': 24, 'name': "Ocean's Bounty Platter", 'price': 26.0, 'description': 'A platter featuring a selection of sustainably sourced seafood, including grilled shrimp, seared scallops, and a crab cake, served with a side of roasted vegetables.'}, {'id': 25, 'name': 'Superfood Energy Bowl', 'price': 20.0, 'description': 'A nutrient-packed bowl with kale, blueberries, walnuts, quinoa, and grilled chicken, drizzled with an acai-berry vinaigrette.'}, {'id': 26, 'name': "Patriot's Dream Pie", 'price': 18.0, 'description': 'A slice of Americana with this deep-dish apple pie, featuring a flaky homemade crust and a cinnamon-spiced apple filling, served with a scoop of vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 13, 'name': 'Jake', 'score': 8, 'content': 'Consistently fresh and flavorsome dishes that cater to diverse tastes and dietary needs. The Signature Berry Bliss Cheesecake is a standout.'}, {'day': 13, 'name': 'Olivia', 'score': 8, 'content': "The meal at Stars & Stripes USA was a resounding success, with all dishes earning high praise for their freshness and flavor. Both the Ocean's Bounty Platter and Superfood Energy Bowl wowed us with their quality, while the Signature Berry Bliss Cheesecake was the perfect gluten-free indulgence."}, {'day': 13, 'name': 'Maggie', 'score': 8, 'content': "The dishes at Stars & Stripes USA were exceptional, offering a balance of health and indulgence. Fresh, quality ingredients shone in each dish, from the Farmers' Market Salad to the Signature Berry Bliss Cheesecake."}, {'day': 13, 'name': 'Nora', 'score': 9, 'content': "Consistently high-quality dishes with fresh, seasonal ingredients. Each dish was prepared excellently, embodying the restaurant's commitment to culinary creativity and flavor."}, {'day': 13, 'name': 'Frank', 'score': 8, 'content': 'Consistently good across the board. The dishes were flavorful, well-cooked, and the vegan options were satisfying. The cheesecake was a hit. A reliable choice for diverse preferences.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "Classic Cheeseburger",
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Patriot's Dream Pie"
+    ],
+    "reason": "Stars & Stripes USA has a slightly higher customer score and offers a mix of traditional dishes and creative flavors that suit my palate, with an emphasis on fresh, local ingredients."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Classic Cheeseburger: 0.81
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Patriot's Dream Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The meal was hearty and satisfying. The Classic Cheeseburger was juicy, the BBQ Ribs were flavorful, the Farmers' Market Salad was fresh, and the Patriot's Dream Pie was a delightful treat."
+}
+
+[System->Oscar]: The Restaurant " American Delight "information as below:
+1. Customer Score: 7.975903614457831
+2. Advertisement
+   Discover the fresh flavors of American Delight with our new Garden Fresh Salad Bowl and Ocean's Harvest Wrap — perfect for health-conscious diners! Enjoy our signature American Hero Dish or indulge in the richness of our improved Chocolate Lava Cake. Local, sustainable, and deliciously American!
+3. Menu 
+   [{'id': 11, 'name': 'Chocolate Lava Cake', 'price': 18.0, 'description': 'A molten chocolate cake with a heart of gooey ganache, made with locally-sourced chocolate, served with a scoop of hand-churned vanilla ice cream.'}, {'id': 16, 'name': 'Local Harvest Chicken', 'price': 19.0, 'description': 'Grilled chicken breast with a seasonal local vegetable medley, served with a herb-infused local honey glaze.'}, {'id': 19, 'name': 'American Hero Dish', 'price': 27.0, 'description': 'A daily special that celebrates local produce in an innovative recipe crafted each morning by our talented chefs.'}, {'id': 23, 'name': 'Quinoa & Black Bean Salad', 'price': 19.0, 'description': 'A protein-packed salad with quinoa, black beans, sweet corn, cherry tomatoes, and avocado, tossed in a lime-cilantro dressing.'}, {'id': 24, 'name': 'Grilled Portobello Burger', 'price': 22.0, 'description': 'A juicy portobello mushroom cap, grilled and topped with roasted red peppers and goat cheese, served on a whole wheat bun with sweet potato fries.'}, {'id': 26, 'name': 'Heartland Beef Stew', 'price': 25.0, 'description': 'A hearty stew made with locally sourced beef, slow-cooked with root vegetables and a rich, savory broth, served with a side of freshly baked bread.'}, {'id': 28, 'name': 'Daily American Innovator', 'price': 24.0, 'description': 'A unique, daily-changing dish that showcases the freshest local ingredients available. Designed to surprise and delight with American culinary creativity.'}, {'id': 29, 'name': 'Garden Fresh Salad Bowl', 'price': 17.0, 'description': 'A medley of fresh, crisp greens, cherry tomatoes, cucumbers, and radishes, topped with sprouts and a light lemon-herb dressing.'}, {'id': 30, 'name': 'Plant-Powered Protein Platter', 'price': 22.0, 'description': 'A nutritious selection of grilled tofu, lentil patties, and roasted chickpeas, served with a side of steamed kale and sweet potato mash.'}, {'id': 31, 'name': "Ocean's Harvest Wrap", 'price': 21.0, 'description': 'Sustainably sourced tuna and shrimp, with crunchy lettuce, avocado, and a tangy yogurt dressing, wrapped in a spinach tortilla.'}]
+4. Comments
+   [{'day': 14, 'name': 'Amelia', 'score': 8, 'content': "The meal at American Delight was consistently good across all dishes. The freshness of ingredients stood out, especially in the salads. While the Chocolate Lava Cake didn't amaze, it was still satisfying. Overall, a pleasant dining experience."}, {'day': 14, 'name': 'Grace', 'score': 8, 'content': 'American Delight provided a wholesome dining experience, from the rich Heartland Beef Stew to the innovative Daily dish, complemented by a well-balanced Chocolate Lava Cake and a refreshing Quinoa & Black Bean Salad.'}, {'day': 14, 'name': 'Frank', 'score': 8, 'content': 'American Delight offered a consistent and satisfying selection. The dishes were fresh, flavorful, and aligned with our health and sustainability values. A commendable dining experience.'}, {'day': 14, 'name': 'Yasmine', 'score': 8, 'content': 'American Delight impressed with consistent quality across dishes. The Quinoa & Black Bean Salad, Grilled Portobello Burger, and Daily American Innovator all earned solid eights for their fresh, flavorful ingredients and innovative appeal.'}, {'day': 14, 'name': 'William', 'score': 8, 'content': 'American Delight impressed with its innovative American Hero Dish and consistently good lighter options. The meal was balanced with freshness and indulgence, culminating in a satisfying Chocolate Lava Cake.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: The Restaurant " Stars & Stripes USA "information as below:
+1. Customer Score: 8.061728395061728
+2. Advertisement
+   Indulge in our new Vegan Innovator's Delight and Green Garden Wrap, the latest additions to our menu catering to health-conscious and vegan diners. Enjoy the fresh, local, and sustainable ingredients that make Stars & Stripes USA a culinary haven. Discover our commitment to innovation and flavor in every dish!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 29.0, 'description': 'Slow-smoked pork ribs coated in a bold house-made whiskey BBQ sauce, served with a side of apple cider vinegar slaw and jalapeno cornbread.'}, {'id': 8, 'name': "Farmers' Market Salad", 'price': 19.0, 'description': 'An enhanced salad with peak-season ingredients from local farms, served with an artisanal vegan cheese blend and a signature dressing.'}, {'id': 9, 'name': 'Local Hero Dish', 'price': 23.0, 'description': 'Our daily special, creatively showcasing local ingredients in a dish that blends traditional flavors with modern culinary techniques.'}, {'id': 14, 'name': 'Signature Berry Bliss Cheesecake', 'price': 21.0, 'description': 'Rich and creamy cheesecake with a medley of local berries, elegantly served with a berry compote and a light dusting of powdered sugar.'}, {'id': 16, 'name': 'Harvest Veggie Burger', 'price': 21.0, 'description': 'A hearty plant-based patty topped with fresh local vegetables and a tangy house sauce, served with sweet potato fries.'}, {'id': 18, 'name': 'Sunset Grilled Salmon', 'price': 24.0, 'description': 'Grilled wild-caught salmon with a lemon-herb glaze, served with a side of quinoa salad and seasonal greens.'}, {'id': 21, 'name': 'Quinoa & Avocado Salad', 'price': 17.0, 'description': 'A refreshing mix of organic quinoa, ripe avocados, cherry tomatoes, and black beans, served with a zesty lime dressing.'}, {'id': 24, 'name': "Ocean's Bounty Platter", 'price': 26.0, 'description': 'A platter featuring a selection of sustainably sourced seafood, including grilled shrimp, seared scallops, and a crab cake, served with a side of roasted vegetables.'}, {'id': 25, 'name': 'Superfood Energy Bowl', 'price': 20.0, 'description': 'A nutrient-packed bowl with kale, blueberries, walnuts, quinoa, and grilled chicken, drizzled with an acai-berry vinaigrette.'}, {'id': 26, 'name': "Patriot's Dream Pie", 'price': 18.0, 'description': 'A slice of Americana with this deep-dish apple pie, featuring a flaky homemade crust and a cinnamon-spiced apple filling, served with a scoop of vanilla bean ice cream.'}, {'id': 27, 'name': "Vegan Innovator's Delight", 'price': 22.0, 'description': 'A creative vegan dish with a blend of seasonal vegetables, tofu, and a unique sauce inspired by global flavors, served with a side of infused quinoa.'}, {'id': 28, 'name': 'Green Garden Wrap', 'price': 19.0, 'description': 'An assortment of fresh, organic greens, avocado, and chickpeas wrapped in a spinach tortilla, served with a vegan tahini dressing.'}]
+4. Comments
+   [{'day': 14, 'name': 'Jake', 'score': 8, 'content': 'Stars & Stripes USA impresses with its consistent quality across the board, offering delicious, health-conscious options that cater to diverse tastes and dietary needs, all while maintaining a good value.'}, {'day': 14, 'name': 'Olivia', 'score': 9, 'content': 'Stars & Stripes USA delivered an exceptional dining experience with each dish showcasing freshness and culinary creativity. The salads were crisp, the salmon flaky, and the desserts indulgently satisfying.'}, {'day': 14, 'name': 'Max', 'score': 8, 'content': "Stars & Stripes USA delivered once again with a meal that met our expectations for freshness, flavor, and quality. The Farmers' Market Salad was crisp, the Harvest Veggie Burger was satisfying, and the Patriot's Dream Pie was a delightful end to the meal."}, {'day': 14, 'name': 'Maggie', 'score': 9, 'content': 'Stars & Stripes USA provided an exceptional dining experience with each dish scoring a solid 9. Fresh, flavorful, and satisfying, the meal catered to our diverse tastes and health-conscious choices.'}, {'day': 14, 'name': 'Nora', 'score': 8, 'content': "Our dining experience at Stars & Stripes USA was exceptional. Each dish, from the Farmers' Market Salad to the Ocean's Bounty Platter, was fresh and flavorful, meeting our dietary preferences and health-conscious lifestyle. The service was attentive, and the gluten-free options were both safe and delicious, aligning perfectly with our needs."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Oscar]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "dishes": [
+        "BBQ Ribs",
+        "Farmers' Market Salad",
+        "Patriot's Dream Pie"
+    ],
+    "reason": "Stars & Stripes USA has a higher customer score and offers traditional dishes like BBQ Ribs, which I've enjoyed before. Their emphasis on fresh, local ingredients matches my preference for quality."
+}
+
+[System->Oscar]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+BBQ Ribs: 0.81
+Farmers' Market Salad: 0.81
+Patriot's Dream Pie: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Oscar->all]: {
+    "restaurant": "Stars & Stripes USA",
+    "feeling": "The BBQ Ribs were succulent with the right touch of smokiness, the Farmers' Market Salad was crisp and flavorful, and the Patriot's Dream Pie was absolutely delightful."
+}
+

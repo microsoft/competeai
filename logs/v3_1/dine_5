@@ -1,0 +1,900 @@
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right here in town! Enjoy our signature Classic American Burger, succulent BBQ Ribs, and more at American Flavors Bistro. Special opening offer: Get 10% off your first meal with us. Savor the flavors that make America great!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with fries'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender pork ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 6.0, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 9.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 7.0, 'description': 'Rich and creamy cheesecake with a graham cracker crust and fruit topping'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 11.0, 'description': 'Slow-cooked pulled pork with slaw on a toasted bun, served with pickles'}, {'id': 9, 'name': 'Southern Fried Chicken', 'price': 13.0, 'description': 'Crispy fried chicken served with mashed potatoes and gravy'}, {'id': 10, 'name': 'Philly Cheesesteak', 'price': 10.0, 'description': 'Thinly sliced steak with melted cheese, onions, and peppers on a hoagie roll'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of America right here at USA Diner Haven! Enjoy our value menu with classic American burgers, BBQ ribs, and more. Indulge in our signature dishes for a gourmet experience. Fresh, local ingredients in every bite!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 8.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 12.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 5.0, 'description': 'Classic cheesecake with a rich, creamy filling and graham cracker crust'}, {'id': 6, 'name': 'Milkshake', 'price': 4.0, 'description': 'Thick milkshake available in chocolate, vanilla, or strawberry'}, {'id': 7, 'name': 'Philly Cheesesteak', 'price': 9.0, 'description': 'Sliced beef with melted cheese and onions on a hoagie roll'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 5.0, 'description': 'Homemade apple pie with a flaky crust and cinnamon-spiced filling'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 8.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven offers healthier, low-sodium options like salads, which suit my high blood pressure and dietary restriction. Prices are also more affordable, maximizing value on a middle-class income."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.61
+Caesar Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The salads were fresh and fulfilling, aligning well with my health needs. The service was prompt and friendly, which made the dining experience quite pleasant."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Introducing Happy Hour at American Flavors Bistro! Get 15% off all appetizers and drinks between 3-5 PM daily. Come taste America with our Classic American Burger at new lower prices. Follow us on social media for exclusive offers and updates!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'A juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with fries'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender pork ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 8.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 6.5, 'description': 'Rich and creamy cheesecake with a graham cracker crust and fruit topping'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pulled pork with slaw on a toasted bun, served with pickles'}, {'id': 9, 'name': 'Southern Fried Chicken', 'price': 12.0, 'description': 'Crispy fried chicken served with mashed potatoes and gravy'}, {'id': 10, 'name': 'Philly Cheesesteak', 'price': 9.0, 'description': 'Thinly sliced steak with melted cheese, onions, and peppers on a hoagie roll'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Come try USA Diner Haven's new Special Burger, a unique twist on American flavor! Plus, enjoy lower prices on favorites like BBQ Ribs and Classic American Burgers. Satisfy your cravings with quality you can taste!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 5.0, 'description': 'Classic cheesecake with a rich, creamy filling and graham cracker crust'}, {'id': 6, 'name': 'Milkshake', 'price': 4.0, 'description': 'Thick milkshake available in chocolate, vanilla, or strawberry'}, {'id': 7, 'name': 'Philly Cheesesteak', 'price': 9.0, 'description': 'Sliced beef with melted cheese and onions on a hoagie roll'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 5.0, 'description': 'Homemade apple pie with a flaky crust and cinnamon-spiced filling'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 8.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables'}, {'id': 11, 'name': "USA Diner Haven's Special Burger", 'price': 11.0, 'description': 'Our signature burger with a unique blend of spices and a secret sauce'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven's menu includes healthier options like salads which are more suitable for my low sodium diet and better for managing my high blood pressure."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.61
+Caesar Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The salads at USA Diner Haven were tasty and suited my dietary needs well. I felt that they were carefully prepared with fresh ingredients, and the service was attentive and friendly, enhancing the dining experience."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover our new Bistro Special Burger and California Fresh Salad at American Flavors Bistro! Join us for an extended Happy Hour from 3-7 PM and enjoy a 20% discount on our new specialties. Plus, start earning points with our new loyalty program—every dollar spent brings you closer to free meals!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'A juicy beef patty with lettuce, tomato, cheese, and our special sauce, served with fries'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender pork ribs smothered in our homemade BBQ sauce, served with coleslaw and cornbread'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 8.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 6.5, 'description': 'Rich and creamy cheesecake with a graham cracker crust and fruit topping'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pulled pork with slaw on a toasted bun, served with pickles'}, {'id': 9, 'name': 'Southern Fried Chicken', 'price': 12.0, 'description': 'Crispy fried chicken served with mashed potatoes and gravy'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 12.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 12, 'name': 'California Fresh Salad', 'price': 9.0, 'description': 'A refreshing mix of greens, cherry tomatoes, cucumbers, avocado, with grilled chicken and a light lemon-herb dressing'}]
+4. Comments
+   [{'day': 2, 'name': 'Jack', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were satisfactory, though not remarkable. The Apple Pie a la Mode was enjoyable but could use more flavor. In comparison, USA Diner Haven's dishes had a similar quality, but the Happy Hour discount here provided better value."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Dive into flavor with Lin's Exclusive Loaded Fries, only at USA Diner Haven! Plus, savor our improved Apple Pie now served with complimentary coffee or tea. Join us for Midweek Madness - enjoy a 10% discount on all dishes every Wednesday!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 5.0, 'description': 'Classic cheesecake with a rich, creamy filling and graham cracker crust'}, {'id': 6, 'name': 'Milkshake', 'price': 4.0, 'description': 'Thick milkshake available in chocolate, vanilla, or strawberry'}, {'id': 7, 'name': 'Philly Cheesesteak', 'price': 9.0, 'description': 'Sliced beef with melted cheese and onions on a hoagie roll'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust and cinnamon-spiced filling'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 7.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}]
+4. Comments
+   [{'day': 2, 'name': 'Zach', 'score': 6, 'content': 'The Grilled Chicken Salad had a fair balance of flavors, but it lacked the sophistication I relish in French cuisine. While it met my gluten-free needs and was affordable, the taste did not fully meet my connoisseur expectations. Service was satisfactory.'}, {'day': 2, 'name': 'Oscar', 'score': 6, 'content': 'The dishes were fairly satisfying with room for improvement. The burger and ribs were decent but not exceptional. The apple pie was the highlight. Service was good, though the flavors could be enhanced to better match the vibrant descriptions.'}, {'day': 2, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Chicken Salad was satisfactory for my health needs, but it lacked the culinary excitement I expected. A balance between health-conscious options and flavor intensity could enhance the dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven offers salads, which are better for my low sodium diet and high blood pressure. The prices are affordable, fitting my middle-class income."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.66
+Caesar Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Grilled Chicken Salad and Caesar Salad were quite refreshing and aligned with my dietary needs. I appreciated the attentive service and the affordable pricing, which made for a satisfying meal."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Taste the bold flavors at American Flavors Bistro with our enhanced Classic American Burger and BBQ Ribs, now with richer tastes and new sides! Dive into health with our Grilled Seafood Medley Salad. Don't miss our Happy Hour from 3-7 PM for a 20% discount on these new delights. Join our loyalty program for more rewards!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'A juicy beef patty with lettuce, tomato, aged cheddar, and our special sauce, served with fries'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender pork ribs smothered in our homemade BBQ sauce, served with coleslaw and a side of sweet potato fries'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 8.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 6.5, 'description': 'Rich and creamy cheesecake with a graham cracker crust and fruit topping'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pulled pork with slaw on a toasted bun, served with pickles'}, {'id': 9, 'name': 'Southern Fried Chicken', 'price': 12.0, 'description': 'Crispy fried chicken served with mashed potatoes and gravy'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 12.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 11.0, 'description': 'A medley of grilled shrimp, scallops, and calamari over mixed greens with a zesty lemon-herb dressing'}]
+4. Comments
+   [{'day': 2, 'name': 'Jack', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were satisfactory, though not remarkable. The Apple Pie a la Mode was enjoyable but could use more flavor. In comparison, USA Diner Haven's dishes had a similar quality, but the Happy Hour discount here provided better value."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Experience bold flavors with our new Lin's Signature Grilled Seafood Platter, and indulge in the improved zest of our Grilled Chicken Salad! Join us for Taste of America Thursdays and enjoy a 15% discount on classic American dishes. USA Diner Haven - where tradition meets taste!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 5, 'name': 'New York Cheesecake', 'price': 5.0, 'description': 'Classic cheesecake with a rich, creamy filling and graham cracker crust'}, {'id': 7, 'name': 'Philly Cheesesteak', 'price': 9.0, 'description': 'Sliced beef with melted cheese and onions on a hoagie roll'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Homemade apple pie with a flaky crust and cinnamon-spiced filling, now with a richer taste'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 7.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables and a bold, zesty dressing'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}]
+4. Comments
+   [{'day': 3, 'name': 'Umar', 'score': 6, 'content': "While the Grilled Chicken Salad adhered to my dietary restrictions and was reasonably priced, the dish's flavor profile was underwhelming. An infusion of bold, grilled seafood taste would greatly enhance the meal's appeal to my palate."}, {'day': 2, 'name': 'Zach', 'score': 6, 'content': 'The Grilled Chicken Salad had a fair balance of flavors, but it lacked the sophistication I relish in French cuisine. While it met my gluten-free needs and was affordable, the taste did not fully meet my connoisseur expectations. Service was satisfactory.'}, {'day': 2, 'name': 'Oscar', 'score': 6, 'content': 'The dishes were fairly satisfying with room for improvement. The burger and ribs were decent but not exceptional. The apple pie was the highlight. Service was good, though the flavors could be enhanced to better match the vibrant descriptions.'}, {'day': 2, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Chicken Salad was satisfactory for my health needs, but it lacked the culinary excitement I expected. A balance between health-conscious options and flavor intensity could enhance the dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "Considering my health and dietary needs, USA Diner Haven's Grilled Chicken Salad and Caesar Salad are suitable low-sodium options that cater to my taste for breakfast foods."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.66
+Caesar Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Grilled Chicken Salad and Caesar Salad were satisfactory and suited my dietary restrictions, though they could use more flavor."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Savor the new and improved flavors at American Flavors Bistro! Come try our enhanced Grilled Seafood Medley Salad with premium ingredients and a zesty dressing. Introducing the Vegan Delight Burger - a taste sensation for our vegan friends! Celebrate our 'Flavor Fest' week with a 10% discount on these flavorful dishes. Happy Hour continues from 3-7 PM. Join us for a feast of American classics with a twist!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'A juicy beef patty with lettuce, tomato, aged cheddar, and our special sauce, served with fries'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender pork ribs smothered in our homemade BBQ sauce, served with coleslaw and a side of sweet potato fries'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 8.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 6.5, 'description': 'Rich and creamy cheesecake with a graham cracker crust and fruit topping'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pulled pork with slaw on a toasted bun, served with pickles'}, {'id': 9, 'name': 'Southern Fried Chicken', 'price': 12.0, 'description': 'Crispy fried chicken served with mashed potatoes and gravy'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 12.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 12.0, 'description': 'A premium selection of grilled shrimp, scallops, and calamari over mixed greens with an enhanced zesty lemon-herb dressing'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 11.0, 'description': 'Our plant-based burger patty with lettuce, tomato, vegan cheese, and a special vegan sauce, served with sweet potato fries'}]
+4. Comments
+   [{'day': 4, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad was fair, meeting my gluten-free requirement. However, it didn't fully live up to the sophisticated flavors I anticipated. Compared to USA Diner Haven, the dish here still provided a more nuanced taste, but there's room for improvement in the flavor profile."}, {'day': 2, 'name': 'Jack', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were satisfactory, though not remarkable. The Apple Pie a la Mode was enjoyable but could use more flavor. In comparison, USA Diner Haven's dishes had a similar quality, but the Happy Hour discount here provided better value."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Discover the ultimate Vegan Delight Bowl at USA Diner Haven, crafted for our vegan friends! Savor our revamped Apple Pie with a caramel twist. Plus, get a sneak peek at our soon-to-launch Signature Flavor Burger. Don't miss our Taste of America Thursdays for special deals!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'Juicy beef patty with lettuce, tomato, cheese, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.5, 'description': 'Our classic apple pie with a flaky crust, now enhanced with a rich caramel drizzle and a hint of cinnamon spice'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 7.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables and a bold, zesty dressing'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 14, 'name': 'Vegan Delight Bowl', 'price': 9.0, 'description': 'A hearty bowl of quinoa, black beans, avocado, and roasted vegetables, topped with a rich, nut-based cheese alternative'}]
+4. Comments
+   [{'day': 4, 'name': 'Katie', 'score': 6, 'content': "The Caesar Salad, once veganized, was a decent option, though it lacked the richness that cheese provides. The Apple Pie was adequately made but didn't impress in flavor. Compared to what I've heard of American Flavors Bistro, the vegan options here are more accommodating to my dietary needs."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "While the Grilled Chicken Salad adhered to my dietary restrictions and was reasonably priced, the dish's flavor profile was underwhelming. An infusion of bold, grilled seafood taste would greatly enhance the meal's appeal to my palate."}, {'day': 2, 'name': 'Zach', 'score': 6, 'content': 'The Grilled Chicken Salad had a fair balance of flavors, but it lacked the sophistication I relish in French cuisine. While it met my gluten-free needs and was affordable, the taste did not fully meet my connoisseur expectations. Service was satisfactory.'}, {'day': 2, 'name': 'Oscar', 'score': 6, 'content': 'The dishes were fairly satisfying with room for improvement. The burger and ribs were decent but not exceptional. The apple pie was the highlight. Service was good, though the flavors could be enhanced to better match the vibrant descriptions.'}, {'day': 2, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Chicken Salad was satisfactory for my health needs, but it lacked the culinary excitement I expected. A balance between health-conscious options and flavor intensity could enhance the dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven offers salads at lower prices, fitting my budget and low sodium diet needs. Their service seems satisfactory according to comments."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.66
+Caesar Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Grilled Chicken Salad and Caesar Salad were reasonably priced and compatible with my dietary restrictions. The experience was good overall."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.75
+2. Advertisement
+   Discover bold tastes at American Flavors Bistro! Our Grilled Seafood Medley Salad is now bursting with adventurous flavors. Introducing our new Gourmet American Steak - indulge in luxury with every bite. Plus, don't miss our Decadent Vegan Chocolate Cake, a vegan delight that's rich and irresistible. Visit us for our 'Flavor Fest' week and enjoy a 10% discount on these new gourmet offerings!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'A juicy beef patty with lettuce, tomato, aged cheddar, and our special sauce, served with fries'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender pork ribs smothered in our homemade BBQ sauce, served with coleslaw and a side of sweet potato fries'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 9.0, 'description': 'Spicy chicken wings served with blue cheese dressing and celery sticks'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a crispy breadcrumb crust'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 8.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 7, 'name': 'New York Cheesecake', 'price': 6.5, 'description': 'Rich and creamy cheesecake with a graham cracker crust and fruit topping'}, {'id': 8, 'name': 'Pulled Pork Sandwich', 'price': 10.0, 'description': 'Slow-cooked pulled pork with slaw on a toasted bun, served with pickles'}, {'id': 9, 'name': 'Southern Fried Chicken', 'price': 12.0, 'description': 'Crispy fried chicken served with mashed potatoes and gravy'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 12.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 12.0, 'description': 'A luxurious selection of grilled shrimp, scallops, and calamari over mixed greens with an adventurous blend of herbs and a zesty lemon-herb dressing, designed to cater to discerning palates seeking depth in flavor.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 11.0, 'description': 'Our plant-based burger patty with lettuce, tomato, vegan cheese, and a special vegan sauce, served with sweet potato fries'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 25.0, 'description': 'A prime cut of beef seasoned with our signature spice blend, grilled to perfection, and served with garlic mashed potatoes and seasonal vegetables.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 7.0, 'description': 'Rich, moist chocolate cake made with high-quality vegan ingredients, topped with a velvety chocolate ganache and served with raspberry coulis.'}]
+4. Comments
+   [{'day': 5, 'name': 'Zach', 'score': 5, 'content': "The Grilled Seafood Medley Salad was adequate, meeting my gluten-free requirement. However, the flavors lacked the depth expected of French-inspired cuisine. In comparison, USA Diner Haven's salad was similarly priced but also didn't impress in terms of taste complexity. Both establishments could elevate their offerings to better suit a connoisseur's palate."}, {'day': 5, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Seafood Medley Salad was in line with my dietary needs, but its taste did not fully meet my expectations for grilled seafood flavor. While the Happy Hour discount added value, the dish could benefit from enhanced seasoning to match my discerning palate.'}, {'day': 4, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad was fair, meeting my gluten-free requirement. However, it didn't fully live up to the sophisticated flavors I anticipated. Compared to USA Diner Haven, the dish here still provided a more nuanced taste, but there's room for improvement in the flavor profile."}, {'day': 2, 'name': 'Jack', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were satisfactory, though not remarkable. The Apple Pie a la Mode was enjoyable but could use more flavor. In comparison, USA Diner Haven's dishes had a similar quality, but the Happy Hour discount here provided better value."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 6.0
+2. Advertisement
+   Introducing Lin's American Flavor Explosion! Experience bold new tastes with our spicy beef and secret tangy sauce. Relish the enhanced flavors of our Classic American Burger and signature BBQ Ribs. Don't forget our Apple Pie, now with a rich caramel drizzle and premium vanilla ice cream. Come to USA Diner Haven for a culinary adventure!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 11.0, 'description': 'Juicy beef patty with lettuce, tomato, aged cheddar, and a new bold BBQ sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 14.0, 'description': 'Tender ribs smothered in our new signature honey-glazed BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.5, 'description': 'Our classic apple pie with a flaky crust, now enhanced with a rich caramel drizzle, a hint of cinnamon spice, and a scoop of premium vanilla ice cream.'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 7.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables and a bold, zesty dressing'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 14, 'name': 'Vegan Delight Bowl', 'price': 9.0, 'description': 'A hearty bowl of quinoa, black beans, avocado, and roasted vegetables, topped with a rich, nut-based cheese alternative'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}]
+4. Comments
+   [{'day': 5, 'name': 'Leo', 'score': 6, 'content': "The Classic American Burger was average, lacking standout flavors. The Mac & Cheese had a comforting creaminess but could use more seasoning. The Apple Pie's caramel twist was a nice touch but overall, the dishes didn't impress. Compared to my previous experiences, this meal fell short on the expected richness and taste."}, {'day': 5, 'name': 'Oscar', 'score': 6, 'content': "The Classic American Burger had a decent patty, but lacked standout flavors, scoring just average. BBQ Ribs were slightly better, with a fair tenderness. The Apple Pie's crust was flaky, but overall flavor fell flat. Compared to past experiences, today's meal was consistent but could use a culinary boost."}, {'day': 4, 'name': 'Katie', 'score': 6, 'content': "The Caesar Salad, once veganized, was a decent option, though it lacked the richness that cheese provides. The Apple Pie was adequately made but didn't impress in flavor. Compared to what I've heard of American Flavors Bistro, the vegan options here are more accommodating to my dietary needs."}, {'day': 3, 'name': 'Umar', 'score': 6, 'content': "While the Grilled Chicken Salad adhered to my dietary restrictions and was reasonably priced, the dish's flavor profile was underwhelming. An infusion of bold, grilled seafood taste would greatly enhance the meal's appeal to my palate."}, {'day': 2, 'name': 'Zach', 'score': 6, 'content': 'The Grilled Chicken Salad had a fair balance of flavors, but it lacked the sophistication I relish in French cuisine. While it met my gluten-free needs and was affordable, the taste did not fully meet my connoisseur expectations. Service was satisfactory.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven offers affordable, low-sodium salad options that fit my dietary needs and align with my preference for breakfast foods, providing better utility for my health condition."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Grilled Chicken Salad: 0.66
+Caesar Salad: 0.61
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "score": 6,
+    "comment": "The Grilled Chicken Salad and Caesar Salad were fitting for my low-sodium diet, yet they lacked a bit in flavor. While they were reasonably priced, I'd appreciate more zest to enhance the taste. Compared to past meals, these could use a culinary boost."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.8
+2. Advertisement
+   Savor the enhanced flavors at American Flavors Bistro! Come in and try our improved Classic American Burger with a juicier beef patty and new bold sauce, or our honey-spiced BBQ Ribs for a taste sensation. And don't forget our Decadent Vegan Chocolate Cake – now even more indulgent! Join us and experience the difference quality makes.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Our upgraded classic burger with a thicker, juicier beef patty, aged cheddar, crisp lettuce, vine-ripened tomato, and a new bold signature sauce, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 8.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 12.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 13.0, 'description': 'A selection of grilled shrimp, scallops, and calamari over fresh greens, tossed with a bold and zesty lemon-herb dressing, perfect for those seeking a light yet flavorful meal.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 12.0, 'description': 'Our plant-based burger patty topped with organic lettuce, heirloom tomato, vegan gourmet cheese, and a special vegan sauce, served with oven-roasted sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}]
+4. Comments
+   [{'day': 6, 'name': 'Xena', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were just fair, lacking the depth of flavor I anticipated. The Apple Pie a la Mode was satisfactory, though not exceptional. Despite the Happy Hour discount, compared to past meals at USA Diner Haven, today's dining experience didn't quite hit the mark."}, {'day': 5, 'name': 'Zach', 'score': 5, 'content': "The Grilled Seafood Medley Salad was adequate, meeting my gluten-free requirement. However, the flavors lacked the depth expected of French-inspired cuisine. In comparison, USA Diner Haven's salad was similarly priced but also didn't impress in terms of taste complexity. Both establishments could elevate their offerings to better suit a connoisseur's palate."}, {'day': 5, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Seafood Medley Salad was in line with my dietary needs, but its taste did not fully meet my expectations for grilled seafood flavor. While the Happy Hour discount added value, the dish could benefit from enhanced seasoning to match my discerning palate.'}, {'day': 4, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad was fair, meeting my gluten-free requirement. However, it didn't fully live up to the sophisticated flavors I anticipated. Compared to USA Diner Haven, the dish here still provided a more nuanced taste, but there's room for improvement in the flavor profile."}, {'day': 2, 'name': 'Jack', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were satisfactory, though not remarkable. The Apple Pie a la Mode was enjoyable but could use more flavor. In comparison, USA Diner Haven's dishes had a similar quality, but the Happy Hour discount here provided better value."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.9
+2. Advertisement
+   Come savor the new taste sensation at USA Diner Haven! Our Classic American Burger now boasts a bolder, richer flavor, and our BBQ Ribs are glazed with a unique honey-spiced BBQ sauce. Introducing Lin's Savory Steak Frites, a delectable addition you won't want to miss. Experience the same great American comfort food, now with an extraordinary twist. Your taste buds will thank you!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 12.0, 'description': 'Juicy beef patty with lettuce, tomato, aged cheddar, and a new bold BBQ sauce, served with fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender ribs smothered in our new signature honey-glazed BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.5, 'description': 'Our classic apple pie with a flaky crust, now enhanced with a rich caramel drizzle, a hint of cinnamon spice, and a scoop of premium vanilla ice cream.'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 7.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables and a bold, zesty dressing'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}]
+4. Comments
+   [{'day': 6, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese was fairly priced, especially with the Thursday discount, yet the taste was merely passable, not as remarkable as I had hoped. While the dish satisfied my preference for noodles, it lacked the deliciousness to make it a repeat choice. Service was adequate but not exceptional.'}, {'day': 6, 'name': 'David', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were fitting for my low-sodium diet, yet they lacked a bit in flavor. While they were reasonably priced, I'd appreciate more zest to enhance the taste. Compared to past meals, these could use a culinary boost."}, {'day': 6, 'name': 'Oscar', 'score': 5, 'content': "The USA Diner Haven's offerings today were underwhelming. The Classic American Burger lacked flavor, the BBQ Ribs were only marginally better, and the Apple Pie, while having a nice crust, was not particularly flavorful. In comparison to past visits, this meal did not meet expectations and lacked the culinary flair needed for a higher score."}, {'day': 5, 'name': 'Leo', 'score': 6, 'content': "The Classic American Burger was average, lacking standout flavors. The Mac & Cheese had a comforting creaminess but could use more seasoning. The Apple Pie's caramel twist was a nice touch but overall, the dishes didn't impress. Compared to my previous experiences, this meal fell short on the expected richness and taste."}, {'day': 5, 'name': 'Oscar', 'score': 6, 'content': "The Classic American Burger had a decent patty, but lacked standout flavors, scoring just average. BBQ Ribs were slightly better, with a fair tenderness. The Apple Pie's crust was flaky, but overall flavor fell flat. Compared to past experiences, today's meal was consistent but could use a culinary boost."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven provides salads that fit my low-sodium diet. The comments suggest adequate service and reasonable prices, which suit my income and cheerful personality."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.66
+Caesar Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Grilled Chicken Salad and Caesar Salad were satisfactory, aligning with my low-sodium needs, but both could benefit from more robust flavors."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.833333333333333
+2. Advertisement
+   Discover the fresh and bold taste of American Flavors Bistro! Try our newly revamped Vegan Delight Burger with a spicy chipotle twist, and don't miss our Superfoods Salad packed with healthful ingredients. Celebrate our 'Taste of America' event with special combo offers and experience the rich flavors of our vegan chocolate cake. Your taste buds will thank you!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 13.0, 'description': 'Our upgraded classic burger with a thicker, juicier beef patty, aged cheddar, crisp lettuce, vine-ripened tomato, and a new bold signature sauce, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 6, 'name': 'Cobb Salad', 'price': 8.0, 'description': 'Chopped greens with chicken, bacon, avocado, egg, blue cheese, and vinaigrette'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 13.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 14.0, 'description': 'A selection of grilled shrimp, scallops, and calamari over fresh greens, tossed with a bold and zesty lemon-herb dressing, perfect for those seeking a light yet flavorful meal.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 12.0, 'description': 'Our plant-based burger patty topped with organic lettuce, heirloom tomato, vegan gourmet cheese, and a spicy chipotle sauce, served with oven-roasted sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 17, 'name': 'Superfoods Salad', 'price': 10.0, 'description': 'A nutrient-packed salad with quinoa, fresh spinach, avocado, toasted nuts, and dried cranberries, dressed in a homemade lemon and herb vinaigrette.'}]
+4. Comments
+   [{'day': 7, 'name': 'Katie', 'score': 6, 'content': "The Vegan Delight Burger had a good texture but could use more flavor, while the Decadent Vegan Chocolate Cake was a highlight with its rich taste. Compared to USA Diner Haven, the options here are more vegan-friendly, though there's room for improvement in overall taste."}, {'day': 6, 'name': 'Xena', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were just fair, lacking the depth of flavor I anticipated. The Apple Pie a la Mode was satisfactory, though not exceptional. Despite the Happy Hour discount, compared to past meals at USA Diner Haven, today's dining experience didn't quite hit the mark."}, {'day': 5, 'name': 'Zach', 'score': 5, 'content': "The Grilled Seafood Medley Salad was adequate, meeting my gluten-free requirement. However, the flavors lacked the depth expected of French-inspired cuisine. In comparison, USA Diner Haven's salad was similarly priced but also didn't impress in terms of taste complexity. Both establishments could elevate their offerings to better suit a connoisseur's palate."}, {'day': 5, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Seafood Medley Salad was in line with my dietary needs, but its taste did not fully meet my expectations for grilled seafood flavor. While the Happy Hour discount added value, the dish could benefit from enhanced seasoning to match my discerning palate.'}, {'day': 4, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad was fair, meeting my gluten-free requirement. However, it didn't fully live up to the sophisticated flavors I anticipated. Compared to USA Diner Haven, the dish here still provided a more nuanced taste, but there's room for improvement in the flavor profile."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.916666666666667
+2. Advertisement
+   Discover bold flavors at USA Diner Haven with our enhanced BBQ Ribs, now with a richer, more complex sauce, and our upgraded Apple Pie topped with a buttery crumble. Plus, try our new Vegan Sensation Bowl, a feast for the senses! Join us for an unforgettable taste experience that stands out from the crowd.
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our richer, honey-spiced BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 6.0, 'description': 'Crisp romaine lettuce with Parmesan cheese, croutons, and Caesar dressing'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.75, 'description': 'Our classic apple pie with a flaky crust, topped with a buttery crumble and rich caramel drizzle, served with premium vanilla ice cream.'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 7.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables and a bold, zesty dressing'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}, {'id': 17, 'name': 'Vegan Sensation Bowl', 'price': 10.0, 'description': 'A vibrant mix of fresh greens, quinoa, roasted veggies, avocado, and spiced chickpeas, served with a zesty tahini dressing.'}]
+4. Comments
+   [{'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}, {'day': 6, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese was fairly priced, especially with the Thursday discount, yet the taste was merely passable, not as remarkable as I had hoped. While the dish satisfied my preference for noodles, it lacked the deliciousness to make it a repeat choice. Service was adequate but not exceptional.'}, {'day': 6, 'name': 'David', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were fitting for my low-sodium diet, yet they lacked a bit in flavor. While they were reasonably priced, I'd appreciate more zest to enhance the taste. Compared to past meals, these could use a culinary boost."}, {'day': 6, 'name': 'Oscar', 'score': 5, 'content': "The USA Diner Haven's offerings today were underwhelming. The Classic American Burger lacked flavor, the BBQ Ribs were only marginally better, and the Apple Pie, while having a nice crust, was not particularly flavorful. In comparison to past visits, this meal did not meet expectations and lacked the culinary flair needed for a higher score."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven offers salads that are both affordable and suit my low-sodium dietary needs, with service that has been deemed satisfactory by patrons."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.66
+Caesar Salad: 0.61
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Grilled Chicken Salad and Caesar Salad were modestly satisfying. They met my dietary needs but lacked flavor, making the overall dining experience just adequate."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.777777777777778
+2. Advertisement
+   Introducing American Flavors Bistro's new 'Chef's Special' dishes! Savor the enhanced Grilled Seafood Medley Salad with a smoky Cajun-herb dressing and the Classic American Burger with our homemade bourbon BBQ sauce. Don't miss our American Spice Adventure Platter, a journey of flavors in one plate. Come taste the innovation!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Our Classic American Burger, now with a thicker, juicier beef patty and our homemade bourbon BBQ sauce, aged cheddar, crisp lettuce, vine-ripened tomato, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 13.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 16.0, 'description': 'An elevated selection of grilled shrimp, scallops, and calamari over fresh greens, now with a smoky char and our new bold and zesty Cajun-herb dressing, for a truly flavorful experience.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 12.0, 'description': 'Our plant-based burger patty topped with organic lettuce, heirloom tomato, vegan gourmet cheese, and a spicy chipotle sauce, served with oven-roasted sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 17, 'name': 'Superfoods Salad', 'price': 10.0, 'description': 'A nutrient-packed salad with quinoa, fresh spinach, avocado, toasted nuts, and dried cranberries, dressed in a homemade lemon and herb vinaigrette.'}, {'id': 18, 'name': 'American Spice Adventure Platter', 'price': 18.0, 'description': 'Embark on a journey of flavors with our sampler platter featuring mini versions of our new signature dishes, including spicy Cajun shrimp, tangy pulled pork sliders, and sweet-spicy chicken bites.'}]
+4. Comments
+   [{'day': 8, 'name': 'Leo', 'score': 6, 'content': 'The Classic American Burger was decent but lacked a unique flavor profile. The BBQ Ribs were tender, yet I expected a richer taste from the honey-spiced sauce. The Apple Pie a la Mode was satisfactory, though not exceptional. Overall, the experience was fair but did not quite live up to the anticipation set by the menu descriptions.'}, {'day': 8, 'name': 'Zach', 'score': 5, 'content': "The Grilled Seafood Medley Salad was adequately prepared for a gluten-free diet, but fell short in delivering the rich, French-inspired flavors I favor. It was a fair attempt that could be enhanced to better satisfy a connoisseur's palate, especially when compared to my previous dining experiences."}, {'day': 8, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Seafood Medley Salad met my dietary restrictions but fell short in the flavor department. It lacked the grilled taste I relish. A more pronounced seasoning could elevate this dish. Compared to previous meals, it was rather unremarkable, even with the Happy Hour discount.'}, {'day': 7, 'name': 'Katie', 'score': 6, 'content': "The Vegan Delight Burger had a good texture but could use more flavor, while the Decadent Vegan Chocolate Cake was a highlight with its rich taste. Compared to USA Diner Haven, the options here are more vegan-friendly, though there's room for improvement in overall taste."}, {'day': 6, 'name': 'Xena', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were just fair, lacking the depth of flavor I anticipated. The Apple Pie a la Mode was satisfactory, though not exceptional. Despite the Happy Hour discount, compared to past meals at USA Diner Haven, today's dining experience didn't quite hit the mark."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.923076923076923
+2. Advertisement
+   Join USA Diner Haven for our Flavor Fest Friday! Savour our newly enhanced salads with rich, savory dressings, and don't miss the debut of Lin's Flavor Bomb Wings. This Friday, enjoy a 20% discount on these selected dishes. Experience the bold taste that sets us apart!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our richer, honey-spiced BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 7.0, 'description': 'Crisp romaine lettuce with shaved Parmesan cheese, crunchy croutons, and our new rich, savory Caesar dressing.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.75, 'description': 'Our classic apple pie with a flaky crust, topped with a buttery crumble and rich caramel drizzle, served with premium vanilla ice cream.'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 8.0, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables and our new bold, zesty dressing.'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}, {'id': 18, 'name': "Lin's Flavor Bomb Wings", 'price': 10.0, 'description': "A dozen juicy wings tossed in Lin's special explosive sauce, served with celery sticks and blue cheese dip."}]
+4. Comments
+   [{'day': 8, 'name': 'Quincy', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were suitable for my diet but lacked flavor. They were affordable, which is important for my budget. I've had better fast food experiences; some zest could improve these dishes."}, {'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}, {'day': 6, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese was fairly priced, especially with the Thursday discount, yet the taste was merely passable, not as remarkable as I had hoped. While the dish satisfied my preference for noodles, it lacked the deliciousness to make it a repeat choice. Service was adequate but not exceptional.'}, {'day': 6, 'name': 'David', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were fitting for my low-sodium diet, yet they lacked a bit in flavor. While they were reasonably priced, I'd appreciate more zest to enhance the taste. Compared to past meals, these could use a culinary boost."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven's menu includes affordable, low-sodium salad options that meet my dietary needs and are within my budget, with satisfactory service."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.61
+Caesar Salad: 0.57
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Grilled Chicken Salad and Caesar Salad were fresh and met my low-sodium requirements. However, the flavors were a bit muted for my taste."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.777777777777778
+2. Advertisement
+   Come indulge in the ultimate burger experience at American Flavors Bistro! Try our new 'American Flavors Bistro's Ultimate Burger' with premium beef, aged cheddar and signature smoky bourbon sauce. Enjoy the bold new flavors in our Grilled Seafood Medley Salad. Celebrate with us at our American Flavors Gala and get a taste of America's best!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Our Classic American Burger with a thicker, juicier beef patty, layered with smoked bacon, our homemade bourbon BBQ sauce, aged cheddar, crisp lettuce, and vine-ripened tomato, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 13.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 16.0, 'description': 'A medley of perfectly grilled shrimp, scallops, and calamari, now with a more pronounced smoky char and seasoned with our bold new Cajun-herb dressing.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 12.0, 'description': 'Our plant-based burger patty topped with organic lettuce, heirloom tomato, vegan gourmet cheese, and a spicy chipotle sauce, served with oven-roasted sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 18, 'name': 'American Spice Adventure Platter', 'price': 18.0, 'description': 'Embark on a journey of flavors with our sampler platter featuring mini versions of our new signature dishes, including spicy Cajun shrimp, tangy pulled pork sliders, and sweet-spicy chicken bites.'}, {'id': 19, 'name': "American Flavors Bistro's Ultimate Burger", 'price': 13.0, 'description': 'A mouthwatering burger with a premium beef patty, aged cheddar, crispy onions, pickles, and our signature smoky bourbon sauce, served with seasoned curly fries.'}]
+4. Comments
+   [{'day': 8, 'name': 'Leo', 'score': 6, 'content': 'The Classic American Burger was decent but lacked a unique flavor profile. The BBQ Ribs were tender, yet I expected a richer taste from the honey-spiced sauce. The Apple Pie a la Mode was satisfactory, though not exceptional. Overall, the experience was fair but did not quite live up to the anticipation set by the menu descriptions.'}, {'day': 8, 'name': 'Zach', 'score': 5, 'content': "The Grilled Seafood Medley Salad was adequately prepared for a gluten-free diet, but fell short in delivering the rich, French-inspired flavors I favor. It was a fair attempt that could be enhanced to better satisfy a connoisseur's palate, especially when compared to my previous dining experiences."}, {'day': 8, 'name': 'Umar', 'score': 6, 'content': 'The Grilled Seafood Medley Salad met my dietary restrictions but fell short in the flavor department. It lacked the grilled taste I relish. A more pronounced seasoning could elevate this dish. Compared to previous meals, it was rather unremarkable, even with the Happy Hour discount.'}, {'day': 7, 'name': 'Katie', 'score': 6, 'content': "The Vegan Delight Burger had a good texture but could use more flavor, while the Decadent Vegan Chocolate Cake was a highlight with its rich taste. Compared to USA Diner Haven, the options here are more vegan-friendly, though there's room for improvement in overall taste."}, {'day': 6, 'name': 'Xena', 'score': 6, 'content': "The Classic American Burger and BBQ Ribs were just fair, lacking the depth of flavor I anticipated. The Apple Pie a la Mode was satisfactory, though not exceptional. Despite the Happy Hour discount, compared to past meals at USA Diner Haven, today's dining experience didn't quite hit the mark."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.923076923076923
+2. Advertisement
+   Discover the enhanced flavors at USA Diner Haven! Try our revamped Grilled Chicken and Caesar Salads with bold new dressings. Introducing Lin's Bold BBQ Chicken - a feast for your taste buds. Visit us and taste the revolution!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our richer, honey-spiced BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Caesar Salad', 'price': 7.75, 'description': 'Crisp romaine lettuce with shaved Parmesan cheese, crunchy croutons, and our new rich, savory Caesar dressing.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.75, 'description': 'Our classic apple pie with a flaky crust, topped with a buttery crumble and rich caramel drizzle, served with premium vanilla ice cream.'}, {'id': 10, 'name': 'Grilled Chicken Salad', 'price': 7.5, 'description': 'Grilled chicken breast atop mixed greens with a variety of fresh vegetables and our new bold, zesty dressing.'}, {'id': 12, 'name': "Lin's Exclusive Loaded Fries", 'price': 9.0, 'description': 'Crispy fries loaded with gourmet toppings and a blend of exciting flavors'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}, {'id': 18, 'name': "Lin's Flavor Bomb Wings", 'price': 10.0, 'description': "A dozen juicy wings tossed in Lin's special explosive sauce, served with celery sticks and blue cheese dip."}, {'id': 19, 'name': "Lin's Bold BBQ Chicken", 'price': 13.0, 'description': "Juicy chicken breast smothered in Lin's signature bold BBQ sauce, served with a side of coleslaw and cornbread."}]
+4. Comments
+   [{'day': 8, 'name': 'Quincy', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were suitable for my diet but lacked flavor. They were affordable, which is important for my budget. I've had better fast food experiences; some zest could improve these dishes."}, {'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}, {'day': 6, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese was fairly priced, especially with the Thursday discount, yet the taste was merely passable, not as remarkable as I had hoped. While the dish satisfied my preference for noodles, it lacked the deliciousness to make it a repeat choice. Service was adequate but not exceptional.'}, {'day': 6, 'name': 'David', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were fitting for my low-sodium diet, yet they lacked a bit in flavor. While they were reasonably priced, I'd appreciate more zest to enhance the taste. Compared to past meals, these could use a culinary boost."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Grilled Chicken Salad",
+        "Caesar Salad"
+    ],
+    "reason" : "USA Diner Haven offers salads that suit my low-sodium dietary needs at reasonable prices, fitting my budget and health requirements."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Grilled Chicken Salad: 0.63
+Caesar Salad: 0.54
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Grilled Chicken Salad and Caesar Salad were apt for my health needs but underwhelmed my palate. While the prices matched my budget, the flavors didn't excite me."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.833333333333333
+2. Advertisement
+   Savor the new heights of flavor at American Flavors Bistro! Introducing 'The Ultimate American Steak' - our finest cut of beef for the true connoisseur. Plus, enjoy the enhanced taste of our Grilled Seafood Medley Salad with a more pronounced smoky char. Experience rich, luxurious American dining today!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Our Classic American Burger with a thicker, juicier beef patty, layered with smoked bacon, our homemade bourbon BBQ sauce, aged cheddar, crisp lettuce, and vine-ripened tomato, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 5, 'name': 'Apple Pie a la Mode', 'price': 5.5, 'description': 'Traditional apple pie served warm with a scoop of vanilla ice cream'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 13.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 12.0, 'description': 'A medley of perfectly grilled shrimp, scallops, and calamari, now with a more pronounced smoky char and seasoned with our bold new Cajun-herb dressing. Served with a fresh mix of greens.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 12.0, 'description': 'Our plant-based burger patty topped with organic lettuce, heirloom tomato, vegan gourmet cheese, and a spicy chipotle sauce, served with oven-roasted sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 19, 'name': "American Flavors Bistro's Ultimate Burger", 'price': 13.0, 'description': 'A mouthwatering burger with a premium beef patty, aged cheddar, crispy onions, pickles, and our signature smoky bourbon sauce, served with seasoned curly fries.'}, {'id': 20, 'name': 'The Ultimate American Steak', 'price': 20.0, 'description': 'Indulge in the luxury of our finest cut of beef, expertly seasoned and grilled to perfection, accompanied by a velvety red wine reduction and a side of roasted heirloom vegetables.'}]
+4. Comments
+   [{'day': 10, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad's Cajun-herb dressing had the zest I enjoy, but still lacked the sophistication of French cuisine I prefer. Suitable for a gluten-free diet, yet there's room to enhance the flavors to meet connoisseur expectations. A fair choice, but not remarkable."}, {'day': 10, 'name': 'Katie', 'score': 6, 'content': 'The Vegan Delight Burger was decent, though needing a flavor boost. The Decadent Vegan Chocolate Cake shone with richer taste. Prices aligned with my budget, but taste could be improved, especially compared to past vegan meals.'}, {'day': 10, 'name': 'Umar', 'score': 6, 'content': "The Grilled Seafood Medley Salad was a fair choice for my health-conscious diet, but the flavor profile wasn't as vibrant as expected, particularly lacking in the grilled essence I enjoy. Service was decent. Compared to previous visits, the dish was consistent but still requires refinement to truly impress."}, {'day': 8, 'name': 'Leo', 'score': 6, 'content': 'The Classic American Burger was decent but lacked a unique flavor profile. The BBQ Ribs were tender, yet I expected a richer taste from the honey-spiced sauce. The Apple Pie a la Mode was satisfactory, though not exceptional. Overall, the experience was fair but did not quite live up to the anticipation set by the menu descriptions.'}, {'day': 8, 'name': 'Zach', 'score': 5, 'content': "The Grilled Seafood Medley Salad was adequately prepared for a gluten-free diet, but fell short in delivering the rich, French-inspired flavors I favor. It was a fair attempt that could be enhanced to better satisfy a connoisseur's palate, especially when compared to my previous dining experiences."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.923076923076923
+2. Advertisement
+   Savor the new taste sensation at USA Diner Haven with our Supercharged Grilled Chicken Salad and Ultimate Caesar Salad, now with even bolder flavors! Plus, don't miss the debut of Lin's Exclusive Smoked BBQ Jackfruit – your plant-based indulgence. Come for the flavor; stay for the experience!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our richer, honey-spiced BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 7.0, 'description': 'Spicy chicken wings served with blue cheese dip'}, {'id': 4, 'name': 'Ultimate Caesar Salad', 'price': 8.0, 'description': 'Crisp romaine lettuce with shaved aged Parmesan, crunchy garlic croutons, and our upgraded creamy anchovy dressing for an umami-packed flavor.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 7.0, 'description': 'Creamy macaroni and cheese topped with a golden crust'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.75, 'description': 'Our classic apple pie with a flaky crust, topped with a buttery crumble and rich caramel drizzle, served with premium vanilla ice cream.'}, {'id': 10, 'name': 'Supercharged Grilled Chicken Salad', 'price': 8.0, 'description': 'Grilled chicken breast atop mixed greens with a medley of fresh, seasonal vegetables, tossed with our new bold, zesty lemon-herb dressing.'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}, {'id': 18, 'name': "Lin's Flavor Bomb Wings", 'price': 10.0, 'description': "A dozen juicy wings tossed in Lin's special explosive sauce, served with celery sticks and blue cheese dip."}, {'id': 19, 'name': "Lin's Bold BBQ Chicken", 'price': 13.0, 'description': "Juicy chicken breast smothered in Lin's signature bold BBQ sauce, served with a side of coleslaw and cornbread."}, {'id': 20, 'name': "Lin's Exclusive Smoked BBQ Jackfruit", 'price': 12.0, 'description': 'Tender, smoky jackfruit slathered in our house-made BBQ sauce, served with a vegan coleslaw and sweet potato fries for a hearty plant-based meal.'}]
+4. Comments
+   [{'day': 8, 'name': 'Quincy', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were suitable for my diet but lacked flavor. They were affordable, which is important for my budget. I've had better fast food experiences; some zest could improve these dishes."}, {'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}, {'day': 6, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese was fairly priced, especially with the Thursday discount, yet the taste was merely passable, not as remarkable as I had hoped. While the dish satisfied my preference for noodles, it lacked the deliciousness to make it a repeat choice. Service was adequate but not exceptional.'}, {'day': 6, 'name': 'David', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were fitting for my low-sodium diet, yet they lacked a bit in flavor. While they were reasonably priced, I'd appreciate more zest to enhance the taste. Compared to past meals, these could use a culinary boost."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Supercharged Grilled Chicken Salad",
+        "Ultimate Caesar Salad"
+    ],
+    "reason" : "Chose USA Diner Haven for the affordable, low-sodium salads that suit my dietary needs and budget, with service that seems satisfactory."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Supercharged Grilled Chicken Salad: 0.57
+Ultimate Caesar Salad: 0.53
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "score": 5,
+    "comment": "The Supercharged Grilled Chicken Salad and Ultimate Caesar Salad were lackluster in flavor, reflecting the fair scores. As someone with a low-sodium diet, they fit my health needs, but the dining experience could be enhanced with more vibrant taste profiles. Previous visits to alternative establishments have offered more satisfactory flavors."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.846153846153846
+2. Advertisement
+   Discover a symphony of flavors at American Flavors Bistro! Dive into our new 'Seafood Extravaganza' or indulge in the enhanced 'Ultimate American Steak'. Our Grilled Seafood Medley Salad now boasts a gourmet Cajun-herb dressing. Experience the epitome of American dining excellence with us!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Our Classic American Burger with a thicker, juicier beef patty, layered with smoked bacon, our homemade bourbon BBQ sauce, aged cheddar, crisp lettuce, and vine-ripened tomato, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 11, 'name': 'Bistro Special Burger', 'price': 13.0, 'description': 'Our signature burger with a unique blend of spices, secret sauce, and served with sweet potato fries'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 14.0, 'description': 'A refined medley of perfectly grilled shrimp, scallops, and calamari, enhanced with a gourmet Cajun-herb dressing. Served with a fresh mix of artisanal greens and a side of gluten-free garlic toast.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 12.0, 'description': 'Our plant-based burger patty topped with organic lettuce, heirloom tomato, vegan gourmet cheese, and a spicy chipotle sauce, served with oven-roasted sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 19, 'name': "American Flavors Bistro's Ultimate Burger", 'price': 13.0, 'description': 'A mouthwatering burger with a premium beef patty, aged cheddar, crispy onions, pickles, and our signature smoky bourbon sauce, served with seasoned curly fries.'}, {'id': 20, 'name': 'The Ultimate American Steak', 'price': 22.0, 'description': 'Savor the excellence of our premium dry-aged steak, seasoned with an exclusive spice blend and grilled to your preference. Served with a side of truffle-infused garlic mashed potatoes and grilled heirloom carrots.'}, {'id': 21, 'name': "American Flavors Bistro's Seafood Extravaganza", 'price': 18.0, 'description': 'Dive into a luxurious seafood experience with our medley of freshly grilled lobster, scallops, and shrimp, served with a delicate saffron-infused sauce and a side of aromatic jasmine rice.'}]
+4. Comments
+   [{'day': 11, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad presented a nuanced Cajun-herb dressing that was enjoyable. However, it still lacked the depth of French cuisine I appreciate. It's a fair choice for gluten-free needs, but there's a missed opportunity for culinary excellence."}, {'day': 10, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad's Cajun-herb dressing had the zest I enjoy, but still lacked the sophistication of French cuisine I prefer. Suitable for a gluten-free diet, yet there's room to enhance the flavors to meet connoisseur expectations. A fair choice, but not remarkable."}, {'day': 10, 'name': 'Katie', 'score': 6, 'content': 'The Vegan Delight Burger was decent, though needing a flavor boost. The Decadent Vegan Chocolate Cake shone with richer taste. Prices aligned with my budget, but taste could be improved, especially compared to past vegan meals.'}, {'day': 10, 'name': 'Umar', 'score': 6, 'content': "The Grilled Seafood Medley Salad was a fair choice for my health-conscious diet, but the flavor profile wasn't as vibrant as expected, particularly lacking in the grilled essence I enjoy. Service was decent. Compared to previous visits, the dish was consistent but still requires refinement to truly impress."}, {'day': 8, 'name': 'Leo', 'score': 6, 'content': 'The Classic American Burger was decent but lacked a unique flavor profile. The BBQ Ribs were tender, yet I expected a richer taste from the honey-spiced sauce. The Apple Pie a la Mode was satisfactory, though not exceptional. Overall, the experience was fair but did not quite live up to the anticipation set by the menu descriptions.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.857142857142857
+2. Advertisement
+   Discover the vibrancy of flavor without the guilt at USA Diner Haven! Introducing Lin's Zesty Lemon-Herb Chicken - your go-to for a refreshing, low-sodium dish. Relish our improved Supercharged Grilled Chicken Salad and Ultimate Caesar Salad with bold, zesty dressings. Quality ingredients, unforgettable flavors - that's our promise to you!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our richer, honey-spiced BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 4, 'name': 'Ultimate Caesar Salad', 'price': 8.0, 'description': 'Crisp romaine lettuce with shaved aged Parmesan, crunchy garlic croutons, and our upgraded creamy anchovy dressing for an umami-packed flavor.'}, {'id': 9, 'name': 'Apple Pie', 'price': 7.75, 'description': 'Our classic apple pie with a flaky crust, topped with a buttery crumble and rich caramel drizzle, served with premium vanilla ice cream.'}, {'id': 10, 'name': 'Supercharged Grilled Chicken Salad', 'price': 8.0, 'description': 'Grilled chicken breast atop mixed greens with a medley of fresh, seasonal vegetables, tossed with our new bold, zesty lemon-herb dressing.'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}, {'id': 21, 'name': "Lin's Zesty Lemon-Herb Chicken", 'price': 12.0, 'description': 'Grilled chicken breast marinated in lemon and herbs, served with a quinoa and kale salad for a refreshing, low-sodium dish.'}]
+4. Comments
+   [{'day': 11, 'name': 'David', 'score': 5, 'content': 'The Supercharged Grilled Chicken Salad and Ultimate Caesar Salad were lackluster in flavor, reflecting the fair scores. As someone with a low-sodium diet, they fit my health needs, but the dining experience could be enhanced with more vibrant taste profiles. Previous visits to alternative establishments have offered more satisfactory flavors.'}, {'day': 8, 'name': 'Quincy', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were suitable for my diet but lacked flavor. They were affordable, which is important for my budget. I've had better fast food experiences; some zest could improve these dishes."}, {'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}, {'day': 6, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese was fairly priced, especially with the Thursday discount, yet the taste was merely passable, not as remarkable as I had hoped. While the dish satisfied my preference for noodles, it lacked the deliciousness to make it a repeat choice. Service was adequate but not exceptional.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Lin's Zesty Lemon-Herb Chicken"
+    ],
+    "reason" : "USA Diner Haven's Lin's Zesty Lemon-Herb Chicken suits my low-sodium diet and budget. Despite lackluster past experiences, it's a healthier choice given my high blood pressure."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Lin's Zesty Lemon-Herb Chicken: 0.56
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Lin's Zesty Lemon-Herb Chicken was a refreshing choice for my health concerns. The flavors were just right and didn't compromise my low-sodium diet."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.857142857142857
+2. Advertisement
+   Taste the revolution at American Flavors Bistro! Try our newly enhanced Vegan Delight Burger, now with gourmet cheese and umami sauce. Don't miss our Signature Seafood Platter for a lavish dining experience. Savor the richness of American dining with our elevated dishes and premium ingredients!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Our Classic American Burger with a thicker, juicier beef patty, layered with smoked bacon, our homemade bourbon BBQ sauce, aged cheddar, crisp lettuce, and vine-ripened tomato, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 14.0, 'description': 'A refined medley of perfectly grilled shrimp, scallops, and calamari, enhanced with a gourmet Cajun-herb dressing. Served with a fresh mix of artisanal greens and a side of gluten-free garlic toast.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 13.0, 'description': 'Our plant-based burger patty enhanced with gourmet vegan cheese, sun-dried tomatoes, a rich umami mushroom sauce, and arugula, served with oven-roasted rosemary sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 19, 'name': "American Flavors Bistro's Ultimate Burger", 'price': 13.0, 'description': 'A mouthwatering burger with a premium beef patty, aged cheddar, crispy onions, pickles, and our signature smoky bourbon sauce, served with seasoned curly fries.'}, {'id': 20, 'name': 'The Ultimate American Steak', 'price': 22.0, 'description': 'Savor the excellence of our premium dry-aged steak, seasoned with an exclusive spice blend and grilled to your preference. Served with a side of truffle-infused garlic mashed potatoes and grilled heirloom carrots.'}, {'id': 21, 'name': "American Flavors Bistro's Seafood Extravaganza", 'price': 18.0, 'description': 'Dive into a luxurious seafood experience with our medley of freshly grilled lobster, scallops, and shrimp, served with a delicate saffron-infused sauce and a side of aromatic jasmine rice.'}, {'id': 22, 'name': 'American Flavors Signature Seafood Platter', 'price': 30.0, 'description': 'An exquisite platter featuring succulent lobster tail, jumbo shrimp, and sea scallops, served with a lemon-garlic butter sauce and accompanied by wild rice pilaf and seasonal grilled vegetables.'}]
+4. Comments
+   [{'day': 12, 'name': 'Katie', 'score': 6, 'content': "The Vegan Delight Burger was satisfactory, but lacked depth of flavor. The Decadent Vegan Chocolate Cake fared better with its richness. For a vegan on a budget, it's an acceptable option, yet there's room for taste improvement to make it a memorable meal."}, {'day': 11, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad presented a nuanced Cajun-herb dressing that was enjoyable. However, it still lacked the depth of French cuisine I appreciate. It's a fair choice for gluten-free needs, but there's a missed opportunity for culinary excellence."}, {'day': 10, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad's Cajun-herb dressing had the zest I enjoy, but still lacked the sophistication of French cuisine I prefer. Suitable for a gluten-free diet, yet there's room to enhance the flavors to meet connoisseur expectations. A fair choice, but not remarkable."}, {'day': 10, 'name': 'Katie', 'score': 6, 'content': 'The Vegan Delight Burger was decent, though needing a flavor boost. The Decadent Vegan Chocolate Cake shone with richer taste. Prices aligned with my budget, but taste could be improved, especially compared to past vegan meals.'}, {'day': 10, 'name': 'Umar', 'score': 6, 'content': "The Grilled Seafood Medley Salad was a fair choice for my health-conscious diet, but the flavor profile wasn't as vibrant as expected, particularly lacking in the grilled essence I enjoy. Service was decent. Compared to previous visits, the dish was consistent but still requires refinement to truly impress."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.666666666666667
+2. Advertisement
+   Savor the new taste of tradition at USA Diner Haven! Featuring the revamped 'Lin's Zesty Lemon-Herb Chicken' and our brand-new 'Lin's Signature Steak' - a culinary delight grilled to perfection. Join us for a meal where quality ingredients and rich flavors lead to an unforgettable dining experience. Your table awaits!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our richer, honey-spiced BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 4, 'name': 'Ultimate Caesar Salad', 'price': 8.0, 'description': 'Crisp romaine lettuce with shaved aged Parmesan, crunchy garlic croutons, and our upgraded creamy anchovy dressing for an umami-packed flavor.'}, {'id': 10, 'name': 'Supercharged Grilled Chicken Salad', 'price': 8.0, 'description': 'Grilled chicken breast atop mixed greens with a medley of fresh, seasonal vegetables, tossed with our new bold, zesty lemon-herb dressing.'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 15.0, 'description': 'An assortment of freshly grilled seafood, seasoned with herbs and served with a lemon butter sauce'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}, {'id': 21, 'name': "Lin's Zesty Lemon-Herb Chicken", 'price': 12.0, 'description': 'Grilled chicken breast marinated with an enhanced blend of lemon and fresh herbs, served with a quinoa and kale salad for a refreshing, flavorful dish.'}, {'id': 22, 'name': "Lin's Signature Steak", 'price': 20.0, 'description': 'Our signature steak, seasoned with a unique spice blend and grilled to perfection, served with a side of garlic herb-roasted potatoes.'}]
+4. Comments
+   [{'day': 12, 'name': 'Bob', 'score': 3, 'content': "The Lin's Zesty Lemon-Herb Chicken was underwhelming, scoring low on taste. Lacked the zest and herb flavors I anticipated. For a dish with such potential, this was a letdown. Having dined elsewhere with better experiences, I expected more, especially for the price paid."}, {'day': 11, 'name': 'David', 'score': 5, 'content': 'The Supercharged Grilled Chicken Salad and Ultimate Caesar Salad were lackluster in flavor, reflecting the fair scores. As someone with a low-sodium diet, they fit my health needs, but the dining experience could be enhanced with more vibrant taste profiles. Previous visits to alternative establishments have offered more satisfactory flavors.'}, {'day': 8, 'name': 'Quincy', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were suitable for my diet but lacked flavor. They were affordable, which is important for my budget. I've had better fast food experiences; some zest could improve these dishes."}, {'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "dishes" : [
+        "Lin's Zesty Lemon-Herb Chicken"
+    ],
+    "reason" : "USA Diner Haven provides options fitting my low-sodium diet, especially the Lin's Zesty Lemon-Herb Chicken, which is both budget-friendly and suitable for my health."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Lin's Zesty Lemon-Herb Chicken: 0.56
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "USA Diner Haven",
+    "feeling": "The Lin's Zesty Lemon-Herb Chicken was disappointingly bland and didn't live up to my expectations for flavor, even though it met my health requirements."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.857142857142857
+2. Advertisement
+   Experience the new heights of flavor at American Flavors Bistro! Introducing our revamped Vegan Delight Burger with smoky vegan cheese and secret tangy sauce, paired with our fresh avocado slices. Plus, don't miss our latest addition - the American Herb-Grilled Chicken, a perfect blend of herbs and zest. Join us for a meal that's more than just delicious, it's memorable.
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger', 'price': 14.0, 'description': 'Our Classic American Burger with a thicker, juicier beef patty, layered with smoked bacon, our homemade bourbon BBQ sauce, aged cheddar, crisp lettuce, and vine-ripened tomato, served with hand-cut fries.'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Slow-roasted pork ribs glazed with our new honey-spiced BBQ sauce, served with garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 13, 'name': 'Grilled Seafood Medley Salad', 'price': 14.0, 'description': 'A refined medley of perfectly grilled shrimp, scallops, and calamari, enhanced with a gourmet Cajun-herb dressing. Served with a fresh mix of artisanal greens and a side of gluten-free garlic toast.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 14.0, 'description': 'Our plant-based burger patty now with a rich, smoky vegan cheese, a tangy secret sauce, and fresh avocado slices, served with oven-roasted rosemary sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 19, 'name': "American Flavors Bistro's Ultimate Burger", 'price': 13.0, 'description': 'A mouthwatering burger with a premium beef patty, aged cheddar, crispy onions, pickles, and our signature smoky bourbon sauce, served with seasoned curly fries.'}, {'id': 20, 'name': 'The Ultimate American Steak', 'price': 22.0, 'description': 'Savor the excellence of our premium dry-aged steak, seasoned with an exclusive spice blend and grilled to your preference. Served with a side of truffle-infused garlic mashed potatoes and grilled heirloom carrots.'}, {'id': 21, 'name': "American Flavors Bistro's Seafood Extravaganza", 'price': 18.0, 'description': 'Dive into a luxurious seafood experience with our medley of freshly grilled lobster, scallops, and shrimp, served with a delicate saffron-infused sauce and a side of aromatic jasmine rice.'}, {'id': 22, 'name': 'American Flavors Signature Seafood Platter', 'price': 30.0, 'description': 'An exquisite platter featuring succulent lobster tail, jumbo shrimp, and sea scallops, served with a lemon-garlic butter sauce and accompanied by wild rice pilaf and seasonal grilled vegetables.'}, {'id': 23, 'name': 'American Herb-Grilled Chicken', 'price': 16.0, 'description': 'Juicy chicken breast grilled with a blend of aromatic herbs and a hint of lemon, served with a quinoa and kale salad and a zesty herb dressing.'}]
+4. Comments
+   [{'day': 12, 'name': 'Katie', 'score': 6, 'content': "The Vegan Delight Burger was satisfactory, but lacked depth of flavor. The Decadent Vegan Chocolate Cake fared better with its richness. For a vegan on a budget, it's an acceptable option, yet there's room for taste improvement to make it a memorable meal."}, {'day': 11, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad presented a nuanced Cajun-herb dressing that was enjoyable. However, it still lacked the depth of French cuisine I appreciate. It's a fair choice for gluten-free needs, but there's a missed opportunity for culinary excellence."}, {'day': 10, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad's Cajun-herb dressing had the zest I enjoy, but still lacked the sophistication of French cuisine I prefer. Suitable for a gluten-free diet, yet there's room to enhance the flavors to meet connoisseur expectations. A fair choice, but not remarkable."}, {'day': 10, 'name': 'Katie', 'score': 6, 'content': 'The Vegan Delight Burger was decent, though needing a flavor boost. The Decadent Vegan Chocolate Cake shone with richer taste. Prices aligned with my budget, but taste could be improved, especially compared to past vegan meals.'}, {'day': 10, 'name': 'Umar', 'score': 6, 'content': "The Grilled Seafood Medley Salad was a fair choice for my health-conscious diet, but the flavor profile wasn't as vibrant as expected, particularly lacking in the grilled essence I enjoy. Service was decent. Compared to previous visits, the dish was consistent but still requires refinement to truly impress."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.666666666666667
+2. Advertisement
+   Dive into the fresh flavors at USA Diner Haven with our new 'Lin's Signature Grilled Seafood Platter' and 'Gourmet Vegan Stack.' Experience the richness of the ocean and the zest of plant-based perfection. Come in for a taste sensation that is bound to impress. Your journey to unforgettable meals starts here!
+3. Menu 
+   [{'id': 2, 'name': 'BBQ Ribs', 'price': 16.0, 'description': 'Tender ribs smothered in our richer, honey-spiced BBQ sauce, served with a side of garlic mashed potatoes.'}, {'id': 4, 'name': 'Ultimate Caesar Salad', 'price': 8.0, 'description': 'Crisp romaine lettuce with shaved aged Parmesan, crunchy garlic croutons, and our upgraded creamy anchovy dressing for an umami-packed flavor.'}, {'id': 10, 'name': 'Supercharged Grilled Chicken Salad', 'price': 9.0, 'description': 'Grilled chicken breast atop mixed greens, tossed with a citrus-infused olive oil dressing, sprinkled with toasted almonds and feta cheese for a supercharged flavor.'}, {'id': 13, 'name': "Lin's Signature Grilled Seafood Platter", 'price': 18.0, 'description': 'A premium selection of grilled shrimp, scallops, and calamari, seasoned with our special blend of herbs and served with a lemon-garlic butter sauce and artisanal greens.'}, {'id': 15, 'name': "Lin's American Flavor Explosion", 'price': 12.0, 'description': 'A daring mix of spicy beef, crispy onions, and a secret tangy sauce, served with a side of seasoned fries.'}, {'id': 16, 'name': "Lin's Savory Steak Frites", 'price': 18.0, 'description': 'A perfectly seasoned and grilled steak served with a side of golden frites and our signature herb butter.'}, {'id': 22, 'name': "Lin's Signature Steak", 'price': 20.0, 'description': 'Our signature steak, seasoned with a unique spice blend and grilled to perfection, served with a side of garlic herb-roasted potatoes.'}, {'id': 23, 'name': 'Gourmet Vegan Stack', 'price': 13.0, 'description': 'A stack of grilled plant-based patty, vegan cheddar, sun-dried tomatoes, and a rich umami mushroom sauce, topped with crispy onions and arugula, served with a side of sweet potato fries.'}]
+4. Comments
+   [{'day': 12, 'name': 'Bob', 'score': 3, 'content': "The Lin's Zesty Lemon-Herb Chicken was underwhelming, scoring low on taste. Lacked the zest and herb flavors I anticipated. For a dish with such potential, this was a letdown. Having dined elsewhere with better experiences, I expected more, especially for the price paid."}, {'day': 11, 'name': 'David', 'score': 5, 'content': 'The Supercharged Grilled Chicken Salad and Ultimate Caesar Salad were lackluster in flavor, reflecting the fair scores. As someone with a low-sodium diet, they fit my health needs, but the dining experience could be enhanced with more vibrant taste profiles. Previous visits to alternative establishments have offered more satisfactory flavors.'}, {'day': 8, 'name': 'Quincy', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were suitable for my diet but lacked flavor. They were affordable, which is important for my budget. I've had better fast food experiences; some zest could improve these dishes."}, {'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "American Flavors Bistro",
+    "dishes" : [
+        "American Herb-Grilled Chicken"
+    ],
+    "reason" : "American Flavors Bistro's American Herb-Grilled Chicken suits my low-sodium needs and preference for breakfast foods, with a healthier profile for my high blood pressure."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Herb-Grilled Chicken: 0.67
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "American Flavors Bistro",
+    "feeling": "The American Herb-Grilled Chicken was delightfully seasoned, providing a robust flavor without compromising my low-sodium diet. A satisfying, healthy meal."
+}
+
+[System->David]: The Restaurant " American Flavors Bistro "information as below:
+1. Customer Score: 5.875
+2. Advertisement
+   Savor the taste of innovation at American Flavors Bistro! Dive into our American Grilled Seafood Medley Salad with a French twist, indulge in our Classic American Burger now with an irresistible signature sauce, and relish the smoky depth of our Hickory-Smoked BBQ Ribs. Each dish crafted to offer a unique flavor experience. Visit us for a culinary adventure you won't forget!
+3. Menu 
+   [{'id': 1, 'name': 'Classic American Burger with Signature Sauce', 'price': 15.0, 'description': 'Our iconic American Burger gets a bold twist with our new signature sauce, layered with smoked bacon, aged cheddar, crisp lettuce, and vine-ripened tomato, served with hand-cut fries.'}, {'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 17.0, 'description': 'Our BBQ Ribs are now smoked with hickory wood and glazed with a honey-spiced BBQ sauce, accompanied by garlic mashed potatoes and a side of apple coleslaw.'}, {'id': 13, 'name': 'American Grilled Seafood Medley Salad', 'price': 16.0, 'description': 'A luxurious mix of grilled shrimp, scallops, and calamari, served on a bed of artisanal greens with a classic French vinaigrette and a sprinkle of fines herbs.'}, {'id': 14, 'name': 'Vegan Delight Burger', 'price': 14.0, 'description': 'Our plant-based burger patty now with a rich, smoky vegan cheese, a tangy secret sauce, and fresh avocado slices, served with oven-roasted rosemary sweet potato fries.'}, {'id': 15, 'name': 'Gourmet American Steak', 'price': 27.0, 'description': 'A hand-selected cut of beef expertly seasoned with our house spice blend, grilled to your liking, and served with truffle-infused garlic mashed potatoes and grilled asparagus.'}, {'id': 16, 'name': 'Decadent Vegan Chocolate Cake', 'price': 8.0, 'description': 'Indulge in our rich, moist chocolate cake crafted with premium vegan ingredients, layered with a silky chocolate ganache, and served with a side of fresh raspberry coulis.'}, {'id': 19, 'name': "American Flavors Bistro's Ultimate Burger", 'price': 13.0, 'description': 'A mouthwatering burger with a premium beef patty, aged cheddar, crispy onions, pickles, and our signature smoky bourbon sauce, served with seasoned curly fries.'}, {'id': 20, 'name': 'The Ultimate American Steak', 'price': 22.0, 'description': 'Savor the excellence of our premium dry-aged steak, seasoned with an exclusive spice blend and grilled to your preference. Served with a side of truffle-infused garlic mashed potatoes and grilled heirloom carrots.'}, {'id': 21, 'name': "American Flavors Bistro's Seafood Extravaganza", 'price': 18.0, 'description': 'Dive into a luxurious seafood experience with our medley of freshly grilled lobster, scallops, and shrimp, served with a delicate saffron-infused sauce and a side of aromatic jasmine rice.'}, {'id': 22, 'name': 'American Flavors Signature Seafood Platter', 'price': 30.0, 'description': 'An exquisite platter featuring succulent lobster tail, jumbo shrimp, and sea scallops, served with a lemon-garlic butter sauce and accompanied by wild rice pilaf and seasonal grilled vegetables.'}, {'id': 23, 'name': 'American Herb-Grilled Chicken', 'price': 16.0, 'description': 'Juicy chicken breast grilled with a blend of aromatic herbs and a hint of lemon, served with a quinoa and kale salad and a zesty herb dressing.'}]
+4. Comments
+   [{'day': 14, 'name': 'Leo', 'score': 6, 'content': "The Classic American Burger was enjoyable but could use a more distinct flavor profile. The BBQ Ribs were tender but lacked the depth I've savored at other establishments. Service was good, but not remarkable. There's room for improvement in taste to match the price point."}, {'day': 14, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad catered to my gluten sensitivity, yet it fell short of my expectations for French cuisine. A decent effort, but it lacked the culinary finesse I've savored at other establishments."}, {'day': 12, 'name': 'Katie', 'score': 6, 'content': "The Vegan Delight Burger was satisfactory, but lacked depth of flavor. The Decadent Vegan Chocolate Cake fared better with its richness. For a vegan on a budget, it's an acceptable option, yet there's room for taste improvement to make it a memorable meal."}, {'day': 11, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad presented a nuanced Cajun-herb dressing that was enjoyable. However, it still lacked the depth of French cuisine I appreciate. It's a fair choice for gluten-free needs, but there's a missed opportunity for culinary excellence."}, {'day': 10, 'name': 'Zach', 'score': 6, 'content': "The Grilled Seafood Medley Salad's Cajun-herb dressing had the zest I enjoy, but still lacked the sophistication of French cuisine I prefer. Suitable for a gluten-free diet, yet there's room to enhance the flavors to meet connoisseur expectations. A fair choice, but not remarkable."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: The Restaurant " USA Diner Haven "information as below:
+1. Customer Score: 5.666666666666667
+2. Advertisement
+   Join us at USA Diner Haven for the unveiling of 'Lin's Local Harvest Feast'! Celebrating the bounty of our region with fresh, locally sourced ingredients, it's a flavor journey not to be missed. Limited time offer - enjoy a special introductory price this weekend only!
+3. Menu 
+   [{'id': 24, 'name': "Lin's Local Harvest Feast", 'price': 15.0, 'description': 'A hearty plate celebrating the best of local produce, featuring grilled farm-fresh vegetables, a juicy, herb-marinated chicken breast, and a side of roasted new potatoes.'}]
+4. Comments
+   [{'day': 12, 'name': 'Bob', 'score': 3, 'content': "The Lin's Zesty Lemon-Herb Chicken was underwhelming, scoring low on taste. Lacked the zest and herb flavors I anticipated. For a dish with such potential, this was a letdown. Having dined elsewhere with better experiences, I expected more, especially for the price paid."}, {'day': 11, 'name': 'David', 'score': 5, 'content': 'The Supercharged Grilled Chicken Salad and Ultimate Caesar Salad were lackluster in flavor, reflecting the fair scores. As someone with a low-sodium diet, they fit my health needs, but the dining experience could be enhanced with more vibrant taste profiles. Previous visits to alternative establishments have offered more satisfactory flavors.'}, {'day': 8, 'name': 'Quincy', 'score': 6, 'content': "The Grilled Chicken Salad and Caesar Salad were suitable for my diet but lacked flavor. They were affordable, which is important for my budget. I've had better fast food experiences; some zest could improve these dishes."}, {'day': 7, 'name': 'Bob', 'score': 6, 'content': 'The Mac & Cheese scored fairly on taste, aligning with its pricing, especially with the Thursday discount. However, I found it lacking in flavor compared to what I expect from a comfort dish. For a middle-class palate, it was just passable and could benefit from a more robust taste profile.'}, {'day': 7, 'name': 'Jack', 'score': 6, 'content': "The BBQ Ribs had a pleasant smokiness, but the flavor depth was lacking. The Apple Pie's caramel twist was nice, yet it didn't elevate the overall taste. Compared to previous experiences, the meal was satisfactory but not exceptional. There's room for improvement in flavor richness."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->David]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose. If you don't make choices, return 'None'>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "American Flavors Bistro",
+    "dishes" : [
+        "American Herb-Grilled Chicken"
+    ],
+    "reason" : "I prefer American Flavors Bistro for its American Herb-Grilled Chicken, which is seasoned well for my taste without compromising my low-sodium diet, as per my positive previous experience."
+}
+
+[System->David]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+American Herb-Grilled Chicken: 0.71
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[David->all]: {
+    "restaurant": "American Flavors Bistro",
+    "feeling": "The American Herb-Grilled Chicken was delicious, perfectly seasoned to suit my low-sodium needs without sacrificing taste."
+}
+

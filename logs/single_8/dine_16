@@ -1,0 +1,920 @@
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Discover the taste of tradition at Classic American Flavors! Enjoy signature dishes like Smokey BBQ Ribs and New York Strip Steak, all made with locally sourced, premium ingredients. Join us for an authentic American dining experience that celebrates local produce. Book your table now and indulge in flavors that tell a story!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 18.0, 'description': 'Tender ribs slathered in a rich, smokey BBQ sauce.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Homemade apple pie served with vanilla ice cream.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Grilled Salmon', 'price': 20.0, 'description': 'Freshly grilled salmon with a lemon butter sauce and seasonal greens.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Classic baked macaroni & cheese with a golden crust.'}, {'id': 9, 'name': 'Cornbread', 'price': 5.0, 'description': 'Sweet and moist southern-style cornbread.'}, {'id': 10, 'name': 'Iced Tea', 'price': 3.0, 'description': 'Chilled iced tea with a hint of lemon.'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: NULL
+2. Advertisement
+   Experience authentic American cuisine midweek at USA Flavor House! Enjoy our special Midweek Menu with delicious deals on your favorites like the Classic Burger and Buffalo Wings. Perfect for family dinners or a casual night out. Limited time offer – come taste the tradition!
+3. Menu 
+   [{'id': 1, 'name': 'Classic Burger', 'price': 12.0, 'description': 'A juicy beef patty with lettuce, tomato, and our special sauce'}, {'id': 2, 'name': 'BBQ Ribs', 'price': 15.0, 'description': 'Tender ribs smothered in our signature BBQ sauce'}, {'id': 3, 'name': 'Buffalo Wings', 'price': 10.0, 'description': 'Spicy wings served with blue cheese dressing'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy macaroni and cheese with a crispy topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Mixed greens with chicken, bacon, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Classic apple pie with a scoop of vanilla ice cream'}, {'id': 7, 'name': 'Midweek Special Burger', 'price': 10.0, 'description': 'A simpler yet delicious version of our classic burger, available midweek'}, {'id': 8, 'name': 'Midweek Special Wings', 'price': 8.0, 'description': 'A midweek deal on our popular buffalo wings'}]
+4. Comments
+   []
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Buffalo Chicken Wings", "New York Strip Steak"
+    ],
+    "reason": "I favor 'Classic American Flavors' for their premium ingredient focus and the New York Strip Steak, which aligns with my bold personality and preference for high-quality, flavorful food."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Buffalo Chicken Wings: 0.76
+New York Strip Steak: 0.78
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "feeling": "The Buffalo Wings were nicely spicy, just as I like, and the New York Strip Steak was cooked to perfection with robust flavors."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.714285714285714
+2. Advertisement
+   Introducing new health-conscious delights at Classic American Flavors! Savor our Vegan Power Bowl, Gluten-Free Grilled Chicken, and Low-Sugar Berry Parfait. Plus, don't miss our weekly specials for an extraordinary dining experience. Perfect for all dietary needs without compromising on taste!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slathered in a rich, smokey BBQ sauce.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Homemade apple pie served with vanilla ice cream.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Grilled Salmon', 'price': 22.0, 'description': 'Freshly grilled salmon with a lemon butter sauce and seasonal greens.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Classic baked macaroni & cheese with a golden crust.'}, {'id': 9, 'name': 'Cornbread', 'price': 5.0, 'description': 'Sweet and moist southern-style cornbread.'}, {'id': 11, 'name': 'Vegan Power Bowl', 'price': 14.0, 'description': 'A nutrient-rich bowl with quinoa, kale, roasted chickpeas, avocado, and a tahini dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 18.0, 'description': 'Juicy grilled chicken breast with a side of roasted sweet potatoes and green beans.'}, {'id': 13, 'name': 'Low-Sugar Berry Parfait', 'price': 7.0, 'description': 'Layers of fresh berries and Greek yogurt, topped with a sprinkle of granola.'}]
+4. Comments
+   [{'day': 1, 'name': 'Valerie', 'score': 8, 'content': "The Grilled Salmon was cooked to perfection with a delightful lemon butter sauce. The Caesar Salad was fresh, though it could use a bit more dressing. Apple Pie a la Mode was a sweet ending, albeit the apple pie wasn't as warm as I'd prefer. Overall, a satisfying meal."}, {'day': 1, 'name': 'Ulysses', 'score': 8, 'content': "The Smokey BBQ Ribs and New York Strip Steak at Classic American Flavors were quite enjoyable, with high-quality ingredients evident in the flavor. The Apple Pie a la Mode, while good, didn't quite meet my expectations. Overall, a satisfying experience, though there's room for improvement in dessert."}, {'day': 1, 'name': 'Tina', 'score': 8, 'content': 'The Grilled Salmon was cooked to perfection with a delightful lemon butter sauce, and the Caesar Salad was fresh and flavorful. The Apple Pie a la Mode provided a sweet ending to the meal. Overall, a satisfying dining experience, but the flavors could be a bit more innovative.'}, {'day': 1, 'name': 'Ruby', 'score': 8, 'content': "The Smokey BBQ Ribs and New York Strip Steak were quite flavorful, though not the best I've had. The Caesar Salad was fresh and the Apple Pie a la Mode was a delightful end to the meal. An enjoyable experience overall, but there's room for improvement."}, {'day': 1, 'name': 'Nora', 'score': 8, 'content': 'The Grilled Salmon was delightful and well-cooked, complementing my gluten-free needs. The Caesar Salad, while fresh, required a slight adjustment to be gluten-free. The Iced Tea could have been more robust in flavor. Overall, a pleasurable fine dining experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 8.0
+2. Advertisement
+   Discover the bold flavors of USA Flavor House with our new Anglo-American Fusion Fish & Chips and our signature warm USA Flavor House Special Pie. Indulge in gourmet upgrades to classic favorites. Visit us for a dining experience that's uniquely delightful!
+3. Menu 
+   [{'id': 1, 'name': 'Gourmet Classic Burger', 'price': 14.0, 'description': 'Our Classic Burger with gourmet upgrades - featuring artisanal cheese, arugula, and a special gourmet sauce'}, {'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 18.0, 'description': 'Slow-cooked ribs with a hickory smoke infusion and our special BBQ sauce'}, {'id': 3, 'name': 'Spicy Buffalo Wings', 'price': 12.0, 'description': 'Our Buffalo Wings with an extra kick, served with a cooling blue cheese dressing'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy macaroni and cheese with a crispy topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Mixed greens with chicken, bacon, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Classic apple pie with a scoop of vanilla ice cream'}, {'id': 7, 'name': 'Midweek Special Burger', 'price': 10.0, 'description': 'A simpler yet delicious version of our classic burger, available midweek'}, {'id': 8, 'name': 'Midweek Special Wings', 'price': 8.0, 'description': 'A midweek deal on our popular buffalo wings'}, {'id': 9, 'name': 'Anglo-American Fusion Fish & Chips', 'price': 14.0, 'description': 'Traditional English fish & chips with a twist of American flavors, served with homemade tartar sauce and malt vinegar'}, {'id': 10, 'name': 'USA Flavor House Special Pie', 'price': 9.0, 'description': 'Our signature pie with seasonal fruits, served warm with a scoop of premium vanilla ice cream'}]
+4. Comments
+   [{'day': 1, 'name': 'Wade', 'score': 8, 'content': 'The dishes were quite satisfying and offered good value for money. The Classic Burger and Mac & Cheese were flavorful, and the Apple Pie was a delightful end to the meal. Service was prompt and friendly, making for a pleasant dining experience.'}, {'day': 1, 'name': 'Sam', 'score': 8, 'content': "The Midweek Specials provided great value, and the comfort of the Mac & Cheese was spot on. The flavors of the burger and wings were satisfying, though not exceptional. For a cozy meal that feels like home cooking, I'd recommend it."}, {'day': 1, 'name': 'Eve', 'score': 8, 'content': 'The Midweek Specials were a great value and the portions were satisfying. The flavors were good but could use a bit more uniqueness to stand out. Overall, a pleasant dining experience with simple, tasty dishes.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "dishes": [
+        "Spicy Buffalo Wings", "Hickory-Smoked BBQ Ribs"
+    ],
+    "reason": "The USA Flavor House has a slightly higher customer score, and their Spicy Buffalo Wings cater to my preference for spicy food. Their unique Anglo-American Fusion Fish & Chips also pique my interest for a bold dining experience."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Spicy Buffalo Wings: 0.81
+Hickory-Smoked BBQ Ribs: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "feeling": "The Spicy Buffalo Wings had the perfect heat level for my taste, and the Hickory-Smoked BBQ Ribs were succulent with a rich, smoky flavor. Overall, a satisfying meal that lived up to my expectations for bold and spicy food."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.791666666666667
+2. Advertisement
+   Excite your taste buds with our new Midweek Special Combo at Classic American Flavors! Enjoy a delicious mix of Smokey BBQ Ribs, Grilled Salmon, and Apple Pie a la Mode at an irresistible price. Plus, freshly enhanced flavors in our Vegan Power Bowl and other favorites await you. Indulge in culinary excellence this week!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs', 'price': 20.0, 'description': 'Tender ribs slathered in a rich, smokey BBQ sauce.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Classic Cheeseburger', 'price': 14.0, 'description': 'Juicy beef patty with cheese, lettuce, tomato, and our special sauce.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Homemade apple pie served with vanilla ice cream.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Grilled Salmon', 'price': 23.0, 'description': 'Freshly grilled salmon with a herb crust and a lemon butter sauce, served with seasonal greens.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Classic baked macaroni & cheese with a golden crust.'}, {'id': 9, 'name': 'Cornbread', 'price': 5.0, 'description': 'Sweet and moist southern-style cornbread.'}, {'id': 11, 'name': 'Vegan Power Bowl', 'price': 15.0, 'description': 'Our Vegan Power Bowl now with a bold spice blend, quinoa, kale, roasted chickpeas, avocado, and a zesty tahini dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 13, 'name': 'Low-Sugar Berry Parfait', 'price': 7.5, 'description': 'Our Berry Parfait with a drizzle of honey and a sprinkle of granola, featuring fresh berries and Greek yogurt.'}, {'id': 14, 'name': 'Midweek Special Combo', 'price': 28.0, 'description': 'A selection of our favorites: Smokey BBQ Ribs, Grilled Salmon, and Apple Pie a la Mode, at a special midweek price.'}]
+4. Comments
+   [{'day': 2, 'name': 'Nora', 'score': 8, 'content': "The Gluten-Free Grilled Chicken was satisfying, though it lacked a bit of seasoning. The Caesar Salad was fresh, but could use a more innovative twist. The Low-Sugar Berry Parfait was a delightful conclusion. While enjoyable, there's room for culinary creativity."}, {'day': 2, 'name': 'Iris', 'score': 8, 'content': 'The Caesar Salad was nicely prepared with a fair balance of dressing and fresh ingredients, though the croutons could be crisper. While I enjoyed the freshness, I think the flavor could be enhanced to make the salad more memorable.'}, {'day': 2, 'name': 'Chloe', 'score': 8, 'content': "The Grilled Salmon was delicious and met my dietary needs well, while the Low-Sugar Berry Parfait was a delightful dessert that didn't compromise my health. Consistency with previous visits would be appreciated, as the parfait slightly lacked in flavor compared to earlier experiences."}, {'day': 2, 'name': 'Amelia', 'score': 8, 'content': "The Smokey BBQ Ribs were quite tasty, albeit not the best I've had. The Classic Cheeseburger was satisfying, though it could use a more distinctive flavor. The Apple Pie a la Mode was enjoyable, but I've had warmer, fresher pies before. Good meal overall, but there's room for improvement."}, {'day': 2, 'name': 'Yasmine', 'score': 7, 'content': "The Vegan Power Bowl was good but didn't quite meet my expectations for flavor. It's a healthy option that fits my vegan diet, yet it could benefit from more seasoning to enhance its taste. Compared to my previous meal here, it lacked the same satisfaction."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 8.0
+2. Advertisement
+   Taste the season at USA Flavor House with our new Seasonal Harvest Veggie Burger, featuring locally sourced, fresh produce and a unique vegan cheese. Elevate your experience with our improved Gourmet Classic Burger and Hickory-Smoked BBQ Ribs. Fresh, innovative, unforgettable – that's USA Flavor House.
+3. Menu 
+   [{'id': 1, 'name': 'Gourmet Classic Burger', 'price': 15.0, 'description': 'Our Classic Burger with gourmet upgrades - featuring artisanal cheese, arugula, and a special gourmet sauce'}, {'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 19.0, 'description': 'Slow-cooked ribs with a hickory smoke infusion and our special BBQ sauce'}, {'id': 3, 'name': 'Spicy Buffalo Wings', 'price': 12.0, 'description': 'Our Buffalo Wings with an extra kick, served with a cooling blue cheese dressing'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy macaroni and cheese with a crispy topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Mixed greens with chicken, bacon, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Classic apple pie with a scoop of vanilla ice cream'}, {'id': 7, 'name': 'Midweek Special Burger', 'price': 10.0, 'description': 'A simpler yet delicious version of our classic burger, available midweek'}, {'id': 9, 'name': 'Anglo-American Fusion Fish & Chips', 'price': 14.0, 'description': 'Traditional English fish & chips with a twist of American flavors, served with homemade tartar sauce and malt vinegar'}, {'id': 10, 'name': 'USA Flavor House Special Pie', 'price': 10.0, 'description': 'Our signature pie with seasonal fruits, served warm with a scoop of premium vanilla ice cream'}, {'id': 11, 'name': 'Seasonal Harvest Veggie Burger', 'price': 16.0, 'description': 'A plant-based patty with locally sourced seasonal vegetables, topped with artisanal vegan cheese and a sun-dried tomato aioli.'}]
+4. Comments
+   [{'day': 2, 'name': 'Xavier', 'score': 8, 'content': "The Anglo-American Fusion Fish & Chips offered an exciting twist, though I hoped for a bit more Caribbean flair. The Special Pie was comforting, reminiscent of home. While both dishes were good, I'll be seeking a more vibrant palate in the future."}, {'day': 2, 'name': 'Quincy', 'score': 8, 'content': 'The Midweek Special Burger was a great value, satisfying without being extraordinary. The Cobb Salad was fresh, aligning with my dietary needs. Overall, a pleasant experience but could use a touch more flavor.'}, {'day': 2, 'name': 'Brian', 'score': 8, 'content': "The Midweek Specials were both affordable and satisfying. The Mac & Cheese was comforting, and the USA Flavor House Special Pie ended the meal on a high note. While the flavors were good, I'd love to see more creativity to make the dishes stand out."}, {'day': 2, 'name': 'Sam', 'score': 8, 'content': 'The Midweek Special Burger and Mac & Cheese were comforting, reminiscent of home cooking, which I enjoy. The Special Pie was a nice finish to the meal. While the dishes were good, they could benefit from a touch more innovation to elevate the overall experience.'}, {'day': 2, 'name': 'Nate', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs had a satisfying smoky taste, though they lacked a bit in depth of flavor compared to my previous experience at Classic American Flavors. The Special Pie was good but not remarkable. A solid meal overall with room for enhancement in the taste complexity.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "dishes": [
+        "Spicy Buffalo Wings", "Hickory-Smoked BBQ Ribs"
+    ],
+    "reason": "USA Flavor House has a higher customer score and offers the spicy kick I enjoy. The Hickory-Smoked BBQ Ribs seem to promise the bold flavors I prefer."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Spicy Buffalo Wings: 0.81
+Hickory-Smoked BBQ Ribs: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "score": 8,
+    "comment": "The Spicy Buffalo Wings were delightfully hot, catering to my love for spice. The Hickory-Smoked BBQ Ribs had a deep smoky flavor, although I've tasted more complexity elsewhere. An enjoyable meal overall, but a notch below previous experiences at Classic American Flavors in terms of flavor depth."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.793103448275862
+2. Advertisement
+   Discover the bold flavors of our new 'American Fusion Surprise,' the Flavor of the Month at Classic American Flavors! Dive into a unique blend of classic and international tastes with our updated menu, including the Smokey BBQ Ribs Deluxe and Signature Cheeseburger. Fresh, innovative, and perfect for health-conscious foodies. Taste the difference today!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 22.0, 'description': 'Our classic ribs now with a gourmet touch, featuring applewood smoke and a unique blend of spices.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Signature Cheeseburger', 'price': 16.0, 'description': 'Our juicy beef patty topped with artisanal cheese, gourmet sauce, and distinctive house pickles.'}, {'id': 4, 'name': 'Apple Pie a la Mode', 'price': 8.0, 'description': 'Homemade apple pie served with vanilla ice cream.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Grilled Salmon', 'price': 23.0, 'description': 'Freshly grilled salmon with a herb crust and a lemon butter sauce, served with seasonal greens.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Classic baked macaroni & cheese with a golden crust.'}, {'id': 11, 'name': 'Vegan Power Bowl', 'price': 15.0, 'description': 'Our Vegan Power Bowl now with a bold spice blend, quinoa, kale, roasted chickpeas, avocado, and a zesty tahini dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 13, 'name': 'Low-Sugar Berry Parfait', 'price': 7.5, 'description': 'Our Berry Parfait with a drizzle of honey and a sprinkle of granola, featuring fresh berries and Greek yogurt.'}, {'id': 14, 'name': 'Midweek Special Combo', 'price': 28.0, 'description': 'A selection of our favorites: Smokey BBQ Ribs, Grilled Salmon, and Apple Pie a la Mode, at a special midweek price.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 18.0, 'description': 'A monthly special that blends traditional American flavors with international cuisine, featuring the freshest seasonal ingredients.'}]
+4. Comments
+   [{'day': 3, 'name': 'Steve', 'score': 7, 'content': 'The Vegan Power Bowl was hearty but could use more seasoning. The Low-Sugar Berry Parfait was enjoyable, yet I expected a bit more flavor. Compared to the USA Flavor House, the options here are healthier for my diet, though they sometimes lack in taste.'}, {'day': 3, 'name': 'Oscar', 'score': 8, 'content': "The Smokey BBQ Ribs had a robust flavor, though not the best I've had. The Cheeseburger was juicy but could benefit from a unique touch. The Apple Pie a la Mode was comforting. Overall, a good meal but there's room for a more distinctive taste."}, {'day': 3, 'name': 'Xena', 'score': 8, 'content': 'The New York Strip Steak was sumptuous, albeit slightly below expectations. The Caesar Salad was crisp but needed a zesty kick. The Apple Pie a la Mode was a standout with its rich flavor. Compared to previous visits, a consistent quality is maintained, yet a slight push in flavor innovation could make the experience stellar.'}, {'day': 3, 'name': 'Henry', 'score': 8, 'content': "The New York Strip Steak was flavorful, though not as exceptional as anticipated. Ribs were tender with a good smokiness. The Apple Pie a la Mode was enjoyable but could have been warmer. Overall a solid meal, but there's room for improvement in the execution of the dishes."}, {'day': 3, 'name': 'Grace', 'score': 8, 'content': "The Grilled Salmon maintained its high standard, aligning well with my health needs. The Low-Sugar Berry Parfait was enjoyable, though it could benefit from a touch more flavor to enhance the overall experience. Compared to previous meals, the consistency was commendable, but there's room for a little innovation."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.95
+2. Advertisement
+   Discover the bold new flavors at USA Flavor House! Introducing the 'USA Flavor Twist' - unique American classics with an English spin. Don't miss our enhanced Seasonal Harvest Veggie Burger and zesty Anglo-American Fusion Fish & Chips. Fresh ingredients, innovative dishes, and a cozy atmosphere await you!
+3. Menu 
+   [{'id': 1, 'name': 'Gourmet Classic Burger', 'price': 15.0, 'description': 'Our Classic Burger with gourmet upgrades - featuring artisanal cheese, arugula, and a special gourmet sauce'}, {'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 19.0, 'description': 'Slow-cooked ribs with a hickory smoke infusion and our special BBQ sauce'}, {'id': 3, 'name': 'Spicy Buffalo Wings', 'price': 12.0, 'description': 'Our Buffalo Wings with an extra kick, served with a cooling blue cheese dressing'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy macaroni and cheese with a crispy topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Mixed greens with chicken, bacon, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Classic apple pie with a scoop of vanilla ice cream'}, {'id': 9, 'name': 'Anglo-American Fusion Fish & Chips', 'price': 14.0, 'description': 'Our take on the classic Fish & Chips incorporates a zesty American spice rub and is paired with a tangy citrus-infused tartar sauce.'}, {'id': 10, 'name': 'USA Flavor House Special Pie', 'price': 10.0, 'description': 'Our signature pie with seasonal fruits, served warm with a scoop of premium vanilla ice cream'}, {'id': 11, 'name': 'Seasonal Harvest Veggie Burger', 'price': 16.0, 'description': 'Our plant-based patty now with an enhanced seasoning blend, topped with artisanal vegan cheese and a hearty beetroot-chipotle aioli.'}, {'id': 12, 'name': 'USA Flavor Twist', 'price': 18.0, 'description': 'A daring combination of classic American dishes with a bold twist of local English flavors, served with a unique side.'}]
+4. Comments
+   [{'day': 3, 'name': 'Ulysses', 'score': 8, 'content': 'The Anglo-American Fusion Fish & Chips were a delightful blend of cultures, though I expected a bolder fusion. The Special Pie was satisfying with its seasonal fruits. The Seasonal Harvest Veggie Burger was innovative, but I missed the depth of flavor from previous meals at Classic American Flavors.'}, {'day': 3, 'name': 'Ruby', 'score': 8, 'content': 'The Seasonal Harvest Veggie Burger was a delightful blend of fresh flavors. The USA Flavor House Special Pie was comforting, though it lacked a unique flair. The Cobb Salad was standard fare. Overall, a good meal, but not as exceptional as previous experiences at Classic American Flavors.'}, {'day': 3, 'name': 'Quincy', 'score': 8, 'content': 'The Cobb Salad was fresh, aligning with my low-calorie diet, and the Midweek Special Burger offered good value. Both dishes score well for my dietary needs and budget, but a bit more flavor would enhance the dining experience.'}, {'day': 3, 'name': 'Lara', 'score': 8, 'content': "The Anglo-American Fusion Fish & Chips were well-executed with a score of 0.81, aligning with my seafood preference. Flavor House maintains a good standard, though I'd enjoy even more creative flair in the dish. Consistently good service and a pleasant atmosphere."}, {'day': 3, 'name': 'Hugo', 'score': 8, 'content': "The Gourmet Classic Burger was indeed good, with a score of 0.81 indicating its quality. However, I find there's room for improvement to reach the outstanding category. It lacked the wow factor I experienced in previous meals at Classic American Flavors. An enhancement in the unique flavors could enhance the gourmet experience."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Buffalo Chicken Wings", "New York Strip Steak", "American Fusion Surprise"
+    ],
+    "reason": "Given my preference for spicy and bold flavors, Classic American Flavors' Buffalo Wings and New York Strip Steak are appealing, and the American Fusion Surprise suggests a creative twist that might satisfy my adventurous palate."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Buffalo Chicken Wings: 0.8
+New York Strip Steak: 0.81
+American Fusion Surprise: 0.8
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "feeling": "The Buffalo Chicken Wings packed a satisfying punch, fitting my spicy cravings. The New York Strip Steak had a robust flavor that matched my bold tastes. The American Fusion Surprise was an exciting twist that kept my adventurous side intrigued."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.871794871794871
+2. Advertisement
+   Indulge in the warmth of our new Cotswold Berry Crumble and the richness of English Toffee Pudding, exclusively at Classic American Flavors. Our refreshed menu blends the best of American cuisine with a dash of English elegance. Come savor our chef's innovative creations and experience a delightful end to your meal!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 22.0, 'description': 'Our classic ribs now with a gourmet touch, featuring applewood smoke and a unique blend of spices.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Signature Cheeseburger', 'price': 16.0, 'description': 'Our juicy beef patty topped with artisanal cheese, gourmet sauce, and distinctive house pickles.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Grilled Salmon', 'price': 23.0, 'description': 'Freshly grilled salmon with a herb crust and a lemon butter sauce, served with seasonal greens.'}, {'id': 8, 'name': 'Mac & Cheese', 'price': 9.0, 'description': 'Classic baked macaroni & cheese with a golden crust.'}, {'id': 11, 'name': 'Vegan Power Bowl', 'price': 15.0, 'description': 'Our Vegan Power Bowl now with a bold spice blend, quinoa, kale, roasted chickpeas, avocado, and a zesty tahini dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 14, 'name': 'Midweek Special Combo', 'price': 28.0, 'description': 'A selection of our favorites: Smokey BBQ Ribs, Grilled Salmon, and Apple Pie a la Mode, at a special midweek price.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 16, 'name': 'Cotswold Berry Crumble', 'price': 10.0, 'description': 'A warm berry crumble using locally sourced Cotswold berries, topped with homemade cinnamon oat crumble and served with clotted cream.'}, {'id': 17, 'name': 'English Toffee Pudding', 'price': 11.0, 'description': 'A traditional English sticky toffee pudding with a rich toffee sauce and a side of vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 4, 'name': 'Xavier', 'score': 8, 'content': "The Smokey BBQ Ribs Deluxe had a rich flavor that lived up to its gourmet promise, and the Grilled Salmon was excellently prepared. However, the Apple Pie a la Mode, while good, didn't quite meet the outstanding mark. A bit more innovation could enhance the overall experience."}, {'day': 4, 'name': 'Ruby', 'score': 8, 'content': "The New York Strip Steak was satisfying with a score of 0.81, though lacking a wow factor. The Vegan Power Bowl was healthy but could use a flavor boost. The Low-Sugar Berry Parfait was a high point with its 0.82 score. The American Fusion Surprise had potential but didn't fully deliver on innovation."}, {'day': 4, 'name': 'Lara', 'score': 9, 'content': "The Grilled Salmon with a score of 0.87 was exceptional, surpassing my previous experiences. The flavor was rich and the preparation was perfect for my seafood preference. While I've enjoyed USA Flavor House, Classic American Flavors has stepped up their game, making this experience notably superior."}, {'day': 4, 'name': 'Jake', 'score': 8, 'content': "The Grilled Salmon was excellent, suiting my health needs, but could use a hint more seasoning. The Caesar Salad was fresh, though a zestier dressing would enhance it. The Low-Sugar Berry Parfait was good but lacked a bit of flavor compared to the USA Flavor House's desserts."}, {'day': 4, 'name': 'Iris', 'score': 8, 'content': 'The Caesar Salad was good with fresh ingredients, aligning with my salad preference. However, the flavor could be more vibrant, and croutons crisper for a perfect score. Consistent quality from past visits noted.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.931034482758621
+2. Advertisement
+   Indulge in our 'Transatlantic Taste Special' - a weekly celebration of American and British flavors! Plus, savor our 'Enhanced Seasonal Harvest Veggie Burger' and 'Deluxe Gourmet Classic Burger', now with richer tastes and premium sides. Visit USA Flavor House for an unforgettable dining experience!
+3. Menu 
+   [{'id': 1, 'name': 'Deluxe Gourmet Classic Burger', 'price': 17.0, 'description': 'Our Classic Burger upgraded with premium aged cheddar and a unique savory jam, served with truffle fries.'}, {'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 19.0, 'description': 'Slow-cooked ribs with a hickory smoke infusion and our special BBQ sauce'}, {'id': 4, 'name': 'Mac & Cheese', 'price': 8.0, 'description': 'Creamy macaroni and cheese with a crispy topping'}, {'id': 5, 'name': 'Cobb Salad', 'price': 11.0, 'description': 'Mixed greens with chicken, bacon, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie', 'price': 7.0, 'description': 'Classic apple pie with a scoop of vanilla ice cream'}, {'id': 10, 'name': 'USA Flavor House Special Pie Deluxe', 'price': 12.0, 'description': 'Our signature pie made with organic seasonal fruits and a hint of exotic spices, served with artisanal ice cream.'}, {'id': 11, 'name': 'Enhanced Seasonal Harvest Veggie Burger', 'price': 17.0, 'description': 'Our veggie burger now with a richer, more complex blend of spices and a side of sweet potato fries.'}, {'id': 12, 'name': 'USA Flavor Twist', 'price': 18.0, 'description': 'A daring combination of classic American dishes with a bold twist of local English flavors, served with a unique side.'}, {'id': 13, 'name': 'Transatlantic Taste Special', 'price': 20.0, 'description': 'Weekly rotating special merging American classics with British flair, served with a side of seasonal vegetables.'}]
+4. Comments
+   [{'day': 4, 'name': 'Steve', 'score': 7, 'content': 'The Cobb Salad was quite fresh, aligning with my dietary needs. The Seasonal Harvest Veggie Burger was comforting but could benefit from more robust flavors. A good meal, yet when compared to Classic American Flavors, I found the options here less exciting in taste.'}, {'day': 4, 'name': 'Quincy', 'score': 8, 'content': 'The Cobb Salad was quite satisfying, aligning with my dietary restrictions, and the service was commendable. While the dish was good, it still lacked a bit of flavor to make it outstanding. Consistent with my previous experiences, though, a continued effort to enhance flavor profiles would be appreciated.'}, {'day': 4, 'name': 'Dexter', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs had a deep smoky flavor that I loved, and the Special Pie was a delightful end to the meal. While the ribs were impressive, they still lack the wow factor of Classic American Flavors' offerings. A touch more creativity could elevate the experience."}, {'day': 4, 'name': 'Amelia', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs were flavorful with a nice smokiness, and the Special Pie was hearty with seasonal fruits. However, both dishes could benefit from a more unique touch. Previous experiences at Classic American Flavors had a bit more flair, but overall, a satisfying meal.'}, {'day': 4, 'name': 'Yasmine', 'score': 8, 'content': 'The Seasonal Harvest Veggie Burger had a good balance of flavors, and the vegan cheese was a welcome addition. However, compared to previous experiences at Classic American Flavors, I found the burger could benefit from a more robust seasoning to truly distinguish it.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "dishes": [
+        "Hickory-Smoked BBQ Ribs", "USA Flavor House Special Pie Deluxe"
+    ],
+    "reason": "USA Flavor House edges out with higher customer scores and dishes like Hickory-Smoked BBQ Ribs which appeal to my spicy and bold flavor preferences, coupled with their intriguing twist on desserts."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Hickory-Smoked BBQ Ribs: 0.81
+USA Flavor House Special Pie Deluxe: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "feeling": "The Hickory-Smoked BBQ Ribs delivered on the spicy and bold flavors I was looking for, and the Special Pie Deluxe was a delightful sweet ending to the meal."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.907407407407407
+2. Advertisement
+   Discover the new Caribbean Jerk Vegan Bowl and Global Fusion Dessert at Classic American Flavors! Embark on a culinary journey with our innovative vegan dishes and weekly rotating desserts that promise a unique blend of global tastes. Perfect for foodies seeking a memorable dining adventure!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 22.0, 'description': 'Our classic ribs now with a gourmet touch, featuring applewood smoke and a unique blend of spices.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Signature Cheeseburger', 'price': 16.0, 'description': 'Our juicy beef patty topped with artisanal cheese, gourmet sauce, and distinctive house pickles.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Grilled Salmon', 'price': 23.0, 'description': 'Freshly grilled salmon with a herb crust and a lemon butter sauce, served with seasonal greens.'}, {'id': 11, 'name': 'Vegan Power Bowl Deluxe', 'price': 17.0, 'description': 'Our Vegan Power Bowl reimagined with an even bolder spice blend, adding grilled Portobello mushrooms and a tangy lemon tahini dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 16, 'name': 'Cotswold Berry Crumble Deluxe', 'price': 12.0, 'description': 'Our classic crumble enhanced with a medley of Cotswold berries and exotic spices, served with clotted cream.'}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 17.0, 'description': 'A tropical vegan adventure featuring jerk-spiced tofu, mango salsa, black beans, and coconut lime rice.'}, {'id': 19, 'name': 'Global Fusion Dessert', 'price': 12.0, 'description': 'Each week a new dessert inspired by flavors from around the world, served with a locally sourced ingredient.'}]
+4. Comments
+   [{'day': 5, 'name': 'Xavier', 'score': 8, 'content': 'The Smokey BBQ Ribs Deluxe and Grilled Salmon were standout dishes with deep and satisfying flavors. The Cotswold Berry Crumble and English Toffee Pudding, while good, lacked a bit of the wow factor I anticipated. A touch more Caribbean zest could have elevated the entire meal.'}, {'day': 5, 'name': 'Valerie', 'score': 8, 'content': "The Grilled Salmon, with its high score, met my expectations for a healthy, organic dish. The Caesar Salad was fresh but needed a touch more flavor. The Cotswold Berry Crumble, while innovative with local ingredients, could have been warmer. A pleasant meal overall, yet there's room for refinement."}, {'day': 5, 'name': 'Ulysses', 'score': 8, 'content': 'The American Fusion Surprise intrigued my palate, though it fell slightly short of adventurous expectations. The Smokey BBQ Ribs Deluxe was a standout with its rich flavors. The Cotswold Berry Crumble, while good, could benefit from a more pronounced local berry taste to truly shine.'}, {'day': 5, 'name': 'Max', 'score': 8, 'content': "The enhanced Vegan Power Bowl was a delightful improvement, hitting the mark with its bold spice blend. It's a solid choice for a plant-based diet, though I believe there's still room for variety in their vegetarian options to make the experience exceptional."}, {'day': 5, 'name': 'Lara', 'score': 9, 'content': 'The Grilled Salmon confirmed my preference with its high-quality preparation and taste, scoring a 0.87. Classic American Flavors consistently offers a satisfying seafood experience, though I would welcome more innovative side dishes to complement the main course.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.9393939393939394
+2. Advertisement
+   Join us at USA Flavor House for our exclusive 'American-English Fusion Night'! Experience our unique 'American-English Fusion Feast' and daily 'Blue Plate Specials'. Don't miss the 'Local Harvest Apple Crisp' made with fresh, local ingredients. A culinary adventure awaits!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 21.0, 'description': 'Slow-cooked ribs with a hickory smoke infusion and our special BBQ sauce'}, {'id': 5, 'name': 'Cobb Salad', 'price': 13.0, 'description': 'Mixed greens with chicken, bacon, avocado, and blue cheese'}, {'id': 6, 'name': 'Apple Pie', 'price': 9.0, 'description': 'Classic apple pie with a scoop of vanilla ice cream'}, {'id': 10, 'name': 'USA Flavor House Special Pie Deluxe', 'price': 14.0, 'description': 'Our signature pie made with organic seasonal fruits and a hint of exotic spices, served with artisanal ice cream.'}, {'id': 11, 'name': 'Enhanced Seasonal Harvest Veggie Burger', 'price': 19.0, 'description': 'Our veggie burger now with a richer, more complex blend of spices and a side of sweet potato fries.'}, {'id': 12, 'name': 'USA Flavor Twist', 'price': 20.0, 'description': 'A daring combination of classic American dishes with a bold twist of local English flavors, served with a unique side.'}, {'id': 13, 'name': 'Transatlantic Taste Special', 'price': 22.0, 'description': 'Weekly rotating special merging American classics with British flair, served with a side of seasonal vegetables.'}, {'id': 14, 'name': 'American-English Fusion Feast', 'price': 25.0, 'description': 'A curated platter featuring a taste of both America and England, with mini versions of our best fusion dishes.'}, {'id': 15, 'name': 'Blue Plate Special', 'price': 15.0, 'description': 'Our daily special offering a comforting classic dish with a gourmet twist at a friendly price.'}, {'id': 16, 'name': 'Local Harvest Apple Crisp', 'price': 8.0, 'description': 'A warm, cinnamon-spiced apple crisp using locally sourced apples, topped with a scoop of vanilla bean ice cream.'}]
+4. Comments
+   [{'day': 5, 'name': 'Wade', 'score': 8, 'content': 'The Mac & Cheese and Apple Pie both offered a good level of comfort and taste, aligning with my preference for simple meals. The dishes scored well, reflecting their quality. While satisfying, I believe a touch more innovation could enhance the experience further. Overall, a solid choice for a meal within my budget.'}, {'day': 5, 'name': 'Emma', 'score': 8, 'content': 'The Enhanced Seasonal Harvest Veggie Burger was good but could use more distinct spices. The Cobb Salad was fresh, fitting my organic preference, yet lacked an innovative touch. While the meal was enjoyable, it could benefit from a culinary twist to elevate it beyond my past experiences.'}, {'day': 5, 'name': 'Vicky', 'score': 8, 'content': 'The Mac & Cheese was warm and comforting, though it lacked a unique twist. The Apple Pie was sweet with a homely taste, but could be more innovative. Both dishes were good, but a little more creativity could make them stand out. Still a solid dining choice for comfort food.'}, {'day': 5, 'name': 'Frank', 'score': 8, 'content': 'The Deluxe Gourmet Classic Burger was satisfying and the Hickory-Smoked BBQ Ribs had a good smokiness to them. The Special Pie Deluxe was enjoyable, but overall, the dishes could use a bit more creativity to reach excellence. Classic American Flavors might offer a touch more depth in taste.'}, {'day': 4, 'name': 'Steve', 'score': 7, 'content': 'The Cobb Salad was quite fresh, aligning with my dietary needs. The Seasonal Harvest Veggie Burger was comforting but could benefit from more robust flavors. A good meal, yet when compared to Classic American Flavors, I found the options here less exciting in taste.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Buffalo Chicken Wings", "New York Strip Steak", "American Fusion Surprise"
+    ],
+    "reason": "Classic American Flavors offers the spicy Buffalo Wings and robust New York Strip Steak I enjoy, plus an intriguing American Fusion Surprise that suits my adventurous side."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Buffalo Chicken Wings: 0.81
+New York Strip Steak: 0.82
+American Fusion Surprise: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "score": 8,
+    "comment": "Classic American Flavors satisfied with its Buffalo Chicken Wings and New York Strip Steak, both meeting my taste for bold flavors. The American Fusion Surprise was enjoyable, yet could use a bit more creativity. Compared to past meals at USA Flavor House, I found the depth of flavor similar, but Classic American Flavors had the edge this time."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.923076923076923
+2. Advertisement
+   Indulge in innovation at Classic American Flavors with our new 'Anglo-American Crumble Fusion' dessert and intensified 'Vegan Power Bowl Intense'. Experience bold flavors and fusion dishes that celebrate the best of American and English cuisine. Visit us for a taste adventure that will tantalize your palate!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 22.0, 'description': 'Our classic ribs now with a gourmet touch, featuring applewood smoke and a unique blend of spices.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Signature Cheeseburger', 'price': 16.0, 'description': 'Our juicy beef patty topped with artisanal cheese, gourmet sauce, and distinctive house pickles.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon', 'price': 24.0, 'description': 'Our grilled salmon enhanced with a bold and zesty marinade, served with a side of quinoa salad and roasted seasonal vegetables.'}, {'id': 11, 'name': 'Vegan Power Bowl Intense', 'price': 18.0, 'description': 'Elevating our vegan bowl with an intense mix of spices, quinoa, kale, roasted chickpeas, and a drizzle of avocado-lime dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 17.0, 'description': 'A tropical vegan adventure featuring jerk-spiced tofu, mango salsa, black beans, and coconut lime rice.'}, {'id': 19, 'name': 'Global Fusion Dessert Extravaganza', 'price': 13.0, 'description': 'Our weekly global dessert now featuring a fusion of flavors from around the world with an unexpected twist, incorporating local seasonal produce.'}, {'id': 20, 'name': 'Anglo-American Crumble Fusion', 'price': 14.0, 'description': 'A daring twist on our deluxe crumble, with layers of spiced apple and blackberry, topped with a crunchy oat and nut topping, served with homemade caramel sauce.'}]
+4. Comments
+   [{'day': 6, 'name': 'Ruby', 'score': 8, 'content': "The New York Strip Steak at Classic American Flavors was cooked to near perfection, aligning with my taste for quality meats. The Vegan Power Bowl Deluxe was a healthy choice, though it lacked a bit of excitement in flavor. The Global Fusion Dessert was a creative concept but didn't quite meet my high standards for innovation. Overall, a satisfying experience, but there's room for refinement."}, {'day': 6, 'name': 'Nora', 'score': 8, 'content': 'The Gluten-Free Grilled Chicken was well-prepared, meeting my dietary needs with a respectable score. The Caesar Salad was fresh, though it could benefit from a unique twist. The Cotswold Berry Crumble Deluxe was enjoyable with its elegant presentation, but I anticipated a more pronounced berry flavor.'}, {'day': 6, 'name': 'Jake', 'score': 8, 'content': 'The Grilled Salmon was well-prepared, aligning with my health needs, and the Caesar Salad was crisp, though could use more zest. The Cotswold Berry Crumble Deluxe was enjoyable but lacked the punch I expected. While content, a comparison with USA Flavor House may be warranted for future visits.'}, {'day': 6, 'name': 'Dexter', 'score': 8, 'content': 'The Smokey BBQ Ribs Deluxe were a highlight, offering a robust barbecue flavor that catered to my tastes. The New York Strip Steak was well-prepared, though not extraordinary. The Cotswold Berry Crumble Deluxe was enjoyable, but could have showcased the local berries more. While the meal was satisfying, a touch more creativity in the sides could enhance the overall experience.'}, {'day': 6, 'name': 'Zach', 'score': 8, 'content': "The Gluten-Free Grilled Chicken was well-executed, fitting my dietary needs with a satisfying taste. The Cotswold Berry Crumble Deluxe, though innovative, lacked a bit of depth in flavor compared to other desserts I've had. Overall, a good dining experience but with room for dessert improvement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.916666666666667
+2. Advertisement
+   Discover USA Flavor House's new 'Signature American Twist' series, featuring the 'Countryside BBQ Ribs' and 'Heritage Apple Pie', both with a local twist. Enjoy the freshest flavors with ingredients sourced from nearby farms. Come taste the innovation!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 22.0, 'description': 'Slow-cooked ribs with a hickory smoke infusion and our special BBQ sauce, now with an added touch of local apple cider.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 14.0, 'description': 'A classic salad with a twist - featuring locally-sourced greens, artisanal blue cheese, and house-cured bacon.'}, {'id': 11, 'name': 'Enhanced Seasonal Harvest Veggie Burger', 'price': 20.0, 'description': 'A plant-based delight with a medley of local seasonal vegetables, served with a side of artisanal sweet potato fries.'}, {'id': 12, 'name': 'USA Flavor Twist', 'price': 20.0, 'description': 'A daring combination of classic American dishes with a bold twist of local English flavors, served with a unique side.'}, {'id': 13, 'name': 'Transatlantic Taste Special', 'price': 22.0, 'description': 'Weekly rotating special merging American classics with British flair, served with a side of seasonal vegetables.'}, {'id': 14, 'name': 'American-English Fusion Feast', 'price': 25.0, 'description': 'A curated platter featuring a taste of both America and England, with mini versions of our best fusion dishes.'}, {'id': 15, 'name': 'Blue Plate Special', 'price': 15.0, 'description': 'Our daily special offering a comforting classic dish with a gourmet twist at a friendly price.'}, {'id': 16, 'name': 'Local Harvest Apple Crisp', 'price': 8.0, 'description': 'A warm, cinnamon-spiced apple crisp using locally sourced apples, topped with a scoop of vanilla bean ice cream.'}, {'id': 17, 'name': 'Countryside BBQ Ribs', 'price': 23.0, 'description': 'Tender ribs with a local hickory and applewood smoke, glazed with a house-made cider BBQ sauce.'}, {'id': 18, 'name': 'Heritage Apple Pie', 'price': 10.0, 'description': 'Rustic pie featuring heirloom apples from nearby orchards, encased in a buttery lattice crust.'}]
+4. Comments
+   [{'day': 6, 'name': 'Brian', 'score': 8, 'content': 'The Blue Plate Special was a comforting choice, aligning with my love for street food, though it could use a unique touch. The Special Pie Deluxe and Local Harvest Apple Crisp were delightful, but adding a bit more innovation could elevate the dishes. Overall, satisfying but room for creativity.'}, {'day': 6, 'name': 'Vicky', 'score': 7, 'content': 'The Midweek Special Burger and Mac & Cheese were comforting, though they lacked innovation. The Apple Pie scored a 0.81, which was good, but not outstanding. Overall, a satisfying meal, but I wish there were more creative flavors to elevate the experience.'}, {'day': 6, 'name': 'Frank', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs and Special Pie Deluxe were good with an adventurous twist, but lacked a wow factor. Both dishes had a solid taste, although not as innovative as expected. A bit more creativity could enhance the overall experience, especially compared to the options at Classic American Flavors.'}, {'day': 5, 'name': 'Wade', 'score': 8, 'content': 'The Mac & Cheese and Apple Pie both offered a good level of comfort and taste, aligning with my preference for simple meals. The dishes scored well, reflecting their quality. While satisfying, I believe a touch more innovation could enhance the experience further. Overall, a solid choice for a meal within my budget.'}, {'day': 5, 'name': 'Emma', 'score': 8, 'content': 'The Enhanced Seasonal Harvest Veggie Burger was good but could use more distinct spices. The Cobb Salad was fresh, fitting my organic preference, yet lacked an innovative touch. While the meal was enjoyable, it could benefit from a culinary twist to elevate it beyond my past experiences.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Buffalo Chicken Wings", "New York Strip Steak", "American Fusion Surprise"
+    ],
+    "reason": "Classic American Flavors has dishes that cater to my love for bold and spicy flavors. The Buffalo Wings and New York Strip Steak appeal to me, and the American Fusion Surprise offers the adventure I seek in a meal."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Buffalo Chicken Wings: 0.81
+New York Strip Steak: 0.82
+American Fusion Surprise: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "feeling": "The Buffalo Chicken Wings were perfectly spicy, and the New York Strip Steak was wonderfully robust, satisfying my bold taste preferences. The American Fusion Surprise added an enjoyable twist to the meal."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.935897435897436
+2. Advertisement
+   Discover the bold and exotic at Classic American Flavors! Introducing our 'Vegan Power Bowl Extreme' with fiery global spices and our 'American Exotic Fruit Delight' dessert. Savor the innovative tastes that set us apart. Your culinary adventure awaits!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 22.0, 'description': 'Our classic ribs now with a gourmet touch, featuring applewood smoke and a unique blend of spices.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Signature Cheeseburger', 'price': 16.0, 'description': 'Our juicy beef patty topped with artisanal cheese, gourmet sauce, and distinctive house pickles.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon', 'price': 24.0, 'description': 'Our grilled salmon enhanced with a bold and zesty marinade, served with a side of quinoa salad and roasted seasonal vegetables.'}, {'id': 11, 'name': 'Vegan Power Bowl Extreme', 'price': 20.0, 'description': 'A bold evolution of our vegan bowl with a fiery mix of global spices, quinoa, kale, roasted chickpeas, and a drizzle of avocado-lime dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 17.0, 'description': 'A tropical vegan adventure featuring jerk-spiced tofu, mango salsa, black beans, and coconut lime rice.'}, {'id': 19, 'name': 'Global Fusion Dessert Extravaganza', 'price': 13.0, 'description': 'Our weekly global dessert now featuring a fusion of flavors from around the world with an unexpected twist, incorporating local seasonal produce.'}, {'id': 21, 'name': 'American Exotic Fruit Delight', 'price': 15.0, 'description': 'An inventive dessert bursting with exotic fruits, a layer of velvety cream, and a sprinkle of homemade granola for a textural surprise.'}]
+4. Comments
+   [{'day': 7, 'name': 'Yara', 'score': 8, 'content': 'The Vegan Power Bowl Intense was good, with a satisfactory blend of spices. However, compared to past meals at USA Flavor House, it lacked a certain creative edge. More innovative flavors would make it outstanding.'}, {'day': 7, 'name': 'Ulysses', 'score': 8, 'content': "The Vegan Power Bowl Intense was hearty yet lacked a certain flair I've found in other vegan offerings. Both the Global Fusion Dessert and the Anglo-American Crumble Fusion were good, but neither reached the level of innovation I've enjoyed previously. A solid meal, but room for creativity and bolder flavors."}, {'day': 7, 'name': 'Tina', 'score': 8, 'content': 'The Bold Grilled Salmon stood out with its zesty marinade, truly satisfying. The Caesar Salad was fresh yet lacked uniqueness. The Anglo-American Crumble Fusion was good, but I expected a bolder flavor profile. Compared to previous visits, a touch more creativity could enhance the dishes.'}, {'day': 7, 'name': 'Nora', 'score': 8, 'content': 'The Gluten-Free Grilled Chicken was commendable, aligning with my dietary needs. However, the Caesar Salad, while fresh, was rather conventional. The Anglo-American Crumble Fusion, though a novel concept, lacked the depth of flavor expected from fine dining. An enjoyable meal, but with room for refinement in taste and creativity.'}, {'day': 7, 'name': 'Max', 'score': 8, 'content': 'The Vegan Power Bowl Intense and Caribbean Jerk Vegan Bowl were good choices for a plant-based diet, but could benefit from bolder flavors. Compared to previous meals at USA Flavor House, these dishes lacked that extra flair in seasoning that could elevate them from good to great.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.871794871794871
+2. Advertisement
+   Experience the authentic taste of our town with USA Flavor House's 'Local Stars' dishes! Savour our new 'Heartland Harvest Pot Pie' and 'Rustic Local Cheeseboard', crafted with the finest ingredients from local producers. Join us for a meal that celebrates community flavors and supports local farming. Your culinary adventure awaits!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 22.0, 'description': 'Slow-cooked ribs with a hickory smoke infusion and our special BBQ sauce, now with an added touch of local apple cider.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 15.0, 'description': 'A classic salad reimagined with crisp, locally-sourced greens, artisanal blue cheese, house-cured bacon, and a homemade herb dressing.'}, {'id': 11, 'name': 'Enhanced Seasonal Harvest Veggie Burger', 'price': 20.0, 'description': 'A plant-based delight with a medley of local seasonal vegetables, served with a side of artisanal sweet potato fries.'}, {'id': 12, 'name': 'USA Flavor Twist', 'price': 22.0, 'description': 'Our unique take on American comfort food with a twist of local English ingredients, served with a side of heritage vegetable chips.'}, {'id': 13, 'name': 'Transatlantic Taste Special', 'price': 22.0, 'description': 'Weekly rotating special merging American classics with British flair, served with a side of seasonal vegetables.'}, {'id': 14, 'name': 'American-English Fusion Feast', 'price': 25.0, 'description': 'A curated platter featuring a taste of both America and England, with mini versions of our best fusion dishes.'}, {'id': 15, 'name': 'Blue Plate Special', 'price': 15.0, 'description': 'Our daily special offering a comforting classic dish with a gourmet twist at a friendly price.'}, {'id': 17, 'name': 'Countryside BBQ Ribs', 'price': 23.0, 'description': 'Tender ribs with a local hickory and applewood smoke, glazed with a house-made cider BBQ sauce.'}, {'id': 18, 'name': 'Heritage Apple Pie', 'price': 12.0, 'description': 'Our classic apple pie made from heirloom apples from local orchards, served with a dollop of clotted cream.'}, {'id': 19, 'name': 'Heartland Harvest Pot Pie', 'price': 18.0, 'description': 'A comforting pot pie filled with locally sourced, seasonal ingredients, enveloped in a flaky, buttery crust.'}, {'id': 20, 'name': 'Rustic Local Cheeseboard', 'price': 16.0, 'description': 'An assortment of fine, locally-produced cheeses served with artisan crackers and a selection of homemade chutneys.'}]
+4. Comments
+   [{'day': 7, 'name': 'Wade', 'score': 8, 'content': 'The Blue Plate Special was a comforting classic, aligning with my preference for simple meals. The Local Harvest Apple Crisp had a delightful homemade touch. Both dishes were satisfying and budget-friendly. While the meal was enjoyable, perhaps a bit more culinary innovation could make it outstanding.'}, {'day': 7, 'name': 'Quincy', 'score': 7, 'content': "The Cobb Salad was fitting for my low-calorie diet and the price was reasonable. However, it could have used more distinct flavors to make it memorable. Consistent with my previous visits, the service was good, but I believe there's room for culinary innovation to improve the experience."}, {'day': 7, 'name': 'Vicky', 'score': 7, 'content': "The Midweek Special Burger and Mac & Cheese were hearty and satisfying, true to comfort food. The Local Harvest Apple Crisp was good with a score of 0.81, but I've had better. Overall, a pleasant meal but would love to see more creativity in the flavors."}, {'day': 6, 'name': 'Brian', 'score': 8, 'content': 'The Blue Plate Special was a comforting choice, aligning with my love for street food, though it could use a unique touch. The Special Pie Deluxe and Local Harvest Apple Crisp were delightful, but adding a bit more innovation could elevate the dishes. Overall, satisfying but room for creativity.'}, {'day': 6, 'name': 'Vicky', 'score': 7, 'content': 'The Midweek Special Burger and Mac & Cheese were comforting, though they lacked innovation. The Apple Pie scored a 0.81, which was good, but not outstanding. Overall, a satisfying meal, but I wish there were more creative flavors to elevate the experience.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Buffalo Chicken Wings", "New York Strip Steak", "American Fusion Surprise"
+    ],
+    "reason": "Classic American Flavors provides dishes that align with my preference for bold and spicy options. The dishes seem to offer more depth in flavor compared to those at USA Flavor House."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Buffalo Chicken Wings: 0.81
+New York Strip Steak: 0.82
+American Fusion Surprise: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "score": 8,
+    "comment": "The Buffalo Chicken Wings and New York Strip Steak at Classic American Flavors lived up to my expectations for spiciness and boldness, although they could have been a bit more adventurous in flavor. The American Fusion Surprise was pleasant but didn't quite hit the mark for creativity compared to previous meals at USA Flavor House."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.944444444444445
+2. Advertisement
+   Indulge in flavor innovation at Classic American Flavors! Experience our 'Ultimate Sweet Sensation' dessert, 'Bold Grilled Salmon Supreme', and the new 'Innovative Veggie Delight'. Elevate your dining with our creatively enhanced culinary classics. Taste the difference creativity makes!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 24.0, 'description': 'Our signature ribs are taken to the next level with a honey-glaze finish and a sprinkle of homegrown spices, served with apple slaw and sweet potato fries.'}, {'id': 2, 'name': 'Buffalo Chicken Wings', 'price': 12.0, 'description': 'Spicy wings served with blue cheese dip and celery sticks.'}, {'id': 3, 'name': 'Signature Cheeseburger', 'price': 16.0, 'description': 'Our juicy beef patty topped with artisanal cheese, gourmet sauce, and distinctive house pickles.'}, {'id': 5, 'name': 'Caesar Salad', 'price': 10.0, 'description': 'Crisp romaine lettuce with Caesar dressing, croutons, and parmesan shavings.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon Supreme', 'price': 26.0, 'description': 'Succulent grilled salmon with an intense lemon-herb crust, accompanied by a medley of grilled Mediterranean vegetables and a side of wild rice.'}, {'id': 11, 'name': 'Vegan Power Bowl Extreme', 'price': 20.0, 'description': 'A bold evolution of our vegan bowl with a fiery mix of global spices, quinoa, kale, roasted chickpeas, and a drizzle of avocado-lime dressing.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 17.0, 'description': 'A tropical vegan adventure featuring jerk-spiced tofu, mango salsa, black beans, and coconut lime rice.'}, {'id': 19, 'name': 'Ultimate Sweet Sensation', 'price': 16.0, 'description': 'A luxurious dessert featuring a bold combination of sweet and tangy flavors, with a rich chocolate base, a layer of caramelized exotic fruits, and a hint of local herbs.'}, {'id': 22, 'name': 'Innovative Veggie Delight', 'price': 18.0, 'description': 'A creative vegetarian dish with a blend of seasonal vegetables, wild mushrooms, and tofu, served with a side of aromatic herb-infused quinoa.'}]
+4. Comments
+   [{'day': 8, 'name': 'Yara', 'score': 7, 'content': "The Vegan Power Bowl Extreme had a good spice level but lacked the complexity I've enjoyed at USA Flavor House. It's a satisfying option for my vegan diet, yet I find myself longing for the creativity in flavors that the other restaurant offers."}, {'day': 8, 'name': 'Tina', 'score': 8, 'content': 'The Bold Grilled Salmon was exceptional, truly aligning with my preference for healthy and flavorful dishes. The Caesar Salad, though fresh, lacked a distinctive touch. The American Exotic Fruit Delight was vibrant but could benefit from more daring flavors. Overall, a very good dining experience with room for improvement in creativity.'}, {'day': 8, 'name': 'Paula', 'score': 8, 'content': "The New York Strip Steak was quite good, just shy of being exceptional. The Global Fusion Dessert Extravaganza, while inventive, didn't quite meet my high expectations for variety. Overall, a solid dining experience, though a touch more creativity could have taken it to the next level."}, {'day': 8, 'name': 'Lara', 'score': 9, 'content': "The Bold Grilled Salmon continues to impress with its high score of 0.88, reflecting the restaurant's ability to consistently cater to my seafood preference. However, I would appreciate more inventive side dishes to complement the main course and enhance the overall dining experience."}, {'day': 8, 'name': 'Chloe', 'score': 8, 'content': "The Bold Grilled Salmon was well-prepared, aligning with my diabetic diet. The American Exotic Fruit Delight provided a refreshing end to the meal with its low-sugar profile. While both dishes were good, there's room to elevate the dessert's flavor to match the innovation promised in the advertisement."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.883720930232558
+2. Advertisement
+   Discover USA Flavor House's innovative twist on classics! Indulge in our 'Local Harvest Celebration Plate' and 'Anglo-American Fusion Soup', featuring the freshest ingredients from our community farms. Elevate your dining experience with our creative Anglo-American fusion cuisine. Taste the difference local makes!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 22.0, 'description': 'Our signature slow-cooked ribs with hickory and applewood smoke infusion, glazed with a local cider BBQ sauce, showcasing the best of American and local English flavors.'}, {'id': 5, 'name': 'Cobb Salad', 'price': 15.0, 'description': 'A classic salad reimagined with crisp, locally-sourced greens, artisanal blue cheese, house-cured bacon, and a homemade herb dressing.'}, {'id': 11, 'name': 'Enhanced Seasonal Harvest Veggie Burger', 'price': 20.0, 'description': "Our veggie burger features a hearty blend of local seasonal vegetables, topped with an innovative sauce that's a fusion of American and English tastes, served with artisanal sweet potato fries."}, {'id': 12, 'name': 'USA Flavor Twist', 'price': 22.0, 'description': 'A comforting favorite with a unique local twist, featuring ingredients sourced from surrounding farms, served with a side of heritage vegetable chips.'}, {'id': 13, 'name': 'Transatlantic Taste Special', 'price': 22.0, 'description': 'Weekly rotating special merging American classics with British flair, served with a side of seasonal vegetables.'}, {'id': 15, 'name': 'Blue Plate Special', 'price': 15.0, 'description': 'Our daily special offering a comforting classic dish with a gourmet twist at a friendly price.'}, {'id': 18, 'name': 'Heritage Apple Pie', 'price': 12.0, 'description': 'A timeless dessert using heirloom apples from local farms, elevated with a hint of English spices and served with clotted cream.'}, {'id': 19, 'name': 'Heartland Harvest Pot Pie', 'price': 18.0, 'description': 'A comforting pot pie filled with locally sourced, seasonal ingredients, enveloped in a flaky, buttery crust.'}, {'id': 20, 'name': 'Rustic Local Cheeseboard', 'price': 16.0, 'description': 'An assortment of fine, locally-produced cheeses served with artisan crackers and a selection of homemade chutneys.'}, {'id': 21, 'name': 'Local Harvest Celebration Plate', 'price': 26.0, 'description': 'A weekly changing platter celebrating the seasonal bounty of local farms, featuring small bites of our most creative and popular fusion dishes.'}, {'id': 22, 'name': 'Anglo-American Fusion Soup', 'price': 12.0, 'description': 'A hearty soup that marries traditional English flavors with American zest, made with locally-sourced ingredients and served with freshly baked bread.'}]
+4. Comments
+   [{'day': 8, 'name': 'Brian', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs had a satisfying smoky taste, and the Blue Plate Special offered a comforting experience. The Heritage Apple Pie ended the meal on a sweet note. While the flavors were good, I think there's room for a bit more innovation to make the dishes stand out even more."}, {'day': 8, 'name': 'Maggie', 'score': 8, 'content': 'The Heritage Apple Pie had a luscious buttery crust and the heirloom apples provided a delightful sweetness. However, compared to past indulgences, a touch more innovation could enhance the overall appeal of the dessert.'}, {'day': 8, 'name': 'Frank', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs had a satisfying smokiness, and the American-English Fusion Feast offered an interesting mix of flavors. The Heritage Apple Pie was a delightful end to the meal. Overall, the dishes were good, but adding more creative twists could enhance the experience.'}, {'day': 8, 'name': 'Eve', 'score': 8, 'content': 'The Midweek Special Burger was hearty, and the Mac & Cheese was as creamy and comforting as always. While I appreciate the consistency of familiar flavors, a touch of creativity could enhance the overall dining experience.'}, {'day': 7, 'name': 'Wade', 'score': 8, 'content': 'The Blue Plate Special was a comforting classic, aligning with my preference for simple meals. The Local Harvest Apple Crisp had a delightful homemade touch. Both dishes were satisfying and budget-friendly. While the meal was enjoyable, perhaps a bit more culinary innovation could make it outstanding.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Buffalo Chicken Wings", "New York Strip Steak", "Ultimate Sweet Sensation"
+    ],
+    "reason": "Classic American Flavors offers the bold and spicy flavors I prefer, with dishes like Buffalo Chicken Wings and a robust New York Strip Steak, plus a creatively sweet Ultimate Sweet Sensation dessert."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Buffalo Chicken Wings: 0.81
+New York Strip Steak: 0.82
+Ultimate Sweet Sensation: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "score": 8,
+    "comment": "The Buffalo Chicken Wings and New York Strip Steak at Classic American Flavors were enjoyable, with the wings delivering a nice heat level. The Ultimate Sweet Sensation dessert was a creative attempt but fell slightly short of being memorable. Overall, a solid meal that could benefit from a touch more innovation."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.91919191919192
+2. Advertisement
+   Discover bold tastes at Classic American Flavors! Savor our new 'American Bold Berry Blast' dessert - a berry sensation, and the reinvented 'Vegan Delight Extreme' bowl, packed with spice and everything nice. Our 'Gourmet Caesar Salad' will surprise your palate. Come in for an innovative culinary adventure!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 24.0, 'description': 'Our signature ribs are taken to the next level with a honey-glaze finish and a sprinkle of homegrown spices, served with apple slaw and sweet potato fries.'}, {'id': 5, 'name': 'Gourmet Caesar Salad', 'price': 12.0, 'description': 'A twist on the classic with artisanal romaine hearts, aged parmesan crisps, homemade focaccia croutons, and a creamy black garlic Caesar dressing.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon Supreme', 'price': 26.0, 'description': 'Succulent grilled salmon with an intense lemon-herb crust, accompanied by a medley of grilled Mediterranean vegetables and a side of wild rice.'}, {'id': 11, 'name': 'Vegan Delight Extreme', 'price': 22.0, 'description': 'Our reimagined vegan bowl with a rich tapestry of flavors, combining spicy roasted chickpeas, sweet potato hummus, and avocado-lime dressing, garnished with pomegranate and pumpkin seeds.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 17.0, 'description': 'A tropical vegan adventure featuring jerk-spiced tofu, mango salsa, black beans, and coconut lime rice.'}, {'id': 19, 'name': 'Ultimate Sweet Sensation', 'price': 16.0, 'description': 'A luxurious dessert featuring a bold combination of sweet and tangy flavors, with a rich chocolate base, a layer of caramelized exotic fruits, and a hint of local herbs.'}, {'id': 22, 'name': 'Innovative Veggie Delight', 'price': 18.0, 'description': 'A creative vegetarian dish with a blend of seasonal vegetables, wild mushrooms, and tofu, served with a side of aromatic herb-infused quinoa.'}, {'id': 23, 'name': 'American Bold Berry Blast', 'price': 18.0, 'description': 'An explosion of berry flavors in a visually-stunning dessert featuring layers of fresh berries, a zesty berry coulis, and a scoop of homemade vanilla clotted cream ice cream.'}]
+4. Comments
+   [{'day': 9, 'name': 'Steve', 'score': 8, 'content': "The Vegan Power Bowl Extreme and Caribbean Jerk Vegan Bowl were both tasty and adhered to my dietary restrictions. They lacked a bit of the creativity I've seen previously but still provided a comforting and health-conscious meal."}, {'day': 9, 'name': 'Nora', 'score': 8, 'content': "The Gluten-Free Grilled Chicken was well-executed, satisfying my health requirements. The Caesar Salad, while fresh, lacked innovation. The Ultimate Sweet Sensation dessert, despite its name, could have had a bolder flavor profile. Overall, a good meal but there's room for a more creative touch."}, {'day': 9, 'name': 'Giselle', 'score': 7, 'content': "The Ultimate Sweet Sensation was good with a score of 0.81, but it didn't fully live up to the creative flair promised. While I enjoyed the dessert, I feel that USA Flavor House has previously set a higher benchmark in innovation and taste that could not be surpassed today."}, {'day': 9, 'name': 'Yasmine', 'score': 6, 'content': "The Caribbean Jerk Vegan Bowl had a decent blend of spices, but didn't deliver the boldness I was expecting. Compared to the Enhanced Seasonal Harvest Veggie Burger at USA Flavor House, it lacked excitement. A good effort, but there's room for improvement in flavor intensity."}, {'day': 9, 'name': 'Rachel', 'score': 8, 'content': 'The Bold Grilled Salmon Supreme nearly reached gourmet perfection, aligning well with my sophisticated taste. The Vegan Power Bowl Extreme and Caribbean Jerk Vegan Bowl, while innovative and health-conscious, could benefit from a more complex flavor profile to truly stand out.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.875
+2. Advertisement
+   Experience bold flavors at USA Flavor House! Our 'Fiery Fusion Feast' and revamped 'Hickory-Smoked BBQ Ribs' await you. Dive into a world of daring dishes with our enhanced menu, featuring locally-sourced ingredients with a fiery twist. Join us for a taste expedition that celebrates the best of American and English cuisine!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 24.0, 'description': 'Our signature slow-cooked ribs with a bolder hickory and applewood smoke infusion, now with a spicier local cider BBQ sauce, for a more memorable American and local English flavor.'}, {'id': 11, 'name': 'Enhanced Seasonal Harvest Veggie Burger', 'price': 22.0, 'description': "Our veggie burger now features a bolder blend of local seasonal vegetables, topped with a new, innovative spicy sauce that's a fusion of American heat and English zest, served with artisanal sweet potato fries."}, {'id': 18, 'name': 'Heritage Apple Pie', 'price': 14.0, 'description': 'Our Heritage Apple Pie is reimagined with a flakier crust, a richer blend of English spices, and an aromatic caramel drizzle, served with clotted cream and a side of heritage apple compote.'}, {'id': 19, 'name': 'Heartland Harvest Pot Pie', 'price': 18.0, 'description': 'A comforting pot pie filled with locally sourced, seasonal ingredients, enveloped in a flaky, buttery crust.'}, {'id': 21, 'name': 'Local Harvest Celebration Plate', 'price': 28.0, 'description': 'Our weekly changing platter now features bolder and more creative bites of our fusion dishes, using the finest seasonal produce from local farms, for a true celebration of flavor.'}, {'id': 23, 'name': 'Fiery Fusion Feast', 'price': 26.0, 'description': 'A daring dish that merges the heat of the American Southwest with the robust flavors of the English countryside, featuring spicy grilled meats and piquant local vegetables.'}]
+4. Comments
+   [{'day': 9, 'name': 'Emma', 'score': 8, 'content': 'The Enhanced Seasonal Harvest Veggie Burger was satisfying with its organic ingredients, though I missed a spark of innovation in flavor. The Cobb Salad was fresh and aligned with my health-conscious diet, but could benefit from a unique twist. The Heritage Apple Pie was a comforting end to the meal, yet it lacked a standout element to truly impress.'}, {'day': 9, 'name': 'Brian', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs offered a robust smoky flavor, and the Blue Plate Special provided the comfort of home-cooked food. The Heritage Apple Pie rounded off the meal with a classic sweetness. While the dishes were satisfying, a dash of innovative flair could elevate the dining experience.'}, {'day': 9, 'name': 'Zach', 'score': 7, 'content': "The Local Harvest Celebration Plate and Anglo-American Fusion Soup were good, both scoring 0.81, yet they lacked the depth and innovation I've come to appreciate in French cuisine. As a connoisseur with gluten sensitivity, I found the dishes acceptable but not outstanding. Classic American Flavors still holds an edge in creativity."}, {'day': 9, 'name': 'Henry', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs had a delightful smoky essence, though the flavor could be deepened for a richer taste. The Heritage Apple Pie was comforting, but a bit more spice would enhance it. Compared to Classic American Flavors, the local twist is appreciated, yet there's room for bolder innovation."}, {'day': 9, 'name': 'Bob', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs had robust smokiness, yet lacked tenderness compared to previous visits. The Heritage Apple Pie was traditional but needed a flakier crust. Overall satisfying, but there's room for improvement in texture and innovation."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "dishes": [
+        "Hickory-Smoked BBQ Ribs", "Fiery Fusion Feast", "Heritage Apple Pie"
+    ],
+    "reason": "The Hickory-Smoked BBQ Ribs and Fiery Fusion Feast promise the spicy and bold flavors I crave. The Heritage Apple Pie offers a classic sweet finish which I prefer over the berry dessert at Classic American Flavors."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Hickory-Smoked BBQ Ribs: 0.81
+Fiery Fusion Feast: 0.81
+Heritage Apple Pie: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "USA Flavor House",
+    "score": 8,
+    "comment": "The Hickory-Smoked BBQ Ribs were delightfully smoky, though they could have been more tender. The Fiery Fusion Feast had the bold kick I enjoy, but I expected a bit more complexity. The Heritage Apple Pie was a comforting classic to end the meal. Overall, a solid experience but there's room for spicier, bolder innovation."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.9375
+2. Advertisement
+   Indulge in our 'Decadent Dark Chocolate Indulgence' dessert, a sublime fusion of dark chocolate, local berries, and a hint of chili. Relish the enhanced flavors of our 'Smokey BBQ Ribs Deluxe' and 'Bold Grilled Salmon Supreme.' Try our new 'Seasonal English Garden Delight' side dish, celebrating local produce with a creative twist!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 25.0, 'description': 'Our signature ribs are taken to the next level with a honey-apple cider glaze and a bolder sprinkle of homegrown spices, served with apple slaw and sweet potato fries.'}, {'id': 5, 'name': 'Gourmet Caesar Salad', 'price': 12.0, 'description': 'A twist on the classic with artisanal romaine hearts, aged parmesan crisps, homemade focaccia croutons, and a creamy black garlic Caesar dressing.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon Supreme', 'price': 27.0, 'description': 'Succulent grilled salmon with an intense lemon-herb crust, now with a spicier glaze, accompanied by a medley of grilled Mediterranean vegetables and a side of wild rice.'}, {'id': 11, 'name': 'Vegan Delight Extreme', 'price': 22.0, 'description': 'Our reimagined vegan bowl with a rich tapestry of flavors, combining spicy roasted chickpeas, sweet potato hummus, and avocado-lime dressing, garnished with pomegranate and pumpkin seeds.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 17.0, 'description': 'A tropical vegan adventure featuring jerk-spiced tofu, mango salsa, black beans, and coconut lime rice.'}, {'id': 19, 'name': 'Decadent Dark Chocolate Indulgence', 'price': 18.0, 'description': 'A sumptuous dessert featuring a velvety dark chocolate ganache, layered with local seasonal berries and a hint of chili for a surprising kick, crowned with a delicate chocolate tuile.'}, {'id': 23, 'name': 'American Bold Berry Blast', 'price': 18.0, 'description': 'An explosion of berry flavors in a visually-stunning dessert featuring layers of fresh berries, a zesty berry coulis, and a scoop of homemade vanilla clotted cream ice cream.'}, {'id': 24, 'name': 'Seasonal English Garden Delight', 'price': 14.0, 'description': 'A refreshing side dish featuring the best of local produce, with a creative twist of English and American flavors, served with a light, herby dressing.'}]
+4. Comments
+   [{'day': 10, 'name': 'Valerie', 'score': 8, 'content': "The Bold Grilled Salmon Supreme was delicious, truly satisfying my preference for organic, healthful meals. The Vegan Delight Extreme was good, but lacked a bit of creativity. The American Bold Berry Blast, while innovative, could benefit from more intense flavors. Overall, a solid dining experience but there's room for more culinary excitement."}, {'day': 10, 'name': 'Ulysses', 'score': 8, 'content': 'The Bold Grilled Salmon Supreme was the highlight with its harmonious lemon-herb crust, though both the American Bold Berry Blast and Vegan Delight Extreme, while good, lacked the exceptional flair I anticipated. Still, a satisfying meal that edges out previous experiences with its creativity.'}, {'day': 10, 'name': 'Paula', 'score': 8, 'content': "The New York Strip Steak at Classic American Flavors was quite succulent, living up to my expectations with a score of 0.82. The Ultimate Sweet Sensation, scoring 0.81, was enjoyable but lacked a certain wow factor to truly dazzle. A consistent dining experience, though I'd love to see more innovation in their dessert offerings."}, {'day': 10, 'name': 'Lara', 'score': 9, 'content': "The Bold Grilled Salmon Supreme remains a favorite, with its score of 0.87 reflecting its consistently high quality. Classic American Flavors has again satisfied my seafood cravings, though I'd love to see more inventive sides to complement the salmon's excellence."}, {'day': 10, 'name': 'Jake', 'score': 8, 'content': 'The Bold Grilled Salmon Supreme was quite satisfying and catered to my health restrictions, scoring well on taste. The Gourmet Caesar Salad, although fresh, lacked the zest I desire. Both dishes fit my budget and dietary needs, making it a good dining experience overall.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.851851851851852
+2. Advertisement
+   Ignite your taste buds with USA Flavor House's 'Fusion Flare' series! Discover a symphony of local ingredients and audacious flavors with our all-new 'Anglo-American Sizzle Steak' and 'Transatlantic Twist Pasta'. Celebrate culinary creativity with dishes that merge American boldness and English elegance. Visit us for a dining adventure that's both familiar and thrilling!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 24.0, 'description': 'Our signature slow-cooked ribs with a bolder hickory and applewood smoke infusion, now with a spicier local cider BBQ sauce, for a more memorable American and local English flavor.'}, {'id': 11, 'name': 'Enhanced Seasonal Harvest Veggie Burger', 'price': 22.0, 'description': "Our veggie burger now features a bolder blend of local seasonal vegetables, topped with a new, innovative spicy sauce that's a fusion of American heat and English zest, served with artisanal sweet potato fries."}, {'id': 18, 'name': 'Heritage Apple Pie Deluxe', 'price': 16.0, 'description': 'An upgraded version of our classic pie with an even flakier crust, a deepened spice profile, and a luxurious side of bourbon-infused whipped cream.'}, {'id': 21, 'name': 'Local Harvest Celebration Platter', 'price': 30.0, 'description': 'A curated selection of fusion small bites, featuring the best of local produce in recipes that blend American and English culinary traditions for an unforgettable taste journey.'}, {'id': 23, 'name': 'Blazing British-American Skewers', 'price': 24.0, 'description': 'Skewers of marinated meats and veggies that combine the flame of Southern American grilling with a British twist, served with a side of tangy, herbed dipping sauce.'}, {'id': 24, 'name': 'Anglo-American Sizzle Steak', 'price': 27.0, 'description': 'A prime cut of locally sourced steak with a unique marinade that fuses bold American BBQ flavors with classic English herbs, flame-grilled to perfection.'}, {'id': 25, 'name': 'Transatlantic Twist Pasta', 'price': 20.0, 'description': 'Al dente pasta intertwined with a spicy tomato sauce that blends the zest of American cuisine with the subtlety of English garden herbs, topped with fresh local cheese.'}]
+4. Comments
+   [{'day': 10, 'name': 'Wade', 'score': 8, 'content': 'The Heartland Harvest Pot Pie was hearty and the Heritage Apple Pie had a nostalgic homemade taste. Both dishes were good, scoring 0.81, but lacked a wow factor. A bit more innovation could enhance the overall dining experience. Compared to Classic American Flavors, the simplicity is comforting but could be elevated.'}, {'day': 10, 'name': 'Quincy', 'score': 7, 'content': "The Enhanced Seasonal Harvest Veggie Burger was a good fit for my low-calorie diet and I enjoyed the healthier fast food option. However, I did miss the innovative flavors I was looking for. It's a solid choice but could use a creative boost to make it more memorable."}, {'day': 10, 'name': 'Yasmine', 'score': 8, 'content': 'The Enhanced Seasonal Harvest Veggie Burger maintained its quality with bold flavors that cater well to my vegan diet. However, innovation could be pushed further for a more unique dining experience.'}, {'day': 10, 'name': 'Vicky', 'score': 7, 'content': 'The Hickory-Smoked BBQ Ribs were nicely smoked but could be more tender. The Heartland Harvest Pot Pie was hearty but lacked a surprising element. The Heritage Apple Pie was classic but simple. Overall, enjoyable comfort food that would benefit from a touch more innovation.'}, {'day': 10, 'name': 'Quinn', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs were delightfully smoky, though they could have been more tender. The Fiery Fusion Feast had the bold kick I enjoy, but I expected a bit more complexity. The Heritage Apple Pie was a comforting classic to end the meal. Overall, a solid experience but there's room for spicier, bolder innovation."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Smokey BBQ Ribs Deluxe", "Bold Grilled Salmon Supreme", "Decadent Dark Chocolate Indulgence"
+    ],
+    "reason": "Classic American Flavors provides the boldness and spice I desire, especially with the Smokey BBQ Ribs Deluxe and the enhanced flavors in the salmon dish. The dark chocolate dessert with a hint of chili promises a satisfying end to the meal."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smokey BBQ Ribs Deluxe: 0.86
+Bold Grilled Salmon Supreme: 0.87
+Decadent Dark Chocolate Indulgence: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "feeling": "The Smokey BBQ Ribs Deluxe had a fantastic balance of smoke and spice, and the Bold Grilled Salmon Supreme was perfectly cooked with a tantalizing glaze. The Decadent Dark Chocolate Indulgence, with its subtle chili kick, was a delightful conclusion."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.943089430894309
+2. Advertisement
+   Experience the new wave of flavors at Classic American Flavors! Savor our 'Spicy Chocolate Ecstasy' with intense dark chocolate and a crunchy hazelnut twist. Relish our enhanced vegan bowls with dynamic textures and bold spices. Don't miss our 'Anglo-American Fusion Feast' - a perfect blend of succulent pork, tangy glaze, and creamy mash.
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 25.0, 'description': 'Our signature ribs are taken to the next level with a honey-apple cider glaze and a bolder sprinkle of homegrown spices, served with apple slaw and sweet potato fries.'}, {'id': 5, 'name': 'Gourmet Caesar Salad', 'price': 12.0, 'description': 'A twist on the classic with artisanal romaine hearts, aged parmesan crisps, homemade focaccia croutons, and a creamy black garlic Caesar dressing.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon Supreme', 'price': 27.0, 'description': 'Succulent grilled salmon with an intense lemon-herb crust, now with a spicier glaze, accompanied by a medley of grilled Mediterranean vegetables and a side of wild rice.'}, {'id': 11, 'name': 'Vegan Delight Extreme', 'price': 23.0, 'description': 'An enhanced vegan bowl with a dynamic mix of textures, including crispy quinoa cakes, soft grilled eggplant, and creamy avocado-lime dressing, topped with a tangy pomegranate reduction.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 15, 'name': 'American Fusion Surprise', 'price': 19.0, 'description': "This month's special: A delightful blend of American and English countryside flavors, featuring a savory pie with local meats and vegetables."}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 18.0, 'description': 'Our Caribbean Jerk Vegan Bowl now features an exciting variety of textures with jerk-spiced tofu, crispy plantain chips, mango salsa, and creamy coconut rice.'}, {'id': 25, 'name': 'Spicy Chocolate Ecstasy', 'price': 20.0, 'description': 'A seductive dessert with intense dark chocolate infused with a bold spice mix, served with a raspberry coulis and crunchy hazelnut brittle for a multi-textured experience.'}, {'id': 26, 'name': 'Anglo-American Fusion Feast', 'price': 28.0, 'description': 'An enticing main course that marries succulent slow-roasted pork with a tangy apple cider glaze, accompanied by roasted parsnips and a side of creamy colcannon mash.'}]
+4. Comments
+   [{'day': 11, 'name': 'Valerie', 'score': 8, 'content': 'The Bold Grilled Salmon Supreme was exceptional with its vibrant flavor profile. The Vegan Delight Extreme was fresh but could use a creative twist. The Decadent Dark Chocolate Indulgence, while rich, lacked the intensity expected from its description. A gratifying meal overall, albeit with room for refinement.'}, {'day': 11, 'name': 'Hugo', 'score': 8, 'content': "The Smokey BBQ Ribs Deluxe satisfied my craving for a gourmet burger alternative with its robust flavor, scoring a high 0.86. The Decadent Dark Chocolate Indulgence dessert, while good with a score of 0.81, lacked the expected 'wow' factor. A stronger chili presence might elevate it. Overall, a very good meal that could use a touch more innovation in the dessert."}, {'day': 11, 'name': 'Felix', 'score': 8, 'content': 'The Smokey BBQ Ribs Deluxe were impressively flavorful, scoring high on my list. The New York Strip Steak was satisfactory but not remarkable. The Decadent Dark Chocolate Indulgence was good, yet lacked the innovation I expected. Compared to previous dining experiences, it was a delightful meal but with room for creativity.'}, {'day': 11, 'name': 'Zach', 'score': 8, 'content': "The Gluten-Free Grilled Chicken catered well to my gluten sensitivity, offering a savory taste that nearly met my connoisseur expectations. The Decadent Dark Chocolate Indulgence, while rich and creative, didn't fully deliver the innovative dessert experience I was seeking. A solid meal, but the dessert could be enhanced."}, {'day': 11, 'name': 'Xena', 'score': 8, 'content': 'The Smokey BBQ Ribs Deluxe were a standout with a delightful glaze, though the Gourmet Caesar Salad needed more zest. The Decadent Dark Chocolate Indulgence was innovative, but I expected a stronger chili presence. Overall, a satisfying meal with room for flavor enhancement.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.8545454545454545
+2. Advertisement
+   Introducing the Stars & Stripes Sensation at USA Flavor House! Indulge in a patriotic dessert that's as bold as it is beautiful. Dive into layers of red velvet, white chocolate, and blueberry - a tribute to American innovation and English tradition. Join us for a taste of culinary excellence that's sure to leave a lasting impression!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 26.0, 'description': 'Our signature slow-cooked ribs with a bolder hickory and applewood smoke infusion, now with a spicier local cider BBQ sauce, for a more memorable American and local English flavor.'}, {'id': 18, 'name': 'Heritage Apple Pie Deluxe', 'price': 16.0, 'description': 'An upgraded version of our classic pie with an even flakier crust, a deepened spice profile, and a luxurious side of bourbon-infused whipped cream.'}, {'id': 21, 'name': 'Local Harvest Celebration Platter', 'price': 30.0, 'description': 'A curated selection of fusion small bites, featuring the best of local produce in recipes that blend American and English culinary traditions for an unforgettable taste journey.'}, {'id': 23, 'name': 'Blazing British-American Skewers', 'price': 24.0, 'description': 'Skewers of marinated meats and veggies that combine the flame of Southern American grilling with a British twist, served with a side of tangy, herbed dipping sauce.'}, {'id': 24, 'name': 'Anglo-American Sizzle Steak', 'price': 30.0, 'description': 'A prime cut of locally sourced steak with a unique marinade that fuses bold American BBQ flavors with classic English herbs, flame-grilled to perfection.'}, {'id': 25, 'name': 'Transatlantic Twist Pasta', 'price': 20.0, 'description': 'Al dente pasta intertwined with a spicy tomato sauce that blends the zest of American cuisine with the subtlety of English garden herbs, topped with fresh local cheese.'}, {'id': 26, 'name': 'Stars & Stripes Sensation', 'price': 20.0, 'description': 'A decadent dessert with layers of red velvet cake, white chocolate mousse, and blueberry compote, topped with a sprinkle of edible gold stars.'}]
+4. Comments
+   [{'day': 11, 'name': 'Wade', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs provided a satisfying smoky flavor that I enjoy, yet they could have been a bit more tender. The Heritage Apple Pie Deluxe had a homey taste, but I expected the bourbon-infused whipped cream to offer a bolder twist. Familiar and cozy meals, still there's room for some culinary surprises."}, {'day': 10, 'name': 'Wade', 'score': 8, 'content': 'The Heartland Harvest Pot Pie was hearty and the Heritage Apple Pie had a nostalgic homemade taste. Both dishes were good, scoring 0.81, but lacked a wow factor. A bit more innovation could enhance the overall dining experience. Compared to Classic American Flavors, the simplicity is comforting but could be elevated.'}, {'day': 10, 'name': 'Quincy', 'score': 7, 'content': "The Enhanced Seasonal Harvest Veggie Burger was a good fit for my low-calorie diet and I enjoyed the healthier fast food option. However, I did miss the innovative flavors I was looking for. It's a solid choice but could use a creative boost to make it more memorable."}, {'day': 10, 'name': 'Yasmine', 'score': 8, 'content': 'The Enhanced Seasonal Harvest Veggie Burger maintained its quality with bold flavors that cater well to my vegan diet. However, innovation could be pushed further for a more unique dining experience.'}, {'day': 10, 'name': 'Vicky', 'score': 7, 'content': 'The Hickory-Smoked BBQ Ribs were nicely smoked but could be more tender. The Heartland Harvest Pot Pie was hearty but lacked a surprising element. The Heritage Apple Pie was classic but simple. Overall, enjoyable comfort food that would benefit from a touch more innovation.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Smokey BBQ Ribs Deluxe", "Bold Grilled Salmon Supreme", "Spicy Chocolate Ecstasy"
+    ],
+    "reason": "Classic American Flavors offers a tantalizing blend of smoky and spicy flavors in their Smokey BBQ Ribs Deluxe, which aligns with my bold taste preferences. The Spicy Chocolate Ecstasy dessert promises a satisfying, adventurous end to the meal."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smokey BBQ Ribs Deluxe: 0.86
+Bold Grilled Salmon Supreme: 0.87
+Spicy Chocolate Ecstasy: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "feeling": "The Smokey BBQ Ribs Deluxe had a fantastic balance of smoke and spice, and the Bold Grilled Salmon Supreme was perfectly cooked with a tantalizing glaze. The Spicy Chocolate Ecstasy, with its subtle chili kick, was a delightful conclusion."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.954887218045113
+2. Advertisement
+   Dive into boldness at Classic American Flavors! Discover our new side dishes: Spiced sweet potato wedges and zesty corn riblets. Explore our 'Global Vegan Adventure Bowl' for a world of flavors. Indulge in the fiercer 'Spicy Chocolate Ecstasy' - now with an even more intense spice blend. Fresh, innovative, and daring - your taste buds will thank you!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 25.0, 'description': 'Our signature ribs are taken to the next level with a honey-apple cider glaze and a bolder sprinkle of homegrown spices, served with apple slaw and sweet potato fries.'}, {'id': 5, 'name': 'Gourmet Caesar Salad', 'price': 13.0, 'description': 'Our Gourmet Caesar Salad is now even bolder, with pickled anchovies and a spicier black garlic dressing to offer a unique twist on a classic.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon Supreme', 'price': 27.0, 'description': 'Succulent grilled salmon with an intense lemon-herb crust, now with a spicier glaze, accompanied by a medley of grilled Mediterranean vegetables and a side of wild rice.'}, {'id': 11, 'name': 'Vegan Delight Extreme', 'price': 24.0, 'description': 'Our Vegan Delight Extreme now comes with a bolder taste, including a spiced beetroot hummus and a tangy citrus dressing to elevate your vegan experience.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 18.0, 'description': 'Our Caribbean Jerk Vegan Bowl now features an exciting variety of textures with jerk-spiced tofu, crispy plantain chips, mango salsa, and creamy coconut rice.'}, {'id': 25, 'name': 'Spicy Chocolate Ecstasy', 'price': 22.0, 'description': 'Our Spicy Chocolate Ecstasy now features a fiercer spice blend for those seeking a true kick, accompanied by a creamy chili-infused chocolate ganache.'}, {'id': 26, 'name': 'Anglo-American Fusion Feast', 'price': 28.0, 'description': 'An enticing main course that marries succulent slow-roasted pork with a tangy apple cider glaze, accompanied by roasted parsnips and a side of creamy colcannon mash.'}, {'id': 27, 'name': 'Innovative American Sides', 'price': 14.0, 'description': 'A duo of daring side dishes: Spiced sweet potato wedges with a maple-pecan dip and zesty corn riblets with a smoky chipotle butter.'}, {'id': 28, 'name': 'Global Vegan Adventure Bowl', 'price': 24.0, 'description': 'An adventurous vegan bowl inspired by global flavors, featuring Thai-spiced quinoa, Ethiopian lentil stew, and Indian aloo gobi with a tangy tamarind sauce.'}]
+4. Comments
+   [{'day': 12, 'name': 'Xavier', 'score': 8, 'content': "The Caribbean Jerk Vegan Bowl was a vibrant dish that resonated with my taste for Caribbean cuisine but could have used a bit more heat. The Spicy Chocolate Ecstasy dessert, while innovative, fell slightly short of providing the intense flavor experience I anticipated. A good meal, yet there's room for a spicier kick in both dishes."}, {'day': 12, 'name': 'Ruby', 'score': 8, 'content': 'The New York Strip Steak was savory fulfilling my meat preference, albeit slightly less juicy than anticipated. The Vegan Delight Extreme was innovative, but I craved more boldness in flavor. The Spicy Chocolate Ecstasy was a delight with its texture, yet the spice level was milder than expected. Overall, a commendable dining experience.'}, {'day': 12, 'name': 'Lara', 'score': 9, 'content': 'The Bold Grilled Salmon Supreme remains a standout dish, maintaining high personal satisfaction with its score of 0.87. However, I encourage the chef to innovate the side dishes for a more exciting culinary journey that complements the excellent salmon.'}, {'day': 12, 'name': 'Umar', 'score': 8, 'content': 'The Bold Grilled Salmon Supreme was quite impressive, aligning well with my dietary needs and providing a satisfying taste. However, the dish could benefit from a more innovative approach to its seasoning to truly elevate it to the next level.'}, {'day': 12, 'name': 'Tara', 'score': 8, 'content': "The Vegan Delight Extreme had a nice variety of bold flavors that suited my adventurous palate. The Spicy Chocolate Ecstasy dessert was a delightful journey with its intense dark chocolate and spice mix. Both dishes were good, but there's room for enhancing the flavor intensity to match the adventurous promise."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.842105263157895
+2. Advertisement
+   Discover the fresh, health-conscious delights at USA Flavor House! Savor our Green Garden Vegan Delight and signature fusion favorites with locally sourced produce. Embrace the vibrant flavors marrying American gusto with English charm. Visit us for an innovative dining experience that's both delectable and nutritious!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 28.0, 'description': 'Our signature slow-cooked ribs with a bolder hickory and applewood smoke infusion, now with a spicier local cider BBQ sauce, for a more memorable American and local English flavor.'}, {'id': 18, 'name': 'Heritage Apple Pie Deluxe', 'price': 18.0, 'description': 'An upgraded version of our classic pie with an even flakier crust, a deepened spice profile, and a luxurious side of bourbon-infused whipped cream.'}, {'id': 21, 'name': 'Local Harvest Celebration Platter', 'price': 32.0, 'description': 'A curated selection of fusion small bites, featuring the best of local produce in recipes that blend American and English culinary traditions for an unforgettable taste journey.'}, {'id': 24, 'name': 'Anglo-American Sizzle Steak', 'price': 32.0, 'description': 'A prime cut of locally sourced steak with a unique marinade that fuses bold American BBQ flavors with classic English herbs, flame-grilled to perfection.'}, {'id': 25, 'name': 'Transatlantic Twist Pasta', 'price': 22.0, 'description': 'Al dente pasta intertwined with a spicy tomato sauce that blends the zest of American cuisine with the subtlety of English garden herbs, topped with fresh local cheese.'}, {'id': 27, 'name': 'Green Garden Vegan Delight', 'price': 22.0, 'description': 'A vibrant medley of seasonal vegetables, grilled to perfection and served with a protein-rich quinoa and black bean salad, drizzled with an avocado-lime dressing.'}]
+4. Comments
+   [{'day': 12, 'name': 'Vicky', 'score': 7, 'content': 'The Hickory-Smoked BBQ Ribs had a lovely smoky flavor but could be more tender. The Heritage Apple Pie Deluxe was comforting, yet the bourbon whipped cream lacked the boldness I anticipated. Good comfort food, yet I miss the innovation that could make the dishes stand out more.'}, {'day': 12, 'name': 'Eve', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs had a lovely smoky flavor, but I would have preferred them to be a little more tender. The Heritage Apple Pie Deluxe was comforting with a nicely spiced filling, though the bourbon-infused whipped cream could have been more pronounced. Overall, a solid meal that satisfies my preference for simple, hearty dishes.'}, {'day': 11, 'name': 'Wade', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs provided a satisfying smoky flavor that I enjoy, yet they could have been a bit more tender. The Heritage Apple Pie Deluxe had a homey taste, but I expected the bourbon-infused whipped cream to offer a bolder twist. Familiar and cozy meals, still there's room for some culinary surprises."}, {'day': 10, 'name': 'Wade', 'score': 8, 'content': 'The Heartland Harvest Pot Pie was hearty and the Heritage Apple Pie had a nostalgic homemade taste. Both dishes were good, scoring 0.81, but lacked a wow factor. A bit more innovation could enhance the overall dining experience. Compared to Classic American Flavors, the simplicity is comforting but could be elevated.'}, {'day': 10, 'name': 'Quincy', 'score': 7, 'content': "The Enhanced Seasonal Harvest Veggie Burger was a good fit for my low-calorie diet and I enjoyed the healthier fast food option. However, I did miss the innovative flavors I was looking for. It's a solid choice but could use a creative boost to make it more memorable."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes" : [
+        "Smokey BBQ Ribs Deluxe", "Bold Grilled Salmon Supreme", "Spicy Chocolate Ecstasy"
+    ],
+    "reason" : "Classic American Flavors better aligns with my preference for spicy food, offering bolder dishes like the Smokey BBQ Ribs Deluxe and a dessert with a chili kick, Spicy Chocolate Ecstasy."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below :
+
+Smokey BBQ Ribs Deluxe: 0.86
+Bold Grilled Salmon Supreme: 0.87
+Spicy Chocolate Ecstasy: 0.81
+
+(Reference: Outstanding (0.9 - 1.0), Good (0.7 - 0.89), Fair (0.5 - 0.69), Poor (0.3 - 0.49), Very poor (0.0 - 0.29))
+
+<<FORMAT>>
+Now please give your comment for this meal. Notice don't just praise! If the experience is not good, please give a negative review. Your responses must follow the following format!!!
+{
+    "restaurant": <The restaurant you chose>,
+    "score": <Please give a comprehensive score based on the impact on the restaurant, past experience, and the taste of the dishes. Full score is 10, only integer.>
+    "comment": <Your experience, opinions and suggestions, If you had a dine in another restaurant, you can compare them, no more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "score": 8,
+    "comment": "The Smokey BBQ Ribs Deluxe and Bold Grilled Salmon Supreme were both flavorful, hitting the right notes of boldness and spice. However, the Spicy Chocolate Ecstasy, while innovative, lacked the intensity I was anticipating. A good meal overall, but there's room for the dessert to pack more punch."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.95945945945946
+2. Advertisement
+   Classic American Flavors invites you to savor the improved tenderness of our signature Smokey BBQ Ribs Deluxe. Delight in our new Local Berry Bliss dessert, bursting with boldness and fresh, local seasonal berries. Plus, try our new Local Greens Medley side, a tribute to the English garden. Fresh, local, and unforgettable - experience the taste of innovation!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 25.0, 'description': 'Our signature ribs are taken to the next level with a honey-apple cider glaze and a bolder sprinkle of homegrown spices, served with apple slaw and sweet potato fries. Now with improved tenderness for an unforgettable taste sensation.'}, {'id': 5, 'name': 'Gourmet Caesar Salad', 'price': 13.0, 'description': 'Our Gourmet Caesar Salad is now even bolder, with pickled anchovies and a spicier black garlic dressing to offer a unique twist on a classic.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon Supreme', 'price': 27.0, 'description': 'Succulent grilled salmon with an intense lemon-herb crust, now with a spicier glaze, accompanied by a medley of grilled Mediterranean vegetables and a side of wild rice.'}, {'id': 11, 'name': 'Vegan Delight Extreme', 'price': 24.0, 'description': 'Our Vegan Delight Extreme now comes with a bolder taste, including a spiced beetroot hummus and a tangy citrus dressing to elevate your vegan experience.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 18.0, 'description': 'Our Caribbean Jerk Vegan Bowl now features an exciting variety of textures with jerk-spiced tofu, crispy plantain chips, mango salsa, and creamy coconut rice.'}, {'id': 26, 'name': 'Anglo-American Fusion Feast', 'price': 28.0, 'description': 'An enticing main course that marries succulent slow-roasted pork with a tangy apple cider glaze, accompanied by roasted parsnips and a side of creamy colcannon mash.'}, {'id': 27, 'name': 'Innovative American Sides', 'price': 14.0, 'description': 'A duo of daring side dishes: Spiced sweet potato wedges with a maple-pecan dip and zesty corn riblets with a smoky chipotle butter.'}, {'id': 28, 'name': 'Global Vegan Adventure Bowl', 'price': 24.0, 'description': 'An adventurous vegan bowl inspired by global flavors, featuring Thai-spiced quinoa, Ethiopian lentil stew, and Indian aloo gobi with a tangy tamarind sauce.'}, {'id': 29, 'name': 'Local Berry Bliss', 'price': 22.0, 'description': 'A bold dessert featuring a vibrant compote of local seasonal berries served over a luscious vanilla bean panna cotta, garnished with a sprig of mint and a drizzle of aged balsamic.'}, {'id': 30, 'name': 'Local Greens Medley', 'price': 14.0, 'description': 'A side dish celebration of the English garden, featuring an array of locally sourced greens, lightly sautéed with garlic and a hint of chili, finished with a sprinkle of artisanal local cheese.'}]
+4. Comments
+   [{'day': 13, 'name': 'Ruby', 'score': 8, 'content': "The New York Strip Steak was delectable, though not as juicy as I prefer. The Global Vegan Adventure Bowl offered variety but lacked the zesty punch I enjoy. The Spicy Chocolate Ecstasy, while good, didn't quite meet the intensified spice expectation. A solid meal, but with room for more bold flavors."}, {'day': 13, 'name': 'Nora', 'score': 8, 'content': "The Gluten-Free Grilled Chicken was quite satisfactory, meeting my dietary needs with a good flavor profile. The Gourmet Caesar Salad could benefit from more creativity. The Spicy Chocolate Ecstasy, while elegant, lacked a bit of the boldness I anticipated. A solid experience, but there's room for improvement in flavor intensity."}, {'day': 13, 'name': 'Jake', 'score': 8, 'content': 'The Bold Grilled Salmon Supreme was well-seasoned and aligned with my dietary needs, scoring high on taste. The Gourmet Caesar Salad, though lacking crispiness, was enjoyable. Overall, a satisfying meal that met both my health and taste preferences.'}, {'day': 13, 'name': 'Felix', 'score': 8, 'content': 'The Smokey BBQ Ribs Deluxe were quite savory, though not exceptional. The Global Vegan Adventure Bowl was an interesting attempt but lacked a punch. Spicy Chocolate Ecstasy had a nice balance but could use more spice. Overall, a good meal that edges out previous experiences with room for improvement.'}, {'day': 13, 'name': 'Chloe', 'score': 8, 'content': "The Bold Grilled Salmon Supreme was well-prepared and catered to my diabetic needs. While the dish was satisfying, I believe a slight enhancement in the seasoning could elevate the overall taste. A commendable meal, yet there's room for a bit more culinary creativity."}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.827586206896552
+2. Advertisement
+   Introducing the Bold American-English Health Bowl, only at USA Flavor House! Indulge in our reimagined American classics with a healthy twist. Enjoy spiced, locally-sourced ingredients and bold, unforgettable flavors. Dive into our health-conscious menu, perfect for the discerning palate. Taste the innovation today!
+3. Menu 
+   [{'id': 2, 'name': 'Hickory-Smoked BBQ Ribs', 'price': 26.0, 'description': 'Our signature slow-cooked ribs with a bolder hickory and applewood smoke infusion, now with a spicier local cider BBQ sauce, for a more memorable American and local English flavor.'}, {'id': 18, 'name': 'Heritage Apple Pie Deluxe', 'price': 20.0, 'description': 'An upgraded version of our classic pie with an even flakier crust, a deepened spice profile, and a luxurious side of bourbon-infused whipped cream.'}, {'id': 21, 'name': 'Local Harvest Celebration Platter', 'price': 30.0, 'description': 'A curated selection of fusion small bites, featuring the best of local produce in recipes that blend American and English culinary traditions for an unforgettable taste journey.'}, {'id': 24, 'name': 'Anglo-American Sizzle Steak', 'price': 30.0, 'description': 'A prime cut of locally sourced steak with a unique marinade that fuses bold American BBQ flavors with classic English herbs, flame-grilled to perfection.'}, {'id': 25, 'name': 'Transatlantic Twist Pasta', 'price': 20.0, 'description': 'Al dente pasta intertwined with a spicy tomato sauce that blends the zest of American cuisine with the subtlety of English garden herbs, topped with fresh local cheese.'}, {'id': 27, 'name': 'Green Garden Vegan Delight', 'price': 20.0, 'description': 'A vibrant medley of seasonal vegetables, grilled to perfection and served with a protein-rich quinoa and black bean salad, drizzled with an avocado-lime dressing.'}, {'id': 28, 'name': 'Bold American-English Health Bowl', 'price': 26.0, 'description': 'A health-conscious bowl with spiced, locally-sourced seasonal veggies, lean grilled chicken, and a zesty lemon-herb dressing, tailored for those seeking a nutritious yet bold dining experience.'}]
+4. Comments
+   [{'day': 13, 'name': 'Eve', 'score': 7, 'content': "While the Hickory-Smoked BBQ Ribs and Heritage Apple Pie Deluxe were good, they lacked a certain flair. The ribs needed to be more tender, and the pie's crust could be flakier. I found my meal satisfying, but for future visits, a slight improvement in these areas would enhance the experience."}, {'day': 12, 'name': 'Vicky', 'score': 7, 'content': 'The Hickory-Smoked BBQ Ribs had a lovely smoky flavor but could be more tender. The Heritage Apple Pie Deluxe was comforting, yet the bourbon whipped cream lacked the boldness I anticipated. Good comfort food, yet I miss the innovation that could make the dishes stand out more.'}, {'day': 12, 'name': 'Eve', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs had a lovely smoky flavor, but I would have preferred them to be a little more tender. The Heritage Apple Pie Deluxe was comforting with a nicely spiced filling, though the bourbon-infused whipped cream could have been more pronounced. Overall, a solid meal that satisfies my preference for simple, hearty dishes.'}, {'day': 11, 'name': 'Wade', 'score': 8, 'content': "The Hickory-Smoked BBQ Ribs provided a satisfying smoky flavor that I enjoy, yet they could have been a bit more tender. The Heritage Apple Pie Deluxe had a homey taste, but I expected the bourbon-infused whipped cream to offer a bolder twist. Familiar and cozy meals, still there's room for some culinary surprises."}, {'day': 10, 'name': 'Wade', 'score': 8, 'content': 'The Heartland Harvest Pot Pie was hearty and the Heritage Apple Pie had a nostalgic homemade taste. Both dishes were good, scoring 0.81, but lacked a wow factor. A bit more innovation could enhance the overall dining experience. Compared to Classic American Flavors, the simplicity is comforting but could be elevated.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes": [
+        "Smokey BBQ Ribs Deluxe", "Bold Grilled Salmon Supreme", "Local Berry Bliss"
+    ],
+    "reason": "The Smokey BBQ Ribs Deluxe and Bold Grilled Salmon Supreme offer the spicy and bold flavors I enjoy, and the Local Berry Bliss dessert provides a fresh, local produce experience."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smokey BBQ Ribs Deluxe: 0.86
+Bold Grilled Salmon Supreme: 0.87
+Local Berry Bliss: 0.84
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "feeling": "The Smokey BBQ Ribs Deluxe was succulent with the right kick of spice, and the Bold Grilled Salmon Supreme had a perfectly balanced glaze. The Local Berry Bliss ended the meal on a refreshingly sweet note."
+}
+
+[System->Quinn]: The Restaurant " Classic American Flavors "information as below:
+1. Customer Score: 7.9815950920245395
+2. Advertisement
+   Indulge in the vibrant flavors of Classic American Flavors with our new Local Berry Firework dessert, a burst of berries with a spicy surprise. Relish the enhanced heat in our Vegan Delight Extreme, and enjoy the seasonal charm of our new Spiced Seasonal Local Produce side dish. Elevate your taste experience with our tender Smokey BBQ Ribs Deluxe. Freshness and innovation on every plate!
+3. Menu 
+   [{'id': 1, 'name': 'Smokey BBQ Ribs Deluxe', 'price': 25.0, 'description': 'Our signature ribs are now even more tender, with a honey-apple cider glaze and a new bold spice blend, served with a side of apple slaw and sweet potato fries.'}, {'id': 5, 'name': 'Gourmet Caesar Salad', 'price': 13.0, 'description': 'Our Gourmet Caesar Salad is now even bolder, with pickled anchovies and a spicier black garlic dressing to offer a unique twist on a classic.'}, {'id': 6, 'name': 'New York Strip Steak', 'price': 25.0, 'description': 'Premium Strip Steak with a side of garlic mashed potatoes and steamed vegetables.'}, {'id': 7, 'name': 'Bold Grilled Salmon Supreme', 'price': 27.0, 'description': 'Succulent grilled salmon with an intense lemon-herb crust, now with a spicier glaze, accompanied by a medley of grilled Mediterranean vegetables and a side of wild rice.'}, {'id': 11, 'name': 'Vegan Delight Extreme', 'price': 24.0, 'description': 'Our Vegan Delight Extreme is now fierier, with spiced beetroot hummus, a tangy citrus dressing, and a sprinkle of hot chili flakes to elevate your vegan experience.'}, {'id': 12, 'name': 'Gluten-Free Grilled Chicken', 'price': 19.0, 'description': 'Grilled chicken breast seasoned with our signature spice blend, served with roasted sweet potatoes and green beans.'}, {'id': 18, 'name': 'Caribbean Jerk Vegan Bowl', 'price': 18.0, 'description': 'Our Caribbean Jerk Vegan Bowl now features an exciting variety of textures with jerk-spiced tofu, crispy plantain chips, mango salsa, and creamy coconut rice.'}, {'id': 26, 'name': 'Anglo-American Fusion Feast', 'price': 28.0, 'description': 'An enticing main course that marries succulent slow-roasted pork with a tangy apple cider glaze, accompanied by roasted parsnips and a side of creamy colcannon mash.'}, {'id': 27, 'name': 'Innovative American Sides', 'price': 14.0, 'description': 'A duo of daring side dishes: Spiced sweet potato wedges with a maple-pecan dip and zesty corn riblets with a smoky chipotle butter.'}, {'id': 28, 'name': 'Global Vegan Adventure Bowl', 'price': 24.0, 'description': 'An adventurous vegan bowl inspired by global flavors, featuring Thai-spiced quinoa, Ethiopian lentil stew, and Indian aloo gobi with a tangy tamarind sauce.'}, {'id': 29, 'name': 'Local Berry Bliss', 'price': 22.0, 'description': 'A bold dessert featuring a vibrant compote of local seasonal berries served over a luscious vanilla bean panna cotta, garnished with a sprig of mint and a drizzle of aged balsamic.'}, {'id': 31, 'name': 'Local Berry Firework', 'price': 24.0, 'description': 'Dive into a sensory explosion with our Local Berry Firework dessert, featuring a medley of local berries ignited with a hint of chili and a dash of popping candy, served over a light and airy sponge cake.'}, {'id': 32, 'name': 'Spiced Seasonal Local Produce', 'price': 16.0, 'description': 'Our new side dish, Spiced Seasonal Local Produce, celebrates the best of the season with an ever-changing selection of local vegetables, roasted with our house blend of bold spices.'}]
+4. Comments
+   [{'day': 14, 'name': 'Tina', 'score': 8, 'content': 'The Bold Grilled Salmon Supreme was quite satisfying and healthy, aligning with my preferences. The Gourmet Caesar Salad was good but could use more innovation. The Local Berry Bliss dessert was delightful, albeit not as bold as I hoped. Overall, a pleasant dining experience that could benefit from slightly bolder flavors.'}, {'day': 14, 'name': 'Steve', 'score': 8, 'content': 'The Vegan Delight Extreme and Caribbean Jerk Vegan Bowl were gratifying and adhered to my health needs. Although tasty, I missed the culinary innovation that would take these dishes from good to exceptional. A bit more creativity could elevate the overall dining experience.'}, {'day': 14, 'name': 'Ruby', 'score': 8, 'content': 'The New York Strip Steak was succulent, aligning with my taste for quality meats. The Global Vegan Adventure Bowl was diverse, though it could use a touch more zest. The Local Berry Bliss was refreshingly bold. Comparatively, this meal edged out previous experiences with its innovative flavors.'}, {'day': 14, 'name': 'Oscar', 'score': 8, 'content': "The Smokey BBQ Ribs Deluxe were succulent with improved tenderness. The New York Strip Steak was enjoyable, though I've had better. The Local Berry Bliss dessert was fresh but could use a touch more innovation. A satisfying meal overall, but room for some culinary excitement."}, {'day': 14, 'name': 'Max', 'score': 8, 'content': 'The Vegan Delight Extreme and Caribbean Jerk Vegan Bowl boasted robust flavors, suitable for my plant-based diet. While satisfying, these dishes could benefit from a touch more innovation to truly stand out.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: The Restaurant " USA Flavor House "information as below:
+1. Customer Score: 7.816666666666666
+2. Advertisement
+   Discover the fresh, health-oriented dishes at USA Flavor House! Savor our Revitalizing Superfood Salad, Harvest Heirloom Tomato Gazpacho, and Grilled Wild Mushroom Bruschetta. Each bite is a blend of innovation and nutrition, crafted with locally-sourced ingredients. Elevate your dining experience with us today!
+3. Menu 
+   [{'id': 18, 'name': 'Heritage Apple Pie Deluxe', 'price': 22.0, 'description': 'An upgraded version of our classic pie with an even flakier crust, a deepened spice profile, and a luxurious side of bourbon-infused whipped cream.'}, {'id': 27, 'name': 'Green Garden Vegan Delight', 'price': 22.0, 'description': 'A vibrant medley of seasonal vegetables, grilled to perfection and served with a protein-rich quinoa and black bean salad, drizzled with an avocado-lime dressing.'}, {'id': 28, 'name': 'Bold American-English Health Bowl', 'price': 28.0, 'description': 'A health-conscious bowl with spiced, locally-sourced seasonal veggies, lean grilled chicken, and a zesty lemon-herb dressing, tailored for those seeking a nutritious yet bold dining experience.'}, {'id': 29, 'name': 'Revitalizing Superfood Salad', 'price': 24.0, 'description': 'A nutrient-packed salad bursting with superfoods like kale, blueberries, walnuts, and quinoa, dressed in a pomegranate-balsamic vinaigrette.'}, {'id': 30, 'name': 'Harvest Heirloom Tomato Gazpacho', 'price': 18.0, 'description': 'A refreshing and zesty cold soup made with heirloom tomatoes, crisp cucumbers, and sweet peppers, garnished with avocado and sourdough croutons.'}, {'id': 31, 'name': 'Grilled Wild Mushroom Bruschetta', 'price': 22.0, 'description': 'Char-grilled sourdough topped with wild mushrooms sautéed in garlic and thyme, finished with a drizzle of truffle oil and shaved parmesan.'}]
+4. Comments
+   [{'day': 14, 'name': 'Wade', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs had a robust smoky essence, yet a touch more tenderness would make them outstanding. The Heritage Apple Pie Deluxe offered a slice of homestyle comfort. The dishes are good, though not exceptional. A slight enhancement in texture and boldness could elevate these familiar favorites.'}, {'day': 14, 'name': 'Eve', 'score': 7, 'content': "The flavors of the Hickory-Smoked BBQ Ribs and Heritage Apple Pie Deluxe were familiar and comforting, yet they lacked the refinement I hoped for. The ribs could benefit from being more tender, and the pie's crust desired a flakier texture. While enjoyable, there's room for improvement to make the dishes stand out."}, {'day': 13, 'name': 'Eve', 'score': 7, 'content': "While the Hickory-Smoked BBQ Ribs and Heritage Apple Pie Deluxe were good, they lacked a certain flair. The ribs needed to be more tender, and the pie's crust could be flakier. I found my meal satisfying, but for future visits, a slight improvement in these areas would enhance the experience."}, {'day': 12, 'name': 'Vicky', 'score': 7, 'content': 'The Hickory-Smoked BBQ Ribs had a lovely smoky flavor but could be more tender. The Heritage Apple Pie Deluxe was comforting, yet the bourbon whipped cream lacked the boldness I anticipated. Good comfort food, yet I miss the innovation that could make the dishes stand out more.'}, {'day': 12, 'name': 'Eve', 'score': 8, 'content': 'The Hickory-Smoked BBQ Ribs had a lovely smoky flavor, but I would have preferred them to be a little more tender. The Heritage Apple Pie Deluxe was comforting with a nicely spiced filling, though the bourbon-infused whipped cream could have been more pronounced. Overall, a solid meal that satisfies my preference for simple, hearty dishes.'}]
+
+Please note that comments are merely expressions of personal opinions and are for reference only. Comments can also be time-sensitive. So, a negative comment of a restaurant does not mean it's not suitable for you. If you are drawn to its menu and advertisements, don't hesitate to give it a try.
+
+[System->Quinn]: Please according to your income, taste, health, dietary restriction, personality, experience and carefully read the information of two restaurant then choose one to dine in.
+
+<<FORMAT>>
+Your responses must follow the following format:
+{
+    "restaurant": <The restaurant you chose>,
+    "dishes" : [
+        The dishes name ordered at this restaurant 
+    ],
+    "reason" : <The reason you chose the restaurant. Don't tell you are some cuisine lover. Only compare the inforamtion of restaurants, then choose one. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "dishes" : [
+        "Smokey BBQ Ribs Deluxe", "Bold Grilled Salmon Supreme", "Local Berry Firework"
+    ],
+    "reason" : "Classic American Flavors' updated menu with bolder spices in the ribs and salmon dishes suits my preference for spicy food. The Local Berry Firework dessert's hint of chili intrigues me."
+}
+
+[System->Quinn]: As a customer, after you taste the dishes, The score of each dish as below (1 is a excellent score):
+
+Smokey BBQ Ribs Deluxe: 0.86
+Bold Grilled Salmon Supreme: 0.87
+Local Berry Firework: 0.81
+
+<<FORMAT>>
+Now please tell me your feeling of this meal. If the experience is not good, please give a negative review. Your responses must be formated as below:
+{
+    "restaurant": <The restaurant you chose>,
+    "feeling": <Your experience, feeling. It is just your personal memory, no one else will see it. No more than 60 words>
+}
+
+[Quinn->all]: {
+    "restaurant": "Classic American Flavors",
+    "feeling": "The Smokey BBQ Ribs Deluxe and Bold Grilled Salmon Supreme were deliciously spicy and satisfying. The Local Berry Firework dessert was an exciting blend of sweet and heat."
+}
+

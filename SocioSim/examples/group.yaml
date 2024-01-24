@@ -2,7 +2,7 @@ backends:
   default_backend: &default_backend_anchor
     temperature: 0.7
     max_tokens: 1024
-    model: gpt-4-vision-preview
+    model: gpt-4-1106-preview
     backend_type: openai-chat
 
 global_prompt:
@@ -31,7 +31,7 @@ players:
 
   - name: Bob
     agent_type: customer
-    role_desc: "Income: $8,000 (Middle Class), Taste: Rice and noodle dishes, Health: No concerns, Dietary_restriction: Vegetarian, Personality: Strict"
+    role_desc: "Income: $8,000 (Middle Class), Taste: Rice and noodle dishes, Health: No concerns, Dietary_restriction: None, Personality: Strict"
     backend: *default_backend_anchor
 
   - name: Charlie
@@ -61,7 +61,7 @@ players:
 
   - name: Henry
     agent_type: customer
-    role_desc: "Income: $14,000 (Affluent), Taste: Vegetarian dishes, Health: Healthy, Dietary_restriction: Vegetarian, Personality: Reserved"
+    role_desc: "Income: $14,000 (Affluent), Taste: Meat, Health: Healthy, Dietary_restriction: None, Personality: Reserved"
     backend: *default_backend_anchor
 
   - name: Ivy
@@ -86,7 +86,7 @@ players:
 
   - name: Maggie
     agent_type: customer
-    role_desc: "Income: $9,000 (Middle Class), Taste: Chocolate and sweets, Health: Diabetic, Dietary_restriction: Low sugar, Personality: Carefree"
+    role_desc: "Income: $9,000 (Middle Class), Taste: Chocolate and sweets, Health: Healthy, Dietary_restriction: None, Personality: Carefree"
     backend: *default_backend_anchor
 
   - name: Nate
@@ -141,7 +141,7 @@ players:
 
   - name: Xena
     agent_type: customer
-    role_desc: "Income: $9,800 (Middle Class), Taste: Italian cuisine, Health: Acid reflux, Dietary_restriction: Low acid, Personality: Lively"
+    role_desc: "Income: $9,800 (Middle Class), Taste: Italian cuisine, Health: Healthy, Dietary_restriction: None, Personality: Lively"
     backend: *default_backend_anchor
 
   - name: Yasmine
@@ -186,7 +186,7 @@ players:
 
   - name: Giselle
     agent_type: customer
-    role_desc: "Income: $9,400 (Middle Class), Taste: Vegan desserts, Health: Lactose intolerant, Dietary_restriction: Dairy-free, Personality: Creative"
+    role_desc: "Income: $9,400 (Middle Class), Taste: Desserts, Health: Healthy, Dietary_restriction: None, Personality: Creative"
     backend: *default_backend_anchor
 
   - name: Hugo

@@ -174,12 +174,12 @@ class GroupDine(Scene):
 
         # text observation
         observation_text = self.message_pool.get_visible_messages(agent_name=curr_player.name, turn=self._curr_turn)
+        
         # vision observation, get two restaurant images for showing
-        # observation_vision = image_pool.get_visible_images(restaurant_name="All")
-        if curr_process['name'] == 'group_order':
-            observation_vision = image_pool.get_visible_images(restaurant_name="All")
-        else:
-            observation_vision = []
+        # if curr_process['name'] == 'group_order':
+        #     observation_vision = image_pool.get_visible_images(restaurant_name="All")
+        # else:
+        observation_vision = []
         
         for i in range(self.invalid_step_retry):
             try:
@@ -195,6 +195,10 @@ class GroupDine(Scene):
         if curr_process['name'] == 'group_order':
             if parsed_ouput and 'restaurant' in parsed_ouput:
                 restaurant = parsed_ouput['restaurant']
+                if restaurant not in self.r_info.keys() or restaurant == 'None':
+                    result = {self.players[0].name: {'restaurant': 'None'}}
+                    self.terminal_flag = True
+                    return result
                 dish_score = self.r_info[restaurant]['dish_score']
                 self.dishes = parsed_ouput['dishes']
                 

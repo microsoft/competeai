@@ -1,6 +1,7 @@
-from typing import List
 import os
 import re
+import time
+from typing import List
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 from .base import IntelligenceBackend
@@ -14,10 +15,9 @@ except ImportError:
     is_openai_available = False
     # logging.warning("openai package is not installed")
 else:
-    openai_api_key = os.environ.get("OPENAI_KEY")
-    azure_api_key = os.environ.get("AZURE_OPENAI_KEY")
-    azure_openai_endpoint= os.environ.get("AZURE_OPENAI_ENDPOINT")
-
+    # openai_api_key = os.environ.get("OPENAI_KEY")
+    openai_api_key = os.getenv("AZURE_OPENAI_KEY")
+    
     if openai_api_key is None:
         # logging.warning("OpenAI API key is not set. Please set the environment variable OPENAI_API_KEY")
         is_openai_available = False
@@ -26,10 +26,17 @@ else:
 
 openai.api_key = openai_api_key
 
+total_tokens = 0
+
+# openai.api_type = "azure"
+# openai.api_base = os.getenv("AZURE_OPENAI_ENDPOINT")
+# openai.api_version = "2023-07-01-preview"
+# openai.api_key = os.getenv("AZURE_OPENAI_KEY")
+
 # Default config follows the OpenAI playground
 DEFAULT_TEMPERATURE = 0.9
 DEFAULT_MAX_TOKENS = 1024
-# DEFAULT_MODEL = "gpt-3.5-turbo"
+
 DEFAULT_MODEL = "gpt-4-turbo"
 
 END_OF_MESSAGE = "<EOS>"  # End of message token specified by us not OpenAI
@@ -62,27 +69,21 @@ class OpenAIChat(IntelligenceBackend):
         self.max_tokens = max_tokens
         self.model = model
         self.merge_other_agent_as_user = merge_other_agents_as_one_user
+        
+        # FIXME: if not set this, the azure key will openai key: sk-xxx, so strange
+        # openai.api_key = os.getenv("AZURE_OPENAI_KEY")
 
-    @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=1, max=60))
+    @retry(stop=stop_after_attempt(6), wait=wait_random_exponential(min=4, max=60))
     def _get_response(self, messages, have_image=False):
-        # FIXME: v 1.0.0
-        # if have_image:
-
-        # else:
-        #     """ OpenAI Azure API """
-        #     print("OpenAI Azure API")
-        #     openai.api_type = "azure"
-        #     openai.api_version = "2023-07-01-preview"
-        #     openai.api_key = azure_api_key
-        #     openai.api_base = azure_openai_endpoint
-            
-        #     completion = openai.ChatCompletion.create(
-        #             engine="gpt-4-1106",
-        #             messages = messages,
-        #             temperature=self.temperature,
-        #             max_tokens=self.max_tokens,
-        #             stop=STOP
-        #         )
+        global total_tokens
+        
+        # completion = openai.ChatCompletion.create(
+        #     engine="gpt-4-1106",
+        #     messages = messages,
+        #     temperature=self.temperature,
+        #     max_tokens=self.max_tokens,
+        #     stop=STOP
+        # )
         
         # FIXME v 0.28.1
         completion = openai.ChatCompletion.create(
@@ -93,9 +94,18 @@ class OpenAIChat(IntelligenceBackend):
                 stop=STOP
             )
         
-        response = completion.choices[0]['message']['content']
+        tokens_usage = completion.usage.total_tokens
+        total_tokens += tokens_usage
+        print(f"Token usage: {tokens_usage}")
+        print(f"Total tokens: {total_tokens}")
+        
+        response = completion.choices[0].message.content
         response = response.strip()
-        return response
+        
+        if "END_OF_CONVERSATION" in response:
+            raise Exception("Exceed the max tokens limit")
+        else:
+            return response
         
         
         """ OpenAI 1.00 API """
@@ -155,7 +165,7 @@ class OpenAIChat(IntelligenceBackend):
                 user_prompt += f"[{msg[0]}]: {msg[1]}\n"
             user_prompt += f"You are a {agent_type} in a virtual world. Now it's your turn!"
             
-            print(f"User prompt length: {len(user_prompt)}")
+            # print(f"User prompt length: {len(user_prompt)}")
             # print(f"User prompt: {user_prompt}")
             
             user_message = {"role": "user", "content": user_prompt}

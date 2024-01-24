@@ -70,24 +70,24 @@ class Scene(Configurable):
         except:
             json_output = None
             
-        if json_output:
-            json_list = [json_output] if isinstance(json_output, dict) else json_output
-            # generate image
-            for item in json_list:
-                if "pic_desc" in item and item["pic_desc"] != "None":
-                    desc = item["pic_desc"]
-                    # get id
-                    if 'id' in item:
-                        nid = item['id']
-                    else:  # Get max id in current path 
-                        files = os.listdir(self.log_path)
-                        pattern = re.compile(rf"{step_name}_(\d+)\.png")
-                        numbers = [int(pattern.match(file).group(1)) for file in files if pattern.match(file)]
-                        # if no numbers, set nid to 1
-                        nid = max(numbers) + 1 if numbers else 1
+        # if json_output:
+        #     json_list = [json_output] if isinstance(json_output, dict) else json_output
+        #     # generate image
+        #     for item in json_list:
+        #         if "pic_desc" in item and item["pic_desc"] != "None":
+        #             desc = item["pic_desc"]
+        #             # get id
+        #             if 'id' in item:
+        #                 nid = item['id']
+        #             else:  # Get max id in current path 
+        #                 files = os.listdir(self.log_path)
+        #                 pattern = re.compile(rf"{step_name}_(\d+)\.png")
+        #                 numbers = [int(pattern.match(file).group(1)) for file in files if pattern.match(file)]
+        #                 # if no numbers, set nid to 1
+        #                 nid = max(numbers) + 1 if numbers else 1
   
-                    filename = f"{step_name}_{nid}"
-                    generate_image(desc, f'{self.log_path}/{filename}')
+        #             filename = f"{step_name}_{nid}"
+        #             generate_image(desc, f'{self.log_path}/{filename}')
                     
                     
         def shorten_text(text):
