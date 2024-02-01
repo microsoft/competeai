@@ -2,6 +2,7 @@ import os
 import re
 import csv
 import json
+import yaml
 import openai
 import numpy as np
 
@@ -274,9 +275,44 @@ def analysis_customer_flow_with_annotation(path):
     
     draw.customer_flow_with_annotation(num_of_customer1, num_of_customer2)
 
+def analysis_customer_flow_with_score(path):
+    data_path1 = os.path.join(path, 'restaurant_design_9000', 'data.csv')    
+    data_path2 = os.path.join(path, 'restaurant_design_9001', 'data.csv')
+    
+    data1 = read_csv(data_path1, fields=['num_of_customer', 'customer_score'])
+    data2 = read_csv(data_path2, fields=['num_of_customer', 'customer_score'])
+    
+    num_of_customer1 = [int(d) for d in data1['num_of_customer']]
+    num_of_customer2 = [int(d) for d in data2['num_of_customer']]
+    
+    score1 = [float(d) for d in data1['customer_score']]
+    score2 = [float(d) for d in data2['customer_score']]
+    
+    draw = Draw(path)
+
+    draw.customer_flow_and_score(num_of_customer1, num_of_customer2, score1, score2)
+
+def analysis_customer_reason(path):
+
+    data_list = [
+        [213, 45, 198, 22, 67, 2],
+        [225, 19, 162, 0, 84, 24],
+        [91, 57, 40, 1, 82, 38],
+        [87, 45, 35, 11, 87, 52]
+    ]
+    
+    customer_name = ['Oscar', 'Umar', 'Family1', 'Family2']
+    
+    draw = Draw(path)
+    draw.choice_percentage(data_list, customer_name)
+
 def analysis(path, field='customer_flow'):
     if field == 'customer_flow_with_annotation':
         analysis_customer_flow_with_annotation(path)
+    if field == 'customer_flow_with_score':
+        analysis_customer_flow_with_score(path)
+    if field == 'customer_reason':
+        analysis_customer_reason(path)
     
 def aggregate_data(path, field='dish_score'):
     # get all folders in the logs folder
@@ -301,7 +337,7 @@ def aggregate_data(path, field='dish_score'):
         list_2.append(data2[field])
     
     draw = Draw(path)
-    draw.aggregate_two_line2(list_1, list_2, field)
+    draw.aggregate_two_line(list_1, list_2, field)
         
 def aggregate_similar_prop(path):
     # get all folders in the logs folder
@@ -354,20 +390,4 @@ def aggregate(path, field='dish_score'):
         aggreagte_similar_dish_price(path)
     else:
         aggregate_data(path, field=field)
-        
-# def aggregate(path):
-#     # get all folders in the logs folder
-#     exps_name = os.listdir(path)
-#     # get all exp named with 'single
-#     exps = [exp for exp in exps_name if 'single' in exp or 'group' in exp]
-
-#     for exp in exps:
-#         exp_path = os.path.join(path, exp)
-#         files_name = os.listdir(exp_path)
-#         if 'restaurant_design_9000' in files_name:
-#             path1 = os.path.join(exp_path, 'restaurant_design_9000', 'menu.csv')
-#             path2 = os.path.join(exp_path, 'restaurant_design_9001', 'menu.csv')
-#         else:
-#             path1 = os.path.join(exp_path, 'restaurant_design_9002', 'menu.csv')
-#             path2 = os.path.join(exp_path, 'restaurant_design_9003', 'menu.csv')
-#         analysis_menus2(path1, path2)
+    

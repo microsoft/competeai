@@ -1,0 +1,51 @@
+Name,Income,Taste,Health,Dietary Restriction,Personality
+Alice,$12000 (Affluent),Local comfort foods,Healthy,None,Easy-going
+Amelia,$8700 (Middle Class),Mexican food,Healthy,None,Spirited
+Bob,$8000 (Middle Class),Rice and noodle dishes,No concerns,None,Strict
+Brian,$6200 (Poor),Street food,Healthy,None,Resourceful
+Charlie,$15000 (Affluent),Sandwiches and salads,Healthy,None,Picky
+Chloe,$10300 (Middle Class),Indian cuisine,Diabetic,Low sugar,Thoughtful
+David,$10000 (Middle Class),Breakfast foods,High blood pressure,Low sodium,Cheerful
+Dexter,$13800 (Affluent),Barbecue,Healthy,None,Sociable
+Emma,$5800 (Very Poor),Organic food,Healthy,None,Optimistic
+Eve,$7000 (Poor),Simple dishes,Healthy,None,Shy
+Felix,$11700 (Middle Class),Chinese cuisine,Healthy,None,Analytical
+Frank,$9500 (Middle Class),Fast food,Healthy,None,Adventurous
+Giselle,$9400 (Middle Class),Desserts,Healthy,None,Creative
+Grace,$11000 (Middle Class),Soups and stews,Diabetic,Low sugar,Friendly
+Henry,$14000 (Affluent),Meat,Healthy,None,Reserved
+Hugo,$14200 (Affluent),Gourmet burgers,Healthy,None,Leader
+Iris,$7600 (Poor),Salads,Healthy,None,Gentle
+Ivy,$6500 (Poor),Seafood,Healthy,None,Outspoken
+Jack,$8500 (Middle Class),Steak and meat dishes,Healthy,None,Energetic
+Jake,$6800 (Poor),Fried food,High blood pressure,Low sodium,Jovial
+Katie,$5000 (Very Poor),Vegan dishes,Healthy,None,Compassionate
+Lara,$8900 (Middle Class),Seafood,Healthy,None,Ambitious
+Leo,$13500 (Affluent),Pasta and pizza,Healthy,None,Relaxed
+Maggie,$9000 (Middle Class),Chocolate and sweets,Healthy,None,Carefree
+Max,$5300 (Very Poor),Plant-based meals,Healthy,None,Resourceful
+Nate,$7500 (Poor),Grilled dishes,Healthy,None,Meticulous
+Nora,$12800 (Affluent),Fine dining,Gluten intolerance,Gluten-free,Elegant
+Olivia,$13000 (Affluent),Mediterranean cuisine,Allergies,Gluten-free,Artistic
+Oscar,$9600 (Middle Class),Traditional cuisine,Healthy,None,Reserved
+Paula,$11200 (Middle Class),Greek food,Healthy,None,Outgoing
+Peter,$6000 (Poor),Baked goods,Healthy,None,Curious
+Quincy,$6400 (Poor),Fast food,Overweight,Low calorie,Easygoing
+Quinn,$8200 (Middle Class),Spicy food,Healthy,None,Bold
+Rachel,$14500 (Affluent),Gourmet dishes,Lactose intolerant,Dairy-free,Sophisticated
+Ruby,$14800 (Affluent),Sushi,Healthy,None,Discerning
+Sam,$5500 (Very Poor),Home cooking,Healthy,None,Warm
+Steve,$7900 (Poor),Comfort food,High cholesterol,Low fat,Friendly
+Tara,$10500 (Middle Class),Exotic fruits,Healthy,None,Adventurous
+Tina,$10800 (Middle Class),Mediterranean cuisine,Healthy,None,Charismatic
+Ulysses,$13300 (Affluent),International cuisine,Healthy,None,Explorer
+Umar,$12500 (Affluent),Grilled seafood,High cholesterol,Low cholesterol,Discerning
+Valerie,$8300 (Middle Class),Organic foods,Healthy,None,Intellectual
+Vicky,$7300 (Poor),Comfort food,Healthy,None,Easygoing
+Wade,$5700 (Very Poor),Simple meals,Healthy,None,Hardworking
+William,$11500 (Middle Class),Sushi and Japanese cuisine,Healthy,None,Reserved
+Xavier,$11900 (Middle Class),Caribbean cuisine,Healthy,None,Vibrant
+Xena,$9800 (Middle Class),Italian cuisine,Healthy,None,Lively
+Yara,$9200 (Middle Class),Vegetarian dishes,Vegan,Vegan,Compassionate
+Yasmine,$7800 (Poor),Vegan options,Healthy,Vegan,Compassionate
+Zach,$12200 (Affluent),French cuisine,Gluten sensitivity,Gluten-free,Connoisseur

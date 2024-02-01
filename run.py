@@ -34,8 +34,8 @@ log_path = f"./logs/{args.name}"
 #     Simul.run()
     
 # # analysis the data
-# aggregate('./logs', field='similar_proportion' )
+# aggregate('./logs')
 
-analysis(log_path, field='customer_flow_with_annotation')
+analysis('./logs', field='customer_reason')
 
 
