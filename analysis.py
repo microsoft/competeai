@@ -54,7 +54,7 @@ def get_gpt_response(prompt):
     response = completion.choices[0]['message']['content']
     response = response.strip()
     
-    time.sleep(2)
+    time.sleep(5)
     return response
 
 # 统计客户选择原因
@@ -66,7 +66,7 @@ def single_reason(path='./logs'):
     # read all players
     players = config['players']
     players = players[2:]
-    players_name = ['Katie', 'Zach', 'Leo', 'David', 'Quincy', 'Jack', 'Xena', 'Bob']
+    players_name = [ 'Jack', 'Xena', 'Bob']
     
     # 构建name2index的dict
     player2idx = {}
@@ -177,7 +177,7 @@ def group_reason(path='./logs'):
     players = players[2:]
     
     # 2 - 14 13个顾客组
-    groups = list(range(6, 15))
+    groups = list(range(9, 15))
     
     # 读取logs所有的文件
     exps_name = os.listdir(path)
@@ -255,8 +255,8 @@ if __name__ == "__main__":
     
     # 并行运行group 和 single
     
-    single_reason('./logs')
-    # group_reason('./logs')
+    # single_reason('./logs')
+    group_reason('./logs')
     
     # 创建两个进程，分别运行func1和func2，并传递参数
     # process1 = multiprocessing.Process(target=single_reason)

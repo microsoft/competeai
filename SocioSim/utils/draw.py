@@ -236,24 +236,36 @@ class Draw:
         # 将其中每个元素都乘以100，转为百分比
         norm_data_list = norm_data_list * 100
         
+        # 现在这个二维的array中有25个子array,现在分成两个二维array,前10个子array一组，后面一组
+        array1 = norm_data_list[:10]
+        array2 = norm_data_list[10:]
+        
+        # 对两个array每一列取平均
+        mean_array1 = np.mean(array1, axis=0)
+        mean_array2 = np.mean(array2, axis=0)
+        
+        print(mean_array1)
+        print(mean_array2)
+        
+        
         # 每一个data为一柱，每一柱的高度都为1，其中通过data中的比例决定占这个柱子多少高度，将所有data都画图上，形成多个柱子
-        plt.figure()
+        # plt.figure(figsize=(6, 3))
         
-        bar_width = 0.6
-        plt.bar(customer_name, norm_data_list[:, 0], color=colors[0], width=bar_width, label='Core Needs')
+        # bar_width = 0.6
+        # plt.bar(customer_name, norm_data_list[:, 0], color=colors[0], width=bar_width, label='Core Needs')
         
-        for i in range(1, choices_len):
-            plt.bar(customer_name, norm_data_list[:, i], bottom=np.sum(norm_data_list[:, :i], axis=1), color=colors[i], width=bar_width, label=choices[i])
+        # for i in range(1, choices_len):
+        #     plt.bar(customer_name, norm_data_list[:, i], bottom=np.sum(norm_data_list[:, :i], axis=1), color=colors[i], width=bar_width, label=choices[i])
         
-        plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.3), ncol=3)
+        # plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.3), ncol=3)
         
-        plt.xlabel('Customer Name / Group Id', fontsize=12)
-        plt.ylabel('Percentage (\%)', fontsize=12)
+        # plt.xticks(rotation=45)
+        # plt.xlabel('Customer Name / Group Id', fontsize=12)
+        # plt.ylabel('Percentage (\%)', fontsize=12)
         
-        path = os.path.join(self.path, 'fig', 'fig-choice-percentage.pdf')
-        plt.savefig(path)
+        # path = os.path.join(self.path, 'fig', 'fig-choice-percentage.pdf')
+        # plt.savefig(path)
         
-
     def aggregate_two_line(self, data1, data2, field=None):
         data1 = np.array(data1, dtype=float)
         data2 = np.array(data2, dtype=float)
