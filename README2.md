@@ -1,4 +1,6 @@
-## Introduction
+# README
+
+# Introduction
 
 SocioSim is currently the experimental framework for our work in competeai. The construction of this framework is based on the following fundamental ideas:
 
@@ -9,7 +11,7 @@ SocioSim is currently the experimental framework for our work in competeai. The 
 
 The reason for naming it SocioSim is because we want to unify sociological simulation experiments into a single framework from both theoretical and code design perspectives. Currently, competeai is the only instance under this framework.
 
-## Installation
+# Installation
 
 **Note: the framework has only been tested on linux.**
 
@@ -37,7 +39,7 @@ then use pip to install required packages:
 pip install -r requirements.txt
 ```
 
-## How to run
+# How to run
 
 First, launch Django database server
 
@@ -53,7 +55,7 @@ python run.py <exp_name>
 
 The result will save into `logs/<exp_name>`
 
-## The structure of framework
+# The structure of framework
 
 ```bash
 .
@@ -107,30 +109,8 @@ The result will save into `logs/<exp_name>`
     └── ...
 ```
 
-## Acknowledgements
+# Acknowledgements
 
 This project, SociosSim , is built upon the ChatArena framework. We extend our gratitude to the developers and contributors of ChatArena for providing the foundational architecture that made this project possible. For more information on ChatArena, visit [ChatArena's GitHub repository](https://github.com/Farama-Foundation/chatarena).
 
 We adhere to the licensing terms of ChatArena, and we encourage our users to familiarize themselves with it to understand the guidelines governing the use and modification of this repo.
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
