@@ -3,27 +3,42 @@ import re
 import csv
 import json
 import yaml
-import openai
+from openai import OpenAI
 import numpy as np
 
 from .draw import Draw
 from .prompt_template import PromptTemplate
 
 
-openai.api_key = os.getenv("OPENAI_KEY")
+openai_api_key = os.getenv("OPENAI_KEY")
 
 def get_gpt_response(prompt):
-    """ OpenAI 0.27 version"""
-    # FIXME: v 0.28.1
     messages = [{'role': 'user', 'content': prompt}]
-    completion = openai.ChatCompletion.create(
+    
+    """ OpenAI 0.27 API"""
+    # completion = openai.ChatCompletion.create(
+    #             model="gpt-4-1106-preview",
+    #             messages=messages,
+    #             temperature=0.7,
+    #             max_tokens=2000,
+    #         )
+        
+    # response = completion.choices[0]['message']['content']
+    # response = response.strip()
+    # return response
+
+    """ OpenAI 1.00 API """
+        
+    client = OpenAI(api_key=openai_api_key)
+    
+    completion = client.chat.completions.create(
                 model="gpt-4-1106-preview",
                 messages=messages,
                 temperature=0.7,
                 max_tokens=2000,
-            )
-        
-    response = completion.choices[0]['message']['content']
+    )
+
+    response = completion.choices[0].message.content
     response = response.strip()
     return response
 
@@ -293,32 +308,6 @@ def analysis_customer_flow_with_score(path):
     draw.customer_flow_and_score(num_of_customer1, num_of_customer2, score1, score2)
 
 def analysis_customer_reason(path):
-    
-    #     213	45	198	22	67	2
-    # 225	19	162	0	84	24
-    # 225	18	138	14	60	32
-    # 224	18	146	1	138	55
-    # 167	43	180	2	176	63
-    # 225	1	139	11	64	30
-    # 225	31	120	119	13	19
-    # 225	17	180	1	154	21
-    # 115	22	181	7	137	103
-    # 158	45	170	13	129	51
-    # 91	57	40	1	82	38
-    # 87	45	35	11	87	52
-    # 91	65	28	45	56	36
-    # 84	51	34	55	64	43
-    # 76	53	39	2	84	80
-    # 91	54	28	55	55	23
-    # 90	48	28	6	83	67
-    # 88	50	32	2	81	65
-    # 91	64	38	3	75	43
-    # 87	50	33	7	82	48
-    # 92	58	46	56	61	42
-    # 90	65	34	2	75	50
-    # 91	47	32	30	66	50
-    # 91	58	43	30	74	46
-    # 91	51	29	62	57	40
         
     data_list = [
         [213, 45, 198, 22, 67, 2],

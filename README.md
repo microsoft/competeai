@@ -1,42 +1,85 @@
-### 一、终极目的
+# README
 
-构建成一个可以模拟任何实验的统一框架，但是由于每个模拟实验之间需要不同的prompt，不同的流程，该目的尚未实现。
+# Introduction
 
-### 二、基本假定
+SocioSim is currently the experimental framework for our work in competeai. The construction of this framework is based on the following fundamental ideas:
 
-Agent模拟实验可以视为若干基础的scenes以某种序列串行/并行运行实现。每个scene中有若干agent以某种序列进行交互。
+- Most sociological experiments can be decomposed into several scenes, where various agents interact in a certain order within each scene.
+  - For example, in the competeai experiment, it can be broken down into scenes such as restaurant management, customer group discussions, customer dining, and feedback. In the first scene of restaurant management, the agent playing the role of the boss needs to modify each restaurant module in sequence. In the second scene of customer group discussions, the customers need to speak in a certain order, and so on.
+- Currently, many multi-agent frameworks do not allow agents to complete tasks within a scene based solely on the initial prompt settings. Therefore, it is necessary to add prompts at several nodes in the simulation to guide the agents in completing this part of the simulation.
+  - For instance, in restaurant management, if only a few management tasks (e.g., chef management, menu management) are mentioned at the beginning, agents cannot successfully complete these tasks without prompts guiding their actions before each management task.
 
-### 三、问题
+The reason for naming it SocioSim is because we want to unify sociological simulation experiments into a single framework from both theoretical and code design perspectives. Currently, competeai is the only instance under this framework.
 
-Agent不懂得如何输出规定的数据格式，Agent在长期交互中忘记规定程序。
+# Installation
 
-因此需要持续输入prompt进行引导。
+**Note: the framework has only been tested on linux.**
 
-### 四、框架结构
+First, clone the repo:
 
-```python
+```bash
+git clone https://github.com/icecream-and-tea/SocioSim.git
+```
+
+Then
+
+```bash
+cd SocioSim
+```
+
+To install the required packages, you can create a conda environment:
+
+```powershell
+conda create --name sociosim python=3.10
+```
+
+then use pip to install required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+# How to run
+
+First, launch Django database server
+
+```bash
+./database.sh restart
+```
+
+Then, open a new terminal, input the following command: 
+
+```bash
+python run.py <exp_name>
+```
+
+The result will save into `logs/<exp_name>`
+
+# The structure of framework
+
+```bash
 .
-├── database                       <- 饭店模拟中的饭店管理系统
-├── database.sh                    <- 操作数据库的脚本文件
-├── logs                           <- 所有实验结果记录于此，pipeline的一环
-├── README.md                      <- 你在这里
-├── run.py                         <- 程序运行入口
-├── SocioSim                     <- 核心文件夹
-│   ├── agent                     <- 框架核心组件： agent。 在其中可以设置更加负责的agent结构
-│   │   ├── agent.py               <- 完成agent观测，反应，执行模型（本质上就是输入prompt，输出response的过程）
-│   │   ├── backends               <- 可以用不同的大模型模拟agent，但是一般用gpt4
+├── database                       <- Database management system for restaurant simulation
+├── database.sh                    <- Script file for operating the database
+├── logs                           <- Where all experiment results are recorded, part of the pipeline
+├── README.md                      <- You are here
+├── run.py                         <- Entry point for the program
+├── SocioSim                       <- Core folder
+│   ├── agent                     <- Core component of the framework: agent. Allows for setting up more complex agent structures
+│   │   ├── agent.py               <- Completes agent observation, reaction, and execution model (essentially the process of inputting a prompt and outputting a response)
+│   │   ├── backends               <- Different large models can simulate an agent, but gpt4 is generally used
 │   │   │   ├── openai.py
-|   |   |   └── ... 
+|   |   |   └── ...
 │   │   └── __init__.py
-│   ├── config.py           
-│   ├── examples                   <- 每个模拟实验都需要有这样一个配置文件，其中规定了参与的agent，他们扮演的角色，支持他们的LLM
+│   ├── config.py
+│   ├── examples                   <- Each simulation experiment needs such a configuration file, specifying the participating agents, their roles, and the supporting LLMs
 │   │   ├── group.yaml
 │   │   └── restaurant.yaml
 │   ├── globals.py
 │   ├── image.py
 │   ├── __init__.py
-│   ├── message.py                 <- 框架核心组件：message。每一次agent做出的response都算一个message，message除了包含response内容，还包含该message的主人（agent）,该信息可以由谁看到等等
-│   ├── prompt_template            <- 框架核心组件：prompt template。在交互过程中需要用到的prompt，在适当时候输给agent，指导他们的行动
+│   ├── message.py                 <- Core component of the framework: message. Every response made by an agent counts as a message, which includes the content of the response, the owner (agent) of the message, who can see the message, etc.
+│   ├── prompt_template            <- Core component of the framework: prompt template. Prompts needed in the interaction process are given to agents at appropriate times to guide their actions
 │   │   ├── dine
 │   │   │   ├── comment.txt
 │   │   │   ├── feeling.txt
@@ -45,15 +88,15 @@ Agent不懂得如何输出规定的数据格式，Agent在长期交互中忘记�
 │   │   │   └── ...
 │   │   └── restaurant_design
 │   │       └── ...
-│   ├── relationship.yaml   
-│   ├── scene                     <- *框架核心组件：scene。每个scene中实现了一个agent交互序列，例如多个顾客讨论环节。
+│   ├── relationship.yaml
+│   ├── scene                     <- Core component of the framework: scene. Each scene implements a sequence of agent interactions, such as a discussion phase among multiple customers.
 │   │   ├── base.py
 │   │   ├── dine.py
 │   │   ├── group_dine.py
 │   │   ├── __init__.py
 │   │   └── restaurant_design.py
-│   ├── simul.py                  <- 核心文件：负责协调多个scene运行，实现scene以任意顺序运行
-│   └── utils                     <- 一些工具
+│   ├── simul.py                  <- Core file: responsible for coordinating multiple scenes to run, allowing scenes to run in any order
+│   └── utils                     <- Some tools
 │       ├── analysis.py
 │       ├── database.py
 │       ├── draw.py
@@ -61,19 +104,13 @@ Agent不懂得如何输出规定的数据格式，Agent在长期交互中忘记�
 │       ├── __init__.py
 │       ├── log.py
 │       ├── prompt_template.py
-└── test                          <- 单元测试文件
+└── test                          <- Unit test files
     ├── get_base64.py
     └── ...
 ```
 
-### 五、针对斯坦福实验的设计
+# Acknowledgements
 
-1. 设置global prompt
-2. 确定参与的agent（狱警和囚犯），设置他们的背景
-3. 确定需要的scene，以及他们之间运行先后顺序。
-4. 确定每个scene需要输入的prompt和输入时机
-5. 确定在实验过程中需要记录的信息（起床时间，行动集等）
+This project, SociosSim , is built upon the ChatArena framework. We extend our gratitude to the developers and contributors of ChatArena for providing the foundational architecture that made this project possible. For more information on ChatArena, visit [ChatArena's GitHub repository](https://github.com/Farama-Foundation/chatarena).
 
-
-
-
+We adhere to the licensing terms of ChatArena, and we encourage our users to familiarize themselves with it to understand the guidelines governing the use and modification of this repo.

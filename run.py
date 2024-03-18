@@ -16,26 +16,25 @@ args = parser.parse_args()
 # create a log folder
 log_path = f"./logs/{args.name}"
 
-# if not os.path.exists(log_path):
-#     os.makedirs(log_path)
-#     os.makedirs(f"{log_path}/fig")
+if not os.path.exists(log_path):
+    os.makedirs(log_path)
+    os.makedirs(f"{log_path}/fig")
 
-# config_path = os.path.join('SocioSim', 'examples', 'group_v2.yaml')
-# relationship_path = os.path.join('SocioSim', 'relationship.yaml')
+config_path = os.path.join('SocioSim', 'examples', 'group_v2.yaml')
+relationship_path = os.path.join('SocioSim', 'relationship.yaml')
 
-# with open(relationship_path, 'r') as f:
-#     relationship = yaml.safe_load(f)
+with open(relationship_path, 'r') as f:
+    relationship = yaml.safe_load(f)
 
-# with open(config_path, 'r') as f:
-#     config = yaml.safe_load(f)
-#     config['exp_name'] = args.name
-#     config['relationship'] = {}  # FIXME
-#     Simul = Simulation.from_config(config)
-#     Simul.run()
+with open(config_path, 'r') as f:
+    config = yaml.safe_load(f)
+    config['exp_name'] = args.name
+    config['relationship'] = relationship
+    Simul = Simulation.from_config(config)
+    Simul.run()
     
-# # analysis the data
-# aggregate('./logs')
 
-analysis('./logs', field='customer_reason')
+
+
 
 
