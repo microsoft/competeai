@@ -39,13 +39,19 @@ pip install -r requirements.txt
 
 ## How to run
 
-First, launch Django database server
+First, add a environment variable into your environment config file:
+
+```bash
+export OPENAI_KEY='sk-xxx'
+```
+
+Next, launch Django database server
 
 ```bash
 ./database.sh restart
 ```
 
-Then, open a new terminal, input the following command: 
+Then, open a new terminal, run the following command: 
 
 ```bash
 python run.py <exp_name>
