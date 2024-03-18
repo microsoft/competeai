@@ -16,7 +16,7 @@ The reason for naming it SocioSim is because we want to unify sociological simul
 First, clone the repo:
 
 ```bash
-git clone https://github.com/icecream-and-tea/SocioSim.git
+git clone https://github.com/microsoft/SocioSim
 ```
 
 Then
