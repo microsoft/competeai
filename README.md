@@ -16,13 +16,13 @@ The reason for naming it SocioSim is because we want to unify sociological simul
 First, clone the repo:
 
 ```bash
-git clone https://github.com/microsoft/SocioSim
+git clone https://github.com/microsoft/competeai
 ```
 
 Then
 
 ```bash
-cd SocioSim
+cd competeai
 ```
 
 To install the required packages, you can create a conda environment:
