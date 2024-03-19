@@ -69,7 +69,7 @@ The result will save into `logs/<exp_name>`
 ├── logs                           <- Where all experiment results are recorded, part of the pipeline
 ├── README.md                      <- You are here
 ├── run.py                         <- Entry point for the program
-├── SocioSim                       <- Core folder
+├── competeai                       <- Core folder
 │   ├── agent                     <- Core component of the framework: agent. Allows for setting up more complex agent structures
 │   │   ├── agent.py               <- Completes agent observation, reaction, and execution model (essentially the process of inputting a prompt and outputting a response)
 │   │   ├── backends               <- Different large models can simulate an agent, but gpt4 is generally used
