@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 import base64
 import os
 
@@ -5,7 +8,7 @@ import os
 #   with open(image_path, "rb") as image_file:
 #     return base64.b64encode(image_file.read()).decode('utf-8')
 
-# image_path = "SocioSim/logs/test_pic/menu.png"
+# image_path = "competeai/logs/test_pic/menu.png"
 
 # base64_image = encode_image(image_path)
 

@@ -1,4 +1,7 @@
-from SocioSim.utils import convert_img_to_base64, combine_images
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
+from competeai.utils import convert_img_to_base64, combine_images
 
 import os
 

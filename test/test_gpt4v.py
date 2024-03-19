@@ -1,6 +1,9 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 import os
-from SocioSim.image import Image
-from SocioSim.utils import convert_img_to_base64
+from competeai.image import Image
+from competeai.utils import convert_img_to_base64
 from openai import OpenAI
 
 openai_api_key = os.environ.get("OPENAI_KEY")

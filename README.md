@@ -1,13 +1,14 @@
 ## Introduction
 
-SocioSim is currently the experimental framework for our work in competeai. The construction of this framework is based on the following fundamental ideas:
+The experimental framework for "[CompeteAI: Understanding the Competition Behaviors in Large Language Model-based Agents](https://arxiv.org/abs/2310.17512)". 
+
+The ultimate aim of this framework is unifying sociological simulation experiments into a single framework from both theoretical and code design perspectives. Currently, competeai is the only instance under this framework. The construction of this framework is based on the following fundamental ideas:
 
 - Most sociological experiments can be decomposed into several scenes, where various agents interact in a certain order within each scene.
   - For example, in the competeai experiment, it can be broken down into scenes such as restaurant management, customer group discussions, customer dining, and feedback. In the first scene of restaurant management, the agent playing the role of the boss needs to modify each restaurant module in sequence. In the second scene of customer group discussions, the customers need to speak in a certain order, and so on.
 - Currently, many multi-agent frameworks do not allow agents to complete tasks within a scene based solely on the initial prompt settings. Therefore, it is necessary to add prompts at several nodes in the simulation to guide the agents in completing this part of the simulation.
   - For instance, in restaurant management, if only a few management tasks (e.g., chef management, menu management) are mentioned at the beginning, agents cannot successfully complete these tasks without prompts guiding their actions before each management task.
 
-The reason for naming it SocioSim is because we want to unify sociological simulation experiments into a single framework from both theoretical and code design perspectives. Currently, competeai is the only instance under this framework.
 
 ## Installation
 
@@ -28,7 +29,7 @@ cd competeai
 To install the required packages, you can create a conda environment:
 
 ```powershell
-conda create --name sociosim python=3.10
+conda create --name competeai python=3.10
 ```
 
 then use pip to install required packages:
@@ -115,9 +116,23 @@ The result will save into `logs/<exp_name>`
 
 ## Acknowledgements
 
-This project, SociosSim , is built upon the ChatArena framework. We extend our gratitude to the developers and contributors of ChatArena for providing the foundational architecture that made this project possible. For more information on ChatArena, visit [ChatArena's GitHub repository](https://github.com/Farama-Foundation/chatarena).
+This project, competeai , is built upon the ChatArena framework. We extend our gratitude to the developers and contributors of ChatArena for providing the foundational architecture that made this project possible. For more information on ChatArena, visit [ChatArena's GitHub repository](https://github.com/Farama-Foundation/chatarena).
 
 We adhere to the licensing terms of ChatArena, and we encourage our users to familiarize themselves with it to understand the guidelines governing the use and modification of this repo.
+
+## Citation
+Please cite the repo if you use the code in this repo.
+
+```Plain Text
+@misc{zhao2023competeai,
+      title={CompeteAI: Understanding the Competition Behaviors in Large Language Model-based Agents}, 
+      author={Qinlin Zhao and Jindong Wang and Yixuan Zhang and Yiqiao Jin and Kaijie Zhu and Hao Chen and Xing Xie},
+      year={2023},
+      eprint={2310.17512},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
+}
+```
 
 ## Contributing
 

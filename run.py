@@ -1,8 +1,11 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 """
     Pipeline for running the simulation.
 """
-from SocioSim.simul import Simulation
-from SocioSim.utils import analysis, aggregate
+from competeai.simul import Simulation
+from competeai.utils import analysis, aggregate
 
 import os
 import yaml
@@ -20,8 +23,8 @@ if not os.path.exists(log_path):
     os.makedirs(log_path)
     os.makedirs(f"{log_path}/fig")
 
-config_path = os.path.join('SocioSim', 'examples', 'group_v2.yaml')
-relationship_path = os.path.join('SocioSim', 'relationship.yaml')
+config_path = os.path.join('competeai', 'examples', 'group_v2.yaml')
+relationship_path = os.path.join('competeai', 'relationship.yaml')
 
 with open(relationship_path, 'r') as f:
     relationship = yaml.safe_load(f)

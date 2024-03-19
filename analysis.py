@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 import os
 import re
 import time
@@ -60,7 +63,7 @@ def get_gpt_response(prompt):
 # 统计客户选择原因
 def single_reason(path='./logs'):
     # 读取 group.yaml文件
-    with open('SocioSim/examples/group.yaml', 'r') as f:
+    with open('competeai/examples/group.yaml', 'r') as f:
         config = yaml.safe_load(f)
 
     # read all players
@@ -169,7 +172,7 @@ def single_reason(path='./logs'):
     
 def group_reason(path='./logs'):
     # 读取 group.yaml文件
-    with open('SocioSim/examples/group.yaml', 'r') as f:
+    with open('competeai/examples/group.yaml', 'r') as f:
         config = yaml.safe_load(f)
         
     # read all players
