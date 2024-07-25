@@ -1,6 +1,9 @@
 ## Introduction
 
-The experimental framework for "[CompeteAI: Understanding the Competition Behaviors in Large Language Model-based Agents](https://arxiv.org/abs/2310.17512)". 
+The experimental framework for "[CompeteAI: Understanding the Competition Behaviors in Large Language Model-based Agents](https://arxiv.org/abs/2310.17512)". The work is published at ICML 2024 as an Oral presentation.
+
+![image](https://github.com/user-attachments/assets/9b027583-62cf-4956-b5a9-ef4573631d54)
+
 
 The ultimate aim of this framework is unifying sociological simulation experiments into a single framework from both theoretical and code design perspectives. Currently, competeai is the only instance under this framework. The construction of this framework is based on the following fundamental ideas:
 
