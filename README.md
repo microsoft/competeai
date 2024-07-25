@@ -1,6 +1,6 @@
 ## Introduction
 
-The experimental framework for "[CompeteAI: Understanding the Competition Behaviors in Large Language Model-based Agents](https://arxiv.org/abs/2310.17512)". The work is published at ICML 2024 as an Oral presentation.
+The experimental framework for "[CompeteAI: Understanding the Competition Dynamics in Large Language Model-based Agents](https://arxiv.org/abs/2310.17512)". The work is published at ICML 2024 as an Oral presentation.
 
 ![image](https://github.com/user-attachments/assets/9b027583-62cf-4956-b5a9-ef4573631d54)
 
@@ -127,13 +127,11 @@ We adhere to the licensing terms of ChatArena, and we encourage our users to fam
 Please cite the repo if you use the code in this repo.
 
 ```Plain Text
-@misc{zhao2023competeai,
-      title={CompeteAI: Understanding the Competition Behaviors in Large Language Model-based Agents}, 
-      author={Qinlin Zhao and Jindong Wang and Yixuan Zhang and Yiqiao Jin and Kaijie Zhu and Hao Chen and Xing Xie},
-      year={2023},
-      eprint={2310.17512},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI}
+@inproceedings{zhaocompeteai,
+  title={CompeteAI: Understanding the Competition Dynamics of Large Language Model-based Agents},
+  author={Zhao, Qinlin and Wang, Jindong and Zhang, Yixuan and Jin, Yiqiao and Zhu, Kaijie and Chen, Hao and Xie, Xing},
+  booktitle={Forty-first International Conference on Machine Learning},
+  year={2024}
 }
 ```
 
